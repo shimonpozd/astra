@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Mugrabi';
+  src: url('/fonts/mugrabi-regular-aaa.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== Semantic color tokens (HSL) - single source of truth ====== */
+:root{
+  /* Dark (Claude-like) theme — H S% L% */
+  --bg: 30 8% 12%;          /* deep charcoal */
+  --fg: 40 6% 80%;          /* warm off-white for text (slightly warmer) */
+  --card: 30 8% 16%;
+  --muted: 30 8% 20%;
+  --border: 30 8% 29%;
+
+  /* Accent (muted purple) — reduced saturation for less glare */
+  --primary: 260 60% 58%;
+  --primary-foreground: 0 0% 100%;
+
+  /* states */
+  --success: 140 60% 45%;
+  --destructive: 0 84% 60%;
+  --warning: 38 95% 50%;
+  --info: 215 84% 60%;
+
+  /* misc */
+  --radius: 8px;
+  --content-max-ch: 68ch; /* target line length */
+}
+
+/* Light theme option — warm paper background for prolonged reading in bright spaces */
+:root.light {
+  --bg: 40 15% 96%;    /* soft warm paper */
+  --fg: 25 8% 12%;     /* dark warm text */
+  --card: 40 10% 92%;
+  --muted: 40 7% 86%;
+  --border: 40 6% 80%;
+  --primary: 260 55% 45%;
+}
+
+/* Tailwind-friendly CSS variables (string form preserved for hsl usage) */
+:root {
+  --bg-hsl: var(--bg);
+  --fg-hsl: var(--fg);
+  --card-hsl: var(--card);
+  --muted-hsl: var(--muted);
+  --border-hsl: var(--border);
+  --primary-hsl: var(--primary);
+}
+
+/* ====== Base styles ====== */
+@layer base {
+  html, body, #root {
+    height: 100%;
+    overflow: auto; /* allow scroll for long content */
+  }
+
+  body {
+    background: hsl(var(--bg-hsl));
+    color: hsl(var(--fg-hsl));
+    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, -apple-system, "Noto Sans Hebrew", sans-serif;
+    font-size: 16px;             /* increased for comfortable reading */
+    line-height: 1.65;           /* roomy leading */
+    letter-spacing: 0; 
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    hyphens: auto;
+  }
+
+  /* Main content container: limit line length for readability */
+  .content {
+    max-width: var(--content-max-ch);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+  }
+
+  /* Remove global border application — borders applied explicitly where needed */
+  /* * { @apply border-border; }  <-- removed deliberately */
+
+  /* Headings: slightly increase spacing, keep contrast moderate */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Inter, "SF Pro Text", system-ui, sans-serif;
+    color: hsl(var(--fg-hsl));
+    line-height: 1.25;
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+    text-wrap: balance;
+    text-align: left; /* for multi-language blocks adjust per-block */
+  }
+
+  /* Hebrew block helper */
+  .hebrew-text {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', serif;
+    direction: rtl;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    word-spacing: 0.05em;
+    hyphens: none;
+    line-height: 1.7;
+  }
+
+  .hebrew-muted {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', serif;
+    direction: rtl;
+    text-align: justify;
+    color: hsl(var(--muted-hsl));
+  }
+
+  /* Hebrew font utility class */
+  .font-hebrew {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', serif;
+  }
+
+  /* Links & buttons — muted primary to avoid glare */
+  a, .btn-primary {
+    color: hsl(var(--primary-hsl));
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .12s ease, opacity .12s ease;
+  }
+  a:focus, .btn-primary:focus { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, hsl(var(--primary-hsl)) 12%, transparent); }
+
+  /* Cards / surfaces */
+  .card {
+    background: hsl(var(--card-hsl));
+    color: hsl(var(--fg-hsl));
+    border: 1px solid hsl(var(--border-hsl));
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  /* Code block: clearer separation from background */
+  pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    background-color: color-mix(in srgb, hsl(var(--muted-hsl)) 88%, black 6%); /* slightly different tone */
+    border: 1px solid hsl(var(--border-hsl));
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    background-color: color-mix(in srgb, hsl(var(--muted-hsl)) 92%, hsl(var(--bg-hsl)) 8%);
+    border-radius: 6px;
+    padding: 0 6px;
+  }
+
+  /* Blockquotes: subtle */
+  blockquote {
+    border-left: 3px solid color-mix(in srgb, hsl(var(--border-hsl)) 70%, hsl(var(--primary-hsl)) 30%);
+    background-color: color-mix(in srgb, hsl(var(--muted-hsl)) 86%, hsl(var(--bg-hsl)) 8%);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    color: hsl(var(--fg-hsl));
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Scrollbar (subtle) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track { background: hsl(var(--muted-hsl)); }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, hsl(var(--border-hsl)) 70%, hsl(var(--muted-hsl)) 30%);
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, hsl(var(--border-hsl)) 60%, hsl(var(--muted-hsl)) 40%); }
+
+  /* Focus (accessible, but not harsh) */
+  :focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 4px color-mix(in srgb, hsl(var(--primary-hsl)) 14%, transparent);
+    border-radius: 6px;
+  }
+
+  /* Selection — soft translucent primary */
+  ::selection {
+    background: color-mix(in srgb, hsl(var(--primary-hsl)) 18%, hsl(var(--bg-hsl)) 82%);
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Form controls */
+  input, textarea, select {
+    background: hsl(var(--muted-hsl));
+    color: hsl(var(--fg-hsl));
+    border: 1px solid hsl(var(--border-hsl));
+    border-radius: 6px;
+    padding: .5rem .75rem;
+  }
+
+  /* Reduce overly bright accent states */
+  .accent {
+    background: color-mix(in srgb, hsl(var(--primary-hsl)) 12%, hsl(var(--muted-hsl)) 88%);
+    color: hsl(var(--primary-foreground));
+    border-radius: 6px;
+    padding: .25rem .5rem;
+  }
+}

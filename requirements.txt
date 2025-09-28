@@ -1,0 +1,28 @@
+# Dependencies for root-level scripts like start_cli.py, launcher.py, astra_supervisor.py
+
+# Used in start_cli.py/astra_supervisor.py for HTTP requests and health checks
+requests
+httpx
+
+# For the interactive text client and rich console output
+questionary
+rich
+textual
+
+# For ANSI color support on Windows
+colorama
+
+# For process metrics (CPU/RAM) in astra_supervisor.py
+psutil
+
+# For redis pub/sub in the text client (if needed)
+redis
+
+# For logging enhancements
+python-json-logger
+
+# For metrics export (Prometheus)
+prometheus-client
+
+# For PDF manipulation
+PyPDF2

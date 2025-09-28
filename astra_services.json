@@ -1,0 +1,37 @@
+{
+  "voice-in": {
+    "cmd": ["D:/AI/astra/voice-in/.venv/Scripts/python.exe", "-m", "uvicorn", "voice_in.main:app", "--host", "0.0.0.0", "--port", "7001", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "stt": {
+    "cmd": ["D:/AI/astra/stt/.venv/Scripts/python.exe", "-m", "uvicorn", "stt.main:app", "--host", "0.0.0.0", "--port", "7002", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "brain": {
+    "cmd": ["D:/AI/astra/brain/.venv/Scripts/python.exe", "-m", "uvicorn", "brain.main:app", "--host", "0.0.0.0", "--port", "7003", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "tts": {
+    "cmd": ["D:/AI/astra/tts/.venv/Scripts/python.exe", "-m", "uvicorn", "tts.main:app", "--host", "0.0.0.0", "--port", "7004", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "health": {
+    "cmd": ["D:/AI/astra/health/.venv/Scripts/python.exe", "-m", "uvicorn", "health.main:app", "--host", "0.0.0.0", "--port", "7005", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "memory": {
+    "cmd": ["D:/AI/astra/memory/.venv/Scripts/python.exe", "-m", "uvicorn", "memory.main:app", "--host", "0.0.0.0", "--port", "7010", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  },
+  "rag": {
+    "cmd": ["D:/AI/astra/rag/.venv/Scripts/python.exe", "-m", "uvicorn", "rag.main:app", "--host", "0.0.0.0", "--port", "7011", "--access-log", "--log-level", "debug"],
+    "cwd": "D:/AI/astra",
+    "env": { "PYTHONUNBUFFERED": "1" }
+  }
+}

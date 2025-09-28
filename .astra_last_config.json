@@ -1,0 +1,11 @@
+{
+  "personality": "chevruta_talmud",
+  "llm_provider": "openrouter",
+  "tts_provider": "none",
+  "stt_provider": "none",
+  "enabled_services": {
+    "voice-in": false,
+    "stt": false,
+    "tts": false
+  }
+}

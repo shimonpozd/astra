@@ -1,0 +1,10 @@
+"llm.overrides.lexicon" = "ollama/qwen3:8b  "
+"llm.api.openrouter.api_key" = "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"
+"memory.provider" = "qdrant"
+
+[llm.overrides]
+lexicon = "openrouter/x-ai/grok-4-fast:free"
+translator = "openrouter/x-ai/grok-4-fast:free"
+
+[actions.context]
+study_mode_context = "hebrew_and_english"

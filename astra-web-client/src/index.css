@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@100..900&display=swap');
+
+
+/* Custom Hebrew font - Mugrabi Regular */
+@font-face {
+  font-family: 'Mugrabi';
+  src: url('/fonts/mugrabi-regular-aaa.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Claude-style colors */
+    --background: #1f1e1d;       /* фон страницы - Claude dark */
+    --foreground: #c2c0b6;       /* базовый текст - Claude light */
+
+    /* Поверхности */
+    --card: #2a2927;             /* фон карточек/панелей */
+    --card-foreground: #c2c0b6;
+    --popover: #333230;          /* выпадающие меню */
+    --popover-foreground: #c2c0b6;
+
+    /* Акцент/праймари */
+    --primary: #7c3aed;          /* фиолетовый; btn/ссылки */
+    --primary-foreground: #ffffff;
+    --accent: #3a3936;           /* hover фона, боковые подсветки */
+    --accent-foreground: #c2c0b6;
+
+    /* Вторичные/мьют */
+    --secondary: #3a3936;        /* пузыри пользователя, втор. кнопки */
+    --secondary-foreground: #c2c0b6;
+    --muted: #2a2927;            /* код/блок цитаты */
+    --muted-foreground: #9b9992;
+
+    /* Границы и инпуты */
+    --border: #4a4843;
+    --input: #3a3936;            /* поля ввода/textarea */
+
+    /* Состояния */
+    --destructive: #ef4444;      /* ошибка/удаление */
+    --destructive-foreground: #ffffff;
+    --success: #22c55e;          /* подтверждение */
+    --warning: #f59e0b;          /* предупреждение */
+    --info: #60a5fa;             /* информационные */
+
+    /* Прочее */
+    --ring: #7c3aed;             /* focus ring */
+    --radius: 8px;               /* базовый радиус */
+
+    /* Map to Tailwind/shadcn variables */
+    --background: 30 8% 12%;      /* #1f1e1d */
+    --foreground: 45 8% 76%;     /* #c2c0b6 */
+    --card: 30 8% 16%;           /* #2a2927 */
+    --card-foreground: 45 8% 76%; /* #c2c0b6 */
+    --popover: 30 8% 20%;        /* #333230 */
+    --popover-foreground: 45 8% 76%; /* #c2c0b6 */
+    --primary: 262 83% 58%;      /* #7c3aed */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+    --secondary: 30 8% 23%;      /* #3a3936 */
+    --secondary-foreground: 45 8% 76%; /* #c2c0b6 */
+    --muted: 30 8% 16%;          /* #2a2927 */
+    --muted-foreground: 45 8% 60%; /* #9b9992 */
+    --accent: 30 8% 23%;         /* #3a3936 */
+    --accent-foreground: 45 8% 76%; /* #c2c0b6 */
+    --destructive: 0 84% 60%;    /* #ef4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+    --border: 30 8% 29%;         /* #4a4843 */
+    --input: 30 8% 23%;          /* #3a3936 */
+    --ring: 262 83% 58%;         /* #7c3aed */
+  }
+
+  .dark {
+    --background: 30 8% 12%;      /* #1f1e1d */
+    --foreground: 45 8% 76%;     /* #c2c0b6 */
+    --card: 30 8% 16%;           /* #2a2927 */
+    --card-foreground: 45 8% 76%; /* #c2c0b6 */
+    --popover: 30 8% 20%;        /* #333230 */
+    --popover-foreground: 45 8% 76%; /* #c2c0b6 */
+    --primary: 262 83% 58%;      /* #7c3aed */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+    --secondary: 30 8% 23%;      /* #3a3936 */
+    --secondary-foreground: 45 8% 76%; /* #c2c0b6 */
+    --muted: 30 8% 16%;          /* #2a2927 */
+    --muted-foreground: 45 8% 60%; /* #9b9992 */
+    --accent: 30 8% 23%;         /* #3a3936 */
+    --accent-foreground: 45 8% 76%; /* #c2c0b6 */
+    --destructive: 0 84% 60%;    /* #ef4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+    --border: 30 8% 29%;         /* #4a4843 */
+    --input: 30 8% 23%;          /* #3a3936 */
+    --ring: 262 83% 58%;         /* #7c3aed */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+
+  /* Hebrew text helper */
+  .hebrew-text {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+  }
+  .hebrew-muted {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    text-align: justify;
+  }
+
+  /* Noto Rashi Hebrew for commentaries */
+  .noto-rashi-hebrew-regular {
+    font-family: "Noto Rashi Hebrew", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+  }
+
+  /* Code blocks */
+  pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: hsl(var(--muted));
+    border: 1px solid hsl(var(--border));
+    border-radius: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 0 6px;
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 1px solid hsl(var(--border));
+    background-color: hsl(var(--muted));
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    outline: 1px solid hsl(var(--ring));
+    outline-offset: 1px;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: hsl(var(--primary) / 0.2);
+  }
+}

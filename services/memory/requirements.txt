@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+redis
+qdrant-client
+openai
+mem0ai # Assuming this is the package name
+pydantic-settings

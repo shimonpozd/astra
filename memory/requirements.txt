@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+redis
+qdrant-client
+openai
+mem0ai
+pydantic-settings
+numpy
+neo4j
+pandas

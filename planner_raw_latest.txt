@@ -1,0 +1,21 @@
+{
+
+
+  "focus": "Bamidbar 4:5 через хасидскую перспективу",
+  "guiding_questions": ["Как хасидизм интерпретирует роль кенэзим в Bamidbar 4:5?", "Какие хасидские тексты обсуждают духовную ценность кенэзим в этом стихе?"],
+  "primary_refs": [
+    {"ref": "Bamidbar 4:5", "categories": ["Bible"]}
+  ],
+  "supporting_refs": [
+    {"ref": "Shulchan Arukh, Orach Chayim 10:1", "categories": ["Halakhah"]},
+    {"ref": "Chassidic Masters, Introduction to Torah", "categories": ["Chasidut"]}
+  ],
+  "categories": ["Commentary", "Chasidut", "Bible"],
+  "commentary_preferences": {
+    "priority_commentators": ["Rabbi Yisrael Baal Shem Tov", "Rabbi Nachman of Breslov", "Rabbi Schneur Zalman of Liadi"],
+    "max_per_category": 4
+  },
+  "outline": ["Введение к теме", "Хасидская интерпретация стиха", "Духовные уроки из текста"],
+  "external_sources": ["https://www.chabad.org/library"],
+  "research_depth": 10
+}

@@ -1,0 +1,6 @@
+# Временный файл для отладки связки voice -> stt -> brain -> tts
+
+voice-in: D:\AI\astra\voice-in\.venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 7010 --app-dir D:\AI\astra\voice-in
+stt:      D:\AI\astra\stt\.venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 7020 --app-dir D:\AI\astra\stt
+brain:    D:\AI\astra\brain\.venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 7030 --app-dir D:\AI\astra\brain
+tts:      D:\AI\astra\tts\.venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 7040 --app-dir D:\AI\astra\tts

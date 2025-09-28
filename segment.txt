@@ -1,0 +1,764 @@
+      {/* Center - Chat */}
+
+      <div className="flex flex-col min-h-0">
+
+        <div className="h-14 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-4 flex-shrink-0">
+
+          <TopBar agentId={agentId} setAgentId={setAgentId} onOpenStudy={() => setStudySetupOpen(true)} />
+
+        </div>
+
+        {studySetupOpen && !studyActive && <StudySetupBar />}
+
+        {studyActive && (
+
+          <StudyToolbar
+
+            trail={studyTrail}
+
+            onBack={async () => {
+
+              if (!studySessionId) return;
+
+              try {
+
+                setStudyLoading(true);
+
+                const st = await api.back(studySessionId);
+
+                setStudySnapshot(st);
+
+                if (st?.focus?.ref) setStudyTrail((t) => (t[t.length - 1] === st.focus!.ref ? t : [...t, st.focus!.ref]));
+
+                setCurrentReference(st?.focus?.ref || '');
+
+                setStudyCanBack(true); setStudyCanForward(true);
+
+                // map bookshelf for RightSidePanel
+
+                const mapped = (st?.bookshelf?.items || []).map((it: any) => ({
+
+                  ref: it.ref,
+
+                  heRef: it.ref,
+
+                  indexTitle: it.title || it.commentator || it.ref,
+
+                  category: it.category || '',
+
+                  heCategory: it.category || '',
+
+                  isRead: false,
+
+                }));
+
+                setBookshelfItems(mapped);
+
+              } catch { setStudyCanBack(false); }
+
+              finally { setStudyLoading(false); }
+
+            }}
+
+            onForward={async () => {
+
+              if (!studySessionId) return;
+
+              try {
+
+                setStudyLoading(true);
+
+                const st = await api.forward(studySessionId);
+
+                setStudySnapshot(st);
+
+                if (st?.focus?.ref) setStudyTrail((t) => (t[t.length - 1] === st.focus!.ref ? t : [...t, st.focus!.ref]));
+
+                setCurrentReference(st?.focus?.ref || '');
+
+                setStudyCanBack(true); setStudyCanForward(true);
+
+                const mapped = (st?.bookshelf?.items || []).map((it: any) => ({
+
+                  ref: it.ref,
+
+                  heRef: it.ref,
+
+                  indexTitle: it.title || it.commentator || it.ref,
+
+                  category: it.category || '',
+
+                  heCategory: it.category || '',
+
+                  isRead: false,
+
+                }));
+
+                setBookshelfItems(mapped);
+
+              } catch { setStudyCanForward(false); }
+
+              finally { setStudyLoading(false); }
+
+            }}
+
+            onExit={() => { setStudyActive(false); setStudySnapshot(null); setStudyTrail([]); setStudySessionId(null); setBookshelfItems([]); setCurrentReference(''); }}
+
+            loading={studyLoading}
+
+            canBack={studyCanBack}
+
+            canForward={studyCanForward}
+
+          />
+
+        )}
+
+        {studyActive && (
+
+          <div className="mt-2 grid grid-cols-[minmax(280px,320px)_minmax(0,1fr)_minmax(280px,320px)] gap-4">
+
+            <div className="min-h-0 h-full">
+
+              <WorkbenchPanelInline
+
+                title="Левая панель"
+
+                item={studySnapshot?.workbench?.left || null}
+
+                active={studySnapshot?.discussion_focus_ref === (studySnapshot?.workbench?.left?.ref || '')}
+
+                onDropRef={async (ref) => { if (!studySessionId) return; try { const st = await api.workbenchSet(studySessionId, 'left', ref); setStudySnapshot(st); } catch {} }}
+
+                onClick={async () => { if (!studySessionId) return; const ref = studySnapshot?.workbench?.left?.ref; if (!ref) return; try { const st = await api.chatSetFocus(studySessionId, ref); setStudySnapshot(st); } catch {} }}
+
+              />
+
+            </div>
+
+            <div
+
+              className="min-h-0 h-full rounded-lg border border-border/60 bg-card/30 overflow-hidden"
+
+              onDragOver={(e) => {
+
+                if (e.dataTransfer.types.includes('text/astra-commentator-ref') || e.dataTransfer.types.includes('text/plain')) {
+
+                  e.preventDefault();
+
+                }
+
+              }}
+
+              onDrop={(e) => {
+
+                e.preventDefault();
+
+                const ref = e.dataTransfer.getData('text/astra-commentator-ref') || e.dataTransfer.getData('text/plain');
+
+                if (!ref || !studySessionId) return;
+
+                (async () => {
+
+                  try {
+
+                    setStudyLoading(true);
+
+                    const st = await api.setFocus(studySessionId, ref);
+
+                    setStudySnapshot(st);
+
+                    if (st?.focus?.ref) setStudyTrail((t) => [...t, st.focus!.ref]);
+
+                    setCurrentReference(st?.focus?.ref || '');
+
+                    setStudyCanBack(true); setStudyCanForward(true);
+
+                    const mapped = (st?.bookshelf?.items || []).map((it: any) => ({
+
+                      ref: it.ref,
+
+                      heRef: it.ref,
+
+                      indexTitle: it.title || it.commentator || it.ref,
+
+                      category: it.category || '',
+
+                      heCategory: it.category || '',
+
+                      isRead: false,
+
+                    }));
+
+                    setBookshelfItems(mapped);
+
+                  } finally { setStudyLoading(false); }
+
+                })();
+
+              }}
+
+            >
+
+              <FocusViewerInline
+
+                snapshot={studySnapshot}
+
+                onSelectRef={async (ref) => {
+
+                if (!studySessionId) return;
+
+                try {
+
+                  setStudyLoading(true);
+
+                  const st = await api.setFocus(studySessionId, ref);
+
+                  setStudySnapshot(st);
+
+                  if (st?.focus?.ref) setStudyTrail((t) => [...t, st.focus!.ref]);
+
+                  setCurrentReference(st?.focus?.ref || '');
+
+                  setStudyCanBack(true); setStudyCanForward(true);
+
+                  const mapped = (st?.bookshelf?.items || []).map((it: any) => ({
+
+                    ref: it.ref,
+
+                    heRef: it.ref,
+
+                    indexTitle: it.title || it.commentator || it.ref,
+
+                    category: it.category || '',
+
+                    heCategory: it.category || '',
+
+                    isRead: false,
+
+                  }));
+
+                  setBookshelfItems(mapped);
+
+                } finally { setStudyLoading(false); }
+
+                }}
+
+                onLexiconDoubleClick={async (_e) => {
+
+                  const selected = (window.getSelection()?.toString() || '').trim();
+
+                  if (!selected) return;
+
+                  const query = selected.replace(/[\u0591-\u05C7]/g, '').replace(/["'’“”().,!?;:\-\[\]{}]/g, '').trim();
+
+                  if (!query) return;
+
+                  setLexWord(selected); setLexError(null); setLexEntries(null);
+
+                  try { const entries = await api.getLexicon(query); setLexEntries(Array.isArray(entries) ? entries : []); } catch (err: any) { setLexError(err?.message || 'Не удалось получить определение'); }
+
+                }}
+
+              />
+
+            </div>
+
+            <div className="min-h-0">
+
+              <WorkbenchPanelInline
+
+                title="Правая панель"
+
+                item={studySnapshot?.workbench?.right || null}
+
+                active={studySnapshot?.discussion_focus_ref === (studySnapshot?.workbench?.right?.ref || '')}
+
+                onDropRef={async (ref) => { if (!studySessionId) return; try { const st = await api.workbenchSet(studySessionId, 'right', ref); setStudySnapshot(st); } catch {} }}
+
+                onClick={async () => { if (!studySessionId) return; const ref = studySnapshot?.workbench?.right?.ref; if (!ref) return; try { const st = await api.chatSetFocus(studySessionId, ref); setStudySnapshot(st); } catch {} }}
+
+              />
+
+            </div>
+
+          </div>
+
+        )}
+
+        <div
+
+          className="flex-1 min-h-0 overflow-y-auto relative"
+
+          onDragOver={(e) => {
+
+            if (e.dataTransfer.types.includes('text/astra-commentator-ref') || e.dataTransfer.types.includes('text/plain')) {
+
+              e.preventDefault();
+
+              // Add visual feedback for drag over
+
+              e.currentTarget.classList.add('bg-accent/10');
+
+            }
+
+          }}
+
+          onDragLeave={(e) => {
+
+            // Remove visual feedback when drag leaves
+
+            e.currentTarget.classList.remove('bg-accent/10');
+
+          }}
+
+          onDrop={(e) => {
+
+            e.preventDefault(); // Prevent default browser behavior
+
+            const ref = e.dataTransfer.getData('text/astra-commentator-ref') || e.dataTransfer.getData('text/plain');
+
+            if (!ref) return;
+
+
+
+            console.log('📥 Source dropped:', ref);
+
+
+
+            // If Study Mode is active, treat drop as set_focus navigation
+
+            if (studyActive && studySessionId) {
+
+              (async () => {
+
+                try {
+
+                  setStudyLoading(true);
+
+                  const st = await api.setFocus(studySessionId, ref);
+
+                  setStudySnapshot(st);
+
+                  if (st?.focus?.ref) setStudyTrail((t) => [...t, st.focus!.ref]);
+
+                  setCurrentReference(st?.focus?.ref || '');
+
+                  setStudyCanBack(true); setStudyCanForward(true);
+
+                  const mapped = (st?.bookshelf?.items || []).map((it: any) => ({
+
+                    ref: it.ref,
+
+                    heRef: it.ref,
+
+                    indexTitle: it.title || it.commentator || it.ref,
+
+                    category: it.category || '',
+
+                    heCategory: it.category || '',
+
+                    isRead: false,
+
+                  }));
+
+                  setBookshelfItems(mapped);
+
+                } catch (err) {
+
+                  console.warn('Failed to set_focus from drop, falling back to chat flow', err);
+
+                } finally {
+
+                  setStudyLoading(false);
+
+                }
+
+              })();
+
+              return;
+
+            }
+
+
+
+            // OPTIMISTIC UI: Immediately display the source in chat
+
+            const sourceMessage = {
+
+              id: `source_${Date.now()}`,
+
+              role: 'source' as const,
+
+              content: `Источник: ${ref}`,
+
+              timestamp: Date.now(),
+
+              sourceData: {
+
+                reference: ref,
+
+                text: 'Загрузка текста источника...',
+
+                book: ref.split('.')[0] || 'Источник'
+
+              }
+
+            };
+
+
+
+            setMessages((prev) => [...prev, sourceMessage]);
+
+
+
+            // Отправляем скрытый запрос на изучение комментария
+
+            const hidden = `Изучаем комментарий: ${ref}`;
+
+            const handleDropRequest = async () => {
+
+              try {
+
+                console.log('📤 Sending hidden command:', hidden);
+
+                const request: ChatRequest = {
+
+                  text: hidden,
+
+                  agent_id: 'default', // Use default agent for drag-and-drop to avoid research mode
+
+                  user_id: userId || 'web_user',
+
+                  session_id: selectedChatId || undefined,
+
+                };
+
+                await api.sendMessageStreamNDJSON(request, {
+
+                  onStatus: (m: string) => {
+
+                    console.log('📊 Status update:', m);
+
+                    setResearchState((p) => ({ ...p, currentStatus: m || p.currentStatus }));
+
+                  },
+
+                  onDraft: (d: any) => setResearchState((p) => ({ ...p, currentDraft: d?.draft ?? d ?? p.currentDraft })),
+
+                  onFinalDraft: (fd: any) => {
+
+                    const text: string = fd?.draft || fd?.content || '';
+
+                    if (!text) return;
+
+                    console.log('🎯 Final draft received:', text);
+
+ 
+
+                    // Add the assistant response to messages
+
+                    setMessages((prev) => {
+
+                      // Check if we already have an assistant message with the same content
+
+                      const hasDuplicate = prev.some(msg =>
+
+                        msg.role === 'assistant' && msg.content === text
+
+                      );
+
+                      if (hasDuplicate) {
+
+                        return prev; // Don't duplicate
+
+                      }
+
+                      return [...prev, { id: Date.now(), role: 'assistant', content: text, timestamp: Date.now() }];
+
+                    });
+
+ 
+
+                    // Reset research state
+
+                    setResearchState((prev) => ({ ...prev, isResearching: false, currentStatus: 'Ответ готов' }));
+
+ 
+
+                    // If we don't have a selectedChatId, the backend created a new session
+
+                    // We should refresh the chat list to show the new session
+
+                    if (!selectedChatId) {
+
+                      console.log('🔄 No selectedChatId found, refreshing chat list...');
+
+                      const loadChats = async () => {
+
+                        try {
+
+                          const data = await api.getChatList();
+
+                          setChats(data.chats || []);
+
+                          // Select the most recent chat (likely the one just created)
+
+                          if (data.chats && data.chats.length > 0) {
+
+                            const newSessionId = data.chats[0].session_id;
+
+                            setSelectedChatId(newSessionId);
+
+                            console.log('✅ Selected new session:', newSessionId);
+
+                          }
+
+                        } catch (e) {
+
+                          console.error('Failed to refresh chat list:', e);
+
+                          // Fallback: create a new chat if refresh fails
+
+                          handleCreateChat();
+
+                        }
+
+                      };
+
+                      loadChats();
+
+                    }
+
+                  },
+
+                  onSource: (s: any) => {
+
+                    console.log('📚 Source received:', s);
+
+                    setSources((prev) => [...prev, s]);
+
+                    // Mark bookshelf item as read if it matches
+
+                    if (s.ref) {
+
+                      setBookshelfItems(prev =>
+
+                        prev.map(item =>
+
+                          item.ref === s.ref ? { ...item, isRead: true } : item
+
+                        )
+
+                      );
+
+                    }
+
+                    // Update the optimistic source message with real data
+
+                    setMessages((prev) => prev.map(msg =>
+
+                      msg.id === sourceMessage.id && msg.role === 'source'
+
+                        ? { ...msg, sourceData: { ...msg.sourceData, ...s } }
+
+                        : msg
+
+                    ));
+
+                  },
+
+                  onSourceText: (st: any) => {
+
+                    console.log('📝 Source text received:', st);
+
+                    setSources((prev) => {
+
+                      const idx = prev.findIndex((x: any) => x.id === st.id);
+
+                      if (idx >= 0) { const up = [...prev]; up[idx] = { ...up[idx], ...st }; return up; }
+
+                      return [...prev, st];
+
+                    });
+
+                    // Update the optimistic source message with text
+
+                    setMessages((prev) => prev.map(msg =>
+
+                      msg.id === sourceMessage.id && msg.role === 'source'
+
+                        ? { ...msg, sourceData: { ...msg.sourceData, ...st } }
+
+                        : msg
+
+                    ));
+
+                  },
+
+                  onError: (err: any) => {
+
+                    console.error('❌ Drop request error:', err);
+
+                    setResearchState((p) => ({ ...p, error: err?.message || 'Unknown error', isResearching: false }));
+
+                    // Update the optimistic message to show error
+
+                    setMessages((prev) => prev.map(msg =>
+
+                      msg.id === sourceMessage.id && msg.role === 'source'
+
+                        ? { ...msg, sourceData: { ...msg.sourceData, text: 'Ошибка загрузки источника' } }
+
+                        : msg
+
+                    ));
+
+                  },
+
+                  onCommentatorsList: (data: { reference: string; commentators: any[] }) => {
+
+                    console.log('🧑‍🏫 Commentators list received for drop:', data);
+
+                    setCommentatorsLists((prev) => [...prev, data]);
+
+                  },
+
+                  onComplete: () => {
+
+                    console.log('✅ Drop request completed');
+
+                    setResearchState((p) => ({ ...p, isResearching: false }));
+
+                  },
+
+                } as any);
+
+              } catch (err) {
+
+                console.error('❌ Drop request failed:', err);
+
+                // Update the optimistic message to show error
+
+                setMessages((prev) => prev.map(msg =>
+
+                  msg.id === sourceMessage.id && msg.role === 'source'
+
+                    ? { ...msg, sourceData: { ...msg.sourceData, text: 'Ошибка загрузки источника' } }
+
+                    : msg
+
+                ));
+
+              }
+
+            };
+
+
+
+            // Execute the async function without await to prevent blocking
+
+            handleDropRequest().catch((error) => {
+
+              console.error('❌ Drag request failed:', error);
+
+              // Update the optimistic message to show error
+
+              setMessages((prev) => prev.map(msg =>
+
+                msg.id === sourceMessage.id && msg.role === 'source'
+
+                  ? { ...msg, sourceData: { ...msg.sourceData, text: 'Ошибка загрузки источника' } }
+
+                  : msg
+
+              ));
+
+              // Reset research state on error
+
+              setResearchState((p) => ({ ...p, isResearching: false, error: error?.message || 'Unknown error' }));
+
+            });
+
+          }}
+
+        >
+
+          {/* Center, subtle status overlay */}
+
+          {researchState.currentStatus && (
+
+            <div className="pointer-events-none absolute top-4 left-1/2 -translate-x-1/2 z-10">
+
+              <div className="px-3 py-1 rounded-full text-[11px] bg-muted/40 text-muted-foreground border border-border/60 shadow-sm">
+
+                {researchState.currentStatus}
+
+              </div>
+
+            </div>
+
+          )}
+
+          <ChatViewport
+
+            researchState={{ ...researchState, currentPlan: null, currentCritique: [], notesFeed: [], currentDraft: researchState.isResearching ? '' : researchState.currentDraft }}
+
+            messages={messages}
+
+            assistantThinking={assistantThinking}
+
+          />
+
+      </div>
+
+        <Composer
+
+          userId={userId}
+
+          researchState={researchState}
+
+          setResearchState={setResearchState}
+
+          setSources={setSources}
+
+          selectedChatId={selectedChatId}
+
+          studyActive={studyActive}
+
+          studySessionId={studySessionId}
+
+          setMessages={setMessages}
+
+          setAssistantThinking={setAssistantThinking}
+
+          messages={messages}
+
+          agentId={agentId}
+
+          pushThinkingEvent={(type, data) => {
+
+            const id = (crypto as any)?.randomUUID?.() ?? `think_${Date.now()}_${Math.random().toString(36).slice(2,8)}`;
+
+            setThinkingEvents(prev => [...prev, { id, type: type as any, data, timestamp: Date.now() }]);
+
+          }}
+
+          addCommentatorsList={(data) => setCommentatorsLists(prev => [...prev, data])}
+
+          handleCommentatorsPanelUpdate={(data) => {
+
+            console.log('🧑‍🏫 Commentators panel update received:', data);
+
+            setCurrentReference(data.reference);
+
+            setBookshelfItems(data.commentators.map(c => ({ ...c, isRead: false })));
+
+          }}
+
+        />
+
+      </div>
+
+
+

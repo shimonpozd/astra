@@ -1,0 +1,12 @@
+# -c ../constraints.txt
+fastapi
+uvicorn[standard]
+faster-whisper
+ctranslate2
+numpy
+requests
+redis
+deepgram-sdk
+torch
+torchaudio
+httpx

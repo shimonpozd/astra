@@ -1,0 +1,14 @@
+{
+  "raw_file": "WhatsApp Chat with Хан Тамерлан.txt",
+  "total_lines": 55034,
+  "header_like_lines": 54056,
+  "parsed_messages": 54056,
+  "coverage_headers_%": 100.0,
+  "system_messages": 1,
+  "two_system_headers_in_row": 0,
+  "sessions": 2446,
+  "topics_coverage_%": 87.62,
+  "avg_topics_per_utterance": 2.639,
+  "intents_unique": 7,
+  "intents_pairs": 51609
+}

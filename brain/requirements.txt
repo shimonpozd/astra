@@ -1,0 +1,12 @@
+# -c ../constraints.txt
+fastapi
+uvicorn[standard]
+openai
+python-dotenv
+httpx
+pyaudio
+numpy
+redis[async]
+pandas
+async-lru
+aiohttp

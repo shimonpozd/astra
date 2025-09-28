@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5174/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="http://localhost:5174/@vite/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5174/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra Chat</title>
+  <style type="text/css" data-vite-dev-id="D:/AI/astra/astra-web-client/src/index.css">@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap');
+
+/* Custom Hebrew font - Mugrabi Regular */
+
+@font-face {
+  font-family: 'Mugrabi';
+  src: url('/fonts/mugrabi-regular-aaa.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+:root {
+    /* Базовые - более светлая тема */
+    --background: #1a1a1a;       /* фон страницы */
+    --foreground: #ffffff;       /* базовый текст */
+
+    /* Поверхности */
+    --card: #2a2a2a;             /* фон карточек/панелей */
+    --card-foreground: #ffffff;
+    --popover: #333333;          /* выпадающие меню */
+    --popover-foreground: #ffffff;
+
+    /* Акцент/праймари */
+    --primary: #3b82f6;          /* синий; btn/ссылки */
+    --primary-foreground: #ffffff;
+    --accent: #404040;           /* hover фона, боковые подсветки */
+    --accent-foreground: #ffffff;
+
+    /* Вторичные/мьют */
+    --secondary: #404040;        /* пузыри пользователя, втор. кнопки */
+    --secondary-foreground: #ffffff;
+    --muted: #333333;            /* код/блок цитаты */
+    --muted-foreground: #cccccc;
+
+    /* Границы и инпуты */
+    --border: #555555;
+    --input: #404040;            /* поля ввода/textarea */
+
+    /* Состояния */
+    --destructive: #ef4444;      /* ошибка/удаление */
+    --destructive-foreground: #ffffff;
+    --success: #22c55e;          /* подтверждение */
+    --warning: #f59e0b;          /* предупреждение */
+    --info: #60a5fa;             /* информационные */
+
+    /* Прочее */
+    --ring: #3b82f6;             /* focus ring */
+    --radius: 8px;               /* базовый радиус */
+
+    /* Map to Tailwind/shadcn variables */
+    --background: 0 0% 10%;       /* #1a1a1a */
+    --foreground: 0 0% 100%;      /* #ffffff */
+    --card: 0 0% 16.5%;           /* #2a2a2a */
+    --card-foreground: 0 0% 100%; /* #ffffff */
+    --popover: 0 0% 20%;          /* #333333 */
+    --popover-foreground: 0 0% 100%; /* #ffffff */
+    --primary: 217 91% 60%;       /* #3b82f6 */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+    --secondary: 0 0% 25%;        /* #404040 */
+    --secondary-foreground: 0 0% 100%; /* #ffffff */
+    --muted: 0 0% 20%;            /* #333333 */
+    --muted-foreground: 0 0% 80%; /* #cccccc */
+    --accent: 0 0% 25%;           /* #404040 */
+    --accent-foreground: 0 0% 100%; /* #ffffff */
+    --destructive: 0 84% 60%;     /* #ef4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+    --border: 0 0% 33%;           /* #555555 */
+    --input: 0 0% 25%;            /* #404040 */
+    --ring: 217 91% 60%;          /* #3b82f6 */
+  }
+
+.dark {
+    --background: 0 0% 10%;       /* #1a1a1a */
+    --foreground: 0 0% 100%;      /* #ffffff */
+    --card: 0 0% 16.5%;           /* #2a2a2a */
+    --card-foreground: 0 0% 100%; /* #ffffff */
+    --popover: 0 0% 20%;          /* #333333 */
+    --popover-foreground: 0 0% 100%; /* #ffffff */
+    --primary: 217 91% 60%;       /* #3b82f6 */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+    --secondary: 0 0% 25%;        /* #404040 */
+    --secondary-foreground: 0 0% 100%; /* #ffffff */
+    --muted: 0 0% 20%;            /* #333333 */
+    --muted-foreground: 0 0% 80%; /* #cccccc */
+    --accent: 0 0% 25%;           /* #404040 */
+    --accent-foreground: 0 0% 100%; /* #ffffff */
+    --destructive: 0 84% 60%;     /* #ef4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+    --border: 0 0% 33%;           /* #555555 */
+    --input: 0 0% 25%;            /* #404040 */
+    --ring: 217 91% 60%;          /* #3b82f6 */
+  }
+
+*{
+  border-color: hsl(var(--border));
+}
+
+html, body, #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+body{
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    letter-spacing: 0;
+}
+
+/* Hebrew text helper */
+
+.hebrew-text {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+  }
+
+.hebrew-muted {
+    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
+    direction: rtl;
+    text-align: justify;
+  }
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+  }
+
+/* Code blocks */
+
+pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: hsl(var(--muted));
+    border: 1px solid hsl(var(--border));
+    border-radius: 8px;
+    padding: 12px 16px;
+    overflow-x: auto;
+  }
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 0 6px;
+  }
+
+/* Lists */
+
+ul, ol {
+    padding-left: 1.25rem;
+  }
+
+ul {
+    list-style-type: disc;
+  }
+
+ol {
+    list-style-type: decimal;
+  }
+
+/* Blockquotes */
+
+blockquote {
+    border-left: 1px solid hsl(var(--border));
+    background-color: hsl(var(--muted));
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+/* Scrollbar styling */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+/* Focus styles */
+
+*:focus-visible {
+    outline: 1px solid hsl(var(--ring));
+    outline-offset: 1px;
+  }
+
+/* Selection */
+
+::-moz-selection {
+    background-color: hsl(var(--primary) / 0.2);
+  }
+
+::selection {
+    background-color: hsl(var(--primary) / 0.2);
+  }
+
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.sticky{
+  position: sticky;
+}
+
+.inset-0{
+  inset: 0px;
+}
+
+.bottom-4{
+  bottom: 1rem;
+}
+
+.bottom-5{
+  bottom: 1.25rem;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
+.left-2{
+  left: 0.5rem;
+}
+
+.left-3{
+  left: 0.75rem;
+}
+
+.left-4{
+  left: 1rem;
+}
+
+.right-4{
+  right: 1rem;
+}
+
+.right-5{
+  right: 1.25rem;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.top-1\/2{
+  top: 50%;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.-mx-1{
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mb-0\.5{
+  margin-bottom: 0.125rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.ml-12{
+  margin-left: 3rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
+}
+
+.mt-0\.5{
+  margin-top: 0.125rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5{
+  margin-top: 0.375rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.line-clamp-3{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.\!block{
+  display: block !important;
+}
+
+.block{
+  display: block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.inline{
+  display: inline;
+}
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.grid{
+  display: grid;
+}
+
+.hidden{
+  display: none;
+}
+
+.h-1\.5{
+  height: 0.375rem;
+}
+
+.h-10{
+  height: 2.5rem;
+}
+
+.h-11{
+  height: 2.75rem;
+}
+
+.h-14{
+  height: 3.5rem;
+}
+
+.h-2{
+  height: 0.5rem;
+}
+
+.h-3{
+  height: 0.75rem;
+}
+
+.h-3\.5{
+  height: 0.875rem;
+}
+
+.h-4{
+  height: 1rem;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-9{
+  height: 2.25rem;
+}
+
+.h-\[33vh\]{
+  height: 33vh;
+}
+
+.h-\[44px\]{
+  height: 44px;
+}
+
+.h-\[52px\]{
+  height: 52px;
+}
+
+.h-\[var\(--radix-select-trigger-height\)\]{
+  height: var(--radix-select-trigger-height);
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-px{
+  height: 1px;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
+.max-h-24{
+  max-height: 6rem;
+}
+
+.max-h-32{
+  max-height: 8rem;
+}
+
+.max-h-40{
+  max-height: 10rem;
+}
+
+.max-h-80{
+  max-height: 20rem;
+}
+
+.max-h-96{
+  max-height: 24rem;
+}
+
+.max-h-\[400px\]{
+  max-height: 400px;
+}
+
+.max-h-\[50vh\]{
+  max-height: 50vh;
+}
+
+.max-h-\[85vh\]{
+  max-height: 85vh;
+}
+
+.min-h-0{
+  min-height: 0px;
+}
+
+.min-h-\[44px\]{
+  min-height: 44px;
+}
+
+.min-h-\[52px\]{
+  min-height: 52px;
+}
+
+.min-h-\[80px\]{
+  min-height: 80px;
+}
+
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.w-1\.5{
+  width: 0.375rem;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-2{
+  width: 0.5rem;
+}
+
+.w-3{
+  width: 0.75rem;
+}
+
+.w-3\.5{
+  width: 0.875rem;
+}
+
+.w-4{
+  width: 1rem;
+}
+
+.w-48{
+  width: 12rem;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-\[420px\]{
+  width: 420px;
+}
+
+.w-\[44px\]{
+  width: 44px;
+}
+
+.w-\[52px\]{
+  width: 52px;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.min-w-0{
+  min-width: 0px;
+}
+
+.min-w-\[8rem\]{
+  min-width: 8rem;
+}
+
+.min-w-\[var\(--radix-select-trigger-width\)\]{
+  min-width: var(--radix-select-trigger-width);
+}
+
+.max-w-2xl{
+  max-width: 42rem;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
+}
+
+.max-w-md{
+  max-width: 28rem;
+}
+
+.max-w-none{
+  max-width: none;
+}
+
+.max-w-xl{
+  max-width: 36rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
+}
+
+.flex-shrink-0{
+  flex-shrink: 0;
+}
+
+.shrink-0{
+  flex-shrink: 0;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2{
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes bounce{
+
+  0%, 100%{
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce{
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse{
+
+  50%{
+    opacity: .5;
+  }
+}
+
+.animate-pulse{
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin{
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin{
+  animation: spin 1s linear infinite;
+}
+
+.cursor-default{
+  cursor: default;
+}
+
+.cursor-grab{
+  cursor: grab;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.select-text{
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+
+.resize-none{
+  resize: none;
+}
+
+.list-inside{
+  list-style-position: inside;
+}
+
+.list-disc{
+  list-style-type: disc;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-\[280px_1fr_280px_360px\]{
+  grid-template-columns: 280px 1fr 280px 360px;
+}
+
+.grid-cols-\[280px_1fr_450px\]{
+  grid-template-columns: 280px 1fr 450px;
+}
+
+.grid-rows-\[1fr_12vh_1fr\]{
+  grid-template-rows: 1fr 12vh 1fr;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-2{
+  gap: 0.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.space-x-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-0\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.overflow-auto{
+  overflow: auto;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-x-auto{
+  overflow-x: auto;
+}
+
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.whitespace-pre-wrap{
+  white-space: pre-wrap;
+}
+
+.break-all{
+  word-break: break-all;
+}
+
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: var(--radius);
+}
+
+.rounded-md{
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.rounded-sm{
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-0{
+  border-width: 0px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-l{
+  border-left-width: 1px;
+}
+
+.border-l-4{
+  border-left-width: 4px;
+}
+
+.border-r{
+  border-right-width: 1px;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-dashed{
+  border-style: dashed;
+}
+
+.border-accent\/40{
+  border-color: hsl(var(--accent) / 0.4);
+}
+
+.border-accent\/60{
+  border-color: hsl(var(--accent) / 0.6);
+}
+
+.border-blue-100{
+  --tw-border-opacity: 1;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity, 1));
+}
+
+.border-blue-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(191 219 254 / var(--tw-border-opacity, 1));
+}
+
+.border-border{
+  border-color: hsl(var(--border));
+}
+
+.border-border\/60{
+  border-color: hsl(var(--border) / 0.6);
+}
+
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
+}
+
+.border-green-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(187 247 208 / var(--tw-border-opacity, 1));
+}
+
+.border-green-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
+}
+
+.border-input{
+  border-color: hsl(var(--input));
+}
+
+.border-muted\/30{
+  border-color: hsl(var(--muted) / 0.3);
+}
+
+.border-muted\/40{
+  border-color: hsl(var(--muted) / 0.4);
+}
+
+.border-muted\/50{
+  border-color: hsl(var(--muted) / 0.5);
+}
+
+.border-primary{
+  border-color: hsl(var(--primary));
+}
+
+.border-primary\/60{
+  border-color: hsl(var(--primary) / 0.6);
+}
+
+.border-purple-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(168 85 247 / var(--tw-border-opacity, 1));
+}
+
+.border-red-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
+}
+
+.border-red-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
+}
+
+.border-red-400\/40{
+  border-color: rgb(248 113 113 / 0.4);
+}
+
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
+}
+
+.border-red-500\/20{
+  border-color: rgb(239 68 68 / 0.2);
+}
+
+.border-red-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity, 1));
+}
+
+.border-transparent{
+  border-color: transparent;
+}
+
+.border-yellow-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(254 240 138 / var(--tw-border-opacity, 1));
+}
+
+.border-yellow-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(161 98 7 / var(--tw-border-opacity, 1));
+}
+
+.border-primary\/20{
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+.bg-accent\/10{
+  background-color: hsl(var(--accent) / 0.1);
+}
+
+.bg-accent\/60{
+  background-color: hsl(var(--accent) / 0.6);
+}
+
+.bg-background{
+  background-color: hsl(var(--background));
+}
+
+.bg-background\/95{
+  background-color: hsl(var(--background) / 0.95);
+}
+
+.bg-black\/50{
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.bg-blue-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue-500\/50{
+  background-color: rgb(59 130 246 / 0.5);
+}
+
+.bg-card{
+  background-color: hsl(var(--card));
+}
+
+.bg-card\/30{
+  background-color: hsl(var(--card) / 0.3);
+}
+
+.bg-card\/40{
+  background-color: hsl(var(--card) / 0.4);
+}
+
+.bg-card\/50{
+  background-color: hsl(var(--card) / 0.5);
+}
+
+.bg-card\/60{
+  background-color: hsl(var(--card) / 0.6);
+}
+
+.bg-card\/70{
+  background-color: hsl(var(--card) / 0.7);
+}
+
+.bg-card\/80{
+  background-color: hsl(var(--card) / 0.8);
+}
+
+.bg-destructive{
+  background-color: hsl(var(--destructive));
+}
+
+.bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 253 244 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-500\/10{
+  background-color: rgb(34 197 94 / 0.1);
+}
+
+.bg-muted{
+  background-color: hsl(var(--muted));
+}
+
+.bg-muted\/10{
+  background-color: hsl(var(--muted) / 0.1);
+}
+
+.bg-muted\/20{
+  background-color: hsl(var(--muted) / 0.2);
+}
+
+.bg-muted\/30{
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.bg-muted\/40{
+  background-color: hsl(var(--muted) / 0.4);
+}
+
+.bg-muted\/50{
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.bg-popover{
+  background-color: hsl(var(--popover));
+}
+
+.bg-primary{
+  background-color: hsl(var(--primary));
+}
+
+.bg-primary\/10{
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+.bg-primary\/50{
+  background-color: hsl(var(--primary) / 0.5);
+}
+
+.bg-purple-500\/10{
+  background-color: rgb(168 85 247 / 0.1);
+}
+
+.bg-red-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-500\/10{
+  background-color: rgb(239 68 68 / 0.1);
+}
+
+.bg-red-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity, 1));
+}
+
+.bg-secondary{
+  background-color: hsl(var(--secondary));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-white\/50{
+  background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-yellow-400\/10{
+  background-color: rgb(250 204 21 / 0.1);
+}
+
+.bg-yellow-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
+}
+
+.bg-yellow-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 63 18 / var(--tw-bg-opacity, 1));
+}
+
+.bg-card\/20{
+  background-color: hsl(var(--card) / 0.2);
+}
+
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-blue-50{
+  --tw-gradient-from: #eff6ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(239 246 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-indigo-50{
+  --tw-gradient-to: #eef2ff var(--tw-gradient-to-position);
+}
+
+.p-0{
+  padding: 0px;
+}
+
+.p-1{
+  padding: 0.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-1\.5{
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pl-8{
+  padding-left: 2rem;
+}
+
+.pl-9{
+  padding-left: 2.25rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
+}
+
+.pr-4{
+  padding-right: 1rem;
+}
+
+.pt-0{
+  padding-top: 0px;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
+}
+
+.pt-4{
+  padding-top: 1rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.font-mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
+}
+
+.text-\[11px\]{
+  font-size: 11px;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.leading-8{
+  line-height: 2rem;
+}
+
+.leading-none{
+  line-height: 1;
+}
+
+.leading-relaxed{
+  line-height: 1.625;
+}
+
+.leading-7{
+  line-height: 1.75rem;
+}
+
+.tracking-tight{
+  letter-spacing: -0.025em;
+}
+
+.text-amber-400{
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-400{
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-700{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-800{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+}
+
+.text-blue-900{
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity, 1));
+}
+
+.text-card-foreground{
+  color: hsl(var(--card-foreground));
+}
+
+.text-destructive-foreground{
+  color: hsl(var(--destructive-foreground));
+}
+
+.text-foreground{
+  color: hsl(var(--foreground));
+}
+
+.text-gray-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-900{
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-green-400{
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity, 1));
+}
+
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+
+.text-muted-foreground{
+  color: hsl(var(--muted-foreground));
+}
+
+.text-muted-foreground\/60{
+  color: hsl(var(--muted-foreground) / 0.6);
+}
+
+.text-muted-foreground\/70{
+  color: hsl(var(--muted-foreground) / 0.7);
+}
+
+.text-muted-foreground\/80{
+  color: hsl(var(--muted-foreground) / 0.8);
+}
+
+.text-muted-foreground\/90{
+  color: hsl(var(--muted-foreground) / 0.9);
+}
+
+.text-popover-foreground{
+  color: hsl(var(--popover-foreground));
+}
+
+.text-primary{
+  color: hsl(var(--primary));
+}
+
+.text-primary-foreground{
+  color: hsl(var(--primary-foreground));
+}
+
+.text-red-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+}
+
+.text-red-300{
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+
+.text-red-300\/90{
+  color: rgb(252 165 165 / 0.9);
+}
+
+.text-red-400{
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+}
+
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
+}
+
+.text-secondary-foreground{
+  color: hsl(var(--secondary-foreground));
+}
+
+.text-yellow-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity, 1));
+}
+
+.text-yellow-300{
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity, 1));
+}
+
+.text-yellow-400{
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+
+.text-yellow-500{
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity, 1));
+}
+
+.text-muted-foreground\/40{
+  color: hsl(var(--muted-foreground) / 0.4);
+}
+
+.underline{
+  text-decoration-line: underline;
+}
+
+.underline-offset-4{
+  text-underline-offset: 4px;
+}
+
+.placeholder-gray-500::-moz-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-gray-500::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-placeholder-opacity, 1));
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.opacity-60{
+  opacity: 0.6;
+}
+
+.opacity-70{
+  opacity: 0.7;
+}
+
+.opacity-75{
+  opacity: 0.75;
+}
+
+.opacity-80{
+  opacity: 0.8;
+}
+
+.opacity-90{
+  opacity: 0.9;
+}
+
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-none{
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.outline{
+  outline-style: solid;
+}
+
+.ring-2{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-1{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-primary{
+  --tw-ring-color: hsl(var(--primary));
+}
+
+.ring-primary\/10{
+  --tw-ring-color: hsl(var(--primary) / 0.1);
+}
+
+.ring-offset-background{
+  --tw-ring-offset-color: hsl(var(--background));
+}
+
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.\!filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-sm{
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200{
+  transition-duration: 200ms;
+}
+
+@keyframes enter{
+
+  from{
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit{
+
+  to{
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.duration-200{
+  animation-duration: 200ms;
+}
+
+.file\:border-0::file-selector-button{
+  border-width: 0px;
+}
+
+.file\:bg-transparent::file-selector-button{
+  background-color: transparent;
+}
+
+.file\:text-sm::file-selector-button{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.file\:font-medium::file-selector-button{
+  font-weight: 500;
+}
+
+.placeholder\:text-muted-foreground::-moz-placeholder{
+  color: hsl(var(--muted-foreground));
+}
+
+.placeholder\:text-muted-foreground::placeholder{
+  color: hsl(var(--muted-foreground));
+}
+
+.hover\:bg-accent:hover{
+  background-color: hsl(var(--accent));
+}
+
+.hover\:bg-accent\/20:hover{
+  background-color: hsl(var(--accent) / 0.2);
+}
+
+.hover\:bg-accent\/50:hover{
+  background-color: hsl(var(--accent) / 0.5);
+}
+
+.hover\:bg-destructive\/90:hover{
+  background-color: hsl(var(--destructive) / 0.9);
+}
+
+.hover\:bg-gray-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-700:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-muted:hover{
+  background-color: hsl(var(--muted));
+}
+
+.hover\:bg-primary\/90:hover{
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:bg-red-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-red-500\/10:hover{
+  background-color: rgb(239 68 68 / 0.1);
+}
+
+.hover\:bg-secondary\/80:hover{
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+.hover\:text-accent-foreground:hover{
+  color: hsl(var(--accent-foreground));
+}
+
+.hover\:text-blue-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-foreground:hover{
+  color: hsl(var(--foreground));
+}
+
+.hover\:text-foreground\/80:hover{
+  color: hsl(var(--foreground) / 0.8);
+}
+
+.hover\:text-gray-600:hover{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-red-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-muted-foreground:hover{
+  color: hsl(var(--muted-foreground));
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
+.hover\:opacity-100:hover{
+  opacity: 1;
+}
+
+.hover\:shadow-sm:hover{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:bg-accent:focus{
+  background-color: hsl(var(--accent));
+}
+
+.focus\:text-accent-foreground:focus{
+  color: hsl(var(--accent-foreground));
+}
+
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-ring:focus{
+  --tw-ring-color: hsl(var(--ring));
+}
+
+.focus\:ring-offset-2:focus{
+  --tw-ring-offset-width: 2px;
+}
+
+.focus-visible\:outline-none:focus-visible{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-visible\:ring-0:focus-visible{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-2:focus-visible{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-ring:focus-visible{
+  --tw-ring-color: hsl(var(--ring));
+}
+
+.focus-visible\:ring-offset-2:focus-visible{
+  --tw-ring-offset-width: 2px;
+}
+
+.disabled\:pointer-events-none:disabled{
+  pointer-events: none;
+}
+
+.disabled\:cursor-not-allowed:disabled{
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-50:disabled{
+  opacity: 0.5;
+}
+
+.group:hover .group-hover\:text-muted-foreground{
+  color: hsl(var(--muted-foreground));
+}
+
+.data-\[disabled\]\:pointer-events-none[data-disabled]{
+  pointer-events: none;
+}
+
+.data-\[side\=bottom\]\:translate-y-1[data-side="bottom"]{
+  --tw-translate-y: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[side\=left\]\:-translate-x-1[data-side="left"]{
+  --tw-translate-x: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[side\=right\]\:translate-x-1[data-side="right"]{
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[side\=top\]\:-translate-y-1[data-side="top"]{
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[disabled\]\:opacity-50[data-disabled]{
+  opacity: 0.5;
+}
+
+.data-\[state\=open\]\:animate-in[data-state="open"]{
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:animate-out[data-state="closed"]{
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+}
+
+.data-\[state\=closed\]\:fade-out-0[data-state="closed"]{
+  --tw-exit-opacity: 0;
+}
+
+.data-\[state\=open\]\:fade-in-0[data-state="open"]{
+  --tw-enter-opacity: 0;
+}
+
+.data-\[state\=closed\]\:zoom-out-95[data-state="closed"]{
+  --tw-exit-scale: .95;
+}
+
+.data-\[state\=open\]\:zoom-in-95[data-state="open"]{
+  --tw-enter-scale: .95;
+}
+
+.data-\[side\=bottom\]\:slide-in-from-top-2[data-side="bottom"]{
+  --tw-enter-translate-y: -0.5rem;
+}
+
+.data-\[side\=left\]\:slide-in-from-right-2[data-side="left"]{
+  --tw-enter-translate-x: 0.5rem;
+}
+
+.data-\[side\=right\]\:slide-in-from-left-2[data-side="right"]{
+  --tw-enter-translate-x: -0.5rem;
+}
+
+.data-\[side\=top\]\:slide-in-from-bottom-2[data-side="top"]{
+  --tw-enter-translate-y: 0.5rem;
+}
+
+.dark\:border-blue-800:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(30 64 175 / var(--tw-border-opacity, 1));
+}
+
+.dark\:bg-blue-900\/20:is(.dark *){
+  background-color: rgb(30 58 138 / 0.2);
+}
+
+.dark\:from-blue-950\/30:is(.dark *){
+  --tw-gradient-from: rgb(23 37 84 / 0.3) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(23 37 84 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.dark\:to-indigo-950\/30:is(.dark *){
+  --tw-gradient-to: rgb(30 27 75 / 0.3) var(--tw-gradient-to-position);
+}
+
+.dark\:text-blue-100:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-blue-200:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(191 219 254 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-blue-300:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+}
+
+.dark\:text-blue-400:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+
+.\[\&\>span\]\:line-clamp-1>span{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+</style></head>
+  <body>
+    <div id="root"><div class="h-screen w-full bg-background"><div class="absolute top-4 right-4 z-50"><div class="flex items-center gap-2 px-3 py-2 rounded-lg border text-sm bg-red-50 border-red-200"><div class="text-red-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><line x1="2" x2="22" y1="2" y2="22"></line><path d="M8.5 16.5a5 5 0 0 1 7 0"></path><path d="M2 8.82a15 15 0 0 1 4.17-2.65"></path><path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76"></path><path d="M16.85 11.25a10 10 0 0 1 2.22 1.68"></path><path d="M5 13a10 10 0 0 1 5.24-2.76"></path><line x1="12" x2="12.01" y1="20" y2="20"></line></svg></div><span class="text-red-600">Brain API недоступен</span><div class="ml-2"><button class="text-gray-400 hover:text-gray-600" title="Скрыть ошибку"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg></button></div></div></div><div class="h-screen w-full overflow-hidden bg-background text-foreground grid grid-cols-[280px_1fr_450px]"><aside class="border-r bg-card/50 backdrop-blur-sm flex flex-col min-h-0"><div class="flex-shrink-0 p-3"><div class="p-3 flex items-center gap-2"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 w-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Новый чат</button></div></div><div class="flex-shrink-0 border-t mx-3 my-2"></div><div class="flex-shrink-0 p-3"><div class="p-3"><div class="relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-9" placeholder="Поиск по чатам…"></div><div class="mt-3 flex gap-2"><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md px-3 w-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path><line x1="12" x2="12" y1="10" y2="16"></line><line x1="9" x2="15" y1="13" y2="13"></line></svg> Папка</button><button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 rounded-md w-10 px-0" title="Импорт истории"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M12 3v12"></path><path d="m8 11 4 4 4-4"></path><path d="M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4"></path></svg></button></div></div></div><div class="flex-shrink-0 border-t mx-3 my-2"></div><div class="flex-1 min-h-0"><div class="h-full overflow-y-auto"><div class="h-full overflow-y-auto"><div class="p-2 space-y-1"><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-accent/60 border-accent/60"><div class="font-medium text-sm truncate">Новый чат</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат 7209822b...</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат f9880dde...</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат fe4ab591...</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат 9f57c323...</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат a237b24d...</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой Shabbat 14a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой Шаббат 12а.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой шаббат 21а.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой шаббат 23а.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой шаббат 21а.2</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой Шаббат 23a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой шаббат 28a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой шаббат 32а.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд трактат шаббат 27a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 24a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 24a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой шаббат 45a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Изучаем комментарий: Shabbat 56a:1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой шабат 27a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 23a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 26a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 26a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд шабат 22a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой талмуд шаббат 24a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд шабат 21a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Shabbat 53a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Шаббат 21a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд Shabbat 21a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой талмуд авода зара 12a.</div><div class="text-xs text-muted-foreground truncate mt-1">9/24/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой талмуд авода зара 12a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой талмуд Shabbat 12a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">открой талмуд Psachim14a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Чат ea4e319e...</div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Отрой талмуд Shabbat 21a.1 </div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div><div class="group flex items-center gap-2"><button class="flex-1 p-3 text-left rounded-lg border transition-colors bg-card/50 hover:bg-accent/50 border-transparent"><div class="font-medium text-sm truncate">Открой талмуд трактат Shabbat 25a.1</div><div class="text-xs text-muted-foreground truncate mt-1">9/23/2025</div></button><button title="Удалить чат" class="opacity-60 hover:opacity-100 text-xs px-2 py-1 rounded border bg-transparent hover:bg-red-500/10 text-red-400 border-red-400/40">Удалить</button></div></div></div></div></div><div class="flex-shrink-0 border-t mx-3 my-2"></div><div class="flex-shrink-0 p-3"><div class="p-3"><div class="text-xs text-muted-foreground">Astra Chat v1.0</div></div></div></aside><div class="flex flex-col min-h-0"><div class="h-14 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-4 flex-shrink-0"><div class="h-14 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-4"><div class="flex items-center gap-3"><h1 class="font-semibold">Astra Chat</h1></div><div class="flex items-center gap-2"><button class="h-8 text-xs rounded border px-2 flex items-center hover:bg-accent" title="Открыть Study Mode">Study Mode</button><select class="h-8 text-xs rounded border bg-background px-2" title="Выбор ассистента"><option value="default">default</option><option value="chevruta_deepresearch">chevruta_deepresearch</option><option value="chevruta_study_bimodal">chevruta_study_bimodal</option></select><div class="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">Демо режим</div></div></div></div><div class="flex items-center gap-2 px-4 py-2 border-b bg-card/60"><button class="px-2 py-1 text-xs border rounded disabled:opacity-50">←</button><button class="px-2 py-1 text-xs border rounded disabled:opacity-50">→</button><div class="text-xs text-muted-foreground flex-1 truncate">Shabbat 12a:1 › Shabbat 12a:2</div><button class="px-2 py-1 text-xs border rounded">Закрыть</button></div><div class="border-b bg-card/40"><div class="relative h-[33vh] overflow-hidden"><div class="h-full grid grid-rows-[1fr_12vh_1fr]"><div class="overflow-hidden"><div class="max-w-3xl mx-auto px-6 py-2 flex flex-col justify-end space-y-2"><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">שֶׁלֹּא יִלְקֶה הַכּוֹתֶל — אֵינוֹ בְּ״כִי יוּתַּן״! מִי דָּמֵי? הָתָם לָא קָא בָּעֵי לְהוּ לְהָנֵי מַשְׁקִין כְּלָל, הָכָא קָא בָעֵי לֵיהּ לְהַאי כִּיס לְקַבּוֹלֵי בֵּיהּ זִיבָה.</div></div></div><div class="px-6"><div class="max-w-3xl mx-auto"><div class="rounded-md border border-accent/40 bg-background/95 shadow-sm"><div class="text-lg leading-8 text-foreground whitespace-pre-wrap px-4 py-3 hebrew-text" style="text-align: justify;">הָא לָא דָּמְיָא אֶלָּא לְסֵיפָא: עֲרֵיבָה שֶׁיָּרַד דֶּלֶף לְתוֹכָהּ, מַיִם הַנִּיתָּזִין וְהַנִּצָּפִין אֵינָן בְּ״כִי יוּתַּן״, וְשֶׁבְּתוֹכָהּ הֲרֵי זֶה בְּ״כִי יוּתַּן״.</div></div></div></div><div class="overflow-hidden"><div class="max-w-3xl mx-auto px-6 py-2 flex flex-col justify-start space-y-2"><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">אֶלָּא אַבָּיֵי וְרָבָא דְּאָמְרִי תַּרְוַיְיהוּ, לָא קַשְׁיָא: הָא רַבִּי יְהוּדָה, וְהָא רַבִּי שִׁמְעוֹן.</div><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">תָּנֵי דְּבֵי רַבִּי יִשְׁמָעֵאל: יוֹצֵא אָדָם בִּתְפִילִּין בְּעֶרֶב שַׁבָּת עִם חֲשֵׁיכָה. מַאי טַעְמָא? — כֵּיוָן דְּאָמַר רַבָּה בַּר רַב הוּנָא חַיָּיב אָדָם לְמַשְׁמֵשׁ בַּתְּפִילִּין כׇּל שָׁעָה וְשָׁעָה. קַל וָחֹמֶר מִצִּיץ: מָה צִיץ שֶׁאֵין בּוֹ אֶלָּא אַזְכָּרָה אַחַת אָמְרָה תּוֹרָה ״וְהָיָה עַל מִצְחוֹ תָּמִיד״ — שֶׁלֹּא יַסִּיחַ דַּעְתּוֹ מִמֶּנּוּ, תְּפִילִּין שֶׁיֵּשׁ בָּהֶן אַזְכָּרוֹת הַרְבֵּה — עַל אַחַת כַּמָּה וְכַמָּה. הִלְכָּךְ מִידְכָּר דָּכֵיר לְהוּ. תַּנְיָא, חֲנַנְיָא אוֹמֵר: חַיָּיב אָדָם לְמַשְׁמֵשׁ בְּבִגְדוֹ עֶרֶב שַׁבָּת עִם חֲשֵׁכָה. אָמַר רַב יוֹסֵף: הִלְכְתָא </div><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">לֹא יְפַלֶּה אֶת כֵּלָיו כּוּ׳. אִיבַּעְיָא לְהוּ: לֹא יְפַלֶּה אֶת כֵּלָיו בַּיּוֹם שֶׁמָּא יַהֲרוֹג, וְרַבִּי אֱלִיעֶזֶר הִיא. דְּתַנְיָא, אָמַר רַבִּי אֱלִיעֶזֶר: הַהוֹרֵג כִּינָּה בְּשַׁבָּת — כְּאִילּוּ הוֹרֵג גָּמָל. וְלֹא יִקְרָא לְאוֹר הַנֵּר שֶׁמָּא יַטֶּה. אוֹ דִילְמָא תַּרְוַיְיהוּ שֶׁמָּא יַטֶּה?!</div><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">תָּא שְׁמַע: אֵין פּוֹלִין וְאֵין קוֹרִין לְאוֹר הַנֵּר. מִי אַלִּימָא מִמַּתְנִיתִין?!</div><div class="text-lg leading-8 text-muted-foreground cursor-pointer hover:text-foreground/80 hebrew-muted" style="text-align: justify;">תָּא שְׁמַע: אֵין פּוֹלִין לְאוֹר הַנֵּר וְאֵין קוֹרִין לְאוֹר הַנֵּר, אֵלּוּ מִן הַהֲלָכוֹת שֶׁאָמְרוּ בַּעֲלִיַּית חֲנַנְיָה בֶּן חִזְקִיָּה בֶּן גָּרוֹן. שְׁמַע מִינַּהּ דְּתַרְוַיְיהוּ שֶׁמָּא יַטֶּה, שְׁמַע מִינַּהּ.</div></div></div></div></div></div><div class="flex-1 min-h-0 overflow-y-auto relative"><div class="h-full overflow-y-auto"><div class="p-4 space-y-4"><div class="text-center py-8 text-muted-foreground"><p class="text-lg">Добро пожаловать в Astra Chat!</p><p class="text-sm mt-2">Выберите чат из списка слева или создайте новый.</p><p class="text-xs mt-4 opacity-70">Для исследования введите: <code class="bg-muted px-2 py-1 rounded">/research &lt;тема&gt;</code></p></div></div></div></div><div class="fixed bottom-5 right-5 w-[420px] max-h-[400px] bg-card text-foreground rounded-xl border shadow-2xl overflow-hidden flex flex-col z-50"><div class="px-4 py-3 border-b bg-card/80 backdrop-blur-sm flex items-center justify-between"><div class="text-sm font-semibold">Процесс мышления</div><button class="text-xs text-muted-foreground hover:text-foreground">✕</button></div><div class="flex-1 overflow-y-auto p-3 space-y-2"><div class="text-xs text-muted-foreground text-center py-6">Пока нет событий</div></div></div><div class="border-t bg-card/80 backdrop-blur-sm p-4 flex-shrink-0 shadow-lg"><div class="max-w-4xl mx-auto"><div class="flex gap-3 items-end"><textarea class="flex w-full rounded-md border-input px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex-1 min-h-[44px] max-h-24 resize-none border-0 shadow-none focus-visible:ring-0 bg-background" placeholder="Введите сообщение или /research &lt;тема&gt; для исследования..." rows="1"></textarea><div class="flex gap-2"><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-[44px] w-[44px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></button><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-[44px] w-[44px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg></button><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-[44px] w-[44px] bg-primary hover:bg-primary/90" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg></button></div></div><div class="text-xs text-muted-foreground mt-2 flex justify-between items-center"><span>Enter для отправки • Shift+Enter для новой строки • /research &lt;тема&gt; для исследования</span></div></div></div></div><aside class="border-l bg-card/50 backdrop-blur-sm flex flex-col min-h-0"><div class="flex-1 min-h-0"><div class="h-full flex flex-col"><div class="p-4 border-b"><h3 class="font-medium">Интерактивная библиотека</h3><div class="text-xs text-muted-foreground">Shabbat 12a:2</div></div><div class="flex-1 overflow-y-auto p-3 space-y-3"><div class="space-y-2"><div class="text-sm font-medium text-muted-foreground px-1">📚 Комментаторы (12 непрочитано)</div><div class="grid gap-2"><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashi"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashi" style="font-family: inherit;">Rashi</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashi on Shabbat 12a:2:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashi"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashi" style="font-family: inherit;">Rashi</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashi on Shabbat 12a:2:2</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashi"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashi" style="font-family: inherit;">Rashi</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashi on Shabbat 12a:2:3</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashi"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashi" style="font-family: inherit;">Rashi</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashi on Shabbat 12a:2:4</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashi"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashi" style="font-family: inherit;">Rashi</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashi on Shabbat 12a:2:5</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Tosafot"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Tosafot" style="font-family: inherit;">Tosafot</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Tosafot on Shabbat 12a:2:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Chokhmat Shlomo"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Chokhmat Shlomo" style="font-family: inherit;">Chokhmat Shlomo</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Chokhmat Shlomo on Shabbat 12a:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Petach Einayim"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Petach Einayim" style="font-family: inherit;">Petach Einayim</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Petach Einayim on Shabbat 12a:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Rashash"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Rashash" style="font-family: inherit;">Rashash</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Rashash on Shabbat 12a:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Steinsaltz"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Steinsaltz" style="font-family: inherit;">Steinsaltz</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Steinsaltz on Shabbat 12a:2</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Tosafot Rid"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">💬</span><div class="text-sm font-medium truncate" title="Tosafot Rid" style="font-family: inherit;">Tosafot Rid</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Tosafot Rid on Shabbat 12a:1</div><div class="text-xs text-muted-foreground/70">Commentary • Commentary</div></div><div class="rounded-lg border p-3 cursor-grab transition-all bg-card/60 hover:bg-accent/20 border-border" draggable="true" title="Перетащите в чат, чтобы изучить: Mishneh Torah, Defilement of Foods"><div class="flex items-center justify-between mb-1"><div class="flex items-center gap-2"><span class="text-sm">⚖️</span><div class="text-sm font-medium truncate" title="Mishneh Torah, Defilement of Foods" style="font-family: inherit;">Mishneh Torah, Defilement of Foods</div></div></div><div class="text-xs text-muted-foreground mb-1" style="font-family: inherit;">Mishneh Torah, Defilement of Foods 12:8</div><div class="text-xs text-muted-foreground/70">Halakhah • Halakhah</div></div></div></div></div></div></div></aside></div><div class="absolute bottom-4 left-4 z-50"><div class="text-xs text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">API не доступен - оффлайн режим</div></div></div></div>
+    <script type="module" src="http://localhost:5174/src/main.tsx"></script>
+  
+<deepl-input-controller translate="no"><template shadowrootmode="open"><link rel="stylesheet" href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"><div dir="ltr" style="visibility: initial !important;"><div class="dl-input-translation-container svelte-95aucy"><div></div></div></div></template></deepl-input-controller><iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./Astra Chat_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" style="display: none;" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}"></div></body></html>

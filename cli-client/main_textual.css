@@ -1,0 +1,38 @@
+Screen {
+    background: #080808;
+    layout: vertical;
+}
+
+Header {
+    dock: top;
+    height: 1;
+    background: #001b00;
+    color: #00ff88;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: #001b00;
+    color: #66ff66;
+}
+
+RichLog {
+    border: round #228b22;
+    width: 100%;
+    height: 1fr; /* Take up remaining space */
+}
+
+#streaming-display {
+    height: auto;
+    min-height: 1;
+    padding: 0 1;
+    color: #88ff88; /* Lighter green for streaming text */
+}
+
+Input {
+    dock: bottom;
+    height: 3;
+    border: round #00ff88;
+    margin: 1 0;
+}

@@ -1,0 +1,20 @@
+{
+  "log_level": "DEBUG",
+  "show_status_bar": false,
+  "save_to_file": true,
+  "file_path": "logs/astra_{date}.log",
+  "rotation": {
+    "type": "daily",
+    "max_files": 7
+  },
+  "formatting": {
+    "timestamp_format": "%H:%M:%S.%f",
+    "service_name_width": 10,
+    "compact_mode": false,
+    "colors": true
+  },
+  "filters": {
+    "exclude_patterns": ["healthcheck", "ping"],
+    "include_only_services": []
+  }
+}

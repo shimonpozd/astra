@@ -1,0 +1,4 @@
+{
+  "model": "embeddinggemma:300m",
+  "input": "ollamalama" 
+}

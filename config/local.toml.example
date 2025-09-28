@@ -1,0 +1,6 @@
+# developer-specific overrides (gitignored)
+# e.g.
+# [llm]
+# provider = 'openai'
+# model = 'gpt-4o-mini'
+

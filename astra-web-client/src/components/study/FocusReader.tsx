@@ -246,12 +246,9 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
     englishText: segment.text || '',
   });
 
-  // Show combined original text if both exist when not translated
-  const combinedOriginal = [segment.text, segment.heText].filter(s => s?.trim()).join('\n\n');
-  const hasRealText = !!combinedOriginal.trim();
-  const originalText = combinedOriginal || '';
+  const combinedOriginal = `${segment.text || ''}\n\n${segment.heText || ''}`.trim();
 
-  const textToRender = translatedText || (hasRealText ? originalText : 'Text not loaded');
+  const textToRender = translatedText || combinedOriginal;
 
   const isHebrew = translatedText ? false : containsHebrew(textToRender);
   const direction = translatedText ? 'ltr' : getTextDirection(textToRender);
@@ -309,15 +306,13 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
       {/* Основной текст */}
       <div
         className={`
-            whitespace-pre-wrap
+            whitespace-pre-wrap select-text
             ${direction === 'rtl' ? 'text-right' : 'text-left'}
             ${isHebrew ? 'font-feature-settings: "kern" 1, "liga" 1' : ''}
-            ${hasRealText ? 'select-text' : 'text-muted'}
           `}
         style={{
           unicodeBidi: 'plaintext',
-          wordBreak: isHebrew ? 'keep-all' : 'normal',
-          userSelect: hasRealText ? 'text' : 'none'
+          wordBreak: isHebrew ? 'keep-all' : 'normal'
         }}
       >
         {textToRender}

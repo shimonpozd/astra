@@ -1,0 +1,9 @@
+# -c ../constraints.txt
+requests
+rich
+psutil
+redis
+python-dotenv
+prompt_toolkit
+tiktoken
+textual

@@ -1,0 +1,156 @@
+# config/defaults.toml
+
+[llm]
+provider = "openrouter"
+model = "openrouter/x-ai/grok-4-fast:free"
+
+[llm.api.openrouter]
+api_key = "${OPENROUTER_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+referrer = "${OPENROUTER_REFERRER:-}"
+title = "${OPENROUTER_TITLE:-}"
+
+[llm.api.openai]
+api_key = "${OPENAI_API_KEY}"
+organization = "${OPENAI_ORG_ID:-}"
+
+[llm.api.ollama]
+base_url = "http://localhost:11434"
+
+[llm.overrides]
+chat = "openrouter/x-ai/grok-4-fast:free"
+drafter = "openrouter/x-ai/grok-4-fast:free"
+critic = "openrouter/x-ai/grok-4-fast:free"
+meta_reasoner = "openrouter/x-ai/grok-4-fast:free"
+curator = "openrouter/x-ai/grok-4-fast:free"
+summarizer = "openrouter/x-ai/grok-4-fast:free"
+translator = "openrouter/x-ai/grok-4-fast:free"
+planner = "openrouter/x-ai/grok-4-fast:free"
+lexicon = "openrouter/nousresearch/nous-hermes-2-mixtral-8x7b-dpo"
+speechify = "openrouter/x-ai/grok-4-fast:free"
+
+[llm.parameters]
+temperature = 0.3
+top_p = 0.9
+
+[memory]
+redis_url = "redis://localhost:6379/0"
+qdrant_url = "http://localhost:6333"
+
+[memory.embeddings]
+provider = "ollama"
+model = "embeddinggemma:300m"
+cache_ttl_seconds = 604800
+
+[memory.ingest]
+queue_name = "astra_ltm_ingest_queue"
+batch_size = 100
+batch_timeout_ms = 500
+
+[memory.features]
+mask_pii = true
+
+[memory.stm]
+char_budget = 3000
+min_recent = 6
+buffer_size = 24
+
+[memory.ltm]
+max_points = 6
+
+[research]
+default_depth = 5
+max_depth = 2
+curator_max_candidates = 30
+note_max_chars = 3500
+final_draft_max_tokens = 4000
+
+[research.iterations]
+min = 4
+max = 8
+base = 3
+depth_divisor = 5
+
+[export.drasha]
+dir = "exports"
+auto_export = true
+
+[voice.stt]
+provider = "whisper"
+brain_endpoint = "http://localhost:7030/chat/voice"
+
+[voice.stt.whisper]
+model_size = "medium"
+compute_type = "float16"
+device = "cuda"
+model_path = "models/whisper-large-v2"
+forced_language = "ru"
+
+[voice.stt.deepgram]
+api_key = "${DEEPGRAM_API_KEY}"
+
+[voice.tts]
+provider = "xtts"
+
+[voice.tts.xtts]
+api_url = "http://localhost:8010"
+speaker_wav = "speakers/audio.wav"
+
+[voice.tts.elevenlabs]
+api_key = "${ELEVENLABS_API_KEY}"
+voice_id = "Rachel"
+
+[voice.tts.orpheus]
+api_url = "http://localhost:7041"
+
+[voice.voice_in]
+streaming_enabled = false
+stt_service_url = "http://localhost:7020/stt"
+stt_stream_url = "ws://localhost:7020/ws/stt"
+agent_id = "default"
+chunk_duration_ms = 2000
+noise_reduction = false
+normalization = false
+adaptive_thresholds = false
+auto_start = true
+
+[voice.voice_in.interrupt]
+threshold = 0.7
+min_duration_ms = 300
+
+[voice.voice_in.vad]
+min_silence_ms = 800
+
+[services]
+redis_url = "redis://localhost:6379/0"
+brain_url = "http://localhost:7030"
+memory_service_url = "http://localhost:7050"
+tts_service_url = "http://localhost:7040"
+stt_service_url = "http://localhost:7020"
+
+[personalities]
+default = "default"
+path = "personalities"
+
+[launcher.enabled_services]
+voice_in = false
+stt = false
+tts = false
+
+[debug]
+chain_of_thought = true
+deep_research = true
+
+[actions.speechify]
+# Options: "english_only", "hebrew_only", "hebrew_and_english"
+language_preference = "english_only"
+
+[actions.translation]
+# Setting for the explicit "Translate" button
+# Options: "high" (sends Hebrew + English), "fast" (sends English only)
+on_demand_quality = "high"
+
+[actions.context]
+# Setting for the context included in normal questions during Study Mode
+# Options: "hebrew_and_english", "english_only", "hebrew_only"
+study_mode_context = "english_only"

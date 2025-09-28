@@ -1,0 +1,18 @@
+# -c ../constraints.txt
+fastapi
+uvicorn[standard]
+aiohttp
+torch
+torchaudio
+pyaudio
+numpy
+scipy
+requests
+soundfile
+websockets
+noisereduce
+pydub
+asyncio-throttle
+httpx
+psutil
+redis

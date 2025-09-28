@@ -1,0 +1,66 @@
+<think>
+Okay, the user wants a deep study on Exodus 2:5. Let me start by understanding the verse. Exodus 2:5 is about Pharaoh's daughter finding Moses in the Nile. The main focus here is likely the narrative of Moses' early life and the role of the midwives. 
+
+First, I need to identify the primary references. The verse itself is Exodus 2:5, so that's a key point. Then, looking at the surrounding context in Exodus 2, especially the part about the midwives and the killing of male infants. 
+
+Guiding questions should address the significance of this verse in the broader story, the role of the midwives, and any theological implications. Also, how does this verse connect to later events in Moses' life?
+
+Supporting references might include Midrash Rabbah on Exodus, which often provides deeper commentary on narrative elements. Also, Talmudic sources that discuss the midwives' actions or the concept of divine intervention. 
+
+Categories to inspect would include Midrash, Mishnah, and possibly Halakhah if there are legal implications. The user might also want to look into Jewish Thought for interpretations of divine providence here.
+
+For the outline, starting with the verse itself, then the context in Exodus 2, followed by Midrashic interpretations, and then connections to later parts of the Torah. 
+
+External resources might include Chabad.org's commentary or Sefaria's annotations. Research depth should cover a few key commentaries to ensure depth without overwhelming the user. 
+
+I need to make sure all references are in canonical Sefaria notation. Let me check if the Midrash Rabbah reference is correct. Also, ensure that the categories are from the allowed list. Avoid including any commentaries not specified. 
+
+Okay, compiling all this into the JSON structure as per the schema. Let me verify each section to ensure it meets the user's request and the specified format.
+</think>
+
+{
+  "focus": "Exodus 2:5, the narrative of Pharaoh's daughter finding Moses in the Nile and its theological and historical implications",
+  "guiding_questions": [
+    "What is the significance of Pharaoh's daughter's actions in the broader narrative of Moses' early life?",
+    "How does this verse connect to the role of the midwives (Exodus 1:15-2:4) and divine intervention?",
+    "What theological themes emerge from the juxtaposition of human agency and divine providence here?"
+  ],
+  "primary_refs": [
+    {
+      "ref": "Exodus 2:5",
+      "categories": ["Bible"]
+    },
+    {
+      "ref": "Exodus 1:15-2:4",
+      "categories": ["Bible"]
+    }
+  ],
+  "supporting_refs": [
+    {
+      "ref": "Midrash Rabbah 1:1",
+      "categories": ["Midrash"]
+    },
+    {
+      "ref": "Talmud Bavli, Sotah 12a",
+      "categories": ["Halakhah"]
+    },
+    {
+      "ref": "Maimonides, Hilchot Sanhedrin 13:5",
+      "categories": ["Halakhah"]
+    }
+  ],
+  "categories": ["Midrash", "Bible", "Halakhah"],
+  "commentary_preferences": {
+    "priority_commentators": ["Rashi", "Ramban", "Sforno"],
+    "max_per_category": 3
+  },
+  "outline": [
+    "Contextualizing Exodus 2:5 within the broader narrative of Moses' early life",
+    "Analyzing the midwives' role (Exodus 1:15-2:4) and its connection to this verse",
+    "Midrashic interpretations of Pharaoh's daughter's actions",
+    "Halakhic discussions on divine intervention and human responsibility",
+    "Theological implications of human agency vs. divine providence"
+  ],
+  "external_sources": ["https://www.chabad.org/library/bible_cdo/aid/9931"],
+  "research_depth": 15
+}

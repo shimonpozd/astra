@@ -1,0 +1,33 @@
+/* styles/hebrew.css */
+.font-hebrew {
+  font-family: 'Noto Serif Hebrew', 'David', 'Times New Roman', serif;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
+  font-size: 1.75em;
+  line-height: 1.4;
+}
+
+.text-hebrew {
+  font-family: 'Noto Serif Hebrew', 'David', 'Times New Roman', serif;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
+}
+
+.hebrew-text {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: embed;
+}
+
+.mixed-text {
+  unicode-bidi: plaintext;
+}
+
+/* Поддержка RTL для списков */
+.rtl-list {
+  direction: rtl;
+}
+
+.rtl-list .list-item {
+  text-align: right;
+}
