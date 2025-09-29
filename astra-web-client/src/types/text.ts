@@ -10,6 +10,8 @@ export interface TextSegment {
     chapter?: number;
     page?: string;
     line?: number;
+    title?: string;
+    indexTitle?: string;
   };
 }
 

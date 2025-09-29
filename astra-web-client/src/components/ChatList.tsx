@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { api, Chat } from '../services/api';
 import { Button } from './ui/button';
 

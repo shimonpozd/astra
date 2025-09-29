@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ModelSettings as ModelSettingsType } from '../types/index';
 import { Input } from './ui/input';
-import { Button } from './ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
 interface ModelSettingsProps {
   settings: ModelSettingsType;

@@ -48,7 +48,7 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
 
   // Load messages when a chat is selected
   useEffect(() => {
-    if (!selectedChatId) {
+    if (!selectedChatId || window.location.pathname.startsWith('/study')) {
       setMessages([]);
       return;
     }

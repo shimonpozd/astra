@@ -1,8 +1,38 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Search, BookOpen, Loader2 } from 'lucide-react';
-import { BookshelfPanelProps, CommentaryItem } from '../../types/bookshelf';
+import { BookshelfPanelProps } from '../../types/bookshelf';
 import { containsHebrew, getTextDirection } from '../../utils/hebrewUtils';
 import { api } from '../../services/api';
+
+// Помощник: извлечь человекочитаемое превью из старой (string) или новой ({he,en}) схемы.
+// Правило: если в текущем item больше иврита — берём he; иначе — en; затем fallback на любую непустую строку.
+function coalescePreview(raw: any): string | undefined {
+  if (!raw) return undefined;
+
+  const val = raw.preview ?? raw.text ?? raw.snippet ?? raw.summary;
+
+  // Старый кейс: plain string
+  if (typeof val === 'string') {
+    const s = val.trim();
+    return s.length ? s : undefined;
+  }
+
+  // Новый кейс: объект {he?, en?} или вложенный {text:{he?,en?}}
+  const obj = val?.text ? val.text : val;
+
+  if (obj && typeof obj === 'object') {
+    const he = typeof obj.he === 'string' ? obj.he.trim() : '';
+    const en = typeof obj.en === 'string' ? obj.en.trim() : '';
+
+    // если явно есть he — используем его
+    if (he) return he;
+    // иначе en
+    if (en) return en;
+  }
+
+  return undefined;
+}
 
 interface Category {
   name: string;
@@ -63,40 +93,62 @@ export function parseRefStrict(ref: string): ParsedRef | null {
   };
 }
 
-// Legacy function for backward compatibility
-function parseRef(ref: string): ParsedRef {
-  const parsed = parseRefStrict(ref);
-  if (parsed) return parsed;
-
-  // Fallback для других форматов
-  return {
-    commentator: 'Unknown',
-    tractate: 'Unknown',
-    page: 'Unknown',
-    section: 'Unknown'
-  };
-}
 
 // Группировка по ref
 export function groupByRef(items: any[]) {
   const groups = new Map<GroupKey, GroupNode>();
   const orphans: any[] = [];
 
-  for (const it of items) {
-    const p = parseRefStrict(it.ref);
-    if (!p) { orphans.push(it); continue; }
-
-    const key: GroupKey = `${p.commentator} on ${p.tractate} ${p.page}:${p.section}`;
-    if (!groups.has(key)) {
-      groups.set(key, {
-        key,
-        parsed: { commentator: p.commentator, tractate: p.tractate, page: p.page, section: p.section },
-        color: '', // посчитаем ниже
-        items: [],
-      });
-    }
-    groups.get(key)!.items.push(it);
+  if (!Array.isArray(items) || items.length === 0) {
+    return { groups: [], orphans: [] };
   }
+
+  for (const it of items) {
+    // 1) Берём ref из нескольких возможных мест (как у вас и было)
+    const ref = it.ref || it.metadata?.ref || it.raw?.ref || '';
+
+    // 2) Пытаемся НЕ выводить из строки, а взять точные поля из metadata
+    const m = it.metadata || {};
+    const commentator = m.commentator || null;
+    const tractate    = m.tractate    || null;
+    const page        = m.page        || null;
+    const section     = m.section     || null;
+
+    // Если метаданных достаточно — строим ключ напрямую
+    if (commentator && tractate && page && section) {
+      const key: GroupKey = `${commentator} on ${tractate} ${page}:${section}`;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          key,
+          parsed: { commentator, tractate, page, section },
+          color: '',
+          items: [],
+        });
+      }
+      groups.get(key)!.items.push(it);
+      continue;
+    }
+
+    // 3) Иначе — пробуем старую строгую регулярку как запасной путь
+    const p = parseRefStrict(ref);
+    if (p) {
+      const key: GroupKey = `${p.commentator} on ${p.tractate} ${p.page}:${p.section}`;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          key,
+          parsed: { commentator: p.commentator, tractate: p.tractate, page: p.page, section: p.section },
+          color: '',
+          items: [],
+        });
+      }
+      groups.get(key)!.items.push(it);
+      continue;
+    }
+
+    // 4) Совсем не распознали — в сироты (но всё равно показываем!)
+    orphans.push(it);
+  }
+
   return { groups: [...groups.values()], orphans };
 }
 
@@ -113,8 +165,8 @@ export function sortGroupItems(items: any[]): any[] {
     const as = a.score ?? 0, bs = b.score ?? 0;
     if (as !== bs) return bs - as;
 
-    const av = naturalPartValue(a.ref);
-    const bv = naturalPartValue(b.ref);
+    const av = naturalPartValue(a.ref || a.metadata?.ref || '');
+    const bv = naturalPartValue(b.ref || b.metadata?.ref || '');
     if (av.n != null && bv.n != null) return av.n - bv.n;
     if (av.n != null) return -1;
     if (bv.n != null) return 1;
@@ -164,8 +216,7 @@ export function pickColor(category?: string, commentator?: string) {
 const BookshelfPanel = memo(({
   sessionId,
   currentRef,
-  onDragStart,
-  onItemClick
+  onDragStart
 }: BookshelfPanelProps & {
   sessionId?: string;
   currentRef?: string;
@@ -240,8 +291,14 @@ const BookshelfPanel = memo(({
       try {
         const data = await api.getBookshelfItems(sessionId, currentRef, [selectedCategory]);
 
+        // ✅ страховка на случай undefined/null
+        const rawItems = Array.isArray(data?.items) ? data.items : [];
+
+        // Временный диагностический лог (чтобы понять причину, если снова пусто)
+        console.debug('[Bookshelf] cat:', selectedCategory, 'items:', data?.items?.length, 'sample:', data?.items?.[0]);
+
         // Группировать и сортировать
-        const { groups, orphans } = groupByRef(data.items);
+        const { groups, orphans } = groupByRef(rawItems);
 
         // Сортировать группы и элементы внутри групп
         const sortedGroups = sortGroups(groups.map(group => ({
@@ -298,17 +355,19 @@ const BookshelfPanel = memo(({
       filteredGroups = filteredGroups.filter(group =>
         group.parsed.commentator.toLowerCase().includes(query) ||
         group.key.toLowerCase().includes(query) ||
-        group.items.some(item =>
-          item.ref.toLowerCase().includes(query) ||
-          item.category?.toLowerCase().includes(query) ||
-          item.preview?.toLowerCase().includes(query)
-        )
+        group.items.some((item: any) => {
+          const previewText = coalescePreview(item);
+          return item.ref.toLowerCase().includes(query) ||
+                 item.category?.toLowerCase().includes(query) ||
+                 (previewText && previewText.toLowerCase().includes(query));
+        })
       );
-      filteredOrphans = filteredOrphans.filter((item: any) =>
-        item.ref.toLowerCase().includes(query) ||
-        item.category?.toLowerCase().includes(query) ||
-        item.preview?.toLowerCase().includes(query)
-      );
+      filteredOrphans = filteredOrphans.filter((item: any) => {
+        const previewText = coalescePreview(item);
+        return item.ref.toLowerCase().includes(query) ||
+               item.category?.toLowerCase().includes(query) ||
+               (previewText && previewText.toLowerCase().includes(query));
+      });
     }
 
     // View type filter
@@ -380,17 +439,21 @@ const BookshelfPanel = memo(({
             </div>
 
             {/* ПРЕВЬЮ (1 строка, RTL при иврите) */}
-            {item.preview && (
-              <div
-                className={`text-xs mt-1 opacity-80 line-clamp-1 ${
-                  containsHebrew(item.preview) ? 'text-right font-hebrew' : 'text-left'
-                }`}
-                dir={getTextDirection(item.preview)}
-                title={item.preview}
-              >
-                {item.preview}
-              </div>
-            )}
+            {(() => {
+              const previewText = coalescePreview(item);
+              if (!previewText) return null;
+              return (
+                <div
+                  className={`text-xs mt-1 opacity-80 line-clamp-1 ${
+                    containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
+                  }`}
+                  dir={getTextDirection(previewText)}
+                  title={previewText}
+                >
+                  {previewText}
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>
@@ -458,16 +521,20 @@ const BookshelfPanel = memo(({
                   <div className="text-sm font-mono text-muted-foreground">
                     {part ? `${group.parsed.page}:${group.parsed.section}:${part}` : item.ref}
                   </div>
-                  {item.preview && (
-                    <div
-                      className={`text-xs opacity-75 mt-0.5 line-clamp-1 ${
-                        containsHebrew(item.preview) ? 'text-right font-hebrew' : 'text-left'
-                      }`}
-                      dir={getTextDirection(item.preview)}
-                    >
-                      {item.preview}
-                    </div>
-                  )}
+                  {(() => {
+                    const previewText = coalescePreview(item);
+                    if (!previewText) return null;
+                    return (
+                      <div
+                        className={`text-xs opacity-75 mt-0.5 line-clamp-1 ${
+                          containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
+                        }`}
+                        dir={getTextDirection(previewText)}
+                      >
+                        {previewText}
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
             );
@@ -507,16 +574,20 @@ const BookshelfPanel = memo(({
               ? `${parsed.commentator} on ${parsed.tractate} ${parsed.page}:${parsed.section}${parsed.part ? ` (Part ${parsed.part})` : ''}`
               : item.ref}
           </div>
-          {item.preview && (
-            <div
-              className={`text-xs opacity-75 mt-1 line-clamp-2 ${
-                containsHebrew(item.preview) ? 'text-right font-hebrew' : 'text-left'
-              }`}
-              dir={getTextDirection(item.preview)}
-            >
-              {item.preview}
-            </div>
-          )}
+          {(() => {
+            const previewText = coalescePreview(item);
+            if (!previewText) return null;
+            return (
+              <div
+                className={`text-xs opacity-75 mt-1 line-clamp-2 ${
+                  containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
+                }`}
+                dir={getTextDirection(previewText)}
+              >
+                {previewText}
+              </div>
+            );
+          })()}
         </div>
       </div>
     );
@@ -664,41 +735,6 @@ const BookshelfPanel = memo(({
 
 export default BookshelfPanel;
 
-// Вспомогательные компоненты
-const BookshelfHeader = memo(({
-  searchQuery,
-  onSearchChange,
-  itemCount,
-  totalCount
-}: {
-  searchQuery?: string;
-  onSearchChange?: (query: string) => void;
-  itemCount: number;
-  totalCount?: number;
-}) => (
-  <div className="flex-shrink-0 p-4 border-b">
-    <div className="flex items-center justify-between mb-3">
-      <h3 className="text-lg font-semibold">Sources</h3>
-      <span className="text-sm text-muted-foreground">
-        {itemCount}{totalCount ? ` / ${totalCount}` : ''}
-      </span>
-    </div>
-
-    {onSearchChange && (
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-        <input
-          type="text"
-          placeholder="Search sources..."
-          className="w-full pl-9 pr-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-          value={searchQuery || ''}
-          onChange={(e) => onSearchChange(e.target.value)}
-          dir="rtl"
-        />
-      </div>
-    )}
-  </div>
-));
 
 const EmptyState = ({ hasSearch }: { hasSearch: boolean }) => (
   <div className="flex flex-col items-center justify-center h-full p-6 text-center">
@@ -729,311 +765,4 @@ const ErrorState = ({ error }: { error: string }) => (
   </div>
 );
 
-const BookshelfList = memo(({
-  items,
-  onDragStart,
-  onItemClick,
-  draggedItem,
-  setDraggedItem
-}: {
-  items: CommentaryItem[];
-  onDragStart?: (ref: string) => void;
-  onItemClick?: (item: CommentaryItem) => void;
-  draggedItem: string | null;
-  setDraggedItem: (ref: string | null) => void;
-}) => (
-  <div className="flex-1 overflow-y-auto space-y-2 p-2">
-    {items.map((item, index) => (
-      <BookshelfItemComponent
-        key={item.ref}
-        item={item}
-        onDragStart={(ref) => {
-          setDraggedItem(ref);
-          onDragStart?.(ref);
-        }}
-        onItemClick={onItemClick}
-        isDragged={draggedItem === item.ref}
-      />
-    ))}
-  </div>
-));
 
-const CommentaryGroup = memo(({
-  item,
-  onDragStart,
-  onItemClick,
-  onToggleExpand,
-  isExpanded,
-  isDragged,
-  childrenCount
-}: {
-  item: CommentaryItem;
-  onDragStart?: (ref: string) => void;
-  onItemClick?: (item: CommentaryItem) => void;
-  onToggleExpand?: (ref: string) => void;
-  isExpanded?: boolean;
-  isDragged?: boolean;
-  childrenCount?: number;
-}) => {
-  const displayTitle = item.ref;
-  const direction = getTextDirection(displayTitle);
-  const isHebrew = containsHebrew(displayTitle);
-
-  const handleDragStart = useCallback((e: React.DragEvent) => {
-    e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
-    e.dataTransfer.setData('text/plain', item.ref);
-    e.dataTransfer.effectAllowed = 'copy';
-    onDragStart?.(item.ref);
-  }, [item.ref, onDragStart]);
-
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    onToggleExpand?.(item.ref);
-  }, [item.ref, onToggleExpand]);
-
-  return (
-    <div
-      className={`
-        p-3 rounded-lg border transition-all duration-200 cursor-pointer
-        ${isDragged
-          ? 'opacity-50 scale-95 border-primary'
-          : 'hover:shadow-md hover:border-primary/50'
-        }
-        bg-card border-border hover:bg-accent/10
-      `}
-      draggable
-      onDragStart={handleDragStart}
-      onClick={handleClick}
-      tabIndex={0}
-      role="button"
-      aria-expanded={isExpanded}
-      aria-label={`Group: ${displayTitle}`}
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-lg">ðŸ“–</span>
-          <div
-            className={`font-semibold text-sm ${
-              isHebrew ? 'text-right font-hebrew text-base leading-relaxed' : 'text-left'
-            }`}
-            dir={direction}
-          >
-            {displayTitle}
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onToggleExpand?.(item.ref);
-            }}
-            className="text-muted-foreground hover:text-foreground"
-            aria-label={isExpanded ? 'Collapse group' : 'Expand group'}
-          >
-            {isExpanded ? 'âˆ’' : '+'}
-          </button>
-        </div>
-      </div>
-
-      <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
-        <span>ðŸ“Š {childrenCount || 0} parts</span>
-        <span>ðŸŽ¯ High relevance</span>
-      </div>
-
-      <div className="flex gap-2 mt-2">
-        <button className="text-xs px-2 py-1 bg-secondary rounded hover:bg-secondary/80">
-          ðŸ“‹ Copy All
-        </button>
-        <button className="text-xs px-2 py-1 bg-secondary rounded hover:bg-secondary/80">
-          ðŸ”„ Load in Workbench
-        </button>
-      </div>
-    </div>
-  );
-});
-
-const CommentaryItemComponent = memo(({
-  item,
-  onDragStart,
-  onItemClick,
-  isDragged
-}: {
-  item: CommentaryItem;
-  onDragStart?: (ref: string) => void;
-  onItemClick?: (item: CommentaryItem) => void;
-  isDragged?: boolean;
-}) => {
-  const displayTitle = item.ref;
-  const direction = getTextDirection(displayTitle);
-  const isHebrew = containsHebrew(displayTitle);
-
-  const handleDragStart = useCallback((e: React.DragEvent) => {
-    e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
-    e.dataTransfer.setData('text/plain', item.ref);
-    e.dataTransfer.effectAllowed = 'copy';
-    onDragStart?.(item.ref);
-  }, [item.ref, onDragStart]);
-
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    onItemClick?.(item);
-  }, [item, onItemClick]);
-
-  return (
-    <div
-      className={`
-        p-3 rounded-lg border transition-all duration-200 cursor-move ml-6
-        ${isDragged
-          ? 'opacity-50 scale-95 border-primary'
-          : 'hover:shadow-md hover:border-primary/50'
-        }
-        bg-card border-border hover:bg-accent/10
-      `}
-      draggable
-      onDragStart={handleDragStart}
-      onClick={handleClick}
-      tabIndex={0}
-      role="button"
-      aria-label={`Source: ${displayTitle}`}
-    >
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-sm">ðŸ“</span>
-          <div
-            className={`font-semibold text-sm ${
-              isHebrew ? 'text-right font-hebrew text-base leading-relaxed' : 'text-left'
-            }`}
-            dir={direction}
-          >
-            {displayTitle}
-          </div>
-        </div>
-        <button className="text-muted-foreground hover:text-foreground" aria-label="Preview">
-          ðŸ‘
-        </button>
-      </div>
-
-      <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
-        <span>ðŸ“ Brief</span>
-        <span>ðŸ”— Part of series</span>
-      </div>
-
-      <div className="flex gap-2 mt-2">
-        <button className="text-xs px-2 py-1 bg-secondary rounded hover:bg-secondary/80">
-          ðŸ”„ In Workbench
-        </button>
-      </div>
-    </div>
-  );
-});
-
-const BookshelfItemComponent = memo(({
-  item,
-  onDragStart,
-  onItemClick,
-  isDragged
-}: {
-  item: CommentaryItem;
-  onDragStart?: (ref: string) => void;
-  onItemClick?: (item: CommentaryItem) => void;
-  isDragged?: boolean;
-}) => {
-  // Показываем полную ссылку с нумерацией
-  const displayTitle = item.ref; // Полная ссылка типа "Rashi on Shabbat 12a:2:1"
-  const subtitle = `${item.metadata.commentator} on ${item.metadata.tractate}`; // Короткое название типа "Rashi on Shabbat"
-
-  const direction = getTextDirection(displayTitle);
-  const isHebrew = containsHebrew(displayTitle);
-
-  const handleDragStart = useCallback((e: React.DragEvent) => {
-    e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
-    e.dataTransfer.setData('text/plain', item.ref);
-    e.dataTransfer.effectAllowed = 'copy';
-    onDragStart?.(item.ref);
-  }, [item.ref, onDragStart]);
-
-  const handleClick = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    onItemClick?.(item);
-  }, [item, onItemClick]);
-
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      onItemClick?.(item);
-    }
-  }, [item, onItemClick]);
-
-  return (
-    <div
-      className={`
-        p-3 rounded-lg border transition-all duration-200 cursor-move
-        ${isDragged
-          ? 'opacity-50 scale-95 border-primary'
-          : 'hover:shadow-md hover:border-primary/50'
-        }
-        bg-card border-border hover:bg-accent/10
-      `}
-      draggable
-      onDragStart={handleDragStart}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role="button"
-      aria-label={`Source: ${displayTitle}`}
-    >
-      {/* Полная ссылка с нумерацией */}
-      <div
-        className={`font-semibold text-sm mb-1 ${
-          isHebrew ? 'text-right font-hebrew text-base leading-relaxed' : 'text-left'
-        }`}
-        dir={direction}
-      >
-        {displayTitle}
-      </div>
-
-      {/* Короткое название (если отличается от полной ссылки) */}
-      {subtitle && subtitle !== displayTitle && (
-        <div
-          className={`text-xs text-muted-foreground mb-2 ${
-            containsHebrew(subtitle) ? 'text-right font-hebrew' : 'text-left'
-          }`}
-          dir={getTextDirection(subtitle)}
-        >
-          {subtitle}
-        </div>
-      )}
-
-      {/* Категория */}
-      {item.category && (
-        <div className="flex items-center gap-1 mb-2">
-          <BookOpen className="w-3 h-3 text-muted-foreground" />
-          <span
-            className={`text-xs text-muted-foreground ${
-              containsHebrew(item.category)
-                ? 'font-hebrew'
-                : ''
-            }`}
-          >
-            {item.category}
-          </span>
-        </div>
-      )}
-
-      {/* Превью */}
-      {item.preview && (
-        <div
-          className={`text-xs opacity-75 line-clamp-2 ${
-            containsHebrew(item.preview)
-              ? 'text-right font-hebrew leading-relaxed text-sm'
-              : 'text-left leading-normal'
-          }`}
-          dir={getTextDirection(item.preview)}
-        >
-          {item.preview}
-        </div>
-      )}
-
-    </div>
-  );
-});

@@ -1,9 +1,19 @@
+import { TextSegment } from './text';
+
+export interface ResolveResponse {
+  ok: boolean;
+  ref?: string;
+  candidates?: string[];
+  message?: string;
+}
+
 export interface StudySnapshot {
-  focus: { ref: string; title: string; text_full: string; he_text_full?: string; collection: string } | null;
-  window: {
-    prev: { ref: string; preview: string }[];
-    next: { ref: string; preview: string }[];
-  };
+  // New structure for focus reader
+  segments: TextSegment[];
+  focusIndex: number;
+  ref: string;
+
+  // Unchanged properties
   bookshelf: {
     counts: Record<string, number>;
     items: any[]; // Define BookshelfItem later

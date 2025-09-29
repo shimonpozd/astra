@@ -1,17 +1,18 @@
+import { DocV1 } from './text';
+
 export interface Chat {
-  sessionId: string;
+  session_id: string;
   name: string;
-  lastModified: string;
-  messageCount?: number;
+  last_modified: string;
+  type: 'chat' | 'study';
 }
 
 export interface Message {
-  id: string;
-  role: 'user' | 'assistant' | 'source';
-  content: string | DocV1;
+  id: string | number;
+  role: 'user' | 'assistant' | 'system' | 'source';
+  content: string | DocV1 | null;
   content_type?: 'text.v1' | 'doc.v1';
-  timestamp: number;
-  sourceData?: SourceData;
+  timestamp: number | Date;
 }
 
 export interface SourceData {

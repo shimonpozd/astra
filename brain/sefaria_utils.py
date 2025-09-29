@@ -41,6 +41,8 @@ class CompactText:
     type: str = ""
     lang: str = ""
     text: str = ""
+    en_text: Optional[str] = None
+    he_text: Optional[str] = None
 
     def __init__(self, raw: dict, preferred_langs: Tuple[str, ...] = ('en', 'he')):
         if not isinstance(raw, dict):
@@ -51,45 +53,53 @@ class CompactText:
         self.title = raw.get("title", "")
         self.indexTitle = raw.get("indexTitle", "")
         self.type = raw.get("type", "")
-        
-        # Try to get text directly if no versions field or versions is empty
-        direct_text = raw.get("text")
-        if direct_text and (not raw.get("versions") or not raw.get("versions", [])):
-            self.lang = raw.get("lang", preferred_langs[0] if preferred_langs else "")
-            if isinstance(direct_text, list):
-                processed_text = "\n".join(map(str, direct_text))
-            else:
-                processed_text = str(direct_text)
-            self.text = clamp_lines(_clean_html(processed_text).strip(), max_lines=8)
-            return # Exit early if direct text found
 
-        chosen_version = None
-        for lang in preferred_langs:
-            for v in raw.get("versions", []):
-                if v.get("language") == lang and v.get("text"):
-                    chosen_version = v
-                    break
-            if chosen_version:
+        versions = raw.get("versions", [])
+        
+        # Find English text
+        for v in versions:
+            if v.get("language") == "en" and v.get("text"):
+                raw_text_en = v.get("text", "")
+                processed_text_en = "\n".join(map(str, raw_text_en)) if isinstance(raw_text_en, list) else str(raw_text_en)
+                self.en_text = clamp_lines(_clean_html(processed_text_en).strip(), max_lines=8)
                 break
-        if not chosen_version:
-            chosen_version = next((v for v in raw.get("versions", []) if v.get("text")), None)
-        if chosen_version:
-            self.lang = chosen_version.get("language", "")
-            raw_text = chosen_version.get("text", "")
-            if isinstance(raw_text, list):
-                processed_text = "\n".join(map(str, raw_text))
-            else:
-                processed_text = str(raw_text)
-            cleaned_text = _clean_html(processed_text).strip()
-            self.text = clamp_lines(cleaned_text, max_lines=8)
+
+        # Find Hebrew text
+        for v in versions:
+            if v.get("language") == "he" and v.get("text"):
+                raw_text_he = v.get("text", "")
+                processed_text_he = "\n".join(map(str, raw_text_he)) if isinstance(raw_text_he, list) else str(raw_text_he)
+                self.he_text = clamp_lines(_clean_html(processed_text_he).strip(), max_lines=8)
+                break
+
+        # Fallback for direct text fields (v2 compatibility)
+        # English text can be in 'text'
+        en_text_raw = raw.get("text")
+        if en_text_raw and not self.en_text:
+            processed_en = "\n".join(map(str, en_text_raw)) if isinstance(en_text_raw, list) else str(en_text_raw)
+            self.en_text = clamp_lines(_clean_html(processed_en).strip(), max_lines=8)
+
+        # Hebrew text can be in 'he'
+        he_text_raw = raw.get("he")
+        if he_text_raw and not self.he_text:
+            processed_he = "\n".join(map(str, he_text_raw)) if isinstance(he_text_raw, list) else str(he_text_raw)
+            self.he_text = clamp_lines(_clean_html(processed_he).strip(), max_lines=8)
+
+        # Set main text for backward compatibility
+        if self.en_text:
+            self.text = self.en_text
+            self.lang = 'en'
+        elif self.he_text:
+            self.text = self.he_text
+            self.lang = 'he'
         else:
-            self.lang = preferred_langs[0] if preferred_langs else ""
             self.text = ""
+            self.lang = preferred_langs[0] if preferred_langs else ""
 
     def text_empty(self) -> bool:
         return not self.text.strip()
 
-    def to_dict_min(self) -> Dict[str, str]:
+    def to_dict_min(self) -> Dict[str, Any]:
         return {
             "ref": self.ref,
             "heRef": self.heRef,
@@ -98,6 +108,8 @@ class CompactText:
             "type": self.type,
             "lang": self.lang,
             "text": self.text,
+            "en_text": self.en_text,
+            "he_text": self.he_text,
         }
 
 def compact_and_deduplicate_links(raw_links: list, categories: Optional[List[str]], limit: int = 150) -> List[Dict[str, Any]]:
@@ -113,6 +125,10 @@ def compact_and_deduplicate_links(raw_links: list, categories: Optional[List[str
         if categories and link_category not in categories:
             continue
 
+        ref = link.get("ref") or link.get("sourceRef") or link.get("anchorRef")
+        if not ref:
+            continue
+
         # Be more lenient in finding the commentator/source name
         commentator = link.get("commentator") or \
                       (link.get("collectiveTitle", {}).get("en")) or \
@@ -120,15 +136,11 @@ def compact_and_deduplicate_links(raw_links: list, categories: Optional[List[str
         
         if not commentator:
             # As a last resort, try to build it from the ref
-            ref_parts = link.get("ref", "").split(" on ")
+            ref_parts = ref.split(" on ")
             if len(ref_parts) > 1:
                 commentator = ref_parts[0]
             else:
                 continue # Skip if we truly can't identify the source
-
-        ref = link.get("ref")
-        if not ref:
-            continue
 
         # Use a more robust deduplication key
         dedup_key = (commentator, ref)

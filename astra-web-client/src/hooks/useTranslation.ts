@@ -53,7 +53,14 @@ export const useTranslation = ({ hebrewText, englishText }: UseTranslationProps)
       });
 
       if (!response.ok) {
-        throw new Error('Translation failed');
+        let errorMsg = 'Translation failed';
+        try {
+          const errorData = await response.json();
+          errorMsg = errorData.detail || JSON.stringify(errorData);
+        } catch (e) {
+          // Ignore if the error response is not JSON
+        }
+        throw new Error(errorMsg);
       }
 
       if (!response.body) {
@@ -71,8 +78,11 @@ export const useTranslation = ({ hebrewText, englishText }: UseTranslationProps)
         if (value) {
           try {
             const event = JSON.parse(value) as { type: string; data?: any };
-            if (event.type === 'llm_chunk' && typeof event.data === 'string') {
+            if (event && event.type === 'llm_chunk' && typeof event.data === 'string') {
               fullTranslation = event.data; // Expecting a single chunk with final translation
+            } else if (event && event.type === 'error') {
+              console.error('[Translation] Received error from backend:', event.data.message);
+              setError(event.data.message);
             }
           } catch (e) {
             console.error('[Translation] Failed to parse final stream event:', value, e);

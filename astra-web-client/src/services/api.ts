@@ -161,22 +161,6 @@ async function getBookshelfItems(sessionId: string, ref: string, categories: str
   }
 }
 
-async function getSourceText(ref: string): Promise<any> {
-  try {
-    const response = await fetch(`${API_BASE}/api/texts`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ref }),
-    });
-    if (!response.ok) {
-      throw new Error('Failed to get source text');
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Failed to get source text for ${ref}:`, error);
-    throw error;
-  }
-}
 
 async function translateText(hebrewText: string, englishText: string): Promise<string> {
   try {

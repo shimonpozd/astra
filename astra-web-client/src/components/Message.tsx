@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Message as MessageType } from '../types/index';
 import { MessageRenderer } from './MessageRenderer';
-import { Doc, DocV1, ChatMessage } from '../types/text';
+import { Doc, DocV1 } from '../types/text';
 import { cn } from '../lib/utils';
 
 interface MessageProps {

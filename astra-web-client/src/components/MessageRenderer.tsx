@@ -1,5 +1,5 @@
 import React from "react";
-import { Doc, DocV1, Block } from "../types/text";
+import { Doc, DocV1 } from "../types/text";
 
 /** 1) Декодирование HTML entities */
 function decodeHtml(input: string): string {
@@ -13,6 +13,7 @@ function decodeHtml(input: string): string {
 
 /** 2) Безопасный escape */
 /** 1) Безопасный escape */
+// @ts-ignore
 function escapeHtml(input: string): string {
   return input
     .replace(/&/g, "&amp;")

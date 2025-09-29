@@ -34,7 +34,6 @@ interface WorkbenchPanelProps {
   size?: 'compact' | 'normal' | 'expanded';
   hebrewScale?: number;           // default 1.35
   hebrewLineHeight?: 'compact' | 'normal' | 'relaxed'; // default 'relaxed'
-  metadataVisibility?: 'hidden' | 'hover' | 'inline';  // default 'hover'
   headerVariant?: 'hidden' | 'mini' | 'default'; // default 'mini'
   maxWidth?: 'narrow' | 'normal' | 'wide'; // default 'normal'
 }
@@ -161,21 +160,17 @@ const WorkbenchContent = memo(({
   item,
   sizeConfig,
   size,
-  isExpanded,
   active,
   hebrewScale,
   hebrewLineHeight,
-  headerVariant,
   maxWidth
 }: {
   item: WorkbenchItem;
   sizeConfig: { minHeight: string; baseTextSize: string };
   size: 'compact' | 'normal' | 'expanded';
-  isExpanded: boolean;
   active: boolean;
   hebrewScale: number;
   hebrewLineHeight: 'compact' | 'normal' | 'relaxed';
-  headerVariant: 'hidden' | 'mini' | 'default';
   maxWidth: 'narrow' | 'normal' | 'wide';
 }) => {
   const articleRef = useRef<HTMLElement>(null);
@@ -189,7 +184,7 @@ const WorkbenchContent = memo(({
 
   // Поддержка как старого, так и нового формата данных
   const displayText = item.preview || item.hePreview || '';
-  const fullText = item.text_full || item.heTextFull || displayText;
+  const fullText = item.heTextFull || item.text_full || displayText;
 
   const { translatedText, isTranslating, error, translate } = useTranslation({
     hebrewText: item.heTextFull || '',
@@ -319,7 +314,6 @@ const WorkbenchPanelInline = memo(({
   size = 'normal',
   hebrewScale = 1.35,
   hebrewLineHeight = 'relaxed',
-  metadataVisibility = 'hover',
   headerVariant = 'mini',
   maxWidth = 'normal'
 }: WorkbenchPanelProps) => {
@@ -385,11 +379,9 @@ const WorkbenchPanelInline = memo(({
         item={item}
         sizeConfig={sizeConfig}
         size={size}
-        isExpanded={isExpanded}
         active={active}
         hebrewScale={hebrewScale}
         hebrewLineHeight={hebrewLineHeight}
-        headerVariant={headerVariant}
         maxWidth={maxWidth}
       />
     </WorkbenchContainer>

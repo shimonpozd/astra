@@ -207,7 +207,6 @@ const GeneralSettings: React.FC = () => {
   };
 
   const getConfigChanges = (original: ConfigData, current: ConfigData): Partial<ConfigData> => {
-    const changes: Partial<ConfigData> = {};
 
     const compareObjects = (orig: any, curr: any, path: string[] = []): any => {
       if (typeof orig !== 'object' || typeof curr !== 'object' || orig === null || curr === null) {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StudySnapshot } from '../../types/study';
-import { ContinuousText, TextSegment } from '../../types/text';
+import { ContinuousText } from '../../types/text';
 import FocusReader from './FocusReader';
 import StudyToolbar from './StudyToolbar';
 import ChatViewport from '../chat/ChatViewport';
@@ -19,7 +19,6 @@ interface StudyModeProps {
   canNavigateForward: boolean;
   messages: Message[];
   isLoadingMessages: boolean;
-  onSendMessage: (message: string) => void;
   isSending: boolean;
   studySessionId: string | null;
   setIsSending: (sending: boolean) => void;
@@ -30,6 +29,7 @@ interface StudyModeProps {
   onFocusClick?: () => void;
   onNavigateToRef?: (ref: string) => void;
   onLexiconLookup?: (word: string, entries: any[]) => void;
+  refreshStudySnapshot: () => void;
 }
 
 export default function StudyMode({
@@ -42,7 +42,6 @@ export default function StudyMode({
   canNavigateForward,
   messages,
   isLoadingMessages,
-  onSendMessage,
   isSending,
   studySessionId,
   setIsSending,
@@ -53,6 +52,7 @@ export default function StudyMode({
   onFocusClick,
   onNavigateToRef,
   onLexiconLookup,
+  refreshStudySnapshot,
 }: StudyModeProps) {
   // Lexicon state
   const [lexWord, setLexWord] = useState<string | null>(null);
@@ -84,37 +84,12 @@ export default function StudyMode({
     }
   };
   // Конвертация snapshot в continuousText для нового FocusReader
-  const continuousText: ContinuousText | null = snapshot && snapshot.focus ? {
-    segments: [
-      ...snapshot.window.prev.map((item, index) => ({
-        ref: item.ref,
-        text: item.preview || '',
-        heText: '',
-        position: (index + 1) / (snapshot.window.prev.length + snapshot.window.next.length + 1),
-        type: 'context' as const,
-        metadata: {}
-      })),
-      {
-        ref: snapshot.focus.ref,
-        text: snapshot.focus.text_full || '',
-        heText: snapshot.focus.he_text_full || '',
-        position: 0.5,
-        type: 'focus' as const,
-        metadata: {}
-      },
-      ...snapshot.window.next.map((item, index) => ({
-        ref: item.ref,
-        text: item.preview || '',
-        heText: '',
-        position: (snapshot.window.prev.length + 1 + index + 1) / (snapshot.window.prev.length + snapshot.window.next.length + 1),
-        type: 'context' as const,
-        metadata: {}
-      }))
-    ],
-    focusIndex: snapshot.window.prev.length,
-    totalLength: snapshot.window.prev.length + snapshot.window.next.length + 1,
-    title: snapshot.focus.title || snapshot.focus.ref,
-    collection: snapshot.focus.collection || ''
+  const continuousText: ContinuousText | null = snapshot ? {
+    segments: snapshot.segments,
+    focusIndex: snapshot.focusIndex,
+    totalLength: snapshot.segments.length,
+    title: snapshot.ref,
+    collection: '' // This field is not critical for the reader component
   } : null;
 
   return (
@@ -145,7 +120,7 @@ export default function StudyMode({
             {/* Focus Reader */}
             <div
               className={`bg-card/60 rounded-lg border overflow-hidden transition-colors min-h-0 cursor-pointer ${
-                snapshot?.discussion_focus_ref === snapshot?.focus?.ref ? 'ring-2 ring-primary' : ''
+                snapshot?.discussion_focus_ref === snapshot?.ref ? 'ring-2 ring-primary' : ''
               }`}
               onClick={() => onFocusClick && onFocusClick()}
             >
@@ -173,7 +148,7 @@ export default function StudyMode({
         {/* Lower fixed height - Chat */}
         <div className="h-[700px] min-h-0 flex flex-col border-t border-border/20">
           <div className="flex-1 min-h-0 overflow-y-auto px-4 py-2">
-            <ChatViewport messages={messages} isLoading={isLoadingMessages} />
+            <ChatViewport messages={messages.map(m => ({ ...m, id: String(m.id) }))} isLoading={isLoadingMessages} />
           </div>
           <div className="flex-shrink-0 px-4 pb-4">
             <MessageComposer
@@ -219,6 +194,7 @@ export default function StudyMode({
                   },
                   onComplete: () => {
                     setIsSending(false);
+                    refreshStudySnapshot();
                   },
                   onError: (error) => {
                     setMessages((prev) =>

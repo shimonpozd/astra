@@ -36,13 +36,6 @@ const SourceCard: React.FC<SourceCardProps> = ({ source }) => {
     }
   };
 
-  const getLanguageName = (lang: string) => {
-    switch (lang) {
-      case 'he': return 'Hebrew';
-      case 'en': return 'English';
-      default: return 'Unknown';
-    }
-  };
 
   return (
     <div

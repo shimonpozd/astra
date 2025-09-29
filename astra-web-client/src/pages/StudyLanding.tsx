@@ -17,7 +17,7 @@ export default function StudyLanding() {
     setLoading(true);
     try {
       const res: ResolveResponse = await api.resolveRef(query);
-      if (res.ok) {
+      if (res.ok && res.ref) {
         const sessionId = (crypto as any)?.randomUUID?.() || `s_${Date.now()}`;
         // Immediately set focus to bootstrap state
         await api.setFocus(sessionId, res.ref);

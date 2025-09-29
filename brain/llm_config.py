@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from openai import OpenAI
+from openai import AsyncOpenAI
 
 import os
 from collections.abc import Mapping
@@ -127,7 +127,7 @@ def _get_reasoning_params_from_config() -> Dict[str, Any]:
     return result
 
 
-def get_llm_for_task(task: str) -> Tuple[OpenAI, str, Dict[str, Any], List[str]]:
+def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[str]]:
     """Return OpenAI-compatible client, resolved model id, reasoning params, and capabilities."""
     if task not in TASK_ENV_MAPPING:
         raise LLMConfigError(f"Unknown task: {task}")
@@ -152,7 +152,7 @@ def get_llm_for_task(task: str) -> Tuple[OpenAI, str, Dict[str, Any], List[str]]
         api_cfg = _get_api_section("ollama") if USE_ASTRA_CONFIG else {}
         ollama_base_url = _resolve_env_var(api_cfg.get("base_url")) or os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
-        client = OpenAI(base_url=f"{ollama_base_url}/v1", api_key="ollama")
+        client = AsyncOpenAI(base_url=f"{ollama_base_url}/v1", api_key="ollama")
         clean_model = model.replace("ollama/", "")
         capabilities: List[str] = []
 
@@ -164,7 +164,7 @@ def get_llm_for_task(task: str) -> Tuple[OpenAI, str, Dict[str, Any], List[str]]
         if not api_key:
             raise LLMConfigError("OPENROUTER_API_KEY not set for OpenRouter models")
 
-        client = OpenAI(base_url=openrouter_base_url, api_key=api_key)
+        client = AsyncOpenAI(base_url=openrouter_base_url, api_key=api_key)
         clean_model = model.replace("openrouter/", "")
         capabilities = ["json_mode"]
 
@@ -179,7 +179,7 @@ def get_llm_for_task(task: str) -> Tuple[OpenAI, str, Dict[str, Any], List[str]]
         client_kwargs: Dict[str, Any] = {"api_key": api_key}
         if organization:
             client_kwargs["organization"] = organization
-        client = OpenAI(**client_kwargs)
+        client = AsyncOpenAI(**client_kwargs)
         clean_model = model
         capabilities = ["json_mode"]
 

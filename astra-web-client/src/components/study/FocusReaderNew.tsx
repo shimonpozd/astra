@@ -1,6 +1,6 @@
 import { memo, useRef, useEffect, forwardRef } from 'react';
-import { FocusReaderProps, TextSegment, ContinuousText } from '../../types/text';
-import { getTextDirection, normalizeTextForDisplay } from '../../utils/textUtils';
+import { FocusReaderProps, TextSegment } from '../../types/text';
+import { getTextDirection } from '../../utils/textUtils';
 import { containsHebrew } from '../../utils/hebrewUtils';
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
 
@@ -10,11 +10,9 @@ const FocusReader = memo(({
   error,
   onSegmentClick,
   onNavigateToRef,
-  showMinimap = true,
   fontSize = 'medium',
   lineHeight = 'normal'
 }: FocusReaderProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
   const focusRef = useRef<HTMLElement>(null);
 
   // Автоскролл к фокусу при изменении
@@ -66,14 +64,6 @@ const FocusReader = memo(({
 
   return (
     <div className="h-full flex flex-col">
-      {showMinimap && (
-        <TextMinimap
-          segments={continuousText.segments}
-          focusIndex={continuousText.focusIndex}
-          onNavigate={onNavigateToRef}
-        />
-      )}
-
       <div className="flex-1 overflow-hidden">
         <ContinuousTextFlow
           segments={continuousText.segments}
@@ -90,52 +80,6 @@ const FocusReader = memo(({
 
 export default FocusReader;
 
-// Вспомогательные компоненты
-const TextMinimap = memo(({
-  segments,
-  focusIndex,
-  onNavigate
-}: {
-  segments: TextSegment[];
-  focusIndex: number;
-  onNavigate?: (ref: string) => void;
-}) => {
-  return (
-    <nav className="flex-shrink-0 border-b bg-card/50 px-4 py-2">
-      <div className="flex items-center gap-2 overflow-x-auto">
-        <span className="text-xs text-muted-foreground whitespace-nowrap">
-          Navigation:
-        </span>
-
-        <div className="flex gap-1">
-          {segments.map((segment, index) => {
-            const isFocus = index === focusIndex;
-            const isNearFocus = Math.abs(index - focusIndex) <= 2;
-
-            return (
-              <button
-                key={segment.ref}
-                className={`
-                  px-2 py-1 text-xs rounded transition-all duration-200
-                  ${isFocus
-                    ? 'bg-primary text-primary-foreground font-medium'
-                    : isNearFocus
-                    ? 'bg-primary/10 text-primary hover:bg-primary/20'
-                    : 'bg-muted/50 text-muted-foreground hover:bg-muted'
-                  }
-                `}
-                onClick={() => onNavigate?.(segment.ref)}
-                title={segment.ref}
-              >
-                {segment.ref.split('.').pop() || index + 1}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    </nav>
-  );
-});
 
 const ContinuousTextFlow = memo(({
   segments,
@@ -210,7 +154,7 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
   direction,
   onClick
 }, ref) => {
-  const text = normalizeTextForDisplay(segment.text || segment.heText || '');
+  const text = segment.text || segment.heText || '';
   const isHebrew = containsHebrew(text);
 
   return (

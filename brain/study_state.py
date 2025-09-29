@@ -22,24 +22,41 @@ def _top_key(session_id: str) -> str:
 
 from typing import Dict, Any, Optional, List, Union
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, root_validator
 
-# --- Snapshot Data Class (for type hinting and structure) ---
+# --- Data Models ---
 
-class Focus(BaseModel):
+# Legacy models (for validation of old data)
+class LegacyFocus(BaseModel):
     ref: str
     title: str
     text_full: str
     he_text_full: Optional[str] = None
     collection: str
 
-class WindowItem(BaseModel):
+class LegacyWindowItem(BaseModel):
     ref: str
     preview: str
 
-class Window(BaseModel):
-    prev: List[WindowItem]
-    next: List[WindowItem]
+class LegacyWindow(BaseModel):
+    prev: List[LegacyWindowItem]
+    next: List[LegacyWindowItem]
+
+# New, unified data models
+class TextSegmentMetadata(BaseModel):
+    verse: Optional[int] = None
+    chapter: Optional[int] = None
+    page: Optional[str] = None
+    line: Optional[int] = None
+    title: Optional[str] = None
+    indexTitle: Optional[str] = None
+
+class TextSegment(BaseModel):
+    ref: str
+    text: str
+    heText: str
+    position: float
+    metadata: TextSegmentMetadata
 
 class BookshelfItem(BaseModel):
     ref: str
@@ -66,8 +83,16 @@ class ChatMessage(BaseModel):
     content_type: str = "text.v1"
 
 class StudySnapshot(BaseModel):
-    focus: Focus
-    window: Window
+    # New fields (target state)
+    segments: Optional[List[TextSegment]] = None
+    focusIndex: Optional[int] = None
+    ref: Optional[str] = None
+
+    # Legacy fields (for backward compatibility)
+    focus: Optional[LegacyFocus] = None
+    window: Optional[LegacyWindow] = None
+
+    # Other state properties
     bookshelf: Bookshelf
     chat_local: List[ChatMessage]
     ts: int

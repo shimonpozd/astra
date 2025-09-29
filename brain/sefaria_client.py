@@ -21,7 +21,7 @@ _SANITIZE_TRANSLATION = str.maketrans({
 })
 
 def ok_and_has_text(raw: Any) -> bool:
-    logger.info(f"SEFARIA_CLIENT: ok_and_has_text called with raw: {raw}, type: {type(raw)}, is_dict: {isinstance(raw, dict)}")
+    #logger.info(f"SEFARIA_CLIENT: ok_and_has_text called with raw: {raw}, type: {type(raw)}, is_dict: {isinstance(raw, dict)}")
     if not isinstance(raw, dict) or raw.get("error"):
         return False
     return bool(raw.get("text") or raw.get("he") or raw.get("versions"))
@@ -74,22 +74,21 @@ async def sefaria_get_text_v3_async(tref: str, lang: str | None = None) -> dict:
     ]
     unique_candidates = list(dict.fromkeys(c for c in candidates if c))
 
-    # Language fallback cascade
-    langs = [lang] if lang else []
-    for candidate_lang in ("en", "he"):
-        if candidate_lang not in langs:
-            langs.append(candidate_lang)
+    params = {"return_format": "text_only"}
+    if lang:
+        params["lang"] = lang
+    else:
+        # Default to a bilingual request if no specific language is requested
+        params["version"] = ["english", "hebrew"]
 
     for candidate_ref in unique_candidates:
-        for l in langs:
-            logger.info(f"Attempting to fetch text for ref: '{candidate_ref}' with lang: {l}")
-            params = {"return_format": "text_only", "lang": l}
-            try:
-                raw = await _with_retries(lambda: _get(f"v3/texts/{quote(candidate_ref)}", params=params))
-                if ok_and_has_text(raw):
-                    return {"ok": True, "data": CompactText(raw).to_dict_min()}
-            except Exception as e:
-                logger.warning(f"v3 text fetch failed for {candidate_ref} (lang={l}): {e}")
+        logger.info(f"Attempting to fetch text for ref: '{candidate_ref}' with params: {params}")
+        try:
+            raw = await _with_retries(lambda: _get(f"v3/texts/{quote(candidate_ref)}", params=params))
+            if ok_and_has_text(raw):
+                return {"ok": True, "data": CompactText(raw).to_dict_min()}
+        except Exception as e:
+            logger.warning(f"v3 text fetch failed for {candidate_ref} with {params}: {e}")
 
         # Fallback to v2 API without specific lang
         try:

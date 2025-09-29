@@ -1,7 +1,7 @@
 import { DocV1 } from './text';
 export type { Chat, Message as ChatMessage, SourceData, ChatState, ChatAction } from './chat';
 export type { ResearchState, Note, ResearchStore } from './research';
-export type { StudySnapshot, ReaderWindow, ReaderItem, StudyStore, FocusItem, WindowItem, BookshelfItem } from './study';
+export type { StudySnapshot } from './study';
 
 export interface Message {
   id: string;

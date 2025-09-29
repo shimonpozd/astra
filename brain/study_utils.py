@@ -102,9 +102,8 @@ async def _generate_and_validate_refs(base_ref: str, collection: str, direction:
 
         # --- 2. Validate the candidate ---
         text_result = await sefaria_get_text_v3_async(candidate_ref_str)
-        if text_result.get("ok") and text_result.get("data", {}).get("text"):
-            preview_text = text_result["data"]["text"]
-            generated_refs.append({"ref": candidate_ref_str, "preview": " ".join(preview_text) if isinstance(preview_text, list) else preview_text[:PREVIEW_MAX_LEN]})
+        if text_result.get("ok") and text_result.get("data"):
+            generated_refs.append(text_result["data"])
         else:
             # Validation failed, if it's Talmud and we're going forward, try jumping page
             if current_ref_parts['type'] == 'talmud' and direction == 'next':
@@ -135,67 +134,43 @@ def containsHebrew(text: str) -> bool:
     return False
 
 async def get_text_with_window(ref: str, window_size: int = WINDOW_SIZE) -> Optional[Dict[str, Any]]:
-    context_setting = get_config_section("actions.context.study_mode_context", "english_only")
-
-    if context_setting not in ["english_only", "hebrew_only", "hebrew_and_english"]:
-        context_setting = "english_only"
-
-    en_text = ""
-    he_text = ""
-    focus_data = {}
-    
-    en_focus_task = sefaria_get_text_v3_async(ref, lang='en')
-    he_focus_task = sefaria_get_text_v3_async(ref, lang='he')
-    en_focus_result, he_focus_result = await asyncio.gather(en_focus_task, he_focus_task)
-    logger.info(f"GET_TEXT_WINDOW: Sefaria English result for {ref}: {en_focus_result.get('ok')}, data_present={bool(en_focus_result.get('data'))}")
-    logger.info(f"GET_TEXT_WINDOW: Sefaria Hebrew result for {ref}: {he_focus_result.get('ok')}, data_present={bool(he_focus_result.get('data'))}")
-
-    # Initialize focus_data from the first successful result, prioritizing English
-    if en_focus_result.get("ok") and en_focus_result.get("data"):
-        focus_data = en_focus_result["data"]
-    elif he_focus_result.get("ok") and he_focus_result.get("data"):
-        focus_data = he_focus_result["data"]
-    else:
-        focus_data = {} # No valid data from Sefaria
-
-    # Extract texts based on context_setting, with content checks
-    if focus_data: # Only proceed if we have some focus_data
-        text_from_en_result = en_focus_result["data"].get("text", "") if en_focus_result.get("ok") and en_focus_result.get("data") else ""
-        text_from_he_result = he_focus_result["data"].get("text", "") if he_focus_result.get("ok") and he_focus_result.get("data") else ""
-
-        if context_setting == "english_only":
-            if not containsHebrew(text_from_en_result):
-                en_text = text_from_en_result
-            he_text = ""
-        elif context_setting == "hebrew_only":
-            if containsHebrew(text_from_he_result):
-                he_text = text_from_he_result
-            en_text = ""
-        else: # hebrew_and_english
-            if text_from_en_result and not containsHebrew(text_from_en_result):
-                en_text = text_from_en_result
-            if containsHebrew(text_from_he_result):
-                he_text = text_from_he_result
-
-    if not focus_data: # If still no focus_data, then return None
+    # 1. Fetch focus segment
+    focus_result = await sefaria_get_text_v3_async(ref)
+    if not focus_result.get("ok") or not (focus_data := focus_result.get("data")):
         return None
 
+    # 2. Fetch surrounding segments
     collection = detect_collection(ref)
-
     prev_refs_task = _generate_and_validate_refs(ref, collection, "prev", window_size)
     next_refs_task = _generate_and_validate_refs(ref, collection, "next", window_size)
-    
-    prev_refs, next_refs = await asyncio.gather(prev_refs_task, next_refs_task)
+    prev_segments, next_segments = await asyncio.gather(prev_refs_task, next_refs_task)
 
+    # 3. Assemble the flat list of segments
+    all_segments_data = prev_segments + [focus_data] + next_segments
+    focus_index = len(prev_segments)
+
+    # 4. Format segments for the frontend, renaming keys to match component props
+    formatted_segments = []
+    total_segments = len(all_segments_data)
+    for i, seg_data in enumerate(all_segments_data):
+        formatted_segments.append({
+            "ref": seg_data.get("ref"),
+            "text": seg_data.get("en_text") or "",      # Map en_text to text
+            "heText": seg_data.get("he_text") or "",    # Map he_text to heText
+            "position": (i / (total_segments - 1)) if total_segments > 1 else 0.5,
+            "metadata": {
+                "title": seg_data.get("title"),
+                "indexTitle": seg_data.get("indexTitle"),
+                "chapter": seg_data.get("chapter"), # Assuming these might exist
+                "verse": seg_data.get("verse"),
+            }
+        })
+
+    # 5. Return the structure expected by the frontend
     return {
-        "focus": {
-            "ref": focus_data.get("ref", ref), 
-            "title": focus_data.get("title", focus_data.get("indexTitle")),
-            "text_full": en_text, 
-            "he_text_full": he_text,
-            "collection": collection
-        },
-        "window": {"prev": prev_refs, "next": next_refs}
+        "segments": formatted_segments,
+        "focusIndex": focus_index,
+        "ref": ref,
     }
 
 # --- Bookshelf Logic ---
@@ -232,21 +207,29 @@ async def get_bookshelf_for(ref: str, limit: int = 40, categories: Optional[List
     sorted_items = sorted(items, key=lambda x: x.get("score", 0), reverse=True)
 
     preview_tasks = []
-    for item in sorted_items[:10]:
-        async def fetch_preview(item_ref):
+    for item in sorted_items[:20]: # Fetch full text for top 20
+        async def fetch_full_text(item_ref):
             res = await sefaria_get_text_v3_async(item_ref)
-            if res.get("ok") and res.get("data", {}).get("text"):
-                text = res["data"]["text"]
-                return " ".join(text) if isinstance(text, list) else text
-            return ""
-        preview_tasks.append(fetch_preview(item["ref"]))
+            if res.get("ok") and res.get("data"):
+                data = res["data"]
+                en_text = data.get("en_text") or ""
+                he_text = data.get("he_text") or ""
+                return (en_text, he_text)
+            return ("", "")
+        preview_tasks.append(fetch_full_text(item["ref"]))
 
-    previews = await asyncio.gather(*preview_tasks)
-    for i, item in enumerate(sorted_items[:10]):
-        item["preview"] = previews[i][:PREVIEW_MAX_LEN] if previews[i] else ""
+    full_texts = await asyncio.gather(*preview_tasks)
+    for i, item in enumerate(sorted_items[:20]):
+        en_text, he_text = full_texts[i]
+        item["text_full"] = en_text
+        item["heTextFull"] = he_text
+        # For backward compatibility, populate preview with a snippet
+        item["preview"] = (en_text or he_text)[:PREVIEW_MAX_LEN]
 
-    # Add empty preview to the rest of the items to satisfy the model
-    for item in sorted_items[10:]:
+    # For items beyond 20, ensure the fields exist but are empty to satisfy the model
+    for item in sorted_items[20:]:
+        item["text_full"] = ""
+        item["heTextFull"] = ""
         item["preview"] = ""
 
     counts = {cat: 0 for cat in {item.get("category", "Unknown") for item in sorted_items}}

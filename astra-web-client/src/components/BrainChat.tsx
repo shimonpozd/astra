@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { api } from '../services/api';
-import { ChatRequest, Message as MessageType, StreamHandler, BrainEvent } from '../types';
+import { ChatRequest, Message as MessageType, StreamHandler } from '../types';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Loader2, AlertCircle, CheckCircle, FileText, MessageSquare, Search, ArrowLeft } from 'lucide-react';
+import { Loader2, AlertCircle, FileText, MessageSquare, Search, ArrowLeft } from 'lucide-react';
 
 interface BrainChatProps {
   persona: string;
@@ -53,7 +53,6 @@ export default function BrainChat({
     scrollToBottom();
   }, [messages, researchState]);
 
-  // Загружаем историю чата при выборе чата
   useEffect(() => {
     const loadChatHistory = async () => {
       if (!sessionId) {
@@ -63,10 +62,7 @@ export default function BrainChat({
       }
 
       try {
-        console.log(`📖 Загружаем историю для чата: ${sessionId}`);
         const response = await api.getChatHistory(sessionId);
-        console.log(`📄 История чата ${sessionId}:`, response);
-
         const historyMessages = (response as any).history?.map((msg: any) => ({
           id: msg.id || Date.now().toString() + Math.random(),
           role: msg.role,
@@ -74,12 +70,10 @@ export default function BrainChat({
           timestamp: msg.timestamp ? new Date(msg.timestamp) : new Date()
         })) || [];
 
-        console.log(`✅ Загружено сообщений для чата ${sessionId}:`, historyMessages.length);
         setMessages(historyMessages);
 
-        // Устанавливаем заголовок чата на основе первого сообщения
         if (historyMessages.length > 0) {
-          const firstMessage = historyMessages[0].content;
+          const firstMessage = historyMessages[0].content as string;
           const title = firstMessage.length > 50
             ? firstMessage.slice(0, 50) + '...'
             : firstMessage;
@@ -108,115 +102,56 @@ export default function BrainChat({
     };
 
     setMessages(prev => [...prev, userMessage]);
+    const currentInput = input;
     setInput('');
 
-    // Сброс состояния исследования
-    setResearchState({
-      currentStatus: '',
-      currentPlan: null,
-      currentDraft: '',
-      currentCritique: [],
-      isResearching: true,
-      error: null
-    });
-
-    try {
-      console.log(`📤 Отправляем сообщение в чат ${sessionId}:`, input);
-      const request: ChatRequest = {
-        text: input,
+    const request: ChatRequest = {
+        text: currentInput,
         agent_id: persona,
         session_id: sessionId,
-        user_id: 'user_' + Date.now() // Генерируем user_id
-      };
+        user_id: 'user_' + Date.now()
+    };
 
-      const streamHandler: StreamHandler = {
-        onStatus: (message: string) => {
-          console.log('📊 Status:', message);
-          setResearchState(prev => ({ ...prev, currentStatus: message }));
-        },
-
-        onPlan: (plan: any) => {
-          console.log('📋 Plan:', plan);
-          setResearchState(prev => ({ ...prev, currentPlan: plan }));
-        },
-
-        onResearchInfo: (info: any) => {
-          console.log('🔍 Research Info:', info);
-          setResearchState(prev => ({
-            ...prev,
-            currentPlan: info.plan || prev.currentPlan
-          }));
-        },
-
-        onDraft: (draft: any) => {
-          console.log('📝 Draft:', draft);
-          setResearchState(prev => ({ ...prev, currentDraft: draft.draft }));
-
-          // Добавляем черновик как сообщение ассистента
-          const draftMessage: MessageType = {
-            id: `draft_${Date.now()}`,
-            role: 'assistant',
-            content: draft.draft,
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, draftMessage]);
-        },
-
-        onFinalDraft: (draft: any) => {
-          console.log('📝 Final Draft:', draft);
-          setResearchState(prev => ({ ...prev, currentDraft: draft.draft }));
-
-          // Добавляем финальный черновик как сообщение ассистента
-          const finalDraftMessage: MessageType = {
-            id: `final_draft_${Date.now()}`,
-            role: 'assistant',
-            content: draft.draft,
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, finalDraftMessage]);
-        },
-
-        onCritique: (critique: any) => {
-          console.log('🔍 Critique:', critique);
-          setResearchState(prev => ({
-            ...prev,
-            currentCritique: [...prev.currentCritique, ...critique.feedback]
-          }));
-        },
-
-        onError: (error: any) => {
-          console.error('❌ Error:', error);
-          setResearchState(prev => ({
-            ...prev,
-            error: error.message,
-            isResearching: false
-          }));
-        },
-
-        onComplete: () => {
-          console.log('✅ Research complete');
-          setResearchState(prev => ({ ...prev, isResearching: false }));
-        }
-      };
-
-      await api.sendMessageStreamNDJSON(request, streamHandler);
-
-    } catch (error) {
-      console.error('❌ Error sending message:', error);
-      setResearchState(prev => ({
-        ...prev,
-        error: error instanceof Error ? error.message : 'Unknown error',
-        isResearching: false
-      }));
-
-      // Добавляем сообщение об ошибке
-      const errorMessage: MessageType = {
-        id: `error_${Date.now()}`,
+    const assistantMessageId = `asst_${Date.now()}`;
+    const assistantMessage: MessageType = {
+        id: assistantMessageId,
         role: 'assistant',
-        content: `Произошла ошибка: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        content: '',
         timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
+    };
+    setMessages(prev => [...prev, assistantMessage]);
+
+    const streamHandler: StreamHandler = {
+        onDraft: (draft: { chunk?: string }) => {
+            if (draft.chunk) {
+                setMessages(prev => prev.map(msg =>
+                    msg.id === assistantMessageId
+                        ? { ...msg, content: (msg.content || '') + draft.chunk }
+                        : msg
+                ));
+            }
+        },
+        onComplete: () => {
+            // Optional: any action on completion
+        },
+        onError: (error: Error) => {
+            setMessages(prev => prev.map(msg =>
+                msg.id === assistantMessageId
+                    ? { ...msg, content: `Error: ${error.message}` }
+                    : msg
+            ));
+        }
+    };
+
+    try {
+        await api.sendMessage(request, streamHandler);
+    } catch (error) {
+        console.error('❌ Error sending message:', error);
+        setMessages(prev => prev.map(msg =>
+            msg.id === assistantMessageId
+                ? { ...msg, content: `Error: ${error instanceof Error ? error.message : 'Unknown error'}` }
+                : msg
+        ));
     }
   };
 
@@ -230,7 +165,6 @@ export default function BrainChat({
   const startResearch = async () => {
     if (!input.trim() || researchState.isResearching) return;
 
-    // Добавляем команду /research к тексту
     const researchInput = `/research ${input}`;
 
     const userMessage: MessageType = {
@@ -243,7 +177,6 @@ export default function BrainChat({
     setMessages(prev => [...prev, userMessage]);
     setInput('');
 
-    // Сброс состояния исследования
     setResearchState({
       currentStatus: '',
       currentPlan: null,
@@ -254,7 +187,6 @@ export default function BrainChat({
     });
 
     try {
-      console.log(`🔬 Запускаем исследование:`, researchInput);
       const request: ChatRequest = {
         text: researchInput,
         agent_id: persona,
@@ -264,73 +196,26 @@ export default function BrainChat({
 
       const streamHandler: StreamHandler = {
         onStatus: (message: string) => {
-          console.log('📊 Status:', message);
-          setResearchState(prev => ({ ...prev, currentStatus: message }));
+            setResearchState(prev => ({ ...prev, currentStatus: message }));
         },
-
         onPlan: (plan: any) => {
-          console.log('📋 Plan:', plan);
-          setResearchState(prev => ({ ...prev, currentPlan: plan }));
+            setResearchState(prev => ({ ...prev, currentPlan: plan }));
         },
-
-        onResearchInfo: (info: any) => {
-          console.log('🔍 Research Info:', info);
-          setResearchState(prev => ({
-            ...prev,
-            currentPlan: info.plan || prev.currentPlan
-          }));
-        },
-
         onDraft: (draft: any) => {
-          console.log('📝 Draft:', draft);
-          setResearchState(prev => ({ ...prev, currentDraft: draft.draft }));
-
-          const draftMessage: MessageType = {
-            id: `draft_${Date.now()}`,
-            role: 'assistant',
-            content: draft.draft,
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, draftMessage]);
+            setResearchState(prev => ({ ...prev, currentDraft: draft.draft }));
         },
-
-        onFinalDraft: (draft: any) => {
-          console.log('📝 Final Draft:', draft);
-          setResearchState(prev => ({ ...prev, currentDraft: draft.draft }));
-
-          const finalDraftMessage: MessageType = {
-            id: `final_draft_${Date.now()}`,
-            role: 'assistant',
-            content: draft.draft,
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, finalDraftMessage]);
-        },
-
         onCritique: (critique: any) => {
-          console.log('🔍 Critique:', critique);
-          setResearchState(prev => ({
-            ...prev,
-            currentCritique: [...prev.currentCritique, ...critique.feedback]
-          }));
+            setResearchState(prev => ({ ...prev, currentCritique: [...prev.currentCritique, ...critique.feedback] }));
         },
-
         onError: (error: any) => {
-          console.error('❌ Error:', error);
-          setResearchState(prev => ({
-            ...prev,
-            error: error.message,
-            isResearching: false
-          }));
+          setResearchState(prev => ({ ...prev, error: error.message, isResearching: false }));
         },
-
         onComplete: () => {
-          console.log('✅ Research complete');
           setResearchState(prev => ({ ...prev, isResearching: false }));
         }
       };
 
-      await api.sendMessageStreamNDJSON(request, streamHandler);
+      await api.sendMessage(request, streamHandler);
 
     } catch (error) {
       console.error('❌ Error starting research:', error);
@@ -355,7 +240,6 @@ export default function BrainChat({
     setConnectionError(null);
 
     try {
-      // Проверяем доступность API
       const response = await fetch('http://localhost:7030/health', {
         method: 'GET',
         headers: {
@@ -364,7 +248,6 @@ export default function BrainChat({
       });
 
       if (response.ok) {
-        // Повторяем отправку сообщения
         await sendMessage();
       } else {
         throw new Error(`HTTP ${response.status}`);
@@ -378,7 +261,6 @@ export default function BrainChat({
 
   return (
     <div className="h-full flex flex-col bg-background">
-      {/* Верхняя панель */}
       <div className="border-b p-4 bg-card">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -419,7 +301,6 @@ export default function BrainChat({
         </div>
       </div>
 
-      {/* Область сообщений */}
       <div className="flex-1 overflow-y-auto p-6">
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
@@ -439,7 +320,7 @@ export default function BrainChat({
           <div className="max-w-4xl mx-auto space-y-6">
             {messages.map((message) => (
               <div
-                key={message.id}
+                key={message.id as string}
                 className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 {message.role === 'assistant' && (
@@ -455,7 +336,7 @@ export default function BrainChat({
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                    {message.content}
+                    {message.content as string}
                   </p>
                   <p className="text-xs mt-2 opacity-70">
                     {message.timestamp ? new Date(message.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}
@@ -469,7 +350,6 @@ export default function BrainChat({
               </div>
             ))}
 
-            {/* Индикатор загрузки */}
             {researchState.isResearching && (
               <div className="flex gap-3 justify-start">
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
@@ -488,7 +368,6 @@ export default function BrainChat({
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Панель исследования */}
       {researchState.currentPlan && (
         <Card className="mx-6 mb-4">
           <CardHeader className="pb-3">
@@ -506,7 +385,6 @@ export default function BrainChat({
         </Card>
       )}
 
-      {/* Критика */}
       {researchState.currentCritique.length > 0 && (
         <Card className="mx-6 mb-4">
           <CardHeader className="pb-3">
@@ -528,7 +406,6 @@ export default function BrainChat({
         </Card>
       )}
 
-      {/* Ошибки подключения */}
       {connectionError && (
         <div className="mx-6 mb-4 p-4 border border-red-200 bg-red-50 rounded flex items-start gap-3">
           <AlertCircle className="h-4 w-4 text-red-500 mt-0.5" />
@@ -556,7 +433,6 @@ export default function BrainChat({
         </div>
       )}
 
-      {/* Ошибки исследования */}
       {researchState.error && (
         <div className="mx-6 mb-4 p-4 border border-red-200 bg-red-50 rounded flex items-start gap-3">
           <AlertCircle className="h-4 w-4 text-red-500 mt-0.5" />
@@ -566,7 +442,6 @@ export default function BrainChat({
         </div>
       )}
 
-      {/* Поле ввода */}
       <div className="border-t bg-card">
         <div className="max-w-4xl mx-auto p-4">
           <div className="flex gap-3 items-end">

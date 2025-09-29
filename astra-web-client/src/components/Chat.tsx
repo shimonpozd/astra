@@ -241,7 +241,7 @@ export default function Chat({
         }
       };
 
-      await api.sendMessageStreamNDJSON(request, streamHandler);
+      await api.sendMessage(request, streamHandler);
       setUseDemoMode(false);
 
     } catch (error) {

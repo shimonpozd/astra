@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface Commentator {
   ref: string;
@@ -17,25 +17,13 @@ interface RightSidePanelProps {
   commentatorsLists?: Array<{ reference: string; commentators: any[] }>;
   bookshelfItems: BookshelfItem[];
   currentReference: string;
-  isResearching: boolean;
-  researchState: {
-    currentStatus: string;
-    currentPlan: any;
-    currentDraft: string;
-    currentCritique: string[];
-    error: string | null;
-  };
-  onCommentatorsPanelUpdate?: (data: { reference: string; commentators: Commentator[] }) => void;
 }
 
 export default function RightSidePanel({
   sources,
   commentatorsLists = [],
   bookshelfItems,
-  currentReference,
-  isResearching,
-  researchState,
-  onCommentatorsPanelUpdate
+  currentReference
 }: RightSidePanelProps) {
   console.log('🔄 RightSidePanel render:', sources.length, 'sources, bookshelf:', bookshelfItems.length);
 
@@ -52,13 +40,6 @@ export default function RightSidePanel({
     return 'inherit';
   };
 
-  // Mark item as read when a source event is received (this will be handled by parent)
-  const markAsRead = (ref: string) => {
-    // This function will be called by the parent component
-    if (onCommentatorsPanelUpdate) {
-      // The parent will handle the state update
-    }
-  };
 
   // Handle drag start for commentators
   const handleCommentatorDragStart = (e: React.DragEvent, commentator: Commentator) => {
@@ -112,7 +93,7 @@ export default function RightSidePanel({
               📚 Комментаторы ({bookshelfItems.filter(item => !item.isRead).length} непрочитано)
             </div>
             <div className="grid gap-2">
-              {bookshelfItems.map((item, idx) => (
+              {bookshelfItems.map((item) => (
                 <div
                   key={item.ref}
                   className={`rounded-lg border p-3 cursor-grab transition-all ${

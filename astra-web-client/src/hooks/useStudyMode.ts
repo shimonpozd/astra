@@ -25,10 +25,13 @@ export function useStudyMode() {
       setCanNavigateForward(true);
       setIsActive(true);
 
+      return newSessionId; // Return the new session ID
+
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to start study mode';
       setError(msg);
       console.error(msg, e);
+      throw e; // Re-throw the error so the caller can catch it
     } finally {
       setIsLoading(false);
     }
@@ -133,7 +136,7 @@ export function useStudyMode() {
   }, [studySessionId, studySnapshot]);
 
   const focusMainText = useCallback(async () => {
-    if (!studySessionId || !studySnapshot?.focus?.ref) return;
+    if (!studySessionId || !studySnapshot?.ref) return;
     try {
       setIsLoading(true);
       const response = await fetch('/api/study/chat/set_focus', {
@@ -141,7 +144,7 @@ export function useStudyMode() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           session_id: studySessionId,
-          ref: studySnapshot.focus.ref,
+          ref: studySnapshot.ref,
         }),
       });
       if (!response.ok) {
@@ -189,15 +192,18 @@ export function useStudyMode() {
 
   const loadStudySession = useCallback(async (sessionId: string) => {
     try {
+      console.log(`[useStudyMode] loadStudySession called for ${sessionId}`);
       setIsLoading(true);
       setError(null);
 
       const snapshot = await api.getStudyState(sessionId);
+      console.log('[useStudyMode] Snapshot received:', snapshot);
       setStudySessionId(sessionId);
       setStudySnapshot(snapshot);
       setCanNavigateBack(true);
       setCanNavigateForward(true);
       setIsActive(true);
+      console.log('[useStudyMode] setIsActive(true) called.');
 
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to load study session';
@@ -206,7 +212,17 @@ export function useStudyMode() {
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [studySessionId]);
+
+  const refreshStudySnapshot = useCallback(async () => {
+    if (!studySessionId) return;
+    try {
+      const snapshot = await api.getStudyState(studySessionId);
+      setStudySnapshot(snapshot);
+    } catch (e) {
+      console.error("Failed to refresh study snapshot:", e);
+    }
+  }, [studySessionId]);
 
 
   return {
@@ -226,5 +242,6 @@ export function useStudyMode() {
     workbenchFocus,
     focusMainText,
     navigateToRef,
+    refreshStudySnapshot, // Export the new function
   };
 }

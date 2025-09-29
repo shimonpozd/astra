@@ -1,14 +1,11 @@
-import React from 'react';
 import { ChatLayout } from './components/chat/ChatLayout';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import StudyLanding from './pages/StudyLanding';
-import StudyDesk from './pages/StudyDesk';
 import AdminLayout from './pages/AdminLayout';
 import GeneralSettings from './pages/admin/GeneralSettings';
 import PersonalityList from './pages/admin/PersonalityList';
 import PersonalityCreate from './pages/admin/PersonalityCreate';
 import PersonalityEdit from './pages/admin/PersonalityEdit';
-import PersonalityEditor from './pages/admin/PersonalityEditor';
 import PromptEditor from './pages/admin/PromptEditor';
 import { useTextSelectionListener } from './hooks/useTextSelectionListener';
 import { LexiconPanel } from './components/LexiconPanel';
@@ -26,7 +23,7 @@ function App() {
           <Route path="/chat" element={<Navigate to="/" replace />} />
           <Route path="/chat/:sessionId" element={<ChatLayout />} />
           <Route path="/study" element={<StudyLanding />} />
-          <Route path="/study/:sessionId" element={<StudyDesk />} />
+          <Route path="/study/:sessionId" element={<ChatLayout />} />
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Navigate to="/admin/settings" replace />} />
             <Route path="settings" element={<GeneralSettings />} />

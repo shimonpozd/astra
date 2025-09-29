@@ -2,9 +2,17 @@
 "llm.api.openrouter.api_key" = "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"
 "memory.provider" = "qdrant"
 
+[llm]
+provider = "ollama"
+model = "ollama/qwen3:8b  "
+
 [llm.overrides]
 lexicon = "openrouter/x-ai/grok-4-fast:free"
-translator = "openrouter/x-ai/grok-4-fast:free"
+translator = "ollama/qwen3:8b  "
+curator = "ollama/qwen3:8b  "
 
 [actions.context]
 study_mode_context = "hebrew_and_english"
+
+[llm.api.openrouter]
+api_key = "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"

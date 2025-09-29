@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useChat } from "../../hooks/useChat";
 import { useStudyMode } from "../../hooks/useStudyMode";
 import { useTextSelectionListener } from "../../hooks/useTextSelectionListener";
@@ -12,8 +12,9 @@ import MessageComposer from "./MessageComposer";
 import TopBar from "../layout/TopBar"; // Import the new TopBar
 
 export function ChatLayout() {
-  const { sessionId: urlChatId } = useParams<{ sessionId: string }>();
   const navigate = useNavigate();
+  const { sessionId: urlChatId } = useParams<{ sessionId: string }>();
+  const location = useLocation();
   const [isStudySetupOpen, setIsStudySetupOpen] = useState(false);
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   const [isChatAreaVisible, setIsChatAreaVisible] = useState(true);
@@ -25,7 +26,6 @@ export function ChatLayout() {
   const [studyMessages, setStudyMessages] = useState<any[]>([]);
   const [studyIsSending, setStudyIsSending] = useState(false);
 
-  // ... (rest of the hooks and functions remain the same)
   const {
     isActive: isStudyActive,
     isLoading: isLoadingStudy,
@@ -42,6 +42,7 @@ export function ChatLayout() {
     workbenchFocus,
     focusMainText,
     navigateToRef,
+    refreshStudySnapshot,
   } = useStudyMode();
 
   const {
@@ -56,20 +57,30 @@ export function ChatLayout() {
     sendMessage,
     isSending,
     deleteSession,
-    reloadChats,
   } = useChat(agentId, urlChatId);
 
 
   useTextSelectionListener();
 
   useEffect(() => {
+    console.log(`[ChatLayout] useEffect for study load triggered. Path: ${location.pathname}, ID: ${urlChatId}`);
+    // If the URL is a study session URL, automatically load it.
+    if (location.pathname.startsWith('/study/') && urlChatId) {
+      console.log('[ChatLayout] Calling loadStudySession...');
+      loadStudySession(urlChatId);
+    }
+  }, [location.pathname, urlChatId, loadStudySession]);
+
+  useEffect(() => {
     localStorage.setItem("astra_agent_id", agentId);
   }, [agentId]);
 
   const handleStartStudy = (textRef: string) => {
-    startStudy(textRef).then(() => {
+    startStudy(textRef).then((newSessionId) => {
+      if (newSessionId) {
+        navigate(`/study/${newSessionId}`);
+      }
       setIsStudySetupOpen(false);
-      reloadChats();
     }).catch((error) => {
       console.error('Failed to create study session:', error);
     });
@@ -77,7 +88,8 @@ export function ChatLayout() {
 
   const handleSelectSession = (sessionId: string, type: 'chat' | 'study') => {
     if (type === 'study') {
-      loadStudySession(sessionId);
+      // Just navigate. The useEffect hook will handle loading the session.
+      navigate(`/study/${sessionId}`);
     } else {
       selectChat(sessionId);
     }
@@ -96,6 +108,8 @@ export function ChatLayout() {
   if (isChatAreaVisible) cols.push('1fr');
   if (isStudyActive && isChatAreaVisible) cols.push('400px');
   const gridCols = cols.join(' ') || '1fr';
+
+  console.log(`[ChatLayout] Rendering. isStudyActive: ${isStudyActive}`);
 
   return (
     <div className="h-screen w-full flex flex-col">
@@ -149,7 +163,6 @@ export function ChatLayout() {
                     canNavigateForward={canNavigateForward}
                     messages={studyMessages}
                     isLoadingMessages={false}
-                    onSendMessage={sendMessage}
                     isSending={studyIsSending}
                     studySessionId={studySessionId}
                     setIsSending={setStudyIsSending}
@@ -159,12 +172,13 @@ export function ChatLayout() {
                     onWorkbenchDrop={handleWorkbenchDrop}
                     onFocusClick={focusMainText}
                     onNavigateToRef={navigateToRef}
+                    refreshStudySnapshot={refreshStudySnapshot}
                   />
                 ) : (
                   <div className="h-full flex flex-col min-h-0">
                     <div className="flex-1 min-h-0">
                       <ChatViewport
-                        messages={messages}
+                        messages={messages.map(m => ({ ...m, id: String(m.id) }))}
                         isLoading={isLoadingMessages}
                       />
                     </div>
@@ -180,7 +194,7 @@ export function ChatLayout() {
             <div className="min-h-0 overflow-hidden">
               <BookshelfPanel
                 sessionId={studySessionId || undefined}
-                currentRef={studySnapshot?.discussion_focus_ref || studySnapshot?.focus?.ref}
+                currentRef={studySnapshot?.discussion_focus_ref || studySnapshot?.ref}
                 onDragStart={(ref) => console.log('Dragging from bookshelf:', ref)}
                 onItemClick={(item) => console.log('Clicked bookshelf item:', item)}
               />

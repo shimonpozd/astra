@@ -12,16 +12,9 @@ interface MessageComposerProps {
   onAttachFiles?: (files: File[]) => void;
   maxRows?: number;
   autoFocus?: boolean;
-  variant?: 'minimal' | 'floating' | 'glass';
   draftKey?: string; // for sessionStorage draft saving
-  density?: 'normal' | 'dense' | 'ultra';
 }
 
-const DENSITY = {
-  normal: { pad: 'p-2', gap: 'gap-2', btn: 'h-10 w-10', lh: 'leading-6' },
-  dense:  { pad: 'p-1.5', gap: 'gap-1.5', btn: 'h-9 w-9',  lh: 'leading-5' },
-  ultra:  { pad: 'p-1', gap: 'gap-1', btn: 'h-8 w-8',  lh: 'leading-[1.15rem]' },
-} as const;
 
 export default function MessageComposer({
   onSendMessage,
@@ -30,9 +23,7 @@ export default function MessageComposer({
   onAttachFiles,
   maxRows = 4, // reduced from 6
   autoFocus = false,
-  variant = 'floating',
   draftKey = 'composer:draft',
-  density = 'dense', // default to dense
 }: MessageComposerProps) {
   const [text, setText] = useState('');
   const [isComposing, setIsComposing] = useState(false);
@@ -162,15 +153,6 @@ export default function MessageComposer({
     }
     if (files.length) onAttachFiles(files);
   };
-
-  const d = DENSITY[density];
-
-  const containerVariant =
-    variant === 'minimal'
-      ? 'bg-transparent border border-transparent shadow-none'
-      : variant === 'glass'
-      ? 'bg-background/35 supports-[backdrop-filter]:backdrop-blur border border-border/70 shadow-md sm:shadow-lg rounded-lg focus-within:ring-1 focus-within:ring-border/40 transition-all'
-      : 'bg-card/95 border border-border/70 shadow-md sm:shadow-lg rounded-lg transition-all'; // floating (default)
 
   return (
     <div className="px-6 py-4">
