@@ -15,6 +15,129 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* Контейнер для ВСЕГО doc.v1 */
+  .doc {
+    @apply mx-auto max-w-[85ch] text-[15.5px] leading-7 antialiased;
+  }
+
+  /* Цвета (подтягиваются из вашей темы) */
+  :root {
+    --doc-fg: var(--foreground, #c2c0b6);
+    --doc-dim: color-mix(in oklab, var(--doc-fg) 80%, black);
+    --doc-accent: #c8e3ff;
+    --doc-muted: color-mix(in oklab, var(--doc-fg) 60%, black);
+    --doc-border: color-mix(in oklab, var(--doc-fg) 18%, black);
+    --doc-code-bg: color-mix(in oklab, var(--doc-fg) 7%, black);
+    --doc-quote-bg: color-mix(in oklab, var(--doc-fg) 4%, black);
+    --doc-hr: color-mix(in oklab, var(--doc-fg) 12%, black);
+    --doc-link: #9fd1ff;
+    --doc-link-hover: #cfe8ff;
+  }
+
+  /* Базовый вертикальный ритм */
+  .doc p,
+  .doc ul,
+  .doc ol,
+  .doc blockquote,
+  .doc pre,
+  .doc table,
+  .doc hr {
+    @apply mb-4;
+  }
+
+  /* Абзац */
+  .doc p {
+    @apply selection:bg-white/20;
+  }
+
+  /* Ссылки */
+  .doc a {
+    color: var(--doc-link);
+    text-decoration: none;
+    border-bottom: 1px dashed color-mix(in oklab, var(--doc-link) 50%, transparent);
+  }
+  .doc a:hover {
+    color: var(--doc-link-hover);
+    border-bottom-style: solid;
+  }
+
+  /* Жирный/курсив/код-inline */
+  .doc strong { @apply font-semibold; }
+  .doc em { @apply italic; }
+  .doc code {
+    @apply text-[0.95em] px-1 py-0.5 rounded;
+  }
+
+  /* Многострочный код */
+  .doc pre {
+    @apply rounded-xl p-4 overflow-auto;
+    border: 1px solid var(--doc-border);
+  }
+  .doc pre code { @apply p-0 bg-transparent; }
+
+  /* Цитаты */
+  .doc blockquote {
+    @apply rounded-xl p-3 ps-4 pe-4;
+    border-left: 3px solid var(--doc-border);
+    color: var(--doc-dim);
+  }
+
+  /* Списки */
+  .doc ul { @apply list-disc ms-6; }
+  .doc ol { @apply list-decimal ms-6; }
+  .doc li { @apply mb-1; }
+  .doc li > ul, .doc li > ol { @apply mt-1 mb-0; }
+
+  /* Горизонтальная линия */
+  .doc hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--doc-hr), transparent);
+    @apply my-6;
+  }
+
+  /* Таблицы */
+  .doc table { @apply w-full border-collapse text-[15px]; }
+  .doc th, .doc td {
+    @apply border border-[var(--doc-border)] px-3 py-2 align-top;
+  }
+  .doc th { @apply font-medium; }
+
+  /* Термины (если используете block:"term") */
+  .doc .term {
+    @apply rounded-xl p-3 border border-[var(--doc-border)];
+  }
+  .doc .term .term-title {
+    @apply text-sm uppercase tracking-wide text-[var(--doc-muted)] mb-2;
+  }
+
+  /* Изображения и figure */
+  .doc figure { @apply my-4; }
+  .doc img { @apply rounded-xl border border-[var(--doc-border)] mx-auto; }
+  .doc figcaption { @apply text-sm text-[var(--doc-muted)] mt-2 text-center; }
+
+  /* Поддержка RTL и иврита */
+  .doc[dir="rtl"],
+  .doc :where([dir="rtl"], [lang="he"], [lang="he-IL"], [lang="ar"]) {
+    direction: rtl;
+    text-align: start;
+  }
+  .doc :where([lang="he"], [lang="he-IL"]) {
+    /* если есть Noto Rashi Hebrew/Mugrabi — используйте */
+    font-family: "Noto Rashi Hebrew", "Mugrabi", "Noto Sans Hebrew", ui-serif, Georgia, serif;
+    /* делаем немного крупнее для читабельности */
+    font-size: 16.25px;
+    line-height: 1.85;
+  }
+
+  /* Маленькие элементы UI внутри текста */
+  .doc kbd {
+    @apply text-[0.85em] px-1.5 py-0.5 rounded border;
+    border-color: var(--doc-border);
+  }
+}
+
 @layer base {
   :root {
     /* Claude-style colors */

@@ -3,16 +3,23 @@
 "memory.provider" = "qdrant"
 
 [llm]
-provider = "ollama"
-model = "ollama/qwen3:8b  "
+provider = "openrouter"
+model = "openrouter/x-ai/grok-4-fast:free"
 
 [llm.overrides]
 lexicon = "openrouter/x-ai/grok-4-fast:free"
-translator = "ollama/qwen3:8b  "
-curator = "ollama/qwen3:8b  "
+translator = "openrouter/x-ai/grok-4-fast:free"
+curator = "openrouter/x-ai/grok-4-fast:free"
+chat = "openrouter/x-ai/grok-4-fast:free"
+drafter = "openrouter/x-ai/grok-4-fast:free"
+critic = "openrouter/x-ai/grok-4-fast:free"
+meta_reasoner = "openrouter/x-ai/grok-4-fast:free"
+summarizer = "openrouter/x-ai/grok-4-fast:free"
+planner = "openrouter/x-ai/grok-4-fast:free"
+speechify = "openrouter/x-ai/grok-4-fast:free"
 
 [actions.context]
 study_mode_context = "hebrew_and_english"
 
 [llm.api.openrouter]
-api_key = "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"
+api_key = "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"

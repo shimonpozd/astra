@@ -94,7 +94,7 @@ class StudySnapshot(BaseModel):
 
     # Other state properties
     bookshelf: Bookshelf
-    chat_local: List[ChatMessage]
+    chat_local: List[ChatMessage] = Field(default_factory=list)
     ts: int
     workbench: Dict[str, Optional[BookshelfItem]] = Field(default_factory=lambda: {"left": None, "right": None})
     discussion_focus_ref: Optional[str] = None
@@ -259,11 +259,15 @@ async def update_local_chat(session_id: str, new_messages: List[Dict[str, str]])
         snapshot = StudySnapshot(**json.loads(snapshot_json))
         cursor = int(cursor_str)
 
+        logger.info(f"UPDATING CHAT for {session_id}. Before: {len(snapshot.chat_local or [])} messages.")
+
         # Append messages
         if snapshot.chat_local is None:
             snapshot.chat_local = []
         for msg in new_messages:
             snapshot.chat_local.append(ChatMessage(**msg))
+
+        logger.info(f"UPDATING CHAT for {session_id}. After: {len(snapshot.chat_local)} messages.")
 
         # Update the snapshot in both :top and :history
         updated_snapshot_json = json.dumps(snapshot.model_dump())

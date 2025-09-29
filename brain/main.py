@@ -237,15 +237,23 @@ async def study_set_focus_handler(request: StudySetFocusRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch data: {e}")
 
-    snapshot = StudySnapshot(
-        segments=window_data['segments'],
-        focusIndex=window_data['focusIndex'],
-        ref=window_data['ref'],
-        bookshelf=Bookshelf(**bookshelf_data),
-        chat_local=[],
-        ts=int(datetime.now().timestamp()),
-        discussion_focus_ref=window_data['ref']
-    )
+    current_snapshot = await get_current_snapshot(request.session_id)
+
+    snapshot_data = {
+        "segments": window_data['segments'],
+        "focusIndex": window_data['focusIndex'],
+        "ref": window_data['ref'],
+        "bookshelf": Bookshelf(**bookshelf_data),
+        "ts": int(datetime.now().timestamp()),
+        "discussion_focus_ref": window_data['ref']
+    }
+
+    if current_snapshot:
+        snapshot_data["chat_local"] = current_snapshot.chat_local
+        if current_snapshot.workbench:
+            snapshot_data["workbench"] = current_snapshot.workbench
+
+    snapshot = StudySnapshot(**snapshot_data)
 
     if request.navigation_type == 'advance':
         success = await replace_top_snapshot(request.session_id, snapshot)
@@ -293,10 +301,10 @@ async def study_workbench_set_handler(request: StudyWorkbenchSetRequest):
         if not found:
             raise HTTPException(status_code=404, detail="Item not found in current bookshelf.")
     
-    if item_to_add:
-        logger.info(f"Adding item to workbench: {item_to_add.model_dump_json(indent=2)}")
-    else:
-        logger.info("Clearing workbench slot.")
+   # if item_to_add:
+        #logger.info(f"Adding item to workbench: {item_to_add.model_dump_json(indent=2)}")
+   # else:
+        #logger.info("Clearing workbench slot.")
 
     if snapshot.workbench is None: snapshot.workbench = {}
     snapshot.workbench[request.slot] = item_to_add
@@ -358,7 +366,7 @@ async def study_chat_stream_processor(request: StudyChatRequest, background_task
         *[msg.model_dump() for msg in snapshot.chat_local],
         {"role": "user", "content": request.text}
     ]
-    logger.info(f"Messages sent to LLM: {json.dumps(messages, indent=2)}")
+    logger.info(f"Messages sent to LLM: {json.dumps(messages, indent=2, ensure_ascii=False)}")
 
     try:
         client, model, reasoning_params, _ = get_llm_for_task("CHAT")
@@ -374,7 +382,7 @@ async def study_chat_stream_processor(request: StudyChatRequest, background_task
     chunk_count = 0
     async for chunk in stream:
         chunk_count += 1
-        logger.info(f"Received chunk {chunk_count}: {chunk.model_dump_json()}")
+        #logger.info(f"Received chunk {chunk_count}: {chunk.model_dump_json()}")
         content = chunk.choices[0].delta.content
         if content:
             full_response += content
@@ -383,10 +391,33 @@ async def study_chat_stream_processor(request: StudyChatRequest, background_task
     logger.info(f"Stream finished. Total chunks: {chunk_count}. Full response length: {len(full_response)}")
 
     if full_response:
+        think_pattern = re.compile(r"<think>(.*?)</think>", re.DOTALL)
+        think_match = think_pattern.search(full_response)
+        
+        think_content = None
+        doc_content_str = full_response
+
+        if think_match:
+            think_content = think_match.group(1).strip()
+            doc_content_str = full_response[think_match.end():].strip()
+
         new_messages = [
-            ChatMessage(role="user", content=request.text),
-            ChatMessage(role="assistant", content=full_response)
+            ChatMessage(role="user", content=request.text, content_type='text.v1')
         ]
+
+        if think_content:
+            new_messages.append(ChatMessage(role="assistant", content=think_content, content_type='thought.v1'))
+
+        doc_content_obj = None
+        try:
+            parsed_json = json.loads(doc_content_str)
+            DocV1.model_validate(parsed_json)
+            doc_content_obj = parsed_json
+            new_messages.append(ChatMessage(role="assistant", content=doc_content_obj, content_type='doc.v1'))
+        except (json.JSONDecodeError, Exception):
+            if doc_content_str: # Avoid saving an empty message
+                new_messages.append(ChatMessage(role="assistant", content=doc_content_str, content_type='text.v1'))
+
         await update_local_chat(request.session_id, [msg.model_dump() for msg in new_messages])
 
 @app.post("/study/chat")

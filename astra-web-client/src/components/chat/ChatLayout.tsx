@@ -63,10 +63,8 @@ export function ChatLayout() {
   useTextSelectionListener();
 
   useEffect(() => {
-    console.log(`[ChatLayout] useEffect for study load triggered. Path: ${location.pathname}, ID: ${urlChatId}`);
     // If the URL is a study session URL, automatically load it.
     if (location.pathname.startsWith('/study/') && urlChatId) {
-      console.log('[ChatLayout] Calling loadStudySession...');
       loadStudySession(urlChatId);
     }
   }, [location.pathname, urlChatId, loadStudySession]);
@@ -74,6 +72,12 @@ export function ChatLayout() {
   useEffect(() => {
     localStorage.setItem("astra_agent_id", agentId);
   }, [agentId]);
+
+  useEffect(() => {
+    if (studySnapshot && studySnapshot.chat_local) {
+      setStudyMessages(studySnapshot.chat_local);
+    }
+  }, [studySnapshot]);
 
   const handleStartStudy = (textRef: string) => {
     startStudy(textRef).then((newSessionId) => {
@@ -108,8 +112,6 @@ export function ChatLayout() {
   if (isChatAreaVisible) cols.push('1fr');
   if (isStudyActive && isChatAreaVisible) cols.push('400px');
   const gridCols = cols.join(' ') || '1fr';
-
-  console.log(`[ChatLayout] Rendering. isStudyActive: ${isStudyActive}`);
 
   return (
     <div className="h-screen w-full flex flex-col">

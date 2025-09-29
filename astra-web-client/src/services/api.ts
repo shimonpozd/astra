@@ -10,7 +10,7 @@ export interface Message {
   id: string | number;
   role: 'user' | 'assistant' | 'system' | 'source';
   content: string | DocV1 | null;
-  content_type?: 'text.v1' | 'doc.v1';
+  content_type?: 'text.v1' | 'doc.v1' | 'thought.v1';
   timestamp: number | Date;
 }
 

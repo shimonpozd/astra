@@ -82,7 +82,7 @@ export interface ChatMessage {
   id: string;
   role: 'user' | 'assistant' | 'system';
   created_at: string; // ISO 8601 format
-  content_type: 'doc.v1' | 'text.v1';
+  content_type: 'doc.v1' | 'text.v1' | 'thought.v1';
   content: DocV1 | string;
   meta?: Record<string, unknown>;
 }

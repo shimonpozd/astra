@@ -82,21 +82,14 @@ async def sefaria_get_text_v3_async(tref: str, lang: str | None = None) -> dict:
         params["version"] = ["english", "hebrew"]
 
     for candidate_ref in unique_candidates:
-        logger.info(f"Attempting to fetch text for ref: '{candidate_ref}' with params: {params}")
+        logger.info(f"SEFARIA_CLIENT: Attempting v3 fetch for ref: '{candidate_ref}' with params: {params}")
         try:
             raw = await _with_retries(lambda: _get(f"v3/texts/{quote(candidate_ref)}", params=params))
             if ok_and_has_text(raw):
+                logger.info(f"SEFARIA_CLIENT: v3 fetch SUCCEEDED for ref: '{candidate_ref}'")
                 return {"ok": True, "data": CompactText(raw).to_dict_min()}
         except Exception as e:
-            logger.warning(f"v3 text fetch failed for {candidate_ref} with {params}: {e}")
-
-        # Fallback to v2 API without specific lang
-        try:
-            raw2 = await _with_retries(lambda: _get(f"texts/{quote(candidate_ref)}", params={"commentary": 0, "context": 0, "pad": 0}))
-            if ok_and_has_text(raw2):
-                return {"ok": True, "data": CompactText(raw2).to_dict_min()}
-        except Exception as e:
-            logger.warning(f"v2 text fetch fallback failed for {candidate_ref}: {e}")
+            logger.warning(f"SEFARIA_CLIENT: v3 fetch FAILED for {candidate_ref} with {params}: {e}")
 
     logger.error(f"All text fetch attempts failed for base ref: '{base_ref}'")
     return {"ok": False, "error": f"Text not found for '{base_ref}' after trying all variations."}

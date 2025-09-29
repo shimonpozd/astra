@@ -23,98 +23,7 @@ function escapeHtml(input: string): string {
     .replace(/'/g, "&#39;");
 }
 
-/** 2.5) Рендер одного блока */
-function renderBlock(block: any, key: string): React.ReactNode {
-  switch (block.type) {
-    case "heading": {
-      const HeadingTag = `h${block.level || 2}` as keyof JSX.IntrinsicElements;
-      return (
-        <HeadingTag
-          key={key}
-          className="mt-6 mb-3 font-semibold"
-          lang={block.lang}
-          dir={block.dir || "auto"}
-        >
-          {block.text}
-        </HeadingTag>
-      );
-    }
 
-    case "paragraph":
-      return (
-        <p key={key} className="mb-4 leading-7" lang={block.lang} dir={block.dir || "auto"}>
-          {renderMdLite(block.content || block.text || "")}
-        </p>
-      );
-
-    case "quote":
-      return (
-        <blockquote
-          key={key}
-          className="mb-4 border-s-4 border-neutral-600 ps-4 italic"
-          lang={block.lang}
-          dir={block.dir || "auto"}
-        >
-          {block.content || block.text}
-          {block.source && (
-            <cite className="block mt-2 text-sm text-neutral-400 not-italic">— {block.source}</cite>
-          )}
-        </blockquote>
-      );
-
-    case "list":
-      return block.ordered ? (
-        <ol key={key} className="list-decimal ms-6 mb-4">
-          {block.items?.map((item: string, itemIndex: number) => <li key={itemIndex}>{item}</li>)}
-        </ol>
-      ) : (
-        <ul key={key} className="list-disc ms-6 mb-4">
-          {block.items?.map((item: string, itemIndex: number) => <li key={itemIndex}>{item}</li>)}
-        </ul>
-      );
-
-    case "term":
-      return (
-        <div key={key} className="mb-2">
-          <span className="font-semibold" dir="rtl">
-            {block.he}
-          </span>{" "}
-          — {block.ru}
-        </div>
-      );
-
-    case "callout":
-      return (
-        <div key={key} className={`mb-4 rounded-2xl p-4 border ${calloutClass(block.variant)}`}>
-          {block.content || block.text}
-        </div>
-      );
-
-    case "action":
-      return (
-        <button
-          key={key}
-          className="mb-4 rounded-2xl px-4 py-2 border border-neutral-700 hover:bg-neutral-800"
-          onClick={() => window.dispatchEvent(new CustomEvent("doc-action", { detail: block }))}
-        >
-          {block.label}
-        </button>
-      );
-
-    case "code":
-      return (
-        <pre
-          key={key}
-          className="mb-4 rounded-2xl p-4 bg-neutral-900 text-neutral-100 border border-neutral-700 overflow-auto"
-        >
-          <code lang={block.lang}>{block.code}</code>
-        </pre>
-      );
-
-    default:
-      return null;
-  }
-}
 
 /** 3) md-lite: декодируем entities, эскейпим, возвращаем React-ноды */
 /** 2) Валидация ссылок: разрешаем только https, http, mailto, tel */
@@ -132,22 +41,12 @@ function sanitizeHref(href: string): string | null {
 
 /** 3) md-lite: декодируем entities, эскейпим, возвращаем React-ноды */
 function renderMdLite(text: string): React.ReactNode[] {
-  if (!text) return [null];
+  if (!text) return [];
 
   // Сначала декодируем entities
   let t = decodeHtml(text);
 
-  // Если текст — JSON с blocks, рендерим как doc
-  try {
-    const parsed = JSON.parse(t);
-    if (parsed.blocks && Array.isArray(parsed.blocks)) {
-      const blocks = [...parsed.blocks];
-      if (parsed.callout) {
-        blocks.push(parsed.callout);
-      }
-      return blocks.map((block: any, idx: number) => renderBlock(block, `json-${idx}`));
-    }
-  } catch {}
+
 
   // Иначе рендерим как md (уже декодирован, не нужно повторно эскейпить)
 
@@ -262,17 +161,18 @@ function renderMdLite(text: string): React.ReactNode[] {
 
 /** 4) Вспомогательные классы для callout в тёмной теме */
 function calloutClass(variant?: string): string {
+  const base = "mb-4 rounded-xl border px-4 py-3";
   switch (variant) {
     case "info":
-      return "border-sky-700 bg-sky-950/40";
+      return `${base} border-sky-700 bg-sky-950/40`;
     case "warn":
-      return "border-amber-700 bg-amber-950/40";
+      return `${base} border-amber-700 bg-amber-950/40`;
     case "success":
-      return "border-emerald-700 bg-emerald-950/40";
+      return `${base} border-emerald-700 bg-emerald-950/40`;
     case "danger":
-      return "border-rose-700 bg-rose-950/40";
+      return `${base} border-rose-700 bg-rose-950/40`;
     default:
-      return "border-neutral-700 bg-neutral-900/60";
+      return `${base} border-neutral-700 bg-neutral-900/60`;
   }
 }
 
@@ -283,14 +183,17 @@ interface MessageRendererProps {
 export function MessageRenderer({ doc }: MessageRendererProps) {
   return (
     <div dir="auto" style={{ unicodeBidi: "plaintext" }}>
-      {doc.blocks.map((block, index) => {
+      {doc.blocks.map((rawBlock, index) => {
+        // Handle cases where block data is nested inside a `data` property
+        const block = (rawBlock as any).data ? { ...rawBlock, ...(rawBlock as any).data } : rawBlock;
         switch (block.type) {
           case "heading": {
-            const HeadingTag = `h${block.level || 2}` as keyof JSX.IntrinsicElements;
+            const lvl = Math.min(6, Math.max(1, Number(block.level) || 2));
+            const HeadingTag = `h${lvl}` as keyof JSX.IntrinsicElements;
             return (
               <HeadingTag
                 key={index}
-                className="mt-6 mb-3 font-semibold"
+                className="mt-6 mb-2 font-semibold tracking-tight"
                 lang={block.lang}
                 dir={block.dir || "auto"}
               >
@@ -299,53 +202,71 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
             );
           }
 
-          case "paragraph":
+          case "paragraph": {
+            const t = typeof block.text === "string" ? block.text : String(block.text ?? "");
             return (
-              <p key={index} className="mb-4 leading-7" lang={block.lang} dir={block.dir || "auto"}>
-                {renderMdLite(block.text || "")}
+              <p key={index} lang={block.lang} dir={block.dir || "auto"}>
+                {renderMdLite(t)}
               </p>
             );
+          }
 
-          case "quote":
+          case "quote": {
+            const t = typeof block.text === "string" ? block.text : String(block.text ?? "");
             return (
-              <blockquote
-                key={index}
-                className="mb-4 border-s-4 border-neutral-600 ps-4 italic"
-                lang={block.lang}
-                dir={block.dir || "auto"}
-              >
-                {block.text}
+              <blockquote key={index} lang={block.lang} dir={block.dir || "auto"}>
+                {renderMdLite(t)}
                 {block.source && (
                   <cite className="block mt-2 text-sm text-neutral-400 not-italic">— {block.source}</cite>
                 )}
               </blockquote>
             );
+          }
 
           case "list":
             return block.ordered ? (
-              <ol key={index} className="list-decimal ms-6 mb-4">
-                {block.items?.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}
+              <ol key={index}>
+                {block.items?.map((item: string, itemIndex: number) => (
+                  <li key={itemIndex}>{renderMdLite(typeof item === "string" ? item : String(item ?? ""))}</li>
+                ))}
               </ol>
             ) : (
-              <ul key={index} className="list-disc ms-6 mb-4">
-                {block.items?.map((item, itemIndex) => <li key={itemIndex}>{item}</li>)}
+              <ul key={index}>
+                {block.items?.map((item: string, itemIndex: number) => (
+                  <li key={itemIndex}>{renderMdLite(typeof item === "string" ? item : String(item ?? ""))}</li>
+                ))}
               </ul>
             );
 
           case "term":
             return (
-              <div key={index} className="mb-2">
-                <span className="font-semibold" dir="rtl">
-                  {block.he}
-                </span>{" "}
-                — {block.ru}
+              <div key={index} className="mb-3 term" lang="he" dir="rtl">
+                <div className="term-title text-sm opacity-70">Термин</div>
+                <div className="flex flex-wrap gap-x-1">
+                  <span className="font-semibold">{block.he || block.text || '???'}</span>
+                  {block.ru && (
+                    <span dir="ltr" lang="ru" className="opacity-80">&nbsp;— {block.ru}</span>
+                  )}
+                  {block.en && (
+                    <span dir="ltr" lang="en" className="opacity-60 text-xs">&nbsp;({block.en})</span>
+                  )}
+                </div>
+                {block.translit && (
+                  <div className="text-xs opacity-50 mt-1" dir="ltr">{block.translit}</div>
+                )}
+                {block.sense && (
+                  <div className="text-sm opacity-80 mt-1" dir="ltr" lang="ru">{block.sense}</div>
+                )}
+                {block.notes && (
+                  <div className="text-sm opacity-70 mt-2" dir="ltr" lang="ru">{renderMdLite(block.notes)}</div>
+                )}
               </div>
             );
 
           case "callout":
             return (
-              <div key={index} className={`mb-4 rounded-2xl p-4 border ${calloutClass(block.variant)}`}>
-                {block.text}
+              <div key={index} className={calloutClass(block.variant)}>
+                {renderMdLite(block.text || "")}
               </div>
             );
 
@@ -353,7 +274,7 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
             return (
               <button
                 key={index}
-                className="mb-4 rounded-2xl px-4 py-2 border border-neutral-700 hover:bg-neutral-800"
+                className="rounded-2xl px-4 py-2 border border-neutral-700 hover:bg-neutral-800"
                 onClick={() => window.dispatchEvent(new CustomEvent("doc-action", { detail: block }))}
               >
                 {block.label}
@@ -362,15 +283,55 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
 
           case "code":
             return (
-              <pre
-                key={index}
-                className="mb-4 rounded-2xl p-4 bg-neutral-900 text-neutral-100 border border-neutral-700 overflow-auto"
-              >
+              <pre key={index}>
                 <code lang={block.lang}>{block.code}</code>
               </pre>
             );
 
+          case "hr":
+            return <hr key={index} />;
+
+          case "image":
+            return (
+              <figure key={index}>
+                <img src={block.url} alt={block.alt || ""} />
+                {block.caption && <figcaption>{renderMdLite(block.caption)}</figcaption>}
+              </figure>
+            );
+
+          case "table":
+            return (
+              <table key={index}>
+                {block.headers && block.headers.length > 0 && (
+                  <thead>
+                    <tr>
+                      {block.headers.map((header: string, i: number) => (
+                        <th key={i}>{header}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                )}
+                <tbody>
+                  {block.rows?.map((row: string[], rowIndex: number) => (
+                    <tr key={rowIndex}>
+                      {row.map((cell: string, cellIndex: number) => (
+                        <td key={cellIndex}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+
           default:
+            // Явно показываем неизвестные блоки в Dev
+            if (process.env.NODE_ENV !== "production") {
+              return (
+                <div key={index} className="mb-4 rounded-xl border border-amber-700 bg-amber-950/20 px-3 py-2 text-sm">
+                  Unsupported block <code>{String((block as any)?.type || "unknown")}</code>
+                </div>
+              );
+            }
             return null;
         }
       })}

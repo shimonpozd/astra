@@ -192,18 +192,15 @@ export function useStudyMode() {
 
   const loadStudySession = useCallback(async (sessionId: string) => {
     try {
-      console.log(`[useStudyMode] loadStudySession called for ${sessionId}`);
       setIsLoading(true);
       setError(null);
 
       const snapshot = await api.getStudyState(sessionId);
-      console.log('[useStudyMode] Snapshot received:', snapshot);
       setStudySessionId(sessionId);
       setStudySnapshot(snapshot);
       setCanNavigateBack(true);
       setCanNavigateForward(true);
       setIsActive(true);
-      console.log('[useStudyMode] setIsActive(true) called.');
 
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to load study session';
@@ -212,7 +209,7 @@ export function useStudyMode() {
     } finally {
       setIsLoading(false);
     }
-  }, [studySessionId]);
+  }, []);
 
   const refreshStudySnapshot = useCallback(async () => {
     if (!studySessionId) return;
