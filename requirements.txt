@@ -26,3 +26,6 @@ prometheus-client
 
 # For PDF manipulation
 PyPDF2
+
+# For TOML configuration parsing
+toml

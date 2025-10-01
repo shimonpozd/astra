@@ -5,6 +5,8 @@ from typing import Dict, Any, Optional
 from .state import state
 from .sefaria_utils import _get
 
+import httpx
+
 logger = logging.getLogger("sefaria_index")
 
 def normalize_title(title: str) -> str:
@@ -52,7 +54,8 @@ def build_aliases() -> None:
 async def load_toc() -> None:
     """Loads the Sefaria table of contents and builds the alias map."""
     logger.info("Loading Sefaria table of contents...")
-    toc = await _get("index")
+    async with httpx.AsyncClient() as client:
+        toc = await _get(client, "index")
     if toc and isinstance(toc, list):
         state.sefaria_index_data["toc"] = toc
         logger.info("Sefaria table of contents loaded successfully.")

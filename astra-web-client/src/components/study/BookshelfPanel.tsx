@@ -289,13 +289,13 @@ const BookshelfPanel = memo(({
       setIsLoadingItems(true);
       setError(null);
       try {
-        const data = await api.getBookshelfItems(sessionId, currentRef, [selectedCategory]);
+        const data = await api.getBookshelfItems(sessionId, currentRef, selectedCategory);
 
         // ✅ страховка на случай undefined/null
-        const rawItems = Array.isArray(data?.items) ? data.items : [];
+        const rawItems = Array.isArray(data?.bookshelf?.items) ? data.bookshelf.items : [];
 
         // Временный диагностический лог (чтобы понять причину, если снова пусто)
-        console.debug('[Bookshelf] cat:', selectedCategory, 'items:', data?.items?.length, 'sample:', data?.items?.[0]);
+        console.debug('[Bookshelf] cat:', selectedCategory, 'items:', data?.bookshelf?.items?.length, 'sample:', data?.bookshelf?.items?.[0]);
 
         // Группировать и сортировать
         const { groups, orphans } = groupByRef(rawItems);

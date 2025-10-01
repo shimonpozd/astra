@@ -27,7 +27,7 @@ export default function PersonaSelector({ selected, onSelect }: PersonaSelectorP
 
   const loadPersonas = () => {
     setLoading(true);
-    fetch(`/admin/personalities?t=${Date.now()}`) // Use the new API endpoint
+    fetch(`/admin/personalities/public?t=${Date.now()}`) // Use the public API endpoint
       .then(res => res.json())
       .then((data: Persona[]) => {
         // Transform the array into a key-value object

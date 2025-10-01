@@ -22,4 +22,4 @@ speechify = "openrouter/x-ai/grok-4-fast:free"
 study_mode_context = "hebrew_and_english"
 
 [llm.api.openrouter]
-api_key = "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"
+api_key = "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"

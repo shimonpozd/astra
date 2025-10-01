@@ -60,14 +60,14 @@ export default function Message({ message }: MessageProps) {
   }
 
   return (
-    <div className={cn("flex gap-4 mb-6", isUser ? "justify-end" : "justify-start")}>
+    <div className={cn("flex gap-4 mb-8", isUser ? "justify-end" : "justify-start")}>
       {!isUser && (
-        <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0 mt-1 bg-gray-200 text-gray-900">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0 mt-1 bg-primary text-primary-foreground">
           {message.isStreaming ? (
             <div className="flex space-x-1">
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce"></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce" style={{animationDelay: '0.1s'}}></div>
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce" style={{animationDelay: '0.2s'}}></div>
+              <div className="w-2 h-2 rounded-full bg-primary-foreground animate-bounce"></div>
+              <div className="w-2 h-2 rounded-full bg-primary-foreground animate-bounce" style={{animationDelay: '0.1s'}}></div>
+              <div className="w-2 h-2 rounded-full bg-primary-foreground animate-bounce" style={{animationDelay: '0.2s'}}></div>
             </div>
           ) : message.isThinking ? (
             <span title="Ассистент размышлял над ответом">🧠</span>
@@ -78,25 +78,21 @@ export default function Message({ message }: MessageProps) {
       )}
 
       <div className={cn(
-        "max-w-2xl px-4 py-3 rounded-2xl",
+        "max-w-3xl px-6 py-4 rounded-2xl",
         isUser
-          ? "ml-12"
-          : ""
-      )}
-      style={{
-        backgroundColor: isUser ? '#f5f5f5' : '#1a1a1a',
-        color: isUser ? '#0f0f0f' : '#f5f5f5'
-      }}>
+          ? "ml-12 bg-primary text-primary-foreground"
+          : "bg-card text-card-foreground border border-border/30"
+      )}>
         {/* Основной контент */}
         {renderedContent}
 
         {/* План исследования */}
         {message.plan && (
-          <details className="mt-3 p-3 bg-gray-800 rounded-lg">
-            <summary className="cursor-pointer text-sm font-medium text-blue-400">
+          <details className="mt-4 p-4 note-block">
+            <summary className="cursor-pointer text-sm font-medium text-primary">
               📋 План исследования
             </summary>
-            <div className="mt-2 text-sm text-gray-300">
+            <div className="mt-3 text-sm text-muted-foreground">
               <p><strong>Итерация:</strong> {message.plan.iteration}</p>
               <p><strong>Основная ссылка:</strong> {message.plan.primary_ref}</p>
               {message.plan.description && (
@@ -108,11 +104,11 @@ export default function Message({ message }: MessageProps) {
 
         {/* Результаты исследования */}
         {message.research && (
-          <details className="mt-3 p-3 bg-gray-800 rounded-lg">
-            <summary className="cursor-pointer text-sm font-medium text-green-400">
+          <details className="mt-4 p-4 note-block">
+            <summary className="cursor-pointer text-sm font-medium text-success">
               🔍 Результаты поиска
             </summary>
-            <div className="mt-2 text-sm text-gray-300">
+            <div className="mt-3 text-sm text-muted-foreground">
               <pre className="whitespace-pre-wrap text-xs">
                 {JSON.stringify(message.research, null, 2)}
               </pre>
@@ -122,31 +118,31 @@ export default function Message({ message }: MessageProps) {
 
         {/* Ошибка */}
         {message.error && (
-          <div className="mt-3 p-3 bg-red-900 border border-red-700 rounded-lg">
-            <div className="flex items-center gap-2 text-red-300">
+          <div className="mt-4 p-4 bg-destructive/5 border border-destructive/30 rounded-xl">
+            <div className="flex items-center gap-2 text-destructive">
               <span>⚠️</span>
               <span className="font-medium">Ошибка</span>
             </div>
-            <p className="mt-1 text-sm text-red-200">{message.error.message}</p>
+            <p className="mt-2 text-sm text-destructive/90">{message.error.message}</p>
           </div>
         )}
 
         {/* Мысли ассистента */}
         {message.thinking && (
-          <div className="mt-3">
+          <div className="mt-4">
             <button
               onClick={() => setShowThinking(!showThinking)}
-              className="text-xs text-blue-400 hover:text-blue-300 underline"
+              className="text-xs text-primary hover:text-primary/80 underline transition-colors"
             >
               {showThinking ? 'Скрыть мысли' : 'Показать мысли ассистента'}
             </button>
             {showThinking && (
-              <div className="mt-2 p-3 bg-yellow-900 border border-yellow-700 rounded-lg">
-                <div className="flex items-center gap-2 text-yellow-300 mb-2">
+              <div className="mt-3 p-4 note-block">
+                <div className="flex items-center gap-2 text-warning mb-2">
                   <span>💭</span>
                   <span className="font-medium text-sm">Ход мыслей</span>
                 </div>
-                <p className="text-sm text-yellow-200 whitespace-pre-wrap">
+                <p className="text-sm text-muted-foreground whitespace-pre-wrap">
                   {message.thinking}
                 </p>
               </div>
@@ -154,16 +150,13 @@ export default function Message({ message }: MessageProps) {
           </div>
         )}
 
-        <p className="text-xs mt-2" style={{
-          color: isUser ? '#404040' : '#808080',
-          opacity: isUser ? 0.7 : 1
-        }}>
+        <p className="text-xs mt-3 text-muted-foreground/70">
           {message.timestamp ? new Date(message.timestamp).toLocaleTimeString() : ''}
         </p>
       </div>
 
       {isUser && (
-        <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0 mt-1 bg-gray-200 text-gray-900">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium shrink-0 mt-1 bg-secondary text-secondary-foreground">
           👤
         </div>
       )}

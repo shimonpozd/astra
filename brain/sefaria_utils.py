@@ -6,25 +6,26 @@ import httpx
 import json
 from dataclasses import dataclass
 
-logger = logging.getLogger(__name__) 
+logger = logging.getLogger(__name__)
 
 SEFARIA_API_KEY = os.getenv("SEFARIA_API_KEY")
 SEFARIA_API_URL = os.getenv("SEFARIA_API_URL_OVERRIDE", "http://localhost:8000/api/").rstrip('/')
 
-async def _get(endpoint: str, params: dict | None = None) -> dict | list:
-    async with httpx.AsyncClient() as client:
-        url = f"{SEFARIA_API_URL}/{endpoint}"
-        headers = {"Authorization": f"Bearer {SEFARIA_API_KEY}"} if SEFARIA_API_KEY else {}
-        try:
-            response = await client.get(url, params=params, headers=headers, timeout=20.0)
-            response.raise_for_status()
-            return response.json()
-        except httpx.HTTPStatusError as e:
-            logger.error(f"Sefaria API HTTP error for {url}: {e.response.status_code} {e.response.text}")
-            return {"error": f"HTTP error: {e.response.status_code}", "details": e.response.text}
-        except httpx.RequestError as e:
-            logger.error(f"Sefaria API request error for {url}: {e}")
-            return {"error": "Request error", "details": str(e)}
+async def _get(client: httpx.AsyncClient, endpoint: str, params: dict | None = None) -> dict | list:
+    url = f"{SEFARIA_API_URL}/{endpoint}"
+    headers = {"Authorization": f"Bearer {SEFARIA_API_KEY}"} if SEFARIA_API_KEY else {}
+    try:
+        response = await client.get(url, params=params, headers=headers, timeout=20.0)
+        response.raise_for_status()
+        if not response.content:
+            return None
+        return response.json()
+    except httpx.HTTPStatusError as e:
+        logger.error(f"Sefaria API HTTP error for {url}: {e.response.status_code} {e.response.text}")
+        return {"error": f"HTTP error: {e.response.status_code}", "details": e.response.text}
+    except (httpx.RequestError, json.JSONDecodeError) as e:
+        logger.error(f"Sefaria API request error for {url}: {e}")
+        return {"error": "Request error", "details": str(e)}
 
 def clamp_lines(s: str, max_lines: int = 8) -> str:
     return "\n".join(s.splitlines()[:max_lines]).strip()
@@ -170,3 +171,42 @@ def compact_and_deduplicate_links(raw_links: list, categories: Optional[List[str
         logger.error(f"Failed to sort links: {e}")
 
     return filtered[:limit]
+
+def ok_and_has_text(raw: Any) -> bool:
+    if not isinstance(raw, dict) or raw.get("error"):
+        return False
+    return bool(raw.get("text") or raw.get("he") or raw.get("versions"))
+
+import unicodedata
+
+_SANITIZE_TRANSLATION = str.maketrans({
+    "’": "'", "‘": "'", "ʼ": "'", "ʻ": "'", "´": "'",
+    "–": "-", "—": "-",
+})
+
+async def normalize_tref(tref: str) -> str:
+    if not isinstance(tref, str):
+        return tref
+
+    s = unicodedata.normalize('NFKC', tref)
+    s = s.replace("\u200f", "").replace("\u200e", "")
+    s = s.translate(_SANITIZE_TRANSLATION)
+    s = re.sub(r"\s+", " ", s.strip())
+    s = re.sub(r"\s+,", ",", s)
+    s = re.sub(r",\s+", ", ", s)
+    s = re.sub(r"Shulchan Arukh", "Shulchan Aruch", s, flags=re.IGNORECASE)
+    s = re.sub(r"De’ah|De´ah|De`ah", "Deah", s, flags=re.IGNORECASE)
+    return s
+
+import asyncio
+
+async def _with_retries(coro_factory, attempts=3, base_delay=0.5):
+    delay = base_delay
+    for i in range(attempts):
+        try:
+            return await coro_factory()
+        except Exception as e:
+            if i == attempts - 1:
+                raise
+            await asyncio.sleep(delay)
+            delay *= 2

@@ -66,7 +66,11 @@ const PersonalityEditor: React.FC = () => {
 
   const fetchPersonalities = async () => {
     try {
-      const response = await fetch('/admin/personalities');
+      const response = await fetch('/admin/personalities', {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setPersonalities(data);
@@ -82,7 +86,11 @@ const PersonalityEditor: React.FC = () => {
 
   const fetchPersonality = async (id: string) => {
     try {
-      const response = await fetch(`/admin/personalities/${id}`);
+      const response = await fetch(`/admin/personalities/${id}`, {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setSelectedPersonality(data);
@@ -120,6 +128,7 @@ const PersonalityEditor: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify(formData),
       });
@@ -148,6 +157,7 @@ const PersonalityEditor: React.FC = () => {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify(formData),
       });
@@ -174,6 +184,9 @@ const PersonalityEditor: React.FC = () => {
     try {
       const response = await fetch(`/admin/personalities/${selectedPersonality.id}`, {
         method: 'DELETE',
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
       });
 
       if (response.ok) {

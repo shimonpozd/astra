@@ -97,7 +97,7 @@ function renderMdLite(text: string): React.ReactNode[] {
         const before = raw.slice(j, cm.index);
         if (before) parts.push(before);
         parts.push(
-          <code key={`c-${i}-${cm.index}`} className="bg-neutral-800 px-1 rounded text-[0.95em]" dir="ltr">
+          <code key={`c-${i}-${cm.index}`} className="bg-muted px-1 rounded text-[0.95em]" dir="ltr">
             {cm[1]}
           </code>
         );
@@ -172,7 +172,7 @@ function calloutClass(variant?: string): string {
     case "danger":
       return `${base} border-rose-700 bg-rose-950/40`;
     default:
-      return `${base} border-neutral-700 bg-neutral-900/60`;
+      return `${base} border-border bg-muted/50`;
   }
 }
 
@@ -274,7 +274,7 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
             return (
               <button
                 key={index}
-                className="rounded-2xl px-4 py-2 border border-neutral-700 hover:bg-neutral-800"
+                className="rounded-2xl px-4 py-2 border border-border hover:bg-accent"
                 onClick={() => window.dispatchEvent(new CustomEvent("doc-action", { detail: block }))}
               >
                 {block.label}

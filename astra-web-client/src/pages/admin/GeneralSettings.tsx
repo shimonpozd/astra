@@ -84,7 +84,39 @@ interface ConfigData {
       api_key?: string;
       index?: string;
     };
+    stm?: {
+      ttl_seconds?: number;
+      trigger_messages?: number;
+      trigger_tokens?: number;
+    };
     [key: string]: any;
+  };
+  stm?: {
+    enabled?: boolean;
+    ttl_sec?: number;
+    trigger?: {
+      msgs_high?: number;
+      msgs_low?: number;
+      tokens_high?: number;
+      tokens_low?: number;
+      cooldown_sec?: number;
+    };
+    slots?: {
+      summary_max_items?: number;
+      facts_max_items?: number;
+      facts_hamm_thresh?: number;
+      open_loops_max_items?: number;
+      refs_max_items?: number;
+    };
+    decay?: {
+      half_life_min?: number;
+    };
+    inject?: {
+      top_facts?: number;
+      top_open_loops?: number;
+      top_refs?: number;
+      include_when_empty?: boolean;
+    };
   };
   research?: {
     max_depth?: number;
@@ -100,6 +132,25 @@ interface ConfigData {
     context?: {
       study_mode_context?: string;
     };
+  };
+  services?: {
+    brain?: {
+      port?: number;
+      admin_token?: string;
+      cors_origins?: string;
+      rate_limiting?: {
+        enabled?: boolean;
+        default_limit?: number;
+        window_seconds?: number;
+        llm_limit?: number;
+      };
+      sefaria?: {
+        api_url?: string;
+        api_key?: string;
+        cache_ttl_seconds?: number;
+      };
+    };
+    [key: string]: any;
   };
   [key: string]: any;
 }
@@ -155,7 +206,11 @@ const GeneralSettings: React.FC = () => {
 
   const fetchConfig = async () => {
     try {
-      const response = await fetch('/admin/config');
+      const response = await fetch('/admin/config', {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         // Create a deep copy of the default config to avoid mutation
@@ -187,6 +242,7 @@ const GeneralSettings: React.FC = () => {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify(changes),
       });
@@ -269,12 +325,14 @@ const GeneralSettings: React.FC = () => {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-8">
           <TabsTrigger value="llm">LLM</TabsTrigger>
           <TabsTrigger value="voice">Voice</TabsTrigger>
           <TabsTrigger value="memory">Memory</TabsTrigger>
+          <TabsTrigger value="stm">STM</TabsTrigger>
           <TabsTrigger value="research">Research</TabsTrigger>
           <TabsTrigger value="actions">Actions & Context</TabsTrigger>
+          <TabsTrigger value="brain">Brain</TabsTrigger>
           <TabsTrigger value="other">Other</TabsTrigger>
         </TabsList>
 
@@ -704,6 +762,361 @@ const GeneralSettings: React.FC = () => {
                   </div>
                 </div>
               )}
+
+              {/* STM (Short-Term Memory) Settings */}
+              <div className="border-t pt-4 space-y-3">
+                <h4 className="text-sm font-medium">Short-Term Memory (STM) Settings</h4>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-ttl">TTL (seconds)</Label>
+                    <Input
+                      id="stm-ttl"
+                      type="number"
+                      min="3600"
+                      max="604800"
+                      value={config.memory?.stm?.ttl_seconds || ''}
+                      onChange={(e) => updateConfig(['memory', 'stm', 'ttl_seconds'], parseInt(e.target.value))}
+                      placeholder="86400"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      How long to keep STM data (1 hour to 1 week)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-trigger-messages">Trigger Messages</Label>
+                    <Input
+                      id="stm-trigger-messages"
+                      type="number"
+                      min="1"
+                      max="50"
+                      value={config.memory?.stm?.trigger_messages || ''}
+                      onChange={(e) => updateConfig(['memory', 'stm', 'trigger_messages'], parseInt(e.target.value))}
+                      placeholder="8"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Update STM after this many messages
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-trigger-tokens">Trigger Tokens</Label>
+                    <Input
+                      id="stm-trigger-tokens"
+                      type="number"
+                      min="500"
+                      max="10000"
+                      value={config.memory?.stm?.trigger_tokens || ''}
+                      onChange={(e) => updateConfig(['memory', 'stm', 'trigger_tokens'], parseInt(e.target.value))}
+                      placeholder="2000"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Update STM after this many tokens
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="stm" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Short-Term Memory (STM) Settings</CardTitle>
+              <CardDescription>Configure enhanced STM with structured slots and semantic deduplication</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Global STM Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">Global Settings</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-enabled">STM Enabled</Label>
+                    <Select
+                      value={config.stm?.enabled ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['stm', 'enabled'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Enabled</SelectItem>
+                        <SelectItem value="false">Disabled</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-ttl">TTL (seconds)</Label>
+                    <Input
+                      id="stm-ttl"
+                      type="number"
+                      min="60"
+                      max="172800"
+                      value={config.stm?.ttl_sec || ''}
+                      onChange={(e) => updateConfig(['stm', 'ttl_sec'], parseInt(e.target.value))}
+                      placeholder="86400"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Time to live for STM records (60-172800)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Trigger Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">Update Triggers</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-msgs-high">Messages High Threshold</Label>
+                    <Input
+                      id="stm-msgs-high"
+                      type="number"
+                      min="4"
+                      max="50"
+                      value={config.stm?.trigger?.msgs_high || ''}
+                      onChange={(e) => updateConfig(['stm', 'trigger', 'msgs_high'], parseInt(e.target.value))}
+                      placeholder="10"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Upper message count threshold (4-50)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-msgs-low">Messages Low Threshold</Label>
+                    <Input
+                      id="stm-msgs-low"
+                      type="number"
+                      min="2"
+                      max="49"
+                      value={config.stm?.trigger?.msgs_low || ''}
+                      onChange={(e) => updateConfig(['stm', 'trigger', 'msgs_low'], parseInt(e.target.value))}
+                      placeholder="6"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Lower message count threshold (2-49)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-tokens-high">Tokens High Threshold</Label>
+                    <Input
+                      id="stm-tokens-high"
+                      type="number"
+                      min="500"
+                      max="6000"
+                      value={config.stm?.trigger?.tokens_high || ''}
+                      onChange={(e) => updateConfig(['stm', 'trigger', 'tokens_high'], parseInt(e.target.value))}
+                      placeholder="2500"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Upper token count threshold (500-6000)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-tokens-low">Tokens Low Threshold</Label>
+                    <Input
+                      id="stm-tokens-low"
+                      type="number"
+                      min="250"
+                      max="5000"
+                      value={config.stm?.trigger?.tokens_low || ''}
+                      onChange={(e) => updateConfig(['stm', 'trigger', 'tokens_low'], parseInt(e.target.value))}
+                      placeholder="1500"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Lower token count threshold (250-5000)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-cooldown">Cooldown (seconds)</Label>
+                    <Input
+                      id="stm-cooldown"
+                      type="number"
+                      min="5"
+                      max="300"
+                      value={config.stm?.trigger?.cooldown_sec || ''}
+                      onChange={(e) => updateConfig(['stm', 'trigger', 'cooldown_sec'], parseInt(e.target.value))}
+                      placeholder="30"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Minimum time between updates (5-300)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slot Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">Memory Slots</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-max">Summary Max Items</Label>
+                    <Input
+                      id="stm-summary-max"
+                      type="number"
+                      min="3"
+                      max="12"
+                      value={config.stm?.slots?.summary_max_items || ''}
+                      onChange={(e) => updateConfig(['stm', 'slots', 'summary_max_items'], parseInt(e.target.value))}
+                      placeholder="8"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum summary bullet points (3-12)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-facts-max">Facts Max Items</Label>
+                    <Input
+                      id="stm-facts-max"
+                      type="number"
+                      min="10"
+                      max="200"
+                      value={config.stm?.slots?.facts_max_items || ''}
+                      onChange={(e) => updateConfig(['stm', 'slots', 'facts_max_items'], parseInt(e.target.value))}
+                      placeholder="50"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum facts in memory (10-200)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-hamm-thresh">Hamming Threshold</Label>
+                    <Input
+                      id="stm-hamm-thresh"
+                      type="number"
+                      min="1"
+                      max="16"
+                      value={config.stm?.slots?.facts_hamm_thresh || ''}
+                      onChange={(e) => updateConfig(['stm', 'slots', 'facts_hamm_thresh'], parseInt(e.target.value))}
+                      placeholder="6"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      SimHash deduplication threshold (1-16)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-loops-max">Open Loops Max Items</Label>
+                    <Input
+                      id="stm-loops-max"
+                      type="number"
+                      min="1"
+                      max="30"
+                      value={config.stm?.slots?.open_loops_max_items || ''}
+                      onChange={(e) => updateConfig(['stm', 'slots', 'open_loops_max_items'], parseInt(e.target.value))}
+                      placeholder="10"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum open questions/tasks (1-30)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-refs-max">References Max Items</Label>
+                    <Input
+                      id="stm-refs-max"
+                      type="number"
+                      min="1"
+                      max="30"
+                      value={config.stm?.slots?.refs_max_items || ''}
+                      onChange={(e) => updateConfig(['stm', 'slots', 'refs_max_items'], parseInt(e.target.value))}
+                      placeholder="10"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum Sefaria references (1-30)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decay Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">Memory Decay</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-half-life">Half-Life (minutes)</Label>
+                    <Input
+                      id="stm-half-life"
+                      type="number"
+                      min="10"
+                      max="1440"
+                      value={config.stm?.decay?.half_life_min || ''}
+                      onChange={(e) => updateConfig(['stm', 'decay', 'half_life_min'], parseInt(e.target.value))}
+                      placeholder="240"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Time for fact scores to decay by half (10-1440 minutes)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Injection Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">Prompt Injection</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-inject-facts">Top Facts to Inject</Label>
+                    <Input
+                      id="stm-inject-facts"
+                      type="number"
+                      min="0"
+                      max="10"
+                      value={config.stm?.inject?.top_facts || ''}
+                      onChange={(e) => updateConfig(['stm', 'inject', 'top_facts'], parseInt(e.target.value))}
+                      placeholder="3"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Number of top facts to include in prompts (0-10)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-inject-loops">Top Open Loops to Inject</Label>
+                    <Input
+                      id="stm-inject-loops"
+                      type="number"
+                      min="0"
+                      max="5"
+                      value={config.stm?.inject?.top_open_loops || ''}
+                      onChange={(e) => updateConfig(['stm', 'inject', 'top_open_loops'], parseInt(e.target.value))}
+                      placeholder="2"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Number of open questions to include (0-5)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-inject-refs">Top References to Inject</Label>
+                    <Input
+                      id="stm-inject-refs"
+                      type="number"
+                      min="0"
+                      max="5"
+                      value={config.stm?.inject?.top_refs || ''}
+                      onChange={(e) => updateConfig(['stm', 'inject', 'top_refs'], parseInt(e.target.value))}
+                      placeholder="3"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Number of Sefaria references to include (0-5)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-include-empty">Include When Empty</Label>
+                    <Select
+                      value={config.stm?.inject?.include_when_empty ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['stm', 'inject', 'include_when_empty'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Yes</SelectItem>
+                        <SelectItem value="false">No</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Include STM context even when empty
+                    </p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
@@ -794,6 +1207,142 @@ const GeneralSettings: React.FC = () => {
                 </Select>
                 <p className="text-xs text-muted-foreground">
                   Determines what text is sent to the LLM when asking questions in Study Mode.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="brain" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Brain Service Settings</CardTitle>
+              <CardDescription>Configure the Brain service parameters</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="brain-port">Port</Label>
+                <Input
+                  id="brain-port"
+                  type="number"
+                  value={config.services?.brain?.port || 7030}
+                  onChange={(e) => updateConfig(['services', 'brain', 'port'], parseInt(e.target.value))}
+                />
+                <p className="text-xs text-muted-foreground">
+                  Port number for the Brain service
+                </p>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="admin-token">Admin Token</Label>
+                <Input
+                  id="admin-token"
+                  type="password"
+                  value={config.services?.brain?.admin_token || ''}
+                  onChange={(e) => updateConfig(['services', 'brain', 'admin_token'], e.target.value)}
+                />
+                <p className="text-xs text-muted-foreground">
+                  Secret token for admin API access
+                </p>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="cors-origins">CORS Origins</Label>
+                <Input
+                  id="cors-origins"
+                  value={config.services?.brain?.cors_origins || ''}
+                  onChange={(e) => updateConfig(['services', 'brain', 'cors_origins'], e.target.value)}
+                  placeholder="http://localhost:5173,http://localhost:3000"
+                />
+                <p className="text-xs text-muted-foreground">
+                  Comma-separated list of allowed origins for CORS
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Rate Limiting</CardTitle>
+              <CardDescription>Configure request rate limiting</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="rate-limit-enabled"
+                  checked={config.services?.brain?.rate_limiting?.enabled || false}
+                  onChange={(e) => updateConfig(['services', 'brain', 'rate_limiting', 'enabled'], e.target.checked)}
+                />
+                <Label htmlFor="rate-limit-enabled">
+                  Enable Rate Limiting
+                </Label>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="default-limit">Default Limit (requests per window)</Label>
+                <Input
+                  id="default-limit"
+                  type="number"
+                  value={config.services?.brain?.rate_limiting?.default_limit || 10}
+                  onChange={(e) => updateConfig(['services', 'brain', 'rate_limiting', 'default_limit'], parseInt(e.target.value))}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="window-seconds">Window (seconds)</Label>
+                <Input
+                  id="window-seconds"
+                  type="number"
+                  value={config.services?.brain?.rate_limiting?.window_seconds || 60}
+                  onChange={(e) => updateConfig(['services', 'brain', 'rate_limiting', 'window_seconds'], parseInt(e.target.value))}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="llm-limit">LLM Endpoint Limit (requests per window)</Label>
+                <Input
+                  id="llm-limit"
+                  type="number"
+                  value={config.services?.brain?.rate_limiting?.llm_limit || 5}
+                  onChange={(e) => updateConfig(['services', 'brain', 'rate_limiting', 'llm_limit'], parseInt(e.target.value))}
+                />
+                <p className="text-xs text-muted-foreground">
+                  Stricter limit for LLM endpoints (chat/stream)
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Sefaria Integration</CardTitle>
+              <CardDescription>Configure Sefaria API settings</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="sefaria-api-url">API URL</Label>
+                <Input
+                  id="sefaria-api-url"
+                  value={config.services?.brain?.sefaria?.api_url || ''}
+                  onChange={(e) => updateConfig(['services', 'brain', 'sefaria', 'api_url'], e.target.value)}
+                  placeholder="http://localhost:8000/api/"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="sefaria-api-key">API Key</Label>
+                <Input
+                  id="sefaria-api-key"
+                  type="password"
+                  value={config.services?.brain?.sefaria?.api_key || ''}
+                  onChange={(e) => updateConfig(['services', 'brain', 'sefaria', 'api_key'], e.target.value)}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="sefaria-cache-ttl">Cache TTL (seconds)</Label>
+                <Input
+                  id="sefaria-cache-ttl"
+                  type="number"
+                  value={config.services?.brain?.sefaria?.cache_ttl_seconds || 60}
+                  onChange={(e) => updateConfig(['services', 'brain', 'sefaria', 'cache_ttl_seconds'], parseInt(e.target.value))}
+                />
+                <p className="text-xs text-muted-foreground">
+                  How long to cache Sefaria API responses
                 </p>
               </div>
             </CardContent>

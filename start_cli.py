@@ -337,9 +337,8 @@ def graceful_shutdown(processes: List[tuple[str, subprocess.Popen]], timeout: in
             try:
                 print_color(f"Sending termination signal to {name} (PID: {process.pid})", "yellow", timestamp=False)
                 if sys.platform == "win32":
-                    # Send CTRL_BREAK_EVENT to process group on Windows
-                    import ctypes
-                    ctypes.windll.kernel32.GenerateConsoleCtrlEvent(1, process.pid)  # CTRL_BREAK_EVENT
+                    # Use taskkill to forcefully terminate the process tree on Windows
+                    subprocess.call(['taskkill', '/F', '/T', '/PID', str(process.pid)])
                 else:
                     # Send SIGTERM to the process group
                     os.killpg(os.getpgid(process.pid), signal.SIGTERM)
@@ -358,6 +357,14 @@ def graceful_shutdown(processes: List[tuple[str, subprocess.Popen]], timeout: in
         except Exception as e:
             print_color(f"Error waiting for {name} to stop: {e}", "red")
     print_color("--- Shutdown complete ---", "green")
+
+def raw_stream_reader(stream, prefix: str):
+    """A simple, dumb reader that just prints every line from a stream for debugging."""
+    for line in iter(stream.readline, ''):
+        if not line:
+            break
+        print(f"[{prefix}] {line.strip()}")
+    stream.close()
 
 def run_services(config: Dict[str, Any]):
     """Service management with error handling and monitoring."""
@@ -414,6 +421,13 @@ def run_services(config: Dict[str, Any]):
     
     try:
         base_env = os.environ.copy()
+        project_root = os.path.dirname(__file__)
+        
+        # Add project root to PYTHONPATH to ensure modules are found
+        python_path = base_env.get('PYTHONPATH', '')
+        if project_root not in python_path.split(os.pathsep):
+            base_env['PYTHONPATH'] = f"{project_root}{os.pathsep}{python_path}"
+
         base_env.update({
             "PYTHONUTF8": "1",
             "ASTRA_CONFIG_ENABLED": "true",
@@ -435,6 +449,14 @@ def run_services(config: Dict[str, Any]):
                 continue
             
             service_dir = os.path.join(os.path.dirname(__file__), name)
+
+            # --- ASTRA REFACTORING ---
+            app_path = f"{name}.main:app"
+            if name == "brain":
+                print_color("Redirecting 'brain' service to refactored 'brain_service.main:app'", "bold yellow")
+                app_path = "brain_service.main:app"
+            # --- END REFACTORING ---
+
             if sys.platform == "win32":
                 venv_python = os.path.join(service_dir, ".venv", "Scripts", "python.exe")
             else:
@@ -443,7 +465,7 @@ def run_services(config: Dict[str, Any]):
                 print_color(f"Warning: Python executable not found for '{name}' at {venv_python}. Skipping.", "yellow")
                 continue
             
-            command = [venv_python, "-u", "-m", "uvicorn", f"{name}.main:app", "--host", "0.0.0.0", "--port", port]
+            command = [venv_python, "-u", "-m", "uvicorn", app_path, "--host", "0.0.0.0", "--port", port]
             
             try:
                 print_color(f"Starting {name} on port {port}...", properties["color"])
@@ -454,7 +476,7 @@ def run_services(config: Dict[str, Any]):
                 
                 process = subprocess.Popen(
                     command,
-                    cwd=os.path.dirname(__file__),
+                    cwd=os.path.dirname(__file__), # ALWAYS run from project root
                     stdout=subprocess.PIPE,
                     stderr=subprocess.STDOUT,
                     text=True,
@@ -466,11 +488,21 @@ def run_services(config: Dict[str, Any]):
                 )
                 
                 processes.append((name, process))
-                compact_mode = config.get("formatting", {}).get("compact_mode", False)
-                formatter = LogFormatter(no_colors=config.get("no_colors", False), compact_mode=compact_mode)
-                filters = config.get("filters", {})
-                search_pattern = config.get("search_pattern", "")
-                thread = threading.Thread(target=stream_reader, args=(process.stdout, name, properties["color"], formatter, status_tracker, log_buffer, logger, filters, search_pattern, console), daemon=True)
+
+                # --- ASTRA DEBUGGING ---
+                if name == "brain":
+                    # Use a raw reader for debugging brain startup
+                    print_color(f"Using RAW stream reader for '{name}' debugging.", "bold red")
+                    thread = threading.Thread(target=raw_stream_reader, args=(process.stdout, "RAW-BRAIN"), daemon=True)
+                else:
+                    # Use the normal formatted reader
+                    compact_mode = config.get("formatting", {}).get("compact_mode", False)
+                    formatter = LogFormatter(no_colors=config.get("no_colors", False), compact_mode=compact_mode)
+                    filters = config.get("filters", {})
+                    search_pattern = config.get("search_pattern", "")
+                    thread = threading.Thread(target=stream_reader, args=(process.stdout, name, properties["color"], formatter, status_tracker, log_buffer, logger, filters, search_pattern, console), daemon=True)
+                # --- END DEBUGGING ---
+                
                 thread.start()
                 threads.append(thread)
                 

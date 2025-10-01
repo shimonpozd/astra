@@ -54,7 +54,7 @@ def test_new_settings_from_config(ensure_cleanup):
     assert settings.LAUNCHER_ENABLED_SERVICES == {'voice_in': False, 'stt': False, 'tts': False}
 
 from fastapi.testclient import TestClient
-from brain.main import app
+from brain_service.main import app
 
 client = TestClient(app)
 

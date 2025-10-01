@@ -27,7 +27,11 @@ const PersonalityList: React.FC = () => {
 
   const fetchPersonalities = async () => {
     try {
-      const response = await fetch('/admin/personalities');
+      const response = await fetch('/admin/personalities', {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setPersonalities(data);
@@ -47,6 +51,9 @@ const PersonalityList: React.FC = () => {
     try {
       const response = await fetch(`/admin/personalities/${selectedPersonality.id}`, {
         method: 'DELETE',
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
       });
 
       if (response.ok) {

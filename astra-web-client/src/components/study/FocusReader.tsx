@@ -194,11 +194,10 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
   onDoubleClick
 }, ref) => {
   const { translatedText, isTranslating, translate } = useTranslation({
-    hebrewText: segment.heText || '',
-    englishText: segment.text || '',
+    tref: segment.ref,
   });
 
-  const originalText = segment.heText || '';
+  const originalText = segment.heText || segment.text || '';
 
   const textToRender = translatedText || originalText;
 

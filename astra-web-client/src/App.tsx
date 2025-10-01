@@ -10,33 +10,36 @@ import PromptEditor from './pages/admin/PromptEditor';
 import { useTextSelectionListener } from './hooks/useTextSelectionListener';
 import { LexiconPanel } from './components/LexiconPanel';
 import { BlinkingDot } from './components/BlinkingDot';
+import { ThemeProvider } from './components/theme-provider';
 
 function App() {
   useTextSelectionListener();
 
   return (
-    <BrowserRouter>
-      <div className="h-screen w-full bg-background">
-        <BlinkingDot />
-        <Routes>
-          <Route path="/" element={<ChatLayout />} />
-          <Route path="/chat" element={<Navigate to="/" replace />} />
-          <Route path="/chat/:sessionId" element={<ChatLayout />} />
-          <Route path="/study" element={<StudyLanding />} />
-          <Route path="/study/:sessionId" element={<ChatLayout />} />
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Navigate to="/admin/settings" replace />} />
-            <Route path="settings" element={<GeneralSettings />} />
-            <Route path="personalities" element={<PersonalityList />} />
-            <Route path="personalities/new" element={<PersonalityCreate />} />
-            <Route path="personalities/edit/:id" element={<PersonalityEdit />} />
-            <Route path="prompts" element={<PromptEditor />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-        <LexiconPanel />
-      </div>
-    </BrowserRouter>
+    <ThemeProvider defaultTheme="light" storageKey="astra-ui-theme">
+      <BrowserRouter>
+        <div className="h-screen w-full bg-background">
+          <BlinkingDot />
+          <Routes>
+            <Route path="/" element={<ChatLayout />} />
+            <Route path="/chat" element={<Navigate to="/" replace />} />
+            <Route path="/chat/:sessionId" element={<ChatLayout />} />
+            <Route path="/study" element={<StudyLanding />} />
+            <Route path="/study/:sessionId" element={<ChatLayout />} />
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<Navigate to="/admin/settings" replace />} />
+              <Route path="settings" element={<GeneralSettings />} />
+              <Route path="personalities" element={<PersonalityList />} />
+              <Route path="personalities/new" element={<PersonalityCreate />} />
+              <Route path="personalities/edit/:id" element={<PersonalityEdit />} />
+              <Route path="prompts" element={<PromptEditor />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+          <LexiconPanel />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PersonaSelector from '../PersonaSelector';
+import { ThemeToggle } from '../ThemeToggle';
 
 interface TopBarProps {
   agentId: string;
@@ -25,7 +26,7 @@ const TopBar: React.FC<TopBarProps> = ({
   const navigate = useNavigate();
 
   return (
-    <div className="h-16 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-6 flex-shrink-0">
+    <div className="h-16 border-b border-border/50 bg-background/80 backdrop-blur-sm flex items-center justify-between px-6 flex-shrink-0">
       <div className="flex items-center gap-3">
         {onToggleSidebar && (
             <button
@@ -58,7 +59,7 @@ const TopBar: React.FC<TopBarProps> = ({
                 console.log('Study Mode button clicked');
                 onOpenStudy();
               }}
-              className="h-8 text-xs rounded border px-2 flex items-center hover:bg-accent cursor-pointer"
+              className="h-8 text-xs rounded-lg border border-border/50 px-3 flex items-center hover:bg-accent/50 cursor-pointer transition-colors"
               title="Открыть Study Mode"
             >
               Study Mode
@@ -69,7 +70,7 @@ const TopBar: React.FC<TopBarProps> = ({
             console.log('Admin button clicked');
             navigate('/admin');
           }}
-          className="h-8 text-xs rounded border px-2 flex items-center hover:bg-accent cursor-pointer"
+          className="h-8 text-xs rounded-lg border border-border/50 px-3 flex items-center hover:bg-accent/50 cursor-pointer transition-colors"
           title="Открыть Admin Panel"
         >
           Admin
@@ -77,6 +78,7 @@ const TopBar: React.FC<TopBarProps> = ({
         <div className="w-48">
           <PersonaSelector selected={agentId} onSelect={setAgentId} />
         </div>
+        <ThemeToggle />
       </div>
     </div>
   );

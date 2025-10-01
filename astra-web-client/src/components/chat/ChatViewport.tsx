@@ -350,16 +350,16 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
       // Show diagnostic UI for corrupted doc.v1
       return (
         <article className="doc" dir="auto">
-          <div className="rounded-xl p-4 border border-red-500/50 bg-red-950/20">
-            <p className="text-red-400 font-medium mb-2">Документ повреждён</p>
-            <p className="text-sm text-neutral-400 mb-3">
+          <div className="rounded-xl p-4 border border-destructive/50 bg-destructive/5">
+            <p className="text-destructive font-medium mb-2">Документ повреждён</p>
+            <p className="text-sm text-muted-foreground mb-3">
               Не удалось распознать формат doc.v1. Возможно, ответ модели содержит ошибку.
             </p>
             <details className="text-xs">
-              <summary className="cursor-pointer text-neutral-500 hover:text-neutral-400">
+              <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                 Показать сырой ответ
               </summary>
-              <pre className="mt-2 p-2 bg-neutral-900 rounded text-neutral-300 overflow-auto max-h-32">
+              <pre className="mt-2 p-2 bg-muted rounded text-muted-foreground overflow-auto max-h-32">
                 {coerceText(rawContent)}
               </pre>
             </details>
@@ -382,7 +382,7 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
   };
 
   return (
-    <div ref={viewportRef} className="flex-1 min-h-0 p-4 overflow-y-auto bg-background">
+    <div ref={viewportRef} className="flex-1 min-h-0 p-4 overflow-y-auto">
       {isLoading ? (
         <div className="flex justify-center items-center h-full">
           <p className="text-muted-foreground">Loading messages...</p>
@@ -407,7 +407,7 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
             } else if (message.content_type === 'thought.v1') {
               const thoughtText = coerceText(message.content);
               renderedContent = (
-                <div className="text-xs text-neutral-400 italic px-3 py-2 rounded-2xl bg-neutral-800/50 max-w-[72ch] whitespace-pre-wrap">
+                <div className="text-xs text-muted-foreground italic px-3 py-2 rounded-2xl bg-muted/50 max-w-[72ch] whitespace-pre-wrap">
                   <p>{thoughtText}</p>
                 </div>
               );

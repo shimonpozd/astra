@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@100..900&display=swap');
+@import './styles/claude.css';
 
 
 /* Custom Hebrew font - Mugrabi Regular */
@@ -140,85 +141,81 @@
 
 @layer base {
   :root {
-    /* Claude-style colors */
-    --background: #1f1e1d;       /* фон страницы - Claude dark */
-    --foreground: #c2c0b6;       /* базовый текст - Claude light */
-
+    /* 📖 Оптимальная светлая тема (дневное чтение) */
+    --background: 45 25% 95%;     /* #f5f2e9 - светлый, тёплый, бумажный тон */
+    --foreground: 30 8% 18%;      /* #2f2d2a - тёмно-серый с лёгкой теплотой */
+    
     /* Поверхности */
-    --card: #2a2927;             /* фон карточек/панелей */
-    --card-foreground: #c2c0b6;
-    --popover: #333230;          /* выпадающие меню */
-    --popover-foreground: #c2c0b6;
-
-    /* Акцент/праймари */
-    --primary: #7c3aed;          /* фиолетовый; btn/ссылки */
-    --primary-foreground: #ffffff;
-    --accent: #3a3936;           /* hover фона, боковые подсветки */
-    --accent-foreground: #c2c0b6;
-
-    /* Вторичные/мьют */
-    --secondary: #3a3936;        /* пузыри пользователя, втор. кнопки */
-    --secondary-foreground: #c2c0b6;
-    --muted: #2a2927;            /* код/блок цитаты */
-    --muted-foreground: #9b9992;
-
-    /* Границы и инпуты */
-    --border: #4a4843;
-    --input: #3a3936;            /* поля ввода/textarea */
-
-    /* Состояния */
-    --destructive: #ef4444;      /* ошибка/удаление */
-    --destructive-foreground: #ffffff;
-    --success: #22c55e;          /* подтверждение */
-    --warning: #f59e0b;          /* предупреждение */
-    --info: #60a5fa;             /* информационные */
-
-    /* Прочее */
-    --ring: #7c3aed;             /* focus ring */
-    --radius: 8px;               /* базовый радиус */
-
-    /* Map to Tailwind/shadcn variables */
-    --background: 30 8% 12%;      /* #1f1e1d */
-    --foreground: 45 8% 76%;     /* #c2c0b6 */
-    --card: 30 8% 16%;           /* #2a2927 */
-    --card-foreground: 45 8% 76%; /* #c2c0b6 */
-    --popover: 30 8% 20%;        /* #333230 */
-    --popover-foreground: 45 8% 76%; /* #c2c0b6 */
-    --primary: 262 83% 58%;      /* #7c3aed */
+    --card: 45 25% 97%;           /* #f8f5f0 - слегка светлее фона */
+    --card-foreground: 30 8% 18%; /* #2f2d2a - тот же теплый текст */
+    --popover: 45 25% 97%;        /* #f8f5f0 */
+    --popover-foreground: 30 8% 18%; /* #2f2d2a */
+    
+    /* Акцент/праймари - теплый золотисто-янтарный */
+    --primary: 30 70% 65%;        /* #e0a96d - мягкий золотисто-янтарный */
     --primary-foreground: 0 0% 100%; /* #ffffff */
-    --secondary: 30 8% 23%;      /* #3a3936 */
-    --secondary-foreground: 45 8% 76%; /* #c2c0b6 */
-    --muted: 30 8% 16%;          /* #2a2927 */
-    --muted-foreground: 45 8% 60%; /* #9b9992 */
-    --accent: 30 8% 23%;         /* #3a3936 */
-    --accent-foreground: 45 8% 76%; /* #c2c0b6 */
-    --destructive: 0 84% 60%;    /* #ef4444 */
+    --accent: 45 20% 92%;         /* #f0ebe2 - мягкий кремовый */
+    --accent-foreground: 30 8% 18%; /* #2f2d2a */
+    
+    /* Вторичные/мьют */
+    --secondary: 45 20% 92%;      /* #f0ebe2 - мягкий кремовый */
+    --secondary-foreground: 30 8% 18%; /* #2f2d2a */
+    --muted: 45 20% 92%;          /* #f0ebe2 */
+    --muted-foreground: 30 8% 35%; /* #5a5754 - приглушенный теплый серый */
+    
+    /* Границы и инпуты */
+    --border: 45 15% 85%;         /* #ddd4c7 - мягкая теплая граница */
+    --input: 45 20% 92%;          /* #f0ebe2 */
+    
+    /* Состояния */
+    --destructive: 0 70% 50%;     /* #d97b5a - терракотовый */
     --destructive-foreground: 0 0% 100%; /* #ffffff */
-    --border: 30 8% 29%;         /* #4a4843 */
-    --input: 30 8% 23%;          /* #3a3936 */
-    --ring: 262 83% 58%;         /* #7c3aed */
+    --success: 120 40% 45%;       /* #5a8a5a - теплый зеленый */
+    --warning: 30 70% 65%;        /* #e0a96d - золотисто-янтарный */
+    --info: 30 70% 65%;           /* #e0a96d - тот же теплый цвет */
+    
+    /* Прочее */
+    --ring: 30 70% 65%;           /* #e0a96d */
+    --radius: 12px;
   }
 
   .dark {
-    --background: 30 8% 12%;      /* #1f1e1d */
-    --foreground: 45 8% 76%;     /* #c2c0b6 */
-    --card: 30 8% 16%;           /* #2a2927 */
-    --card-foreground: 45 8% 76%; /* #c2c0b6 */
-    --popover: 30 8% 20%;        /* #333230 */
-    --popover-foreground: 45 8% 76%; /* #c2c0b6 */
-    --primary: 262 83% 58%;      /* #7c3aed */
-    --primary-foreground: 0 0% 100%; /* #ffffff */
-    --secondary: 30 8% 23%;      /* #3a3936 */
-    --secondary-foreground: 45 8% 76%; /* #c2c0b6 */
-    --muted: 30 8% 16%;          /* #2a2927 */
-    --muted-foreground: 45 8% 60%; /* #9b9992 */
-    --accent: 30 8% 23%;         /* #3a3936 */
-    --accent-foreground: 45 8% 76%; /* #c2c0b6 */
-    --destructive: 0 84% 60%;    /* #ef4444 */
+    /* 🌙 Теплая темная тема (ночное чтение) */
+    --background: 30 8% 12%;      /* #1e1b18 - тёплый тёмный кофе */
+    --foreground: 45 15% 85%;     /* #d8cfc4 - тёплый бежевый */
+    
+    /* Поверхности */
+    --card: 30 8% 12%;            /* #1e1b18 */
+    --card-foreground: 45 15% 85%; /* #d8cfc4 */
+    --popover: 30 8% 12%;         /* #1e1b18 */
+    --popover-foreground: 45 15% 85%; /* #d8cfc4 */
+    
+    /* Акцент/праймари */
+    --primary: 30 70% 65%;        /* #e0a96d - тот же золотисто-янтарный */
+    --primary-foreground: 30 8% 12%; /* #1e1b18 */
+    --accent: 30 6% 18%;          /* #2a2623 - темно-шоколадный */
+    --accent-foreground: 45 15% 85%; /* #d8cfc4 */
+    
+    /* Вторичные/мьют */
+    --secondary: 30 6% 18%;       /* #2a2623 */
+    --secondary-foreground: 45 15% 85%; /* #d8cfc4 */
+    --muted: 30 6% 18%;           /* #2a2623 */
+    --muted-foreground: 45 10% 70%; /* #c9c2b8 - старый пергамент */
+    
+    /* Границы и инпуты */
+    --border: 30 6% 18%;          /* #2a2623 */
+    --input: 30 6% 18%;           /* #2a2623 */
+    
+    /* Состояния */
+    --destructive: 0 70% 50%;     /* #d97b5a - терракотовый */
     --destructive-foreground: 0 0% 100%; /* #ffffff */
-    --border: 30 8% 29%;         /* #4a4843 */
-    --input: 30 8% 23%;          /* #3a3936 */
-    --ring: 262 83% 58%;         /* #7c3aed */
+    --success: 120 40% 45%;       /* #5a8a5a - теплый зеленый */
+    --warning: 30 70% 65%;        /* #e0a96d - золотисто-янтарный */
+    --info: 30 70% 65%;           /* #e0a96d */
+    
+    /* Прочее */
+    --ring: 30 70% 65%;           /* #e0a96d */
+    --radius: 12px;
   }
 }
 
@@ -234,10 +231,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
-    font-size: 14px;
-    line-height: 1.55;
-    letter-spacing: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Hebrew text helper */
@@ -262,34 +262,48 @@
     font-style: normal;
   }
 
-  /* Typography */
+  /* Typography - Claude style */
   h1, h2, h3, h4, h5, h6 {
-    font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
   }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.125rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.875rem; }
 
-  /* Code blocks */
+  /* Code blocks - теплый стиль */
   pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
     background-color: hsl(var(--muted));
     border: 1px solid hsl(var(--border));
-    border-radius: 8px;
-    padding: 12px 16px;
+    border-radius: 12px;
+    padding: 16px 20px;
     overflow-x: auto;
+    margin: 16px 0;
   }
 
   code {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-    font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+    background-color: hsl(var(--muted));
+    border: 1px solid hsl(var(--border));
     border-radius: 6px;
-    padding: 0 6px;
+    padding: 2px 6px;
+    font-weight: 500;
   }
 
-  /* Lists */
+  /* Lists - Claude style */
   ul, ol {
-    padding-left: 1.25rem;
+    padding-left: 1.5rem;
+    margin: 16px 0;
   }
 
   ul {
@@ -300,32 +314,51 @@
     list-style-type: decimal;
   }
 
-  /* Blockquotes */
-  blockquote {
-    border-left: 1px solid hsl(var(--border));
-    background-color: hsl(var(--muted));
-    padding: 12px 16px;
-    margin: 16px 0;
-    border-radius: 0 8px 8px 0;
+  li {
+    margin: 4px 0;
+    line-height: 1.6;
   }
 
-  /* Scrollbar styling */
+  /* Blockquotes - теплый стиль */
+  blockquote {
+    border-left: 3px solid hsl(var(--primary));
+    background-color: hsl(var(--muted));
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+  }
+  
+  /* Специальные стили для заметок и цитат */
+  .note-block {
+    background-color: hsl(45 20% 90%); /* #e8e0d5 - слегка затемненный фон для светлой темы */
+    border: 1px solid hsl(var(--border));
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  
+  .dark .note-block {
+    background-color: hsl(30 8% 20%); /* #352f2a - для темной темы */
+  }
+
+  /* Scrollbar styling - теплый стиль */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--muted));
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--border));
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground));
+    background: hsl(var(--primary));
   }
 
   /* Focus styles */

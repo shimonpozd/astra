@@ -144,7 +144,7 @@ export function ChatLayout() {
 
         <>
           {isChatAreaVisible && (
-            <main className="flex flex-col min-h-0" style={{ backgroundColor: '#262624' }}>
+            <main className="flex flex-col min-h-0 bg-background">
               {isStudySetupOpen && !isStudyActive && (
                 <StudySetupBar
                   onStartStudy={handleStartStudy}

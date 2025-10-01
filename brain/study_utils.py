@@ -5,9 +5,10 @@ from typing import Dict, Any, Optional, List, Tuple
 import asyncio
 from urllib.parse import quote
 
-from .sefaria_client import sefaria_get_text_v3_async, sefaria_get_related_links_async
-from .sefaria_index import get_book_structure, get_bookshelf_categories
-from .sefaria_utils import CompactText, _get
+from brain_service.services.sefaria_service import SefariaService
+from brain_service.services.sefaria_index_service import SefariaIndexService
+from .study_state import Bookshelf, BookshelfItem
+from .sefaria_index import get_book_structure
 from config import get_config_section
 
 import logging_utils
@@ -48,7 +49,7 @@ def _parse_ref(ref: str) -> Optional[Dict[str, Any]]:
 
 # --- Navigation & Windowing Logic ---
 
-async def _generate_and_validate_refs(base_ref: str, collection: str, direction: str, count: int) -> List[Dict[str, str]]:
+async def _generate_and_validate_refs(base_ref: str, collection: str, direction: str, count: int, sefaria_service: SefariaService, index_service: SefariaIndexService) -> List[Dict[str, str]]:
     """Generates and validates a list of previous/next references with page/chapter transitions."""
     if not base_ref:
         return []
@@ -101,7 +102,7 @@ async def _generate_and_validate_refs(base_ref: str, collection: str, direction:
             break
 
         # --- 2. Validate the candidate ---
-        text_result = await sefaria_get_text_v3_async(candidate_ref_str)
+        text_result = await sefaria_service.get_text(candidate_ref_str)
         if text_result.get("ok") and text_result.get("data"):
             generated_refs.append(text_result["data"])
         else:
@@ -133,16 +134,16 @@ def containsHebrew(text: str) -> bool:
             return True
     return False
 
-async def get_text_with_window(ref: str, window_size: int = WINDOW_SIZE) -> Optional[Dict[str, Any]]:
+async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_service: SefariaIndexService, window_size: int = WINDOW_SIZE) -> Optional[Dict[str, Any]]:
     # 1. Fetch focus segment
-    focus_result = await sefaria_get_text_v3_async(ref)
+    focus_result = await sefaria_service.get_text(ref)
     if not focus_result.get("ok") or not (focus_data := focus_result.get("data")):
         return None
 
     # 2. Fetch surrounding segments
     collection = detect_collection(ref)
-    prev_refs_task = _generate_and_validate_refs(ref, collection, "prev", window_size)
-    next_refs_task = _generate_and_validate_refs(ref, collection, "next", window_size)
+    prev_refs_task = _generate_and_validate_refs(ref, collection, "prev", window_size, sefaria_service, index_service)
+    next_refs_task = _generate_and_validate_refs(ref, collection, "next", window_size, sefaria_service, index_service)
     prev_segments, next_segments = await asyncio.gather(prev_refs_task, next_refs_task)
 
     # 3. Assemble the flat list of segments
@@ -171,6 +172,7 @@ async def get_text_with_window(ref: str, window_size: int = WINDOW_SIZE) -> Opti
         "segments": formatted_segments,
         "focusIndex": focus_index,
         "ref": ref,
+        "he_ref": focus_data.get("heRef"),
     }
 
 # --- Bookshelf Logic ---
@@ -181,25 +183,37 @@ def _get_commentator_priority(commentator: str, collection: str) -> int:
     if collection == "Bible" and commentator in ["Rashi", "Ramban", "Ibn Ezra"]: return base_priority + 20
     return base_priority
 
-async def get_bookshelf_for(ref: str, limit: int = 40, categories: Optional[List[str]] = None) -> Dict[str, Any]:
+async def get_bookshelf_for(ref: str, sefaria_service: SefariaService, index_service: SefariaIndexService, limit: int = 40, categories: Optional[List[str]] = None) -> Bookshelf:
     collection = detect_collection(ref)
     
-    # If categories aren't specified by the caller, use all categories
+    # If categories aren't specified by the caller, use a curated default list.
     if categories is None:
-        categories = [cat['name'] for cat in get_bookshelf_categories()]
+        categories = [
+            "Commentary",
+            "Talmud",
+            "Halakhah",
+            "Responsa",
+            "Mishnah",
+            "Midrash",
+            "Jewish Thought",
+            "Chasidut",
+            "Kabbalah",
+            "Modern Works",
+            "Bible",
+        ]
 
     # 1. Try the original ref
-    links_result = await sefaria_get_related_links_async(ref=ref, categories=categories, limit=limit * 2)
+    links_result = await sefaria_service.get_related_links(ref=ref, categories=categories, limit=limit * 2)
 
     # 2. If no links, try raising the level by removing the last segment
     if not links_result.get("ok") or not links_result.get("data"):
         parent_ref = ":".join(ref.split(":")[:-1])
         if parent_ref and parent_ref != ref:
             logger.info(f"No links for '{ref}', trying parent '{parent_ref}'")
-            links_result = await sefaria_get_related_links_async(ref=parent_ref, categories=categories, limit=limit * 2)
+            links_result = await sefaria_service.get_related_links(ref=parent_ref, categories=categories, limit=limit * 2)
 
     if not links_result.get("ok") or not (items := links_result.get("data")):
-        return {"counts": {}, "items": []}
+        return Bookshelf(counts={}, items=[])
 
     for item in items:
         item["score"] = _get_commentator_priority(item.get("commentator", ""), collection)
@@ -209,7 +223,7 @@ async def get_bookshelf_for(ref: str, limit: int = 40, categories: Optional[List
     preview_tasks = []
     for item in sorted_items[:20]: # Fetch full text for top 20
         async def fetch_full_text(item_ref):
-            res = await sefaria_get_text_v3_async(item_ref)
+            res = await sefaria_service.get_text(item_ref)
             if res.get("ok") and res.get("data"):
                 data = res["data"]
                 en_text = data.get("en_text") or ""
@@ -236,4 +250,15 @@ async def get_bookshelf_for(ref: str, limit: int = 40, categories: Optional[List
     for item in sorted_items:
         counts[item.get("category", "Unknown")] += 1
 
-    return {"counts": counts, "items": sorted_items[:limit]}
+    # Convert dicts to BookshelfItem objects, filtering out any that fail validation
+    valid_items = []
+    for item_dict in sorted_items[:limit]:
+        try:
+            # The preview field might be missing for items > 20, provide a default
+            if 'preview' not in item_dict:
+                item_dict['preview'] = ''
+            valid_items.append(BookshelfItem(**item_dict))
+        except Exception as e:
+            logger.warning(f"Skipping bookshelf item due to validation error: {e}. Item: {item_dict}")
+
+    return Bookshelf(counts=counts, items=valid_items)

@@ -26,11 +26,12 @@ curator = "openrouter/x-ai/grok-4-fast:free"
 summarizer = "openrouter/x-ai/grok-4-fast:free"
 translator = "openrouter/x-ai/grok-4-fast:free"
 planner = "openrouter/x-ai/grok-4-fast:free"
+study = "openrouter/x-ai/grok-4-fast:free"
 lexicon = "openrouter/nousresearch/nous-hermes-2-mixtral-8x7b-dpo"
 speechify = "openrouter/x-ai/grok-4-fast:free"
 
 [llm.parameters]
-temperature = 0.3
+temperature = 0.1
 top_p = 0.9
 
 [memory]
@@ -54,6 +55,38 @@ mask_pii = true
 char_budget = 3000
 min_recent = 6
 buffer_size = 24
+# New STM settings for brain_service
+ttl_seconds = 86400
+trigger_messages = 8
+trigger_tokens = 2000
+
+# Enhanced STM settings
+[stm]
+enabled = true
+ttl_sec = 86400
+
+[stm.trigger]
+msgs_high = 10
+msgs_low = 6
+tokens_high = 2500
+tokens_low = 1500
+cooldown_sec = 30
+
+[stm.slots]
+summary_max_items = 8
+facts_max_items = 50
+facts_hamm_thresh = 6
+open_loops_max_items = 10
+refs_max_items = 10
+
+[stm.decay]
+half_life_min = 240
+
+[stm.inject]
+top_facts = 3
+top_open_loops = 2
+top_refs = 3
+include_when_empty = false
 
 [memory.ltm]
 max_points = 6
@@ -127,6 +160,23 @@ brain_url = "http://localhost:7030"
 memory_service_url = "http://localhost:7050"
 tts_service_url = "http://localhost:7040"
 stt_service_url = "http://localhost:7020"
+
+[services.brain]
+# Brain service specific settings
+port = 7030
+admin_token = "super-secret-token"
+cors_origins = "http://localhost:5173,http://localhost:3000"
+
+[services.brain.rate_limiting]
+enabled = true
+default_limit = 10
+window_seconds = 60
+llm_limit = 5
+
+[services.brain.sefaria]
+api_url = "http://localhost:8000/api/"
+api_key = ""
+cache_ttl_seconds = 60
 
 [personalities]
 default = "default"

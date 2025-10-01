@@ -144,12 +144,12 @@ async function getBookshelfCategories(): Promise<Array<{name: string; color: str
   }
 }
 
-async function getBookshelfItems(sessionId: string, ref: string, categories: string[]): Promise<any> {
+async function getBookshelfItems(sessionId: string, ref: string, category?: string): Promise<any> {
   try {
     const response = await fetch(`${API_BASE}/study/bookshelf`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ session_id: sessionId, ref, categories }),
+      body: JSON.stringify({ session_id: sessionId, ref, categories: category ? [category] : undefined }),
     });
     if (!response.ok) {
       throw new Error('Failed to get bookshelf items');
@@ -162,55 +162,6 @@ async function getBookshelfItems(sessionId: string, ref: string, categories: str
 }
 
 
-async function translateText(hebrewText: string, englishText: string): Promise<string> {
-  try {
-    const response = await fetch(`${API_BASE}/actions/translate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ hebrew_text: hebrewText, english_text: englishText }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to translate text: ${response.statusText}`);
-    }
-    if (!response.body) {
-      return '';
-    }
-
-    const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
-    let buffer = '';
-    let fullTranslation = '';
-
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) {
-        break;
-      }
-
-      buffer += value;
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // Keep the last, possibly incomplete, line
-
-      for (const line of lines) {
-        if (line.trim() === '') continue;
-        try {
-          const event = JSON.parse(line) as StreamEvent;
-          if (event.type === 'llm_chunk' && typeof event.data === 'string') {
-            fullTranslation += event.data;
-          }
-        } catch (e) {
-          console.error('Failed to parse stream event in translateText:', line, e);
-          // If it's not valid JSON, just ignore it for now. It might be a non-event line.
-        }
-      }
-    }
-    return fullTranslation;
-
-  } catch (error) {
-    console.error('Failed to translate text:', error);
-    throw error;
-  }
-}
 
 async function explainTerm(term: string, contextText: string, handler: StreamHandler): Promise<void> {
   try {
@@ -390,7 +341,7 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
 
 async function sendStudyMessage(sessionId: string, text: string, handler: StreamHandler): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/study/chat`, {
+    const response = await fetch(`${API_BASE}/study/chat/stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -473,6 +424,5 @@ export const api = {
   getLexicon,
   getBookshelfCategories,
   getBookshelfItems,
-  translateText,
   explainTerm,
 };

@@ -32,7 +32,11 @@ const PromptEditor: React.FC = () => {
 
   const fetchPrompts = async () => {
     try {
-      const response = await fetch('/admin/prompts');
+      const response = await fetch('/admin/prompts', {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setPrompts(data);
@@ -48,7 +52,11 @@ const PromptEditor: React.FC = () => {
 
   const fetchPrompt = async (id: string) => {
     try {
-      const response = await fetch(`/admin/prompts/${id}`);
+      const response = await fetch(`/admin/prompts/${id}`, {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setSelectedPrompt(data);
@@ -71,6 +79,7 @@ const PromptEditor: React.FC = () => {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify({ text: selectedPrompt.text }),
       });

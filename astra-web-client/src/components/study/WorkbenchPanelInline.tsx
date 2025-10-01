@@ -187,8 +187,7 @@ const WorkbenchContent = memo(({
   const fullText = item.heTextFull || item.text_full || displayText;
 
   const { translatedText, isTranslating, error, translate } = useTranslation({
-    hebrewText: item.heTextFull || '',
-    englishText: item.text_full || '',
+    tref: item.ref,
   });
 
   const textToDisplay = translatedText || fullText;

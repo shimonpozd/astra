@@ -4,8 +4,7 @@ import { useState } from 'react';
 const translationCache = new Map<string, string>();
 
 interface UseTranslationProps {
-  hebrewText: string;
-  englishText: string;
+  tref: string;  // Text reference (e.g., "Genesis 1:1" or "Rashi on Genesis 1:1:1")
 }
 
 interface UseTranslationReturn {
@@ -16,7 +15,7 @@ interface UseTranslationReturn {
   revert: () => void;
 }
 
-export const useTranslation = ({ hebrewText, englishText }: UseTranslationProps): UseTranslationReturn => {
+export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationReturn => {
   const [translatedText, setTranslatedText] = useState<string | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -29,7 +28,7 @@ export const useTranslation = ({ hebrewText, englishText }: UseTranslationProps)
     }
 
     // Create cache key
-    const cacheKey = `${hebrewText}::${englishText}`;
+    const cacheKey = tref;
 
     // Check cache first
     if (translationCache.has(cacheKey)) {
@@ -47,8 +46,7 @@ export const useTranslation = ({ hebrewText, englishText }: UseTranslationProps)
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          hebrew_text: hebrewText,
-          english_text: englishText || undefined,
+          tref: tref,
         }),
       });
 
