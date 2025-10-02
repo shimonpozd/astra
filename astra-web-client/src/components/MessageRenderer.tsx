@@ -1,5 +1,6 @@
 import React from "react";
 import { Doc, DocV1 } from "../types/text";
+import { getTextDirection } from '../utils/hebrewUtils';
 
 /** 1) Декодирование HTML entities */
 function decodeHtml(input: string): string {
@@ -180,9 +181,343 @@ interface MessageRendererProps {
   doc: Doc | DocV1;
 }
 
-export function MessageRenderer({ doc }: MessageRendererProps) {
+interface StudyChatDoc {
+  // Old format
+  doc_version?: string;
+  explanation?: {
+    paragraphs: string[];
+    quotes?: Array<{
+      text: string;
+      explanation?: string;
+      source?: string;
+      context?: string;
+    }>;
+    terms?: Array<{
+      term: string;
+      definition: string;
+    }>;
+  };
+  // New format
+  doc?: {
+    version: string;
+    content: Array<{
+      type: 'paragraph' | 'quote' | 'term';
+      text?: string;
+      term?: string;
+      definition?: string;
+    }>;
+  };
+  // Direct format (current Study Chat output)
+  version?: string;
+  content?: Array<{
+    type: 'paragraph' | 'quote' | 'term';
+    text?: string;
+    term?: string;
+    definition?: string;
+  }>;
+  // Raw format (legacy Study Chat output)
+  paragraph?: string;
+  quote?: string;
+  term?: {
+    term: string;
+    definition: string;
+  };
+}
+
+function NewFormatStudyChatRenderer({ content }: { 
+  content: Array<{
+    type: 'paragraph' | 'quote' | 'term';
+    text?: string;
+    term?: string;
+    definition?: string;
+  }>;
+}) {
+  const paragraphs: string[] = [];
+  const quotes: Array<{text: string}> = [];
+  const terms: Array<{term: string; definition: string}> = [];
+
+  // Group content by type
+  content.forEach(item => {
+    switch (item.type) {
+      case 'paragraph':
+        if (item.text) paragraphs.push(item.text);
+        break;
+      case 'quote':
+        if (item.text) quotes.push({text: item.text});
+        break;
+      case 'term':
+        if (item.term && item.definition) terms.push({term: item.term, definition: item.definition});
+        break;
+    }
+  });
+
   return (
-    <div dir="auto" style={{ unicodeBidi: "plaintext" }}>
+    <div className="space-y-6">
+      {/* Main explanation paragraphs */}
+      <div className="space-y-4">
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className="leading-relaxed text-sm text-foreground" dir={getTextDirection(paragraph)}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
+      
+      {/* Quotes section */}
+      {quotes.length > 0 && (
+        <div className="mt-6">
+          <h3 className="text-sm font-semibold mb-3 text-muted-foreground flex items-center gap-2">
+            <span className="inline-block w-4 h-4 rounded-full bg-amber-500/20 flex items-center justify-center">
+              <span className="text-xs font-bold text-amber-600">"</span>
+            </span>
+            Ключевые цитаты
+          </h3>
+          <div className="space-y-4">
+            {quotes.map((quote, index) => (
+                     <div key={index} className="bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-lg p-4 border border-amber-200/30 dark:border-amber-800/30 shadow-sm force-system-font">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center mt-0.5">
+                    <span className="text-xs font-bold text-white">"</span>
+                  </div>
+                  <blockquote className="text-sm italic text-gray-700 dark:text-gray-300 leading-relaxed flex-1" dir={getTextDirection(quote.text)}>
+                    {quote.text}
+                  </blockquote>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Terms section */}
+      {terms.length > 0 && (
+        <div className="mt-6">
+          <h3 className="text-sm font-semibold mb-3 text-muted-foreground flex items-center gap-2">
+            <span className="inline-block w-4 h-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+              <span className="text-xs font-bold text-blue-600">?</span>
+            </span>
+            Ключевые термины
+          </h3>
+          <div className="space-y-3">
+            {terms.map((term, index) => (
+              <div key={index} className="term">
+                <div className="term-title" dir={getTextDirection(term.term)}>
+                  {term.term}
+                </div>
+                <div className="term-definition" dir={getTextDirection(term.definition)}>
+                  {term.definition}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function RawFormatStudyChatRenderer({ doc }: { doc: StudyChatDoc }) {
+  const paragraphs: string[] = [];
+  const quotes: string[] = [];
+  const terms: Array<{term: string; definition: string}> = [];
+
+  // Extract all paragraphs
+  Object.keys(doc).forEach(key => {
+    if (key === 'paragraph' && doc[key]) {
+      paragraphs.push(doc[key] as string);
+    }
+  });
+
+  // Extract all quotes
+  Object.keys(doc).forEach(key => {
+    if (key === 'quote' && doc[key]) {
+      quotes.push(doc[key] as string);
+    }
+  });
+
+  // Extract all terms
+  Object.keys(doc).forEach(key => {
+    if (key === 'term' && doc[key] && typeof doc[key] === 'object') {
+      const term = doc[key] as {term: string; definition: string};
+      if (term.term && term.definition) {
+        terms.push(term);
+      }
+    }
+  });
+
+  return (
+    <div className="space-y-6">
+      {/* Main explanation paragraphs */}
+      <div className="space-y-4">
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className="leading-relaxed text-sm text-foreground" dir={getTextDirection(paragraph)}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
+      
+      {/* Quotes section */}
+      {quotes.length > 0 && (
+        <div className="mt-6">
+          <h3 className="text-sm font-semibold mb-3 text-muted-foreground">Key Quotes</h3>
+          <div className="space-y-4">
+            {quotes.map((quote, index) => (
+              <div key={index} className="border-l-4 border-primary/30 pl-4 bg-muted/30 rounded-r-md p-3">
+                <blockquote className="text-sm italic text-foreground mb-3 leading-relaxed" dir={getTextDirection(quote)}>
+                  "{quote}"
+                </blockquote>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* Terms section */}
+      {terms.length > 0 && (
+        <div className="mt-6">
+          <h3 className="text-sm font-semibold mb-3 text-muted-foreground flex items-center gap-2">
+            <span className="inline-block w-4 h-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+              <span className="text-xs font-bold text-blue-600">?</span>
+            </span>
+            Ключевые термины
+          </h3>
+          <div className="space-y-3">
+            {terms.map((term, index) => (
+              <div key={index} className="term">
+                <div className="term-title" dir={getTextDirection(term.term)}>
+                  {term.term}
+                </div>
+                <div className="term-definition" dir={getTextDirection(term.definition)}>
+                  {term.definition}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function StudyChatRenderer({ doc }: { doc: StudyChatDoc }) {
+  // Handle raw format (current Study Chat output)
+  if (doc.paragraph || doc.quote || doc.term) {
+    return <RawFormatStudyChatRenderer doc={doc} />;
+  }
+
+  // Handle new format with doc.content
+  if (doc.doc && doc.doc.content) {
+    return <NewFormatStudyChatRenderer content={doc.doc.content} />;
+  }
+
+  // Handle direct format with version and content
+  if (doc.version === 'doc.v1' && doc.content) {
+    return <NewFormatStudyChatRenderer content={doc.content} />;
+  }
+
+  // Handle old format with explanation
+  if (doc.explanation) {
+    return (
+      <div dir="auto" style={{ unicodeBidi: "plaintext" }} className="space-y-6">
+        {/* Main explanation paragraphs */}
+        <div className="space-y-4">
+          {doc.explanation.paragraphs.map((paragraph, index) => (
+            <p key={index} className="leading-relaxed text-sm text-foreground">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      
+        {/* Quotes section */}
+        {doc.explanation.quotes && doc.explanation.quotes.length > 0 && (
+          <div className="mt-6">
+            <h3 className="text-sm font-semibold mb-3 text-muted-foreground flex items-center gap-2">
+              <span className="inline-block w-4 h-4 rounded-full bg-amber-500/20 flex items-center justify-center">
+                <span className="text-xs font-bold text-amber-600">"</span>
+              </span>
+              Ключевые цитаты
+            </h3>
+            <div className="space-y-4">
+              {doc.explanation.quotes.map((quote, index) => (
+                     <div key={index} className="bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-lg p-4 border border-amber-200/30 dark:border-amber-800/30 shadow-sm force-system-font">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center mt-0.5">
+                      <span className="text-xs font-bold text-white">"</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <blockquote className="text-sm italic text-gray-700 dark:text-gray-300 leading-relaxed mb-3" dir={getTextDirection(quote.text)}>
+                        {quote.text}
+                      </blockquote>
+                      {quote.source && (
+                        <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-2">
+                          — {quote.source}
+                        </p>
+                      )}
+                      {quote.context && (
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 font-medium bg-gray-100 dark:bg-gray-800 rounded px-2 py-1">
+                          Контекст: {quote.context}
+                        </p>
+                      )}
+                      {quote.explanation && (
+                        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed bg-blue-50 dark:bg-blue-950/30 rounded px-2 py-1">
+                          {quote.explanation}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        
+        {/* Terms section */}
+        {doc.explanation.terms && doc.explanation.terms.length > 0 && (
+          <div className="mt-6">
+            <h3 className="text-sm font-semibold mb-3 text-muted-foreground flex items-center gap-2">
+              <span className="inline-block w-4 h-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <span className="text-xs font-bold text-blue-600">?</span>
+              </span>
+              Ключевые термины
+            </h3>
+            <div className="space-y-3">
+              {doc.explanation.terms.map((term, index) => (
+                <div key={index} className="term">
+                  <div className="term-title">
+                    {term.term}
+                  </div>
+                  <div className="term-definition">
+                    {term.definition}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Fallback for unknown format
+  return <div>Unknown Study Chat format</div>;
+}
+
+export function MessageRenderer({ doc }: MessageRendererProps) {
+  // Debug: Log the document structure
+  console.log('🔍 MessageRenderer received doc:', doc);
+  console.log('🔍 Doc type:', typeof doc);
+  console.log('🔍 Doc keys:', Object.keys(doc));
+  
+  // Handle Study Chat format (old: doc_version + explanation, new: doc.content, direct format, raw format)
+  if (((doc as any).doc_version === 'v1' && (doc as any).explanation) ||
+      ((doc as any).doc && (doc as any).doc.version === 'v1' && (doc as any).doc.content) ||
+      ((doc as any).version === 'doc.v1' && (doc as any).content) ||
+      ((doc as any).paragraph || (doc as any).quote || (doc as any).term)) {
+    console.log('🎯 Using StudyChatRenderer for:', doc);
+    return <StudyChatRenderer doc={doc as any} />;
+  }
+
+  return (
+    <div>
       {doc.blocks.map((rawBlock, index) => {
         // Handle cases where block data is nested inside a `data` property
         const block = (rawBlock as any).data ? { ...rawBlock, ...(rawBlock as any).data } : rawBlock;
@@ -226,47 +561,71 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
           case "list":
             return block.ordered ? (
               <ol key={index}>
-                {block.items?.map((item: string, itemIndex: number) => (
-                  <li key={itemIndex}>{renderMdLite(typeof item === "string" ? item : String(item ?? ""))}</li>
-                ))}
+                {block.items?.map((item: string, itemIndex: number) => {
+                  const itemText = typeof item === "string" ? item : String(item ?? "");
+                  return (
+                    <li key={itemIndex} dir={getTextDirection(itemText)}>
+                      {renderMdLite(itemText)}
+                    </li>
+                  );
+                })}
               </ol>
             ) : (
               <ul key={index}>
-                {block.items?.map((item: string, itemIndex: number) => (
-                  <li key={itemIndex}>{renderMdLite(typeof item === "string" ? item : String(item ?? ""))}</li>
-                ))}
+                {block.items?.map((item: string, itemIndex: number) => {
+                  const itemText = typeof item === "string" ? item : String(item ?? "");
+                  return (
+                    <li key={itemIndex} dir={getTextDirection(itemText)}>
+                      {renderMdLite(itemText)}
+                    </li>
+                  );
+                })}
               </ul>
             );
 
           case "term":
-            return (
-              <div key={index} className="mb-3 term" lang="he" dir="rtl">
-                <div className="term-title text-sm opacity-70">Термин</div>
-                <div className="flex flex-wrap gap-x-1">
-                  <span className="font-semibold">{block.he || block.text || '???'}</span>
-                  {block.ru && (
-                    <span dir="ltr" lang="ru" className="opacity-80">&nbsp;— {block.ru}</span>
-                  )}
-                  {block.en && (
-                    <span dir="ltr" lang="en" className="opacity-60 text-xs">&nbsp;({block.en})</span>
-                  )}
+            console.log('🔍 Term block data:', block);
+            console.log('🔍 Available keys:', Object.keys(block));
+            console.log('🔍 Block values:', {
+              he: block.he,
+              text: block.text,
+              term: block.term,
+              ru: block.ru,
+              definition: block.definition,
+              en: block.en
+            });
+            
+            // Show empty terms for debugging - we need to see what's happening
+            const hasContent = block.he || block.text || block.term || block.ru || block.definition || block.en;
+            if (!hasContent) {
+              console.log('⚠️ Empty term block - showing for debugging');
+              return (
+                <div key={index} className="bg-red-100 border border-red-300 rounded p-2 text-red-800 text-sm">
+                  <strong>DEBUG: Empty Term Block</strong>
+                  <pre>{JSON.stringify(block, null, 2)}</pre>
                 </div>
-                {block.translit && (
-                  <div className="text-xs opacity-50 mt-1" dir="ltr">{block.translit}</div>
-                )}
-                {block.sense && (
-                  <div className="text-sm opacity-80 mt-1" dir="ltr" lang="ru">{block.sense}</div>
-                )}
-                {block.notes && (
-                  <div className="text-sm opacity-70 mt-2" dir="ltr" lang="ru">{renderMdLite(block.notes)}</div>
-                )}
+              );
+            }
+            
+            const termText = block.he || block.text || block.term || 'Термин не найден';
+            const definitionText = block.ru || block.definition || block.en || 'Определение не найдено';
+            
+            return (
+              <div key={index} className="term">
+                <div className="term-title" dir={getTextDirection(termText)}>
+                  {termText}
+                </div>
+                <div className="term-definition" dir={getTextDirection(definitionText)}>
+                  {definitionText}
+                </div>
               </div>
             );
 
           case "callout":
+            const calloutText = block.text || "";
             return (
-              <div key={index} className={calloutClass(block.variant)}>
-                {renderMdLite(block.text || "")}
+              <div key={index} className={calloutClass(block.variant)} dir={getTextDirection(calloutText)}>
+                {renderMdLite(calloutText)}
               </div>
             );
 

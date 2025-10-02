@@ -13,6 +13,10 @@ interface MessageComposerProps {
   maxRows?: number;
   autoFocus?: boolean;
   draftKey?: string; // for sessionStorage draft saving
+  
+  // Study mode props
+  studyMode?: 'iyun' | 'girsa' | null;
+  selectedPanelId?: string | null;
 }
 
 
@@ -24,6 +28,8 @@ export default function MessageComposer({
   maxRows = 4, // reduced from 6
   autoFocus = false,
   draftKey = 'composer:draft',
+  studyMode,
+  selectedPanelId,
 }: MessageComposerProps) {
   const [text, setText] = useState('');
   const [isComposing, setIsComposing] = useState(false);
@@ -53,93 +59,90 @@ export default function MessageComposer({
     return () => cancelAnimationFrame(id);
   }, [text, draftKey]);
 
-  const autoResize = useCallback(() => {
-    const el = textareaRef.current;
-    if (!el) return;
-    requestAnimationFrame(() => {
-      el.style.height = '0px';
-      const style = window.getComputedStyle(el);
-      const lineHeight = parseFloat(style.lineHeight || '24'); // explicit line-height
-      const maxH = Math.max(1, maxRows) * lineHeight;
-      const newH = Math.min(el.scrollHeight, maxH);
-      el.style.height = `${newH}px`;
-      el.style.overflow = el.scrollHeight > maxH ? 'auto' : 'hidden';
-      el.style.overflowY = el.scrollHeight > maxH ? 'auto' : 'hidden';
-    });
-  }, [maxRows]);
+  // Auto-resize textarea
+  useLayoutEffect(() => {
+    if (!textareaRef.current) return;
+    
+    const textarea = textareaRef.current;
+    textarea.style.height = 'auto';
+    
+    const lineHeight = 24; // 1.5rem * 16px
+    const minHeight = lineHeight * 1; // 1 line minimum
+    const maxHeight = lineHeight * maxRows;
+    
+    const scrollHeight = textarea.scrollHeight;
+    const newHeight = Math.min(Math.max(scrollHeight, minHeight), maxHeight);
+    
+    textarea.style.height = `${newHeight}px`;
+  }, [text, maxRows]);
 
-  // Auto-resize on text change
-  useLayoutEffect(() => { autoResize(); }, [text, autoResize]);
-
-  // Auto-resize on resize and font load
-  useEffect(() => {
-    autoResize();
-    const onResize = () => autoResize();
-    window.addEventListener('resize', onResize);
-    (document as any).fonts?.ready?.then(autoResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [autoResize]);
-
-  const send = async () => {
-    const msg = text.trim();
-    if (!msg || pending) return;
+  const send = useCallback(async () => {
+    if (!text.trim() || pending || disabled) return;
+    
+    const message = text.trim();
+    setText('');
+    setPending(true);
+    
     try {
-      setPending(true);
-      await Promise.resolve(onSendMessage(msg));
-      setText('');
+      await onSendMessage(message);
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      setText(message); // Restore message on error
     } finally {
       setPending(false);
     }
-  };
+  }, [text, pending, disabled, onSendMessage]);
 
-  const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (isComposing) return;
-    if (e.key !== 'Enter') return;
+  const onKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey && !isComposing) {
+      e.preventDefault();
+      send();
+    }
+  }, [send, isComposing]);
 
-    const withShift = e.shiftKey;
-    const withMeta = e.metaKey || e.ctrlKey;
+  const onFocus = useCallback(() => {
+    if (autoFocus && textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, [autoFocus]);
 
-    if (withMeta) { e.preventDefault(); send(); return; }
-    if (!withShift) { e.preventDefault(); send(); return; }
-    // Shift+Enter -> new line
-  };
+  const onPickFiles = useCallback(() => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  }, []);
 
-  const onFocus = () => {
-    // Mobile-friendly: scroll into view
-    setTimeout(() => {
-      textareaRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    }, 100);
-  };
+  const onFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (files.length && onAttachFiles) {
+      onAttachFiles(files);
+    }
+    // Reset input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  }, [onAttachFiles]);
 
-  const onPickFiles = () => fileInputRef.current?.click();
+  const toggleHebrewKeyboard = useCallback(() => {
+    setHebrewKeyboard(prev => !prev);
+  }, []);
 
-
-  const toggleHebrewKeyboard = () => {
-    setHebrewKeyboard(!hebrewKeyboard);
-  };
-
-  const handleHebrewKeyPress = (key: string) => {
-    if (key === 'Backspace') {
+  const insertHebrewChar = useCallback((char: string) => {
+    if (char === 'Backspace') {
       setText(prev => prev.slice(0, -1));
     } else {
-      setText(prev => prev + key);
+      setText(prev => prev + char);
     }
-  };
+    textareaRef.current?.focus();
+  }, []);
 
-  const onFilesSelected = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!onAttachFiles) return;
-    const files = Array.from(e.target.files ?? []);
-    if (files.length) onAttachFiles(files);
-    // Reset input
-    e.target.value = '';
-  };
-
-  const onDrop = (e: React.DragEvent) => {
-    if (!onAttachFiles) return;
+  const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
-    if (files.length) onAttachFiles(files);
-  };
+    const files = Array.from(e.dataTransfer.files);
+    if (files.length && onAttachFiles) {
+      onAttachFiles(files);
+    }
+  }, [onAttachFiles]);
 
   const onPaste = (e: React.ClipboardEvent) => {
     if (!onAttachFiles) return;
@@ -155,10 +158,10 @@ export default function MessageComposer({
   };
 
   return (
-    <div className="px-6 py-4">
+    <div className="panel-padding-lg panel-inner">
       <div className="max-w-4xl mx-auto">
         <div
-          className="relative bg-card border border-border rounded-2xl shadow-sm"
+          className="relative panel-card rounded-2xl shadow-sm"
           onDrop={onDrop}
           onDragOver={(e) => e.preventDefault()}
         >
@@ -178,34 +181,58 @@ export default function MessageComposer({
                 : 'Введите сообщение…'
             }
             disabled={disabled}
-            className="min-h-12 max-h-40 px-4 py-3 border-0 bg-transparent resize-none focus:ring-0 focus-visible:ring-0 focus:border-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
+            className="composer-textarea min-h-12 max-h-40 px-4 py-3 border-0 bg-transparent resize-none text-foreground placeholder:text-muted-foreground"
             style={{ lineHeight: '1.5' }}
           />
 
-          <div className="px-4 pb-3 flex gap-2">
-            <Button
-              size="icon"
-              variant="ghost"
-              className="w-8 h-8 rounded-lg hover:bg-muted/60 text-muted-foreground hover:text-foreground"
-              disabled={disabled}
-              onClick={onPickFiles}
-              title="Прикрепить файлы"
-              aria-label="Прикрепить файлы"
+          <div className="px-4 pb-3 flex items-center justify-between">
+            <div className="flex gap-compact">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="w-8 h-8 rounded-lg hover:bg-muted/60 text-muted-foreground hover:text-foreground"
+                disabled={disabled}
+                onClick={onPickFiles}
+                title="Прикрепить файлы"
+                aria-label="Прикрепить файлы"
             >
               <Paperclip className="h-4 w-4" />
             </Button>
 
-            <Button
-              size="icon"
-              variant={hebrewKeyboard ? "default" : "ghost"}
-              className="w-8 h-8 rounded-lg hover:bg-muted/60 text-muted-foreground hover:text-foreground"
-              disabled={disabled}
-              onClick={toggleHebrewKeyboard}
-              title="Ивритская клавиатура"
-              aria-label="Переключить ивритскую клавиатуру"
-            >
-              <Keyboard className="h-4 w-4" />
-            </Button>
+              <Button
+                size="icon"
+                variant={hebrewKeyboard ? "default" : "ghost"}
+                className="w-8 h-8 rounded-lg hover:bg-muted/60 text-muted-foreground hover:text-foreground"
+                disabled={disabled}
+                onClick={toggleHebrewKeyboard}
+                title="Ивритская клавиатура"
+                aria-label="Переключить ивритскую клавиатуру"
+              >
+                <Keyboard className="h-4 w-4" />
+              </Button>
+            </div>
+            
+            {/* Study Mode Indicator - positioned to avoid send button */}
+            {studyMode && (
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mr-12">
+                <div className={`w-2 h-2 rounded-full ${
+                  studyMode === 'iyun' ? 'bg-blue-500' : 'bg-green-500'
+                }`} />
+                <span className="font-medium">
+                  {studyMode === 'iyun' ? 'Иун' : 'Гирса'}
+                </span>
+                {selectedPanelId && (
+                  <span className="text-xs opacity-70">
+                    · {
+                      selectedPanelId === 'focus' ? 'Фокус' :
+                      selectedPanelId === 'left_workbench' ? 'Левая' :
+                      selectedPanelId === 'right_workbench' ? 'Правая' : selectedPanelId
+                    }
+                  </span>
+                )}
+              </div>
+            )}
+            
           </div>
 
           <Button
@@ -222,21 +249,30 @@ export default function MessageComposer({
               <Send className="h-4 w-4" />
             )}
           </Button>
+
+          {/* Hidden file input */}
+          <input
+            ref={fileInputRef}
+            type="file"
+            multiple
+            className="hidden"
+            onChange={onFileChange}
+          />
         </div>
 
-        {/* Hebrew Keyboard */}
+        {/* Hebrew keyboard */}
         {hebrewKeyboard && (
-          <div className="mt-2 p-3 bg-card border border-border rounded-lg">
+          <div className="mt-4 p-4 bg-card border rounded-lg shadow-sm">
             <div className="space-y-2">
               {hebrewKeys.map((row, rowIndex) => (
                 <div key={rowIndex} className="flex gap-1 justify-center">
                   {row.map((key) => (
                     <Button
                       key={key}
-                      size="sm"
                       variant="outline"
-                      className="min-w-[2rem] h-8 px-2 text-sm font-medium"
-                      onClick={() => handleHebrewKeyPress(key)}
+                      size="sm"
+                      className="min-w-8 h-8 p-0 text-sm"
+                      onClick={() => insertHebrewChar(key)}
                       disabled={disabled}
                     >
                       {key === 'Backspace' ? '⌫' : key}
@@ -247,17 +283,7 @@ export default function MessageComposer({
             </div>
           </div>
         )}
-
-        {/* Hidden file input */}
-        <input
-          ref={fileInputRef}
-          type="file"
-          multiple
-          className="hidden"
-          onChange={onFilesSelected}
-        />
       </div>
     </div>
   );
 }
-

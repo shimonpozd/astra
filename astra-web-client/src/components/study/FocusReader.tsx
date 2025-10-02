@@ -208,7 +208,7 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
     <section
       ref={ref}
       className={`
-        transition-all duration-500 ease-in-out cursor-pointer relative
+        transition-all duration-500 ease-in-out cursor-pointer relative select-text
         ${translatedText ? baseTextSize : focusTextSize}
         ${isFocus
           ? 'opacity-100 my-4 px-4 py-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border-l-4 border-primary shadow-sm'

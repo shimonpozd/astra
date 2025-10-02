@@ -52,7 +52,11 @@ const PersonalityEdit: React.FC = () => {
 
   const fetchPersonality = async (personalityId: string) => {
     try {
-      const response = await fetch(`/admin/personalities/${personalityId}`);
+      const response = await fetch(`/admin/personalities/${personalityId}`, {
+        headers: {
+          'X-Admin-Token': 'super-secret-token'
+        }
+      });
       if (response.ok) {
         const data = await response.json();
         setFormData(data);
@@ -77,6 +81,7 @@ const PersonalityEdit: React.FC = () => {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify(formData),
       });

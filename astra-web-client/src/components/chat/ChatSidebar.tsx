@@ -22,9 +22,9 @@ export default function ChatSidebar({
   onDeleteSession,
 }: ChatSidebarProps) {
   return (
-    <aside className="border-r bg-card/50 backdrop-blur-sm flex flex-col min-h-0 w-80">
+    <aside className="border-r panel-outer flex flex-col min-h-0 w-80">
       {/* Header */}
-      <div className="p-4 border-b border-border/50">
+      <div className="panel-padding border-b border-border/50">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold">Chats</h2>
           <Button size="icon" variant="ghost" onClick={onCreateChat}>
@@ -34,7 +34,7 @@ export default function ChatSidebar({
       </div>
 
       {/* Chat List */}
-      <div className="flex-1 min-h-0 p-2">
+      <div className="flex-1 min-h-0 panel-padding-sm">
         {isLoading && (
           <div className="text-muted-foreground text-sm p-2">Loading chats...</div>
         )}
@@ -44,7 +44,7 @@ export default function ChatSidebar({
         )}
 
         {!isLoading && !error && (
-          <div className="flex flex-col gap-1 overflow-y-auto">
+          <div className="flex flex-col gap-compact overflow-y-auto">
             {chats.length === 0 ? (
               <p className="text-muted-foreground text-sm p-2">No chats found.</p>
             ) : (

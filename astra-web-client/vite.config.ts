@@ -9,20 +9,15 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:7030',
+        target: 'http://localhost:8001',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
       },
       '/admin': {
-        target: 'http://localhost:7030',
+        target: 'http://localhost:8001',
         changeOrigin: true,
         secure: false,
-      },
-      '/actions': {
-        target: 'http://localhost:7030',
-        changeOrigin: true,
-        secure: false,
+        rewrite: (path) => path.replace(/^\/admin/, '/api/admin')
       }
     }
   }

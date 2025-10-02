@@ -389,7 +389,7 @@ const BookshelfPanel = memo(({
     return (
       <div
         key={group.key}
-        className="p-3 rounded-lg border bg-card cursor-move hover:bg-accent/5 transition-colors"
+        className="p-3 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors"
         style={{ borderColor: group.color, borderWidth: '2px' }}
         draggable
         onDragStart={(e) => {
@@ -466,7 +466,7 @@ const BookshelfPanel = memo(({
       <div key={group.key} className="space-y-1">
         {/* Group header - compact "series line" */}
         <div
-          className="p-2 rounded-lg border bg-card cursor-move hover:bg-accent/5 transition-colors"
+          className="p-2 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors"
           style={{ borderColor: group.color, borderWidth: '2px' }}
           draggable
           onDragStart={(e) => {
@@ -507,7 +507,7 @@ const BookshelfPanel = memo(({
             return (
               <div
                 key={`${item.ref}__${idx}`}
-                className="flex items-start gap-2 p-2 rounded border bg-card/50 border-border hover:bg-accent/10 transition-colors cursor-move"
+                className="flex items-start gap-2 p-2 rounded border panel-card hover:bg-accent/10 transition-colors cursor-move"
                 draggable
                 onDragStart={(e) => {
                   e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
@@ -558,7 +558,7 @@ const BookshelfPanel = memo(({
     return (
       <div
         key={`${item.ref}__${idx ?? 0}`}
-        className="flex items-start gap-2 p-3 rounded-lg border bg-card border-border hover:bg-accent/10 transition-colors cursor-move"
+        className="flex items-start gap-2 p-3 rounded-lg border panel-card hover:bg-accent/10 transition-colors cursor-move"
         draggable
         onDragStart={(e) => {
           e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
@@ -602,7 +602,7 @@ const BookshelfPanel = memo(({
   }
 
   return (
-    <div className="h-full flex flex-col bg-card/50">
+    <div className="h-full flex flex-col panel-outer">
       {/* Header */}
       <div className="flex-shrink-0 p-4 border-b">
         <h3 className="text-lg font-semibold mb-3">Sources</h3>

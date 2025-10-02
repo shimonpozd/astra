@@ -12,7 +12,7 @@ interface StudyToolbarProps {
 
 export default function StudyToolbar({ onBack, onForward, onExit, isLoading, canBack, canForward }: StudyToolbarProps) {
   return (
-    <div className="flex items-center gap-2 px-4 py-2 border-b bg-card/60 flex-shrink-0">
+    <div className="flex items-center gap-compact panel-padding-sm border-b panel-outer flex-shrink-0">
       <Button size="icon" variant="ghost" onClick={onBack} disabled={isLoading || !canBack}>
         <ArrowLeft className="w-4 h-4" />
       </Button>

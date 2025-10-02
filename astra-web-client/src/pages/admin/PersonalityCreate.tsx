@@ -49,6 +49,7 @@ const PersonalityCreate: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-Admin-Token': 'super-secret-token'
         },
         body: JSON.stringify(formData),
       });

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { StudySnapshot } from '../../types/study';
 import { ContinuousText } from '../../types/text';
 import FocusReader from './FocusReader';
@@ -7,6 +7,7 @@ import ChatViewport from '../chat/ChatViewport';
 import MessageComposer from '../chat/MessageComposer';
 import WorkbenchPanelInline from './WorkbenchPanelInline';
 import { api } from '../../services/api';
+import { useLexiconStore } from '../../store/lexiconStore';
 import { Message } from '../../services/api';
 
 interface StudyModeProps {
@@ -23,13 +24,17 @@ interface StudyModeProps {
   studySessionId: string | null;
   setIsSending: (sending: boolean) => void;
   setMessages: React.Dispatch<React.SetStateAction<any[]>>;
+  agentId: string;
   onWorkbenchSet: (side: 'left' | 'right', ref: string) => void;
   onWorkbenchFocus: (side: 'left' | 'right') => void;
   onWorkbenchDrop?: (side: 'left' | 'right', ref: string) => void;
   onFocusClick?: () => void;
   onNavigateToRef?: (ref: string) => void;
-  onLexiconLookup?: (word: string, entries: any[]) => void;
+  // onLexiconLookup removed - now using global lexicon store
   refreshStudySnapshot: () => void;
+  // Panel selection props
+  selectedPanelId?: string | null;
+  onSelectedPanelChange?: (panelId: string | null) => void;
 }
 
 export default function StudyMode({
@@ -46,43 +51,79 @@ export default function StudyMode({
   studySessionId,
   setIsSending,
   setMessages,
+  agentId,
   onWorkbenchSet,
   onWorkbenchFocus,
   onWorkbenchDrop,
   onFocusClick,
   onNavigateToRef,
-  onLexiconLookup,
+  // onLexiconLookup removed
   refreshStudySnapshot,
+  selectedPanelId: propSelectedPanelId,
+  onSelectedPanelChange,
 }: StudyModeProps) {
-  // Lexicon state
-  const [lexWord, setLexWord] = useState<string | null>(null);
-  const [lexEntries, setLexEntries] = useState<any[] | null>(null);
-  const [lexError, setLexError] = useState<string | null>(null);
+  // Use props if provided, otherwise fall back to local state
+  const [localSelectedPanelId, setLocalSelectedPanelId] = useState<string | null>(null);
+  const selectedPanelId = propSelectedPanelId !== undefined ? propSelectedPanelId : localSelectedPanelId;
+  const setSelectedPanelId = onSelectedPanelChange || setLocalSelectedPanelId;
+  
+  // New lexicon system using global store
+  const { setSelection, fetchExplanation } = useLexiconStore();
 
-  // Lexicon double-click handler
+  // Panel selection handlers
+  const handlePanelClick = (panelId: string) => {
+    if (selectedPanelId === panelId) {
+      // Deselect if clicking the same panel
+      setSelectedPanelId(null);
+    } else {
+      // Select the clicked panel
+      setSelectedPanelId(panelId);
+    }
+  };
+
+  // Get current study mode
+  const studyMode = selectedPanelId ? 'iyun' : 'girsa';
+
+  // New lexicon double-click handler using global store
   const handleLexiconDoubleClick = async () => {
     const selected = (window.getSelection()?.toString() || '').trim();
     if (!selected) return;
 
-    const query = selected
+    // Clean up the selected text
+    const cleanText = selected
       .replace(/[֑-ׇ]/g, '') // Remove Hebrew punctuation
       .replace(/["'""().,!?;:\-\[\]{}]/g, '') // Remove general punctuation
       .trim();
 
-    if (!query) return;
+    if (!cleanText) return;
 
-    setLexWord(selected);
-    setLexError(null);
-    setLexEntries(null);
-
-    try {
-      const entries = await api.getLexicon(query);
-      setLexEntries(Array.isArray(entries) ? entries : []);
-      onLexiconLookup?.(selected, Array.isArray(entries) ? entries : []);
-    } catch (err: any) {
-      setLexError(err?.message || 'Не удалось получить определение');
-    }
+    // Use the new lexicon system
+    setSelection(cleanText, null);
+    await fetchExplanation();
   };
+
+  // Listen for lexicon lookup events from Workbench
+  useEffect(() => {
+    const handleLexiconLookup = (event: CustomEvent) => {
+      const text = event.detail?.text;
+      if (text) {
+        const cleanText = text
+          .replace(/[֑-ׇ]/g, '') // Remove Hebrew punctuation
+          .replace(/["'""().,!?;:\-\[\]{}]/g, '') // Remove general punctuation
+          .trim();
+        
+        if (cleanText) {
+          setSelection(cleanText, null);
+          fetchExplanation();
+        }
+      }
+    };
+
+    window.addEventListener('lexicon-lookup', handleLexiconLookup as EventListener);
+    return () => {
+      window.removeEventListener('lexicon-lookup', handleLexiconLookup as EventListener);
+    };
+  }, [setSelection, fetchExplanation]);
   // Конвертация snapshot в continuousText для нового FocusReader
   const continuousText: ContinuousText | null = snapshot ? {
     segments: snapshot.segments,
@@ -93,7 +134,7 @@ export default function StudyMode({
   } : null;
 
   return (
-    <div className="flex flex-col h-full bg-muted/20">
+    <div className="flex flex-col h-full panel-inner">
       <StudyToolbar
         onBack={onNavigateBack}
         onForward={onNavigateForward}
@@ -104,25 +145,33 @@ export default function StudyMode({
       />
       <div className="flex-1 min-h-0 flex flex-col">
         {/* Upper flexible height - Workbench and Focus */}
-        <div className="flex-1 min-h-0 p-4">
-          <div className="h-full grid grid-cols-[300px_1fr_300px] gap-4 min-h-0">
+        <div className="flex-1 min-h-0 panel-padding">
+          <div className="h-full grid grid-cols-[300px_1fr_300px] gap-spacious min-h-0">
             {/* Left Workbench */}
             <div className="min-h-0">
               <WorkbenchPanelInline
                 title="Левая панель"
                 item={snapshot?.workbench?.left || null}
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.left?.ref}
+                selected={selectedPanelId === 'left_workbench'}
                 onDropRef={(ref: string) => onWorkbenchDrop ? onWorkbenchDrop('left', ref) : onWorkbenchSet('left', ref)}
-                onClick={() => onWorkbenchFocus('left')}
+                onClick={() => {
+                  handlePanelClick('left_workbench');
+                  onWorkbenchFocus('left');
+                }}
               />
             </div>
 
             {/* Focus Reader */}
             <div
-              className={`bg-card/60 rounded-lg border overflow-hidden transition-colors min-h-0 cursor-pointer ${
-                snapshot?.discussion_focus_ref === snapshot?.ref ? 'ring-2 ring-primary' : ''
+              className={`bg-card/60 rounded-lg border overflow-hidden transition-all min-h-0 cursor-pointer ${
+                selectedPanelId === 'focus' ? 'focus-reader-selected' : 
+                snapshot?.discussion_focus_ref === snapshot?.ref ? 'focus-reader-active' : ''
               }`}
-              onClick={() => onFocusClick && onFocusClick()}
+              onClick={() => {
+                handlePanelClick('focus');
+                onFocusClick && onFocusClick();
+              }}
             >
               <FocusReader
                 continuousText={continuousText}
@@ -138,8 +187,12 @@ export default function StudyMode({
                 title="Правая панель"
                 item={snapshot?.workbench?.right || null}
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.right?.ref}
+                selected={selectedPanelId === 'right_workbench'}
                 onDropRef={(ref: string) => onWorkbenchDrop ? onWorkbenchDrop('right', ref) : onWorkbenchSet('right', ref)}
-                onClick={() => onWorkbenchFocus('right')}
+                onClick={() => {
+                  handlePanelClick('right_workbench');
+                  onWorkbenchFocus('right');
+                }}
               />
             </div>
           </div>
@@ -147,10 +200,10 @@ export default function StudyMode({
 
         {/* Lower fixed height - Chat */}
         <div className="h-[700px] min-h-0 flex flex-col border-t border-border/20">
-          <div className="flex-1 min-h-0 overflow-y-auto px-4 py-2">
+          <div className="flex-1 min-h-0 overflow-y-auto panel-padding-sm">
             <ChatViewport messages={messages.map(m => ({ ...m, id: String(m.id) }))} isLoading={isLoadingMessages} />
           </div>
-          <div className="flex-shrink-0 px-4 pb-4">
+          <div className="flex-shrink-0 panel-padding">
             <MessageComposer
               onSendMessage={async (message) => {
                 if (!studySessionId) return;
@@ -206,53 +259,18 @@ export default function StudyMode({
                     );
                     setIsSending(false);
                   },
-                });
+                }, agentId, selectedPanelId);
               }}
               disabled={isSending}
-              discussionFocusRef={snapshot?.discussion_focus_ref}
-            />
+                discussionFocusRef={snapshot?.discussion_focus_ref}
+                studyMode={studyMode}
+                selectedPanelId={selectedPanelId}
+              />
           </div>
         </div>
       </div>
 
-      {/* Lexicon Modal */}
-      {lexWord && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-background/50" onClick={() => { setLexWord(null); setLexEntries(null); setLexError(null); }}></div>
-          <div className="relative z-10 w-full max-w-xl bg-card border rounded-lg shadow-xl p-4">
-            <div className="flex items-center justify-between mb-2">
-              <div className="text-lg font-semibold">{lexWord}</div>
-              <button className="text-sm px-2 py-1 border rounded" onClick={() => { setLexWord(null); setLexEntries(null); setLexError(null); }}>Закрыть</button>
-            </div>
-            {lexError && <div className="text-red-500 text-sm">{lexError}</div>}
-            {!lexError && !lexEntries && (
-              <div className="text-sm text-muted-foreground">Загрузка…</div>
-            )}
-            {!lexError && lexEntries && lexEntries.length === 0 && (
-              <div className="text-sm text-muted-foreground">Определение не найдено</div>
-            )}
-            {!lexError && Array.isArray(lexEntries) && lexEntries.length > 0 && (
-              <div className="space-y-3 max-h-[50vh] overflow-auto pr-2">
-                {lexEntries.map((entry: any, idx: number) => {
-                  const title = entry?.headword || entry?.word || lexWord;
-                  const sense = entry?.content?.senses?.[0]?.definition || entry?.definition || '';
-                  const rendered = typeof sense === 'string' ? sense : JSON.stringify(sense);
-
-                  return (
-                    <div key={idx} className="border rounded p-3 bg-card/60 space-y-2">
-                      <div className="text-sm font-medium">{title}</div>
-                      <div
-                        className="text-sm leading-relaxed text-muted-foreground [&_i]:italic [&_b]:font-semibold [&_a]:underline"
-                        dangerouslySetInnerHTML={{ __html: rendered }}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      {/* Lexicon Modal removed - now using global LexiconPanel */}
     </div>
   );
 }

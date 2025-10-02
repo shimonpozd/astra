@@ -19,8 +19,8 @@ export default function StudySetupBar({ onStartStudy, onCancel, isLoading }: Stu
   };
 
   return (
-    <div className="px-4 py-2 border-b bg-card/70 flex-shrink-0">
-      <form onSubmit={handleSubmit} className="flex gap-2 items-center">
+    <div className="panel-padding-sm border-b panel-outer flex-shrink-0">
+      <form onSubmit={handleSubmit} className="flex gap-compact items-center">
         <Input
           placeholder="Введите ссылку (например, Shabbat 21a)"
           value={textRef}

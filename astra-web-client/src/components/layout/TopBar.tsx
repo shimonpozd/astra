@@ -26,8 +26,8 @@ const TopBar: React.FC<TopBarProps> = ({
   const navigate = useNavigate();
 
   return (
-    <div className="h-16 border-b border-border/50 bg-background/80 backdrop-blur-sm flex items-center justify-between px-6 flex-shrink-0">
-      <div className="flex items-center gap-3">
+    <div className="h-16 border-b panel-outer panel-padding-lg flex items-center justify-between flex-shrink-0">
+      <div className="flex items-center gap-standard">
         {onToggleSidebar && (
             <button
               onClick={onToggleSidebar}
@@ -52,7 +52,7 @@ const TopBar: React.FC<TopBarProps> = ({
         )}
         <h1 className="font-semibold">Astra</h1>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-compact">
         {onOpenStudy && (
             <button
               onClick={() => {

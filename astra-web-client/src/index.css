@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@100..900&display=swap');
 @import './styles/claude.css';
 
-
 /* Custom Hebrew font - Mugrabi Regular */
 @font-face {
   font-family: 'Mugrabi';
@@ -16,333 +15,132 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* Контейнер для ВСЕГО doc.v1 */
-  .doc {
-    @apply mx-auto max-w-[85ch] text-[15.5px] leading-7 antialiased;
-  }
-
-  /* Цвета (подтягиваются из вашей темы) */
-  :root {
-    --doc-fg: var(--foreground, #c2c0b6);
-    --doc-dim: color-mix(in oklab, var(--doc-fg) 80%, black);
-    --doc-accent: #c8e3ff;
-    --doc-muted: color-mix(in oklab, var(--doc-fg) 60%, black);
-    --doc-border: color-mix(in oklab, var(--doc-fg) 18%, black);
-    --doc-code-bg: color-mix(in oklab, var(--doc-fg) 7%, black);
-    --doc-quote-bg: color-mix(in oklab, var(--doc-fg) 4%, black);
-    --doc-hr: color-mix(in oklab, var(--doc-fg) 12%, black);
-    --doc-link: #9fd1ff;
-    --doc-link-hover: #cfe8ff;
-  }
-
-  /* Базовый вертикальный ритм */
-  .doc p,
-  .doc ul,
-  .doc ol,
-  .doc blockquote,
-  .doc pre,
-  .doc table,
-  .doc hr {
-    @apply mb-4;
-  }
-
-  /* Абзац */
-  .doc p {
-    @apply selection:bg-white/20;
-  }
-
-  /* Ссылки */
-  .doc a {
-    color: var(--doc-link);
-    text-decoration: none;
-    border-bottom: 1px dashed color-mix(in oklab, var(--doc-link) 50%, transparent);
-  }
-  .doc a:hover {
-    color: var(--doc-link-hover);
-    border-bottom-style: solid;
-  }
-
-  /* Жирный/курсив/код-inline */
-  .doc strong { @apply font-semibold; }
-  .doc em { @apply italic; }
-  .doc code {
-    @apply text-[0.95em] px-1 py-0.5 rounded;
-  }
-
-  /* Многострочный код */
-  .doc pre {
-    @apply rounded-xl p-4 overflow-auto;
-    border: 1px solid var(--doc-border);
-  }
-  .doc pre code { @apply p-0 bg-transparent; }
-
-  /* Цитаты */
-  .doc blockquote {
-    @apply rounded-xl p-3 ps-4 pe-4;
-    border-left: 3px solid var(--doc-border);
-    color: var(--doc-dim);
-  }
-
-  /* Списки */
-  .doc ul { @apply list-disc ms-6; }
-  .doc ol { @apply list-decimal ms-6; }
-  .doc li { @apply mb-1; }
-  .doc li > ul, .doc li > ol { @apply mt-1 mb-0; }
-
-  /* Горизонтальная линия */
-  .doc hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--doc-hr), transparent);
-    @apply my-6;
-  }
-
-  /* Таблицы */
-  .doc table { @apply w-full border-collapse text-[15px]; }
-  .doc th, .doc td {
-    @apply border border-[var(--doc-border)] px-3 py-2 align-top;
-  }
-  .doc th { @apply font-medium; }
-
-  /* Термины (если используете block:"term") */
-  .doc .term {
-    @apply rounded-xl p-3 border border-[var(--doc-border)];
-  }
-  .doc .term .term-title {
-    @apply text-sm uppercase tracking-wide text-[var(--doc-muted)] mb-2;
-  }
-
-  /* Изображения и figure */
-  .doc figure { @apply my-4; }
-  .doc img { @apply rounded-xl border border-[var(--doc-border)] mx-auto; }
-  .doc figcaption { @apply text-sm text-[var(--doc-muted)] mt-2 text-center; }
-
-  /* Поддержка RTL и иврита */
-  .doc[dir="rtl"],
-  .doc :where([dir="rtl"], [lang="he"], [lang="he-IL"], [lang="ar"]) {
-    direction: rtl;
-    text-align: start;
-  }
-  .doc :where([lang="he"], [lang="he-IL"]) {
-    /* если есть Noto Rashi Hebrew/Mugrabi — используйте */
-    font-family: "Noto Rashi Hebrew", "Mugrabi", "Noto Sans Hebrew", ui-serif, Georgia, serif;
-    /* делаем немного крупнее для читабельности */
-    font-size: 16.25px;
-    line-height: 1.85;
-  }
-
-  /* Маленькие элементы UI внутри текста */
-  .doc kbd {
-    @apply text-[0.85em] px-1.5 py-0.5 rounded border;
-    border-color: var(--doc-border);
-  }
-}
+/* =============================================================================
+   ЦВЕТОВАЯ СИСТЕМА - единая тёплая тема для светлого и тёмного режимов
+   ============================================================================= */
 
 @layer base {
   :root {
-    /* 📖 Оптимальная светлая тема (дневное чтение) */
-    --background: 45 25% 95%;     /* #f5f2e9 - светлый, тёплый, бумажный тон */
-    --foreground: 30 8% 18%;      /* #2f2d2a - тёмно-серый с лёгкой теплотой */
-    
-    /* Поверхности */
-    --card: 45 25% 97%;           /* #f8f5f0 - слегка светлее фона */
-    --card-foreground: 30 8% 18%; /* #2f2d2a - тот же теплый текст */
-    --popover: 45 25% 97%;        /* #f8f5f0 */
-    --popover-foreground: 30 8% 18%; /* #2f2d2a */
-    
-    /* Акцент/праймари - теплый золотисто-янтарный */
-    --primary: 30 70% 65%;        /* #e0a96d - мягкий золотисто-янтарный */
-    --primary-foreground: 0 0% 100%; /* #ffffff */
-    --accent: 45 20% 92%;         /* #f0ebe2 - мягкий кремовый */
-    --accent-foreground: 30 8% 18%; /* #2f2d2a */
-    
-    /* Вторичные/мьют */
-    --secondary: 45 20% 92%;      /* #f0ebe2 - мягкий кремовый */
-    --secondary-foreground: 30 8% 18%; /* #2f2d2a */
-    --muted: 45 20% 92%;          /* #f0ebe2 */
-    --muted-foreground: 30 8% 35%; /* #5a5754 - приглушенный теплый серый */
-    
-    /* Границы и инпуты */
-    --border: 45 15% 85%;         /* #ddd4c7 - мягкая теплая граница */
-    --input: 45 20% 92%;          /* #f0ebe2 */
-    
-    /* Состояния */
-    --destructive: 0 70% 50%;     /* #d97b5a - терракотовый */
-    --destructive-foreground: 0 0% 100%; /* #ffffff */
-    --success: 120 40% 45%;       /* #5a8a5a - теплый зеленый */
-    --warning: 30 70% 65%;        /* #e0a96d - золотисто-янтарный */
-    --info: 30 70% 65%;           /* #e0a96d - тот же теплый цвет */
-    
-    /* Прочее */
-    --ring: 30 70% 65%;           /* #e0a96d */
-    --radius: 12px;
+    /* 📖 Тёплая светлая тема для чтения */
+    --background: 42 33% 95%;      /* #f8f5ec — бумажный фон */
+    --foreground: 30 20% 20%;      /* #3b322d — мягкий тёмно-коричневый текст */
+    --card: 42 33% 96%;            /* #faf7ee — карточки чуть светлее */
+    --card-foreground: 30 20% 20%; /* #3b322d — текст на карточках */
+    --popover: 42 33% 95%;         /* #f8f5ec — как основной фон */
+    --popover-foreground: 30 20% 20%; /* #3b322d — текст в поповерах */
+    --primary: 210 40% 55%;        /* #5b8bb5 — приглушенный синий */
+    --primary-foreground: 42 33% 95%; /* #f8f5ec — светлый текст на синем */
+    --secondary: 42 20% 88%;       /* #e8e2d6 — нейтральный бежевый */
+    --secondary-foreground: 30 20% 20%; /* #3b322d — тёмный текст на бежевом */
+    --muted: 42 20% 92%;           /* #ede8dc — приглушенный фон */
+    --muted-foreground: 30 10% 40%; /* #5c5248 — приглушенный текст */
+    --accent: 42 20% 88%;          /* #e8e2d6 — акцентный цвет */
+    --accent-foreground: 30 20% 20%; /* #3b322d — текст на акценте */
+    --destructive: 0 65% 55%;      /* #c55555 — красный для ошибок */
+    --destructive-foreground: 42 33% 95%; /* #f8f5ec — светлый текст на красном */
+    --border: 30 15% 80%;          /* #d1c7b8 — мягкие границы */
+    --input: 30 15% 80%;           /* #d1c7b8 — поля ввода */
+    --ring: 30 20% 30%;            /* #4d4138 — фокус-кольцо */
+    --radius: 0.5rem;              /* Радиус скругления */
   }
 
   .dark {
-    /* 🌙 Теплая темная тема (ночное чтение) */
-    --background: 30 8% 12%;      /* #1e1b18 - тёплый тёмный кофе */
-    --foreground: 45 15% 85%;     /* #d8cfc4 - тёплый бежевый */
-    
-    /* Поверхности */
-    --card: 30 8% 12%;            /* #1e1b18 */
-    --card-foreground: 45 15% 85%; /* #d8cfc4 */
-    --popover: 30 8% 12%;         /* #1e1b18 */
-    --popover-foreground: 45 15% 85%; /* #d8cfc4 */
-    
-    /* Акцент/праймари */
-    --primary: 30 70% 65%;        /* #e0a96d - тот же золотисто-янтарный */
-    --primary-foreground: 30 8% 12%; /* #1e1b18 */
-    --accent: 30 6% 18%;          /* #2a2623 - темно-шоколадный */
-    --accent-foreground: 45 15% 85%; /* #d8cfc4 */
-    
-    /* Вторичные/мьют */
-    --secondary: 30 6% 18%;       /* #2a2623 */
-    --secondary-foreground: 45 15% 85%; /* #d8cfc4 */
-    --muted: 30 6% 18%;           /* #2a2623 */
-    --muted-foreground: 45 10% 70%; /* #c9c2b8 - старый пергамент */
-    
-    /* Границы и инпуты */
-    --border: 30 6% 18%;          /* #2a2623 */
-    --input: 30 6% 18%;           /* #2a2623 */
-    
-    /* Состояния */
-    --destructive: 0 70% 50%;     /* #d97b5a - терракотовый */
-    --destructive-foreground: 0 0% 100%; /* #ffffff */
-    --success: 120 40% 45%;       /* #5a8a5a - теплый зеленый */
-    --warning: 30 70% 65%;        /* #e0a96d - золотисто-янтарный */
-    --info: 30 70% 65%;           /* #e0a96d */
-    
-    /* Прочее */
-    --ring: 30 70% 65%;           /* #e0a96d */
-    --radius: 12px;
-  }
-}
+    /* 🌙 Тёплая тёмная тема для чтения */
+ --background: 28 16% 15%;          /* #1F1A17 – глубокий кофе */
+    --foreground: 42 28% 90%;          /* #ECE6DA – кремовый текст */
 
-@layer base {
+    --card: 28 14% 14%;
+    --card-foreground: var(--foreground);
+    --popover: 28 16% 12%;
+    --popover-foreground: var(--foreground);
+
+    --primary: 42 40% 60%;             /* #D4B259 – золото светлее на тёмном */
+    --primary-foreground: 28 16% 12%;
+
+    --secondary: 28 12% 22%;
+    --secondary-foreground: var(--foreground);
+
+    --muted: 28 10% 20%;
+    --muted-foreground: 42 18% 72%;
+
+    --accent: 42 38% 58%;              /* #CDAF57 – тёплый золотой акцент */
+    --accent-foreground: 28 16% 12%;
+
+    --destructive: 3 60% 62%;
+    --destructive-foreground: var(--foreground);
+
+    --border: 28 12% 26%;
+    --input: var(--border);
+    --ring: 42 32% 86%;
+  }
+
+  /* Базовые глобальные стили (только необходимые) */
   * {
     @apply border-border;
   }
 
-  html, body, #root {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html,
+  body {
     height: 100%;
-    overflow: hidden;
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: -0.01em;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Hebrew text helper */
-  .hebrew-text {
-    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
-    direction: rtl;
-    text-align: justify;
-    letter-spacing: 0.01em;
-    word-spacing: 0.1em;
-  }
-  .hebrew-muted {
-    font-family: 'Noto Sans Hebrew', 'Mugrabi', 'Arial Hebrew', 'Times New Roman', serif;
-    direction: rtl;
-    text-align: justify;
-  }
-
-  /* Noto Rashi Hebrew for commentaries */
-  .noto-rashi-hebrew-regular {
-    font-family: "Noto Rashi Hebrew", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  /* Typography - Claude style */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.3;
-  }
-  
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-  h4 { font-size: 1.125rem; }
-  h5 { font-size: 1rem; }
-  h6 { font-size: 0.875rem; }
-
-  /* Code blocks - теплый стиль */
-  pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-    font-size: 14px;
     line-height: 1.5;
-    background-color: hsl(var(--muted));
-    border: 1px solid hsl(var(--border));
-    border-radius: 12px;
-    padding: 16px 20px;
-    overflow-x: auto;
-    margin: 16px 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-    font-size: 14px;
-    background-color: hsl(var(--muted));
-    border: 1px solid hsl(var(--border));
-    border-radius: 6px;
-    padding: 2px 6px;
-    font-weight: 500;
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
   }
 
-  /* Lists - Claude style */
-  ul, ol {
-    padding-left: 1.5rem;
-    margin: 16px 0;
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
   }
 
-  ul {
-    list-style-type: disc;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
   }
 
-  ol {
-    list-style-type: decimal;
+  #root,
+  #__next {
+    isolation: isolate;
+    height: 100%;
   }
 
-  li {
-    margin: 4px 0;
-    line-height: 1.6;
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 
-  /* Blockquotes - теплый стиль */
-  blockquote {
-    border-left: 3px solid hsl(var(--primary));
-    background-color: hsl(var(--muted));
-    padding: 16px 20px;
-    margin: 20px 0;
-    border-radius: 0 12px 12px 0;
-    font-style: italic;
-  }
-  
-  /* Специальные стили для заметок и цитат */
-  .note-block {
-    background-color: hsl(45 20% 90%); /* #e8e0d5 - слегка затемненный фон для светлой темы */
-    border: 1px solid hsl(var(--border));
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 16px 0;
-  }
-  
-  .dark .note-block {
-    background-color: hsl(30 8% 20%); /* #352f2a - для темной темы */
-  }
-
-  /* Scrollbar styling - теплый стиль */
+  /* Scrollbar styles - единый стиль */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -358,17 +156,360 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary));
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+/* =============================================================================
+   СИСТЕМА ДОКУМЕНТОВ (.doc) - стили для контента сообщений
+   Все стили контента должны быть здесь для консистентности
+   ============================================================================= */
+
+@layer components {
+  /* Контейнер для ВСЕГО doc.v1 */
+  .doc {
+    @apply mx-auto max-w-[85ch] antialiased;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--doc-fg);
   }
 
-  /* Focus styles */
-  *:focus-visible {
-    outline: 1px solid hsl(var(--ring));
-    outline-offset: 1px;
+  /* 
+   * ЦВЕТОВАЯ СХЕМА ДОКУМЕНТОВ
+   * Все цвета производные от основной темы для консистентности
+   * Процентные значения подобраны для оптимального контраста
+   */
+  :root {
+    --doc-fg: var(--foreground);                              /* Основной текст */
+    --doc-dim: color-mix(in oklab, var(--doc-fg) 75%, black); /* Приглушённый текст */
+    --doc-accent: #b8d3ea;                                    /* Акцентный цвет (мягкий синий) */
+    --doc-muted: color-mix(in oklab, var(--doc-fg) 55%, black); /* Очень приглушённый */
+    --doc-border: color-mix(in oklab, var(--doc-fg) 14%, black); /* Границы */
+    --doc-code-bg: color-mix(in oklab, var(--doc-fg) 5.5%, black); /* Фон кода */
+    --doc-quote-bg: color-mix(in oklab, var(--doc-fg) 3.2%, black); /* Фон цитат */
+    --doc-hr: color-mix(in oklab, var(--doc-fg) 9%, black);   /* Разделители */
+    --doc-link: #86b3cf;                                      /* Ссылки */
+    --doc-link-hover: #a9c8db;                                /* Ссылки при наведении */
   }
 
-  /* Selection */
-  ::selection {
-    background-color: hsl(var(--primary) / 0.2);
+  /* Базовый вертикальный ритм */
+  .doc p,
+  .doc ul,
+  .doc ol,
+  .doc blockquote,
+  .doc pre,
+  .doc table,
+  .doc hr {
+    @apply mb-4;
+  }
+
+  /* Абзацы с улучшенными переносами */
+  .doc p {
+    @apply selection:bg-white/20;
+    text-wrap: pretty;
+    hyphens: auto;
+    word-break: normal;
+  }
+
+  /* Заголовки с балансировкой строк и консистентными размерами */
+  .doc h1,
+  .doc h2,
+  .doc h3,
+  .doc h4,
+  .doc h5,
+  .doc h6 {
+    text-wrap: balance;
+    font-weight: 600;
+    color: var(--doc-fg);
+    margin: 1.5rem 0 0.75rem 0;
+  }
+  
+  .doc h1 { font-size: 1.875rem; line-height: 1.2; }
+  .doc h2 { font-size: 1.5rem; line-height: 1.3; }
+  .doc h3 { font-size: 1.25rem; line-height: 1.4; }
+  .doc h4 { font-size: 1.125rem; line-height: 1.4; }
+  .doc h5 { font-size: 1rem; line-height: 1.5; }
+  .doc h6 { font-size: 0.875rem; line-height: 1.5; }
+
+  /* Ссылки */
+  .doc a {
+    color: var(--doc-link);
+    text-decoration: none;
+    border-bottom: 1px dashed color-mix(in oklab, var(--doc-link) 50%, transparent);
+  }
+  .doc a:hover {
+    color: var(--doc-link-hover);
+    border-bottom-style: solid;
+  }
+  .doc a:focus-visible {
+    outline: 2px solid var(--doc-link);
+    outline-offset: 2px;
+  }
+
+  /* Жирный/курсив */
+  .doc strong { @apply font-semibold; }
+  .doc em { @apply italic; }
+
+  /* Инлайн код с унифицированным фоном */
+  .doc code {
+    @apply text-[0.95em] px-1 py-0.5 rounded;
+    background: var(--doc-code-bg);
+  }
+
+  /* Многострочный код с унифицированным фоном */
+  .doc pre {
+    @apply rounded-xl p-4 overflow-auto;
+    border: 1px solid var(--doc-border);
+    background: var(--doc-code-bg);
+  }
+  .doc pre code { @apply p-0 bg-transparent; }
+
+  /* Цитаты */
+  .doc blockquote {
+    /* аккуратная цитата: тонкая левая линия + очень лёгкий фон */
+    border-left: 2px solid var(--doc-border);
+    background: color-mix(in oklab, var(--doc-fg) 2.2%, transparent); /* было заметно темнее */
+    padding: 0.5rem 1rem 0.5rem 1rem;  /* компактнее */
+    margin: 0 0 1rem 0;
+    border-radius: 0.5rem;             /* вместо большой «таблетки» */
+    color: var(--doc-dim);
+  }
+
+  /* убираем лишние вертикальные пробелы внутри цитаты */
+  .doc blockquote > :first-child { margin-top: 0; }
+  .doc blockquote > :last-child  { margin-bottom: 0; }
+
+  /* вложенные цитаты/списки не раздувают вертикальный ритм */
+  .doc li > blockquote { margin: 0.5rem 0; }
+
+  /* Списки */
+  .doc ul { @apply list-disc ms-6; }
+  .doc ol { @apply list-decimal ms-6; }
+  .doc li { @apply mb-1; }
+  .doc li > ul, .doc li > ol { @apply mt-1 mb-0; }
+
+  /* Горизонтальная линия */
+  .doc hr {
+    @apply my-6;
+    border: none;
+    border-top: 1px solid var(--doc-hr);
+  }
+
+  /* Таблицы */
+  .doc table { @apply w-full border-collapse text-[15px]; }
+  .doc th, .doc td {
+    @apply border border-[var(--doc-border)] px-3 py-2;
+  }
+  .doc th { @apply font-medium; }
+
+  /* Термины - элегантные карточки */
+  .doc .term {
+    @apply mb-4 rounded-xl border;
+    padding: 1rem 1.25rem;
+    background: color-mix(in oklab, var(--doc-accent) 8%, transparent);
+    border-color: color-mix(in oklab, var(--doc-accent) 20%, transparent);
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  
+  .doc .term:hover {
+    background: color-mix(in oklab, var(--doc-accent) 12%, transparent);
+    border-color: color-mix(in oklab, var(--doc-accent) 30%, transparent);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px color-mix(in oklab, var(--doc-accent) 15%, transparent);
+  }
+  
+  .doc .term::before {
+    content: "📖";
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+  
+  .doc .term .term-title {
+    @apply font-semibold text-base;
+    color: var(--doc-fg);
+    margin: 0 0 0.5rem 0;
+    padding-right: 2rem; /* Место для иконки */
+    line-height: 1.4;
+  }
+  
+  .doc .term .term-definition,
+  .doc .term p {
+    color: var(--doc-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .doc .term p:last-child { margin-bottom: 0; }
+
+  /* Изображения */
+  .doc figure { @apply my-4; }
+  .doc img { @apply rounded-xl border border-[var(--doc-border)] mx-auto; }
+  .doc figcaption { @apply text-sm text-[var(--doc-muted)] mt-2 text-center; }
+
+  /* RTL и иврит */
+  .doc[dir="rtl"],
+  .doc :where([dir="rtl"], [lang="he"], [lang="he-IL"], [lang="ar"]) {
+    direction: rtl;
+  }
+
+  .doc :where([lang="he"], [lang="he-IL"]) {
+    font-family: "Noto Rashi Hebrew", "Mugrabi", "Noto Sans Hebrew", 
+                 "Times New Roman", serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  /* Клавиши */
+  .doc kbd {
+    @apply px-2 py-1 text-xs font-mono rounded;
+    background: var(--doc-code-bg);
+    border: 1px solid var(--doc-border);
+    color: var(--doc-fg);
+  }
+}
+
+/* =============================================================================
+   ПАНЕЛИ - единая система цветов для консистентного интерфейса
+   ============================================================================= */
+
+@layer components {
+  /* 
+   * СИСТЕМА ПАНЕЛЕЙ - единые цвета и отступы
+   */
+  
+  /* Внешние панели - единый цвет (сайдбары, топбар, bookshelf) */
+  .panel-outer {
+    @apply bg-card/60 backdrop-blur-sm border-border/50;
+  }
+  
+  /* Внутренние области - светлее (viewport, composer, workbench) */
+  .panel-inner {
+    @apply bg-background/95;
+  }
+  
+  /* Карточки внутри панелей */
+  .panel-card {
+    @apply bg-card border-border/40;
+  }
+
+  /*
+   * СИСТЕМА ВЫДЕЛЕНИЯ - единые стили для фокуса и активных состояний
+   */
+  
+  /* Основное выделение панелей */
+  .panel-selected {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+  
+  /* Активное состояние (discussion focus) */
+  .panel-active {
+    @apply ring-2 ring-primary/60;
+  }
+  
+  /* Hover состояние */
+  .panel-hover {
+    @apply ring-1 ring-border hover:ring-primary/30;
+  }
+
+  /* Специальные стили для FocusReader - более тонкие обводки */
+  .focus-reader-selected {
+    @apply ring-1 ring-primary ring-offset-1 ring-offset-background;
+  }
+  
+  .focus-reader-active {
+    @apply ring-1 ring-primary/50;
+  }
+
+  /*
+   * СИСТЕМА РАССТОЯНИЙ - консистентные отступы для всего интерфейса
+   */
+  
+  /* Стандартные паддинги для панелей */
+  .panel-padding {
+    @apply px-4 py-3;  /* 16px горизонтально, 12px вертикально */
+  }
+  
+  .panel-padding-sm {
+    @apply px-3 py-2;  /* 12px горизонтально, 8px вертикально */
+  }
+  
+  .panel-padding-lg {
+    @apply px-6 py-4;  /* 24px горизонтально, 16px вертикально */
+  }
+
+  /* Стандартные gap для flex/grid */
+  .gap-standard {
+    @apply gap-3;     /* 12px - основной gap */
+  }
+  
+  .gap-compact {
+    @apply gap-2;     /* 8px - компактный gap */
+  }
+  
+  .gap-spacious {
+    @apply gap-4;     /* 16px - просторный gap */
+  }
+
+  /* Вертикальные расстояния между элементами */
+  .space-standard {
+    @apply space-y-4; /* 16px между элементами */
+  }
+  
+  .space-compact {
+    @apply space-y-2; /* 8px между элементами */
+  }
+  
+  .space-messages {
+    @apply space-y-6; /* 24px между сообщениями */
+  }
+
+  /* Убираем кольцо выделения у textarea в composer */
+  .composer-textarea {
+    @apply focus:ring-0 focus-visible:ring-0 focus:outline-none focus-visible:outline-none;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  .composer-textarea:focus,
+  .composer-textarea:focus-visible {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+  }
+}
+
+/* =============================================================================
+   УТИЛИТЫ - специализированные хелперы для шрифтов и UI
+   ============================================================================= */
+
+@layer utilities {
+  /* Суженный форс-системный шрифт (не ломает иврит) */
+  .force-system-font {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+  
+  /* Применяем только к текстовым элементам, не ко всем потомкам */
+  .force-system-font :where(p, li, small, em, strong, code) {
+    font-family: inherit !important;
+  }
+
+  /* Хелперы для иврита */
+  .hebrew-text {
+    font-family: "Noto Rashi Hebrew", "Mugrabi", "Noto Sans Hebrew", serif;
+    direction: rtl;
+  }
+
+  /* Скрытие скроллбара */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

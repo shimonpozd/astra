@@ -25,6 +25,35 @@ export function ChatLayout() {
   // Study mode chat state
   const [studyMessages, setStudyMessages] = useState<any[]>([]);
   const [studyIsSending, setStudyIsSending] = useState(false);
+  
+  // Panel selection state for Iyun/Girsa modes
+  const [selectedPanelId, setSelectedPanelId] = useState<string | null>(null);
+  
+  // Calculate current ref for bookshelf based on selected panel
+  const getCurrentRefForBookshelf = () => {
+    if (!studySnapshot) return undefined;
+    
+    // If a panel is selected (Iyun mode), use that panel's ref
+    if (selectedPanelId) {
+      switch (selectedPanelId) {
+        case 'focus':
+          return studySnapshot.ref;
+        case 'left_workbench':
+          // Extract ref string from BookshelfItem if needed
+          const leftRef = studySnapshot.workbench?.left;
+          return typeof leftRef === 'string' ? leftRef : leftRef?.ref;
+        case 'right_workbench':
+          // Extract ref string from BookshelfItem if needed
+          const rightRef = studySnapshot.workbench?.right;
+          return typeof rightRef === 'string' ? rightRef : rightRef?.ref;
+        default:
+          return studySnapshot.ref;
+      }
+    }
+    
+    // If no panel selected (Girsa mode), use discussion focus or main ref
+    return studySnapshot.discussion_focus_ref || studySnapshot.ref;
+  };
 
   const {
     isActive: isStudyActive,
@@ -75,9 +104,16 @@ export function ChatLayout() {
 
   useEffect(() => {
     if (studySnapshot && studySnapshot.chat_local) {
-      setStudyMessages(studySnapshot.chat_local);
+      // Only update messages if they're different to avoid overwriting local changes
+      const snapshotMessages = studySnapshot.chat_local;
+      if (JSON.stringify(snapshotMessages) !== JSON.stringify(studyMessages)) {
+        // Only update if we have fewer messages locally (avoid overwriting new messages)
+        if (studyMessages.length <= snapshotMessages.length) {
+          setStudyMessages(snapshotMessages);
+        }
+      }
     }
-  }, [studySnapshot]);
+  }, [studySnapshot, studyMessages]);
 
   const handleStartStudy = (textRef: string) => {
     startStudy(textRef).then((newSessionId) => {
@@ -163,18 +199,21 @@ export function ChatLayout() {
                     isLoading={isLoadingStudy}
                     canNavigateBack={canNavigateBack}
                     canNavigateForward={canNavigateForward}
-                    messages={studyMessages}
-                    isLoadingMessages={false}
-                    isSending={studyIsSending}
-                    studySessionId={studySessionId}
-                    setIsSending={setStudyIsSending}
-                    setMessages={setStudyMessages}
+              messages={studyMessages}
+              isLoadingMessages={false}
+              isSending={studyIsSending}
+              studySessionId={studySessionId}
+              setIsSending={setStudyIsSending}
+              setMessages={setStudyMessages}
+              agentId={agentId}
                     onWorkbenchSet={workbenchSet}
                     onWorkbenchFocus={workbenchFocus}
                     onWorkbenchDrop={handleWorkbenchDrop}
                     onFocusClick={focusMainText}
                     onNavigateToRef={navigateToRef}
                     refreshStudySnapshot={refreshStudySnapshot}
+                    selectedPanelId={selectedPanelId}
+                    onSelectedPanelChange={setSelectedPanelId}
                   />
                 ) : (
                   <div className="h-full flex flex-col min-h-0">
@@ -196,7 +235,7 @@ export function ChatLayout() {
             <div className="min-h-0 overflow-hidden">
               <BookshelfPanel
                 sessionId={studySessionId || undefined}
-                currentRef={studySnapshot?.discussion_focus_ref || studySnapshot?.ref}
+                currentRef={getCurrentRefForBookshelf()}
                 onDragStart={(ref) => console.log('Dragging from bookshelf:', ref)}
                 onItemClick={(item) => console.log('Clicked bookshelf item:', item)}
               />

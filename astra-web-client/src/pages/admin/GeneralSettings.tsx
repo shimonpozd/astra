@@ -60,6 +60,18 @@ interface ConfigData {
     overrides?: {
       [key: string]: string;
     };
+    tasks?: {
+      summary?: {
+        model?: string;
+        temperature?: number;
+        top_p?: number;
+        max_tokens_out?: number;
+        timeout_s?: number;
+        retries?: number;
+        backoff_ms?: number;
+        response_format_json?: boolean;
+      };
+    };
   };
   voice?: {
     tts?: {
@@ -110,12 +122,30 @@ interface ConfigData {
     };
     decay?: {
       half_life_min?: number;
+      min_score_keep?: number;
     };
     inject?: {
       top_facts?: number;
       top_open_loops?: number;
       top_refs?: number;
       include_when_empty?: boolean;
+      max_chars_budget?: number;
+    };
+    summary?: {
+      enabled?: boolean;
+      input_tokens_budget?: number;
+      output_bullets_min?: number;
+      output_bullets_max?: number;
+      bullet_max_chars?: number;
+      allow_refs?: boolean;
+      max_refs?: number;
+      cooldown_sec?: number;
+      trigger_msgs_high?: number;
+      trigger_msgs_low?: number;
+      trigger_tokens_high?: number;
+      trigger_tokens_low?: number;
+      log_verbose?: boolean;
+      partial_min_tokens?: number;
     };
   };
   research?: {
@@ -463,7 +493,7 @@ const GeneralSettings: React.FC = () => {
               <div className="border-t pt-4">
                 <h4 className="text-sm font-medium mb-3">Model Overrides for Tasks</h4>
                 <div className="grid grid-cols-2 gap-4">
-                  {['chat', 'drafter', 'critic', 'meta_reasoner', 'curator', 'summarizer', 'translator', 'lexicon', 'speechify', 'planner'].map((task) => (
+                  {['chat', 'drafter', 'critic', 'meta_reasoner', 'curator', 'summarizer', 'translator', 'lexicon', 'speechify', 'planner', 'summary'].map((task) => (
                     <div className="space-y-2" key={task}>
                       <Label htmlFor={`override-${task}`} className="capitalize">{task} Model</Label>
                       <Input
@@ -1029,7 +1059,7 @@ const GeneralSettings: React.FC = () => {
               {/* Decay Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium">Memory Decay</h3>
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="stm-half-life">Half-Life (minutes)</Label>
                     <Input
@@ -1043,6 +1073,22 @@ const GeneralSettings: React.FC = () => {
                     />
                     <p className="text-xs text-muted-foreground">
                       Time for fact scores to decay by half (10-1440 minutes)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-min-score-keep">Min Score Keep</Label>
+                    <Input
+                      id="stm-min-score-keep"
+                      type="number"
+                      min="0.01"
+                      max="1.0"
+                      step="0.01"
+                      value={config.stm?.decay?.min_score_keep || ''}
+                      onChange={(e) => updateConfig(['stm', 'decay', 'min_score_keep'], parseFloat(e.target.value))}
+                      placeholder="0.1"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Minimum score to keep items after decay (0.01-1.0)
                     </p>
                   </div>
                 </div>
@@ -1113,6 +1159,270 @@ const GeneralSettings: React.FC = () => {
                     </Select>
                     <p className="text-xs text-muted-foreground">
                       Include STM context even when empty
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-max-chars-budget">Max Chars Budget</Label>
+                    <Input
+                      id="stm-max-chars-budget"
+                      type="number"
+                      min="500"
+                      max="3000"
+                      value={config.stm?.inject?.max_chars_budget || ''}
+                      onChange={(e) => updateConfig(['stm', 'inject', 'max_chars_budget'], parseInt(e.target.value))}
+                      placeholder="1200"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum characters for STM injection (500-3000)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* STM Summary Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">STM Summary (LLM-based)</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-enabled">Summary Enabled</Label>
+                    <Select
+                      value={config.stm?.summary?.enabled ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['stm', 'summary', 'enabled'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Enabled</SelectItem>
+                        <SelectItem value="false">Disabled</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Enable LLM-based conversation summarization
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-input-budget">Input Tokens Budget</Label>
+                    <Input
+                      id="stm-summary-input-budget"
+                      type="number"
+                      min="500"
+                      max="3000"
+                      value={config.stm?.summary?.input_tokens_budget || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'input_tokens_budget'], parseInt(e.target.value))}
+                      placeholder="1200"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum tokens for input to LLM summarization (500-3000)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-bullets-min">Min Bullets</Label>
+                    <Input
+                      id="stm-summary-bullets-min"
+                      type="number"
+                      min="1"
+                      max="8"
+                      value={config.stm?.summary?.output_bullets_min || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'output_bullets_min'], parseInt(e.target.value))}
+                      placeholder="3"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Minimum number of summary bullets (1-8)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-bullets-max">Max Bullets</Label>
+                    <Input
+                      id="stm-summary-bullets-max"
+                      type="number"
+                      min="3"
+                      max="12"
+                      value={config.stm?.summary?.output_bullets_max || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'output_bullets_max'], parseInt(e.target.value))}
+                      placeholder="8"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum number of summary bullets (3-12)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-bullet-chars">Bullet Max Chars</Label>
+                    <Input
+                      id="stm-summary-bullet-chars"
+                      type="number"
+                      min="50"
+                      max="200"
+                      value={config.stm?.summary?.bullet_max_chars || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'bullet_max_chars'], parseInt(e.target.value))}
+                      placeholder="140"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum characters per bullet (50-200)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-allow-refs">Allow References</Label>
+                    <Select
+                      value={config.stm?.summary?.allow_refs ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['stm', 'summary', 'allow_refs'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Yes</SelectItem>
+                        <SelectItem value="false">No</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Include Sefaria references in summary
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-max-refs">Max References</Label>
+                    <Input
+                      id="stm-summary-max-refs"
+                      type="number"
+                      min="0"
+                      max="10"
+                      value={config.stm?.summary?.max_refs || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'max_refs'], parseInt(e.target.value))}
+                      placeholder="5"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum references to extract (0-10)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-log-verbose">Verbose Logging</Label>
+                    <Select
+                      value={config.stm?.summary?.log_verbose ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['stm', 'summary', 'log_verbose'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Enabled</SelectItem>
+                        <SelectItem value="false">Disabled</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Enable detailed logging for debugging
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="stm-summary-partial-min-tokens">Partial Min Tokens</Label>
+                    <Input
+                      id="stm-summary-partial-min-tokens"
+                      type="number"
+                      min="10"
+                      max="200"
+                      value={config.stm?.summary?.partial_min_tokens || ''}
+                      onChange={(e) => updateConfig(['stm', 'summary', 'partial_min_tokens'], parseInt(e.target.value))}
+                      placeholder="50"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Minimum tokens for partial message inclusion (10-200)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* LLM Summary Task Settings */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">LLM Summary Task</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-model">Summary Model</Label>
+                    <Input
+                      id="llm-summary-model"
+                      value={config.llm?.tasks?.summary?.model || ''}
+                      onChange={(e) => updateConfig(['llm', 'tasks', 'summary', 'model'], e.target.value)}
+                      placeholder="gpt-4o-mini"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      LLM model for summarization tasks
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-temperature">Temperature</Label>
+                    <Input
+                      id="llm-summary-temperature"
+                      type="number"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value={config.llm?.tasks?.summary?.temperature || ''}
+                      onChange={(e) => updateConfig(['llm', 'tasks', 'summary', 'temperature'], parseFloat(e.target.value))}
+                      placeholder="0.2"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Sampling temperature (0.0-1.0)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-max-tokens">Max Tokens</Label>
+                    <Input
+                      id="llm-summary-max-tokens"
+                      type="number"
+                      min="100"
+                      max="1000"
+                      value={config.llm?.tasks?.summary?.max_tokens_out || ''}
+                      onChange={(e) => updateConfig(['llm', 'tasks', 'summary', 'max_tokens_out'], parseInt(e.target.value))}
+                      placeholder="512"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Maximum tokens to generate (100-1000)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-timeout">Timeout (seconds)</Label>
+                    <Input
+                      id="llm-summary-timeout"
+                      type="number"
+                      min="10"
+                      max="60"
+                      value={config.llm?.tasks?.summary?.timeout_s || ''}
+                      onChange={(e) => updateConfig(['llm', 'tasks', 'summary', 'timeout_s'], parseInt(e.target.value))}
+                      placeholder="25"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Request timeout (10-60 seconds)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-retries">Retries</Label>
+                    <Input
+                      id="llm-summary-retries"
+                      type="number"
+                      min="0"
+                      max="5"
+                      value={config.llm?.tasks?.summary?.retries || ''}
+                      onChange={(e) => updateConfig(['llm', 'tasks', 'summary', 'retries'], parseInt(e.target.value))}
+                      placeholder="2"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Number of retry attempts (0-5)
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="llm-summary-json-format">JSON Format</Label>
+                    <Select
+                      value={config.llm?.tasks?.summary?.response_format_json ? 'true' : 'false'}
+                      onValueChange={(value) => updateConfig(['llm', 'tasks', 'summary', 'response_format_json'], value === 'true')}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="true">Enabled</SelectItem>
+                        <SelectItem value="false">Disabled</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <p className="text-xs text-muted-foreground">
+                      Force JSON response format
                     </p>
                   </div>
                 </div>
@@ -1225,7 +1535,7 @@ const GeneralSettings: React.FC = () => {
                 <Input
                   id="brain-port"
                   type="number"
-                  value={config.services?.brain?.port || 7030}
+                  value={config.services?.brain?.port || 8001}
                   onChange={(e) => updateConfig(['services', 'brain', 'port'], parseInt(e.target.value))}
                 />
                 <p className="text-xs text-muted-foreground">

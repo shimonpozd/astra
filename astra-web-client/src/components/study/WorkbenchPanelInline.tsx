@@ -28,6 +28,7 @@ interface WorkbenchPanelProps {
   title: string;
   item: WorkbenchItem | null;
   active: boolean;
+  selected?: boolean;
   onDropRef: (ref: string) => void;
   onClick: () => void;
   className?: string;
@@ -60,6 +61,7 @@ const WorkbenchContainer = memo(({
   children,
   isOver,
   active,
+  selected,
   onDragHandlers,
   onClick,
   className
@@ -67,21 +69,22 @@ const WorkbenchContainer = memo(({
   children: React.ReactNode;
   isOver: boolean;
   active: boolean;
+  selected?: boolean;
   onDragHandlers: any;
   onClick: () => void;
   className: string;
 }) => {
   const stateClasses = useMemo(() => {
-    if (isOver) return 'border-primary bg-primary/5 scale-[1.01] shadow-lg';
-    if (active) return 'border-primary/60 bg-primary/8 shadow-md';
-    return 'border-border/60 bg-card/60 hover:bg-card/80 hover:border-border/40';
+    if (isOver) return 'bg-primary/5 scale-[1.01] shadow-lg';
+    if (active) return 'bg-primary/8 shadow-md';
+    return 'bg-card/60 hover:bg-card/80';
   }, [isOver, active]);
 
   return (
     <div
       className={`
-        h-full flex flex-col rounded-xl border transition-all duration-300 ease-in-out
-        ${stateClasses} ${className}
+        h-full flex flex-col rounded-xl border border-border/60 transition-all duration-300 ease-in-out
+        ${stateClasses} ${className} ${selected ? 'panel-selected' : ''}
       `}
       {...onDragHandlers}
       onClick={onClick}
@@ -242,11 +245,22 @@ const WorkbenchContent = memo(({
           </button>
           {error && <span className="text-xs text-red-500">{error}</span>}
         </div>
-        <div className={`
-          ${heScaleClass}
-          ${direction === 'rtl' ? 'text-right font-hebrew' : 'text-left'}
-          rounded-md
-        `}>
+        <div 
+          className={`
+            ${heScaleClass}
+            ${direction === 'rtl' ? 'text-right font-hebrew' : 'text-left'}
+            rounded-md select-text cursor-pointer
+          `}
+          onDoubleClick={() => {
+            const selected = (window.getSelection()?.toString() || '').trim();
+            if (selected) {
+              // Trigger the same lexicon system
+              window.dispatchEvent(new CustomEvent('lexicon-lookup', { 
+                detail: { text: selected } 
+              }));
+            }
+          }}
+        >
           {textToDisplay || 'Комментарий не загружен.'}
         </div>
       </article>
@@ -270,7 +284,7 @@ const EmptyWorkbenchPanel = memo(({
         transition-all duration-300 text-muted-foreground/60
         ${isOver
           ? 'border-primary bg-primary/5 text-primary/70'
-          : 'border-border/40 bg-card/20 hover:border-border/60'
+          : 'border-border/40 bg-card/20 hover:border-primary/30'
         }
       `}
       onDragOver={(e) => {
@@ -297,9 +311,6 @@ const EmptyWorkbenchPanel = memo(({
         Перетащите источник или комментарий сюда
       </p>
 
-      {isOver && (
-        <div className="absolute inset-2 rounded-lg border-2 border-primary/50 pointer-events-none" />
-      )}
     </div>
   );
 });
@@ -308,6 +319,7 @@ const WorkbenchPanelInline = memo(({
   title,
   item,
   active,
+  selected = false,
   onDropRef,
   onClick,
   size = 'normal',
@@ -348,6 +360,7 @@ const WorkbenchPanelInline = memo(({
     <WorkbenchContainer
       isOver={isOver}
       active={active}
+      selected={selected}
       onDragHandlers={{
         onDragOver: (e: React.DragEvent) => {
           if (isDragDataValid(e.dataTransfer)) {

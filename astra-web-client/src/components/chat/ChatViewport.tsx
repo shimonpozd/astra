@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { Message as ApiMessage } from '../../services/api';
-import { MessageRenderer } from '../MessageRenderer';
-import type { Doc, DocV1, ChatMessage } from '../../types/text';
+import UnifiedMessageRenderer from '../UnifiedMessageRenderer';
+import type { ChatMessage } from '../../types/text';
 
 // Support both legacy API messages and the newer ChatMessage shape
 type AnyMessage = (ApiMessage | ChatMessage | (ApiMessage & Partial<ChatMessage>)) & {
@@ -11,8 +11,8 @@ type AnyMessage = (ApiMessage | ChatMessage | (ApiMessage & Partial<ChatMessage>
 // Unified message type for UI rendering
 type UiMessage = {
   id?: string | number;
-  role: 'user' | 'assistant' | 'system' | 'tool' | 'error';
-  content: unknown; // string | DocV1
+  role: 'user' | 'assistant' | 'system';
+  content: unknown;
   content_type?: 'text.v1' | 'doc.v1' | 'thought.v1';
   timestamp?: number | string;
 };
@@ -24,34 +24,23 @@ interface ChatViewportProps {
 
 const hasContentType = (message: AnyMessage): message is AnyMessage & {
   content_type: string;
-} => typeof message?.content_type === 'string';
+} => {
+  return typeof (message as any).content_type === 'string';
+};
 
-// Normalize incoming messages to UiMessage format
 const normalizeMessage = (message: AnyMessage): UiMessage => {
   const role = (message.role as string) || 'assistant';
   const content = message.content;
   let content_type: UiMessage['content_type'] = 'text.v1';
 
-  // Check if content looks like a DocV1
-  if (content && typeof content === 'object') {
-    const obj = content as any;
-    if ((obj.type === 'doc.v1' && Array.isArray(obj.blocks)) ||
-        (typeof obj.version === 'string' && Array.isArray(obj.blocks))) {
+  // Простая эвристика для определения content_type
+  if (typeof content === 'string') {
+    const s = content.trim();
+    if (s.startsWith('{') || s.startsWith('[')) content_type = 'doc.v1';
+  } else if (content && typeof content === 'object') {
+    const obj: any = content;
+    if (Array.isArray(obj?.blocks) || typeof obj?.version === 'string') {
       content_type = 'doc.v1';
-    }
-  } else if (typeof content === 'string') {
-    // If it's a string, check if it parses to a doc
-    try {
-      const parsed = JSON.parse(content);
-      if (parsed && typeof parsed === 'object') {
-        const obj = parsed as any;
-        if ((obj.type === 'doc.v1' && Array.isArray(obj.blocks)) ||
-            (typeof obj.version === 'string' && Array.isArray(obj.blocks))) {
-          content_type = 'doc.v1';
-        }
-      }
-    } catch {
-      // Not JSON, keep as text.v1
     }
   }
 
@@ -60,7 +49,7 @@ const normalizeMessage = (message: AnyMessage): UiMessage => {
     const ct = message.content_type as string;
     if (['text.v1', 'doc.v1', 'thought.v1'].includes(ct)) {
       content_type = ct as UiMessage['content_type'];
-    } else {
+    } else if (process.env.NODE_ENV === 'development') {
       console.warn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
     }
   }
@@ -74,353 +63,112 @@ const normalizeMessage = (message: AnyMessage): UiMessage => {
   };
 };
 
-// Valid block types for doc.v1
-const VALID_BLOCK_TYPES = new Set([
-  'paragraph','list','quote','heading','hr','image','table','pre','code','callout','term'
-]);
-
-const clamp = (n:any,min:number,max:number) => {
-  const x = Number(n);
-  return Number.isFinite(x) ? Math.max(min, Math.min(max, x)) : undefined;
-};
-const toText = (v:any) =>
-  typeof v === 'string' ? v : v == null ? '' : (typeof v === 'object' ? JSON.stringify(v) : String(v));
-
-function sanitizeBlock(block:any): any {
-  if (!block || typeof block !== 'object') return null;
-
-  const type = String(block.type || '').trim();
-  if (!VALID_BLOCK_TYPES.has(type)) {
-    // ВАЖНО: не выбрасываем — даункастим в абзац, чтобы не пропал текст
-    return { type: 'paragraph', text: JSON.stringify(block, null, 2) };
-  }
-
-  const out:any = { type };
-  if (typeof block.lang === 'string') out.lang = block.lang;
-  if (typeof block.dir === 'string')  out.dir  = block.dir;
-
-  switch (type) {
-    case 'paragraph':
-      out.text = toText(block.text ?? block.content ?? '');
-      break;
-
-    case 'quote':
-      out.text = toText(block.text ?? block.content ?? '');
-      break;
-
-    case 'heading':
-      out.level = clamp(block.level ?? 2, 1, 6);
-      out.text  = toText(block.text ?? block.content ?? '');
-      break;
-
-    case 'list':
-      out.ordered = !!block.ordered;
-      if (Array.isArray(block.items)) {
-        out.items = block.items.map(toText);
-      } else if (Array.isArray(block.content)) {
-        // Handle nested list_item structure
-        out.items = block.content
-          .filter((item: any) => item && typeof item === 'object' && item.type === 'list_item')
-          .map((item: any) => toText(item.content || ''));
-      } else if (typeof block.text === 'string') {
-        out.items = [block.text];
-      } else {
-        out.items = [];
-      }
-      break;
-
-    case 'hr':
-      break;
-
-    case 'image':
-      if (typeof block.url==='string') out.url = block.url;
-      if (typeof block.alt==='string') out.alt = block.alt;
-      if (typeof block.caption==='string') out.caption = block.caption;
-      if (Number.isFinite(+block.width))  out.width  = +block.width;
-      if (Number.isFinite(+block.height)) out.height = +block.height;
-      break;
-
-    case 'table':
-      if (Array.isArray(block.headers)) out.headers = block.headers.map(toText);
-      if (Array.isArray(block.rows))    out.rows    = block.rows.map((r:any)=>Array.isArray(r)?r.map(toText):[toText(r)]);
-      break;
-
-    case 'pre':
-    case 'code':
-      if (typeof block.code==='string')     out.code     = block.code;
-      if (typeof block.language==='string') out.language = block.language;
-      if (typeof block.caption==='string')  out.caption  = block.caption;
-      break;
-
-    case 'callout':
-      if (typeof block.variant==='string') out.variant = block.variant;
-      if (typeof block.title==='string')   out.title   = block.title;
-      out.text = toText(block.text ?? block.content ?? '');
-      break;
-
-    case 'term': {
-      const keep = ['he','ru','en','translit','root','grammar','etym','sense','notes','related','examples','refs','context','tags','subtitle','source'];
-      for (const k of keep) if (k in block) out[k] = block[k];
-      if (!out.he && typeof block.text==='string') out.he = block.text;
-      // Handle content field as additional description/notes
-      if (typeof block.content === 'string' && !out.notes) {
-        out.notes = block.content;
-      }
-      break;
-    }
-  }
-  return out;
-}
-
-const coerceDoc = (payload: unknown): Doc | DocV1 | null => {
-  const tryExtract = (obj: any): any | null => {
-    if (!obj || typeof obj !== "object") return null;
-
-    // Check for explicit doc.v1 markers
-    if (obj.type === 'doc.v1' && Array.isArray(obj.blocks)) {
-      return obj;
-    }
-    if (typeof obj.version === 'string' && Array.isArray(obj.blocks)) {
-      return obj;
-    }
-
-    // Legacy wrappers
-    if (obj.doc && Array.isArray(obj.doc.blocks)) return obj.doc;
-    if (obj.content && Array.isArray(obj.content.blocks)) return obj.content;
-    if (obj.data && Array.isArray(obj.data.blocks)) return obj.data;
-
-    // Direct blocks array
-    if (Array.isArray(obj.blocks)) return obj;
-
-    return null;
-  };
-
-  const validateAndSanitize = (doc: any): Doc | DocV1 | null => {
-    if (!doc || typeof doc !== 'object') return null;
-    if (!Array.isArray(doc.blocks)) return null;
-
-    // Sanitize blocks
-    const sanitizedBlocks = doc.blocks
-      .map(sanitizeBlock)
-      .filter((block: any) => block !== null);
-
-    if (sanitizedBlocks.length === 0) return null;
-
-    // Return only allowed top-level fields
-    const result: any = { blocks: sanitizedBlocks };
-    if (typeof doc.version === 'string') result.version = doc.version;
-    if (Array.isArray(doc.ops)) result.ops = doc.ops;
-
-    return result;
-  };
-
-  // 1) Already an object?
-  if (payload && typeof payload === "object") {
-    const extracted = tryExtract(payload as any);
-    if (extracted) return validateAndSanitize(extracted);
-  }
-
-  // 2) String: strip fences and parse 1-2 times, limit size to 1MB
-  if (typeof payload === "string") {
-    if (payload.length > 1024 * 1024) {
-      console.warn('Payload too large for doc parsing');
-      return null;
-    }
-
-    let s = payload.trim();
-
-    // Strip triple backticks ```json ... ```
-    const fence = s.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
-    if (fence) s = fence[1];
-
-    // Try to unpack maximum two times
-    for (let i = 0; i < 2; i++) {
-      try {
-        const parsed = JSON.parse(s);
-        const extracted = tryExtract(parsed);
-        if (extracted) return validateAndSanitize(extracted);
-
-        // Sometimes there's another JSON string inside
-        if (typeof parsed === "string") {
-          s = parsed;
-          continue;
-        }
-
-        // Last attempt: maybe blocks at top level without wrapper
-        if (Array.isArray((parsed as any).blocks)) {
-          return validateAndSanitize(parsed);
-        }
-        break;
-      } catch {
-        break;
-      }
-    }
-  }
-
-  return null;
-};
-
-const coerceText = (payload: unknown): string => {
-  if (payload == null) return '';
-  if (typeof payload === 'string') return payload;
-  try {
-    return JSON.stringify(payload);
-  } catch (error) {
-    return String(payload);
-  }
-};
-
-// Generate stable keys for messages to avoid React re-mounting issues
+// Generate stable keys for messages without random salt
 const getStableKey = (msg: UiMessage, index: number): string => {
-  if (msg.id != null) {
-    return String(msg.id);
+  if (msg.id != null && msg.id !== undefined && String(msg.id).trim() && String(msg.id) !== 'undefined') {
+    return `msg-id-${String(msg.id)}`;
   }
 
-  // Create deterministic hash from timestamp/index + content preview
+  // Create deterministic hash from timestamp/index + content preview + role
   const contentStr = String(msg.content || '').slice(0, 64);
-  const base = `${msg.timestamp || 'no-ts'}-${index}-${contentStr}`;
+  const timestamp = msg.timestamp ? String(msg.timestamp) : 'no-ts';
+  const role = msg.role || 'unknown';
+  const contentType = msg.content_type || 'text';
+  
+  const base = `${timestamp}-${index}-${role}-${contentType}-${contentStr}`;
+  
   let hash = 0;
   for (let i = 0; i < base.length; i++) {
     const char = base.charCodeAt(i);
     hash = ((hash << 5) - hash) + char;
     hash = hash & hash; // Convert to 32-bit integer
   }
-  return `msg-${Math.abs(hash)}`;
+  
+  const hashKey = Math.abs(hash);
+  if (hashKey > 0) {
+    return `msg-hash-${hashKey}-idx${index}`;
+  }
+  
+  // Ultimate fallback without random elements
+  return `msg-fallback-${index}-${timestamp}`;
 };
 
 export default function ChatViewport({ messages, isLoading }: ChatViewportProps) {
-  const messagesEndRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Normalize messages to UiMessage format
-  const uiMessages: UiMessage[] = messages.map(normalizeMessage);
+  // Normalize all messages for consistent rendering
+  const uiMessages = messages.map(normalizeMessage);
 
-  // Smart scrolling: stick to bottom only when appropriate
+  // Improved auto-scroll logic
   useEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport) return;
 
-    const isNearBottom = () => {
-      const { scrollHeight, scrollTop, clientHeight } = viewport;
-      return (scrollHeight - scrollTop - clientHeight) < 120;
-    };
+    const { scrollHeight, scrollTop, clientHeight } = viewport;
+    const distance = scrollHeight - scrollTop - clientHeight;
+    const nearBottom = distance < 120;
 
-    // Check if we should scroll to bottom
-    const shouldScrollToBottom =
-      isNearBottom() ||
-      uiMessages.length === 0 || // Initial load
-      (uiMessages[uiMessages.length - 1]?.role === 'user'); // User just sent message
+    const senderIsUser = uiMessages[uiMessages.length - 1]?.role === 'user';
+    const shouldStick = nearBottom || uiMessages.length === 0 || senderIsUser;
 
-    if (shouldScrollToBottom) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (shouldStick) {
+      // Use smooth scrolling for small distances, instant for large ones
+      const behavior = distance < 800 ? 'smooth' : 'auto';
+      messagesEndRef.current?.scrollIntoView({ behavior });
     }
   }, [uiMessages]);
 
-  const renderAssistantContent = (rawContent: unknown, contentType?: string) => {
-    const doc = coerceDoc(rawContent);
-
-    if (doc) {
-      return (
-        <article className="doc" dir="auto">
-          <MessageRenderer doc={doc} />
-        </article>
-      );
-    }
-
-    // Strict doc.v1 handling
-    if (contentType === 'doc.v1') {
-      console.warn('Failed to parse doc.v1:', { sample: String(rawContent).slice(0, 200) });
-
-      // Try one more rescue attempt for strings starting with {
-      if (typeof rawContent === 'string' && rawContent.trim().startsWith('{') && rawContent.includes('"blocks"')) {
-        try {
-          const rescueDoc = coerceDoc(rawContent);
-          if (rescueDoc) {
-            return (
-              <article className="doc" dir="auto">
-                <MessageRenderer doc={rescueDoc} />
-              </article>
-            );
-          }
-        } catch {
-          // Rescue failed
-        }
-      }
-
-      // Show diagnostic UI for corrupted doc.v1
-      return (
-        <article className="doc" dir="auto">
-          <div className="rounded-xl p-4 border border-destructive/50 bg-destructive/5">
-            <p className="text-destructive font-medium mb-2">Документ повреждён</p>
-            <p className="text-sm text-muted-foreground mb-3">
-              Не удалось распознать формат doc.v1. Возможно, ответ модели содержит ошибку.
-            </p>
-            <details className="text-xs">
-              <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
-                Показать сырой ответ
-              </summary>
-              <pre className="mt-2 p-2 bg-muted rounded text-muted-foreground overflow-auto max-h-32">
-                {coerceText(rawContent)}
-              </pre>
-            </details>
-          </div>
-        </article>
-      );
-    }
-
-    // Fallback for non-doc content: create virtual doc with single paragraph
-    const safeDoc: DocV1 = {
-      version: '1.0',
-      blocks: [{ type: 'paragraph', text: coerceText(rawContent) }]
-    };
-
-    return (
-      <article className="doc" dir="auto">
-        <MessageRenderer doc={safeDoc} />
-      </article>
-    );
-  };
-
   return (
-    <div ref={viewportRef} className="flex-1 min-h-0 p-4 overflow-y-auto">
+    <div ref={viewportRef} className="flex-1 min-h-0 panel-padding overflow-y-auto panel-inner">
       {isLoading ? (
         <div className="flex justify-center items-center h-full">
-          <p className="text-muted-foreground">Loading messages...</p>
+          <div className="text-muted-foreground">Loading...</div>
         </div>
       ) : uiMessages.length === 0 ? (
         <div className="flex justify-center items-center h-full">
-          <p className="text-muted-foreground">Select a chat to see messages.</p>
+          <div className="text-muted-foreground">Select a chat to start messaging</div>
         </div>
       ) : (
-        <div className="space-y-4 max-w-[65rem] mx-auto">
+        <div className="space-messages w-full max-w-[72ch] mx-auto">
           {uiMessages.map((message, index) => {
             const key = getStableKey(message, index);
 
-            let renderedContent;
-            if (message.role === 'user') {
-              const userText = coerceText(message.content);
-              renderedContent = (
-                <div className="px-3 py-2 rounded-2xl bg-primary text-primary-foreground text-sm max-w-[72ch] whitespace-pre-wrap">
-                  {userText}
+            const renderUserBubble = () => {
+              const text =
+                typeof message.content === 'string'
+                  ? message.content
+                  : JSON.stringify(message.content, null, 2);
+              return (
+                <div className="ml-auto max-w-[85%] rounded-2xl px-4 py-3 bg-primary text-primary-foreground">
+                  {/* БЕЗ .doc! — чистый текст в пузыре */}
+                  <p className="whitespace-pre-wrap break-words">{text}</p>
                 </div>
               );
-            } else if (message.content_type === 'thought.v1') {
-              const thoughtText = coerceText(message.content);
-              renderedContent = (
-                <div className="text-xs text-muted-foreground italic px-3 py-2 rounded-2xl bg-muted/50 max-w-[72ch] whitespace-pre-wrap">
-                  <p>{thoughtText}</p>
-                </div>
-              );
-            } else {
-              renderedContent = renderAssistantContent(message.content, message.content_type);
-            }
+            };
+
+            const renderAssistantDoc = () => (
+              // Единый путь: .doc по центру, без пузыря/фона
+              <article className="doc" dir="auto">
+                <UnifiedMessageRenderer input={message.content} />
+              </article>
+            );
 
             return (
-              <div
-                key={key}
-                className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                {renderedContent}
+              <div key={key} className="w-full">
+                {message.content_type === 'thought.v1' ? (
+                  <div className="text-xs text-muted-foreground italic whitespace-pre-wrap mx-auto max-w-[72ch]">
+                    <p>
+                      {typeof message.content === 'string'
+                        ? message.content
+                        : JSON.stringify(message.content)}
+                    </p>
+                  </div>
+                ) : message.role === 'user' ? (
+                  renderUserBubble()
+                ) : (
+                  renderAssistantDoc()
+                )}
               </div>
             );
           })}

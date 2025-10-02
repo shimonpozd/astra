@@ -1,0 +1,31 @@
+/* Claude-inspired additional styles - только используемые */
+
+/* Smooth transitions for interactive elements */
+button, input, textarea, select {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Better button hover effects */
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Fade-in animation - используется в компонентах */
+@keyframes claude-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.claude-fade-in {
+  animation: claude-fade-in 0.3s ease-out;
+}

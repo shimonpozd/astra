@@ -240,7 +240,7 @@ export default function BrainChat({
     setConnectionError(null);
 
     try {
-      const response = await fetch('http://localhost:7030/health', {
+      const response = await fetch('http://localhost:8001/health', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

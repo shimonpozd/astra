@@ -35,6 +35,9 @@ export interface StreamHandler {
   onDraft?: (payload: any) => void;
   onChunk?: (chunk: string) => void;
   onDoc?: (doc: DocV1) => void;
+  onBlockStart?: (blockData: any) => void;
+  onBlockDelta?: (blockData: any) => void;
+  onBlockEnd?: (blockData: any) => void;
   onEvent?: (event: StreamEvent) => void;
   onComplete?: () => void;
   onError?: (error: Error) => void;
@@ -339,14 +342,109 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
   }
 }
 
-async function sendStudyMessage(sessionId: string, text: string, handler: StreamHandler): Promise<void> {
+async function sendMessageWithBlocks(request: ChatRequest, handler: StreamHandler): Promise<void> {
+  try {
+    const response = await fetch(`${API_BASE}/chat/stream-blocks`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(request),
+    });
+
+    if (!response.body) {
+      throw new Error("Response body is empty");
+    }
+
+    const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+    let buffer = '';
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) {
+        handler.onComplete?.();
+        break;
+      }
+
+      buffer += value;
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || ''; // Keep the last, possibly incomplete, line
+
+      for (const line of lines) {
+        if (line.trim() === '') continue;
+        try {
+          const event = JSON.parse(line) as StreamEvent;
+          switch (event.type) {
+            case 'block_start': {
+              handler.onBlockStart?.(event.data as any);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'block_delta': {
+              handler.onBlockDelta?.(event.data as any);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'block_end': {
+              handler.onBlockEnd?.(event.data as any);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'llm_chunk': {
+              const chunk = typeof event.data === 'string' ? event.data : '';
+              if (chunk) {
+                handler.onChunk?.(chunk);
+                handler.onDraft?.(event.data as any);
+              }
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'doc_v1': {
+              handler.onDoc?.(event.data as DocV1);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'error': {
+              handler.onEvent?.(event);
+              const message = typeof event.data === 'string' ? event.data : 'Stream error';
+              handler.onError?.(new Error(message));
+              break;
+            }
+            default: {
+              handler.onEvent?.(event);
+              break;
+            }
+          }
+        } catch (e) {
+          console.error('Failed to parse stream event:', line, e);
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Failed to send message with blocks:", error);
+    handler.onError?.(error instanceof Error ? error : new Error('Unknown stream error'));
+  }
+}
+
+async function sendStudyMessage(
+  sessionId: string, 
+  text: string, 
+  handler: StreamHandler, 
+  agentId?: string,
+  selectedPanelId?: string | null
+): Promise<void> {
   try {
     const response = await fetch(`${API_BASE}/study/chat/stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ session_id: sessionId, text }),
+      body: JSON.stringify({ 
+        session_id: sessionId, 
+        text,
+        agent_id: agentId,
+        selected_panel_id: selectedPanelId
+      }),
     });
 
     if (!response.body) {
@@ -414,6 +512,7 @@ export const api = {
   deleteChat,
   deleteSession,
   sendMessage,
+  sendMessageWithBlocks,
   sendStudyMessage,
   resolveRef,
   setFocus,
