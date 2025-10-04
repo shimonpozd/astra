@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { Message as ApiMessage } from '../../services/api';
 import UnifiedMessageRenderer from '../UnifiedMessageRenderer';
 import type { ChatMessage } from '../../types/text';
+import { safeScrollToBottom } from '../../utils/scrollUtils';
 
 // Support both legacy API messages and the newer ChatMessage shape
 type AnyMessage = (ApiMessage | ChatMessage | (ApiMessage & Partial<ChatMessage>)) & {
@@ -100,7 +101,7 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
   // Normalize all messages for consistent rendering
   const uiMessages = messages.map(normalizeMessage);
 
-  // Improved auto-scroll logic
+  // Improved auto-scroll logic (с задержкой для предотвращения конфликтов)
   useEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport) return;
@@ -115,7 +116,7 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
     if (shouldStick) {
       // Use smooth scrolling for small distances, instant for large ones
       const behavior = distance < 800 ? 'smooth' : 'auto';
-      messagesEndRef.current?.scrollIntoView({ behavior });
+      safeScrollToBottom(messagesEndRef.current, behavior, 50);
     }
   }, [uiMessages]);
 

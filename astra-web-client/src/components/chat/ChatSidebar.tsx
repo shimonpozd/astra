@@ -1,15 +1,16 @@
-import { Plus, X } from 'lucide-react';
+import { Plus, X, ChevronDown, ChevronRight, Calendar } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Chat } from '../../services/api';
+import { useState } from 'react';
 
 interface ChatSidebarProps {
   chats: Chat[];
   isLoading: boolean;
   error: string | null;
   selectedChatId: string | null;
-  onSelectChat: (id: string, type: 'chat' | 'study') => void;
+  onSelectChat: (id: string, type: 'chat' | 'study' | 'daily') => void;
   onCreateChat: () => void;
-  onDeleteSession: (id: string, type: 'chat' | 'study') => void;
+  onDeleteSession: (id: string, type: 'chat' | 'study' | 'daily') => void;
 }
 
 export default function ChatSidebar({
@@ -21,6 +22,14 @@ export default function ChatSidebar({
   onCreateChat,
   onDeleteSession,
 }: ChatSidebarProps) {
+  const [isDailyExpanded, setIsDailyExpanded] = useState(true);
+  
+  // Separate daily and regular chats
+  const dailyChats = chats.filter(chat => chat.type === 'daily');
+  const regularChats = chats.filter(chat => chat.type !== 'daily');
+  
+  // Count completed daily chats
+  const completedDailyCount = dailyChats.filter(chat => chat.completed).length;
   return (
     <aside className="border-r panel-outer flex flex-col min-h-0 w-80">
       {/* Header */}
@@ -45,10 +54,66 @@ export default function ChatSidebar({
 
         {!isLoading && !error && (
           <div className="flex flex-col gap-compact overflow-y-auto">
-            {chats.length === 0 ? (
+            {/* Daily Learning Section */}
+            {dailyChats.length > 0 && (
+              <div className="mb-4">
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between p-2 h-auto text-left"
+                  onClick={() => setIsDailyExpanded(!isDailyExpanded)}
+                >
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-red-600" />
+                    <span className="font-medium text-red-700">Daily ({completedDailyCount}/{dailyChats.length})</span>
+                  </div>
+                  {isDailyExpanded ? (
+                    <ChevronDown className="w-4 h-4 text-red-600" />
+                  ) : (
+                    <ChevronRight className="w-4 h-4 text-red-600" />
+                  )}
+                </Button>
+                
+                {isDailyExpanded && (
+                  <div className="mt-2 space-y-1">
+                    {dailyChats.map((chat) => (
+                      <Button
+                        key={chat.session_id}
+                        variant={selectedChatId === chat.session_id ? 'secondary' : 'ghost'}
+                        className="w-full justify-between truncate group px-3 py-2 h-auto bg-red-900/10 hover:bg-red-800/20"
+                        onClick={() => onSelectChat(chat.session_id, chat.type)}
+                      >
+                        <div className="flex items-center gap-2 truncate">
+                          <span className="truncate text-left text-sm">{chat.name}</span>
+                        </div>
+                        
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          {chat.completed ? (
+                            <span className="text-green-600 text-sm">✅</span>
+                          ) : (
+                            <span className="text-red-400 text-sm">⬜</span>
+                          )}
+                          <button
+                            className="p-1 rounded-full hover:bg-muted-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onDeleteSession(chat.session_id, chat.type);
+                            }}
+                          >
+                            <X className="w-3 h-3" />
+                          </button>
+                        </div>
+                      </Button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Regular Chats Section */}
+            {regularChats.length === 0 && dailyChats.length === 0 ? (
               <p className="text-muted-foreground text-sm p-2">No chats found.</p>
             ) : (
-              chats.map((chat) => (
+              regularChats.map((chat) => (
                 <Button
                   key={chat.session_id}
                   variant={selectedChatId === chat.session_id ? 'secondary' : 'ghost'}

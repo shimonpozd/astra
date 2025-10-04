@@ -59,6 +59,7 @@ interface ConfigData {
     };
     overrides?: {
       [key: string]: string;
+      study?: string;
     };
     tasks?: {
       summary?: {
@@ -493,7 +494,7 @@ const GeneralSettings: React.FC = () => {
               <div className="border-t pt-4">
                 <h4 className="text-sm font-medium mb-3">Model Overrides for Tasks</h4>
                 <div className="grid grid-cols-2 gap-4">
-                  {['chat', 'drafter', 'critic', 'meta_reasoner', 'curator', 'summarizer', 'translator', 'lexicon', 'speechify', 'planner', 'summary'].map((task) => (
+                  {['chat', 'drafter', 'critic', 'meta_reasoner', 'curator', 'summarizer', 'translator', 'lexicon', 'speechify', 'planner', 'summary', 'study'].map((task) => (
                     <div className="space-y-2" key={task}>
                       <Label htmlFor={`override-${task}`} className="capitalize">{task} Model</Label>
                       <Input
@@ -1535,7 +1536,7 @@ const GeneralSettings: React.FC = () => {
                 <Input
                   id="brain-port"
                   type="number"
-                  value={config.services?.brain?.port || 8001}
+                  value={config.services?.brain?.port || 7030}
                   onChange={(e) => updateConfig(['services', 'brain', 'port'], parseInt(e.target.value))}
                 />
                 <p className="text-xs text-muted-foreground">

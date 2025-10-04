@@ -416,13 +416,13 @@
     @apply ring-1 ring-border hover:ring-primary/30;
   }
 
-  /* Специальные стили для FocusReader - более тонкие обводки */
+  /* FocusReader - одинарные обводки только при выделении */
   .focus-reader-selected {
-    @apply ring-1 ring-primary ring-offset-1 ring-offset-background;
+    @apply border border-primary;
   }
   
   .focus-reader-active {
-    @apply ring-1 ring-primary/50;
+    @apply border border-primary/50;
   }
 
   /*

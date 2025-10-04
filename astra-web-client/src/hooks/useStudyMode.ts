@@ -10,22 +10,74 @@ export function useStudyMode() {
   const [studySnapshot, setStudySnapshot] = useState<StudySnapshot | null>(null);
   const [canNavigateBack, setCanNavigateBack] = useState(true);
   const [canNavigateForward, setCanNavigateForward] = useState(true);
+  const [isBackgroundLoading, setIsBackgroundLoading] = useState(false);
+  const [segmentPollingInterval, setSegmentPollingInterval] = useState<NodeJS.Timeout | null>(null);
 
-  const startStudy = useCallback(async (textRef: string) => {
+  const startStudy = useCallback(async (textRef: string, existingSessionId?: string) => {
     try {
       setIsLoading(true);
       setError(null);
       
-      const newSessionId = crypto.randomUUID();
-      setStudySessionId(newSessionId);
+      const sessionId = existingSessionId || crypto.randomUUID();
+      setStudySessionId(sessionId);
 
-      const snapshot = await api.setFocus(newSessionId, textRef);
+      const snapshot = await api.setFocus(sessionId, textRef);
+      console.log('🔍 API setFocus response:', snapshot);
       setStudySnapshot(snapshot);
       setCanNavigateBack(true);
       setCanNavigateForward(true);
       setIsActive(true);
 
-      return newSessionId; // Return the new session ID
+      // For Daily Mode, start background loading indicator and polling
+      if (sessionId.startsWith('daily-')) {
+        setIsBackgroundLoading(true);
+        
+        // Start polling for new segments
+        const interval = setInterval(async () => {
+          try {
+            const segmentsData = await api.getDailySegments(sessionId);
+            console.log('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+            
+            if (segmentsData.loaded_segments > 0) {
+              // Update study snapshot with new segments
+              setStudySnapshot(prev => {
+                if (!prev) return prev;
+                return {
+                  ...prev,
+                  segments: segmentsData.segments
+                };
+              });
+              
+              // Stop polling if all segments are loaded
+              if (segmentsData.loaded_segments >= segmentsData.total_segments) {
+                console.log('✅ All segments loaded, stopping polling');
+                clearInterval(interval);
+                setIsBackgroundLoading(false);
+                setSegmentPollingInterval(null);
+              }
+            }
+          } catch (error) {
+            console.error('Failed to poll segments:', error);
+            // Stop polling on error
+            clearInterval(interval);
+            setIsBackgroundLoading(false);
+            setSegmentPollingInterval(null);
+          }
+        }, 1000); // Poll every second
+        
+        setSegmentPollingInterval(interval);
+        
+        // Stop polling after 30 seconds max
+        setTimeout(() => {
+          if (interval) {
+            clearInterval(interval);
+            setIsBackgroundLoading(false);
+            setSegmentPollingInterval(null);
+          }
+        }, 30000);
+      }
+
+      return sessionId; // Return the session ID
 
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to start study mode';
@@ -42,7 +94,14 @@ export function useStudyMode() {
     setStudySnapshot(null);
     setStudySessionId(null);
     setError(null);
-  }, []);
+    
+    // Clear polling interval if exists
+    if (segmentPollingInterval) {
+      clearInterval(segmentPollingInterval);
+      setSegmentPollingInterval(null);
+    }
+    setIsBackgroundLoading(false);
+  }, [segmentPollingInterval]);
 
   const navigateBack = useCallback(async () => {
     if (!studySessionId) return;
@@ -164,8 +223,23 @@ export function useStudyMode() {
 
   const navigateToRef = useCallback(async (ref: string) => {
     if (!studySessionId) return;
+    
+    // Проверяем, есть ли уже этот ref в текущих сегментах
+    const isLocalNavigation = studySnapshot?.segments?.some(segment => segment.ref === ref);
+    
     try {
-      setIsLoading(true);
+      // Показываем loading только для новых ref, не для локальной навигации
+      if (!isLocalNavigation) {
+        setIsLoading(true);
+      }
+      
+      console.log('🧭 NavigateToRef:', { 
+        studySessionId, 
+        ref, 
+        isDaily: studySessionId.startsWith('daily-'),
+        isLocalNavigation 
+      });
+      
       const response = await fetch('/api/study/set_focus', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -186,9 +260,12 @@ export function useStudyMode() {
       const msg = e instanceof Error ? e.message : 'Failed to navigate';
       setError(msg);
     } finally {
-      setIsLoading(false);
+      // Убираем loading только если мы его показывали
+      if (!isLocalNavigation) {
+        setIsLoading(false);
+      }
     }
-  }, [studySessionId]);
+  }, [studySessionId, studySnapshot]);
 
   const loadStudySession = useCallback(async (sessionId: string) => {
     try {
@@ -201,6 +278,69 @@ export function useStudyMode() {
       setCanNavigateBack(true);
       setCanNavigateForward(true);
       setIsActive(true);
+
+      // For Daily Mode, check if all segments are already loaded
+      if (sessionId.startsWith('daily-')) {
+        try {
+          const segmentsData = await api.getDailySegments(sessionId);
+          console.log('📊 Existing session segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+          
+          if (segmentsData.loaded_segments >= segmentsData.total_segments) {
+            console.log('✅ All segments already loaded, no polling needed');
+            setIsBackgroundLoading(false);
+          } else {
+            console.log('🔄 Some segments missing, starting polling');
+            setIsBackgroundLoading(true);
+            
+            // Start polling for remaining segments
+            const interval = setInterval(async () => {
+              try {
+                const segmentsData = await api.getDailySegments(sessionId);
+                console.log('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+                
+                if (segmentsData.loaded_segments > 0) {
+                  // Update study snapshot with new segments
+                  setStudySnapshot(prev => {
+                    if (!prev) return prev;
+                    return {
+                      ...prev,
+                      segments: segmentsData.segments
+                    };
+                  });
+                  
+                  // Stop polling if all segments are loaded
+                  if (segmentsData.loaded_segments >= segmentsData.total_segments) {
+                    console.log('✅ All segments loaded, stopping polling');
+                    clearInterval(interval);
+                    setIsBackgroundLoading(false);
+                    setSegmentPollingInterval(null);
+                  }
+                }
+              } catch (error) {
+                console.error('Failed to poll segments:', error);
+                // Stop polling on error
+                clearInterval(interval);
+                setIsBackgroundLoading(false);
+                setSegmentPollingInterval(null);
+              }
+            }, 1000);
+            
+            setSegmentPollingInterval(interval);
+            
+            // Stop polling after 30 seconds max
+            setTimeout(() => {
+              if (interval) {
+                clearInterval(interval);
+                setIsBackgroundLoading(false);
+                setSegmentPollingInterval(null);
+              }
+            }, 30000);
+          }
+        } catch (error) {
+          console.error('Failed to check existing segments:', error);
+          setIsBackgroundLoading(false);
+        }
+      }
 
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to load study session';
@@ -235,6 +375,7 @@ export function useStudyMode() {
     navigateForward,
     canNavigateBack,
     canNavigateForward,
+    isBackgroundLoading,
     workbenchSet,
     workbenchFocus,
     focusMainText,

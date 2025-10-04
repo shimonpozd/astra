@@ -34,6 +34,15 @@ export interface FocusReaderProps {
   showMinimap?: boolean;
   fontSize?: 'small' | 'medium' | 'large';
   lineHeight?: 'compact' | 'normal' | 'relaxed';
+  isDailyMode?: boolean; // Flag to show special loading for Daily Mode
+  isBackgroundLoading?: boolean; // Flag to show background loading progress
+  // Navigation props
+  onBack?: () => void;
+  onForward?: () => void;
+  onExit?: () => void;
+  currentRef?: string;
+  canBack?: boolean;
+  canForward?: boolean;
 }
 
 // Message rendering types

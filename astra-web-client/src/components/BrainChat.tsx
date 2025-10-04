@@ -46,11 +46,18 @@ export default function BrainChat({
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Добавляем задержку чтобы избежать конфликтов с другими скроллами
+    const timeoutId = setTimeout(() => {
+      scrollToBottom();
+    }, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, [messages, researchState]);
 
   useEffect(() => {
@@ -240,7 +247,7 @@ export default function BrainChat({
     setConnectionError(null);
 
     try {
-      const response = await fetch('http://localhost:8001/health', {
+      const response = await fetch('http://localhost:7030/health', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

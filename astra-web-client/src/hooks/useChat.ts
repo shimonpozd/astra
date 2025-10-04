@@ -27,14 +27,43 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
   const [isLoadingMessages, setIsLoadingMessages] = useState(false);
   const [isSending, setIsSending] = useState(false);
 
-  // Load initial chat list
+  // Load initial chat list including daily chats
   useEffect(() => {
     async function loadChats() {
       try {
         setIsLoading(true);
         setError(null);
-        const chatList = await api.getChatList();
-        setChats(chatList);
+        
+        // Load regular chats and daily virtual chats in parallel
+        const [chatList, dailyCalendar] = await Promise.all([
+          api.getChatList(),
+          api.getDailyCalendar()
+        ]);
+        
+        console.log('📅 Daily calendar loaded:', dailyCalendar);
+        
+        // Convert daily calendar to Chat format
+        const dailyChats: Chat[] = dailyCalendar.map(item => ({
+          session_id: item.session_id,
+          name: item.title, // Just the title: "Daf Yomi", "Parashat Hashavua", etc.
+          last_modified: item.date, // Use date as last_modified for sorting
+          type: 'daily' as const,
+          completed: false // Will be updated when we check if session exists
+        }));
+        
+        console.log('📚 Daily chats created:', dailyChats);
+        
+        // Combine and sort (daily chats first, then by last_modified)
+        const allChats = [...dailyChats, ...chatList].sort((a, b) => {
+          // Daily chats always come first
+          if (a.type === 'daily' && b.type !== 'daily') return -1;
+          if (a.type !== 'daily' && b.type === 'daily') return 1;
+          
+          // Within same type, sort by last_modified (newest first)
+          return new Date(b.last_modified).getTime() - new Date(a.last_modified).getTime();
+        });
+        
+        setChats(allChats);
       } catch (e) {
         const errorMessage = e instanceof Error ? e.message : 'An unknown error occurred';
         setError(errorMessage);
@@ -98,7 +127,7 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
     }
   }, [navigate, selectedChatId]);
 
-  const deleteSession = useCallback(async (sessionId: string, sessionType: 'chat' | 'study') => {
+  const deleteSession = useCallback(async (sessionId: string, sessionType: 'chat' | 'study' | 'daily') => {
     try {
       await api.deleteSession(sessionId, sessionType);
       setChats((prev) => prev.filter((chat) => chat.session_id !== sessionId));

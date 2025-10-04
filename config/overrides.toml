@@ -4,22 +4,27 @@
 
 [llm]
 provider = "openrouter"
-model = "openrouter/x-ai/grok-4-fast:free"
+model = "openrouter/deepseek/deepseek-chat-v3.1:free"
 
 [llm.overrides]
-lexicon = "openrouter/x-ai/grok-4-fast:free"
-translator = "openrouter/x-ai/grok-4-fast:free"
-curator = "openrouter/x-ai/grok-4-fast:free"
-chat = "openrouter/x-ai/grok-4-fast:free"
-drafter = "openrouter/x-ai/grok-4-fast:free"
-critic = "openrouter/x-ai/grok-4-fast:free"
-meta_reasoner = "openrouter/x-ai/grok-4-fast:free"
-summarizer = "openrouter/x-ai/grok-4-fast:free"
-planner = "openrouter/x-ai/grok-4-fast:free"
-speechify = "openrouter/x-ai/grok-4-fast:free"
+lexicon = "openrouter/deepseek/deepseek-chat-v3.1:free"
+translator = "openrouter/deepseek/deepseek-chat-v3.1:free"
+curator = "openrouter/deepseek/deepseek-chat-v3.1:free"
+chat = "openrouter/deepseek/deepseek-chat-v3.1:free"
+drafter = "openrouter/deepseek/deepseek-chat-v3.1:free"
+critic = "openrouter/deepseek/deepseek-chat-v3.1:free"
+meta_reasoner = "openrouter/deepseek/deepseek-chat-v3.1:free"
+summarizer = "openrouter/deepseek/deepseek-chat-v3.1:free"
+planner = "openrouter/deepseek/deepseek-chat-v3.1:free"
+speechify = "openrouter/deepseek/deepseek-chat-v3.1:free"
+summary = "openrouter/deepseek/deepseek-chat-v3.1:free"
+study = "openrouter/deepseek/deepseek-chat-v3.1:free"
 
 [actions.context]
 study_mode_context = "hebrew_and_english"
 
 [llm.api.openrouter]
 api_key = "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"
+
+[services.brain.sefaria]
+api_url = "https://www.sefaria.org/api/"

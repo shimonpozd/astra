@@ -2,6 +2,7 @@ import { useState, memo, useMemo, useEffect, useRef } from "react";
 import { BookOpen, ChevronDown, ChevronUp, Languages } from "lucide-react";
 import { containsHebrew } from "../../utils/hebrewUtils";
 import { useTranslation } from "../../hooks/useTranslation";
+import { safeScrollIntoView } from "../../utils/scrollUtils";
 // Note: Tooltip import would be added if using shadcn/ui
 
 // Типы
@@ -29,8 +30,12 @@ interface WorkbenchPanelProps {
   item: WorkbenchItem | null;
   active: boolean;
   selected?: boolean;
-  onDropRef: (ref: string) => void;
-  onClick: () => void;
+  onDropRef: (ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
+  onPanelClick?: () => void; // Выделение панели при любом клике
+  onBorderClick?: () => void; // Фокус чата только при клике по границе
   className?: string;
   size?: 'compact' | 'normal' | 'expanded';
   hebrewScale?: number;           // default 1.35
@@ -42,13 +47,59 @@ interface WorkbenchPanelProps {
 // Утилиты
 const isDragDataValid = (dataTransfer: DataTransfer): boolean => {
   return dataTransfer.types.includes('text/astra-commentator-ref') ||
-         dataTransfer.types.includes('text/plain');
+         dataTransfer.types.includes('text/plain') ||
+         dataTransfer.types.includes('text/astra-group') ||
+         dataTransfer.types.includes('text/astra-part');
 };
 
 const extractRefFromTransfer = (dataTransfer: DataTransfer): string | null => {
   return dataTransfer.getData('text/astra-commentator-ref') ||
          dataTransfer.getData('text/plain') ||
          null;
+};
+
+// Новая функция для извлечения данных о группе или части
+const extractDragData = (dataTransfer: DataTransfer): {
+  ref: string;
+  type: 'single' | 'group' | 'part';
+  data?: any;
+} | null => {
+  const ref = extractRefFromTransfer(dataTransfer);
+  if (!ref) return null;
+
+  // Проверяем, есть ли данные о группе
+  const groupData = dataTransfer.getData('text/astra-group');
+  if (groupData) {
+    try {
+      return {
+        ref,
+        type: 'group',
+        data: JSON.parse(groupData)
+      };
+    } catch (e) {
+      console.warn('Failed to parse group data:', e);
+    }
+  }
+
+  // Проверяем, есть ли данные о части
+  const partData = dataTransfer.getData('text/astra-part');
+  if (partData) {
+    try {
+      return {
+        ref,
+        type: 'part',
+        data: JSON.parse(partData)
+      };
+    } catch (e) {
+      console.warn('Failed to parse part data:', e);
+    }
+  }
+
+  // Обычный single ref
+  return {
+    ref,
+    type: 'single'
+  };
 };
 
 const getTextDirection = (text?: string): 'ltr' | 'rtl' => {
@@ -63,7 +114,8 @@ const WorkbenchContainer = memo(({
   active,
   selected,
   onDragHandlers,
-  onClick,
+  onPanelClick,
+  onBorderClick,
   className
 }: {
   children: React.ReactNode;
@@ -71,7 +123,8 @@ const WorkbenchContainer = memo(({
   active: boolean;
   selected?: boolean;
   onDragHandlers: any;
-  onClick: () => void;
+  onPanelClick?: () => void; // Выделение панели при любом клике  
+  onBorderClick?: () => void; // Фокус чата только при клике по границе
   className: string;
 }) => {
   const stateClasses = useMemo(() => {
@@ -83,11 +136,20 @@ const WorkbenchContainer = memo(({
   return (
     <div
       className={`
-        h-full flex flex-col rounded-xl border border-border/60 transition-all duration-300 ease-in-out
+        h-full flex flex-col rounded-xl border border-border/60 transition-all duration-300 ease-in-out overflow-y-auto
         ${stateClasses} ${className} ${selected ? 'panel-selected' : ''}
       `}
       {...onDragHandlers}
-      onClick={onClick}
+      onClick={(e: React.MouseEvent) => {
+        // Выделение панели - при любом клике
+        if (onPanelClick) {
+          onPanelClick();
+        }
+        // Фокус чата - только при клике по границе (не по контенту)
+        if (e.target === e.currentTarget && onBorderClick) {
+          onBorderClick();
+        }
+      }}
       role="button"
       tabIndex={0}
       aria-label="Workbench panel"
@@ -178,10 +240,14 @@ const WorkbenchContent = memo(({
 }) => {
   const articleRef = useRef<HTMLElement>(null);
 
-  // Автоцентрирование при активации
+  // Автоцентрирование при активации (с защитой от конфликтов)
   useEffect(() => {
     if (active && articleRef.current) {
-      articleRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Увеличиваем задержку для предотвращения мигания при drag&drop
+      safeScrollIntoView(articleRef.current, {
+        behavior: 'smooth',
+        block: 'center'
+      }, 300);
     }
   }, [active]);
 
@@ -273,7 +339,10 @@ const EmptyWorkbenchPanel = memo(({
   onDrop
 }: {
   title: string;
-  onDrop: (ref: string) => void;
+  onDrop: (ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
 }) => {
   const [isOver, setIsOver] = useState(false);
 
@@ -297,8 +366,21 @@ const EmptyWorkbenchPanel = memo(({
       onDrop={(e) => {
         e.preventDefault();
         setIsOver(false);
-        const ref = extractRefFromTransfer(e.dataTransfer);
-        if (ref) onDrop(ref);
+        const dragData = extractDragData(e.dataTransfer);
+        if (dragData) {
+          console.log('Dropped in empty workbench:', dragData);
+          if (dragData.type === 'group') {
+            console.log('Dropped group with refs:', dragData.data?.refs);
+            // TODO: Здесь можно добавить специальную обработку для групп
+            // Пока используем первый ref из группы
+          } else if (dragData.type === 'part') {
+            console.log('Dropped individual part:', dragData.data?.ref);
+          }
+          onDrop(dragData.ref, {
+            type: dragData.type,
+            data: dragData.data
+          });
+        }
       }}
     >
       <div className="w-16 h-16 rounded-full border border-current/20 flex items-center justify-center mb-4">
@@ -321,7 +403,8 @@ const WorkbenchPanelInline = memo(({
   active,
   selected = false,
   onDropRef,
-  onClick,
+  onPanelClick,
+  onBorderClick,
   size = 'normal',
   hebrewScale = 1.35,
   hebrewLineHeight = 'relaxed',
@@ -331,18 +414,18 @@ const WorkbenchPanelInline = memo(({
   const [isOver, setIsOver] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Размеры для разных режимов - только каркас панели
+  // Размеры для разных режимов - ограничиваем высоту чтобы не превышать FocusReader
   const sizeConfig = {
     compact: {
-      minHeight: 'min-h-[220px]',
+      minHeight: 'h-full max-h-[400px]', // фиксированная высота с ограничением
       baseTextSize: 'text-lg' // для латиницы/английского
     },
     normal: {
-      minHeight: 'min-h-[320px]',
+      minHeight: 'h-full max-h-[500px]',
       baseTextSize: 'text-xl'
     },
     expanded: {
-      minHeight: 'min-h-[460px]',
+      minHeight: 'h-full max-h-[600px]',
       baseTextSize: 'text-2xl'
     }
   }[size];
@@ -357,28 +440,44 @@ const WorkbenchPanelInline = memo(({
   }
 
   return (
-    <WorkbenchContainer
-      isOver={isOver}
-      active={active}
-      selected={selected}
-      onDragHandlers={{
-        onDragOver: (e: React.DragEvent) => {
-          if (isDragDataValid(e.dataTransfer)) {
-            e.preventDefault();
-            setIsOver(true);
-          }
-        },
-        onDragLeave: () => setIsOver(false),
-        onDrop: (e: React.DragEvent) => {
+    <div
+      onDragOver={(e: React.DragEvent) => {
+        if (isDragDataValid(e.dataTransfer)) {
           e.preventDefault();
-          setIsOver(false);
-          const ref = extractRefFromTransfer(e.dataTransfer);
-          if (ref) onDropRef(ref);
+          setIsOver(true);
         }
       }}
-      onClick={onClick}
+      onDragLeave={() => setIsOver(false)}
+      onDrop={(e: React.DragEvent) => {
+        e.preventDefault();
+        setIsOver(false);
+        const dragData = extractDragData(e.dataTransfer);
+        if (dragData) {
+          console.log('Dropped in workbench:', dragData);
+          if (dragData.type === 'group') {
+            console.log('Dropped group with refs:', dragData.data?.refs);
+            // TODO: Здесь можно добавить специальную обработку для групп
+            // Пока используем первый ref из группы
+          } else if (dragData.type === 'part') {
+            console.log('Dropped individual part:', dragData.data?.ref);
+          }
+          onDropRef(dragData.ref, {
+            type: dragData.type,
+            data: dragData.data
+          });
+        }
+      }}
       className={sizeConfig.minHeight}
     >
+      <WorkbenchContainer
+        isOver={isOver}
+        active={active}
+        selected={selected}
+        onPanelClick={onPanelClick}
+        onBorderClick={onBorderClick}
+        onDragHandlers={{}}
+        className=""
+      >
       <WorkbenchHeader
         item={item}
         isExpanded={isExpanded}
@@ -396,7 +495,8 @@ const WorkbenchPanelInline = memo(({
         hebrewLineHeight={hebrewLineHeight}
         maxWidth={maxWidth}
       />
-    </WorkbenchContainer>
+      </WorkbenchContainer>
+    </div>
   );
 });
 

@@ -3,7 +3,8 @@ export interface Chat {
   session_id: string;
   name: string;
   last_modified: string;
-  type: 'chat' | 'study';
+  type: 'chat' | 'study' | 'daily';
+  completed?: boolean; // For daily chats
 }
 
 export interface Message {
@@ -61,6 +62,68 @@ async function getChatList(): Promise<Chat[]> {
   }
 }
 
+interface VirtualDailyChat {
+  session_id: string;
+  title: string;
+  he_title: string;
+  display_value: string;
+  he_display_value: string;
+  ref: string;
+  category: string;
+  order: number;
+  date: string;
+  exists: boolean;
+}
+
+async function getDailyCalendar(): Promise<VirtualDailyChat[]> {
+  try {
+    // Get virtual daily chats from backend
+    const response = await fetch(`${API_BASE}/daily/calendar`);
+    if (!response.ok) {
+      throw new Error(`Failed to get daily calendar: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data.virtual_chats || [];
+  } catch (error) {
+    console.error("Failed to fetch daily calendar:", error);
+    return [];
+  }
+}
+
+async function createDailySessionLazy(sessionId: string): Promise<boolean> {
+  try {
+    const response = await fetch(`${API_BASE}/daily/create/${sessionId}`, {
+      method: 'POST'
+    });
+    if (!response.ok) {
+      throw new Error(`Failed to create daily session: ${response.statusText}`);
+    }
+    const result = await response.json();
+    return result.created || false;
+  } catch (error) {
+    console.error("Failed to create daily session:", error);
+    return false;
+  }
+}
+
+async function getDailySegments(sessionId: string): Promise<{
+  session_id: string;
+  segments: any[];
+  total_segments: number;
+  loaded_segments: number;
+}> {
+  try {
+    const response = await fetch(`${API_BASE}/daily/${sessionId}/segments`);
+    if (!response.ok) {
+      throw new Error(`Failed to get daily segments: ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Failed to get daily segments:", error);
+    throw error;
+  }
+}
+
 async function getChatHistory(sessionId: string): Promise<Message[]> {
   try {
     // Corresponds to backend endpoint GET /chats/{sessionId}
@@ -90,7 +153,7 @@ async function deleteChat(sessionId: string): Promise<void> {
   }
 }
 
-async function deleteSession(sessionId: string, sessionType: 'chat' | 'study'): Promise<void> {
+async function deleteSession(sessionId: string, sessionType: 'chat' | 'study' | 'daily'): Promise<void> {
   try {
     const response = await fetch(`${API_BASE}/sessions/${sessionId}/${sessionType}`, {
       method: 'DELETE',
@@ -213,7 +276,12 @@ async function setFocus(sessionId: string, ref: string): Promise<any> {
   const response = await fetch(`${API_BASE}/study/set_focus`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ session_id: sessionId, ref }),
+    body: JSON.stringify({ 
+      session_id: sessionId, 
+      ref,
+      window_size: 5,
+      navigation_type: "drill_down"
+    }),
   });
   if (!response.ok) {
     throw new Error('Failed to set focus');
@@ -524,4 +592,7 @@ export const api = {
   getBookshelfCategories,
   getBookshelfItems,
   explainTerm,
+  getDailyCalendar,
+  createDailySessionLazy,
+  getDailySegments,
 };

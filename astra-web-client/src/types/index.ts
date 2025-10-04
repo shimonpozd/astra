@@ -186,6 +186,9 @@ export interface StreamHandler {
   onInternalQuestions?: (data: any) => void;
   onCommentatorsList?: (data: { reference: string; commentators: Array<{ anchorRef?: string; category?: string; sourceHeRef?: string; sourceRef?: string; commentator?: string }> }) => void;
   onCommentatorsPanelUpdate?: (data: CommentatorsPanelUpdateEvent['data']) => void;
+  onBlockStart?: (blockData: any) => void;
+  onBlockDelta?: (blockData: any) => void;
+  onBlockComplete?: (blockData: any) => void;
   onError?: (error: ErrorEvent['data']) => void;
   onComplete?: () => void;
 }

@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { StudySnapshot } from '../../types/study';
 import { ContinuousText } from '../../types/text';
 import FocusReader from './FocusReader';
-import StudyToolbar from './StudyToolbar';
 import ChatViewport from '../chat/ChatViewport';
 import MessageComposer from '../chat/MessageComposer';
 import WorkbenchPanelInline from './WorkbenchPanelInline';
@@ -25,9 +24,15 @@ interface StudyModeProps {
   setIsSending: (sending: boolean) => void;
   setMessages: React.Dispatch<React.SetStateAction<any[]>>;
   agentId: string;
-  onWorkbenchSet: (side: 'left' | 'right', ref: string) => void;
+  onWorkbenchSet: (side: 'left' | 'right', ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
   onWorkbenchFocus: (side: 'left' | 'right') => void;
-  onWorkbenchDrop?: (side: 'left' | 'right', ref: string) => void;
+  onWorkbenchDrop?: (side: 'left' | 'right', ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
   onFocusClick?: () => void;
   onNavigateToRef?: (ref: string) => void;
   // onLexiconLookup removed - now using global lexicon store
@@ -35,6 +40,8 @@ interface StudyModeProps {
   // Panel selection props
   selectedPanelId?: string | null;
   onSelectedPanelChange?: (panelId: string | null) => void;
+  // Background loading prop
+  isBackgroundLoading?: boolean;
 }
 
 export default function StudyMode({
@@ -61,6 +68,7 @@ export default function StudyMode({
   refreshStudySnapshot,
   selectedPanelId: propSelectedPanelId,
   onSelectedPanelChange,
+  isBackgroundLoading = false,
 }: StudyModeProps) {
   // Use props if provided, otherwise fall back to local state
   const [localSelectedPanelId, setLocalSelectedPanelId] = useState<string | null>(null);
@@ -70,8 +78,9 @@ export default function StudyMode({
   // New lexicon system using global store
   const { setSelection, fetchExplanation } = useLexiconStore();
 
-  // Panel selection handlers
-  const handlePanelClick = (panelId: string) => {
+  // Panel selection handlers (с защитой от множественных кликов)
+  const handlePanelClick = useCallback((panelId: string) => {
+    // Предотвращаем множественные клики
     if (selectedPanelId === panelId) {
       // Deselect if clicking the same panel
       setSelectedPanelId(null);
@@ -79,7 +88,7 @@ export default function StudyMode({
       // Select the clicked panel
       setSelectedPanelId(panelId);
     }
-  };
+  }, [selectedPanelId, setSelectedPanelId]);
 
   // Get current study mode
   const studyMode = selectedPanelId ? 'iyun' : 'girsa';
@@ -126,37 +135,59 @@ export default function StudyMode({
   }, [setSelection, fetchExplanation]);
   // Конвертация snapshot в continuousText для нового FocusReader
   const continuousText: ContinuousText | null = snapshot ? {
-    segments: snapshot.segments,
-    focusIndex: snapshot.focusIndex,
-    totalLength: snapshot.segments.length,
-    title: snapshot.ref,
+    segments: snapshot.segments || [],
+    focusIndex: snapshot.focusIndex ?? 0,
+    totalLength: snapshot.segments?.length || 0,
+    title: snapshot.ref || '',
     collection: '' // This field is not critical for the reader component
   } : null;
 
+  // Debug logging for segments
+  console.log('📖 StudyMode segments:', {
+    hasSnapshot: !!snapshot,
+    segmentsCount: snapshot?.segments?.length || 0,
+    focusIndex: snapshot?.focusIndex,
+    ref: snapshot?.ref,
+    firstSegment: snapshot?.segments?.[0] ? {
+      ref: snapshot.segments[0].ref,
+      text: snapshot.segments[0].text?.substring(0, 50) + '...',
+      heText: snapshot.segments[0].heText?.substring(0, 50) + '...'
+    } : null,
+    lastSegment: snapshot?.segments?.[snapshot.segments.length - 1]?.ref,
+    continuousText: continuousText,
+    navigationProps: {
+      canBack: canNavigateBack,
+      canForward: canNavigateForward,
+      currentRef: snapshot?.ref
+    }
+  });
+
   return (
     <div className="flex flex-col h-full panel-inner">
-      <StudyToolbar
-        onBack={onNavigateBack}
-        onForward={onNavigateForward}
-        onExit={onExit}
-        isLoading={isLoading}
-        canBack={canNavigateBack}
-        canForward={canNavigateForward}
-      />
-      <div className="flex-1 min-h-0 flex flex-col">
-        {/* Upper flexible height - Workbench and Focus */}
+      <div className="h-[calc(260vh-360px+160px)] min-h-0 flex flex-col">
+        {/* Upper fixed height - Workbench and Focus (+160px) */}
         <div className="flex-1 min-h-0 panel-padding">
           <div className="h-full grid grid-cols-[300px_1fr_300px] gap-spacious min-h-0">
             {/* Left Workbench */}
-            <div className="min-h-0">
+            <div className="min-h-0 max-h-full overflow-hidden">
               <WorkbenchPanelInline
                 title="Левая панель"
                 item={snapshot?.workbench?.left || null}
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.left?.ref}
                 selected={selectedPanelId === 'left_workbench'}
-                onDropRef={(ref: string) => onWorkbenchDrop ? onWorkbenchDrop('left', ref) : onWorkbenchSet('left', ref)}
-                onClick={() => {
+                onDropRef={(ref: string, dragData) => {
+                  console.log('StudyMode: Dropped on left workbench:', ref, dragData);
+                  if (dragData?.type === 'group') {
+                    console.log('Group data:', dragData.data);
+                    // TODO: Здесь можно добавить специальную обработку для групп
+                    // Например, добавить все части группы в workbench или показать специальный UI
+                  }
+                  onWorkbenchDrop ? onWorkbenchDrop('left', ref, dragData) : onWorkbenchSet('left', ref, dragData);
+                }}
+                onPanelClick={() => {
                   handlePanelClick('left_workbench');
+                }}
+                onBorderClick={() => {
                   onWorkbenchFocus('left');
                 }}
               />
@@ -164,20 +195,34 @@ export default function StudyMode({
 
             {/* Focus Reader */}
             <div
-              className={`bg-card/60 rounded-lg border overflow-hidden transition-all min-h-0 cursor-pointer ${
+              className={`bg-card/60 rounded-lg overflow-hidden transition-all min-h-0 ${
                 selectedPanelId === 'focus' ? 'focus-reader-selected' : 
-                snapshot?.discussion_focus_ref === snapshot?.ref ? 'focus-reader-active' : ''
+                snapshot?.discussion_focus_ref === snapshot?.ref ? 'focus-reader-active' : 'border border-border/60'
               }`}
-              onClick={() => {
+              onClick={(e) => {
+                // Выделение панели - при любом клике (нужно для общения с LLM)
                 handlePanelClick('focus');
-                onFocusClick && onFocusClick();
+                // Фокус чата - только при клике по границе (не по контенту)
+                if (e.target === e.currentTarget) {
+                  onFocusClick && onFocusClick();
+                }
               }}
             >
               <FocusReader
                 continuousText={continuousText}
+                isLoading={isLoading}
                 onSegmentClick={(segment) => onNavigateToRef && onNavigateToRef(segment.ref)}
                 onNavigateToRef={onNavigateToRef}
                 onLexiconDoubleClick={handleLexiconDoubleClick}
+                isDailyMode={studySessionId?.startsWith('daily-') || false}
+                isBackgroundLoading={isBackgroundLoading}
+                // Navigation props
+                onBack={onNavigateBack}
+                onForward={onNavigateForward}
+                onExit={onExit}
+                currentRef={snapshot?.ref}
+                canBack={canNavigateBack}
+                canForward={canNavigateForward}
               />
             </div>
 
@@ -188,9 +233,19 @@ export default function StudyMode({
                 item={snapshot?.workbench?.right || null}
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.right?.ref}
                 selected={selectedPanelId === 'right_workbench'}
-                onDropRef={(ref: string) => onWorkbenchDrop ? onWorkbenchDrop('right', ref) : onWorkbenchSet('right', ref)}
-                onClick={() => {
+                onDropRef={(ref: string, dragData) => {
+                  console.log('StudyMode: Dropped on right workbench:', ref, dragData);
+                  if (dragData?.type === 'group') {
+                    console.log('Group data:', dragData.data);
+                    // TODO: Здесь можно добавить специальную обработку для групп
+                    // Например, добавить все части группы в workbench или показать специальный UI
+                  }
+                  onWorkbenchDrop ? onWorkbenchDrop('right', ref, dragData) : onWorkbenchSet('right', ref, dragData);
+                }}
+                onPanelClick={() => {
                   handlePanelClick('right_workbench');
+                }}
+                onBorderClick={() => {
                   onWorkbenchFocus('right');
                 }}
               />

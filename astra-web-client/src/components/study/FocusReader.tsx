@@ -1,10 +1,19 @@
-import { memo, useRef, useEffect, forwardRef } from 'react';
+import { memo, useRef, useEffect, forwardRef, useState } from 'react';
 import { FocusReaderProps, TextSegment } from '../../types/text';
 import { getTextDirection } from '../../utils/textUtils';
 import { containsHebrew } from '../../utils/hebrewUtils';
 import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
 import { useTranslation } from '../../hooks/useTranslation';
-import { Languages } from 'lucide-react';
+import NavigationPanel from './NavigationPanel';
+import { 
+  Languages, 
+  Settings,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
+  ChevronUp,
+  ChevronDown
+} from 'lucide-react';
 
 const FocusReader = memo(({
   continuousText,
@@ -14,9 +23,20 @@ const FocusReader = memo(({
   onNavigateToRef,
   onLexiconDoubleClick,
   fontSize = 'medium',
-  lineHeight = 'normal'
+  lineHeight = 'normal',
+  // Navigation props
+  onBack,
+  onForward,
+  onExit,
+  currentRef,
+  canBack = false,
+  canForward = false
 }: FocusReaderProps) => {
   const focusRef = useRef<HTMLElement>(null);
+  
+  // Состояние панелей
+  const [showSettings, setShowSettings] = useState(false);
+  const [globalTranslation, setGlobalTranslation] = useState(false);
 
   // Автоскролл к фокусу при изменении
   useEffect(() => {
@@ -65,46 +85,153 @@ const FocusReader = memo(({
     );
   }
 
+  // Отладочная информация
+  console.log('FocusReader render:', {
+    hasContinuousText: !!continuousText,
+    segmentsCount: continuousText?.segments?.length || 0,
+    focusIndex: continuousText?.focusIndex,
+    currentRef,
+    canBack,
+    canForward
+  });
+
   return (
-    <div className="h-full relative">
-      {/* Overlay Navigation Buttons */}
-      <div className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex flex-col gap-1">
-        <button
-          onClick={() => {
-            const newIndex = Math.max(0, continuousText.focusIndex - 1);
-            onNavigateToRef?.(continuousText.segments[newIndex].ref);
-          }}
-          disabled={continuousText.focusIndex <= 0}
-          className="w-8 h-8 rounded-full bg-card/80 hover:bg-card border shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm"
-          title="Previous segment (↑)"
-        >
-          ↑
-        </button>
-        <button
-          onClick={() => {
-            const newIndex = Math.min(continuousText.segments.length - 1, continuousText.focusIndex + 1);
-            onNavigateToRef?.(continuousText.segments[newIndex].ref);
-          }}
-          disabled={continuousText.focusIndex >= continuousText.segments.length - 1}
-          className="w-8 h-8 rounded-full bg-card/80 hover:bg-card border shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-sm"
-          title="Next segment (↓)"
-        >
-          ↓
-        </button>
+    <div className="h-full flex flex-col bg-background">
+      {/* Навигационная панель */}
+      <div className="flex-shrink-0 border-b panel-outer">
+        <div className="flex items-center gap-3 p-3">
+          {/* Кнопки навигации - слева */}
+          <div className="flex items-center gap-1">
+            <button
+              onClick={onBack}
+              disabled={isLoading || !canBack}
+              className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
+              title="Вверх"
+            >
+              <ChevronUp className="w-3 h-3" />
+            </button>
+            <button
+              onClick={onForward}
+              disabled={isLoading || !canForward}
+              className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
+              title="Вниз"
+            >
+              <ChevronDown className="w-3 h-3" />
+            </button>
+          </div>
+          
+          {/* NavigationPanel - в центре */}
+          <div className="flex-1">
+            <NavigationPanel 
+              currentRef={currentRef}
+              onNavigate={onNavigateToRef || (() => {})}
+            />
+          </div>
+          
+          {/* Остальные кнопки - справа */}
+          <div className="flex items-center gap-1">
+            {/* Кнопка перевода */}
+            <button
+              onClick={() => setGlobalTranslation(!globalTranslation)}
+              className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
+                globalTranslation 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+              }`}
+              title={globalTranslation ? "Показать оригинал" : "Перевести"}
+            >
+              <Languages className="w-3 h-3" />
+            </button>
+            
+            {/* Кнопка настроек */}
+            <button
+              onClick={() => setShowSettings(!showSettings)}
+              className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
+                showSettings 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+              }`}
+              title="Настройки"
+            >
+              <Settings className="w-3 h-3" />
+            </button>
+            
+            {/* Кнопка выхода */}
+            <button
+              onClick={onExit}
+              disabled={isLoading}
+              className="flex items-center gap-1 px-2 py-1 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded transition-colors disabled:opacity-50 text-xs"
+              title="Выход"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Text Content */}
-      <div className="h-full overflow-hidden">
-        <ContinuousTextFlow
-          segments={continuousText.segments}
-          focusIndex={continuousText.focusIndex}
-          onSegmentClick={onSegmentClick}
-          onNavigateToRef={onNavigateToRef}
-          onLexiconDoubleClick={onLexiconDoubleClick}
-          fontSize={fontSize}
-          lineHeight={lineHeight}
-          focusRef={focusRef}
-        />
+      {/* Основной контент */}
+      <div className="flex-1 flex overflow-hidden">
+        {/* Текст */}
+        <div className="flex-1 relative overflow-hidden">
+          <ContinuousTextFlow
+            segments={continuousText.segments}
+            focusIndex={continuousText.focusIndex}
+            onSegmentClick={onSegmentClick}
+            onNavigateToRef={onNavigateToRef}
+            onLexiconDoubleClick={onLexiconDoubleClick}
+            fontSize={fontSize}
+            lineHeight={lineHeight}
+            focusRef={focusRef}
+            globalTranslation={globalTranslation}
+          />
+        </div>
+        
+        {/* Панель настроек */}
+        {showSettings && (
+          <div className="w-64 border-l panel-outer bg-background">
+            <div className="p-4 border-b">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <Settings className="w-5 h-5" />
+                Настройки
+              </h3>
+            </div>
+            <div className="p-4 space-y-4">
+              {/* Размер шрифта */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Размер шрифта</label>
+                <div className="flex items-center gap-2">
+                  <button className="p-1 hover:bg-muted rounded">
+                    <ZoomOut className="w-4 h-4" />
+                  </button>
+                  <span className="text-sm px-2 py-1 bg-muted rounded">{fontSize}</span>
+                  <button className="p-1 hover:bg-muted rounded">
+                    <ZoomIn className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              
+              {/* Межстрочный интервал */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Интервал</label>
+                <div className="flex items-center gap-2">
+                  <button className="p-1 hover:bg-muted rounded">
+                    <ChevronUp className="w-4 h-4" />
+                  </button>
+                  <span className="text-sm px-2 py-1 bg-muted rounded">{lineHeight}</span>
+                  <button className="p-1 hover:bg-muted rounded">
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              
+              {/* Сброс */}
+              <button className="w-full flex items-center gap-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors">
+                <RotateCcw className="w-4 h-4" />
+                <span className="text-sm">Сбросить</span>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -121,7 +248,8 @@ const ContinuousTextFlow = memo(({
   onLexiconDoubleClick,
   fontSize,
   lineHeight,
-  focusRef
+  focusRef,
+  globalTranslation = false
 }: {
   segments: TextSegment[];
   focusIndex: number;
@@ -131,13 +259,8 @@ const ContinuousTextFlow = memo(({
   fontSize: 'small' | 'medium' | 'large';
   lineHeight: 'compact' | 'normal' | 'relaxed';
   focusRef: React.RefObject<HTMLElement>;
+  globalTranslation?: boolean;
 }) => {
-  const baseTextSize = {
-    small: 'text-lg',
-    medium: 'text-xl',
-    large: 'text-2xl'
-  }[fontSize];
-
   const focusTextSize = {
     small: 'text-xl',
     medium: 'text-2xl',
@@ -150,10 +273,27 @@ const ContinuousTextFlow = memo(({
     relaxed: 'leading-loose'
   }[lineHeight];
 
+  // Отладочная информация
+  console.log('ContinuousTextFlow render:', {
+    segmentsCount: segments.length,
+    focusIndex,
+    firstSegment: segments[0] ? {
+      ref: segments[0].ref,
+      text: segments[0].text?.substring(0, 50) + '...',
+      heText: segments[0].heText?.substring(0, 50) + '...'
+    } : null
+  });
+
   return (
-    <div className="h-full overflow-y-auto px-8 py-6 scroll-smooth">
+    <div className="h-full overflow-y-auto px-8 py-6 scroll-smooth panel-inner">
       <article className={`max-w-4xl mx-auto ${lineHeightClass}`}>
-        {segments.map((segment, index) => {
+        {segments.length === 0 ? (
+          <div className="text-center text-muted-foreground py-8">
+            <p>Нет сегментов для отображения</p>
+            <p className="text-xs mt-2 text-muted-foreground/70">Segments count: {segments.length}</p>
+          </div>
+        ) : (
+          segments.map((segment, index) => {
           const isFocus = index === focusIndex;
 
           return (
@@ -161,8 +301,8 @@ const ContinuousTextFlow = memo(({
               key={segment.ref}
               segment={segment}
               isFocus={isFocus}
-              baseTextSize={baseTextSize}
               focusTextSize={focusTextSize}
+              globalTranslation={globalTranslation}
               onClick={() => {
                 console.log('Segment clicked:', segment.ref);
                 onSegmentClick?.(segment);
@@ -172,7 +312,8 @@ const ContinuousTextFlow = memo(({
               ref={isFocus ? focusRef : undefined}
             />
           );
-        })}
+        })
+        )}
       </article>
     </div>
   );
@@ -181,35 +322,43 @@ const ContinuousTextFlow = memo(({
 const TextSegmentComponent = forwardRef<HTMLElement, {
   segment: TextSegment;
   isFocus: boolean;
-  baseTextSize: string;
   focusTextSize: string;
+  globalTranslation: boolean;
   onClick: () => void;
   onDoubleClick?: () => void;
 }>(({
   segment,
   isFocus,
-  baseTextSize,
   focusTextSize,
+  globalTranslation,
   onClick,
   onDoubleClick
 }, ref) => {
-  const { translatedText, isTranslating, translate } = useTranslation({
-    tref: segment.ref,
+  const { translatedText, translate, isTranslating } = useTranslation({
+    tref: segment.ref
   });
 
-  const originalText = segment.heText || segment.text || '';
+  // Автоматически запускаем перевод только для фокусного сегмента
+  useEffect(() => {
+    if (globalTranslation && isFocus && !translatedText && !isTranslating) {
+      console.log('[FocusReader] Starting translation for focus segment:', segment.ref);
+      translate();
+    }
+  }, [globalTranslation, isFocus, translatedText, isTranslating, translate, segment.ref]);
 
-  const textToRender = translatedText || originalText;
-
-  const isHebrew = translatedText ? false : containsHebrew(textToRender);
-  const direction = translatedText ? 'ltr' : getTextDirection(textToRender);
+  const originalText = segment.heText || '';
+  const textToRender = globalTranslation && translatedText ? translatedText : originalText;
+  const isHebrew = globalTranslation && translatedText ? false : containsHebrew(textToRender);
+  const direction = globalTranslation && translatedText ? 'ltr' : getTextDirection(textToRender);
+  
+  // Убираем индикатор загрузки - просто показываем оригинал пока перевод не готов
 
   return (
     <section
       ref={ref}
       className={`
-        transition-all duration-500 ease-in-out cursor-pointer relative select-text
-        ${translatedText ? baseTextSize : focusTextSize}
+        transition-all duration-500 ease-in-out cursor-pointer relative
+        ${focusTextSize}
         ${isFocus
           ? 'opacity-100 my-4 px-4 py-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border-l-4 border-primary shadow-sm'
           : 'opacity-70 hover:opacity-90 my-2 px-2 py-2 hover:bg-accent/20 rounded-md'
@@ -223,61 +372,39 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
       aria-current={isFocus ? 'true' : undefined}
       aria-label={`Text segment: ${segment.ref}`}
     >
-      {/* Метка референса - только для фокуса */}
-      {isFocus && (
-        <div className="flex items-center justify-between mb-3 text-xs text-muted-foreground">
-          <span className="font-mono bg-muted px-2 py-1 rounded">
-            {segment.ref}
-          </span>
-          <div className="flex items-center gap-2">
-            {isFocus && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  translate();
-                }}
-                disabled={isTranslating}
-                className="flex items-center gap-1 px-2 py-1 text-xs bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors disabled:opacity-50"
-                title={translatedText ? "Show Original" : "Translate"}
-              >
-                <Languages className="w-3 h-3" />
-                {isTranslating ? '...' : translatedText ? 'Original' : 'Translate'}
-              </button>
-            )}
-            {segment.metadata && (
-              <span className="opacity-60">
-                {segment.metadata.chapter && `Chapter ${segment.metadata.chapter}`}
-                {segment.metadata.verse && ` • Verse ${segment.metadata.verse}`}
-              </span>
-            )}
-          </div>
+      {/* Метаданные сегмента - только для фокуса */}
+      {isFocus && segment.metadata && (
+        <div className="flex items-center gap-2 mb-4 text-xs text-muted-foreground">
+          {segment.metadata.chapter && (
+            <span className="bg-muted px-2 py-1 rounded text-xs">
+              Глава {segment.metadata.chapter}
+            </span>
+          )}
+          {segment.metadata.verse && (
+            <span className="bg-muted px-2 py-1 rounded text-xs">
+              Стих {segment.metadata.verse}
+            </span>
+          )}
         </div>
       )}
 
       {/* Основной текст */}
       <div
         className={`
-            whitespace-pre-wrap select-text
+            whitespace-pre-wrap select-text leading-relaxed
             ${direction === 'rtl' ? 'text-right' : 'text-left'}
             ${isHebrew ? 'font-feature-settings: "kern" 1, "liga" 1' : ''}
+            ${isFocus ? 'text-foreground' : 'text-muted-foreground'}
           `}
         style={{
           unicodeBidi: 'plaintext',
-          wordBreak: isHebrew ? 'keep-all' : 'normal'
+          wordBreak: isHebrew ? 'keep-all' : 'normal',
+          lineHeight: isFocus ? '1.8' : '1.6'
         }}
       >
         {textToRender}
       </div>
 
-      {/* Индикатор позиции для контекста */}
-      {!isFocus && (
-        <div className="mt-2 h-1 w-full bg-muted rounded-full overflow-hidden">
-          <div
-            className="h-full bg-primary/30 transition-all duration-300"
-            style={{ width: `${segment.position * 100}%` }}
-          />
-        </div>
-      )}
     </section>
   );
 });

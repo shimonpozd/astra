@@ -1,1 +1,10 @@
-{"text": "??????!", "agent_id": "writer", "user_id": "test_user"} 
+{
+  "session_id": "test",
+  "ref": "Genesis 1:1",
+  "window_size": 5,
+  "navigation_type": "drill_down"
+}
+
+
+
+

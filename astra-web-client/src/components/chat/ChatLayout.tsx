@@ -10,6 +10,7 @@ import ChatSidebar from "./ChatSidebar";
 import ChatViewport from "./ChatViewport";
 import MessageComposer from "./MessageComposer";
 import TopBar from "../layout/TopBar"; // Import the new TopBar
+import { api } from "../../services/api"; // Import api for daily session creation
 
 export function ChatLayout() {
   const navigate = useNavigate();
@@ -67,6 +68,7 @@ export function ChatLayout() {
     navigateForward,
     canNavigateBack,
     canNavigateForward,
+    isBackgroundLoading,
     workbenchSet,
     workbenchFocus,
     focusMainText,
@@ -91,12 +93,44 @@ export function ChatLayout() {
 
   useTextSelectionListener();
 
+  // Function to load daily session as study mode
+  const loadDailyAsStudy = async (dailySessionId: string) => {
+    try {
+      console.log('📖 Loading daily session as study:', dailySessionId);
+      
+      // Get daily session details
+      const response = await fetch(`/api/sessions/${dailySessionId}`);
+      if (!response.ok) {
+        console.error('Failed to get daily session:', response.status);
+        return;
+      }
+      
+      const dailySession = await response.json();
+      const textRef = dailySession.ref;
+      
+      if (textRef) {
+        console.log('Starting study with ref:', textRef, 'and daily session ID:', dailySessionId);
+        // Start study mode with the calendar text using the existing daily session ID
+        await startStudy(textRef, dailySessionId);
+      } else {
+        console.error('No ref found in daily session:', dailySession);
+      }
+    } catch (error) {
+      console.error('Failed to load daily session as study:', error);
+    }
+  };
+
   useEffect(() => {
     // If the URL is a study session URL, automatically load it.
     if (location.pathname.startsWith('/study/') && urlChatId) {
       loadStudySession(urlChatId);
     }
-  }, [location.pathname, urlChatId, loadStudySession]);
+    
+    // If the URL is a daily session URL, automatically load it as study.
+    if (location.pathname.startsWith('/daily/') && urlChatId) {
+      loadDailyAsStudy(urlChatId);
+    }
+  }, [location.pathname, urlChatId, loadStudySession, startStudy]);
 
   useEffect(() => {
     localStorage.setItem("astra_agent_id", agentId);
@@ -126,18 +160,47 @@ export function ChatLayout() {
     });
   };
 
-  const handleSelectSession = (sessionId: string, type: 'chat' | 'study') => {
+  const handleSelectSession = async (sessionId: string, type: 'chat' | 'study' | 'daily') => {
+    console.log('🖱️ Chat clicked:', { sessionId, type });
+    
     if (type === 'study') {
       // Just navigate. The useEffect hook will handle loading the session.
       navigate(`/study/${sessionId}`);
+    } else if (type === 'daily') {
+      // Lazy create daily session if needed, then navigate
+      try {
+        console.log('📅 Creating daily session:', sessionId);
+        const created = await api.createDailySessionLazy(sessionId);
+        console.log('📅 Daily session created:', created);
+        
+        console.log('🧭 Navigating to:', `/daily/${sessionId}`);
+        navigate(`/daily/${sessionId}`);
+      } catch (error) {
+        console.error('❌ Failed to create daily session:', error);
+      }
     } else {
       selectChat(sessionId);
     }
   };
 
-  const handleWorkbenchDrop = async (side: 'left' | 'right', ref: string) => {
+  const handleWorkbenchDrop = async (side: 'left' | 'right', ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => {
     try {
-      await workbenchSet(side, ref);
+      console.log('ChatLayout: handleWorkbenchDrop:', side, ref, dragData);
+      
+      if (dragData?.type === 'group') {
+        console.log('Handling group drop - all refs:', dragData.data?.refs);
+        // TODO: Здесь можно добавить специальную логику для групп
+        // Например, создать специальный UI для выбора конкретной части
+        // Или добавить все части группы последовательно
+        
+        // Пока что используем первый ref для совместимости
+        await workbenchSet(side, ref);
+      } else {
+        await workbenchSet(side, ref);
+      }
     } catch (error) {
       console.error('Failed to handle workbench drop:', error);
     }
@@ -214,6 +277,7 @@ export function ChatLayout() {
                     refreshStudySnapshot={refreshStudySnapshot}
                     selectedPanelId={selectedPanelId}
                     onSelectedPanelChange={setSelectedPanelId}
+                    isBackgroundLoading={isBackgroundLoading}
                   />
                 ) : (
                   <div className="h-full flex flex-col min-h-0">

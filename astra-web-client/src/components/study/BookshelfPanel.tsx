@@ -466,27 +466,46 @@ const BookshelfPanel = memo(({
       <div key={group.key} className="space-y-1">
         {/* Group header - compact "series line" */}
         <div
-          className="p-2 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors"
+          className="p-2 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors relative"
           style={{ borderColor: group.color, borderWidth: '2px' }}
+          title={`Drag entire series: ${group.parsed.commentator} on ${group.parsed.tractate} ${group.parsed.page}:${group.parsed.section} (${group.items.length} parts)`}
           draggable
           onDragStart={(e) => {
-            // Передаем первый ref группы для совместимости с текущим workbench
-            const firstRef = group.items[0]?.ref;
-            if (firstRef) {
-              e.dataTransfer.setData('text/astra-commentator-ref', firstRef);
-              e.dataTransfer.setData('text/plain', firstRef);
-              setBookshelfState(prev => ({ ...prev, draggedItem: firstRef }));
-              onDragStart?.(firstRef);
-            }
+            // Передаем всю группу как единое целое
+            const groupRef = `${group.parsed.commentator} on ${group.parsed.tractate} ${group.parsed.page}:${group.parsed.section}`;
+            const groupData = {
+              type: 'group',
+              ref: groupRef, // Основной ref группы без части
+              refs: group.items.map(item => item.ref), // Все части группы
+              groupKey: group.key,
+              commentator: group.parsed.commentator,
+              tractate: group.parsed.tractate,
+              page: group.parsed.page,
+              section: group.parsed.section
+            };
+            
+            e.dataTransfer.setData('text/astra-commentator-ref', groupRef);
+            e.dataTransfer.setData('text/plain', groupRef);
+            // Добавляем специальный тип для группы
+            e.dataTransfer.setData('application/json', JSON.stringify(groupData));
+            e.dataTransfer.setData('text/astra-group', JSON.stringify(groupData));
+            
+            setBookshelfState(prev => ({ ...prev, draggedItem: groupRef }));
+            onDragStart?.(groupRef);
           }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 min-w-0">
               <span className="text-muted-foreground">≡</span>
               <div
-                className="w-3 h-3 rounded-full"
+                className="w-3 h-3 rounded-full relative"
                 style={{ backgroundColor: group.color }}
-              />
+              >
+                {/* Индикатор группового перетаскивания */}
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full border border-background text-[8px] flex items-center justify-center text-white font-bold">
+                  ≡
+                </div>
+              </div>
               <div className="font-semibold text-sm truncate">
                 {group.parsed.commentator} on {group.parsed.tractate} {group.parsed.page}:{group.parsed.section}
               </div>
@@ -508,10 +527,27 @@ const BookshelfPanel = memo(({
               <div
                 key={`${item.ref}__${idx}`}
                 className="flex items-start gap-2 p-2 rounded border panel-card hover:bg-accent/10 transition-colors cursor-move"
+                title={`Drag individual part: ${item.ref}`}
                 draggable
                 onDragStart={(e) => {
+                  // Передаем отдельную часть
+                  const partData = {
+                    type: 'part',
+                    ref: item.ref,
+                    parentGroup: group.key,
+                    commentator: group.parsed.commentator,
+                    tractate: group.parsed.tractate,
+                    page: group.parsed.page,
+                    section: group.parsed.section,
+                    part: parseRefStrict(item.ref)?.part
+                  };
+                  
                   e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
                   e.dataTransfer.setData('text/plain', item.ref);
+                  // Добавляем специальный тип для части
+                  e.dataTransfer.setData('application/json', JSON.stringify(partData));
+                  e.dataTransfer.setData('text/astra-part', JSON.stringify(partData));
+                  
                   setBookshelfState(prev => ({ ...prev, draggedItem: item.ref }));
                   onDragStart?.(item.ref);
                 }}
@@ -602,9 +638,9 @@ const BookshelfPanel = memo(({
   }
 
   return (
-    <div className="h-full flex flex-col panel-outer">
+    <div className="h-full flex flex-col panel-outer border-l">
       {/* Header */}
-      <div className="flex-shrink-0 p-4 border-b">
+      <div className="flex-shrink-0 panel-padding border-b border-border/50">
         <h3 className="text-lg font-semibold mb-3">Sources</h3>
 
         {/* Search */}
@@ -613,14 +649,14 @@ const BookshelfPanel = memo(({
           <input
             type="text"
             placeholder="Search sources..."
-            className="w-full pl-9 pr-3 py-2 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full pl-9 pr-3 py-2 text-sm panel-card rounded-lg border-border/40 focus:outline-none focus:ring-0 focus:border-primary/50 transition-colors"
             value={bookshelfState.searchQuery}
             onChange={(e) => setBookshelfState(prev => ({ ...prev, searchQuery: e.target.value }))}
           />
         </div>
 
         {/* Commentators Filter */}
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="flex flex-wrap gap-compact mb-3">
           {Array.from(new Set([
             ...bookshelfState.groups.map(g => g.parsed.commentator),
             ...bookshelfState.orphans.map((item: any) => parseRefStrict(item.ref)?.commentator).filter((c): c is string => Boolean(c))
@@ -638,10 +674,10 @@ const BookshelfPanel = memo(({
                   };
                 });
               }}
-              className={`px-3 py-1 text-xs rounded-full border transition-colors ${
+              className={`px-3 py-1 text-xs rounded-full border transition-colors panel-hover ${
                 bookshelfState.activeFilters.commentators.includes(commentator)
                   ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-secondary hover:bg-secondary/80 border-border'
+                  : 'panel-card border-border/40'
               }`}
               style={{
                 borderColor: bookshelfState.activeFilters.commentators.includes(commentator) ? undefined : undefined,
@@ -682,15 +718,15 @@ const BookshelfPanel = memo(({
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-compact">
           {categories.map((category) => (
             <button
               key={category.name}
               onClick={() => setSelectedCategory(category.name)}
-              className={`px-3 py-1 text-xs rounded-full border transition-colors ${
+              className={`px-3 py-1 text-xs rounded-full border transition-colors panel-hover ${
                 selectedCategory === category.name
                   ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-card hover:bg-accent border-border'
+                  : 'panel-card border-border/40'
               }`}
               style={{
                 borderColor: selectedCategory === category.name ? category.color : undefined,
@@ -723,7 +759,7 @@ const BookshelfPanel = memo(({
         ) : (filteredData.groups.length === 0 && filteredData.orphans.length === 0) ? (
           <EmptyState hasSearch={!!bookshelfState.searchQuery} />
         ) : (
-          <div className="p-3 space-y-3">
+          <div className="panel-padding-sm space-compact">
             {filteredData.groups.map((group) => renderGroup(group))}
             {filteredData.orphans.map((item, idx) => renderOrphan(item, idx))}
           </div>

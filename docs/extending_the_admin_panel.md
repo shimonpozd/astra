@@ -117,3 +117,72 @@ Let's say you've written a new Python function that needs a system prompt.
 ### Step 3: Verify in Frontend
 
 **No action is required on the frontend.** The "Prompts" page in the admin panel automatically fetches the list of all available prompts from the `GET /admin/prompts` endpoint. Your new prompt will appear in the list, ready to be viewed and edited.
+
+---
+
+## Scenario 3: Adding a New Model Override for Study Mode
+
+The system supports different LLM models for different tasks. For example, you might want to use a different model specifically for Study Mode interactions.
+
+### Step 1: Add the Override to the Backend
+
+1. **Open `config/defaults.toml`**.
+2. Add your new model override under the `[llm.overrides]` section.
+
+    ```toml
+    [llm.overrides]
+    # ... existing overrides ...
+    study = "deepseek/deepseek-chat-v3.1:free"
+    ```
+
+### Step 2: Add the Override to the Frontend UI
+
+1. **Open `astra-web-client/src/pages/admin/GeneralSettings.tsx`**.
+
+2. **Find the Model Overrides section** (around line 496) where the task overrides are defined.
+
+3. **Add your new task to the array** of tasks that get override inputs:
+
+    ```tsx
+    {['chat', 'drafter', 'critic', 'meta_reasoner', 'curator', 'summarizer', 'translator', 'lexicon', 'speechify', 'planner', 'summary', 'study'].map((task) => (
+      <div className="space-y-2" key={task}>
+        <Label htmlFor={`override-${task}`} className="capitalize">{task} Model</Label>
+        <Input
+          id={`override-${task}`}
+          value={config.llm?.overrides?.[task] || ''}
+          onChange={(e) => updateConfig(['llm', 'overrides', task], e.target.value)}
+          placeholder="Leave empty to use default model"
+        />
+      </div>
+    ))}
+    ```
+
+4. **Update the ConfigData interface** to include the new override:
+
+    ```typescript
+    interface ConfigData {
+      llm?: {
+        // ... other llm properties
+        overrides?: {
+          [key: string]: string;
+          study?: string; // Add this line
+        };
+      };
+    }
+    ```
+
+### Step 3: Use the Override in Your Backend Code
+
+In your Python code, the LLM service will automatically use the study-specific model when the task is identified as "study". The override system is handled by the `LLMService` class, which checks for task-specific overrides before falling back to the default model.
+
+**Example usage in study-related endpoints:**
+```python
+# The LLM service will automatically use the 'study' override model
+# when processing study mode requests
+response = await llm_service.generate_response(
+    messages=messages,
+    task="study"  # This will trigger the study model override
+)
+```
+
+This allows you to use a specialized model for Study Mode that might be better suited for Talmudic text analysis, while using a different model for general chat interactions.

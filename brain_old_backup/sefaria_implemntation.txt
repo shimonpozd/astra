@@ -1,0 +1,661 @@
+sefaria_implemntation
+0) Контекст (отсылка к текущему коду)
+
+Brain-service: FastAPI, стриминг ответов LLM, tool-calling уже реализован для mem0 (recall_long_term_memory). Точки входа: /chat/voice, /chat/stream, /chat/text. Логика стриминга и tool-loops — get_llm_response_stream. Хранение STM, метрики, TTS-сегментация — уже есть. 
+
+main
+
+Где добавлять: в тот же механизм tool-calling, рядом с recall_long_term_memory; сетевые вызовы — через уже созданный state.http_client (httpx). Метрики и circuit-breaker для LTM можно переиспользовать как шаблон.
+
+1) Цель
+
+Добавить к существующей системе tool-calling набор инструментов Sefaria для пошагового изучения Торы/Танаха/Талмуда:
+
+Чтение стихов/глав по ссылке (Texts API)
+
+Получение комментариев и параллельных мест (Links/Related)
+
+Полнотекстовый поиск (Search)
+
+Список версий/языков (Versions) — для приоритета русских переводов
+
+Темы/топики (Ref-Topic Links)
+
+Нормализация «разговорных» ссылок (find-refs, Linker)
+
+LLM должна сама выбирать, какой инструмент вызвать, как это уже сделано для mem0 (через tool-calls), а вы — выполнить вызов, дать JSON обратно модельке и продолжить цикл.
+
+2) Нефункциональные требования
+
+Надежность: ретраи на 5xx/сетевых таймаутах (экспоненциальная пауза), fail-soft (дефолтные ответы, подсказки пользователю).
+
+Производительность: кеширование «тяжелых» и часто повторяющихся ответов (TOC, Versions, повторные texts/{ref}?context=0).
+
+Локализация: предпочтение ru версии, fallback на en, всегда возвращать иврит (he) если есть, чтобы LLM могла опираться на оригинал.
+
+Наблюдаемость: метрики по каждому Sefaria-инструменту (средняя/р-квантили латентности, количество ошибок по коду/типу), по аналогии с существующими ltm-метриками. 
+
+main
+
+Безопасность: только исходящие GET/POST на публичный API Sefaria; лимитировать параллелизм.
+
+
+
+
+3) Конфигурация и зависимости
+3.1. ENV
+
+Добавьте в .env (с дефолтами):
+
+SEFARIA_BASE_URL=https://www.sefaria.org/api
+SEFARIA_TIMEOUT_SECONDS=15
+SEFARIA_RETRIES=3
+SEFARIA_CACHE_TTL_SECONDS=3600
+SEFARIA_PREFERRED_LANG=ru
+SEFARIA_FALLBACK_LANG=en
+
+3.2. Клиент
+
+Используем уже имеющийся state.http_client (httpx AsyncClient). Инициализируется в startup_event. 
+
+main
+
+Вынесите вызовы в отдельный модуль sefaria_client.py (см. §6).
+
+4) Новые tools для LLM (function-calling)
+
+В get_llm_response_stream(...) вы динамически собираете tools (сейчас только mem0 при use_mem0_tool). Расширяем список — всегда (не зависят от личности), либо по флагу use_sefaria_tools в personalities.json (рекомендуется). Вставка — там же, где сейчас формируется tools и tool_choice="auto". 
+
+main
+
+4.1. Список инструментов
+
+
+да, нужен локальный справочник книг и алиасов. Это резко повышает точность распознавания «как это называется» и уменьшает число лишних вызовов к API.
+
+Что именно подтягиваем и зачем
+
+Полное оглавление библиотеки
+GET /api/index — список всех книг по категориям + базовая мета. Его официально рекомендуют кешировать (редко меняется). Используем как источник канонических index-title и иерархии (Тора/Невиим/Ктувим, Мишна, Талмуд и т.д.). 
+developers.sefaria.org
+
+Полная запись индекса по книге (точечно, по требованию)
+GET /api/v2/raw/index/{index_title} — схема книги, альтернативные названия, языковые заголовки узлов. Полезно для расширения алиасов и реверс-маппинга «рус./ивр./англ. → canonical». 
+developers.sefaria.org
+
+Versions/языки для книги
+GET /api/texts/versions/{index} — какие переводы доступны (в т.ч. ru). Поможет автоматически выбирать русскую версию, если есть. 
+developers.sefaria.org
+
+Нормализация «разговорных» ссылок
+POST /api/find-refs — распознаёт в свободной строке («Даниэль три пятнадцать», «Ки Таво 28:10») точные Ref/tref. Это страховка даже при неполном словаре. 
+developers.sefaria.org
++1
+
+Доп.: в технической доке подробно описан механизм текстовых ссылок и названий узлов — пригодится для корректной нормализации. 
+developers.sefaria.org
++2
+developers.sefaria.org
++2
+
+Мини-дизайн «справочника» (в вашем brain-сервисе)
+
+Один раз при старте: скачиваем api/index, складываем в persistent cache (Redis/файл) + in-memory snapshot со штампом времени. Обновляем раз в N часов/сутки. 
+developers.sefaria.org
+
+Строим структуру:
+
+canonical_titles: список канонических index_title (на англ.).
+
+aliases: str -> canonical_title, где ключи — все варианты названий (англ/иврит/частые русские транслитерации). Источник — поля titles из v2 raw index + наши ручные дополнения (например, «Берешит» → Genesis, «Даниэль» → Daniel, «Йирмиягу» → Jeremiah, «Брахот» → Berakhot). 
+developers.sefaria.org
+
+В рантайме:
+
+Пытаемся найти книгу в aliases (быстро, офлайн).
+
+Если не нашли — дергаем find-refs по всей фразе (голос, ошибки, смешение языков).
+
+На успехе — дополняем aliases (LRU-кеш алиасов «как сказал пользователь» → canonical). 
+developers.sefaria.org
++1
+
+Почему это критично для качества
+
+Сокращает «слепые» поиски и неправильные Ref.
+
+Стабильные, канонические index_title → меньше расхождений при texts/{ref} и links/{ref}. 
+developers.sefaria.org
+
+Ускоряет голосовой UX: «Открой Шмот 3:2» срабатывает мгновенно, без перебора.
+
+Проще реализовать приоритет русских версий: мы знаем точный index, значит versions/{index} → выбираем ru, иначе fallback en. 
+developers.sefaria.org
+
+Практический план внедрения (минимум)
+
+При старте сервиса:
+
+toc = GET /api/index → сохранить в Redis на 24h + in-memory. 
+developers.sefaria.org
+
+Построить aliases из TOC (англ. имена) + ленивое обогащение через v2/raw/index/{index_title} при первом обращении к конкретной книге (подтянуть titles на иврите/альт-названия). 
+developers.sefaria.org
+
+В обработчике пользовательского запроса:
+
+Нормализовать «имя книги» через aliases; при провале — find-refs. 
+developers.sefaria.org
+
+Дальше работать только с нормализованным tref / index_title.
+
+Периодическое обновление:
+
+Крон/таймер: раз в сутки перекачать /api/index и перегенерировать словарь (атомарная замена snapshot).
+
+Небольшой код-скелет (где уместно)
+# при старте
+toc = await sefaria_index_toc()  # GET /api/index (с кешем)
+aliases = build_aliases_from_toc(toc)  # англ canonical + наши ручные ru/he варианты
+
+async def resolve_book_name(user_name: str) -> str | None:
+    key = normalize(user_name)  # lower, trim, без диакритики
+    if key in aliases:
+        return aliases[key]        # canonical index_title
+    # fallback: find-refs по полной фразе
+    fr = await sefaria_find_refs_async(user_name)  # POST /api/find-refs
+    tref = extract_best_tref(fr)
+    if tref:
+        canonical = tref_book_to_index(tref)       # вытащить часть Index из tref
+        aliases[key] = canonical                   # обогащаем
+        return canonical
+    return None
+
+Вывод
+
+— Да, подтягиваем и кешируем оглавление (/api/index) и, по мере надобности, v2/raw/index/{book}: это даст боту «карту мира» и устойчивые канонические имена. Остальное (ошибки в произношении/транслитерации) компенсируется find-refs и небольшой таблицей русских/ивритских алиасов. Это минимальные усилия, а прирост точности — максимальный.
+
+A. sefaria_get_text — получить текст по ссылке
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_get_text",
+    "description": "Получить текст по Sefaria-ref (стих/глава/лист), с метаданными и навигацией next/prev.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "ref": { "type": "string", "description": "Напр. 'Daniel 3:15', 'Rashi on Exodus 1:12:1', 'Berakhot 2a'." },
+        "context": { "type": "integer", "enum": [0,1], "default": 0 },
+        "lang": { "type": "string", "enum": ["he","en","ru",""], "default": "" },
+        "version": { "type": "string", "description": "Название версии перевода (если нужно принудительно)." },
+        "commentary": { "type": "integer", "enum": [0,1], "default": 0 }
+      },
+      "required": ["ref"]
+    }
+  }
+}
+
+
+B. sefaria_get_links — комментарии/параллели к месту
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_get_links",
+    "description": "Получить все связи/комментарии для данного ref (комментатор, категория, фрагменты).",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "ref": { "type": "string" },
+        "with_text": { "type": "integer", "enum": [0,1], "default": 1 }
+      },
+      "required": ["ref"]
+    }
+  }
+}
+
+
+C. sefaria_search — полнотекстовый поиск
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_search",
+    "description": "Полнотекстовый поиск по библиотеке Sefaria.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "filters": { "type": "array", "items": {"type": "string"} },
+        "size": { "type": "integer", "default": 10 }
+      },
+      "required": ["query"]
+    }
+  }
+}
+
+
+D. sefaria_related — агрегированные связи
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_related",
+    "description": "Получить агрегированный связанный контент по ref (комментарии, параллели, шиты и т.п.).",
+    "parameters": {
+      "type": "object",
+      "properties": { "ref": { "type": "string" } },
+      "required": ["ref"]
+    }
+  }
+}
+
+
+E. sefaria_ref_topics — темы для места
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_ref_topics",
+    "description": "Получить темы/топики, связанные с ref.",
+    "parameters": {
+      "type": "object",
+      "properties": { "ref": { "type": "string" } },
+      "required": ["ref"]
+    }
+  }
+}
+
+
+F. sefaria_versions — версии/языки книги
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_versions",
+    "description": "Получить список доступных переводов/языков для индекса (книги), напр. 'Daniel'.",
+    "parameters": {
+      "type": "object",
+      "properties": { "index": { "type": "string" } },
+      "required": ["index"]
+    }
+  }
+}
+
+
+G. sefaria_find_refs — нормализация «разговорной» ссылки
+
+{
+  "type": "function",
+  "function": {
+    "name": "sefaria_find_refs",
+    "description": "Распознать ссылку в свободном тексте (Linker API), вернуть нормализованные tref.",
+    "parameters": {
+      "type": "object",
+      "properties": { "query": { "type": "string" } },
+      "required": ["query"]
+    }
+  }
+}
+
+
+Где дописать: в блок формирования tools в get_llm_response_stream(...) рядом с существующим recall_long_term_memory. У вас там собирается tools и tool_choice="auto" — логика уже реализована. 
+
+main
+
+5) Обработка tool-calls (главный цикл)
+
+Внутри get_llm_response_stream(...) у вас уже есть цикл стриминга, агрегирование tool_calls, добавление {"role":"assistant","tool_calls":...} в messages, а затем фактический вызов питон-функций по имени инструмента и вставка {"role":"tool","content":...} с JSON обратно в диалог. Это идеальный шаблон: расширяем if function_name == ... на Sefaria-инструменты. 
+
+main
+
+Пример вставки (псевдокод, см. §6 для реальных функций):
+
+if function_name == "sefaria_get_text":
+    result = await sefaria_get_text_async(**function_args)
+
+elif function_name == "sefaria_get_links":
+    result = await sefaria_get_links_async(**function_args)
+
+elif function_name == "sefaria_search":
+    result = await sefaria_search_async(**function_args)
+
+elif function_name == "sefaria_related":
+    result = await sefaria_related_async(**function_args)
+
+elif function_name == "sefaria_ref_topics":
+    result = await sefaria_ref_topics_async(**function_args)
+
+elif function_name == "sefaria_versions":
+    result = await sefaria_versions_async(**function_args)
+
+elif function_name == "sefaria_find_refs":
+    result = await sefaria_find_refs_async(**function_args)
+
+elif function_name == "recall_long_term_memory":
+    # как у вас уже реализовано
+    ...
+else:
+    result = {"ok": False, "error": f"unknown tool {function_name}"}
+
+
+Далее — как у вас уже делается: messages.append({... role:"tool", name:function_name, content=json.dumps(result, ensure_ascii=False)}) и новый заход в LLM. 
+
+main
+
+6) Реализация sefaria_client.py (асинхронные обёртки)
+
+Создайте services/sefaria_client.py (или рядом с main.py, но лучше — модуль). Используйте уже имеющийся state.http_client и схему ретраев, по аналогии с _call_ltm_recall_with_retry (см. логику, circuit-breaker там специфичен для LTM, для Sefaria достаточно простых ретраев).
+
+# services/sefaria_client.py
+import os, time, json, asyncio
+from typing import Any, Dict, Optional
+from functools import lru_cache
+from urllib.parse import urlencode
+
+from .state import state  # или импортируйте state из main, если нет отдельного модуля
+import httpx
+import logging
+
+logger = logging.getLogger("sefaria")
+
+SEFARIA_BASE = os.getenv("SEFARIA_BASE_URL", "https://www.sefaria.org/api").rstrip("/")
+SEFARIA_TIMEOUT = float(os.getenv("SEFARIA_TIMEOUT_SECONDS", "15"))
+SEFARIA_RETRIES = int(os.getenv("SEFARIA_RETRIES", "3"))
+PREFERRED_LANG = os.getenv("SEFARIA_PREFERRED_LANG", "ru")
+FALLBACK_LANG = os.getenv("SEFARIA_FALLBACK_LANG", "en")
+CACHE_TTL = int(os.getenv("SEFARIA_CACHE_TTL_SECONDS", "3600"))
+
+def _headers():
+    return {"User-Agent": "AstraTorahBot/1.0 (+learn-only)"}
+
+async def _get(path: str, params: Optional[Dict[str, Any]]=None) -> Dict[str, Any]:
+    assert state.http_client, "HTTP client not initialized"
+    url = f"{SEFARIA_BASE}/{path.lstrip('/')}"
+    for i in range(SEFARIA_RETRIES):
+        try:
+            r = await state.http_client.get(url, params=params, headers=_headers(), timeout=SEFARIA_TIMEOUT)
+            if r.status_code >= 500:
+                raise httpx.HTTPError(f"Server {r.status_code}")
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            if i == SEFARIA_RETRIES - 1:
+                logger.error(f"Sefaria GET failed: {url} params={params} err={e}")
+                return {"ok": False, "error": str(e)}
+            await asyncio.sleep(0.5 * (2 ** i))
+
+async def _post(path: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    assert state.http_client, "HTTP client not initialized"
+    url = f"{SEFARIA_BASE}/{path.lstrip('/')}"
+    for i in range(SEFARIA_RETRIES):
+        try:
+            r = await state.http_client.post(url, json=payload, headers=_headers(), timeout=SEFARIA_TIMEOUT)
+            if r.status_code >= 500:
+                raise httpx.HTTPError(f"Server {r.status_code}")
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            if i == SEFARIA_RETRIES - 1:
+                logger.error(f"Sefaria POST failed: {url} payload={payload} err={e}")
+                return {"ok": False, "error": str(e)}
+            await asyncio.sleep(0.5 * (2 ** i))
+
+# --- Public async funcs used by tools ---
+
+async def sefaria_get_text_async(ref: str, context: int = 0, lang: str = "", version: str = "", commentary: int = 0) -> Dict[str, Any]:
+    # Автоподстановка предпочитаемого языка
+    params = {"context": context, "commentary": commentary}
+    if lang:
+        params["lang"] = lang
+    else:
+        params["lang"] = PREFERRED_LANG  # ru
+    if version:
+        params["version"] = version
+    # Первый вызов
+    data = await _get(f"texts/{ref}", params=params)
+    if not data or data.get("ok") is False:
+        return {"ok": False, "error": data.get("error", "unknown")}
+    # Если пусто для ru — fallback на en
+    def _is_empty(d: Dict[str, Any]) -> bool:
+        t = d.get("text")
+        return (t is None) or (isinstance(t, list) and len(t) == 0) or (isinstance(t, str) and t.strip() == "")
+    if _is_empty(data) and params.get("lang") == PREFERRED_LANG:
+        params["lang"] = FALLBACK_LANG
+        data = await _get(f"texts/{ref}", params=params)
+    data["ok"] = True
+    return data
+
+async def sefaria_get_links_async(ref: str, with_text: int = 1) -> Dict[str, Any]:
+    params = {"with_text": with_text}
+    data = await _get(f"links/{ref}", params=params)
+    return data if data else {"ok": False, "error": "empty response"}
+
+async def sefaria_search_async(query: str, filters=None, size: int = 10) -> Dict[str, Any]:
+    payload = {"query": query, "type": "text", "size": size}
+    if filters:
+        payload["filters"] = filters
+    data = await _post("search-wrapper", payload)
+    return data if data else {"ok": False, "error": "empty response"}
+
+async def sefaria_related_async(ref: str) -> Dict[str, Any]:
+    data = await _get(f"related/{ref}")
+    return data if data else {"ok": False, "error": "empty response"}
+
+async def sefaria_ref_topics_async(ref: str) -> Dict[str, Any]:
+    data = await _get(f"ref-topic-links/{ref}")
+    return data if data else {"ok": False, "error": "empty response"}
+
+async def sefaria_versions_async(index: str) -> Dict[str, Any]:
+    data = await _get(f"texts/versions/{index}")
+    return data if data else {"ok": False, "error": "empty response"}
+
+async def sefaria_find_refs_async(query: str) -> Dict[str, Any]:
+    # Linker API (find-refs) — как правило, POST
+    payload = {"text": query}
+    data = await _post("find-refs", payload)
+    return data if data else {"ok": False, "error": "empty response"}
+
+
+Примечание: мы не вводим здесь circuit-breaker, как в LTM, потому что Sefaria — внешний публичный сервис; достаточно ретраев и логгинга. Ваш LTM breaker остаётся как есть. 
+
+main
+
+7) Врезка в get_llm_response_stream(...)
+
+В существующем коде:
+
+Вы создаёте api_params = {"model": ..., "messages": ..., "stream": True, ...}, затем при наличии инструментов добавляете tools и tool_choice="auto". Всё это переиспользуем; просто расширяем tools. 
+
+main
+
+В стрим-цикле вы собираете tool_calls кусками, а затем выполняете питон-вызовы. Добавьте ветки elif function_name == "sefaria_*" и вызовите соответствующую async-функцию из sefaria_client.py. Потом результат в messages как role="tool" (у вас уже реализовано). 
+
+main
+
+Не забудьте metrics.record_tool_call(function_name) — у вас это уже вызывается до исполнения. Сохранится сквозная статистика по каждому инструменту. 
+
+main
+
+При ошибке JSON-парсинга аргументов вы уже fallback’ите на {} — оставьте как есть. 
+
+main
+
+8) Логика принятия решений (для LLM)
+
+В personalities.json добавьте флаг use_sefaria_tools: true и подсказки для модели (system-prompt), например:
+
+Если пользователь дал явный Book Chapter:Verse → вызывать sefaria_get_text(context=0).
+
+«Комментарии/Раши» → sefaria_get_links (отфильтровать category == "Commentary"; если выбран Раши — sefaria_get_text по его ref).
+
+«Следующий/предыдущий посук» → читать next/prev из последнего ответа sefaria_get_text и снова вызвать sefaria_get_text.
+
+«Найди где …» → sefaria_search; если несколько результатов — краткий список, затем уточнить.
+
+«Глава целиком/обзор» → sefaria_get_text(ref='Book N', context=0); затем комменты точечно.
+
+Если ссылка «разговорная» (напр. «Даниэль три пятнадцать») → sefaria_find_refs, взять tref и дернуть sefaria_get_text.
+
+(Эти правила — в тексте системного промпта вашей личности; код менять не нужно.)
+
+9) Кеширование
+
+TOC (/api/index): кешировать при старте в Redis (если есть) или в памяти (LRU) на SEFARIA_CACHE_TTL_SECONDS.
+
+Versions (/api/texts/versions/{index}): кешировать на TTL; это часто переиспользуется при выборе языка/версии.
+
+Texts (/api/texts/{ref}?context=0): опционально кешировать на TTL для повторных обращений в пределах одной сессии/главы.
+
+Redis у вас уже инициализируется; при падении Redis — деградировать на in-memory LRU (как в примере). Инициализация Redis — в startup_event уже есть. 
+
+main
+
+10) Метрики и логи
+
+Расширьте BrainMetrics полем sefaria_latencies и счётчиками ошибок по инструментам (по аналогии с ltm_*). Или используйте общий tool_calls/ltm_errors как «tool_errors». Сейчас у вас метрики именованы вокруг LTM; можно сделать обобщение: tool_errors[tool_name][error_type]++. 
+
+main
+
+В GET /metrics (у вас уже есть) добавьте новые поля: p50/p99 латентности по Sefaria, количество вызовов по каждому инструменту. 
+
+main
+
+Логируйте URL и ref при неуспехе; маскируйте длинные payload.
+
+11) Поведение TTS/стриминга
+
+Ничего менять не требуется: ваш поток уже разбивает по предложениям и отправляет в TTS через background_tasks.add_task(send_to_tts, sentence, language). Это работает одинаково для сгенерированного объяснения по стихам Sefaria. 
+
+main
+
+Язык TTS берите из personality_config.get("language","ru") — это уже есть. 
+
+main
+
+12) Обработка ошибок и UX-подсказки
+
+Если sefaria_get_text вернул пустой текст на ru: автоматически fallback на en (в клиенте реализовано) и добавляйте поле "_note": "ru not available, using en" — LLM сможет озвучить пользователю корректную ремарку.
+
+Если sefaria_search вернул 0 результатов — LLM должна предложить варианты переформулировки (короче фразу, другое ключевое слово, уточнить книгу/эпоху).
+
+Если сетевые ошибки — вернуть {"ok": false, "error": "…", "retry_suggested": true} — модель может принять решение спросить пользователя: «Повторить попытку?».
+
+13) Тест-план (минимум)
+
+Явная ссылка (Tanakh): «Даниэль 3:15». Ожидаем sefaria_get_text(context=0, lang="ru") → при отсутствии ru — fallback en; next присутствует.
+
+Комментарии: «Какие комментарии есть?» → sefaria_get_links → в ответе есть список комментаторов; выбор «Раши» вызывает sefaria_get_text по Rashi on Daniel 3:15.
+
+Переход: «Следующий посук» → используется next предыдущего ответа.
+
+Талмуд: «Брахот 2a» → sefaria_get_text(ref="Berakhot 2a") → корректный текст и next="Berakhot 2b".
+
+Поиск: «Найди где про радугу (завет)» → sefaria_search → выдача кандидатов, затем открытие выбранного.
+
+find-refs: «Прочитай Ки Таво 28:10» → sefaria_find_refs → нормализованный tref → sefaria_get_text.
+
+Versions: «Покажи доступные русские переводы Даниэля» → sefaria_versions("Daniel").
+
+Degrade: искусственно отключить сеть → убедиться в fail-soft ответах и отсутствии крэшей.
+
+Метрики: дернуть /metrics, видны счётчики tool-calls, p50/p99 латентности.
+
+14) Изменения в кодовой базе (Summary of Changes)
+
+Новый модуль services/sefaria_client.py (асинхронные вызовы API Sefaria, ретраи, fallback языка, минимальный кеш при желании).
+
+Расширение tool-набора в get_llm_response_stream(...): добавить 7 инструментов (sefaria_*). В том же месте, где сейчас объявляется recall_long_term_memory. 
+
+main
+
+Исполнение tool-calls: добавить ветки elif function_name == "sefaria_*" и вызывать соответствующие async-функции. Результат — в messages как role:"tool". Логика цикла у вас уже готова. 
+
+main
+
+Метрики: обобщить/расширить BrainMetrics для учёта Sefaria-инструментов (кол-во вызовов, ошибки по типам, latency p50/p99). Вывести в /metrics. 
+
+main
+
+Конфиг: добавить переменные окружения (см. §3).
+
+personalities.json: флаг use_sefaria_tools: true, и системные правила выбора инструментов (см. §8).
+
+15) Пример интеграционного патча (фрагменты)
+
+main.py — место, где объявляются tools (внутри get_llm_response_stream):
+
+# ... существующий код ...
+tools = []
+if use_mem0_tool:
+    tools.append({...})  # recall_long_term_memory как есть
+
+# Новый блок (всегда или под флагом personality_config.get("use_sefaria_tools", True))
+tools.extend([
+  {"type": "function", "function": {... "name": "sefaria_get_text", ...}},
+  {"type": "function", "function": {... "name": "sefaria_get_links", ...}},
+  {"type": "function", "function": {... "name": "sefaria_search", ...}},
+  {"type": "function", "function": {... "name": "sefaria_related", ...}},
+  {"type": "function", "function": {... "name": "sefaria_ref_topics", ...}},
+  {"type": "function", "function": {... "name": "sefaria_versions", ...}},
+  {"type": "function", "function": {... "name": "sefaria_find_refs", ...}}
+])
+
+api_params["tools"] = tools
+api_params["tool_choice"] = "auto"
+# ... остальное без изменений ...
+
+
+main
+
+main.py — место исполнения tool-calls (там, где сейчас обрабатывается recall_long_term_memory):
+
+# после распаковки tool_call
+if function_name == "recall_long_term_memory":
+    # как у вас сейчас
+    ...
+elif function_name == "sefaria_get_text":
+    result = await sefaria_get_text_async(**function_args)
+elif function_name == "sefaria_get_links":
+    result = await sefaria_get_links_async(**function_args)
+elif function_name == "sefaria_search":
+    result = await sefaria_search_async(**function_args)
+elif function_name == "sefaria_related":
+    result = await sefaria_related_async(**function_args)
+elif function_name == "sefaria_ref_topics":
+    result = await sefaria_ref_topics_async(**function_args)
+elif function_name == "sefaria_versions":
+    result = await sefaria_versions_async(**function_args)
+elif function_name == "sefaria_find_refs":
+    result = await sefaria_find_refs_async(**function_args)
+else:
+    result = {"ok": False, "error": f"unknown tool {function_name}"}
+
+messages.append({
+  "tool_call_id": tool_call["id"],
+  "role": "tool",
+  "name": function_name,
+  "content": json.dumps(result, ensure_ascii=False)
+})
+
+
+(Логика инвариантна вашей; просто ветвление расширено.) 
+
+main
+
+16) Критерии приёмки
+
+Пользователь произносит: «Найди Даниэль 3:15» → LLM вызывает sefaria_get_text(context=0, lang="ru"); бот читает стих, при отсутствии ru — на en, объясняет по-русски.
+
+«Какие комментарии есть?» → вызывается sefaria_get_links; LLM корректно называет комментаторов.
+
+«Давай Раши» → sefaria_get_text(ref="Rashi on Daniel 3:15"); LLM зачитывает/пересказывает.
+
+«Следующий посук» → используется next/prev.
+
+«Разберём всю главу» → sefaria_get_text(ref="Daniel 3"); затем комментарии точечно.
+
+«Найди где про радугу» → sefaria_search → список кандидатов с реальными ref.
+
+GET /metrics показывает новые tool-метрики; логи — без исключений; деградация сети — не падает процесс.

@@ -36,7 +36,7 @@ except ImportError:
 SERVICES = {
     "voice-in": {"color": "blue", "optional": True},
     "stt":      {"color": "magenta", "optional": True},
-    "brain":    {"color": "yellow", "optional": False},
+    "brain_service": {"color": "yellow", "optional": False},
     "tts":      {"color": "cyan", "optional": True},
     "health":   {"color": "green", "optional": False},
     "memory":   {"color": "red", "optional": False},
@@ -321,10 +321,10 @@ def wait_for_service_startup(service_name: str, port: str, max_wait: int = 30) -
     print_color(f"Waiting for {service_name} to start on port {port}...", "cyan", timestamp=False)
     for attempt in range(max_wait):
         if check_service_health(service_name, port):
-            print_color(f"✓ {service_name} is ready!", "green", timestamp=False)
+            print_color(f"[OK] {service_name} is ready!", "green", timestamp=False)
             return True
         time.sleep(1)
-    print_color(f"✗ Timeout waiting for {service_name} to start", "red")
+    print_color(f"[ERROR] Timeout waiting for {service_name} to start", "red")
     return False
 
 def graceful_shutdown(processes: List[tuple[str, subprocess.Popen]], timeout: int = 10):
@@ -349,11 +349,11 @@ def graceful_shutdown(processes: List[tuple[str, subprocess.Popen]], timeout: in
     for name, process in reversed(processes):
         try:
             process.wait(timeout=timeout)
-            print_color(f"✓ {name} stopped gracefully.", "green", timestamp=False)
+            print_color(f"[OK] {name} stopped gracefully.", "green", timestamp=False)
         except subprocess.TimeoutExpired:
-            print_color(f"✗ {name} did not stop in time, force killing...", "red")
+            print_color(f"[ERROR] {name} did not stop in time, force killing...", "red")
             process.kill()
-            print_color(f"✗ {name} force killed.", "yellow", timestamp=False)
+            print_color(f"[WARN] {name} force killed.", "yellow", timestamp=False)
         except Exception as e:
             print_color(f"Error waiting for {name} to stop: {e}", "red")
     print_color("--- Shutdown complete ---", "green")
@@ -448,14 +448,11 @@ def run_services(config: Dict[str, Any]):
                 print_color(f"Skipping {name} (no port configured)", "dim")
                 continue
             
-            service_dir = os.path.join(os.path.dirname(__file__), name)
-
-            # --- ASTRA REFACTORING ---
-            app_path = f"{name}.main:app"
-            if name == "brain":
-                print_color("Redirecting 'brain' service to refactored 'brain_service.main:app'", "bold yellow")
+            if name == "brain_service":
                 app_path = "brain_service.main:app"
-            # --- END REFACTORING ---
+            else:
+                app_path = f"{name}.main:app"
+            service_dir = os.path.join(os.path.dirname(__file__), name)
 
             if sys.platform == "win32":
                 venv_python = os.path.join(service_dir, ".venv", "Scripts", "python.exe")
@@ -465,7 +462,11 @@ def run_services(config: Dict[str, Any]):
                 print_color(f"Warning: Python executable not found for '{name}' at {venv_python}. Skipping.", "yellow")
                 continue
             
-            command = [venv_python, "-u", "-m", "uvicorn", app_path, "--host", "0.0.0.0", "--port", port]
+            if name == "brain_service":
+                # For brain_service, run uvicorn from project root
+                command = [venv_python, "-u", "-m", "uvicorn", app_path, "--host", "0.0.0.0", "--port", port]
+            else:
+                command = [venv_python, "-u", "-m", "uvicorn", app_path, "--host", "0.0.0.0", "--port", port]
             
             try:
                 print_color(f"Starting {name} on port {port}...", properties["color"])
@@ -474,33 +475,49 @@ def run_services(config: Dict[str, Any]):
                 creationflags = subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == "win32" else 0
                 preexec_fn = os.setsid if sys.platform != "win32" else None
                 
-                process = subprocess.Popen(
-                    command,
-                    cwd=os.path.dirname(__file__), # ALWAYS run from project root
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.STDOUT,
-                    text=True,
-                    encoding='utf-8',
-                    errors='replace',
-                    env=base_env,
-                    creationflags=creationflags,
-                    preexec_fn=preexec_fn
-                )
+                # Set working directory based on service
+                if name == "brain_service":
+                    working_dir = os.path.dirname(__file__)  # Project root
+                else:
+                    working_dir = service_dir  # Service directory
+                
+                # Use different approach for Windows to avoid handle issues
+                if sys.platform == "win32":
+                    process = subprocess.Popen(
+                        command,
+                        cwd=working_dir,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.DEVNULL,  # Redirect stderr to avoid handle issues
+                        text=True,
+                        encoding='utf-8',
+                        errors='replace',
+                        env=base_env,
+                        creationflags=subprocess.CREATE_NEW_PROCESS_GROUP,
+                        bufsize=0,  # Unbuffered
+                        universal_newlines=True
+                    )
+                else:
+                    process = subprocess.Popen(
+                        command,
+                        cwd=working_dir,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.STDOUT,
+                        text=True,
+                        encoding='utf-8',
+                        errors='replace',
+                        env=base_env,
+                        preexec_fn=os.setsid
+                    )
                 
                 processes.append((name, process))
 
                 # --- ASTRA DEBUGGING ---
-                if name == "brain":
-                    # Use a raw reader for debugging brain startup
-                    print_color(f"Using RAW stream reader for '{name}' debugging.", "bold red")
-                    thread = threading.Thread(target=raw_stream_reader, args=(process.stdout, "RAW-BRAIN"), daemon=True)
-                else:
-                    # Use the normal formatted reader
-                    compact_mode = config.get("formatting", {}).get("compact_mode", False)
-                    formatter = LogFormatter(no_colors=config.get("no_colors", False), compact_mode=compact_mode)
-                    filters = config.get("filters", {})
-                    search_pattern = config.get("search_pattern", "")
-                    thread = threading.Thread(target=stream_reader, args=(process.stdout, name, properties["color"], formatter, status_tracker, log_buffer, logger, filters, search_pattern, console), daemon=True)
+                # Use normal formatted reader for all services
+                compact_mode = config.get("formatting", {}).get("compact_mode", False)
+                formatter = LogFormatter(no_colors=config.get("no_colors", False), compact_mode=compact_mode)
+                filters = config.get("filters", {})
+                search_pattern = config.get("search_pattern", "")
+                thread = threading.Thread(target=stream_reader, args=(process.stdout, name, properties["color"], formatter, status_tracker, log_buffer, logger, filters, search_pattern, console), daemon=True)
                 # --- END DEBUGGING ---
                 
                 thread.start()
@@ -523,7 +540,7 @@ def run_services(config: Dict[str, Any]):
                     print_color("A critical service failed to start. System may be unstable.", "red")
         
         print_color(f"\n{ '='*60}", "green")
-        print_color("🎙️  ASTRA VOICE AGENT IS READY", "bold")
+        print_color("ASTRA VOICE AGENT IS READY", "bold")
         print_color("Press Ctrl+C to stop gracefully", "cyan")
         print_color(f"{ '='*60}", "green")
         
@@ -572,9 +589,9 @@ def run_services(config: Dict[str, Any]):
                 last_log_flush = current_time
     
     except KeyboardInterrupt:
-        print_color("\n🛑 Ctrl+C received. Initiating graceful shutdown...", "yellow")
+        print_color("\n[STOP] Ctrl+C received. Initiating graceful shutdown...", "yellow")
     except Exception as e:
-        print_color(f"💥 Unexpected error: {e}", "red")
+        print_color(f"[FATAL] Unexpected error: {e}", "red")
     finally:
         if log_buffer:
             log_buffer.flush_to_console(console)
@@ -659,47 +676,51 @@ def stream_reader(stream, service_name: str, base_color: str, formatter: Optiona
         timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         return timestamp, level, line
     
-    for line in iter(stream.readline, ''):
-        if not line:
-            break
-        line_str = line.strip()
-        if not line_str:
-            continue
+    try:
+        for line in iter(stream.readline, ''):
+            if not line:
+                break
+            line_str = line.strip()
+            if not line_str:
+                continue
 
-        # Parse the log line
-        parsed_timestamp, parsed_level, parsed_message = parse_log_line(line_str, service_name)
-        if parsed_timestamp is None:
-            continue  # Skip empty or unparseable lines
+            # Parse the log line
+            parsed_timestamp, parsed_level, parsed_message = parse_log_line(line_str, service_name)
+            if parsed_timestamp is None:
+                continue  # Skip empty or unparseable lines
 
-        # Apply line filters
-        if filters and exclude_compiled:
-            if any(pat.search(parsed_message) for pat in exclude_compiled):
-                continue  # Skip this line
+            # Apply line filters
+            if filters and exclude_compiled:
+                if any(pat.search(parsed_message) for pat in exclude_compiled):
+                    continue  # Skip this line
 
-        # Apply search filter
-        if search_compiled and not search_compiled.search(parsed_message):
-            continue  # Skip if doesn't match search
+            # Apply search filter
+            if search_compiled and not search_compiled.search(parsed_message):
+                continue  # Skip if doesn't match search
 
-        if status_tracker:
-            status_tracker.update_service_status(service_name, parsed_level, parsed_message)
-        if logger:
-            logger.log(getattr(logging, parsed_level), parsed_message)
-        formatted_texts = formatter.format_message(parsed_timestamp, service_name, parsed_level, parsed_message)
+            if status_tracker:
+                status_tracker.update_service_status(service_name, parsed_level, parsed_message)
+            if logger:
+                logger.log(getattr(logging, parsed_level), parsed_message)
+            formatted_texts = formatter.format_message(parsed_timestamp, service_name, parsed_level, parsed_message)
 
-        if buffer:
-            buffer.add_message(formatted_texts)
-        elif not formatter.no_colors and RICH_AVAILABLE:
-            for text in formatted_texts:
-                console.print(text)
-        else:
-            # Fallback plain text (for no_colors or no Rich)
-            for text_obj in formatted_texts:
-                if isinstance(text_obj, str):
-                    print(text_obj)
-                else:
-                    plain_line = text_obj.plain if hasattr(text_obj, 'plain') else str(text_obj)
-                    print(plain_line)
-    stream.close()
+            if buffer:
+                buffer.add_message(formatted_texts)
+            elif not formatter.no_colors and RICH_AVAILABLE:
+                for text in formatted_texts:
+                    console.print(text)
+            else:
+                # Fallback plain text (for no_colors or no Rich)
+                for text_obj in formatted_texts:
+                    if isinstance(text_obj, str):
+                        print(text_obj)
+                    else:
+                        plain_line = text_obj.plain if hasattr(text_obj, 'plain') else str(text_obj)
+                        print(plain_line)
+    except Exception as e:
+        print_color(f"Error reading stream from {service_name}: {e}", "red")
+    finally:
+        stream.close()
 
 
 
@@ -771,7 +792,7 @@ if __name__ == "__main__":
         config = get_config()
     except Exception as e:
         config = None
-        print_color(f"❌ Failed to load configuration from TOML files: {e}", "red")
+        print_color(f"[ERROR] Failed to load configuration from TOML files: {e}", "red")
 
     if config:
         # Merge logging config into main config
@@ -779,5 +800,5 @@ if __name__ == "__main__":
             config.setdefault(key, value)
         run_services(config)
     else:
-        print_color("❌ Configuration could not be loaded. Please ensure config/defaults.toml exists.", "red")
+        print_color("[ERROR] Configuration could not be loaded. Please ensure config/defaults.toml exists.", "red")
         sys.exit(1)

@@ -26,13 +26,23 @@ curator = "openrouter/x-ai/grok-4-fast:free"
 summarizer = "openrouter/x-ai/grok-4-fast:free"
 translator = "openrouter/x-ai/grok-4-fast:free"
 planner = "openrouter/x-ai/grok-4-fast:free"
-study = "openrouter/x-ai/grok-4-fast:free"
+study = "deepseek/deepseek-chat-v3.1:free"
 lexicon = "openrouter/nousresearch/nous-hermes-2-mixtral-8x7b-dpo"
 speechify = "openrouter/x-ai/grok-4-fast:free"
 
 [llm.parameters]
 temperature = 0.1
 top_p = 0.9
+
+[llm.tasks.summary]
+model = "gpt-4o-mini"
+temperature = 0.2
+top_p = 1.0
+max_tokens_out = 512
+timeout_s = 25
+retries = 2
+backoff_ms = 400
+response_format_json = true
 
 [memory]
 redis_url = "redis://localhost:6379/0"
@@ -81,12 +91,30 @@ refs_max_items = 10
 
 [stm.decay]
 half_life_min = 240
+min_score_keep = 0.1
 
 [stm.inject]
 top_facts = 3
 top_open_loops = 2
 top_refs = 3
 include_when_empty = false
+max_chars_budget = 1200
+
+[stm.summary]
+enabled = true
+input_tokens_budget = 1200
+output_bullets_min = 3
+output_bullets_max = 8
+bullet_max_chars = 140
+allow_refs = true
+max_refs = 5
+cooldown_sec = 30
+trigger_msgs_high = 10
+trigger_msgs_low = 6
+trigger_tokens_high = 2500
+trigger_tokens_low = 1500
+log_verbose = false
+partial_min_tokens = 50
 
 [memory.ltm]
 max_points = 6
@@ -185,6 +213,7 @@ path = "personalities"
 [launcher.enabled_services]
 voice_in = false
 stt = false
+brain_service = true
 tts = false
 
 [debug]
@@ -204,3 +233,9 @@ on_demand_quality = "high"
 # Setting for the context included in normal questions during Study Mode
 # Options: "hebrew_and_english", "english_only", "hebrew_only"
 study_mode_context = "english_only"
+
+[study.chat_history]
+# Maximum number of messages to keep in chat history
+max_messages = 2000
+# TTL for chat history in days
+ttl_days = 30
