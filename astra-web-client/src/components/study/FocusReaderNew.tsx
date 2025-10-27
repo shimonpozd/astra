@@ -163,7 +163,7 @@ const TextSegmentComponent = forwardRef<HTMLElement, {
       className={`
         transition-all duration-500 ease-in-out cursor-pointer
         ${isFocus
-          ? `${focusTextSize} opacity-100 my-4 px-4 py-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border-l-4 border-primary shadow-sm`
+          ? `${focusTextSize} opacity-100 my-4 px-4 py-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border-l-4 border-primary`
           : `${baseTextSize} opacity-70 hover:opacity-90 my-2 px-2 py-2 hover:bg-accent/20 rounded-md`
         }
         ${isHebrew ? 'font-hebrew' : ''}

@@ -6,6 +6,7 @@ import json
 from dataclasses import dataclass
 import unicodedata
 import asyncio
+import html
 
 logger = logging.getLogger(__name__)
 
@@ -56,7 +57,20 @@ def clamp_lines(s: str, max_lines: int = 8) -> str:
     return "\n".join(s.splitlines()[:max_lines]).strip()
 
 def _clean_html(text: str) -> str:
-    return re.sub(r'<[^>]+>', '', text)
+    """Clean HTML tags and entities from text."""
+    if not text:
+        return text
+    
+    # Decode HTML entities like &nbsp; &amp; &lt; &thinsp; etc.
+    text = html.unescape(text)
+    
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    
+    # Clean up multiple spaces, tabs, and other whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    
+    return text
 
 def ok_and_has_text(raw: Any) -> bool:
     if not isinstance(raw, dict) or raw.get("error"):

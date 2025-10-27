@@ -19,7 +19,7 @@ class StudyError(Exception):
     status: HTTPStatus = HTTPStatus.INTERNAL_SERVER_ERROR
 
     def __post_init__(self) -> None:
-        super().__init__(self.message)
+        Exception.__init__(self, self.message)
 
     def __str__(self) -> str:  # pragma: no cover - simple passthrough
         return self.message
@@ -53,6 +53,11 @@ class DailyIdempotencyCollision(StudyError):
 class BookshelfUnavailable(StudyError):
     code = "study.bookshelf_unavailable"
     status = HTTPStatus.SERVICE_UNAVAILABLE
+
+
+class StudyConfigInvalid(StudyError):
+    code = "study.config_invalid"
+    status = HTTPStatus.INTERNAL_SERVER_ERROR
 
 
 def to_http_payload(error: StudyError) -> Tuple[int, Dict[str, Any]]:

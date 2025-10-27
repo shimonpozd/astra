@@ -166,6 +166,39 @@ function tryExtract(payload: any): any {
     return { version: '1.0', blocks };
   }
 
+  // 8. Неправильный формат: массив с type="text" и type="action"
+  if (Array.isArray(payload)) {
+    const blocks: any[] = [];
+    
+    for (const item of payload) {
+      if (item && typeof item === 'object') {
+        if (item.type === 'text' && item.text) {
+          blocks.push({ type: 'paragraph', text: item.text });
+        } else if (item.type === 'action' && item.action) {
+          // Преобразуем действия в информационные блоки
+          const actionText = `Выполняется действие: ${item.action}`;
+          if (item.action_input && item.action_input.tref) {
+            blocks.push({ 
+              type: 'callout', 
+              variant: 'info', 
+              text: `${actionText} для ссылки: ${item.action_input.tref}` 
+            });
+          } else {
+            blocks.push({ 
+              type: 'callout', 
+              variant: 'info', 
+              text: actionText 
+            });
+          }
+        }
+      }
+    }
+    
+    if (blocks.length > 0) {
+      return { version: '1.0', blocks };
+    }
+  }
+
   return null;
 }
 
@@ -242,6 +275,15 @@ export function coerceDoc(payload: unknown): DocV1 | null {
         }
         break;
       }
+    }
+
+    // Если не удалось распарсить как JSON, но это обычный текст - создаем простой doc
+    if (s.length > 0 && !s.startsWith('[') && !s.startsWith('{')) {
+      // Это обычный текст, создаем простой doc из одного абзаца
+      return {
+        version: '1.0',
+        blocks: [{ type: 'paragraph', text: s }]
+      };
     }
   }
 

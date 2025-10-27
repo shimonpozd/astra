@@ -12,7 +12,7 @@ from core.middleware import logging_middleware, setup_cors_middleware
 from core.exceptions import setup_exception_handlers
 from core.settings import Settings
 
-from api import admin, chat, study, actions
+from api import admin, chat, study, actions, tts, audio
 
 # Initialize the FastAPI app with the lifespan manager
 app = FastAPI(
@@ -38,6 +38,8 @@ app.include_router(admin.router, prefix="/api/admin", tags=["admin"])
 app.include_router(chat.router, prefix="/api", tags=["chat"])
 app.include_router(study.router, prefix="/api/study", tags=["study"])
 app.include_router(actions.router, prefix="/api/actions", tags=["actions"])
+app.include_router(tts.router, prefix="/api/tts", tags=["tts"])
+app.include_router(audio.router, prefix="/api", tags=["audio"])
 
 @app.get("/health")
 async def health():

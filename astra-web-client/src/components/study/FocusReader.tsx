@@ -1,19 +1,22 @@
-import { memo, useRef, useEffect, forwardRef, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ChevronDown, ChevronUp, Languages, Loader2, Play, Pause, Settings, X } from 'lucide-react';
+
 import { FocusReaderProps, TextSegment } from '../../types/text';
-import { getTextDirection } from '../../utils/textUtils';
-import { containsHebrew } from '../../utils/hebrewUtils';
-import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
-import { useTranslation } from '../../hooks/useTranslation';
+import { normalizeRefForAPI } from '../../utils/refUtils';
+import ContinuousTextFlow from './ContinuousTextFlow';
 import NavigationPanel from './NavigationPanel';
-import { 
-  Languages, 
-  Settings,
-  ZoomIn,
-  ZoomOut,
-  RotateCcw,
-  ChevronUp,
-  ChevronDown
-} from 'lucide-react';
+import { useTranslation } from '../../hooks/useTranslation';
+import { useSpeechify } from '../../hooks/useSpeechify';
+import { useTTS } from '../../hooks/useTTS';
+// import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
+
+const FONT_SIZE_VALUES: Record<string, string> = {
+  small: '0.95rem',
+  medium: '1.05rem',
+  large: '1.15rem',
+};
+
+const FOCUS_READER_SETTINGS_KEY = 'focus-reader-font-settings';
 
 const FocusReader = memo(({
   continuousText,
@@ -22,177 +25,412 @@ const FocusReader = memo(({
   onSegmentClick,
   onNavigateToRef,
   onLexiconDoubleClick,
-  fontSize = 'medium',
-  lineHeight = 'normal',
-  // Navigation props
   onBack,
   onForward,
   onExit,
   currentRef,
   canBack = false,
-  canForward = false
+  canForward = false,
 }: FocusReaderProps) => {
-  const focusRef = useRef<HTMLElement>(null);
-  
-  // Состояние панелей
-  const [showSettings, setShowSettings] = useState(false);
-  const [globalTranslation, setGlobalTranslation] = useState(false);
+  const focusRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const navOriginRef = useRef<'user' | 'data'>('data');
+  const scrollLockRef = useRef(false);
+  const scrollLockTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Автоскролл к фокусу при изменении
+  const [showSettings, setShowSettings] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
+  const [stableTranslatedText, setStableTranslatedText] = useState('');
+  const [readerFontSize, setReaderFontSize] = useState<'small' | 'medium' | 'large'>('medium');
+  const [hebrewScale, setHebrewScale] = useState(1.2);
+  const [translationScale, setTranslationScale] = useState(1.2);
+  const [activeTTSRef, setActiveTTSRef] = useState<string | null>(null);
+
+  const activeSegment = useMemo(() => {
+    const index = continuousText?.focusIndex ?? 0;
+    return continuousText?.segments?.[index];
+  }, [continuousText]);
+
+  const activeSegmentRef = activeSegment?.ref ?? null;
+  const hebrewText = activeSegment?.heText || '';
+  const englishText = activeSegment?.text || '';
+
+  const { translatedText, isTranslating, translate, clear } = useTranslation({
+    tref: activeSegment?.ref || '',
+  });
+
+  // Стабилизируем переведенный текст
   useEffect(() => {
-    if (focusRef.current) {
-      focusRef.current.scrollIntoView({
+    if (translatedText && translatedText.trim()) {
+      setStableTranslatedText(translatedText);
+    }
+  }, [translatedText]);
+
+  // Очищаем стабильный текст при смене сегмента
+  useEffect(() => {
+    setStableTranslatedText('');
+  }, [activeSegment?.ref]);
+
+  const { speechify, isLoading: isSpeechifying } = useSpeechify();
+
+  const {
+    isPlaying: ttsIsPlaying,
+    isPaused,
+    play,
+    stop,
+    pause: pauseTTS,
+    resume,
+    isLoading: ttsIsLoading,
+  } = useTTS({
+    language: 'ru',
+    speed: 1.0,
+  });
+
+  const hasHebrew = useMemo(() => hebrewText.trim().length > 0, [hebrewText]);
+  const hasEnglish = useMemo(() => englishText.trim().length > 0, [englishText]);
+
+  const sanitizeText = useCallback((value: string) => {
+    return value
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }, []);
+
+  const sanitizedHebrew = useMemo(() => sanitizeText(hebrewText), [hebrewText, sanitizeText]);
+  const sanitizedEnglish = useMemo(() => sanitizeText(englishText), [englishText, sanitizeText]);
+
+  const isActiveTTS = activeTTSRef === activeSegmentRef && (ttsIsPlaying || isPaused);
+  const isPlaybackLoading = isSpeechifying || ttsIsLoading;
+  const isCurrentSegmentPlaying = isActiveTTS && ttsIsPlaying;
+
+  const setScrollLock = useCallback(() => {
+    scrollLockRef.current = true;
+    if (scrollLockTimeoutRef.current) {
+      clearTimeout(scrollLockTimeoutRef.current);
+    }
+    scrollLockTimeoutRef.current = setTimeout(() => {
+      scrollLockRef.current = false;
+    }, 1500);
+  }, []);
+
+  useEffect(() => {
+    if (focusRef.current && !scrollLockRef.current) {
+    focusRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
-      });
+        block: 'center',
+    });
     }
   }, [continuousText?.focusIndex]);
 
-  // Keyboard navigation
-  useKeyboardNavigation(
-    continuousText?.segments || [],
-    continuousText?.focusIndex || 0,
-    onNavigateToRef || (() => {})
+  useEffect(() => {
+    clear();
+    stop().catch(() => {});
+    setActiveTTSRef(null);
+  }, [activeSegmentRef, clear, stop]);
+
+  // Убираем автоматический перевод - пользователь сам нажимает кнопку
+  // useEffect(() => {
+  //   if (showTranslation && activeSegment && !translatedText && !isTranslating) {
+  //     translate().catch(() => {});
+  //   }
+  // }, [showTranslation, activeSegment, translatedText, isTranslating, translate]);
+
+  useEffect(() => {
+    return () => {
+      if (scrollLockTimeoutRef.current) {
+        clearTimeout(scrollLockTimeoutRef.current);
+      }
+      stop().catch(() => {});
+      setActiveTTSRef(null);
+    };
+  }, [stop]);
+
+  const handlePlayClick = useCallback(async () => {
+    if (!hasHebrew && !hasEnglish) {
+      return;
+    }
+
+    try {
+      if (isActiveTTS) {
+        if (ttsIsPlaying) {
+          await pauseTTS();
+        } else if (isPaused) {
+          await resume();
+        } else {
+          await stop();
+          setActiveTTSRef(null);
+        }
+        return;
+      }
+
+      await stop();
+      setActiveTTSRef(null);
+
+      let textToSpeak = '';
+      let playbackLanguage: 'ru' | 'en' = 'ru';
+
+      try {
+        const response = await speechify({
+          hebrewText: sanitizeText(hebrewText),
+          englishText: sanitizeText(englishText),
+        });
+        const trimmed = typeof response === 'string' ? response.trim() : '';
+        if (trimmed) {
+          textToSpeak = trimmed;
+        }
+      } catch (err) {
+        console.warn('[FocusReader] Speechify failed, fallback to direct text', err);
+      }
+
+      if (!textToSpeak) {
+        const fallback = sanitizedEnglish || sanitizedHebrew;
+        if (!fallback) {
+          return;
+        }
+        textToSpeak = fallback;
+        playbackLanguage = sanitizedEnglish ? 'en' : 'ru';
+      }
+
+      await play(textToSpeak, { language: playbackLanguage });
+      setActiveTTSRef(activeSegmentRef);
+    } catch (err) {
+      console.warn('[FocusReader] TTS error:', err);
+      setActiveTTSRef(null);
+    }
+  }, [
+    activeSegmentRef,
+    englishText,
+    hasEnglish,
+    hasHebrew,
+    hebrewText,
+    isActiveTTS,
+    isPaused,
+    pauseTTS,
+    play,
+    resume,
+    speechify,
+    stop,
+    ttsIsPlaying,
+    sanitizeText,
+    sanitizedEnglish,
+    sanitizedHebrew,
+  ]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    try {
+      const raw = window.localStorage.getItem(FOCUS_READER_SETTINGS_KEY);
+      if (!raw) {
+        return;
+      }
+      const parsed = JSON.parse(raw) as {
+        readerFontSize?: 'small' | 'medium' | 'large';
+        hebrewScale?: number;
+        translationScale?: number;
+      };
+      if (parsed.readerFontSize && ['small', 'medium', 'large'].includes(parsed.readerFontSize)) {
+        setReaderFontSize(parsed.readerFontSize);
+      }
+      if (typeof parsed.hebrewScale === 'number' && parsed.hebrewScale >= 1.0 && parsed.hebrewScale <= 2.0) {
+        setHebrewScale(parsed.hebrewScale);
+      }
+      if (typeof parsed.translationScale === 'number' && parsed.translationScale >= 0.8 && parsed.translationScale <= 2.0) {
+        setTranslationScale(parsed.translationScale);
+      }
+    } catch (err) {
+      console.warn('[FocusReader] Failed to restore font settings', err);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const payload = {
+      readerFontSize,
+      hebrewScale,
+      translationScale,
+    };
+    try {
+      window.localStorage.setItem(FOCUS_READER_SETTINGS_KEY, JSON.stringify(payload));
+    } catch (err) {
+      console.warn('[FocusReader] Failed to persist font settings', err);
+    }
+  }, [readerFontSize, hebrewScale, translationScale]);
+
+  const handleSegmentNavigation = useCallback(
+    (ref: string, segment: TextSegment) => {
+      onSegmentClick?.(segment);
+      onNavigateToRef?.(ref, segment);
+    },
+    [onNavigateToRef, onSegmentClick],
   );
+
+  const fontSizeValues = useMemo(() => FONT_SIZE_VALUES, []);
 
   if (error) {
     return (
       <div className="h-full flex items-center justify-center p-6 text-center">
         <div className="text-red-500 mb-2">⚠️</div>
-        <h3 className="text-lg font-medium mb-2">Error</h3>
+        <h3 className="text-lg font-medium mb-2">Ошибка</h3>
         <p className="text-sm text-muted-foreground">{error}</p>
       </div>
     );
   }
 
-  if (isLoading) {
-    return (
-      <div className="h-full flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-      </div>
-    );
-  }
+  // Убираем блокирующий спиннер загрузки - показываем контент сразу
+  // if (isLoading) {
+  //   return (
+  //     <div className="h-full flex items-center justify-center">
+  //       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+  //     </div>
+  //   );
+  // }
 
   if (!continuousText) {
     return (
       <div className="h-full flex items-center justify-center p-6 text-center">
         <div className="text-muted-foreground">
           <div className="text-4xl mb-4">📖</div>
-          <h3 className="text-lg font-medium mb-2">No text selected</h3>
-          <p className="text-sm">Choose a text to start reading</p>
+          <h3 className="text-lg font-medium mb-2">Текст не выбран</h3>
+          <p className="text-sm">Выберите отрывок, чтобы начать чтение</p>
         </div>
       </div>
     );
   }
 
-  // Отладочная информация
-  console.log('FocusReader render:', {
-    hasContinuousText: !!continuousText,
-    segmentsCount: continuousText?.segments?.length || 0,
-    focusIndex: continuousText?.focusIndex,
-    currentRef,
-    canBack,
-    canForward
-  });
-
   return (
     <div className="h-full flex flex-col bg-background">
-      {/* Навигационная панель */}
       <div className="flex-shrink-0 border-b panel-outer">
         <div className="flex items-center gap-3 p-3">
-          {/* Кнопки навигации - слева */}
-          <div className="flex items-center gap-1">
-            <button
+            <div className="flex items-center gap-1">
+              <button
               onClick={onBack}
               disabled={isLoading || !canBack}
-              className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
-              title="Вверх"
-            >
-              <ChevronUp className="w-3 h-3" />
-            </button>
-            <button
+                className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
+              title="Предыдущий сегмент"
+              >
+                <ChevronUp className="w-3 h-3" />
+              </button>
+              <button
               onClick={onForward}
               disabled={isLoading || !canForward}
-              className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
-              title="Вниз"
-            >
-              <ChevronDown className="w-3 h-3" />
-            </button>
-          </div>
+                className="flex items-center justify-center w-6 h-6 bg-primary text-primary-foreground rounded hover:bg-primary/90 disabled:opacity-50 transition-colors"
+              title="Следующий сегмент"
+              >
+                <ChevronDown className="w-3 h-3" />
+              </button>
+            </div>
           
-          {/* NavigationPanel - в центре */}
           <div className="flex-1">
             <NavigationPanel 
-              currentRef={currentRef}
-              onNavigate={onNavigateToRef || (() => {})}
+              currentRef={currentRef || activeSegment?.ref}
+              onNavigate={(ref) => onNavigateToRef?.(normalizeRefForAPI(ref))}
             />
           </div>
           
-          {/* Остальные кнопки - справа */}
-          <div className="flex items-center gap-1">
-            {/* Кнопка перевода */}
+               <div className="flex items-center gap-1">
             <button
-              onClick={() => setGlobalTranslation(!globalTranslation)}
+              onClick={() => {
+                if (showTranslation) {
+                  setShowTranslation(false);
+                  clear();
+                } else {
+                  setShowTranslation(true);
+                  translate().catch(() => {});
+                }
+              }}
               className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
-                globalTranslation 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+                showTranslation ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
               }`}
-              title={globalTranslation ? "Показать оригинал" : "Перевести"}
+              title={showTranslation ? 'Скрыть перевод' : 'Показать перевод'}
             >
               <Languages className="w-3 h-3" />
+              <span>Перевод</span>
             </button>
-            
-            {/* Кнопка настроек */}
+
             <button
-              onClick={() => setShowSettings(!showSettings)}
+              onClick={handlePlayClick}
+              disabled={
+                isLoading ||
+                isPlaybackLoading ||
+                (!hasHebrew && !hasEnglish)
+              }
               className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
-                showSettings 
-                  ? 'bg-primary text-primary-foreground' 
-                  : 'bg-muted hover:bg-muted/80 text-muted-foreground'
-              }`}
-              title="Настройки"
+                isActiveTTS ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+              } ${isPlaybackLoading ? 'opacity-50 cursor-wait' : ''}`}
+              title={isActiveTTS ? 'Остановить озвучку' : 'Озвучить текущий отрывок'}
             >
-              <Settings className="w-3 h-3" />
+              {isPlaybackLoading ? (
+                <Loader2 className="w-3 h-3 animate-spin" />
+              ) : isActiveTTS ? (
+                isCurrentSegmentPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />
+              ) : (
+                <Play className="w-3 h-3" />
+              )}
+              <span>Озвучка</span>
             </button>
-            
-            {/* Кнопка выхода */}
-            <button
-              onClick={onExit}
-              disabled={isLoading}
-              className="flex items-center gap-1 px-2 py-1 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded transition-colors disabled:opacity-50 text-xs"
-              title="Выход"
-            >
-              ✕
-            </button>
-          </div>
+
+                 <button
+              onClick={() => setShowSettings((prev) => !prev)}
+                   className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
+                showSettings ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+                   }`}
+              title="Настройки отображения"
+                 >
+                   <Settings className="w-3 h-3" />
+                 </button>
+
+            {onExit && (
+              <button
+                onClick={onExit}
+                disabled={isLoading}
+                className="flex items-center gap-1 px-2 py-1 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded transition-colors disabled:opacity-50 text-xs"
+                title="Закрыть"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            )}
+               </div>
         </div>
       </div>
 
-      {/* Основной контент */}
-      <div className="flex-1 flex overflow-hidden">
-        {/* Текст */}
+        <div className="flex-1 flex overflow-hidden">
         <div className="flex-1 relative overflow-hidden">
-          <ContinuousTextFlow
-            segments={continuousText.segments}
+        <ContinuousTextFlow
+          segments={continuousText.segments}
             focusIndex={continuousText.focusIndex}
-            onSegmentClick={onSegmentClick}
-            onNavigateToRef={onNavigateToRef}
-            onLexiconDoubleClick={onLexiconDoubleClick}
-            fontSize={fontSize}
-            lineHeight={lineHeight}
-            focusRef={focusRef}
-            globalTranslation={globalTranslation}
-          />
-        </div>
+            onNavigateToRef={(ref) => handleSegmentNavigation(ref, continuousText.segments[continuousText.focusIndex])}
+            onLexiconDoubleClick={onLexiconDoubleClick ? () => onLexiconDoubleClick(continuousText.segments[continuousText.focusIndex]) : undefined}
+          focusRef={focusRef}
+          showTranslation={showTranslation}
+            translatedText={stableTranslatedText}
+          isTranslating={isTranslating}
+          navOriginRef={navOriginRef}
+          scrollContainerRef={scrollContainerRef}
+          setScrollLock={setScrollLock}
+          fontSizeValues={fontSizeValues}
+          readerFontSize={readerFontSize}
+          hebrewScale={hebrewScale}
+          translationScale={translationScale}
+            translationRef={activeSegment?.ref || ''}
+          setShowTranslation={setShowTranslation}
+          translate={translate}
+            currentTranslatedText={stableTranslatedText}
+            isActive={isActiveTTS}
+            ttsIsPlaying={isCurrentSegmentPlaying}
+          handlePlayClick={handlePlayClick}
+        />
+          </div>
         
-        {/* Панель настроек */}
         {showSettings && (
           <div className="w-64 border-l panel-outer bg-background">
             <div className="p-4 border-b">
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 <Settings className="w-5 h-5" />
-                Настройки
+                Настройки отображения
               </h3>
             </div>
             <div className="p-4 space-y-4">
@@ -200,35 +438,70 @@ const FocusReader = memo(({
               <div>
                 <label className="text-sm font-medium mb-2 block">Размер шрифта</label>
                 <div className="flex items-center gap-2">
-                  <button className="p-1 hover:bg-muted rounded">
-                    <ZoomOut className="w-4 h-4" />
+                  <button 
+                    onClick={() => setReaderFontSize('small')}
+                    className={`px-2 py-1 text-xs rounded ${readerFontSize === 'small' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}
+                  >
+                    Малый
                   </button>
-                  <span className="text-sm px-2 py-1 bg-muted rounded">{fontSize}</span>
-                  <button className="p-1 hover:bg-muted rounded">
-                    <ZoomIn className="w-4 h-4" />
+                  <button 
+                    onClick={() => setReaderFontSize('medium')}
+                    className={`px-2 py-1 text-xs rounded ${readerFontSize === 'medium' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}
+                  >
+                    Средний
+                  </button>
+                  <button 
+                    onClick={() => setReaderFontSize('large')}
+                    className={`px-2 py-1 text-xs rounded ${readerFontSize === 'large' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}
+                  >
+                    Большой
                   </button>
                 </div>
               </div>
               
-              {/* Межстрочный интервал */}
+              {/* Масштаб иврита */}
               <div>
-                <label className="text-sm font-medium mb-2 block">Интервал</label>
+                <label className="text-sm font-medium mb-2 block">Масштаб иврита: {hebrewScale.toFixed(1)}x</label>
                 <div className="flex items-center gap-2">
-                  <button className="p-1 hover:bg-muted rounded">
-                    <ChevronUp className="w-4 h-4" />
+                  <button 
+                    onClick={() => setHebrewScale(Math.max(1.0, hebrewScale - 0.1))}
+                    disabled={hebrewScale <= 1.0}
+                    className="px-2 py-1 text-xs bg-muted hover:bg-muted/80 rounded disabled:opacity-50"
+                  >
+                    -
                   </button>
-                  <span className="text-sm px-2 py-1 bg-muted rounded">{lineHeight}</span>
-                  <button className="p-1 hover:bg-muted rounded">
-                    <ChevronDown className="w-4 h-4" />
+                  <span className="text-xs text-muted-foreground">{hebrewScale.toFixed(1)}x</span>
+                  <button 
+                    onClick={() => setHebrewScale(Math.min(2.0, hebrewScale + 0.1))}
+                    disabled={hebrewScale >= 2.0}
+                    className="px-2 py-1 text-xs bg-muted hover:bg-muted/80 rounded disabled:opacity-50"
+                  >
+                    +
                   </button>
                 </div>
               </div>
               
-              {/* Сброс */}
-              <button className="w-full flex items-center gap-2 px-3 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors">
-                <RotateCcw className="w-4 h-4" />
-                <span className="text-sm">Сбросить</span>
-              </button>
+              {/* Масштаб перевода */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Масштаб перевода: {translationScale.toFixed(1)}x</label>
+                <div className="flex items-center gap-2">
+                  <button 
+                    onClick={() => setTranslationScale(Math.max(0.8, translationScale - 0.1))}
+                    disabled={translationScale <= 0.8}
+                    className="px-2 py-1 text-xs bg-muted hover:bg-muted/80 rounded disabled:opacity-50"
+                  >
+                    -
+                  </button>
+                  <span className="text-xs text-muted-foreground">{translationScale.toFixed(1)}x</span>
+                  <button 
+                    onClick={() => setTranslationScale(Math.min(2.0, translationScale + 0.1))}
+                    disabled={translationScale >= 2.0}
+                    className="px-2 py-1 text-xs bg-muted hover:bg-muted/80 rounded disabled:opacity-50"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -237,174 +510,6 @@ const FocusReader = memo(({
   );
 });
 
+FocusReader.displayName = 'FocusReader';
+
 export default FocusReader;
-
-
-const ContinuousTextFlow = memo(({
-  segments,
-  focusIndex,
-  onSegmentClick,
-  onNavigateToRef,
-  onLexiconDoubleClick,
-  fontSize,
-  lineHeight,
-  focusRef,
-  globalTranslation = false
-}: {
-  segments: TextSegment[];
-  focusIndex: number;
-  onSegmentClick?: (segment: TextSegment) => void;
-  onNavigateToRef?: (ref: string) => void;
-  onLexiconDoubleClick?: () => void;
-  fontSize: 'small' | 'medium' | 'large';
-  lineHeight: 'compact' | 'normal' | 'relaxed';
-  focusRef: React.RefObject<HTMLElement>;
-  globalTranslation?: boolean;
-}) => {
-  const focusTextSize = {
-    small: 'text-xl',
-    medium: 'text-2xl',
-    large: 'text-3xl'
-  }[fontSize];
-
-  const lineHeightClass = {
-    compact: 'leading-tight',
-    normal: 'leading-relaxed',
-    relaxed: 'leading-loose'
-  }[lineHeight];
-
-  // Отладочная информация
-  console.log('ContinuousTextFlow render:', {
-    segmentsCount: segments.length,
-    focusIndex,
-    firstSegment: segments[0] ? {
-      ref: segments[0].ref,
-      text: segments[0].text?.substring(0, 50) + '...',
-      heText: segments[0].heText?.substring(0, 50) + '...'
-    } : null
-  });
-
-  return (
-    <div className="h-full overflow-y-auto px-8 py-6 scroll-smooth panel-inner">
-      <article className={`max-w-4xl mx-auto ${lineHeightClass}`}>
-        {segments.length === 0 ? (
-          <div className="text-center text-muted-foreground py-8">
-            <p>Нет сегментов для отображения</p>
-            <p className="text-xs mt-2 text-muted-foreground/70">Segments count: {segments.length}</p>
-          </div>
-        ) : (
-          segments.map((segment, index) => {
-          const isFocus = index === focusIndex;
-
-          return (
-            <TextSegmentComponent
-              key={segment.ref}
-              segment={segment}
-              isFocus={isFocus}
-              focusTextSize={focusTextSize}
-              globalTranslation={globalTranslation}
-              onClick={() => {
-                console.log('Segment clicked:', segment.ref);
-                onSegmentClick?.(segment);
-                onNavigateToRef?.(segment.ref);
-              }}
-              onDoubleClick={onLexiconDoubleClick}
-              ref={isFocus ? focusRef : undefined}
-            />
-          );
-        })
-        )}
-      </article>
-    </div>
-  );
-});
-
-const TextSegmentComponent = forwardRef<HTMLElement, {
-  segment: TextSegment;
-  isFocus: boolean;
-  focusTextSize: string;
-  globalTranslation: boolean;
-  onClick: () => void;
-  onDoubleClick?: () => void;
-}>(({
-  segment,
-  isFocus,
-  focusTextSize,
-  globalTranslation,
-  onClick,
-  onDoubleClick
-}, ref) => {
-  const { translatedText, translate, isTranslating } = useTranslation({
-    tref: segment.ref
-  });
-
-  // Автоматически запускаем перевод только для фокусного сегмента
-  useEffect(() => {
-    if (globalTranslation && isFocus && !translatedText && !isTranslating) {
-      console.log('[FocusReader] Starting translation for focus segment:', segment.ref);
-      translate();
-    }
-  }, [globalTranslation, isFocus, translatedText, isTranslating, translate, segment.ref]);
-
-  const originalText = segment.heText || '';
-  const textToRender = globalTranslation && translatedText ? translatedText : originalText;
-  const isHebrew = globalTranslation && translatedText ? false : containsHebrew(textToRender);
-  const direction = globalTranslation && translatedText ? 'ltr' : getTextDirection(textToRender);
-  
-  // Убираем индикатор загрузки - просто показываем оригинал пока перевод не готов
-
-  return (
-    <section
-      ref={ref}
-      className={`
-        transition-all duration-500 ease-in-out cursor-pointer relative
-        ${focusTextSize}
-        ${isFocus
-          ? 'opacity-100 my-4 px-4 py-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border-l-4 border-primary shadow-sm'
-          : 'opacity-70 hover:opacity-90 my-2 px-2 py-2 hover:bg-accent/20 rounded-md'
-        }
-        ${isHebrew ? 'font-serif text-hebrew' : 'font-serif'}
-      `}
-      onClick={onClick}
-      onDoubleClick={onDoubleClick}
-      role="button"
-      tabIndex={0}
-      aria-current={isFocus ? 'true' : undefined}
-      aria-label={`Text segment: ${segment.ref}`}
-    >
-      {/* Метаданные сегмента - только для фокуса */}
-      {isFocus && segment.metadata && (
-        <div className="flex items-center gap-2 mb-4 text-xs text-muted-foreground">
-          {segment.metadata.chapter && (
-            <span className="bg-muted px-2 py-1 rounded text-xs">
-              Глава {segment.metadata.chapter}
-            </span>
-          )}
-          {segment.metadata.verse && (
-            <span className="bg-muted px-2 py-1 rounded text-xs">
-              Стих {segment.metadata.verse}
-            </span>
-          )}
-        </div>
-      )}
-
-      {/* Основной текст */}
-      <div
-        className={`
-            whitespace-pre-wrap select-text leading-relaxed
-            ${direction === 'rtl' ? 'text-right' : 'text-left'}
-            ${isHebrew ? 'font-feature-settings: "kern" 1, "liga" 1' : ''}
-            ${isFocus ? 'text-foreground' : 'text-muted-foreground'}
-          `}
-        style={{
-          unicodeBidi: 'plaintext',
-          wordBreak: isHebrew ? 'keep-all' : 'normal',
-          lineHeight: isFocus ? '1.8' : '1.6'
-        }}
-      >
-        {textToRender}
-      </div>
-
-    </section>
-  );
-});

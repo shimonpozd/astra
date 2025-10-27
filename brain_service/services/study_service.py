@@ -2,7 +2,7 @@ import logging
 import json
 import asyncio
 from datetime import datetime
-from typing import List, Dict, Any, Optional, AsyncGenerator
+from typing import List, Dict, Any, Optional, AsyncGenerator, Mapping
 from collections import defaultdict
 
 import redis.asyncio as redis
@@ -18,6 +18,7 @@ from core.llm_config import get_llm_for_task, LLMConfigError
 from models.doc_v1_models import DocV1
 from config.prompts import get_prompt
 from config import personalities as personality_service
+from .study.config_schema import StudyConfig, load_study_config
 
 from .study_state import (
     get_current_snapshot, replace_top_snapshot, push_new_snapshot, 
@@ -34,25 +35,86 @@ class StudyService:
     """
     
     def __init__(
-        self, 
-        redis_client: redis.Redis, 
-        sefaria_service: SefariaService, 
+        self,
+        redis_client: redis.Redis,
+        sefaria_service: SefariaService,
         sefaria_index_service: SefariaIndexService,
         tool_registry: ToolRegistry,
-        memory_service=None
+        memory_service=None,
+        study_config: Optional[Any] = None,
     ):
         self.redis_client = redis_client
         self.sefaria_service = sefaria_service
         self.sefaria_index_service = sefaria_index_service
         self.tool_registry = tool_registry
         self.memory_service = memory_service
-        
+
         # Configurable parameters for chat history
-        from config import get_config
-        config = get_config()
-        study_config = config.get("study", {}).get("chat_history", {})
-        self.max_chat_history_messages = study_config.get("max_messages", 2000)
-        self.chat_history_ttl_days = study_config.get("ttl_days", 30)
+        self.study_config: Optional[StudyConfig] = None
+        self.max_chat_history_messages = 2000
+        self.chat_history_ttl_days = 30
+        self.update_study_config(study_config)
+
+    def _resolve_study_config(self, study_config: Optional[Any]) -> StudyConfig:
+        if isinstance(study_config, StudyConfig):
+            return study_config
+
+        if isinstance(study_config, Mapping):
+            try:
+                return load_study_config(study_config)
+            except Exception as exc:
+                logger.warning(
+                    "Failed to load study config from mapping payload; using defaults: %s",
+                    exc,
+                    exc_info=True,
+                )
+        elif study_config is not None:
+            logger.warning(
+                "Unsupported study_config type %s; using defaults",
+                type(study_config),
+            )
+
+        try:
+            from config import get_config
+
+            raw_config = get_config().get("study", {})
+        except Exception as exc:
+            logger.warning(
+                "Failed to load study config from global config; using defaults: %s",
+                exc,
+                exc_info=True,
+            )
+            raw_config = {}
+
+        try:
+            return load_study_config(raw_config)
+        except Exception as exc:
+            logger.warning(
+                "Falling back to default study config due to validation error: %s",
+                exc,
+                exc_info=True,
+            )
+            return load_study_config({})
+
+    def update_study_config(self, study_config: Optional[Any]) -> None:
+        resolved_config = self._resolve_study_config(study_config)
+        self.study_config = resolved_config
+
+        chat_history = getattr(resolved_config, "chat_history", None)
+        if chat_history:
+            self.max_chat_history_messages = chat_history.max_messages
+            self.chat_history_ttl_days = chat_history.ttl_days
+        else:
+            self.max_chat_history_messages = 2000
+            self.chat_history_ttl_days = 30
+
+        logger.debug(
+            "Study config applied",
+            extra={
+                "max_chat_history_messages": self.max_chat_history_messages,
+                "chat_history_ttl_days": self.chat_history_ttl_days,
+            },
+        )
     
     async def _migrate_legacy_history_if_needed(self, session_id: str):
         """Migrate legacy history format to new format if needed."""
@@ -126,6 +188,12 @@ class StudyService:
             # Check if this is a daily session - use explicit flag
             is_daily_session = request.is_daily if request.is_daily is not None else request.session_id.startswith('daily-')
             logger.info(f"🔥 SESSION TYPE CHECK: is_daily_session={is_daily_session} (from flag: {request.is_daily}, from session_id: {request.session_id.startswith('daily-')})")
+
+            segments: List[Dict[str, Any]] = []
+            focus_index = 0
+            focus_ref = request.focus_ref or request.ref
+            bookshelf_data: Optional[Dict[str, Any]] = None
+            window_data: Optional[Dict[str, Any]] = None
             
             if is_daily_session:
                 # DAILY MODE: Load full text and segment it
@@ -170,7 +238,49 @@ class StudyService:
                     )
                 
                 # Save segments to Redis for polling if this is a daily session
-                if window_data and window_data.get("segments"):
+                segments: List[Dict[str, Any]] = []
+                focus_index = 0
+                focus_ref = request.focus_ref or request.ref
+
+                if window_data:
+                    segments = window_data.get("segments") or []
+                    focus_index = window_data.get("focusIndex", 0) or 0
+                    focus_ref = focus_ref or window_data.get("ref")
+
+                    if segments:
+                        # Build list of candidate references to match (specific verse, range start, etc.)
+                        candidates: List[str] = []
+                        for candidate in [request.focus_ref, request.ref]:
+                            if candidate:
+                                candidates.append(candidate)
+                                if "-" in candidate and ":" in candidate:
+                                    candidates.append(candidate.split("-", 1)[0].strip())
+
+                        matched = False
+                        for candidate in candidates:
+                            normalized_candidate = self._normalize_ref(candidate)
+                            if not normalized_candidate:
+                                continue
+                            for idx, segment in enumerate(segments):
+                                if self._normalize_ref(segment.get("ref")) == normalized_candidate:
+                                    focus_index = idx
+                                    focus_ref = segment.get("ref", focus_ref)
+                                    matched = True
+                                    break
+                            if matched:
+                                break
+
+                        # Fallback to the first segment if nothing matched
+                        if not matched:
+                            focus_index = min(max(focus_index, 0), len(segments) - 1)
+                            focus_ref = segments[focus_index].get("ref", focus_ref)
+
+                        window_data["focusIndex"] = focus_index
+                    else:
+                        focus_ref = focus_ref or window_data.get("ref")
+                        window_data["focusIndex"] = focus_index
+
+                if window_data and segments:
                     try:
                         import json
                         segments_key = f"daily:sess:{request.session_id}:segments"
@@ -191,7 +301,7 @@ class StudyService:
                             await self.redis_client.lpush(segments_key, json.dumps(segment_data, ensure_ascii=False))
                         
                         # Save total segments count
-                        total_segments = len(window_data["segments"])
+                        total_segments = len(segments)
                         count_key = f"daily:sess:{request.session_id}:total_segments"
                         await self.redis_client.set(count_key, total_segments, ex=3600*24*7)  # 7 days TTL
                         
@@ -272,13 +382,18 @@ class StudyService:
             raise ValueError("Failed to fetch data for the requested reference.")
 
         # Create snapshot data
+
+        safe_ref = window_data.get('ref') if window_data else request.ref
+        safe_focus_index = window_data.get('focusIndex', focus_index) if window_data else focus_index
+        safe_segments = segments if segments else (window_data.get('segments') if window_data else None)
+
         snapshot_data = {
-            "segments": window_data.get('segments'),
-            "focusIndex": window_data.get('focusIndex'),
-            "ref": window_data.get('ref'),
+            "segments": safe_segments,
+            "focusIndex": safe_focus_index,
+            "ref": safe_ref,
             "bookshelf": bookshelf_data,
             "ts": int(datetime.now().timestamp()),
-            "discussion_focus_ref": window_data.get('ref')
+            "discussion_focus_ref": focus_ref or safe_ref
         }
         logger.info(f"🔥 SNAPSHOT_DATA CREATED: segments={len(snapshot_data.get('segments', []))}, ref={snapshot_data.get('ref')}")
 
@@ -399,6 +514,19 @@ class StudyService:
         current_snapshot = await get_current_snapshot(request.session_id, self.redis_client)
         if not current_snapshot:
             return StudyStateResponse(ok=False, error="No current study state found")
+
+        if not request.ref:
+            # Clear the specified slot if ref is not provided
+            if current_snapshot.workbench is None:
+                current_snapshot.workbench = {"left": None, "right": None}
+            try:
+                current_snapshot.workbench[request.slot] = None
+            except Exception as exc:
+                logger.warning(f"Failed to assign None to workbench slot {request.slot}: {exc}", exc_info=True)
+            success = await replace_top_snapshot(request.session_id, current_snapshot, self.redis_client)
+            if not success:
+                return StudyStateResponse(ok=False, error="Failed to save workbench state")
+            return StudyStateResponse(ok=True, state=current_snapshot)
 
         # Find the reference in bookshelf or load from Sefaria
         workbench_item = None
@@ -650,12 +778,28 @@ class StudyService:
             
             # Update STM after response (write-after-final)
             if self.memory_service and (final_doc_v1 or full_response.strip()):
-                # Add messages to session for STM update
-                assistant_content = json.dumps(final_doc_v1, ensure_ascii=False) if final_doc_v1 else full_response.strip()
-                session_messages = [
-                    {"role": "user", "content": request.text},
-                    {"role": "assistant", "content": assistant_content}
-                ]
+                # Build recent history for STM update (reuse stored chat history)
+                recent_history = await self._get_study_chat_history(request.session_id)
+                session_messages: List[Dict[str, Any]] = []
+                if recent_history:
+                    for entry in recent_history[-10:]:
+                        role = entry.get("role") or "assistant"
+                        content = entry.get("content")
+                        # Ensure content is a simple string for token estimation
+                        if isinstance(content, (dict, list)):
+                            content = json.dumps(content, ensure_ascii=False)
+                        session_messages.append(
+                            {
+                                "role": role,
+                                "content": content or "",
+                            }
+                        )
+                else:
+                    assistant_content = json.dumps(final_doc_v1, ensure_ascii=False) if final_doc_v1 else full_response.strip()
+                    session_messages = [
+                        {"role": "user", "content": request.text},
+                        {"role": "assistant", "content": assistant_content}
+                    ]
 
                 # Use consider_update_stm which handles all the logic
                 updated = await self.memory_service.consider_update_stm(
@@ -821,12 +965,27 @@ You can see what texts are currently open in the study interface. You have acces
             
             # Update STM after response (write-after-final)
             if self.memory_service and (final_doc_v1 or full_response.strip()):
-                # Add messages to session for STM update
-                assistant_content = json.dumps(final_doc_v1, ensure_ascii=False) if final_doc_v1 else full_response.strip()
-                session_messages = [
-                    {"role": "user", "content": request.text},
-                    {"role": "assistant", "content": assistant_content}
-                ]
+                # Build recent history for STM update (reuse stored chat history)
+                recent_history = await self._get_study_chat_history(request.session_id)
+                session_messages: List[Dict[str, Any]] = []
+                if recent_history:
+                    for entry in recent_history[-10:]:
+                        role = entry.get("role") or "assistant"
+                        content = entry.get("content")
+                        if isinstance(content, (dict, list)):
+                            content = json.dumps(content, ensure_ascii=False)
+                        session_messages.append(
+                            {
+                                "role": role,
+                                "content": content or "",
+                            }
+                        )
+                else:
+                    assistant_content = json.dumps(final_doc_v1, ensure_ascii=False) if final_doc_v1 else full_response.strip()
+                    session_messages = [
+                        {"role": "user", "content": request.text},
+                        {"role": "assistant", "content": assistant_content}
+                    ]
 
                 # Use consider_update_stm which handles all the logic
                 updated = await self.memory_service.consider_update_stm(
@@ -974,8 +1133,50 @@ You can see what texts are currently open in the study interface. You have acces
             
             for tool_call in full_tool_calls:
                 function_name = tool_call["function"]["name"]
+                raw_args = tool_call["function"].get("arguments") or "{}"
+
                 try:
-                    function_args = json.loads(tool_call["function"].get("arguments") or "{}")
+                    function_args = json.loads(raw_args)
+                except json.JSONDecodeError as exc:
+                    # LLM occasionally returns multiple JSON objects concatenated together.
+                    # Try to recover by decoding the first valid JSON object.
+                    try:
+                        decoder = json.JSONDecoder()
+                        function_args, _ = decoder.raw_decode(raw_args)
+                        logger.warning(
+                            "Recovered malformed tool arguments",
+                            extra={
+                                "tool_name": function_name,
+                                "raw_arguments": raw_args,
+                                "error": str(exc),
+                            },
+                        )
+                    except json.JSONDecodeError:
+                        error_message = (
+                            f"Invalid tool arguments for {function_name}: {raw_args} ({exc})"
+                        )
+                        logger.error(error_message, exc_info=True)
+                        yield json.dumps({"type": "error", "data": {"message": error_message}}) + '\n'
+                        messages.append({
+                            "tool_call_id": tool_call["id"],
+                            "role": "tool",
+                            "name": function_name,
+                            "content": json.dumps({"error": error_message})
+                        })
+                        continue
+                except Exception as exc:
+                    error_message = f"Error parsing arguments for tool {function_name}: {exc}"
+                    logger.error(error_message, exc_info=True)
+                    yield json.dumps({"type": "error", "data": {"message": error_message}}) + '\n'
+                    messages.append({
+                        "tool_call_id": tool_call["id"],
+                        "role": "tool",
+                        "name": function_name,
+                        "content": json.dumps({"error": error_message})
+                    })
+                    continue
+
+                try:
                     result = await self.tool_registry.call(function_name, session_id=session_id, **function_args)
                     yield json.dumps({"type": "tool_result", "data": result}) + '\n'
                     messages.append({

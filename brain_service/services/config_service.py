@@ -169,7 +169,11 @@ class ConfigService:
                     continue
                     
                 try:
-                    data = json.loads(message["data"])
+                    raw_data = message["data"]
+                    if isinstance(raw_data, bytes):
+                        raw_data = raw_data.decode("utf-8", errors="replace")
+
+                    data = json.loads(raw_data)
                     
                     if data.get("type") == "config_update":
                         section = data.get("section")
@@ -194,9 +198,13 @@ class ConfigService:
                             })
                             
                 except json.JSONDecodeError as e:
-                    logger.warning("Invalid JSON in config update message", extra={
-                        "error": str(e)
-                    })
+                    if raw_data == "config_updated":
+                        logger.info("Legacy config update notification received, reloading configuration")
+                        await self.reload_config()
+                    else:
+                        logger.warning("Invalid JSON in config update message", extra={
+                            "error": str(e)
+                        })
                 except Exception as e:
                     logger.error("Error processing config update", extra={
                         "error": str(e)
@@ -249,6 +257,23 @@ class ConfigService:
             Current configuration cache
         """
         return self._config_cache.copy()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

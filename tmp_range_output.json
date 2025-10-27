@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "data": {
+    "ref": "Genesis 1:1-4",
+    "heRef": "בראשית א׳:א׳-ד׳",
+    "title": "Genesis 1",
+    "indexTitle": "Genesis",
+    "type": "Tanakh",
+    "lang": "en",
+    "text": "When God began to create*When God began to create Others “In the beginning God created.” heaven and earth—\nthe earth being unformed and void, with darkness over the surface of the deep and a wind from*a wind from Others “the spirit of.” God sweeping over the water—\nGod said, “Let there be light”; and there was light.\nGod saw that the light was good, and God separated the light from the darkness.",
+    "en_text": "When God began to create*When God began to create Others “In the beginning God created.” heaven and earth—\nthe earth being unformed and void, with darkness over the surface of the deep and a wind from*a wind from Others “the spirit of.” God sweeping over the water—\nGod said, “Let there be light”; and there was light.\nGod saw that the light was good, and God separated the light from the darkness.",
+    "he_text": "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃\nוְהָאָ֗רֶץ הָיְתָ֥ה תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְה֑וֹם וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃\nוַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי־אֽוֹר׃\nוַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃",
+    "text_segments": [
+      "When God began to create<sup class=\"footnote-marker\">*</sup><i class=\"footnote\"><b>When God began to create </b>Others “In the beginning God created.”</i> heaven and earth—",
+      "the earth being unformed and void, with darkness over the surface of the deep and a wind from<sup class=\"footnote-marker\">*</sup><i class=\"footnote\"><b>a wind from </b>Others “the spirit of.”</i> God sweeping over the water—",
+      "God said, “Let there be light”; and there was light.",
+      "God saw that the light was good, and God separated the light from the darkness."
+    ],
+    "he_segments": [
+      "<big>בְּ</big>רֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃",
+      "וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְה֑וֹם וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃",
+      "וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי־אֽוֹר׃",
+      "וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃"
+    ]
+  }
+}

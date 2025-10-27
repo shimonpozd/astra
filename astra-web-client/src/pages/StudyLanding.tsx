@@ -20,7 +20,7 @@ export default function StudyLanding() {
       if (res.ok && res.ref) {
         const sessionId = (crypto as any)?.randomUUID?.() || `s_${Date.now()}`;
         // Immediately set focus to bootstrap state
-        await api.setFocus(sessionId, res.ref);
+        await api.setFocus(sessionId, res.ref, res.ref);
         navigate(`/study/${encodeURIComponent(sessionId)}`);
       } else {
         setCandidates(res.candidates || []);
@@ -36,7 +36,7 @@ export default function StudyLanding() {
   const chooseCandidate = async (ref: string) => {
     try {
       const sessionId = (crypto as any)?.randomUUID?.() || `s_${Date.now()}`;
-      await api.setFocus(sessionId, ref);
+      await api.setFocus(sessionId, ref, ref);
       navigate(`/study/${encodeURIComponent(sessionId)}`);
     } catch (err: any) {
       setError(err?.message || 'Ошибка при set_focus');
@@ -78,4 +78,3 @@ export default function StudyLanding() {
     </div>
   );
 }
-

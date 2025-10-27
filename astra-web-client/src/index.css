@@ -416,13 +416,15 @@
     @apply ring-1 ring-border hover:ring-primary/30;
   }
 
-  /* FocusReader - одинарные обводки только при выделении */
+  /* FocusReader - используем тот же стиль выделения, что и у workbench */
   .focus-reader-selected {
-    @apply border border-primary;
+    @apply border border-border/60 ring-2 ring-primary ring-offset-2 ring-offset-background;
+    box-shadow: none !important;
   }
   
   .focus-reader-active {
-    @apply border border-primary/50;
+    @apply border border-border/60;
+    box-shadow: none !important;
   }
 
   /*
@@ -512,4 +514,89 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  /* FocusReader - состояния наведения/активности с золотым оттенком */
+  /* .focusreader .seg:hover { 
+    background: rgba(194, 169, 112, 0.08) !important; 
+  }
+  .focusreader .seg:active { 
+    background: rgba(194, 169, 112, 0.12) !important; 
+  } */
+
+  /* Микро-типографика для иврита */
+  .focusreader .hebrew {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    font-feature-settings: "ccmp" 1, "kern" 1;
+  }
+
+  /* Убираем все тени в FocusReader */
+  .focusreader * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .focusreader .seg {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  /* Убираем ring эффекты */
+  .focusreader .seg:focus,
+  .focusreader .seg:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    ring: none !important;
+  }
+
+  /* Убираем тени от sticky элементов */
+  .focusreader .sticky {
+    box-shadow: none !important;
+  }
+
+  /* Убираем тени от самого контейнера FocusReader */
+  .focusreader {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+  }
+
+  /* Убираем ВСЕ возможные тени в FocusReader, кроме ring эффектов */
+  .focusreader {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    drop-shadow: none !important;
+  }
+
+  .focusreader .seg,
+  .focusreader .seg *,
+  .focusreader .seg *::before,
+  .focusreader .seg *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    drop-shadow: none !important;
+  }
+
+  /* Разрешаем ring эффекты для выделения */
+  .focus-reader-selected {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    drop-shadow: none !important;
+  }
+
+  /* Принудительно разрешаем ring эффекты */
+  .focus-reader-selected {
+    --tw-ring-width: 2px !important;
+    --tw-ring-color: rgb(59 130 246 / 0.5) !important;
+    --tw-ring-offset-width: 2px !important;
+    --tw-ring-offset-color: hsl(var(--background)) !important;
+  }
+
+
 }

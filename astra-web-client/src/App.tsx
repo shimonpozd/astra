@@ -9,17 +9,17 @@ import PersonalityEdit from './pages/admin/PersonalityEdit';
 import PromptEditor from './pages/admin/PromptEditor';
 import { useTextSelectionListener } from './hooks/useTextSelectionListener';
 import { LexiconPanel } from './components/LexiconPanel';
-import { BlinkingDot } from './components/BlinkingDot';
 import { ThemeProvider } from './components/theme-provider';
+import { FontSettingsProvider } from './contexts/FontSettingsContext';
 
 function App() {
   useTextSelectionListener();
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="astra-ui-theme">
-      <BrowserRouter>
+      <FontSettingsProvider>
+        <BrowserRouter>
         <div className="h-screen w-full bg-background">
-          <BlinkingDot />
           <Routes>
             <Route path="/" element={<ChatLayout />} />
             <Route path="/chat" element={<Navigate to="/" replace />} />
@@ -39,7 +39,8 @@ function App() {
           </Routes>
           <LexiconPanel />
         </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </FontSettingsProvider>
     </ThemeProvider>
   );
 }

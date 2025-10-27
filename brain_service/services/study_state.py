@@ -85,6 +85,8 @@ class StudySnapshot(BaseModel):
     ts: int
     workbench: Dict[str, Optional[Union[TextDisplay, BookshelfItem, str]]] = Field(default_factory=lambda: {"left": None, "right": None})
     discussion_focus_ref: Optional[str] = None
+    stream: Optional[Dict[str, Any]] = None
+    timezone: Optional[str] = None
 
 # --- Core State Functions (Refactored) ---
 

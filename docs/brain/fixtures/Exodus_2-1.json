@@ -1,0 +1,59 @@
+{
+  "ref": "Exodus 2:1",
+  "legacy": {
+    "segments": [
+      {
+        "ref": "Exodus 2:1",
+        "text": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃",
+        "heText": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃",
+        "position": 0.5,
+        "metadata": {
+          "title": "Exodus 2",
+          "indexTitle": "Exodus",
+          "heRef": "שמות ב׳:א׳"
+        }
+      }
+    ],
+    "focusIndex": 0,
+    "ref": "Exodus 2:1",
+    "he_ref": "שמות ב׳:א׳"
+  },
+  "modular": {
+    "segments": [
+      {
+        "ref": "Exodus 2:1",
+        "text": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃",
+        "heText": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃",
+        "position": 0.5,
+        "metadata": {
+          "title": "Exodus 2",
+          "indexTitle": "Exodus",
+          "heRef": "שמות ב׳:א׳"
+        }
+      }
+    ],
+    "focusIndex": 0,
+    "ref": "Exodus 2:1",
+    "he_ref": "שמות ב׳:א׳"
+  },
+  "sefaria_calls": [
+    {
+      "ref": "Exodus 2:1",
+      "lang": "default",
+      "result": {
+        "ok": true,
+        "data": {
+          "ref": "Exodus 2:1",
+          "heRef": "שמות ב׳:א׳",
+          "title": "Exodus 2",
+          "indexTitle": "Exodus",
+          "type": "Tanakh",
+          "lang": "en",
+          "text": "A certain member*member NJPS “man.” See the Dictionary under ’ish. of the house of Levi went and took [into his household as his wife] a woman of Levi.",
+          "en_text": "A certain member*member NJPS “man.” See the Dictionary under ’ish. of the house of Levi went and took [into his household as his wife] a woman of Levi.",
+          "he_text": "וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי׃"
+        }
+      }
+    }
+  ]
+}

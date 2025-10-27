@@ -1,8 +1,12 @@
 import { useState, memo, useMemo, useEffect, useRef } from "react";
-import { BookOpen, ChevronDown, ChevronUp, Languages } from "lucide-react";
+import { BookOpen, Languages, Eraser, Play, Pause } from "lucide-react";
 import { containsHebrew } from "../../utils/hebrewUtils";
 import { useTranslation } from "../../hooks/useTranslation";
+import { useTTS } from "../../hooks/useTTS";
+import { useSpeechify } from "../../hooks/useSpeechify";
 import { safeScrollIntoView } from "../../utils/scrollUtils";
+import { useFontSettings } from "../../contexts/FontSettingsContext";
+import { AudioContextMenu } from "./AudioContextMenu";
 // Note: Tooltip import would be added if using shadcn/ui
 
 // Типы
@@ -25,9 +29,12 @@ interface WorkbenchItem {
   score?: number;
 }
 
+// Allow string refs as a fallback item shape
+type WorkbenchItemLike = WorkbenchItem | string | null;
+
 interface WorkbenchPanelProps {
   title: string;
-  item: WorkbenchItem | null;
+  item: WorkbenchItemLike;
   active: boolean;
   selected?: boolean;
   onDropRef: (ref: string, dragData?: {
@@ -42,6 +49,7 @@ interface WorkbenchPanelProps {
   hebrewLineHeight?: 'compact' | 'normal' | 'relaxed'; // default 'relaxed'
   headerVariant?: 'hidden' | 'mini' | 'default'; // default 'mini'
   maxWidth?: 'narrow' | 'normal' | 'wide'; // default 'normal'
+  onClear?: () => void; // Очистить панель
 }
 
 // Утилиты
@@ -116,7 +124,8 @@ const WorkbenchContainer = memo(({
   onDragHandlers,
   onPanelClick,
   onBorderClick,
-  className
+  className,
+  item
 }: {
   children: React.ReactNode;
   isOver: boolean;
@@ -126,18 +135,21 @@ const WorkbenchContainer = memo(({
   onPanelClick?: () => void; // Выделение панели при любом клике  
   onBorderClick?: () => void; // Фокус чата только при клике по границе
   className: string;
+  item?: WorkbenchItem | null;
 }) => {
   const stateClasses = useMemo(() => {
-    if (isOver) return 'bg-primary/5 scale-[1.01] shadow-lg';
-    if (active) return 'bg-primary/8 shadow-md';
+    if (isOver) return 'bg-primary/5';
+    if (active) return 'bg-primary/10';
     return 'bg-card/60 hover:bg-card/80';
   }, [isOver, active]);
 
   return (
     <div
       className={`
-        h-full flex flex-col rounded-xl border border-border/60 transition-all duration-300 ease-in-out overflow-y-auto
+        h-full flex flex-col rounded-xl border border-border/60
+        bg-card/60 backdrop-blur-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40
         ${stateClasses} ${className} ${selected ? 'panel-selected' : ''}
+        transition-colors duration-200
       `}
       {...onDragHandlers}
       onClick={(e: React.MouseEvent) => {
@@ -150,9 +162,8 @@ const WorkbenchContainer = memo(({
           onBorderClick();
         }
       }}
-      role="button"
-      tabIndex={0}
-      aria-label="Workbench panel"
+      role="region"
+      aria-labelledby={item ? `wbp-${item.ref}-title` : undefined}
     >
       {children}
     </div>
@@ -161,88 +172,176 @@ const WorkbenchContainer = memo(({
 
 const WorkbenchHeader = memo(({
   item,
-  isExpanded,
-  onToggleExpanded,
-  active,
-  headerVariant
+  // active, // Не используется - цветовой акцент через bg-primary/10 в контейнере
+  headerVariant,
+  onTranslateClick,
+  isTranslating,
+  translated,
+  onClear,
+  onPlayClick,
+  isPlaying,
+  isPaused,
+  isActive,
+  textToPlay
 }: {
-  item: WorkbenchItem;
-  isExpanded: boolean;
-  onToggleExpanded: (e: React.MouseEvent) => void;
-  active: boolean;
+  item: WorkbenchItemLike;
+  // active: boolean; // Не используется
   headerVariant: 'hidden' | 'mini' | 'default';
+  onTranslateClick: () => void;
+  isTranslating: boolean;
+  translated: boolean;
+  onClear?: () => void;
+  onPlayClick: () => void;
+  isPlaying: boolean;
+  isPaused: boolean;
+  isActive: boolean;
+  textToPlay: string;
 }) => {
+  const [showAudioMenu, setShowAudioMenu] = useState(false);
+  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   if (headerVariant === 'hidden') {
     return null;
   }
 
-  const displayTitle = item.commentator || item.indexTitle || item.title || 'Источник';
+  const refString = typeof item === 'string' ? item : item.ref;
+  const displayTitle = typeof item === 'string' ? item : (item.commentator || item.indexTitle || item.title || 'Источник');
+  const { speechify, isLoading: isSpeechifying } = useSpeechify();
+  const tts = useTTS({});
+  const handleSpeechify = async () => {
+    try {
+      const hebrew = typeof item === 'string' ? '' : (item.heTextFull || '');
+      const english = typeof item === 'string' ? '' : (item.text_full || '');
+      const speechText = await speechify({ hebrewText: hebrew, englishText: english });
+      await tts.play(speechText, { language: 'en' });
+    } catch (e) {
+      console.error('Workbench speechify failed', e);
+    }
+  };
 
   return (
-    <header className="flex-shrink-0 flex items-center justify-between px-2 py-2 border-b border-border/20">
+    <header className="flex-shrink-0 flex items-center justify-between px-3 py-2 border-b border-border/20">
       <div className="flex items-center gap-2 min-w-0">
-        <button
-          onClick={onToggleExpanded}
-          className="p-1 rounded hover:bg-accent text-muted-foreground hover:text-foreground transition-colors"
-          title={isExpanded ? "Свернуть" : "Развернуть"}
-        >
-          {isExpanded ? (
-            <ChevronUp className="w-4 h-4" />
-          ) : (
-            <ChevronDown className="w-4 h-4" />
-          )}
-        </button>
-
-        <div className="min-w-0">
+        <div id={`wbp-${refString}-title`} className="min-w-0" title={`${displayTitle} — ${refString}`}>
           {headerVariant === 'mini' ? (
             // Мини-режим: только ref мелким шрифтом
             <div className="text-xs font-mono text-muted-foreground truncate max-w-[220px]">
-              {item.ref}
+              {refString}
             </div>
           ) : (
             // Дефолтный режим: полная информация с даунскейлом
             <>
-              <div className="text-sm font-medium truncate max-w-[240px]">
-                {displayTitle}
-              </div>
+        <div className="text-sm font-medium truncate max-w-[240px]">
+          {displayTitle}
+        </div>
               <div className="text-xs font-mono text-muted-foreground truncate max-w-[220px]">
                 {item.ref}
               </div>
-              {active && (
-                <div className="text-xs text-muted-foreground">
-                  Активная панель
-                </div>
-              )}
             </>
           )}
         </div>
       </div>
+      {/* Кнопки как в FocusReader: Translate, Play (speechify), Clear */}
+      <div className="flex items-center gap-1">
+        <button
+          onClick={onTranslateClick}
+          disabled={isTranslating}
+          className={`w-8 h-8 grid place-items-center rounded hover:bg-accent/50 disabled:opacity-50 ${translated ? 'bg-accent/40' : ''}`}
+          aria-pressed={translated}
+          aria-busy={isTranslating || undefined}
+          title={translated ? 'Показать оригинал' : 'Перевести'}
+        >
+          {isTranslating ? <span className="w-4 h-4 animate-spin rounded-full border-2 border-b-transparent" /> : <Languages className="w-4 h-4" />}
+        </button>
+
+        {/* Кнопка проигрывания с расширенной функциональностью */}
+        <button
+          onClick={handleSpeechify}
+          onContextMenu={(e) => {
+            e.preventDefault();
+            setMenuPosition({ x: e.clientX, y: e.clientY });
+            setShowAudioMenu(true);
+          }}
+          className="w-8 h-8 grid place-items-center rounded border transition-colors"
+          style={{
+            backgroundColor: isActive
+              ? 'rgba(194, 169, 112, 0.15)' 
+              : 'rgba(194, 169, 112, 0.05)',
+            borderColor: isActive
+              ? '#C2A970' 
+              : 'rgba(194, 169, 112, 0.2)',
+            color: isActive
+              ? '#C2A970' 
+              : 'rgba(194, 169, 112, 0.6)'
+          }}
+          title={isActive ? (isPlaying ? 'Пауза' : 'Возобновить') : 'Проигрывать текст (правый клик для опций)'}
+        >
+          {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+        </button>
+        
+        {onClear && (
+          <button
+            onClick={onClear}
+            className="w-8 h-8 grid place-items-center rounded hover:bg-muted/50 text-muted-foreground hover:text-foreground"
+            title="Очистить панель"
+          >
+            <Eraser className="w-4 h-4" />
+          </button>
+        )}
+      </div>
+
+      {/* Контекстное меню аудио */}
+      <AudioContextMenu
+        text={textToPlay}
+        isVisible={showAudioMenu}
+        onClose={() => setShowAudioMenu(false)}
+        position={menuPosition}
+      />
     </header>
   );
 });
 
 const WorkbenchContent = memo(({
   item,
-  sizeConfig,
-  size,
+  // size, // Не используется - размеры теперь через CSS переменные
   active,
   hebrewScale,
   hebrewLineHeight,
-  maxWidth
+  maxWidth,
+  translatedText,
+  error,
+  fontSize,
+  fontSizeValues
 }: {
   item: WorkbenchItem;
-  sizeConfig: { minHeight: string; baseTextSize: string };
-  size: 'compact' | 'normal' | 'expanded';
+  // size: 'compact' | 'normal' | 'expanded'; // Не используется
   active: boolean;
   hebrewScale: number;
   hebrewLineHeight: 'compact' | 'normal' | 'relaxed';
   maxWidth: 'narrow' | 'normal' | 'wide';
+  translatedText?: string;
+  error?: string;
+  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
+  fontSizeValues: Record<string, string>;
 }) => {
   const articleRef = useRef<HTMLElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollLockRef = useRef<boolean>(false);
+  const scrollLockTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Защита от автоцентрирования при ручном скролле
+  const setScrollLock = () => {
+    scrollLockRef.current = true;
+    if (scrollLockTimeoutRef.current) {
+      clearTimeout(scrollLockTimeoutRef.current);
+    }
+    scrollLockTimeoutRef.current = setTimeout(() => {
+      scrollLockRef.current = false;
+    }, 1200); // 1.2 секунды защиты
+  };
 
   // Автоцентрирование при активации (с защитой от конфликтов)
   useEffect(() => {
-    if (active && articleRef.current) {
+    if (active && articleRef.current && !scrollLockRef.current) {
       // Увеличиваем задержку для предотвращения мигания при drag&drop
       safeScrollIntoView(articleRef.current, {
         behavior: 'smooth',
@@ -255,9 +354,7 @@ const WorkbenchContent = memo(({
   const displayText = item.preview || item.hePreview || '';
   const fullText = item.heTextFull || item.text_full || displayText;
 
-  const { translatedText, isTranslating, error, translate } = useTranslation({
-    tref: item.ref,
-  });
+  // Перевод теперь управляется на уровне основного компонента
 
   const textToDisplay = translatedText || fullText;
 
@@ -265,23 +362,6 @@ const WorkbenchContent = memo(({
   const textForDetection = textToDisplay;
   const direction = translatedText ? 'ltr' : getTextDirection(textForDetection); // Translations are left-to-right
   const isHebrew = translatedText ? false : containsHebrew(textForDetection); // Translations are not Hebrew
-
-  // Вычисление итоговых классов типографики
-  const baseLatin = sizeConfig.baseTextSize; // text-lg, text-xl, text-2xl
-
-  // Жёсткий минимум для иврита
-  const minHebrew = size === 'compact' ? 'text-2xl'
-                  : size === 'normal'  ? 'text-3xl'
-                  :                      'text-4xl';
-
-  // Дополнительный масштаб поверх минимума
-  const heScale = Math.max(1.0, hebrewScale ?? 1.35);
-  const heScaleClass = isHebrew
-    ? heScale >= 2.1 ? 'text-5xl'
-    : heScale >= 1.7 ? 'text-4xl'
-    : heScale >= 1.4 ? 'text-3xl'
-    :                 minHebrew
-    : baseLatin;
 
   // Межстрочный интервал для иврита
   const lineHeightClass = isHebrew
@@ -291,38 +371,69 @@ const WorkbenchContent = memo(({
   // Ширина колонки
   const maxWClass = maxWidth === 'narrow' ? 'max-w-2xl' : maxWidth === 'wide' ? 'max-w-4xl' : 'max-w-3xl';
 
+  // Обработчики wheel/touch для scroll-lock
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      // игнорируем совсем мелкие тапы трекпада
+      if (Math.abs(e.deltaY) < 2 && Math.abs(e.deltaX) < 2) return;
+      setScrollLock();
+    };
+    const handleTouchMove = () => setScrollLock();
+    
+    container.addEventListener('wheel', handleWheel, { passive: true });
+    container.addEventListener('touchmove', handleTouchMove, { passive: true });
+
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+      container.removeEventListener('touchmove', handleTouchMove);
+      if (scrollLockTimeoutRef.current) {
+        clearTimeout(scrollLockTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex-1 overflow-y-auto px-6 py-4 scroll-smooth scrollbar-thin scrollbar-thumb-muted/50 hover:scrollbar-thumb-muted">
+    <div ref={scrollRef} className="flex-1 overflow-y-auto px-6 py-4 scroll-smooth scrollbar-thin scrollbar-thumb-muted/50 hover:scrollbar-thumb-muted">
       <article
         ref={articleRef}
-        className={`${maxWClass} mx-auto ${lineHeightClass} transition-all duration-500`}
+        className={`${maxWClass} mx-auto ${lineHeightClass} transition-opacity duration-150`}
         dir={direction}
         aria-current={active ? 'true' : undefined}
+        style={{
+          paddingBottom: '2px'
+        }}
       >
-        <div className="flex items-center justify-between mb-2">
-          <button
-            onClick={translate}
-            disabled={isTranslating}
-            className="flex items-center gap-1 px-2 py-1 text-xs bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors disabled:opacity-50"
-            title={translatedText ? "Show Original" : "Translate"}
-          >
-            <Languages className="w-3 h-3" />
-            {isTranslating ? '...' : translatedText ? 'Original' : 'Translate'}
-          </button>
-          {error && <span className="text-xs text-red-500">{error}</span>}
-        </div>
+        {error && <div className="flex justify-end mb-2"><span className="text-xs text-red-500" aria-live="polite">{error}</span></div>}
         <div 
           className={`
-            ${heScaleClass}
+            // Размер теперь от переменной; иврит домножаем ниже
             ${direction === 'rtl' ? 'text-right font-hebrew' : 'text-left'}
             rounded-md select-text cursor-pointer
           `}
+          style={{
+            unicodeBidi: 'plaintext',
+            wordBreak: direction === 'rtl' ? 'keep-all' : 'normal',
+            fontFeatureSettings: direction === 'rtl' ? '"kern" 1, "liga" 1' : '"liga" 1, "calt" 1',
+            textRendering: 'optimizeLegibility',
+            WebkitFontSmoothing: 'antialiased',
+            // Единый масштаб + домножение для иврита:
+            fontSize: direction === 'rtl'
+              ? `calc(${fontSizeValues[fontSize]} * ${Math.max(1, hebrewScale ?? 1.35)})`
+              : fontSizeValues[fontSize],
+          }}
           onDoubleClick={() => {
             const selected = (window.getSelection()?.toString() || '').trim();
             if (selected) {
+              const context = (textToDisplay || '')
+                .replace(/<[^>]+>/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
               // Trigger the same lexicon system
               window.dispatchEvent(new CustomEvent('lexicon-lookup', { 
-                detail: { text: selected } 
+                detail: { text: selected, context }
               }));
             }
           }}
@@ -345,38 +456,43 @@ const EmptyWorkbenchPanel = memo(({
   }) => void;
 }) => {
   const [isOver, setIsOver] = useState(false);
+  const rafIdRef = useRef<number | null>(null);
 
   return (
     <div
       className={`
         h-full flex flex-col items-center justify-center rounded-xl border-2 border-dashed
-        transition-all duration-300 text-muted-foreground/60
+        transition-colors duration-200 text-muted-foreground/60
         ${isOver
           ? 'border-primary bg-primary/5 text-primary/70'
           : 'border-border/40 bg-card/20 hover:border-primary/30'
         }
       `}
       onDragOver={(e) => {
-        if (isDragDataValid(e.dataTransfer)) {
-          e.preventDefault();
-          setIsOver(true);
-        }
+        if (!isDragDataValid(e.dataTransfer)) return; // не ломаем скролл
+        e.preventDefault();
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+        rafIdRef.current = requestAnimationFrame(() => setIsOver(true));
       }}
-      onDragLeave={() => setIsOver(false)}
+      onDragLeave={() => {
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+        setIsOver(false);
+      }}
       onDrop={(e) => {
         e.preventDefault();
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
         setIsOver(false);
         const dragData = extractDragData(e.dataTransfer);
         if (dragData) {
-          console.log('Dropped in empty workbench:', dragData);
+          if (process.env.NODE_ENV !== 'production') console.log('Dropped in empty workbench:', dragData);
           if (dragData.type === 'group') {
-            console.log('Dropped group with refs:', dragData.data?.refs);
+            if (process.env.NODE_ENV !== 'production') console.log('Dropped group with refs:', dragData.data?.refs);
             // TODO: Здесь можно добавить специальную обработку для групп
             // Пока используем первый ref из группы
           } else if (dragData.type === 'part') {
-            console.log('Dropped individual part:', dragData.data?.ref);
+            if (process.env.NODE_ENV !== 'production') console.log('Dropped individual part:', dragData.data?.ref);
           }
-          onDrop(dragData.ref, {
+          onDrop(dragData.ref.trim(), {
             type: dragData.type,
             data: dragData.data
           });
@@ -406,34 +522,85 @@ const WorkbenchPanelInline = memo(({
   onPanelClick,
   onBorderClick,
   size = 'normal',
-  hebrewScale = 1.35,
-  hebrewLineHeight = 'relaxed',
+  hebrewScale: propHebrewScale,
+  hebrewLineHeight: propHebrewLineHeight,
   headerVariant = 'mini',
-  maxWidth = 'normal'
+  maxWidth = 'normal',
+  onClear
 }: WorkbenchPanelProps) => {
+  // Глобальные настройки шрифта
+  const { fontSettings, fontSizeValues } = useFontSettings();
+  const hebrewScale = propHebrewScale ?? fontSettings.hebrewScale;
+  const hebrewLineHeight = propHebrewLineHeight ?? fontSettings.lineHeight;
+
+  // Отладка: логируем текущие настройки шрифта
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('🔍 WorkbenchPanelInline font settings:', {
+        fontSize: fontSettings.fontSize,
+        fontSizeValue: fontSizeValues[fontSettings.fontSize],
+        hebrewScale,
+        hebrewScaleSource: propHebrewScale ? 'prop' : 'global',
+        globalHebrewScale: fontSettings.hebrewScale,
+        lineHeight: fontSettings.lineHeight,
+        allFontSizeValues: fontSizeValues
+      });
+    }
+  }, [fontSettings.fontSize, fontSizeValues, hebrewScale, fontSettings.lineHeight, propHebrewScale, fontSettings.hebrewScale]);
   const [isOver, setIsOver] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const rafIdRef = useRef<number | null>(null);
+
+  // Состояние для перевода (если есть item)
+  const { translatedText, isTranslating, error, translate } = useTranslation({
+    tref: item?.ref || '',
+  });
+
+  // TTS функциональность
+  const { isPlaying, isPaused, currentText, play, stop, pause, resume } = useTTS({
+    language: 'he', // Hebrew by default
+    speed: 1.0
+  });
+
+  // Получаем текст для озвучки
+  const textToPlay = item?.heTextFull || item?.text_full || item?.preview || item?.hePreview || '';
+  const isCurrentText = currentText === textToPlay;
+  const isActive = isCurrentText && (isPlaying || isPaused);
+
+  // Обработчик для кнопки проигрывания
+  const handlePlayClick = async () => {
+    if (!textToPlay.trim()) return;
+    
+    try {
+      if (isActive) {
+        if (isPlaying) {
+          await pause();
+        } else if (isPaused) {
+          await resume();
+        } else {
+          await stop();
+        }
+      } else {
+        await stop(); // Stop any current playback
+        await play(textToPlay);
+      }
+    } catch (err) {
+      console.error('TTS play error:', err);
+    }
+  };
 
   // Размеры для разных режимов - ограничиваем высоту чтобы не превышать FocusReader
   const sizeConfig = {
     compact: {
       minHeight: 'h-full max-h-[400px]', // фиксированная высота с ограничением
-      baseTextSize: 'text-lg' // для латиницы/английского
     },
     normal: {
       minHeight: 'h-full max-h-[500px]',
-      baseTextSize: 'text-xl'
     },
     expanded: {
       minHeight: 'h-full max-h-[600px]',
-      baseTextSize: 'text-2xl'
     }
   }[size];
 
-  const handleToggleExpanded = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setIsExpanded(!isExpanded);
-  };
 
   if (!item) {
     return <EmptyWorkbenchPanel title={title} onDrop={onDropRef} />;
@@ -442,31 +609,34 @@ const WorkbenchPanelInline = memo(({
   return (
     <div
       onDragOver={(e: React.DragEvent) => {
-        if (isDragDataValid(e.dataTransfer)) {
-          e.preventDefault();
-          setIsOver(true);
-        }
+        if (!isDragDataValid(e.dataTransfer)) return;
+        e.preventDefault();
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+        rafIdRef.current = requestAnimationFrame(() => setIsOver(true));
       }}
-      onDragLeave={() => setIsOver(false)}
+      onDragLeave={() => {
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
+        setIsOver(false);
+      }}
       onDrop={(e: React.DragEvent) => {
         e.preventDefault();
+        if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current);
         setIsOver(false);
         const dragData = extractDragData(e.dataTransfer);
-        if (dragData) {
-          console.log('Dropped in workbench:', dragData);
+        if (!dragData) return;
           if (dragData.type === 'group') {
-            console.log('Dropped group with refs:', dragData.data?.refs);
+            if (process.env.NODE_ENV !== 'production') console.log('Dropped group with refs:', dragData.data?.refs);
             // TODO: Здесь можно добавить специальную обработку для групп
             // Пока используем первый ref из группы
           } else if (dragData.type === 'part') {
-            console.log('Dropped individual part:', dragData.data?.ref);
+            if (process.env.NODE_ENV !== 'production') console.log('Dropped individual part:', dragData.data?.ref);
           }
-          onDropRef(dragData.ref, {
+          onDropRef(dragData.ref.trim(), {
             type: dragData.type,
             data: dragData.data
           });
         }
-      }}
+      }
       className={sizeConfig.minHeight}
     >
       <WorkbenchContainer
@@ -477,23 +647,33 @@ const WorkbenchPanelInline = memo(({
         onBorderClick={onBorderClick}
         onDragHandlers={{}}
         className=""
+        item={item}
       >
       <WorkbenchHeader
         item={item}
-        isExpanded={isExpanded}
-        onToggleExpanded={handleToggleExpanded}
-        active={active}
         headerVariant={headerVariant}
+        onTranslateClick={translate}
+        isTranslating={isTranslating}
+        translated={!!translatedText}
+        onClear={onClear}
+        onPlayClick={handlePlayClick}
+        isPlaying={isPlaying}
+        isPaused={isPaused}
+        isActive={isActive}
+        textToPlay={textToPlay}
       />
 
       <WorkbenchContent
         item={item}
-        sizeConfig={sizeConfig}
-        size={size}
+        // size={size} // Не используется
         active={active}
         hebrewScale={hebrewScale}
         hebrewLineHeight={hebrewLineHeight}
         maxWidth={maxWidth}
+        translatedText={translatedText || undefined}
+        error={error || undefined}
+        fontSize={fontSettings.fontSize}
+        fontSizeValues={fontSizeValues}
       />
       </WorkbenchContainer>
     </div>

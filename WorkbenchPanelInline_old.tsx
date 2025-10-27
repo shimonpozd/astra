@@ -1,0 +1,503 @@
+import { useState, memo, useMemo, useEffect, useRef } from "react";
+import { BookOpen, ChevronDown, ChevronUp, Languages } from "lucide-react";
+import { containsHebrew } from "../../utils/hebrewUtils";
+import { useTranslation } from "../../hooks/useTranslation";
+import { safeScrollIntoView } from "../../utils/scrollUtils";
+// Note: Tooltip import would be added if using shadcn/ui
+
+// Типы
+interface WorkbenchItem {
+  ref: string;
+  title?: string;
+  heTitle?: string;
+  commentator?: string;
+  heCommentator?: string;
+  category?: string;
+  heCategory?: string;
+  preview?: string;
+  hePreview?: string;
+  text_full?: string;
+  heTextFull?: string;
+  language?: 'hebrew' | 'english' | 'aramaic' | 'mixed';
+  // Новые поля из Bookshelf v2
+  heRef?: string;
+  indexTitle?: string;
+  score?: number;
+}
+
+interface WorkbenchPanelProps {
+  title: string;
+  item: WorkbenchItem | null;
+  active: boolean;
+  selected?: boolean;
+  onDropRef: (ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
+  onPanelClick?: () => void; // Выделение панели при любом клике
+  onBorderClick?: () => void; // Фокус чата только при клике по границе
+  className?: string;
+  size?: 'compact' | 'normal' | 'expanded';
+  hebrewScale?: number;           // default 1.35
+  hebrewLineHeight?: 'compact' | 'normal' | 'relaxed'; // default 'relaxed'
+  headerVariant?: 'hidden' | 'mini' | 'default'; // default 'mini'
+  maxWidth?: 'narrow' | 'normal' | 'wide'; // default 'normal'
+}
+
+// Утилиты
+const isDragDataValid = (dataTransfer: DataTransfer): boolean => {
+  return dataTransfer.types.includes('text/astra-commentator-ref') ||
+         dataTransfer.types.includes('text/plain') ||
+         dataTransfer.types.includes('text/astra-group') ||
+         dataTransfer.types.includes('text/astra-part');
+};
+
+const extractRefFromTransfer = (dataTransfer: DataTransfer): string | null => {
+  return dataTransfer.getData('text/astra-commentator-ref') ||
+         dataTransfer.getData('text/plain') ||
+         null;
+};
+
+// Новая функция для извлечения данных о группе или части
+const extractDragData = (dataTransfer: DataTransfer): {
+  ref: string;
+  type: 'single' | 'group' | 'part';
+  data?: any;
+} | null => {
+  const ref = extractRefFromTransfer(dataTransfer);
+  if (!ref) return null;
+
+  // Проверяем, есть ли данные о группе
+  const groupData = dataTransfer.getData('text/astra-group');
+  if (groupData) {
+    try {
+      return {
+        ref,
+        type: 'group',
+        data: JSON.parse(groupData)
+      };
+    } catch (e) {
+      console.warn('Failed to parse group data:', e);
+    }
+  }
+
+  // Проверяем, есть ли данные о части
+  const partData = dataTransfer.getData('text/astra-part');
+  if (partData) {
+    try {
+      return {
+        ref,
+        type: 'part',
+        data: JSON.parse(partData)
+      };
+    } catch (e) {
+      console.warn('Failed to parse part data:', e);
+    }
+  }
+
+  // Обычный single ref
+  return {
+    ref,
+    type: 'single'
+  };
+};
+
+const getTextDirection = (text?: string): 'ltr' | 'rtl' => {
+  if (!text) return 'ltr';
+  return containsHebrew(text.slice(0, 50)) ? 'rtl' : 'ltr';
+};
+
+// Компоненты
+const WorkbenchContainer = memo(({
+  children,
+  isOver,
+  active,
+  selected,
+  onDragHandlers,
+  onPanelClick,
+  onBorderClick,
+  className
+}: {
+  children: React.ReactNode;
+  isOver: boolean;
+  active: boolean;
+  selected?: boolean;
+  onDragHandlers: any;
+  onPanelClick?: () => void; // Выделение панели при любом клике  
+  onBorderClick?: () => void; // Фокус чата только при клике по границе
+  className: string;
+}) => {
+  const stateClasses = useMemo(() => {
+    if (isOver) return 'bg-primary/5 scale-[1.01] shadow-lg';
+    if (active) return 'bg-primary/8 shadow-md';
+    return 'bg-card/60 hover:bg-card/80';
+  }, [isOver, active]);
+
+  return (
+    <div
+      className={`
+        h-full flex flex-col rounded-xl border border-border/60 transition-all duration-300 ease-in-out overflow-y-auto
+        ${stateClasses} ${className} ${selected ? 'panel-selected' : ''}
+      `}
+      {...onDragHandlers}
+      onClick={(e: React.MouseEvent) => {
+        // Выделение панели - при любом клике
+        if (onPanelClick) {
+          onPanelClick();
+        }
+        // Фокус чата - только при клике по границе (не по контенту)
+        if (e.target === e.currentTarget && onBorderClick) {
+          onBorderClick();
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Workbench panel"
+    >
+      {children}
+    </div>
+  );
+});
+
+const WorkbenchHeader = memo(({
+  item,
+  isExpanded,
+  onToggleExpanded,
+  active,
+  headerVariant
+}: {
+  item: WorkbenchItem;
+  isExpanded: boolean;
+  onToggleExpanded: (e: React.MouseEvent) => void;
+  active: boolean;
+  headerVariant: 'hidden' | 'mini' | 'default';
+}) => {
+  if (headerVariant === 'hidden') {
+    return null;
+  }
+
+  const displayTitle = item.commentator || item.indexTitle || item.title || 'Источник';
+
+  return (
+    <header className="flex-shrink-0 flex items-center justify-between px-2 py-2 border-b border-border/20">
+      <div className="flex items-center gap-2 min-w-0">
+        <button
+          onClick={onToggleExpanded}
+          className="p-1 rounded hover:bg-accent text-muted-foreground hover:text-foreground transition-colors"
+          title={isExpanded ? "Свернуть" : "Развернуть"}
+        >
+          {isExpanded ? (
+            <ChevronUp className="w-4 h-4" />
+          ) : (
+            <ChevronDown className="w-4 h-4" />
+          )}
+        </button>
+
+        <div className="min-w-0">
+          {headerVariant === 'mini' ? (
+            // Мини-режим: только ref мелким шрифтом
+            <div className="text-xs font-mono text-muted-foreground truncate max-w-[220px]">
+              {item.ref}
+            </div>
+          ) : (
+            // Дефолтный режим: полная информация с даунскейлом
+            <>
+              <div className="text-sm font-medium truncate max-w-[240px]">
+                {displayTitle}
+              </div>
+              <div className="text-xs font-mono text-muted-foreground truncate max-w-[220px]">
+                {item.ref}
+              </div>
+              {active && (
+                <div className="text-xs text-muted-foreground">
+                  Активная панель
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </header>
+  );
+});
+
+const WorkbenchContent = memo(({
+  item,
+  sizeConfig,
+  size,
+  active,
+  hebrewScale,
+  hebrewLineHeight,
+  maxWidth
+}: {
+  item: WorkbenchItem;
+  sizeConfig: { minHeight: string; baseTextSize: string };
+  size: 'compact' | 'normal' | 'expanded';
+  active: boolean;
+  hebrewScale: number;
+  hebrewLineHeight: 'compact' | 'normal' | 'relaxed';
+  maxWidth: 'narrow' | 'normal' | 'wide';
+}) => {
+  const articleRef = useRef<HTMLElement>(null);
+
+  // Автоцентрирование при активации (с защитой от конфликтов)
+  useEffect(() => {
+    if (active && articleRef.current) {
+      // Увеличиваем задержку для предотвращения мигания при drag&drop
+      safeScrollIntoView(articleRef.current, {
+        behavior: 'smooth',
+        block: 'center'
+      }, 300);
+    }
+  }, [active]);
+
+  // Поддержка как старого, так и нового формата данных
+  const displayText = item.preview || item.hePreview || '';
+  const fullText = item.heTextFull || item.text_full || displayText;
+
+  const { translatedText, isTranslating, error, translate } = useTranslation({
+    tref: item.ref,
+  });
+
+  const textToDisplay = translatedText || fullText;
+
+  // Определяем язык и направление на основе полного текста
+  const textForDetection = textToDisplay;
+  const direction = translatedText ? 'ltr' : getTextDirection(textForDetection); // Translations are left-to-right
+  const isHebrew = translatedText ? false : containsHebrew(textForDetection); // Translations are not Hebrew
+
+  // Вычисление итоговых классов типографики
+  const baseLatin = sizeConfig.baseTextSize; // text-lg, text-xl, text-2xl
+
+  // Жёсткий минимум для иврита
+  const minHebrew = size === 'compact' ? 'text-2xl'
+                  : size === 'normal'  ? 'text-3xl'
+                  :                      'text-4xl';
+
+  // Дополнительный масштаб поверх минимума
+  const heScale = Math.max(1.0, hebrewScale ?? 1.35);
+  const heScaleClass = isHebrew
+    ? heScale >= 2.1 ? 'text-5xl'
+    : heScale >= 1.7 ? 'text-4xl'
+    : heScale >= 1.4 ? 'text-3xl'
+    :                 minHebrew
+    : baseLatin;
+
+  // Межстрочный интервал для иврита
+  const lineHeightClass = isHebrew
+    ? (hebrewLineHeight === 'compact' ? 'leading-relaxed' : hebrewLineHeight === 'normal' ? 'leading-loose' : 'leading-[1.9]')
+    : 'leading-relaxed';
+
+  // Ширина колонки
+  const maxWClass = maxWidth === 'narrow' ? 'max-w-2xl' : maxWidth === 'wide' ? 'max-w-4xl' : 'max-w-3xl';
+
+  return (
+    <div className="flex-1 overflow-y-auto px-6 py-4 scroll-smooth scrollbar-thin scrollbar-thumb-muted/50 hover:scrollbar-thumb-muted">
+      <article
+        ref={articleRef}
+        className={`${maxWClass} mx-auto ${lineHeightClass} transition-all duration-500`}
+        dir={direction}
+        aria-current={active ? 'true' : undefined}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <button
+            onClick={translate}
+            disabled={isTranslating}
+            className="flex items-center gap-1 px-2 py-1 text-xs bg-primary/10 hover:bg-primary/20 text-primary rounded transition-colors disabled:opacity-50"
+            title={translatedText ? "Show Original" : "Translate"}
+          >
+            <Languages className="w-3 h-3" />
+            {isTranslating ? '...' : translatedText ? 'Original' : 'Translate'}
+          </button>
+          {error && <span className="text-xs text-red-500">{error}</span>}
+        </div>
+        <div 
+          className={`
+            ${heScaleClass}
+            ${direction === 'rtl' ? 'text-right font-hebrew' : 'text-left'}
+            rounded-md select-text cursor-pointer
+          `}
+          onDoubleClick={() => {
+            const selected = (window.getSelection()?.toString() || '').trim();
+            if (selected) {
+              // Trigger the same lexicon system
+              window.dispatchEvent(new CustomEvent('lexicon-lookup', { 
+                detail: { text: selected } 
+              }));
+            }
+          }}
+        >
+          {textToDisplay || 'Комментарий не загружен.'}
+        </div>
+      </article>
+    </div>
+  );
+});
+
+const EmptyWorkbenchPanel = memo(({
+  title,
+  onDrop
+}: {
+  title: string;
+  onDrop: (ref: string, dragData?: {
+    type: 'single' | 'group' | 'part';
+    data?: any;
+  }) => void;
+}) => {
+  const [isOver, setIsOver] = useState(false);
+
+  return (
+    <div
+      className={`
+        h-full flex flex-col items-center justify-center rounded-xl border-2 border-dashed
+        transition-all duration-300 text-muted-foreground/60
+        ${isOver
+          ? 'border-primary bg-primary/5 text-primary/70'
+          : 'border-border/40 bg-card/20 hover:border-primary/30'
+        }
+      `}
+      onDragOver={(e) => {
+        if (isDragDataValid(e.dataTransfer)) {
+          e.preventDefault();
+          setIsOver(true);
+        }
+      }}
+      onDragLeave={() => setIsOver(false)}
+      onDrop={(e) => {
+        e.preventDefault();
+        setIsOver(false);
+        const dragData = extractDragData(e.dataTransfer);
+        if (dragData) {
+          console.log('Dropped in empty workbench:', dragData);
+          if (dragData.type === 'group') {
+            console.log('Dropped group with refs:', dragData.data?.refs);
+            // TODO: Здесь можно добавить специальную обработку для групп
+            // Пока используем первый ref из группы
+          } else if (dragData.type === 'part') {
+            console.log('Dropped individual part:', dragData.data?.ref);
+          }
+          onDrop(dragData.ref, {
+            type: dragData.type,
+            data: dragData.data
+          });
+        }
+      }}
+    >
+      <div className="w-16 h-16 rounded-full border border-current/20 flex items-center justify-center mb-4">
+        <BookOpen className="w-8 h-8" />
+      </div>
+
+      <h3 className="font-medium mb-2">{title}</h3>
+
+      <p className="text-sm text-center max-w-32 leading-relaxed">
+        Перетащите источник или комментарий сюда
+      </p>
+
+    </div>
+  );
+});
+
+const WorkbenchPanelInline = memo(({
+  title,
+  item,
+  active,
+  selected = false,
+  onDropRef,
+  onPanelClick,
+  onBorderClick,
+  size = 'normal',
+  hebrewScale = 1.35,
+  hebrewLineHeight = 'relaxed',
+  headerVariant = 'mini',
+  maxWidth = 'normal'
+}: WorkbenchPanelProps) => {
+  const [isOver, setIsOver] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Размеры для разных режимов - ограничиваем высоту чтобы не превышать FocusReader
+  const sizeConfig = {
+    compact: {
+      minHeight: 'h-full max-h-[400px]', // фиксированная высота с ограничением
+      baseTextSize: 'text-lg' // для латиницы/английского
+    },
+    normal: {
+      minHeight: 'h-full max-h-[500px]',
+      baseTextSize: 'text-xl'
+    },
+    expanded: {
+      minHeight: 'h-full max-h-[600px]',
+      baseTextSize: 'text-2xl'
+    }
+  }[size];
+
+  const handleToggleExpanded = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsExpanded(!isExpanded);
+  };
+
+  if (!item) {
+    return <EmptyWorkbenchPanel title={title} onDrop={onDropRef} />;
+  }
+
+  return (
+    <div
+      onDragOver={(e: React.DragEvent) => {
+        if (isDragDataValid(e.dataTransfer)) {
+          e.preventDefault();
+          setIsOver(true);
+        }
+      }}
+      onDragLeave={() => setIsOver(false)}
+      onDrop={(e: React.DragEvent) => {
+        e.preventDefault();
+        setIsOver(false);
+        const dragData = extractDragData(e.dataTransfer);
+        if (dragData) {
+          console.log('Dropped in workbench:', dragData);
+          if (dragData.type === 'group') {
+            console.log('Dropped group with refs:', dragData.data?.refs);
+            // TODO: Здесь можно добавить специальную обработку для групп
+            // Пока используем первый ref из группы
+          } else if (dragData.type === 'part') {
+            console.log('Dropped individual part:', dragData.data?.ref);
+          }
+          onDropRef(dragData.ref, {
+            type: dragData.type,
+            data: dragData.data
+          });
+        }
+      }}
+      className={sizeConfig.minHeight}
+    >
+      <WorkbenchContainer
+        isOver={isOver}
+        active={active}
+        selected={selected}
+        onPanelClick={onPanelClick}
+        onBorderClick={onBorderClick}
+        onDragHandlers={{}}
+        className=""
+      >
+      <WorkbenchHeader
+        item={item}
+        isExpanded={isExpanded}
+        onToggleExpanded={handleToggleExpanded}
+        active={active}
+        headerVariant={headerVariant}
+      />
+
+      <WorkbenchContent
+        item={item}
+        sizeConfig={sizeConfig}
+        size={size}
+        active={active}
+        hebrewScale={hebrewScale}
+        hebrewLineHeight={hebrewLineHeight}
+        maxWidth={maxWidth}
+      />
+      </WorkbenchContainer>
+    </div>
+  );
+});
+
+export default WorkbenchPanelInline;

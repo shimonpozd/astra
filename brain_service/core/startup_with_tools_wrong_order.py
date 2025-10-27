@@ -57,6 +57,8 @@ async def lifespan(app: FastAPI):
     )
     await app.state.config_service.start_listening()
 
+    initial_study_config = await fetch_study_config(app.state.config_service)
+
     # Instantiate lexicon service
     app.state.lexicon_service = LexiconService(
         http_client=app.state.http_client,
@@ -138,8 +140,14 @@ async def lifespan(app: FastAPI):
         sefaria_service=app.state.sefaria_service,
         sefaria_index_service=app.state.sefaria_index_service,
         tool_registry=app.state.tool_registry,
-        memory_service=app.state.memory_service
+        memory_service=app.state.memory_service,
+        study_config=initial_study_config,
     )
+
+    async def _on_study_config_update(new_config):
+        app.state.study_service.update_study_config(new_config)
+
+    await register_study_config_listener(app.state.config_service, _on_study_config_update)
 
     # Register Sefaria tools
     sefaria_get_text_schema = {
@@ -283,4 +291,7 @@ async def lifespan(app: FastAPI):
         handler=app.state.wiki_service.search_chabadpedia,
         schema=chabadpedia_search_schema
     )
+
+
+
 

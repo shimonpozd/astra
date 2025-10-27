@@ -52,7 +52,34 @@ class NavigationService:
             # Create new snapshot with updated focus
             new_snapshot = current_snapshot.model_copy(deep=True)
             new_snapshot.ref = tref
-            new_snapshot.discussion_focus_ref = tref
+
+            segments = new_snapshot.segments or []
+            focus_index = new_snapshot.focusIndex or 0
+            normalized_target = self._normalize_ref(tref)
+
+            if segments and normalized_target:
+                found = False
+                for idx, segment in enumerate(segments):
+                    if self._normalize_ref(segment.ref) == normalized_target:
+                        focus_index = idx
+                        found = True
+                        break
+
+                if not found and "-" in tref and ":" in tref:
+                    start_candidate = tref.split("-", 1)[0].strip()
+                    normalized_start = self._normalize_ref(start_candidate)
+                    for idx, segment in enumerate(segments):
+                        if self._normalize_ref(segment.ref) == normalized_start:
+                            focus_index = idx
+                            found = True
+                            break
+
+                focus_index = min(max(focus_index, 0), len(segments) - 1)
+                new_snapshot.focusIndex = focus_index
+                new_snapshot.discussion_focus_ref = segments[focus_index].ref
+            else:
+                new_snapshot.focusIndex = focus_index
+                new_snapshot.discussion_focus_ref = tref
             
             # Save the new snapshot
             success = await push_new_snapshot(session_id, new_snapshot, self.redis_client)
@@ -89,6 +116,14 @@ class NavigationService:
                 "error": f"Navigation failed: {str(e)}",
                 "action": "navigate_to_ref"
             }
+    
+    @staticmethod
+    def _normalize_ref(ref: Optional[str]) -> str:
+        if not ref:
+            return ""
+        normalized = ref.lower().replace('.', ':')
+        normalized = ' '.join(normalized.split())
+        return normalized
     
     async def load_commentary_to_workbench(
         self, 

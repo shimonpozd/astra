@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { StudySnapshot } from '../../types/study';
-import { ContinuousText } from '../../types/text';
+import { ContinuousText, TextSegment } from '../../types/text';
 import FocusReader from './FocusReader';
 import ChatViewport from '../chat/ChatViewport';
 import MessageComposer from '../chat/MessageComposer';
@@ -28,13 +28,14 @@ interface StudyModeProps {
     type: 'single' | 'group' | 'part';
     data?: any;
   }) => void;
+  onWorkbenchClear?: (side: 'left' | 'right') => void;
   onWorkbenchFocus: (side: 'left' | 'right') => void;
   onWorkbenchDrop?: (side: 'left' | 'right', ref: string, dragData?: {
     type: 'single' | 'group' | 'part';
     data?: any;
   }) => void;
   onFocusClick?: () => void;
-  onNavigateToRef?: (ref: string) => void;
+  onNavigateToRef?: (ref: string, segment?: TextSegment) => void;
   // onLexiconLookup removed - now using global lexicon store
   refreshStudySnapshot: () => void;
   // Panel selection props
@@ -60,6 +61,7 @@ export default function StudyMode({
   setMessages,
   agentId,
   onWorkbenchSet,
+  onWorkbenchClear,
   onWorkbenchFocus,
   onWorkbenchDrop,
   onFocusClick,
@@ -94,35 +96,44 @@ export default function StudyMode({
   const studyMode = selectedPanelId ? 'iyun' : 'girsa';
 
   // New lexicon double-click handler using global store
-  const handleLexiconDoubleClick = async () => {
+  const handleLexiconDoubleClick = async (segment?: TextSegment) => {
     const selected = (window.getSelection()?.toString() || '').trim();
-    if (!selected) return;
+    const fallback = segment?.heText || segment?.text || '';
+    const contextRaw = fallback || selected || '';
+    const context = contextRaw
+      ? contextRaw.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+      : '';
 
-    // Clean up the selected text
-    const cleanText = selected
-      .replace(/[֑-ׇ]/g, '') // Remove Hebrew punctuation
-      .replace(/["'""().,!?;:\-\[\]{}]/g, '') // Remove general punctuation
+    const rawText = selected || fallback;
+    if (!rawText) return;
+
+    const cleanText = rawText
+      .replace(/[֑-ׇ]/g, '')
+      .replace(/["'""().,!?;:\-\[\]{}]/g, '')
       .trim();
 
     if (!cleanText) return;
 
-    // Use the new lexicon system
-    setSelection(cleanText, null);
+    setSelection(cleanText, context || null);
     await fetchExplanation();
   };
 
   // Listen for lexicon lookup events from Workbench
   useEffect(() => {
-    const handleLexiconLookup = (event: CustomEvent) => {
+    const handleLexiconLookup = (event: CustomEvent<{ text?: string; context?: string }>) => {
       const text = event.detail?.text;
       if (text) {
         const cleanText = text
           .replace(/[֑-ׇ]/g, '') // Remove Hebrew punctuation
           .replace(/["'""().,!?;:\-\[\]{}]/g, '') // Remove general punctuation
           .trim();
+        const context = event.detail?.context
+          ?.replace(/<[^>]+>/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim() || null;
         
         if (cleanText) {
-          setSelection(cleanText, null);
+          setSelection(cleanText, context);
           fetchExplanation();
         }
       }
@@ -190,6 +201,7 @@ export default function StudyMode({
                 onBorderClick={() => {
                   onWorkbenchFocus('left');
                 }}
+                onClear={snapshot?.workbench?.left ? () => onWorkbenchClear?.('left') : undefined}
               />
             </div>
 
@@ -211,7 +223,7 @@ export default function StudyMode({
               <FocusReader
                 continuousText={continuousText}
                 isLoading={isLoading}
-                onSegmentClick={(segment) => onNavigateToRef && onNavigateToRef(segment.ref)}
+                onSegmentClick={(segment) => onNavigateToRef && onNavigateToRef(segment.ref, segment)}
                 onNavigateToRef={onNavigateToRef}
                 onLexiconDoubleClick={handleLexiconDoubleClick}
                 isDailyMode={studySessionId?.startsWith('daily-') || false}
@@ -248,6 +260,7 @@ export default function StudyMode({
                 onBorderClick={() => {
                   onWorkbenchFocus('right');
                 }}
+                onClear={snapshot?.workbench?.right ? () => onWorkbenchClear?.('right') : undefined}
               />
             </div>
           </div>

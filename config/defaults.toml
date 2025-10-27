@@ -7,8 +7,8 @@ model = "openrouter/x-ai/grok-4-fast:free"
 [llm.api.openrouter]
 api_key = "${OPENROUTER_API_KEY}"
 base_url = "https://openrouter.ai/api/v1"
-referrer = "${OPENROUTER_REFERRER:-}"
-title = "${OPENROUTER_TITLE:-}"
+referrer = "${OPENROUTER_REFERRER:-https://astra.chat}"
+title = "${OPENROUTER_TITLE:-Astra Admin}"
 
 [llm.api.openai]
 api_key = "${OPENAI_API_KEY}"
@@ -33,6 +33,10 @@ speechify = "openrouter/x-ai/grok-4-fast:free"
 [llm.parameters]
 temperature = 0.1
 top_p = 0.9
+
+[llm.tooling]
+parallel_tool_calls = false
+retry_on_empty_stream = true
 
 [llm.tasks.summary]
 model = "gpt-4o-mini"
@@ -188,9 +192,12 @@ brain_url = "http://localhost:7030"
 memory_service_url = "http://localhost:7050"
 tts_service_url = "http://localhost:7040"
 stt_service_url = "http://localhost:7020"
+sefaria_mcp_url = "https://devmcp.sefaria.org/sse"
+sefaria_mcp_timeout_sec = 30
 
 [services.brain]
 # Brain service specific settings
+log_level = "DEBUG"
 port = 7030
 admin_token = "super-secret-token"
 cors_origins = "http://localhost:5173,http://localhost:3000"
@@ -239,3 +246,19 @@ study_mode_context = "english_only"
 max_messages = 2000
 # TTL for chat history in days
 ttl_days = 30
+
+[study]
+  [study.window]
+  size_min = 5
+  size_default = 30
+  size_max = 90
+
+[study.daily]
+  modular_loader_enabled = true
+  initial_small = 120
+  initial_medium = 180
+  initial_large = 240
+  batch_size = 120
+
+  [study.features]
+  facade_enabled = true

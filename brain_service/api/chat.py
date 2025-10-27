@@ -1,6 +1,8 @@
 import logging
+from datetime import datetime
 from typing import Optional
-from fastapi import APIRouter, Depends, HTTPException, Response, status
+
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
@@ -8,6 +10,8 @@ from core.dependencies import get_chat_service, get_session_service, get_redis_c
 from core.rate_limiting import rate_limit_dependency
 from services.chat_service import ChatService
 from services.session_service import SessionService
+from services.study.stream_router import select_today_unit
+from services.study.tz_utils import now_in_tz, resolve_timezone, seconds_until_next_midnight, next_midnight
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -101,78 +105,97 @@ async def get_session_handler(
 # --- Daily Learning Sessions ---
 
 @router.get("/daily/calendar")
-async def get_daily_calendar():
+async def get_daily_calendar(
+    tz: Optional[str] = Query(None, description="IANA timezone, e.g. Europe/Amsterdam")
+):
     """Get today's calendar items for virtual daily chat list."""
-    from datetime import datetime
     import httpx
-    
+
     try:
-        # Get today's calendar from Sefaria
+        tz_obj = resolve_timezone(tz, None)
+        today_dt = now_in_tz(tz_obj)
+
         params = {
             "diaspora": "1",
             "custom": "ashkenazi",
-            "year": datetime.now().year,
-            "month": datetime.now().month,
-            "day": datetime.now().day
+            "year": today_dt.year,
+            "month": today_dt.month,
+            "day": today_dt.day,
         }
-        
+
         async with httpx.AsyncClient() as client:
             response = await client.get("https://www.sefaria.org/api/calendars", params=params, timeout=30.0)
             response.raise_for_status()
             calendar_data = response.json()
-        
-        # Process calendar items for virtual list
-        today = datetime.now().strftime("%Y-%m-%d")
-        virtual_chats = []
-        
+
+        today_iso = today_dt.strftime("%Y-%m-%d")
+        virtual_chats: list[dict[str, object]] = []
+
         total_items = len(calendar_data.get("calendar_items", []))
-        logger.info(f"📅 CALENDAR DEBUG: Processing {total_items} calendar items")
-        
+        logger.info(f"?? CALENDAR DEBUG: Processing {total_items} calendar items")
+
         for idx, item in enumerate(calendar_data.get("calendar_items", [])):
             title_en = item.get("title", {}).get("en", "")
             ref = item.get("ref")
-            
-            logger.info(f"📅 ITEM #{idx+1}: title='{title_en}', ref='{ref}', has_ref={bool(ref)}")
-            
+
+            logger.info(f"?? ITEM #{idx+1}: title={title_en!r}, ref={ref!r}, has_ref={bool(ref)}")
+
             if not ref:
-                logger.warning(f"📅 SKIPPING ITEM #{idx+1}: '{title_en}' - no ref")
+                logger.warning(f"?? SKIPPING ITEM #{idx+1}: {title_en!r} - no ref")
                 continue
-                
-            # Create slug from title
+
             slug = title_en.lower().replace(" ", "-").replace("(", "").replace(")", "")
-            session_id = f"daily-{today}-{slug}"
-            
-            logger.info(f"📅 ADDING ITEM #{idx+1}: '{title_en}' -> session_id='{session_id}'")
-            
+            session_id = f"daily-{today_iso}-{slug}"
+
+            try:
+                unit_ref, meta = select_today_unit(item, tz=tz_obj, override_today=today_dt)
+            except ValueError as exc:
+                logger.warning(f"?? SKIPPING ITEM #{idx+1}: {title_en!r} - {exc}")
+                continue
+
+            logger.info(
+                f"?? ADDING ITEM #{idx+1}: {title_en!r} -> session_id={session_id!r}, unit_ref={unit_ref!r}"
+            )
+
             virtual_chats.append({
                 "session_id": session_id,
                 "title": title_en,
                 "he_title": item.get("title", {}).get("he", ""),
                 "display_value": item.get("displayValue", {}).get("en", ""),
                 "he_display_value": item.get("displayValue", {}).get("he", ""),
-                "ref": ref,
+                "ref": unit_ref,
                 "category": item.get("category", ""),
                 "order": item.get("order", 0),
-                "date": today,
-                "exists": False  # Will be checked on demand
+                "date": today_iso,
+                "exists": False,
+                "stream": {
+                    "stream_id": meta.stream_id,
+                    "title": meta.title,
+                    "units_total": meta.units_total,
+                    "unit_index_today": meta.unit_index_today,
+                },
             })
-        
-        # Sort by order
+
         virtual_chats.sort(key=lambda x: x["order"])
-        
+
         return {
-            "date": today,
+            "date": today_iso,
             "virtual_chats": virtual_chats,
-            "total": len(virtual_chats)
+            "total": len(virtual_chats),
+            "next_reset_at": next_midnight(tz_obj, today_dt).isoformat(),
+            "seconds_until_reset": seconds_until_next_midnight(tz_obj, today_dt),
+            "timezone": tz_obj.key,
         }
-        
+
     except Exception as e:
         logger.error(f"Failed to get daily calendar: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to get calendar: {str(e)}")
 
+
 @router.post("/daily/create/{session_id}")
 async def create_daily_session_lazy(
     session_id: str,
+    tz: Optional[str] = Query(None, description="IANA timezone, e.g. Europe/Amsterdam"),
     session_service: SessionService = Depends(get_session_service)
 ):
     """Lazy create daily session when first accessed."""
@@ -193,16 +216,17 @@ async def create_daily_session_lazy(
     date_str, slug = match.groups()
     
     try:
-        # Get calendar for that date
-        date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+        tz_obj = resolve_timezone(tz, None)
+        date_obj = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=tz_obj)
+
         params = {
             "diaspora": "1",
             "custom": "ashkenazi",
             "year": date_obj.year,
             "month": date_obj.month,
-            "day": date_obj.day
+            "day": date_obj.day,
         }
-        
+
         async with httpx.AsyncClient() as client:
             response = await client.get("https://www.sefaria.org/api/calendars", params=params, timeout=30.0)
             response.raise_for_status()
@@ -220,9 +244,11 @@ async def create_daily_session_lazy(
         if not target_item:
             raise HTTPException(status_code=404, detail="Calendar item not found")
         
+        unit_ref, meta = select_today_unit(target_item, tz=tz_obj, override_today=date_obj)
+
         # Create session data
         session_data = {
-            "ref": target_item.get("ref"),
+            "ref": unit_ref,
             "date": date_str,
             "title": target_item.get("title", {}).get("en", ""),
             "he_title": target_item.get("title", {}).get("he", ""),
@@ -230,17 +256,21 @@ async def create_daily_session_lazy(
             "category": target_item.get("category", ""),
             "order": target_item.get("order", 0),
             "completed": False,
-            "created_at": datetime.now().isoformat(),
-            "session_type": "daily"
+            "created_at": datetime.now(tz_obj).isoformat(),
+            "session_type": "daily",
+            "stream_id": meta.stream_id,
+            "units_total": meta.units_total,
+            "unit_index_today": meta.unit_index_today,
+            "timezone": tz_obj.key,
         }
-        
+
         # Save session
         success = await session_service.save_session(session_id, session_data, "daily")
         
         if success:
             return {
                 "session_id": session_id,
-                "ref": target_item.get("ref"),
+                "ref": unit_ref,
                 "title": target_item.get("title", {}).get("en", ""),
                 "message": "Daily session created successfully",
                 "created": True
@@ -297,25 +327,37 @@ async def get_daily_segments(
         
         # Parse segments
         segments = []
+        total_int = int(total_segments or 0)
         for segment_json in segments_data:
             import json
             segment = json.loads(segment_json)
+            metadata = segment.get("metadata") or {}
+            merged_metadata = {
+                "title": segment.get("title"),
+                "indexTitle": segment.get("indexTitle"),
+                "heRef": segment.get("heRef"),
+            }
+            merged_metadata.update({k: v for k, v in metadata.items() if v is not None})
+            merged_metadata = {k: v for k, v in merged_metadata.items() if v is not None}
+
+            if total_int > 1:
+                denominator = max(1, total_int - 1)
+                position = len(segments) / denominator
+            else:
+                position = 0.0
+
             segments.append({
                 "ref": segment.get("ref"),
                 "text": segment.get("en_text", ""),
                 "heText": segment.get("he_text", ""),
-                "position": len(segments) / max(1, int(total_segments or 1) - 1),
-                "metadata": {
-                    "title": segment.get("title"),
-                    "indexTitle": segment.get("indexTitle"),
-                    "heRef": segment.get("heRef")
-                }
+                "position": float(position),
+                "metadata": merged_metadata
             })
         
         return {
             "session_id": session_id,
             "segments": segments,
-            "total_segments": int(total_segments or 0),
+            "total_segments": total_int,
             "loaded_segments": len(segments)
         }
         

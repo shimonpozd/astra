@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { api } from '../services/api';
 import { StudySnapshot } from '../types/study';
+import { TextSegment } from '../types/text';
 
 export function useStudyMode() {
   const [isActive, setIsActive] = useState(false);
@@ -165,6 +166,34 @@ export function useStudyMode() {
     }
   }, [studySessionId]);
 
+  const workbenchClear = useCallback(async (side: 'left' | 'right') => {
+    if (!studySessionId) return;
+    try {
+      setIsLoading(true);
+      const response = await fetch('/api/study/workbench/set', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          session_id: studySessionId,
+          slot: side,
+          ref: null,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to clear workbench');
+      }
+      const result = await response.json();
+      if (result?.ok && result?.state) {
+        setStudySnapshot(result.state);
+      }
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : 'Failed to clear workbench';
+      setError(msg);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [studySessionId]);
+
   const workbenchFocus = useCallback(async (side: 'left' | 'right') => {
     if (!studySessionId) return;
     const ref = side === 'left' ? studySnapshot?.workbench?.left?.ref : studySnapshot?.workbench?.right?.ref;
@@ -221,11 +250,25 @@ export function useStudyMode() {
     }
   }, [studySessionId, studySnapshot]);
 
-  const navigateToRef = useCallback(async (ref: string) => {
+  const navigateToRef = useCallback(async (ref: string, segment?: TextSegment) => {
     if (!studySessionId) return;
     
     // Проверяем, есть ли уже этот ref в текущих сегментах
-    const isLocalNavigation = studySnapshot?.segments?.some(segment => segment.ref === ref);
+    const isLocalNavigation = studySnapshot?.segments?.some(item => item.ref === ref);
+
+    if (segment && studySnapshot?.segments?.length) {
+      setStudySnapshot(prev => {
+        if (!prev?.segments) return prev;
+        const idx = prev.segments.findIndex(item => item.ref === segment.ref);
+        if (idx === -1) return prev;
+        return {
+          ...prev,
+          focusIndex: idx,
+          ref: segment.ref,
+          discussion_focus_ref: segment.ref,
+        };
+      });
+    }
     
     try {
       // Показываем loading только для новых ref, не для локальной навигации
@@ -377,6 +420,7 @@ export function useStudyMode() {
     canNavigateForward,
     isBackgroundLoading,
     workbenchSet,
+    workbenchClear,
     workbenchFocus,
     focusMainText,
     navigateToRef,

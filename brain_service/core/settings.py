@@ -49,7 +49,13 @@ class Settings(BaseSettings):
             
             # Load Redis URL from services
             if 'services' in config:
-                self.REDIS_URL = config['services'].get('redis_url', 'redis://localhost:6379/0')
+                services_config = config['services']
+                self.REDIS_URL = services_config.get('redis_url', 'redis://localhost:6379/0')
+                self.SEFARIA_MCP_URL = services_config.get('sefaria_mcp_url', self.SEFARIA_MCP_URL)
+                self.SEFARIA_MCP_TIMEOUT_SEC = services_config.get(
+                    'sefaria_mcp_timeout_sec',
+                    self.SEFARIA_MCP_TIMEOUT_SEC,
+                )
                 
         except Exception as e:
             # Fallback to defaults if TOML loading fails
@@ -74,6 +80,8 @@ class Settings(BaseSettings):
         self.RATE_LIMIT_LLM = 5
         self.LOG_LEVEL = "INFO"
         self.LOG_JSON = False
+        self.SEFARIA_MCP_URL = "http://sefaria.org:8088/sse"
+        self.SEFARIA_MCP_TIMEOUT_SEC = 30
 
     # Default values (will be overridden by TOML config)
     BRAIN_PORT: int = 7030
@@ -104,3 +112,5 @@ class Settings(BaseSettings):
     
     LOG_LEVEL: str = "INFO"
     LOG_JSON: bool = False
+    SEFARIA_MCP_URL: str = "http://sefaria.org:8088/sse"
+    SEFARIA_MCP_TIMEOUT_SEC: int = 30

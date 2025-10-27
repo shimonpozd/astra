@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useChat } from "../../hooks/useChat";
 import { useStudyMode } from "../../hooks/useStudyMode";
@@ -11,6 +11,7 @@ import ChatViewport from "./ChatViewport";
 import MessageComposer from "./MessageComposer";
 import TopBar from "../layout/TopBar"; // Import the new TopBar
 import { api } from "../../services/api"; // Import api for daily session creation
+import { useLayout } from "../../contexts/LayoutContext";
 
 export function ChatLayout() {
   const navigate = useNavigate();
@@ -66,13 +67,17 @@ export function ChatLayout() {
     exitStudy,
     navigateBack,
     navigateForward,
+    navigateJump,
     canNavigateBack,
     canNavigateForward,
     isBackgroundLoading,
     workbenchSet,
+    workbenchClear,
     workbenchFocus,
     focusMainText,
     navigateToRef,
+    navigateToRefAPI,
+    navigateToSegmentLocal,
     refreshStudySnapshot,
   } = useStudyMode();
 
@@ -89,6 +94,10 @@ export function ChatLayout() {
     isSending,
     deleteSession,
   } = useChat(agentId, urlChatId);
+  const { mode } = useLayout();
+  // Derive study UI mode for composer indicator (iyun/girsa)
+  const studyUiMode: 'iyun' | 'girsa' = selectedPanelId ? 'iyun' : 'girsa';
+
 
 
   useTextSelectionListener();
@@ -111,7 +120,12 @@ export function ChatLayout() {
       if (textRef) {
         console.log('Starting study with ref:', textRef, 'and daily session ID:', dailySessionId);
         // Start study mode with the calendar text using the existing daily session ID
-        await startStudy(textRef, dailySessionId);
+        try {
+          const sessionId = await startStudy(textRef, dailySessionId);
+          console.log('✅ Study started successfully with session ID:', sessionId);
+        } catch (error) {
+          console.error('❌ Failed to start study:', error);
+        }
       } else {
         console.error('No ref found in daily session:', dailySession);
       }
@@ -206,10 +220,16 @@ export function ChatLayout() {
     }
   };
 
-  const cols = [];
-  if (isSidebarVisible) cols.push('320px');
-  if (isChatAreaVisible) cols.push('1fr');
-  if (isStudyActive && isChatAreaVisible) cols.push('400px');
+
+  const cols = [] as string[];
+  if (mode === 'vertical_three') {
+    cols.push('1fr'); // Chat (left half)
+    cols.push('1fr'); // Study (right half)
+  } else {
+    if (isSidebarVisible) cols.push('320px');
+    if (isChatAreaVisible) cols.push('1fr');
+    if (isStudyActive && isChatAreaVisible) cols.push('400px');
+  }
   const gridCols = cols.join(' ') || '1fr';
 
   return (
@@ -225,25 +245,55 @@ export function ChatLayout() {
       />
 
       {/* Main Content Grid */}
-      <div
-        className="flex-1 min-h-0 grid"
-        style={{ gridTemplateColumns: gridCols }}
-      >
-        {isSidebarVisible && (
-          <ChatSidebar
-            chats={chats}
-            isLoading={isLoadingChats}
-            error={chatsError}
-            selectedChatId={selectedChatId}
-            onSelectChat={handleSelectSession}
-            onCreateChat={createChat}
-            onDeleteSession={deleteSession}
-          />
+      <div className="flex-1 min-h-0 grid" style={{ gridTemplateColumns: gridCols }}>
+        {mode === 'vertical_three' ? (
+          // Left half: chat list + chat panel
+          <div className="min-h-0 grid grid-cols-[320px_1fr] border-r border-border/20">
+            <div className="min-h-0 overflow-hidden">
+              <ChatSidebar
+                chats={chats}
+                isLoading={isLoadingChats}
+                error={chatsError}
+                selectedChatId={selectedChatId}
+                onSelectChat={handleSelectSession}
+                onCreateChat={createChat}
+                onDeleteSession={deleteSession}
+              />
+            </div>
+            <div className="min-h-0 flex flex-col">
+              <div className="flex-1 min-h-0 overflow-y-auto panel-padding-sm">
+                <ChatViewport
+                  messages={messages.map(m => ({ ...m, id: String(m.id) }))}
+                  isLoading={isLoadingMessages}
+                />
+              </div>
+              <div className="flex-shrink-0 panel-padding">
+                <MessageComposer 
+                  onSendMessage={sendMessage} 
+                  disabled={isSending} 
+                  studyMode={studyUiMode}
+                  selectedPanelId={selectedPanelId}
+                />
+              </div>
+            </div>
+          </div>
+        ) : (
+          isSidebarVisible && (
+            <ChatSidebar
+              chats={chats}
+              isLoading={isLoadingChats}
+              error={chatsError}
+              selectedChatId={selectedChatId}
+              onSelectChat={handleSelectSession}
+              onCreateChat={createChat}
+              onDeleteSession={deleteSession}
+            />
+          )
         )}
 
         <>
-          {isChatAreaVisible && (
-            <main className="flex flex-col min-h-0 bg-background">
+          {(mode !== 'vertical_three' ? isChatAreaVisible : true) && (
+            <main className={mode === 'vertical_three' ? "min-h-0 bg-background grid grid-cols-[1fr_360px] grid-rows-1 h-full" : "flex flex-col min-h-0 bg-background"}>
               {isStudySetupOpen && !isStudyActive && (
                 <StudySetupBar
                   onStartStudy={handleStartStudy}
@@ -252,13 +302,14 @@ export function ChatLayout() {
                 />
               )}
 
-              <div className="flex-1 min-h-0">
+              <div className={mode === 'vertical_three' ? "min-h-0 grid grid-rows-[auto_1fr] col-start-1 col-end-2 h-full" : "flex-1 min-h-0"}>
                 {isStudyActive ? (
                   <StudyMode
                     snapshot={studySnapshot}
                     onExit={exitStudy}
                     onNavigateBack={navigateBack}
                     onNavigateForward={navigateForward}
+                    onNavigateJump={navigateJump}
                     isLoading={isLoadingStudy}
                     canNavigateBack={canNavigateBack}
                     canNavigateForward={canNavigateForward}
@@ -270,14 +321,18 @@ export function ChatLayout() {
               setMessages={setStudyMessages}
               agentId={agentId}
                     onWorkbenchSet={workbenchSet}
+                    onWorkbenchClear={workbenchClear}
                     onWorkbenchFocus={workbenchFocus}
                     onWorkbenchDrop={handleWorkbenchDrop}
                     onFocusClick={focusMainText}
                     onNavigateToRef={navigateToRef}
+                    onNavigateToRefAPI={navigateToRefAPI}
+                    onNavigateToSegmentLocal={navigateToSegmentLocal}
                     refreshStudySnapshot={refreshStudySnapshot}
                     selectedPanelId={selectedPanelId}
                     onSelectedPanelChange={setSelectedPanelId}
                     isBackgroundLoading={isBackgroundLoading}
+                    hideBottomChat={mode === 'vertical_three'}
                   />
                 ) : (
                   <div className="h-full flex flex-col min-h-0">
@@ -293,9 +348,20 @@ export function ChatLayout() {
                   </div>
                 )}
               </div>
+
+              {mode === 'vertical_three' && isStudyActive && (
+                <div className="min-h-0 overflow-auto col-start-2 col-end-3 border-l border-border/20 h-full">
+                  <BookshelfPanel
+                    sessionId={studySessionId || undefined}
+                    currentRef={getCurrentRefForBookshelf()}
+                    onDragStart={(ref) => console.log('Dragging from bookshelf:', ref)}
+                    onItemClick={(item) => console.log('Clicked bookshelf item:', item)}
+                  />
+                </div>
+              )}
             </main>
           )}
-          {isStudyActive && isChatAreaVisible && (
+          {isStudyActive && mode !== 'vertical_three' && isChatAreaVisible && (
             <div className="min-h-0 overflow-hidden">
               <BookshelfPanel
                 sessionId={studySessionId || undefined}

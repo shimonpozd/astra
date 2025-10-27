@@ -10,7 +10,7 @@ from models.chat_models import Session
 from domain.chat.tools import ToolRegistry
 from core.dependencies import get_memory_service
 from .block_stream_service import BlockStreamService
-from core.llm_config import get_llm_for_task, LLMConfigError
+from core.llm_config import get_llm_for_task, LLMConfigError, get_tooling_config
 from config import personalities as personality_service
 
 logger = logging.getLogger(__name__)
@@ -84,12 +84,22 @@ class ChatService:
                     }
                     messages.insert(0, stm_message)
 
+        tooling_cfg = get_tooling_config()
+        parallel_tool_calls = bool(tooling_cfg.get("parallel_tool_calls", False))
+        retry_on_empty_stream = bool(tooling_cfg.get("retry_on_empty_stream", True))
+
         tools = self.tool_registry.get_tool_schemas()
         api_params = {**reasoning_params, "model": model, "messages": messages, "stream": True}
         if tools:
-            api_params.update({"tools": tools, "tool_choice": "auto"})
+            api_params.update({"tools": tools, "tool_choice": "auto", "parallel_tool_calls": parallel_tool_calls})
 
         iter_count = 0
+        empty_reply_retry = False
+
+        def _is_tool_directive(text: str) -> bool:
+            stripped = (text or "").strip()
+            return stripped.startswith("[TOOL_CALLS") or stripped.startswith("[CALL_TOOL")
+
         while iter_count < 5:  # Max tool-use iterations
             iter_count += 1
             
@@ -110,6 +120,12 @@ class ChatService:
                 delta = chunk.choices[0].delta
                 if delta and delta.content:
                     chunk_count += 1  # Fix: Increment chunk counter
+                    if _is_tool_directive(delta.content):
+                        logger.debug(
+                            "Filtered tool directive chunk",
+                            extra={"session_id": session_id, "content": delta.content},
+                        )
+                        continue
                     full_reply_content += delta.content
                     yield json.dumps({"type": "llm_chunk", "data": delta.content}) + '\n'
                 if delta and delta.tool_calls:
@@ -127,7 +143,33 @@ class ChatService:
             if not tool_call_builders:
                 # If we already sent chunks, don't send doc_v1 - let the accumulated text be the final result
                 if chunk_count > 0:
-                    # We already streamed the content as chunks, no need to send doc_v1
+                    stripped_reply = full_reply_content.strip()
+                    if stripped_reply:
+                        # We already streamed the content as chunks, no need to send doc_v1
+                        return
+                    if retry_on_empty_stream and not empty_reply_retry and iter_count < 5:
+                        empty_reply_retry = True
+                        logger.warning(
+                            "LLM returned only whitespace after tool use; retrying with explicit answer instruction.",
+                            extra={"session_id": session_id, "model": model},
+                        )
+                        messages.append(
+                            {
+                                "role": "system",
+                                "content": "You must now answer the user's last question in natural language. Summarize the tool findings and provide a helpful chat response.",
+                            }
+                        )
+                        api_params.pop("tools", None)
+                        api_params["tool_choice"] = "none"
+                        api_params["parallel_tool_calls"] = False
+                        api_params["messages"] = messages
+                        continue
+                    fallback_message = (
+                        "I was unable to generate a helpful answer after consulting available tools. "
+                        "Please rephrase the question or try again."
+                    )
+                    yield json.dumps({"type": "llm_chunk", "data": fallback_message}) + '\n'
+                    yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
                     return
                 
                 # Check if the response is a JSON document (doc.v1 format)

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 // Cache store for translations - persists across component re-renders
 const translationCache = new Map<string, string>();
@@ -11,8 +11,8 @@ interface UseTranslationReturn {
   translatedText: string | null;
   isTranslating: boolean;
   error: string | null;
-  translate: () => Promise<void>;
-  revert: () => void;
+  translate: () => Promise<string | null>;
+  clear: () => void;
 }
 
 export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationReturn => {
@@ -20,20 +20,27 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
   const [isTranslating, setIsTranslating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const translate = async () => {
-    if (translatedText) {
-      // If already translated, revert
-      revert();
-      return;
-    }
+  useEffect(() => {
+    setTranslatedText(null);
+    setError(null);
+    setIsTranslating(false);
 
-    // Create cache key
+    if (translationCache.has(tref)) {
+      setTranslatedText(translationCache.get(tref)!);
+    }
+  }, [tref]);
+
+  const translate = useCallback(async (): Promise<string | null> => {
     const cacheKey = tref;
 
-    // Check cache first
     if (translationCache.has(cacheKey)) {
-      setTranslatedText(translationCache.get(cacheKey)!);
-      return; // Skip API call
+      const cached = translationCache.get(cacheKey)!;
+      setTranslatedText(cached);
+      return cached;
+    }
+
+    if (isTranslating) {
+      return translatedText;
     }
 
     setIsTranslating(true);
@@ -45,9 +52,7 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          tref: tref,
-        }),
+        body: JSON.stringify({ tref }),
       });
 
       if (!response.ok) {
@@ -55,14 +60,14 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
         try {
           const errorData = await response.json();
           errorMsg = errorData.detail || JSON.stringify(errorData);
-        } catch (e) {
-          // Ignore if the error response is not JSON
+        } catch {
+          /* ignore */
         }
         throw new Error(errorMsg);
       }
 
       if (!response.body) {
-        throw new Error("Response body is empty");
+        throw new Error('Response body is empty');
       }
 
       const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
@@ -70,49 +75,49 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
 
       while (true) {
         const { value, done } = await reader.read();
-        if (done) {
-          break;
-        }
-        if (value) {
-          try {
-            const event = JSON.parse(value) as { type: string; data?: any };
-            if (event && event.type === 'llm_chunk' && typeof event.data === 'string') {
-              fullTranslation = event.data; // Expecting a single chunk with final translation
-            } else if (event && event.type === 'error') {
-              console.error('[Translation] Received error from backend:', event.data.message);
-              setError(event.data.message);
-            }
-          } catch (e) {
-            console.error('[Translation] Failed to parse final stream event:', value, e);
+        if (done) break;
+        if (!value) continue;
+
+        try {
+          const event = JSON.parse(value) as { type: string; data?: any };
+          if (event?.type === 'llm_chunk' && typeof event.data === 'string') {
+            fullTranslation = event.data;
+          } else if (event?.type === 'error') {
+            console.error('[Translation] backend error:', event.data?.message);
+            setError(event.data?.message ?? 'Translation failed');
           }
+        } catch (err) {
+          console.error('[Translation] Failed to parse stream event:', value, err);
         }
       }
 
-      console.log('[Translation] Stream complete, final translation:', fullTranslation);
       if (fullTranslation) {
-        setTranslatedText(fullTranslation);
         translationCache.set(cacheKey, fullTranslation);
-      } else {
-        setError('No translation received.');
+        setTranslatedText(fullTranslation);
+        return fullTranslation;
       }
-      setIsTranslating(false);
 
+      setError('No translation received.');
+      return null;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Translation failed');
+      const message = err instanceof Error ? err.message : 'Translation failed';
+      setError(message);
+      return null;
+    } finally {
       setIsTranslating(false);
     }
-  };
+  }, [tref, isTranslating, translatedText]);
 
-  const revert = () => {
+  const clear = useCallback(() => {
     setTranslatedText(null);
     setError(null);
-  };
+  }, []);
 
   return {
     translatedText,
     isTranslating,
     error,
     translate,
-    revert,
+    clear,
   };
 };

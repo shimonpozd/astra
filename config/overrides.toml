@@ -1,30 +1,64 @@
-"llm.overrides.lexicon" = "ollama/qwen3:8b  "
-"llm.api.openrouter.api_key" = "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"
-"memory.provider" = "qdrant"
-
 [llm]
 provider = "openrouter"
-model = "openrouter/deepseek/deepseek-chat-v3.1:free"
+model = "openrouter/google/gemini-2.0-flash-001"
+
+[llm.tooling]
+parallel_tool_calls = false
+retry_on_empty_stream = true
 
 [llm.overrides]
-lexicon = "openrouter/deepseek/deepseek-chat-v3.1:free"
-translator = "openrouter/deepseek/deepseek-chat-v3.1:free"
-curator = "openrouter/deepseek/deepseek-chat-v3.1:free"
-chat = "openrouter/deepseek/deepseek-chat-v3.1:free"
-drafter = "openrouter/deepseek/deepseek-chat-v3.1:free"
-critic = "openrouter/deepseek/deepseek-chat-v3.1:free"
-meta_reasoner = "openrouter/deepseek/deepseek-chat-v3.1:free"
-summarizer = "openrouter/deepseek/deepseek-chat-v3.1:free"
-planner = "openrouter/deepseek/deepseek-chat-v3.1:free"
-speechify = "openrouter/deepseek/deepseek-chat-v3.1:free"
-summary = "openrouter/deepseek/deepseek-chat-v3.1:free"
-study = "openrouter/deepseek/deepseek-chat-v3.1:free"
+lexicon = "openrouter/google/gemini-2.5-flash-lite-preview-09-2025"
+translator = "openrouter/google/gemini-2.5-flash-lite"
+curator = "openrouter/google/gemini-2.5-flash-lite"
+chat = "openrouter/google/gemini-2.5-flash-lite-preview-09-2025"
+drafter = "openrouter/google/gemini-2.5-flash-lite"
+critic = "openrouter/google/gemini-2.5-flash-lite"
+meta_reasoner = "openrouter/google/gemini-2.5-flash-lite"
+summarizer = "openrouter/google/gemini-2.5-flash-lite"
+planner = "openrouter/google/gemini-2.5-flash-lite"
+speechify = "openrouter/google/gemini-2.5-flash-lite"
+summary = "openrouter/openai/gpt-4.1-nano"
+study = "openrouter/google/gemini-2.5-flash-lite-preview-09-2025"
+
+[voice.tts]
+provider = "yandex"
+yandex_folder_id = "b1gdt4sh9e2clrjj8jcj"
+yandex_voice = "filipp"
+yandex_use_v3_rest = true
 
 [actions.context]
 study_mode_context = "hebrew_and_english"
 
+[study.window]
+size_min = 5
+size_default = 30
+size_max = 90
+
+[study.daily]
+modular_loader_enabled = true
+initial_small = 120
+initial_medium = 180
+initial_large = 240
+batch_size = 120
+
+[study.features]
+facade_enabled = true
+
 [llm.api.openrouter]
-api_key = "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"
+api_key = "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"
+referrer = "http://localhost:5173/"
+title = "Astra Admin"
+
+[llm.tasks.summary]
+response_format_json = false
+model = "openrouter/meta-llama/llama-3.3-8b-instruct:free"
+
+[voice.tts.yandex]
+format = "oggopus"
+sample_rate = 48000
+"llm.overrides.lexicon" = "ollama/qwen3:8b"
+"llm.api.openrouter.api_key" = "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"
+"memory.provider" = "qdrant"
 
 [services.brain.sefaria]
-api_url = "https://www.sefaria.org/api/"
+api_url = "http://localhost:8000/api"

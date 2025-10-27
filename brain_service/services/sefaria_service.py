@@ -32,6 +32,19 @@ class SefariaService:
         if lang:
             params["lang"] = lang
 
+        # Coerce accidental Talmud-like Bible refs, e.g. "Genesis 19b.18" -> "Genesis 19:18"
+        try:
+            lowered = (tref or "").lower()
+            bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel', 'psalms', 'proverbs', 'job', 'song', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles']
+            if any(book in lowered for book in bible_books):
+                m = re.match(r"([\w\s'.]+) (\d+)[ab][\.:](\d+)$", tref, re.IGNORECASE)
+                if m:
+                    coerced = f"{m.group(1).strip()} {int(m.group(2))}:{int(m.group(3))}"
+                    logger.debug({"coerced_bible_ref": {"from": tref, "to": coerced}})
+                    tref = coerced
+        except Exception:
+            pass
+
         # Normalize the reference but don't change the format
         final_ref = await normalize_tref(tref)
         cache_key = self._cache_key(final_ref, params)
@@ -67,6 +80,35 @@ class SefariaService:
             logger.info(f"SEFARIA_SERVICE: CompactText result - en_text: {bool(en_text)} (len={len(en_text) if en_text else 0}), he_text: {bool(he_text)} (len={len(he_text) if he_text else 0})")
             if he_text:
                 logger.info(f"SEFARIA_SERVICE: HE_TEXT PREVIEW: [Hebrew text - {len(he_text)} chars]")
+            # Attempt to fetch segmented verses using v2 texts endpoint
+            try:
+                segment_payload = await get_from_sefaria(
+                    self.http_client,
+                    f"texts/{quote(final_ref)}",
+                    api_url=self.api_url,
+                    api_key=self.api_key,
+                    params={"commentary": 0, "context": 0, "pad": 0},
+                )
+            except Exception as seg_exc:  # pragma: no cover - best effort
+                logger.warning(
+                    "SEFARIA_SERVICE: Segment fetch failed",
+                    extra={"ref": final_ref, "error": str(seg_exc)},
+                )
+                segment_payload = None
+
+            raw_text = None
+            raw_he = None
+            if isinstance(segment_payload, dict):
+                raw_text = segment_payload.get("text")
+                raw_he = segment_payload.get("he")
+            else:
+                raw_text = raw_result.get("text")
+                raw_he = raw_result.get("he")
+
+            if isinstance(raw_text, list):
+                compacted_text["text_segments"] = raw_text
+            if isinstance(raw_he, list):
+                compacted_text["he_segments"] = raw_he
             result = {"ok": True, "data": compacted_text}
         else:
             logger.warning(f"SEFARIA_SERVICE: Fetch FAILED for {final_ref} after all fallbacks.")

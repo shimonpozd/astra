@@ -211,7 +211,7 @@ class TranslationService:
                 yield {"type": "llm_chunk", "data": llm_response_text.strip()}
             
         except Exception as e:
-            logger.error("Error during translation LLM call", extra={
+            logger.exception("Error during translation LLM call", extra={
                 "tref": tref,
                 "error": str(e),
                 "error_type": str(type(e)),
@@ -307,7 +307,7 @@ class TranslationService:
             yield {"type": "llm_chunk", "data": translation_text}
             
         except Exception as e:
-            logger.error("Error during custom text translation", extra={
+            logger.exception("Error during custom text translation", extra={
                 "error": str(e)
             })
             yield {"type": "error", "data": {"message": str(e)}}

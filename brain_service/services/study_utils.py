@@ -6,6 +6,7 @@ import html
 from typing import Dict, Any, Optional, List, Tuple
 import asyncio
 from urllib.parse import quote
+from itertools import zip_longest
 
 from brain_service.services.sefaria_service import SefariaService
 from brain_service.services.sefaria_index_service import SefariaIndexService
@@ -38,18 +39,101 @@ def detect_collection(ref: str) -> str:
         return "Mishnah"
     return "Unknown"
 
+def _coerce_bible_ref_string(ref: str) -> str:
+    """If ref looks like a Bible ref but has an accidental Talmud amud pattern (e.g., 'Exodus 16b.12'),
+    coerce it to 'Exodus 16:12'. Keeps non-Bible refs untouched.
+    """
+    try:
+        lowered = ref.lower()
+        bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel', 'psalms', 'proverbs', 'job', 'song', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles']
+        if not any(book in lowered for book in bible_books):
+            return ref
+        # Match '<Book> <chapter>[ab][.:]<verse>'
+        m = re.match(r"([\w\s'.]+) (\d+)[ab][\.:](\d+)$", ref, re.IGNORECASE)
+        if m:
+            return f"{m.group(1).strip()} {int(m.group(2))}:{int(m.group(3))}"
+        return ref
+    except Exception:
+        return ref
+
 def _parse_ref(ref: str) -> Optional[Dict[str, Any]]:
-    # Talmud
-    match = re.match(r"([\w\s'.]+) (\d+)([ab])(?:[.:](\d+))?", ref)
-    if match:
-        return {"type": "talmud", "book": match.group(1).strip(), "page": int(match.group(2)), "amud": match.group(3), "segment": int(match.group(4)) if match.group(4) else 1}
-    # Bible / Mishnah
-    match = re.match(r"([\w\s'.]+) (\d+):(\d+)", ref)
-    if match:
-        return {"type": "bible", "book": match.group(1).strip(), "chapter": int(match.group(2)), "verse": int(match.group(3))}
+    # First, try to detect if this is likely Tanakh/Bible based on book names
+    ref_lower = ref.lower()
+    bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel', 'psalms', 'proverbs', 'job', 'song', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles']
+    
+    # Check if this looks like a Bible book
+    is_likely_bible = any(book in ref_lower for book in bible_books)
+    
+    logger.debug(f"🔥 PARSE_REF: '{ref}' -> is_likely_bible={is_likely_bible}")
+    
+    if is_likely_bible:
+        # For Bible books, prioritize the Bible format
+        match = re.match(r"([\w\s'.]+) (\d+):(\d+)", ref)
+        if match:
+            result = {"type": "bible", "book": match.group(1).strip(), "chapter": int(match.group(2)), "verse": int(match.group(3))}
+            logger.debug(f"🔥 PARSE_REF: Bible format matched -> {result}")
+            return result
+        # Fallback to Talmud format if Bible format doesn't match
+        match = re.match(r"([\w\s'.]+) (\d+)([ab])(?:[.:](\d+))?", ref)
+        if match:
+            result = {"type": "talmud", "book": match.group(1).strip(), "page": int(match.group(2)), "amud": match.group(3), "segment": int(match.group(4)) if match.group(4) else 1}
+            logger.warning(f"🔥 PARSE_REF: Bible book but Talmud format matched -> {result}")
+            return result
+    else:
+        # For non-Bible books, try Talmud format first
+        match = re.match(r"([\w\s'.]+) (\d+)([ab])(?:[.:](\d+))?", ref)
+        if match:
+            result = {"type": "talmud", "book": match.group(1).strip(), "page": int(match.group(2)), "amud": match.group(3), "segment": int(match.group(4)) if match.group(4) else 1}
+            logger.debug(f"🔥 PARSE_REF: Talmud format matched -> {result}")
+            return result
+        # Fallback to Bible format
+        match = re.match(r"([\w\s'.]+) (\d+):(\d+)", ref)
+        if match:
+            result = {"type": "bible", "book": match.group(1).strip(), "chapter": int(match.group(2)), "verse": int(match.group(3))}
+            logger.debug(f"🔥 PARSE_REF: Bible format matched (fallback) -> {result}")
+            return result
+    
+    logger.warning(f"🔥 PARSE_REF: No format matched for '{ref}'")
     return None
 
 # --- Navigation & Windowing Logic ---
+
+async def _ensure_chapter_length(
+    book: str,
+    chapter: int,
+    book_structure: Optional[Dict[str, Any]],
+    cache: Dict[int, Optional[int]],
+    sefaria_service: SefariaService,
+) -> Optional[int]:
+    if chapter <= 0:
+        return None
+    if chapter in cache:
+        return cache[chapter]
+
+    length: Optional[int] = None
+    if book_structure:
+        lengths = book_structure.get("lengths")
+        if isinstance(lengths, list) and 0 <= (chapter - 1) < len(lengths):
+            length = lengths[chapter - 1]
+
+    if not length:
+        try:
+            chapter_ref = f"{book} {chapter}"
+            chapter_result = await sefaria_service.get_text(chapter_ref)
+            if chapter_result.get("ok") and chapter_result.get("data"):
+                data = chapter_result["data"]
+                if isinstance(data, dict):
+                    segment_list = data.get("text") or data.get("he")
+                    if isinstance(segment_list, list):
+                        length = len([item for item in segment_list if item])
+                elif isinstance(data, list):
+                    length = len([item for item in data if item])
+        except Exception:  # pragma: no cover - network errors fallback to None
+            length = None
+
+    cache[chapter] = length
+    return length
+
 
 async def _generate_and_validate_refs(base_ref: str, collection: str, direction: str, count: int, sefaria_service: SefariaService, index_service: SefariaIndexService) -> List[Dict[str, str]]:
     """Generates and validates a list of previous/next references with page/chapter transitions."""
@@ -63,6 +147,7 @@ async def _generate_and_validate_refs(base_ref: str, collection: str, direction:
     # Get TOC data from index service
     toc_data = index_service.toc if hasattr(index_service, 'toc') else None
     book_structure = get_book_structure(parsed_ref['book'], toc_data)
+    chapter_length_cache: Dict[int, Optional[int]] = {}
     
     generated_refs = []
     current_ref_parts = parsed_ref.copy()
@@ -77,29 +162,68 @@ async def _generate_and_validate_refs(base_ref: str, collection: str, direction:
         
         # --- 1. Generate a candidate reference string ---
         if current_ref_parts['type'] == 'talmud':
-            current_segment = current_ref_parts.get('segment', 1) or 1
+            current_segment = current_ref_parts.get('segment')
+            if current_segment is None:
+                current_segment = 1
             next_segment = current_segment + delta
             if next_segment > 0:
-                candidate_ref_str = f"{current_ref_parts['book']} {current_ref_parts['page']}{current_ref_parts['amud']}.{next_segment}"
+                candidate_ref_str = f"{current_ref_parts['book']} {current_ref_parts['page']}{current_ref_parts['amud']}:{next_segment}"
                 current_ref_parts['segment'] = next_segment # Tentatively update
             # Backward page transition is too complex for now
 
-        elif current_ref_parts['type'] == 'bible' and book_structure:
-            chapter_index = current_ref_parts['chapter'] - 1
-            new_verse = current_ref_parts['verse'] + delta
+        elif current_ref_parts['type'] == 'bible':
+            chapter = current_ref_parts.get('chapter')
+            verse = current_ref_parts.get('verse')
+            if not chapter or not verse:
+                break
 
-            if 1 <= new_verse <= book_structure['lengths'][chapter_index]:
+            length = await _ensure_chapter_length(
+                current_ref_parts['book'],
+                chapter,
+                book_structure,
+                chapter_length_cache,
+                sefaria_service,
+            )
+            if not length:
+                break
+
+            new_verse = verse + delta
+
+            if 1 <= new_verse <= length:
                 current_ref_parts['verse'] = new_verse
-            elif new_verse > book_structure['lengths'][chapter_index] and direction == 'next':
-                if chapter_index + 1 < len(book_structure['lengths']):
-                    current_ref_parts['chapter'] += 1
-                    current_ref_parts['verse'] = 1
+            elif new_verse > length and direction == 'next':
+                next_chapter = chapter + 1
+                next_length = await _ensure_chapter_length(
+                    current_ref_parts['book'],
+                    next_chapter,
+                    book_structure,
+                    chapter_length_cache,
+                    sefaria_service,
+                )
+                if not next_length:
+                    break
+                # For Tanakh, when transitioning to a new chapter, load the full chapter
+                # This will be handled by the range loading logic in get_text_with_window
+                current_ref_parts['chapter'] = next_chapter
+                current_ref_parts['verse'] = 1
             elif new_verse < 1 and direction == 'prev':
-                if chapter_index > 0:
-                    current_ref_parts['chapter'] -= 1
-                    prev_chapter_verses = book_structure['lengths'][chapter_index - 1]
-                    current_ref_parts['verse'] = prev_chapter_verses
-            
+                prev_chapter = chapter - 1
+                prev_length = await _ensure_chapter_length(
+                    current_ref_parts['book'],
+                    prev_chapter,
+                    book_structure,
+                    chapter_length_cache,
+                    sefaria_service,
+                )
+                if not prev_length:
+                    break
+                # For Tanakh, when transitioning to a previous chapter, load the full chapter
+                # This will be handled by the range loading logic in get_text_with_window
+                current_ref_parts['chapter'] = prev_chapter
+                current_ref_parts['verse'] = prev_length
+            else:
+                break
+
             candidate_ref_str = f"{current_ref_parts['book']} {current_ref_parts['chapter']}:{current_ref_parts['verse']}"
 
         if not candidate_ref_str:
@@ -129,6 +253,61 @@ async def _generate_and_validate_refs(base_ref: str, collection: str, direction:
 
     return generated_refs
 
+async def _generate_tanakh_chapter_refs(base_ref: str, direction: str, count: int, sefaria_service: SefariaService, index_service: SefariaIndexService) -> List[Dict[str, Any]]:
+    """Generate and validate a list of previous/next Tanakh chapters."""
+    if not base_ref:
+        return []
+
+    parsed_ref = _parse_ref(base_ref)
+    if not parsed_ref or parsed_ref.get('type') != 'bible':
+        return []
+
+    # Get TOC data from index service
+    toc_data = index_service.toc if hasattr(index_service, 'toc') else None
+    book_structure = get_book_structure(parsed_ref['book'], toc_data)
+    chapter_length_cache: Dict[int, Optional[int]] = {}
+    
+    generated_chapters = []
+    current_chapter = parsed_ref['chapter']
+    
+    # Try up to e.g., 20 times to find `count` valid chapters
+    for _ in range(count * 5):
+        if len(generated_chapters) >= count:
+            break
+
+        delta = 1 if direction == 'next' else -1
+        candidate_chapter = current_chapter + delta
+        
+        if candidate_chapter < 1:
+            break
+            
+        # Check if the chapter exists by trying to get its length
+        chapter_length = await _ensure_chapter_length(
+            parsed_ref['book'],
+            candidate_chapter,
+            book_structure,
+            chapter_length_cache,
+            sefaria_service,
+        )
+        
+        if not chapter_length:
+            break
+            
+        # Try to load the full chapter
+        chapter_ref = f"{parsed_ref['book']} {candidate_chapter}"
+        chapter_result = await sefaria_service.get_text(chapter_ref)
+        
+        if chapter_result.get("ok") and chapter_result.get("data"):
+            generated_chapters.append(chapter_result["data"])
+            current_chapter = candidate_chapter
+        else:
+            break
+    
+    if direction == 'prev':
+        generated_chapters.reverse()
+
+    return generated_chapters
+
 def containsHebrew(text: str) -> bool:
     if not text:
         return False
@@ -140,14 +319,128 @@ def containsHebrew(text: str) -> bool:
 
 async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_service: SefariaIndexService, window_size: int = WINDOW_SIZE) -> Optional[Dict[str, Any]]:
     # First, try to get the text to check if it's a range or complete unit
-    focus_result = await sefaria_service.get_text(ref)
+    # Sanitize accidental Talmud-like suffixes in Bible refs
+    safe_ref = _coerce_bible_ref_string(ref)
+    focus_result = await sefaria_service.get_text(safe_ref)
     if not focus_result.get("ok") or not (focus_data := focus_result.get("data")):
         return None
+
+    # Check if this is a Tanakh reference and if we should load full chapter
+    collection = detect_collection(ref)
+    parsed_ref = _parse_ref(ref)
+    
+    # For Tanakh, load full chapter but with performance limits
+    if collection == "Bible" and parsed_ref and parsed_ref.get('type') == 'bible':
+            chapter_ref = _coerce_bible_ref_string(f"{parsed_ref['book']} {parsed_ref['chapter']}")
+            
+            # Load the full chapter
+            chapter_result = await sefaria_service.get_text(chapter_ref)
+            if chapter_result.get("ok") and chapter_result.get("data"):
+                chapter_data = chapter_result["data"]
+                logger.info(f"🔥 TANAKH FULL CHAPTER: Loading full chapter {chapter_ref}")
+                logger.info(f"🔥 TANAKH CHAPTER DATA KEYS: {list(chapter_data.keys())}")
+                logger.info(f"🔥 TANAKH CHAPTER TEXT TYPE: {type(chapter_data.get('text'))}")
+                logger.info(f"🔥 TANAKH CHAPTER HE TYPE: {type(chapter_data.get('he'))}")
+                
+                # Create segments for each verse in the chapter
+                formatted_segments = []
+                
+                # Try different field names that Sefaria might use
+                text_data = chapter_data.get("text", []) or chapter_data.get("text_segments", [])
+                he_data = chapter_data.get("he", []) or chapter_data.get("he_segments", []) or chapter_data.get("he_text", [])
+                
+                # If text_data is not a list, try to get individual verses
+                if not isinstance(text_data, list) or len(text_data) == 0:
+                    # Try to load individual verses - get real chapter length
+                    logger.info(f"🔥 TANAKH: Chapter data doesn't have verse list, trying individual verses")
+                    
+                    # Get real chapter length using existing mechanism
+                    chapter_length = await _ensure_chapter_length(
+                        parsed_ref['book'],
+                        parsed_ref['chapter'],
+                        None,  # book_structure
+                        {},    # cache
+                        sefaria_service,
+                    )
+                    
+                    # Use real chapter length when available; otherwise use a high safety guard
+                    max_verses = chapter_length if chapter_length else 200
+                    logger.debug(f"🔥 TANAKH: Loading up to {max_verses} verses for chapter {parsed_ref['chapter']}")
+                    
+                    for verse_num in range(1, max_verses + 1):
+                        verse_ref = _coerce_bible_ref_string(f"{parsed_ref['book']} {parsed_ref['chapter']}:{verse_num}")
+                        try:
+                            verse_result = await sefaria_service.get_text(verse_ref)
+                            if verse_result.get("ok") and verse_result.get("data"):
+                                verse_data = verse_result["data"]
+                                en_text = verse_data.get("en_text", "") or verse_data.get("text", "")
+                                he_text = verse_data.get("he_text", "") or verse_data.get("he", "")
+                                
+                                if he_text:  # Only add if there's Hebrew text
+                                    formatted_segments.append({
+                                        "ref": verse_ref,
+                                        "text": he_text,  # Only Hebrew text
+                                        "heText": he_text,
+                                        "position": 0,  # Will be normalized later
+                                        "metadata": {
+                                            "title": verse_data.get("title"),
+                                            "indexTitle": verse_data.get("indexTitle"),
+                                            "chapter": parsed_ref['chapter'],
+                                            "verse": verse_num,
+                                        }
+                                    })
+                            else:
+                                break  # No more verses
+                        except Exception as e:
+                            logger.warning(f"Failed to load verse {verse_ref}: {e}")
+                            break
+                    
+                    # If we still don't have segments, something is wrong - log and return None
+                    if len(formatted_segments) == 0:
+                        logger.error(f"🔥 TANAKH: No segments found for chapter {chapter_ref}")
+                        return None
+                else:
+                    # Use the list data directly with its full length
+                    max_verses = len(text_data)
+                    logger.debug(f"🔥 TANAKH: Using chapter list data with {max_verses} verses")
+                    for i, (en_text, he_text) in enumerate(zip_longest(text_data, (he_data or []), fillvalue="")):
+                        verse_num = i + 1
+                        segment_ref = _coerce_bible_ref_string(f"{parsed_ref['book']} {parsed_ref['chapter']}:{verse_num}")
+                        
+                        # Only add if there's Hebrew text
+                        if he_text:
+                            formatted_segments.append({
+                                "ref": segment_ref,
+                                "text": he_text,  # Only Hebrew text
+                                "heText": he_text,
+                                "position": 0,  # Will be normalized later
+                                "metadata": {
+                                    "title": chapter_data.get("title"),
+                                    "indexTitle": chapter_data.get("indexTitle"),
+                                    "chapter": parsed_ref['chapter'],
+                                    "verse": verse_num,
+                                }
+                            })
+                
+                # Normalize positions post-factum
+                n = len(formatted_segments)
+                for j, seg in enumerate(formatted_segments):
+                    seg["position"] = (j / (n - 1)) if n > 1 else 0.5
+                
+                # Find the focus index for the original verse
+                original_verse = parsed_ref.get('verse', 1)
+                focus_index = max(0, min(original_verse - 1, len(formatted_segments) - 1))
+                
+                return {
+                    "segments": formatted_segments,
+                    "focusIndex": focus_index,
+                    "ref": ref,
+                    "he_ref": chapter_data.get("heRef"),
+                }
 
     # Regular study mode - use window logic for all references
 
     # 2. Fetch surrounding segments (original window logic)
-    collection = detect_collection(ref)
     prev_refs_task = _generate_and_validate_refs(ref, collection, "prev", window_size, sefaria_service, index_service)
     next_refs_task = _generate_and_validate_refs(ref, collection, "next", window_size, sefaria_service, index_service)
     prev_segments, next_segments = await asyncio.gather(prev_refs_task, next_refs_task)
@@ -211,10 +504,13 @@ def _should_load_full_range(ref: str, data: Dict[str, Any]) -> bool:
     
     return False
 
-def _extract_hebrew_text(he_data) -> str:
+def _extract_hebrew_text(he_data, index: Optional[int] = None) -> str:
     """Helper function to extract Hebrew text from various data structures."""
     if isinstance(he_data, list) and len(he_data) > 0:
-        return he_data[0]  # Take first element if it's a list
+        if index is not None and isinstance(index, int):
+            zero_based = max(0, min(len(he_data) - 1, index - 1 if index > 0 else index))
+            return he_data[zero_based]
+        return he_data[0]  # Default to the first element
     elif isinstance(he_data, str):
         return he_data
     else:
@@ -235,53 +531,6 @@ def _clean_html_text(text: str) -> str:
     text = re.sub(r'\s+', ' ', text).strip()
     
     return text
-
-async def _load_remaining_segments_background(ref: str, sefaria_service: SefariaService, session_id: str, start_verse: int, end_verse: int, book_chapter: str, redis_client, already_loaded: int = 0):
-    """Load remaining segments in background and store in Redis for dynamic updates."""
-    # Calculate how many segments were already loaded
-    background_start = start_verse + already_loaded
-    logger.info(f"🔥 BACKGROUND LOADING: {book_chapter}, verses {background_start+1}-{end_verse} (already loaded: {already_loaded})")
-    
-    for verse_num in range(background_start + 1, end_verse + 1):
-        verse_ref = f"{book_chapter}:{verse_num}"
-        try:
-            verse_result = await sefaria_service.get_text(verse_ref)
-            if verse_result.get("ok") and verse_result.get("data"):
-                verse_data = verse_result["data"]
-                en_text = verse_data.get("text", "")
-                he_text = verse_data.get("he", "")
-                
-                segment_data = {
-                    "ref": verse_ref,
-                    "en_text": _clean_html_text(en_text),
-                    "he_text": _clean_html_text(_extract_hebrew_text(he_text)),
-                    "title": verse_data.get("title", ref),
-                    "indexTitle": verse_data.get("indexTitle", ""),
-                    "heRef": verse_data.get("heRef", "")
-                }
-                
-                # Store in Redis for this session - add to segments list
-                import json
-                redis_key = f"daily:sess:{session_id}:segments"
-                await redis_client.lpush(redis_key, json.dumps(segment_data, ensure_ascii=False))
-                
-                # Update total count
-                count_key = f"daily:sess:{session_id}:total_segments"
-                await redis_client.set(count_key, verse_num - start_verse + 1)
-                
-                logger.info(f"🔥 BACKGROUND SEGMENT LOADED: {verse_ref} (total: {verse_num - start_verse + 1})")
-                
-                # Small delay to avoid overwhelming the API
-                await asyncio.sleep(0.1)
-                
-        except Exception as e:
-            logger.error(f"🔥 BACKGROUND LOADING ERROR {verse_ref}: {str(e)}")
-    
-    # Clear loading flag when complete
-    loading_key = f"daily:sess:{session_id}:loading"
-    await redis_client.delete(loading_key)
-    
-    logger.info(f"🔥 BACKGROUND LOADING COMPLETE: {book_chapter}")
 
 async def _try_load_range(sefaria_service: SefariaService, ref: str) -> Optional[Dict[str, Any]]:
     """Try to load a range from Sefaria API."""
@@ -445,7 +694,7 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
                     segment_data = {
                         "ref": verse_ref,
                         "en_text": _clean_html_text(en_text),
-                        "he_text": _clean_html_text(_extract_hebrew_text(he_text)),
+                        "he_text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
                         "title": verse_data.get("title", ref),
                         "indexTitle": verse_data.get("indexTitle", ""),
                         "heRef": verse_data.get("heRef", "")
@@ -475,7 +724,7 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
                         segment_data = {
                             "ref": verse_ref,
                             "en_text": _clean_html_text(en_text),
-                            "he_text": _clean_html_text(_extract_hebrew_text(he_text)),
+                        "he_text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
                             "title": verse_data.get("title", ref),
                             "indexTitle": verse_data.get("indexTitle", ""),
                             "heRef": verse_data.get("heRef", "")
@@ -539,6 +788,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
     - Mishnah: "Mishnah Menachot 9:5-6" -> load specified mishnayot
     """
     logger.info(f"🔥 GET_FULL_DAILY_TEXT STARTED: ref='{ref}'")
+    collection = detect_collection(ref)
     
     # Check if this is an inter-chapter range first
     if "-" in ref and ":" in ref:
@@ -723,9 +973,9 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                         if en_text or he_text:
                                             segment_data = {
                                                 "ref": verse_ref,
-                                                "text": _clean_html_text(_extract_hebrew_text(he_text)),
-                                                "heText": _clean_html_text(_extract_hebrew_text(he_text)),
-                                                "position": float(verse_num),
+                                                "text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                                                "heText": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                                                "position": 0,  # normalize later
                                                 "metadata": {
                                                     "title": data.get("title", ref),
                                                     "indexTitle": data.get("indexTitle", data.get("book", "")),
@@ -733,7 +983,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                 }
                                             }
                                             all_segments_data.append(segment_data)
-                                            logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text))}")
+                                            logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
                                         else:
                                             break  # No more verses in this chapter
                                     else:
@@ -757,9 +1007,9 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                             if en_text or he_text:
                                                 segment_data = {
                                                     "ref": verse_ref,
-                                                    "text": _clean_html_text(_extract_hebrew_text(he_text)),
-                                                    "heText": _clean_html_text(_extract_hebrew_text(he_text)),
-                                                    "position": float(verse_num),
+                                                    "text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                                                    "heText": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                                                    "position": 0,  # normalize later
                                                     "metadata": {
                                                         "title": data.get("title", ref),
                                                         "indexTitle": data.get("indexTitle", data.get("book", "")),
@@ -767,7 +1017,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                     }
                                                 }
                                                 all_segments_data.append(segment_data)
-                                                logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text))}")
+                                                logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
                                             else:
                                                 break
                                         else:
@@ -798,7 +1048,9 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                     total_segments = end_verse - start_verse + 1
                     
                     # For large ranges, load more segments initially for better UX
-                    if total_segments <= 10:
+                    if collection == "Bible":
+                        segments_to_load = total_segments  # Tanakh sessions need full chapter upfront
+                    elif total_segments <= 10:
                         segments_to_load = total_segments  # Load all for small ranges
                     elif total_segments <= 50:
                         segments_to_load = 10  # Load 10 for medium ranges
@@ -823,7 +1075,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                     "ref": verse_ref,
                                     "text": _clean_html_text(_extract_hebrew_text(he_text)),
                                     "heText": _clean_html_text(_extract_hebrew_text(he_text)),
-                                    "position": i + 1,
+                                    "position": 0,  # normalize later
                                     "metadata": {
                                         "title": data.get("title", ref),
                                         "indexTitle": data.get("indexTitle", data.get("book", "")),
@@ -837,6 +1089,11 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         except Exception as e:
                             logger.error(f"🔥 ERROR LOADING VERSE {verse_ref}: {str(e)}")
                     
+                    # Normalize positions post-factum for the initially loaded subset
+                    n_partial = len(all_segments_data)
+                    for j, seg in enumerate(all_segments_data):
+                        seg["position"] = (j / (n_partial - 1)) if n_partial > 1 else 0.5
+
                     logger.info(f"🔥 DAILY MODE COMPLETE: loaded {len(all_segments_data)} segments, total range: {end_verse - start_verse + 1} verses")
                         
                 elif ":" not in start_ref and ":" not in end_ref:
@@ -1136,7 +1393,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                 "ref": ref,
                                 "he_ref": all_segments_data[0].get("heRef") if all_segments_data else None,
                             }
-            
+
             # Check if this is a Babylonian Talmud daf that should be segmented
             # Examples: "Zevachim 18", "Shabbat 21a", "Berakhot 2"
             elif (" " in ref and not ":" in ref and not "-" in ref and 
@@ -1161,6 +1418,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         
                         # Try to fetch segments from both sides (a and b)
                         for side in ['a', 'b']:
+                            side_segments: list = []
                             for segment_num in range(1, 21):  # Up to 20 segments per side
                                 segment_ref = f"{book_name} {daf_num}{side}:{segment_num}"
                                 try:
@@ -1180,7 +1438,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                 "indexTitle": data.get("indexTitle", data.get("book", "")),
                                                 "heRef": segment_data_item.get("heRef", "")
                                             }
-                                            all_segments_data.append(segment_data)
+                                            side_segments.append(segment_data)
                                             segment_count += 1
                                             logger.info(f"🔥 TALMUD SEGMENT #{segment_count}: {segment_ref}, en_len={len(en_text)}, he_len={len(he_text) if he_text else 0}")
                                         else:
@@ -1192,19 +1450,41 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                 except Exception as e:
                                     logger.warning(f"🔥 FAILED TO FETCH TALMUD SEGMENT {segment_ref}: {str(e)}")
                                     break
+
+                            # Ensure :1 exists as a placeholder if the side has content but started after 1
+                            if side_segments:
+                                has_first = any(s.get("ref", "").endswith(f"{side}:1") or s.get("ref", "").endswith(f"{side}.1") for s in side_segments)
+                                if not has_first:
+                                    placeholder_ref = f"{book_name} {daf_num}{side}:1"
+                                    placeholder_segment = {
+                                        "ref": placeholder_ref,
+                                        "en_text": "",
+                                        "he_text": "",  # keep empty so UI shows segment number badge without content
+                                        "title": data.get("title", ref),
+                                        "indexTitle": data.get("indexTitle", data.get("book", "")),
+                                        "heRef": ""
+                                    }
+                                    side_segments.insert(0, placeholder_segment)
+                                    logger.info(f"✨ Inserted placeholder for missing first segment: {placeholder_ref}")
+
+                                # Append collected side segments preserving order
+                                all_segments_data.extend(side_segments)
                     
                     if segment_count > 0:
                         logger.info(f"🔥 TALMUD SEGMENTATION COMPLETED: {ref} -> {segment_count} segments")
                         focus_index = 0
-                        return {
-                            "segments": all_segments_data,
-                            "focusIndex": focus_index,
-                            "totalLength": len(all_segments_data),
-                            "ref": ref,
-                            "loadedAt": str(int(time.time() * 1000))
-                        }
-                    else:
-                        logger.warning(f"🔥 TALMUD SEGMENTATION FAILED: {ref} - no segments found")
+                    # Normalize positions post-factum
+                    n = len(all_segments_data)
+                    for j, seg in enumerate(all_segments_data):
+                        seg["position"] = (j / (n - 1)) if n > 1 else 0.5
+
+                    return {
+                        "segments": all_segments_data,
+                        "focusIndex": focus_index,
+                        "totalLength": len(all_segments_data),
+                        "ref": ref,
+                        "loadedAt": str(int(time.time() * 1000))
+                    }
             
             # If this is actually a range but returned as single text, try individual fetching
             if "-" in ref and ":" in ref:
@@ -1311,16 +1591,38 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
     formatted_segments = []
     total_segments = len(all_segments_data)
     for i, seg_data in enumerate(all_segments_data):
+        raw_he_text = ""
+        if hasattr(seg_data, "he_text"):
+            raw_he_text = getattr(seg_data, "he_text") or ""
+        if not raw_he_text and isinstance(seg_data, dict):
+            raw_he_text = (
+                seg_data.get("he_text")
+                or seg_data.get("heText")
+                or seg_data.get("text")
+                or ""
+            )
+        if isinstance(raw_he_text, list):
+            raw_he_text = " ".join(str(item) for item in raw_he_text if item)
+        elif raw_he_text is None:
+            raw_he_text = ""
+        else:
+            raw_he_text = str(raw_he_text)
+
+        metadata = {}
+        if isinstance(seg_data, dict):
+            metadata = seg_data.get("metadata") or {}
+
         formatted_segments.append({
-            "ref": seg_data.get("ref"),
-            "text": getattr(seg_data, "he_text", "") or seg_data.get("he_text") or "",
-            "heText": getattr(seg_data, "he_text", "") or seg_data.get("he_text") or "",
+            "ref": seg_data.get("ref") if isinstance(seg_data, dict) else getattr(seg_data, "ref", None),
+            "text": raw_he_text,
+            "heText": raw_he_text,
             "position": (i / (total_segments - 1)) if total_segments > 1 else 0.5,
             "metadata": {
-                "title": seg_data.get("title"),
-                "indexTitle": seg_data.get("indexTitle"),
-                "chapter": seg_data.get("chapter"),
-                "verse": seg_data.get("verse"),
+                "title": (seg_data.get("title") if isinstance(seg_data, dict) else getattr(seg_data, "title", None)) or metadata.get("title"),
+                "indexTitle": (seg_data.get("indexTitle") if isinstance(seg_data, dict) else getattr(seg_data, "indexTitle", None)) or metadata.get("indexTitle"),
+                "chapter": (seg_data.get("chapter") if isinstance(seg_data, dict) else getattr(seg_data, "chapter", None)) or metadata.get("chapter"),
+                "verse": (seg_data.get("verse") if isinstance(seg_data, dict) else getattr(seg_data, "verse", None)) or metadata.get("verse"),
+                "heRef": (seg_data.get("heRef") if isinstance(seg_data, dict) else getattr(seg_data, "heRef", None)) or metadata.get("heRef"),
             }
         })
     
@@ -1429,3 +1731,57 @@ async def get_bookshelf_for(ref: str, sefaria_service: SefariaService, index_ser
             logger.warning(f"Skipping bookshelf item due to validation error: {e}. Item: {item_dict}")
 
     return Bookshelf(counts=counts, items=valid_items)
+
+
+async def _load_remaining_segments_background(
+    ref: str,
+    sefaria_service: SefariaService,
+    session_id: str,
+    start_verse: int,
+    end_verse: int,
+    book_chapter: str,
+    redis_client,
+    already_loaded: int,
+) -> None:
+    """Legacy shim that delegates background loading to the modular daily loader."""
+    try:
+        from .study.config_schema import load_study_config
+        from .study.daily_loader import DailyLoader
+        from .study.redis_repo import StudyRedisRepository
+    except ImportError as exc:  # pragma: no cover - defensive guard
+        logger.error("Failed to import modular study loader", exc_info=True)
+        raise exc
+
+    raw_config = get_config_section("study") or {}
+    config = load_study_config(raw_config)
+    redis_repo = StudyRedisRepository(redis_client)
+
+    loader = DailyLoader(
+        sefaria_service=sefaria_service,
+        index_service=None,
+        redis_repo=redis_repo,
+        config=config,
+    )
+
+    total_segments = max(end_verse - start_verse + 1, 0)
+    if total_segments <= 0:
+        logger.debug(
+            "No background segments planned",
+            extra={
+                "session_id": session_id,
+                "ref": ref,
+                "start_verse": start_verse,
+                "end_verse": end_verse,
+            },
+        )
+        return
+
+    await loader.load_background(
+        ref=ref,
+        session_id=session_id,
+        start_verse=start_verse,
+        end_verse=end_verse,
+        book_chapter=book_chapter,
+        already_loaded=max(already_loaded, 0),
+        total_segments=total_segments,
+    )

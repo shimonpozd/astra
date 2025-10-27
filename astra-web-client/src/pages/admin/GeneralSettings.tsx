@@ -61,6 +61,10 @@ interface ConfigData {
       [key: string]: string;
       study?: string;
     };
+    tooling?: {
+      parallel_tool_calls?: boolean;
+      retry_on_empty_stream?: boolean;
+    };
     tasks?: {
       summary?: {
         model?: string;
@@ -449,6 +453,23 @@ const GeneralSettings: React.FC = () => {
                       <p className="text-xs text-muted-foreground">
                         Current: {config.llm?.api?.openrouter?.api_key ? '****' + config.llm.api.openrouter.api_key.slice(-4) : 'Not set'}
                       </p>
+                      <Label htmlFor="openrouter-referrer">HTTP Referer</Label>
+                      <Input
+                        id="openrouter-referrer"
+                        value={config.llm?.api?.openrouter?.referrer || ''}
+                        onChange={(e) => updateConfig(['llm', 'api', 'openrouter', 'referrer'], e.target.value)}
+                        placeholder="https://your-app.example"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        OpenRouter requires a valid Referer header. Use your deployment domain.
+                      </p>
+                      <Label htmlFor="openrouter-title">X-Title</Label>
+                      <Input
+                        id="openrouter-title"
+                        value={config.llm?.api?.openrouter?.title || ''}
+                        onChange={(e) => updateConfig(['llm', 'api', 'openrouter', 'title'], e.target.value)}
+                        placeholder="Astra Admin"
+                      />
                     </div>
                   )}
                   {config.llm?.provider === 'openai' && (
@@ -507,6 +528,36 @@ const GeneralSettings: React.FC = () => {
                   ))}
                 </div>
               </div>
+
+              <div className="border-t pt-4">
+                <h4 className="text-sm font-medium mb-3">Tool Behaviour</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      id="parallel-tool-calls"
+                      checked={config.llm?.tooling?.parallel_tool_calls ?? false}
+                      onChange={(e) => updateConfig(['llm', 'tooling', 'parallel_tool_calls'], e.target.checked)}
+                    />
+                    <Label htmlFor="parallel-tool-calls">Allow parallel tool calls</Label>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    When enabled, the LLM may request multiple tools at once. Disable to enforce sequential tool execution.
+                  </p>
+                  <div className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      id="retry-empty-tool-response"
+                      checked={config.llm?.tooling?.retry_on_empty_stream ?? true}
+                      onChange={(e) => updateConfig(['llm', 'tooling', 'retry_on_empty_stream'], e.target.checked)}
+                    />
+                    <Label htmlFor="retry-empty-tool-response">Retry when tool response is empty</Label>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Retries prompt the model to answer in natural language if the first tool-enabled response is empty.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
@@ -532,6 +583,7 @@ const GeneralSettings: React.FC = () => {
                       <SelectItem value="xtts">XTTS</SelectItem>
                       <SelectItem value="elevenlabs">ElevenLabs</SelectItem>
                       <SelectItem value="openai">OpenAI TTS</SelectItem>
+                      <SelectItem value="yandex">Yandex SpeechKit</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -584,21 +636,140 @@ const GeneralSettings: React.FC = () => {
                 {config.voice?.tts?.provider === 'elevenlabs' && (
                   <div className="space-y-3">
                     <h4 className="text-sm font-medium">ElevenLabs Settings</h4>
-                    <div className="space-y-2">
-                      <Label htmlFor="elevenlabs-api-key">API Key</Label>
-                      <Input
-                        id="elevenlabs-api-key"
-                        type="password"
-                        placeholder="Enter new API key to update"
-                        onChange={(e) => {
-                          if (e.target.value) {
-                            updateConfig(['voice', 'tts', 'api_key'], e.target.value);
-                          }
-                        }}
-                      />
-                      <p className="text-xs text-muted-foreground">
-                        Current: {config.voice?.tts?.api_key ? '****' + config.voice.tts.api_key.slice(-4) : 'Not set'}
-                      </p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="elevenlabs-api-key">API Key</Label>
+                        <Input
+                          id="elevenlabs-api-key"
+                          type="password"
+                          placeholder="Enter new API key to update"
+                          onChange={(e) => {
+                            if (e.target.value) {
+                              updateConfig(['voice', 'tts', 'api_key'], e.target.value);
+                            }
+                          }}
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Current: {config.voice?.tts?.api_key ? '****' + config.voice.tts.api_key.slice(-4) : 'Not set'}
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="elevenlabs-voice-id">Voice ID</Label>
+                        <Input
+                          id="elevenlabs-voice-id"
+                          value={config.voice?.tts?.voice_id || ''}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'voice_id'], e.target.value)}
+                          placeholder="JBFqnCBsd6RMkjVDRZzb"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="elevenlabs-model-id">Model ID</Label>
+                        <Input
+                          id="elevenlabs-model-id"
+                          value={config.voice?.tts?.model_id || ''}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'model_id'], e.target.value)}
+                          placeholder="eleven_multilingual_v2"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="elevenlabs-output-format">Output Format</Label>
+                        <Select
+                          value={config.voice?.tts?.output_format || 'mp3_44100_128'}
+                          onValueChange={(value) => updateConfig(['voice', 'tts', 'output_format'], value)}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select output format" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="mp3_44100_128">MP3 44.1kHz 128kbps</SelectItem>
+                            <SelectItem value="mp3_44100_192">MP3 44.1kHz 192kbps</SelectItem>
+                            <SelectItem value="pcm_16000">PCM 16kHz</SelectItem>
+                            <SelectItem value="pcm_22050">PCM 22.05kHz</SelectItem>
+                            <SelectItem value="pcm_24000">PCM 24kHz</SelectItem>
+                            <SelectItem value="pcm_44100">PCM 44.1kHz</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {config.voice?.tts?.provider === 'yandex' && (
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-medium">Yandex SpeechKit</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-api-key">API Key</Label>
+                        <Input
+                          id="yandex-api-key"
+                          type="password"
+                          placeholder="Enter new API key to update"
+                          onChange={(e) => {
+                            if (e.target.value) {
+                              updateConfig(['voice', 'tts', 'yandex_api_key'], e.target.value);
+                            }
+                          }}
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Current: {config.voice?.tts?.yandex_api_key ? '****' + String(config.voice.tts.yandex_api_key).slice(-4) : 'Not set'}
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-folder-id">Folder ID</Label>
+                        <Input
+                          id="yandex-folder-id"
+                          value={config.voice?.tts?.yandex_folder_id || ''}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_folder_id'], e.target.value)}
+                          placeholder="b1g1234567890abcdef"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-voice">Voice</Label>
+                        <Input
+                          id="yandex-voice"
+                          value={config.voice?.tts?.yandex_voice || 'oksana'}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_voice'], e.target.value)}
+                          placeholder="oksana"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-format">Format</Label>
+                        <Select
+                          value={config.voice?.tts?.yandex_format || 'oggopus'}
+                          onValueChange={(value) => updateConfig(['voice', 'tts', 'yandex_format'], value)}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select output format" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="oggopus">OGG OPUS</SelectItem>
+                            <SelectItem value="mp3">MP3</SelectItem>
+                            <SelectItem value="wav">WAV (LINEAR16)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-sample-rate">Sample Rate</Label>
+                        <Input
+                          id="yandex-sample-rate"
+                          value={config.voice?.tts?.yandex_sample_rate || '48000'}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_sample_rate'], e.target.value)}
+                          placeholder="48000"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="yandex-use-v3-rest">Use V3 REST API</Label>
+                        <input
+                          type="checkbox"
+                          id="yandex-use-v3-rest"
+                          checked={config.voice?.tts?.yandex_use_v3_rest ?? true}
+                          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_use_v3_rest'], e.target.checked)}
+                          className="ml-2"
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Use the new v3 REST API endpoint (utteranceSynthesis).
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}

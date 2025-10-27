@@ -41,6 +41,7 @@ class DailyConfig(BaseModel):
     retry_backoff_ms: list[int] = Field(default_factory=lambda: [100, 500, 1000])
     max_retries: int = Field(default=3, ge=0)
     batch_size: PositiveInt = Field(default=20)
+    modular_loader_enabled: bool = Field(default=False)
 
     @model_validator(mode="after")
     def validate_thresholds(self) -> "DailyConfig":
@@ -70,6 +71,7 @@ class BookshelfConfig(BaseModel):
     top_preview_fetch: PositiveInt = Field(default=20)
     limit_default: PositiveInt = Field(default=40)
     default_categories: list[str] = Field(default_factory=list)
+    cache_ttl_sec: int = Field(default=0, ge=0)
 
 
 class LoggingConfig(BaseModel):
@@ -95,6 +97,19 @@ class PromptBudgetConfig(BaseModel):
         return self
 
 
+class ChatHistoryConfig(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_messages: PositiveInt = Field(default=2000)
+    ttl_days: PositiveInt = Field(default=30)
+
+
+class FeaturesConfig(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    facade_enabled: bool = Field(default=False)
+
+
 class StudyConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -104,6 +119,8 @@ class StudyConfig(BaseModel):
     bookshelf: BookshelfConfig = Field(default_factory=BookshelfConfig)
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
     prompt_budget: PromptBudgetConfig = Field(default_factory=PromptBudgetConfig)
+    chat_history: ChatHistoryConfig = Field(default_factory=ChatHistoryConfig)
+    features: FeaturesConfig = Field(default_factory=FeaturesConfig)
 
 
 def load_study_config(raw: Mapping[str, Any] | None) -> StudyConfig:
@@ -121,5 +138,7 @@ __all__ = [
     "BookshelfConfig",
     "LoggingConfig",
     "PromptBudgetConfig",
+    "ChatHistoryConfig",
+    "FeaturesConfig",
     "load_study_config",
 ]

@@ -186,3 +186,197 @@ response = await llm_service.generate_response(
 ```
 
 This allows you to use a specialized model for Study Mode that might be better suited for Talmudic text analysis, while using a different model for general chat interactions.
+
+---
+
+## Scenario 4: Adding ElevenLabs TTS Settings (Provider, Model, Voice)
+
+This section shows how to expose ElevenLabs voice/model settings in the Admin panel and how the frontend can synthesize audio using `@elevenlabs/elevenlabs-js`.
+
+### Step 1: Ensure Backend Config Keys Exist
+
+Check `config/defaults.toml` already has a TTS section (it does by default):
+
+```toml
+[voice.tts]
+provider = "xtts" # can be "elevenlabs", "xtts", or "openai"
+
+[voice.tts.elevenlabs]
+api_key = "${ELEVENLABS_API_KEY}"
+voice_id = "Rachel"
+# Optional model id for ElevenLabs
+model_id = "eleven_multilingual_v2"
+```
+
+You can override these in your environment (env var `ELEVENLABS_API_KEY`) or via Admin UI (next step).
+
+### Step 2: Expose Settings in Admin Panel UI
+
+Open `astra-web-client/src/pages/admin/GeneralSettings.tsx` and, in the "Voice / TTS" section, make sure the provider selector includes "ElevenLabs" (it already does). Add inputs for ElevenLabs API Key, Voice ID, and Model ID inside the provider-specific block:
+
+```tsx
+{config.voice?.tts?.provider === 'elevenlabs' && (
+  <div className="space-y-3">
+    <h4 className="text-sm font-medium">ElevenLabs Settings</h4>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <Label htmlFor="el-api-key">API Key</Label>
+        <Input
+          id="el-api-key"
+          type="password"
+          value={config.voice?.tts?.api_key || ''}
+          onChange={(e) => updateConfig(['voice', 'tts', 'api_key'], e.target.value)}
+          placeholder="ELEVENLABS_API_KEY"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="el-voice-id">Voice ID</Label>
+        <Input
+          id="el-voice-id"
+          value={config.voice?.tts?.voice_id || ''}
+          onChange={(e) => updateConfig(['voice', 'tts', 'voice_id'], e.target.value)}
+          placeholder="JBFqnCBsd6RMkjVDRZzb"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="el-model-id">Model ID</Label>
+        <Input
+          id="el-model-id"
+          value={config.voice?.tts?.model_id || ''}
+          onChange={(e) => updateConfig(['voice', 'tts', 'model_id'], e.target.value)}
+          placeholder="eleven_multilingual_v2"
+        />
+      </div>
+    </div>
+  </div>
+)}
+```
+
+The existing `updateConfig` mechanism will persist these values through `/api/admin/config`.
+
+### Step 3: Use ElevenLabs on the Frontend (Optional Direct Usage)
+
+If you want direct, library-based playback in the browser (instead of routing through your TTS service), you can use `@elevenlabs/elevenlabs-js`:
+
+```ts
+import { ElevenLabsClient, play } from '@elevenlabs/elevenlabs-js';
+
+const elevenlabs = new ElevenLabsClient({
+  apiKey: '<YOUR_API_KEY>', // or from config
+});
+
+const audio = await elevenlabs.textToSpeech.convert(
+  'JBFqnCBsd6RMkjVDRZzb', // voice_id
+  {
+    text: 'The first move is what sets everything in motion.',
+    modelId: 'eleven_multilingual_v2',
+    outputFormat: 'mp3_44100_128',
+  }
+);
+
+await play(audio);
+```
+
+Notes:
+- Prefer using your existing `useTTS`/`ttsService.ts` abstraction for consistent provider switching. The Admin settings above will flow into that service.
+- If using the library directly, ensure the API key is securely provided (do not hardcode in production).
+
+---
+
+## Scenario 5: Adding Yandex SpeechKit TTS Settings
+
+This section shows how to expose Yandex SpeechKit settings in the Admin panel and how the backend uses them.
+
+### Step 1: Ensure Backend Config Keys Exist
+
+Add (or verify) keys under `voice.tts` in `config/defaults.toml`:
+
+```toml
+[voice.tts]
+provider = "yandex" # can be: xtts, elevenlabs, yandex, orpheus
+
+[voice.tts.yandex]
+api_key = "${YANDEX_API_KEY}"
+folder_id = "${YANDEX_FOLDER_ID}"
+voice = "oksana"            # e.g., oksana, jane, zahar, ermil
+format = "oggopus"          # oggopus | mp3 | wav
+sample_rate = "48000"       # 48000 for oggopus recommended
+```
+
+The TTS service (`tts/main.py`) reads these via `audio/settings.py` as `YANDEX_API_KEY`, `YANDEX_FOLDER_ID`, `YANDEX_VOICE`, `YANDEX_FORMAT`, `YANDEX_SAMPLE_RATE`.
+
+### Step 2: Expose Settings in Admin Panel UI
+
+Open `astra-web-client/src/pages/admin/GeneralSettings.tsx` and, in the "Voice / TTS" section, add a provider option and provider-specific inputs:
+
+```tsx
+{/* Provider selector should include 'yandex' */}
+
+{config.voice?.tts?.provider === 'yandex' && (
+  <div className="space-y-3">
+    <h4 className="text-sm font-medium">Yandex SpeechKit</h4>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <Label htmlFor="yandex-api-key">API Key</Label>
+        <Input
+          id="yandex-api-key"
+          type="password"
+          placeholder="Enter new API key"
+          onChange={(e) => e.target.value && updateConfig(['voice', 'tts', 'yandex_api_key'], e.target.value)}
+        />
+        <p className="text-xs text-muted-foreground">Current: {config.voice?.tts?.yandex_api_key ? '****' + String(config.voice.tts.yandex_api_key).slice(-4) : 'Not set'}</p>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="yandex-folder-id">Folder ID</Label>
+        <Input
+          id="yandex-folder-id"
+          value={config.voice?.tts?.yandex_folder_id || ''}
+          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_folder_id'], e.target.value)}
+          placeholder="b1g1234567890abcdef"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="yandex-voice">Voice</Label>
+        <Input
+          id="yandex-voice"
+          value={config.voice?.tts?.yandex_voice || 'oksana'}
+          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_voice'], e.target.value)}
+          placeholder="oksana"
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="yandex-format">Format</Label>
+        <Select
+          value={config.voice?.tts?.yandex_format || 'oggopus'}
+          onValueChange={(value) => updateConfig(['voice', 'tts', 'yandex_format'], value)}
+        >
+          <SelectTrigger>
+            <SelectValue placeholder="Select output format" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="oggopus">OGG OPUS</SelectItem>
+            <SelectItem value="mp3">MP3</SelectItem>
+            <SelectItem value="wav">WAV (LINEAR16)</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="yandex-sample-rate">Sample Rate</Label>
+        <Input
+          id="yandex-sample-rate"
+          value={config.voice?.tts?.yandex_sample_rate || '48000'}
+          onChange={(e) => updateConfig(['voice', 'tts', 'yandex_sample_rate'], e.target.value)}
+          placeholder="48000"
+        />
+      </div>
+    </div>
+  </div>
+)}
+```
+
+These settings will be available via `/api/admin/config` and used by the TTS service when `voice.tts.provider` is set to `yandex`.
+
+### Step 3: Behavior
+
+- TTS streaming returns `audio/ogg` when format is `oggopus`, otherwise the service responds with `audio/wav` (or `audio/mpeg` for other providers where applicable).
+- Frontend continues to use the existing `/api/tts/synthesize` endpoint via `useTTS`; no changes required besides selecting the provider and filling the settings.

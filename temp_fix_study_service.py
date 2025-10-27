@@ -9,3 +9,20 @@ personality_config = get_personality(agent_id)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

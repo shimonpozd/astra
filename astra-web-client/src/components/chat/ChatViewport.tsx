@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import type { Message as ApiMessage } from '../../services/api';
 import UnifiedMessageRenderer from '../UnifiedMessageRenderer';
-import type { ChatMessage } from '../../types/text';
+import { AudioMessageRenderer } from '../AudioMessageRenderer';
+import type { ChatMessage, AudioMessage } from '../../types/text';
 import { safeScrollToBottom } from '../../utils/scrollUtils';
 
 // Support both legacy API messages and the newer ChatMessage shape
@@ -14,7 +15,7 @@ type UiMessage = {
   id?: string | number;
   role: 'user' | 'assistant' | 'system';
   content: unknown;
-  content_type?: 'text.v1' | 'doc.v1' | 'thought.v1';
+  content_type?: 'text.v1' | 'doc.v1' | 'thought.v1' | 'audio.v1';
   timestamp?: number | string;
 };
 
@@ -48,7 +49,7 @@ const normalizeMessage = (message: AnyMessage): UiMessage => {
   // Override with explicit content_type if present and valid
   if (hasContentType(message)) {
     const ct = message.content_type as string;
-    if (['text.v1', 'doc.v1', 'thought.v1'].includes(ct)) {
+    if (['text.v1', 'doc.v1', 'thought.v1', 'audio.v1'].includes(ct)) {
       content_type = ct as UiMessage['content_type'];
     } else if (process.env.NODE_ENV === 'development') {
       console.warn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
@@ -120,6 +121,21 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
     }
   }, [uiMessages]);
 
+  // Ensure initial autoscroll on first render with messages
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      safeScrollToBottom(messagesEndRef.current, 'auto', 0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Always scroll to bottom when messages length increases (new messages loaded)
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      safeScrollToBottom(messagesEndRef.current, 'auto', 0);
+    }
+  }, [uiMessages.length]);
+
   return (
     <div ref={viewportRef} className="flex-1 min-h-0 panel-padding overflow-y-auto panel-inner">
       {isLoading ? (
@@ -148,12 +164,19 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
               );
             };
 
-            const renderAssistantDoc = () => (
-              // Единый путь: .doc по центру, без пузыря/фона
-              <article className="doc" dir="auto">
-                <UnifiedMessageRenderer input={message.content} />
-              </article>
-            );
+            const renderAssistantDoc = () => {
+              // Handle audio messages
+              if (message.content_type === 'audio.v1') {
+                return <AudioMessageRenderer message={message as AudioMessage} />;
+              }
+              
+              // Default doc rendering
+              return (
+                <article className="doc" dir="auto">
+                  <UnifiedMessageRenderer input={message.content} />
+                </article>
+              );
+            };
 
             return (
               <div key={key} className="w-full">

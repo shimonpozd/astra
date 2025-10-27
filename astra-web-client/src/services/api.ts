@@ -155,14 +155,63 @@ async function deleteChat(sessionId: string): Promise<void> {
 
 async function deleteSession(sessionId: string, sessionType: 'chat' | 'study' | 'daily'): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/sessions/${sessionId}/${sessionType}`, {
+    // Daily sessions use a different API endpoint
+    if (sessionType === 'daily') {
+      return await deleteDailySession(sessionId);
+    }
+    
+    const url = `${API_BASE}/sessions/${sessionId}/${sessionType}`;
+    console.log('🗑️ API deleteSession call:', {
+      url,
+      sessionId,
+      sessionType,
+      method: 'DELETE'
+    });
+    
+    const response = await fetch(url, {
       method: 'DELETE',
     });
+    
+    console.log('📡 API deleteSession response:', {
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok,
+      url: response.url
+    });
+    
     if (!response.ok) {
-      throw new Error(`Failed to delete ${sessionType} session: ${response.statusText}`);
+      const errorText = await response.text().catch(() => 'No error details');
+      console.error('❌ API deleteSession error response:', {
+        status: response.status,
+        statusText: response.statusText,
+        errorText,
+        url
+      });
+      throw new Error(`Failed to delete ${sessionType} session: ${response.status} ${response.statusText} - ${errorText}`);
     }
+    
+    console.log('✅ API deleteSession successful');
   } catch (error) {
     console.error(`Failed to delete ${sessionType} session ${sessionId}:`, error);
+    throw error;
+  }
+}
+
+// Convenience function for daily sessions
+export async function deleteDailySession(sessionId: string): Promise<void> {
+  try {
+    // Daily sessions are virtual - they don't exist until created
+    // We can't delete what doesn't exist, so we treat this as success
+    console.log('ℹ️ Daily session deletion:', {
+      sessionId,
+      note: 'Daily sessions are virtual and don\'t exist until created'
+    });
+    
+    // For now, we'll just log that we're "deleting" a virtual session
+    // In the future, if daily sessions get persisted, we can add actual deletion logic here
+    console.log('✅ Daily session "deleted" (virtual session)');
+  } catch (error) {
+    console.error(`Failed to delete daily session ${sessionId}:`, error);
     throw error;
   }
 }
@@ -272,14 +321,15 @@ async function resolveRef(text: string): Promise<any> {
   return response.json();
 }
 
-async function setFocus(sessionId: string, ref: string): Promise<any> {
+async function setFocus(sessionId: string, ref: string, focusRef?: string): Promise<any> {
   const response = await fetch(`${API_BASE}/study/set_focus`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
       session_id: sessionId, 
       ref,
-      window_size: 5,
+      focus_ref: focusRef ?? ref,
+      window_size: 30, // Request a wider initial window to prime continuous reading
       navigation_type: "drill_down"
     }),
   });
@@ -357,6 +407,22 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
 
     const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
     let buffer = '';
+    // NDJSON op→event compatibility mapping
+    const idToIndex = new Map<string, number>();
+    let nextIndex = 0;
+    const extractObjects = (input: string): { objects: string[]; rest: string } => {
+      const objects: string[] = [];
+      let i = 0, depth = 0, inString = false, escape = false, start = -1;
+      while (i < input.length) {
+        const ch = input[i];
+        if (inString) { if (escape) escape = false; else if (ch === '\\') escape = true; else if (ch === '"') inString = false; }
+        else { if (ch === '"') inString = true; else if (ch === '{') { if (depth === 0) start = i; depth++; } else if (ch === '}') { depth--; if (depth === 0 && start !== -1) { objects.push(input.slice(start, i + 1)); start = -1; } } }
+        i++;
+      }
+      const rest = depth === 0 ? '' : (start >= 0 ? input.slice(start) : input);
+      return { objects, rest };
+    };
+  
 
     while (true) {
       const { value, done } = await reader.read();
@@ -366,13 +432,50 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
       }
 
       buffer += value;
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // Keep the last, possibly incomplete, line
+      const chunks: string[] = [];
+      if (buffer.includes('\n')) {
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) { const t = line.trim(); if (t) chunks.push(t); }
+      }
+      const extracted = extractObjects(buffer);
+      if (extracted.objects.length) { chunks.push(...extracted.objects.map(s => s.trim())); buffer = extracted.rest; }
 
-      for (const line of lines) {
-        if (line.trim() === '') continue;
+      for (const chunk of chunks) {
+        const trimmed = chunk.trim();
+        if (trimmed === '' || !trimmed.startsWith('{') || trimmed.startsWith('```')) continue;
         try {
-          const event = JSON.parse(line) as StreamEvent;
+          const parsedAny = JSON.parse(trimmed);
+          if (parsedAny && typeof parsedAny === 'object' && typeof parsedAny.op === 'string') {
+            const op = parsedAny.op as string;
+            if (op === 'add_block' && parsedAny.data && typeof parsedAny.data.id === 'string') {
+              const { id, type, meta } = parsedAny.data as { id: string; type?: string; meta?: any };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              const t = (type || 'p').toLowerCase();
+              let block: any = { text: '' }, block_type_for_event = 'paragraph';
+              if (t === 'h1') { block = { type: 'heading', level: 1, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'h2') { block = { type: 'heading', level: 2, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'quote') { block = { type: 'quote', text: '', meta }; block_type_for_event = 'quote'; }
+              else if (t === 'hr') { block = { type: 'hr' }; block_type_for_event = 'hr'; }
+              else { block = { type: 'paragraph', text: '', meta }; block_type_for_event = 'paragraph'; }
+              handler.onBlockStart?.({ block_index, block_type: block_type_for_event, block_id: id, block });
+              handler.onBlockDelta?.({ block_index, content: block, block: block, delta_type: 'replace' });
+              handler.onEvent?.({ type: 'block_start', data: { block_index, block_type: block_type_for_event, block_id: id } });
+              continue;
+            }
+            if (op === 'append_text' && parsedAny.data && typeof parsedAny.data.id === 'string') {
+              const { id, text } = parsedAny.data as { id: string; text: string };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              handler.onBlockDelta?.({ block_index, content: { text }, block: { text }, delta_type: 'append' });
+              handler.onEvent?.({ type: 'block_delta', data: { block_index } });
+              continue;
+            }
+            if (op === 'end') { handler.onComplete?.(); return; }
+            continue;
+          }
+          const event = parsedAny as StreamEvent;
           switch (event.type) {
             case 'llm_chunk': {
               const chunk = typeof event.data === 'string' ? event.data : '';
@@ -388,6 +491,13 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
               handler.onEvent?.(event);
               break;
             }
+            case 'full_response': {
+              // Handle full response as text content
+              const text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+              handler.onChunk?.(text);
+              handler.onEvent?.(event);
+              break;
+            }
             case 'error': {
               handler.onEvent?.(event);
               const message = typeof event.data === 'string' ? event.data : 'Stream error';
@@ -400,7 +510,7 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
             }
           }
         } catch (e) {
-          console.error('Failed to parse stream event:', line, e);
+          console.error('Failed to parse stream event:', trimmed, e);
         }
       }
     }
@@ -435,13 +545,69 @@ async function sendMessageWithBlocks(request: ChatRequest, handler: StreamHandle
       }
 
       buffer += value;
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // Keep the last, possibly incomplete, line
+      // Prefer newline framing, but also support brace-balanced framing
+      const chunks: string[] = [];
+      if (buffer.includes('\n')) {
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) {
+          const t = line.trim();
+          if (t) chunks.push(t);
+        }
+      }
+      // Extract any complete JSON objects left in buffer (for non-newline streams)
+      const extracted = extractObjects(buffer);
+      if (extracted.objects.length) {
+        chunks.push(...extracted.objects.map(s => s.trim()));
+        buffer = extracted.rest;
+      }
 
-      for (const line of lines) {
-        if (line.trim() === '') continue;
+      for (const chunk of chunks) {
+        const trimmed = chunk.trim();
+        if (trimmed === '' || !trimmed.startsWith('{') || trimmed.startsWith('```')) continue;
         try {
-          const event = JSON.parse(line) as StreamEvent;
+          const parsed = JSON.parse(trimmed);
+
+          // Translate NDJSON op protocol into existing block_* events
+          if (parsed && typeof parsed === 'object' && typeof parsed.op === 'string') {
+            const op = parsed.op as string;
+            if (op === 'add_block' && parsed.data && typeof parsed.data.id === 'string') {
+              const { id, type, meta } = parsed.data as { id: string; type?: string; meta?: any };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              // Normalize NDJSON type to internal renderer schema
+              const t = (type || 'p').toLowerCase();
+              let block: any = { text: '' };
+              let block_type_for_event = 'paragraph';
+              if (t === 'h1') { block = { type: 'heading', level: 1, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'h2') { block = { type: 'heading', level: 2, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'quote') { block = { type: 'quote', text: '', meta }; block_type_for_event = 'quote'; }
+              else if (t === 'hr') { block = { type: 'hr' }; block_type_for_event = 'hr'; }
+              else { block = { type: 'paragraph', text: '', meta }; block_type_for_event = 'paragraph'; }
+
+              handler.onBlockStart?.({ block_index, block_type: block_type_for_event, block_id: id, block });
+              handler.onEvent?.({ type: 'block_start', data: { block_index, block_type: block_type_for_event, block_id: id } });
+              // Also emit an initial delta to set the block type/structure for UIs that only handle deltas
+              handler.onBlockDelta?.({ block_index, content: block, delta_type: 'replace' });
+              continue;
+            }
+            if (op === 'append_text' && parsed.data && typeof parsed.data.id === 'string') {
+              const { id, text } = parsed.data as { id: string; text: string };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              // Provide both shapes for compatibility (content used by BrainChatWithBlocks)
+              handler.onBlockDelta?.({ block_index, content: { text }, block: { text }, delta_type: 'append' });
+              handler.onEvent?.({ type: 'block_delta', data: { block_index } });
+              continue;
+            }
+            if (op === 'end') {
+              handler.onComplete?.();
+              return;
+            }
+            continue;
+          }
+
+          const event = parsed as StreamEvent;
           switch (event.type) {
             case 'block_start': {
               handler.onBlockStart?.(event.data as any);
@@ -469,6 +635,13 @@ async function sendMessageWithBlocks(request: ChatRequest, handler: StreamHandle
             }
             case 'doc_v1': {
               handler.onDoc?.(event.data as DocV1);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'full_response': {
+              // Handle full response as text content
+              const text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+              handler.onChunk?.(text);
               handler.onEvent?.(event);
               break;
             }
@@ -521,6 +694,21 @@ async function sendStudyMessage(
 
     const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
     let buffer = '';
+    // NDJSON op→event compatibility mapping
+    const idToIndex = new Map<string, number>();
+    let nextIndex = 0;
+    const extractObjects = (input: string): { objects: string[]; rest: string } => {
+      const objects: string[] = [];
+      let i = 0, depth = 0, inString = false, escape = false, start = -1;
+      while (i < input.length) {
+        const ch = input[i];
+        if (inString) { if (escape) escape = false; else if (ch === '\\') escape = true; else if (ch === '"') inString = false; }
+        else { if (ch === '"') inString = true; else if (ch === '{') { if (depth === 0) start = i; depth++; } else if (ch === '}') { depth--; if (depth === 0 && start !== -1) { objects.push(input.slice(start, i + 1)); start = -1; } } }
+        i++;
+      }
+      const rest = depth === 0 ? '' : (start >= 0 ? input.slice(start) : input);
+      return { objects, rest };
+    };
 
     while (true) {
       const { value, done } = await reader.read();
@@ -530,13 +718,50 @@ async function sendStudyMessage(
       }
 
       buffer += value;
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || ''; // Keep the last, possibly incomplete, line
+      const chunks: string[] = [];
+      if (buffer.includes('\n')) {
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+        for (const line of lines) { const t = line.trim(); if (t) chunks.push(t); }
+      }
+      const extracted = extractObjects(buffer);
+      if (extracted.objects.length) { chunks.push(...extracted.objects.map(s => s.trim())); buffer = extracted.rest; }
 
-      for (const line of lines) {
-        if (line.trim() === '') continue;
+      for (const chunk of chunks) {
+        const trimmed = chunk.trim();
+        if (trimmed === '' || !trimmed.startsWith('{') || trimmed.startsWith('```')) continue;
         try {
-          const event = JSON.parse(line) as StreamEvent;
+          const parsedAny = JSON.parse(trimmed);
+          if (parsedAny && typeof parsedAny === 'object' && typeof parsedAny.op === 'string') {
+            const op = parsedAny.op as string;
+            if (op === 'add_block' && parsedAny.data && typeof parsedAny.data.id === 'string') {
+              const { id, type, meta } = parsedAny.data as { id: string; type?: string; meta?: any };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              const t = (type || 'p').toLowerCase();
+              let block: any = { text: '' }, block_type_for_event = 'paragraph';
+              if (t === 'h1') { block = { type: 'heading', level: 1, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'h2') { block = { type: 'heading', level: 2, text: '', meta }; block_type_for_event = 'heading'; }
+              else if (t === 'quote') { block = { type: 'quote', text: '', meta }; block_type_for_event = 'quote'; }
+              else if (t === 'hr') { block = { type: 'hr' }; block_type_for_event = 'hr'; }
+              else { block = { type: 'paragraph', text: '', meta }; block_type_for_event = 'paragraph'; }
+              handler.onBlockStart?.({ block_index, block_type: block_type_for_event, block_id: id, block });
+              handler.onBlockDelta?.({ block_index, content: block, block: block, delta_type: 'replace' });
+              handler.onEvent?.({ type: 'block_start', data: { block_index, block_type: block_type_for_event, block_id: id } });
+              continue;
+            }
+            if (op === 'append_text' && parsedAny.data && typeof parsedAny.data.id === 'string') {
+              const { id, text } = parsedAny.data as { id: string; text: string };
+              if (!idToIndex.has(id)) idToIndex.set(id, nextIndex++);
+              const block_index = idToIndex.get(id)!;
+              handler.onBlockDelta?.({ block_index, content: { text }, block: { text }, delta_type: 'append' });
+              handler.onEvent?.({ type: 'block_delta', data: { block_index } });
+              continue;
+            }
+            if (op === 'end') { handler.onComplete?.(); return; }
+            continue;
+          }
+          const event = parsedAny as StreamEvent;
           switch (event.type) {
             case 'llm_chunk': {
               const chunk = typeof event.data === 'string' ? event.data : '';
@@ -549,6 +774,13 @@ async function sendStudyMessage(
             }
             case 'doc_v1': {
               handler.onDoc?.(event.data as DocV1);
+              handler.onEvent?.(event);
+              break;
+            }
+            case 'full_response': {
+              // Handle full response as text content
+              const text = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+              handler.onChunk?.(text);
               handler.onEvent?.(event);
               break;
             }

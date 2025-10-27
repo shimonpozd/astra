@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import html
+import re
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
@@ -18,18 +20,24 @@ class FrontSegment:
 
 
 def clean_html(text: str) -> str:
-    """Return ``text`` with leading/trailing whitespace trimmed.
+    """Normalize whitespace and drop HTML tags."""
 
-    The full HTML sanitizer will be plugged in during later phases.
-    """
-
-    return text.strip()
-
-
-def extract_hebrew_only(text: str) -> str:
-    """Placeholder that currently returns the input unchanged."""
-
+    if not text:
+        return text
+    text = html.unescape(text)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def extract_hebrew_only(text: Any) -> str:
+    """Extract Hebrew text from Sefaria responses (lists or strings)."""
+
+    if isinstance(text, list) and text:
+        return text[0]
+    if isinstance(text, str):
+        return text
+    return ""
 
 
 def to_front_segments(raw_segments: List[Dict[str, Any]]) -> List[FrontSegment]:

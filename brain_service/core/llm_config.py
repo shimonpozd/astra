@@ -166,7 +166,19 @@ def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[
         if not api_key:
             raise LLMConfigError("OPENROUTER_API_KEY not set for OpenRouter models")
 
-        client = AsyncOpenAI(base_url=openrouter_base_url, api_key=api_key)
+        default_headers: Dict[str, Any] = {}
+        referrer = _resolve_env_var(api_cfg.get("referrer")) or os.getenv("OPENROUTER_REFERRER")
+        title = _resolve_env_var(api_cfg.get("title")) or os.getenv("OPENROUTER_TITLE")
+        if referrer:
+            default_headers["HTTP-Referer"] = referrer
+        if title:
+            default_headers["X-Title"] = title
+
+        client_kwargs: Dict[str, Any] = {"base_url": openrouter_base_url, "api_key": api_key}
+        if default_headers:
+            client_kwargs["default_headers"] = default_headers
+
+        client = AsyncOpenAI(**client_kwargs)
         clean_model = model.replace("openrouter/", "")
         capabilities = ["json_mode"]
 
@@ -194,6 +206,43 @@ def get_reasoning_params() -> Dict[str, Any]:
         params.update(_get_reasoning_params_from_config())
         return params
     return {"temperature": 0.3, "top_p": 0.9}
+
+
+def get_tooling_config() -> Dict[str, Any]:
+    """Return tooling configuration with safe defaults."""
+
+    defaults = {
+        "parallel_tool_calls": False,
+        "retry_on_empty_stream": True,
+    }
+
+    if not USE_ASTRA_CONFIG:
+        return defaults
+
+    raw_tooling = LLM_CONFIG.get("tooling")
+    if isinstance(raw_tooling, Mapping):
+        merged = defaults.copy()
+        for key, value in raw_tooling.items():
+            merged[key] = value
+        return merged
+    return defaults
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

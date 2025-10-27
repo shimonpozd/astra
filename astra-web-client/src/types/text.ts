@@ -29,8 +29,8 @@ export interface FocusReaderProps {
   isLoading?: boolean;
   error?: string | null;
   onSegmentClick?: (segment: TextSegment) => void;
-  onNavigateToRef?: (ref: string) => void;
-  onLexiconDoubleClick?: () => void;
+  onNavigateToRef?: (ref: string, segment?: TextSegment) => void;
+  onLexiconDoubleClick?: (segment: TextSegment) => void | Promise<void>;
   showMinimap?: boolean;
   fontSize?: 'small' | 'medium' | 'large';
   lineHeight?: 'compact' | 'normal' | 'relaxed';

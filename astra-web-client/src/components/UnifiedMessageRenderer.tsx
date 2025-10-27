@@ -2,6 +2,13 @@
 import { MessageRenderer } from './MessageRenderer';
 import type { DocV1 } from '../types/text';
 import { coerceDoc, coerceText } from '../lib/text/normalize';
+import { useSpeechify } from '../hooks/useSpeechify';
+import { useTTS } from '../hooks/useTTS';
+import { AudioTTSButton } from './ui/AudioTTSButton';
+import { StreamingAudioMessage } from './StreamingAudioMessage';
+import { SimpleStreamingTTS } from './SimpleStreamingTTS';
+import { Volume2 } from 'lucide-react';
+// Removed inline speechify button; rely on existing play controls elsewhere
 
 /**
  * UnifiedMessageRenderer - тонкий адаптер для приведения любого входа к doc.v1
@@ -15,6 +22,8 @@ import { coerceDoc, coerceText } from '../lib/text/normalize';
  * - экзотические/наследованные форматы StudyChat (old/new/direct/raw)
  */
 export default function UnifiedMessageRenderer({ input }: { input: unknown }) {
+  const { speechify, isLoading: isSpeechifying } = useSpeechify();
+  const tts = useTTS({});
   if (process.env.NODE_ENV === 'development') {
     console.debug('[UnifiedMessageRenderer] input sample:', String(input).slice(0, 400));
   }
@@ -29,10 +38,35 @@ export default function UnifiedMessageRenderer({ input }: { input: unknown }) {
   };
 
   // Показываем ВСЕГДА единый рендерер + единый контейнер стилей
-  // Убираем dir="auto" с контейнера - пусть каждый блок сам определяет направление
+  // Добавляем кнопку Speechify c hover-появлением
+  const rawTextForSpeech = coerceText(input);
+  const handleSpeechify = async () => {
+    try {
+      const speechText = await speechify({ text: rawTextForSpeech });
+      await tts.play(speechText, { language: 'en' });
+    } catch (e) {
+      console.error('Speechify (chat) failed', e);
+    }
+  };
+
   return (
-    <article className="doc">
-      <MessageRenderer doc={safeDoc} />
-    </article>
+    <div className="group">
+      <article className="doc">
+        <MessageRenderer doc={safeDoc} />
+      </article>
+      {rawTextForSpeech ? (
+        <div className="flex justify-end mt-1 opacity-70 hover:opacity-100 transition-opacity">
+          <button
+            onClick={handleSpeechify}
+            disabled={isSpeechifying}
+            className="px-2 py-1 rounded bg-muted hover:bg-muted/80 text-xs"
+            title="Озвучить сообщение"
+            aria-label="Озвучить сообщение"
+          >
+            <span className="inline-flex items-center gap-1"><Volume2 className="w-3 h-3" /> Слушать</span>
+          </button>
+        </div>
+      ) : null}
+    </div>
   );
 }
