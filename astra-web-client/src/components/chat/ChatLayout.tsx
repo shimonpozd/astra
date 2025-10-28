@@ -77,7 +77,6 @@ export function ChatLayout() {
     focusMainText,
     navigateToRef,
     navigateToRefAPI,
-    navigateToSegmentLocal,
     refreshStudySnapshot,
   } = useStudyMode();
 
@@ -327,7 +326,6 @@ export function ChatLayout() {
                     onFocusClick={focusMainText}
                     onNavigateToRef={navigateToRef}
                     onNavigateToRefAPI={navigateToRefAPI}
-                    onNavigateToSegmentLocal={navigateToSegmentLocal}
                     refreshStudySnapshot={refreshStudySnapshot}
                     selectedPanelId={selectedPanelId}
                     onSelectedPanelChange={setSelectedPanelId}

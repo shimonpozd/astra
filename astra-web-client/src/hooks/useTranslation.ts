@@ -43,6 +43,7 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
       return translatedText;
     }
 
+    console.log('[Translation] Starting translation for tref:', tref);
     setIsTranslating(true);
     setError(null);
 
@@ -55,6 +56,8 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
         body: JSON.stringify({ tref }),
       });
 
+      console.log('[Translation] Response status:', response.status, 'for tref:', tref);
+
       if (!response.ok) {
         let errorMsg = 'Translation failed';
         try {
@@ -63,6 +66,7 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
         } catch {
           /* ignore */
         }
+        console.error('[Translation] API error:', errorMsg);
         throw new Error(errorMsg);
       }
 
@@ -72,6 +76,7 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
 
       const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
       let fullTranslation = '';
+      let chunkCount = 0;
 
       while (true) {
         const { value, done } = await reader.read();
@@ -80,8 +85,12 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
 
         try {
           const event = JSON.parse(value) as { type: string; data?: any };
+          console.log('[Translation] Received event:', event.type, 'for tref:', tref);
+          
           if (event?.type === 'llm_chunk' && typeof event.data === 'string') {
-            fullTranslation = event.data;
+            fullTranslation += event.data; // Накопляем данные вместо перезаписи
+            chunkCount++;
+            console.log('[Translation] Chunk', chunkCount, 'length:', event.data.length, 'total length:', fullTranslation.length);
           } else if (event?.type === 'error') {
             console.error('[Translation] backend error:', event.data?.message);
             setError(event.data?.message ?? 'Translation failed');
@@ -91,12 +100,15 @@ export const useTranslation = ({ tref }: UseTranslationProps): UseTranslationRet
         }
       }
 
-      if (fullTranslation) {
+      console.log('[Translation] Stream completed. Total chunks:', chunkCount, 'Final length:', fullTranslation.length);
+
+      if (fullTranslation && fullTranslation.trim()) {
         translationCache.set(cacheKey, fullTranslation);
         setTranslatedText(fullTranslation);
         return fullTranslation;
       }
 
+      console.warn('[Translation] No translation received for tref:', tref, 'fullTranslation:', fullTranslation);
       setError('No translation received.');
       return null;
     } catch (err) {

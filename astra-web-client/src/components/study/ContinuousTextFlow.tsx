@@ -1,4 +1,4 @@
-import React, { memo, useEffect, forwardRef, useMemo } from 'react';
+import React, { memo, forwardRef, useMemo } from 'react';
 import { Languages, Play, Pause } from 'lucide-react';
 import { TextSegment } from '../../types/text';
 import { shouldShowSeparator, getSeparatorText } from '../../utils/referenceUtils';
@@ -9,7 +9,7 @@ import { getTextDirection } from '../../utils/textUtils';
 type ContinuousTextFlowProps = {
   segments: TextSegment[];
   focusIndex: number;
-  onNavigateToRef?: (ref: string, segment: TextSegment) => void;
+  onNavigateToRef?: (ref: string, segment?: TextSegment) => void;
   onLexiconDoubleClick?: (segment: TextSegment) => void | Promise<void>;
   focusRef: React.RefObject<HTMLDivElement>;
   showTranslation?: boolean;
@@ -17,7 +17,6 @@ type ContinuousTextFlowProps = {
   isTranslating?: boolean;
   navOriginRef: React.MutableRefObject<'user' | 'data'>;
   scrollContainerRef: React.RefObject<HTMLDivElement>;
-  setScrollLock: () => void;
   fontSizeValues: Record<string, string>;
   readerFontSize: string;
   hebrewScale: number;
@@ -32,6 +31,9 @@ type ContinuousTextFlowProps = {
   isActive: boolean;
   ttsIsPlaying: boolean;
   handlePlayClick: () => Promise<void>;
+  onTouchStart?: (e: React.TouchEvent<HTMLDivElement>) => void;
+  onTouchMove?: (e: React.TouchEvent<HTMLDivElement>) => void;
+  onTouchEnd?: (e: React.TouchEvent<HTMLDivElement>) => void;
 };
 
 export const ContinuousTextFlow = memo(({
@@ -45,7 +47,6 @@ export const ContinuousTextFlow = memo(({
   isTranslating = false,
   navOriginRef,
   scrollContainerRef,
-  setScrollLock,
   fontSizeValues,
   readerFontSize,
   hebrewScale,
@@ -57,24 +58,10 @@ export const ContinuousTextFlow = memo(({
   isActive,
   ttsIsPlaying,
   handlePlayClick,
+  onTouchStart,
+  onTouchMove,
+  onTouchEnd,
 }: ContinuousTextFlowProps) => {
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) {
-      return;
-    }
-
-    const handleWheel = () => setScrollLock();
-    const handleTouchMove = () => setScrollLock();
-
-    container.addEventListener('wheel', handleWheel, { passive: true });
-    container.addEventListener('touchmove', handleTouchMove, { passive: true });
-
-    return () => {
-      container.removeEventListener('wheel', handleWheel);
-      container.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [scrollContainerRef, setScrollLock]);
 
   const safeFocusIndex = Math.min(
     Math.max(focusIndex ?? 0, 0),
@@ -84,11 +71,15 @@ export const ContinuousTextFlow = memo(({
   return (
     <div
       ref={scrollContainerRef}
-      className="h-full overflow-y-auto px-8 py-6 scroll-smooth panel-inner relative"
+      className="h-full overflow-y-auto px-8 py-6 panel-inner relative"
       style={{
         // @ts-ignore
         ['--rail' as any]: '44px',
+        overscrollBehavior: 'contain', // Предотвращаем scroll chaining
       }}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <article className="mx-auto space-y-3 max-w-[600px] w-full">
         {segments.length === 0 ? (
@@ -112,7 +103,7 @@ export const ContinuousTextFlow = memo(({
             const segmentNumber = segment.ref.split(/[:.]/).pop() || segment.ref;
 
             return (
-              <React.Fragment key={`${segment.ref}-${index}`}>
+              <React.Fragment key={segment.ref}>
                 <div
                   className="relative group"
                    onClick={() => {
@@ -189,7 +180,7 @@ export const ContinuousTextFlow = memo(({
                         showTranslation={translationVisible}
                         translatedText={translationVisible ? currentTranslatedText || translatedText : ''}
                         isTranslating={isTranslating}
-                        onDoubleClick={onLexiconDoubleClick}
+                        onDoubleClick={onLexiconDoubleClick ? () => onLexiconDoubleClick(segment) : undefined}
                         fontSizeValues={fontSizeValues}
                         readerFontSize={readerFontSize}
                         hebrewScale={hebrewScale}

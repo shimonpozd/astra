@@ -1,10 +1,10 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ChevronDown, ChevronUp, Languages, Loader2, Play, Pause, Settings, X } from 'lucide-react';
+import { ChevronDown, ChevronUp, Compass, Languages, Loader2, Play, Pause, Settings, X } from 'lucide-react';
 
 import { FocusReaderProps, TextSegment } from '../../types/text';
-import { normalizeRefForAPI } from '../../utils/refUtils';
+import { normalizeRefForAPI, parseRefSmart } from '../../utils/refUtils';
 import ContinuousTextFlow from './ContinuousTextFlow';
-import NavigationPanel from './NavigationPanel';
+import FocusNavOverlay from './nav/FocusNavOverlay';
 import { useTranslation } from '../../hooks/useTranslation';
 import { useSpeechify } from '../../hooks/useSpeechify';
 import { useTTS } from '../../hooks/useTTS';
@@ -17,6 +17,32 @@ const FONT_SIZE_VALUES: Record<string, string> = {
 };
 
 const FOCUS_READER_SETTINGS_KEY = 'focus-reader-font-settings';
+
+function formatDisplayRef(ref?: string | null): string {
+  if (!ref) return '—';
+  const dotMatch = ref.match(/^(?<book>.+?)\s+(?<chapter>\d+)\.(?<verse>\d+)$/);
+  if (dotMatch?.groups) {
+    return `${dotMatch.groups.book} ${dotMatch.groups.chapter}:${dotMatch.groups.verse}`;
+  }
+  const parsed = parseRefSmart(ref);
+  if (parsed?.type === 'tanakh') {
+    if (parsed.chapter != null && parsed.verse != null) {
+      return `${parsed.book} ${parsed.chapter}:${parsed.verse}`;
+    }
+    if (parsed.chapter != null) {
+      return `${parsed.book} ${parsed.chapter}`;
+    }
+    return parsed.book;
+  }
+  if (parsed?.type === 'talmud' && parsed.daf != null) {
+    const amud = parsed.amud ?? 'a';
+    if (parsed.segment != null) {
+      return `${parsed.book} ${parsed.daf}${amud}:${parsed.segment}`;
+    }
+    return `${parsed.book} ${parsed.daf}${amud}`;
+  }
+  return normalizeRefForAPI(ref);
+}
 
 const FocusReader = memo(({
   continuousText,
@@ -39,6 +65,7 @@ const FocusReader = memo(({
   const scrollLockTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const [showSettings, setShowSettings] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
   const [stableTranslatedText, setStableTranslatedText] = useState('');
   const [readerFontSize, setReaderFontSize] = useState<'small' | 'medium' | 'large'>('medium');
@@ -260,10 +287,22 @@ const FocusReader = memo(({
     }
   }, [readerFontSize, hebrewScale, translationScale]);
 
+  const handleOverlayNavigate = useCallback(
+    (ref: string) => {
+      navOriginRef.current = 'data';
+      onNavigateToRef?.(normalizeRefForAPI(ref));
+    },
+    [onNavigateToRef],
+  );
+
   const handleSegmentNavigation = useCallback(
     (ref: string, segment: TextSegment) => {
       onSegmentClick?.(segment);
-      onNavigateToRef?.(ref, segment);
+      if (navOriginRef.current === 'data') {
+        onNavigateToRef?.(ref, segment);
+      } else {
+        navOriginRef.current = 'data';
+      }
     },
     [onNavigateToRef, onSegmentClick],
   );
@@ -302,7 +341,7 @@ const FocusReader = memo(({
   }
 
   return (
-    <div className="h-full flex flex-col bg-background">
+    <div className="relative h-full flex flex-col bg-background">
       <div className="flex-shrink-0 border-b panel-outer">
         <div className="flex items-center gap-3 p-3">
             <div className="flex items-center gap-1">
@@ -324,13 +363,24 @@ const FocusReader = memo(({
               </button>
             </div>
           
+          <button
+            type="button"
+            onClick={() => setIsNavOpen(true)}
+            className="flex items-center gap-1 rounded px-2 py-1 text-xs bg-emerald-500/80 text-emerald-950 transition-colors hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
+            title="Открыть навигацию"
+          >
+            <Compass className="w-3 h-3" />
+            <span>Навигация</span>
+          </button>
+
           <div className="flex-1">
-            <NavigationPanel 
-              currentRef={currentRef || activeSegment?.ref}
-              onNavigate={(ref) => onNavigateToRef?.(normalizeRefForAPI(ref))}
-            />
+            <div className="rounded-xl border border-white/10 bg-muted/20 px-3 py-2">
+              <div className="font-mono text-sm text-foreground">
+                {formatDisplayRef(currentRef || activeSegment?.ref)}
+              </div>
+            </div>
           </div>
-          
+
                <div className="flex items-center gap-1">
             <button
               onClick={() => {
@@ -402,15 +452,14 @@ const FocusReader = memo(({
         <ContinuousTextFlow
           segments={continuousText.segments}
             focusIndex={continuousText.focusIndex}
-            onNavigateToRef={(ref) => handleSegmentNavigation(ref, continuousText.segments[continuousText.focusIndex])}
-            onLexiconDoubleClick={onLexiconDoubleClick ? () => onLexiconDoubleClick(continuousText.segments[continuousText.focusIndex]) : undefined}
+            onNavigateToRef={(ref, segment) => handleSegmentNavigation(ref, segment || continuousText.segments[continuousText.focusIndex])}
+            onLexiconDoubleClick={onLexiconDoubleClick}
           focusRef={focusRef}
           showTranslation={showTranslation}
             translatedText={stableTranslatedText}
           isTranslating={isTranslating}
           navOriginRef={navOriginRef}
           scrollContainerRef={scrollContainerRef}
-          setScrollLock={setScrollLock}
           fontSizeValues={fontSizeValues}
           readerFontSize={readerFontSize}
           hebrewScale={hebrewScale}
@@ -506,6 +555,12 @@ const FocusReader = memo(({
           </div>
         )}
       </div>
+      <FocusNavOverlay
+        open={isNavOpen}
+        onClose={() => setIsNavOpen(false)}
+        onSelectRef={handleOverlayNavigate}
+        currentRef={currentRef || activeSegment?.ref}
+      />
     </div>
   );
 });
@@ -513,3 +568,5 @@ const FocusReader = memo(({
 FocusReader.displayName = 'FocusReader';
 
 export default FocusReader;
+
+

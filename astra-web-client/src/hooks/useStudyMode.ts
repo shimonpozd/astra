@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { api } from '../services/api';
 import { StudySnapshot } from '../types/study';
 import { TextSegment } from '../types/text';
+import { normalizeRefForAPI } from '../utils/refUtils';
 
 export function useStudyMode() {
   const [isActive, setIsActive] = useState(false);
@@ -214,6 +215,8 @@ export function useStudyMode() {
       const result = await response.json();
       if (result.ok && result.state) {
         setStudySnapshot(result.state);
+        // Reset local focus to match the new server state
+        setLocalFocus(ref);
       }
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Failed to focus workbench';
@@ -250,37 +253,75 @@ export function useStudyMode() {
     }
   }, [studySessionId, studySnapshot]);
 
-  const navigateToRef = useCallback(async (ref: string, segment?: TextSegment) => {
-    if (!studySessionId) return;
-    
-    // Проверяем, есть ли уже этот ref в текущих сегментах
-    const isLocalNavigation = studySnapshot?.segments?.some(item => item.ref === ref);
+  const normalizeRef = useCallback((value?: string | null) => {
+    if (!value) return '';
+    return normalizeRefForAPI(value)
+      .replace(/\s+/g, ' ')
+      .replace(/[–—]/g, '-')
+      .trim()
+      .toLowerCase();
+  }, []);
 
-    if (segment && studySnapshot?.segments?.length) {
-      setStudySnapshot(prev => {
-        if (!prev?.segments) return prev;
-        const idx = prev.segments.findIndex(item => item.ref === segment.ref);
-        if (idx === -1) return prev;
+  const setLocalFocus = useCallback(
+    (ref: string, segment?: TextSegment) => {
+      setStudySnapshot((prev) => {
+        if (!prev?.segments?.length) {
+          return prev;
+        }
+
+        const targetNormalized = normalizeRef(ref);
+        const index = prev.segments.findIndex(
+          (item) => normalizeRef(item.ref) === targetNormalized,
+        );
+
+        if (index === -1) {
+          return prev;
+        }
+
+        const nextSegment = segment ?? prev.segments[index];
+
+        if (
+          prev.focusIndex === index &&
+          prev.ref === nextSegment.ref &&
+          prev.discussion_focus_ref === nextSegment.ref
+        ) {
+          return prev;
+        }
+
         return {
           ...prev,
-          focusIndex: idx,
-          ref: segment.ref,
-          discussion_focus_ref: segment.ref,
+          focusIndex: index,
+          ref: nextSegment.ref,
+          discussion_focus_ref: nextSegment.ref,
         };
       });
+    },
+    [normalizeRef],
+  );
+
+  const navigateToRef = useCallback(async (ref: string, segment?: TextSegment) => {
+    if (!studySessionId) return;
+
+    const targetRefNormalized = normalizeRef(ref);
+    const segments = studySnapshot?.segments || [];
+    const existingIndex = segments.findIndex(item => normalizeRef(item.ref) === targetRefNormalized);
+    const isLocalNavigation = existingIndex !== -1;
+    const fallbackSegment = segment ?? (isLocalNavigation ? segments[existingIndex] : undefined);
+
+    if (fallbackSegment) {
+      setLocalFocus(fallbackSegment.ref, fallbackSegment);
     }
-    
+
     try {
-      // Показываем loading только для новых ref, не для локальной навигации
       if (!isLocalNavigation) {
         setIsLoading(true);
       }
-      
+
       console.log('🧭 NavigateToRef:', { 
         studySessionId, 
         ref, 
         isDaily: studySessionId.startsWith('daily-'),
-        isLocalNavigation 
+        isLocalNavigation
       });
       
       const response = await fetch('/api/study/set_focus', {
@@ -303,12 +344,11 @@ export function useStudyMode() {
       const msg = e instanceof Error ? e.message : 'Failed to navigate';
       setError(msg);
     } finally {
-      // Убираем loading только если мы его показывали
       if (!isLocalNavigation) {
         setIsLoading(false);
       }
     }
-  }, [studySessionId, studySnapshot]);
+  }, [studySessionId, studySnapshot, normalizeRef, setLocalFocus]);
 
   const loadStudySession = useCallback(async (sessionId: string) => {
     try {

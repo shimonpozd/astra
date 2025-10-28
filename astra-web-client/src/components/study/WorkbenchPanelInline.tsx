@@ -178,9 +178,7 @@ const WorkbenchHeader = memo(({
   isTranslating,
   translated,
   onClear,
-  onPlayClick,
   isPlaying,
-  isPaused,
   isActive,
   textToPlay
 }: {
@@ -191,9 +189,7 @@ const WorkbenchHeader = memo(({
   isTranslating: boolean;
   translated: boolean;
   onClear?: () => void;
-  onPlayClick: () => void;
   isPlaying: boolean;
-  isPaused: boolean;
   isActive: boolean;
   textToPlay: string;
 }) => {
@@ -203,14 +199,14 @@ const WorkbenchHeader = memo(({
     return null;
   }
 
-  const refString = typeof item === 'string' ? item : item.ref;
-  const displayTitle = typeof item === 'string' ? item : (item.commentator || item.indexTitle || item.title || 'Источник');
-  const { speechify, isLoading: isSpeechifying } = useSpeechify();
+  const refString = typeof item === 'string' ? item : (item?.ref || '');
+  const displayTitle = typeof item === 'string' ? item : (item?.commentator || item?.indexTitle || item?.title || 'Источник');
+  const { speechify } = useSpeechify();
   const tts = useTTS({});
   const handleSpeechify = async () => {
     try {
-      const hebrew = typeof item === 'string' ? '' : (item.heTextFull || '');
-      const english = typeof item === 'string' ? '' : (item.text_full || '');
+      const hebrew = typeof item === 'string' ? '' : (item?.heTextFull || '');
+      const english = typeof item === 'string' ? '' : (item?.text_full || '');
       const speechText = await speechify({ hebrewText: hebrew, englishText: english });
       await tts.play(speechText, { language: 'en' });
     } catch (e) {
@@ -234,7 +230,7 @@ const WorkbenchHeader = memo(({
           {displayTitle}
         </div>
               <div className="text-xs font-mono text-muted-foreground truncate max-w-[220px]">
-                {item.ref}
+                {typeof item === 'string' ? item : (item?.ref || '')}
               </div>
             </>
           )}
@@ -320,7 +316,7 @@ const WorkbenchContent = memo(({
   maxWidth: 'narrow' | 'normal' | 'wide';
   translatedText?: string;
   error?: string;
-  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
+  fontSize: 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
   fontSizeValues: Record<string, string>;
 }) => {
   const articleRef = useRef<HTMLElement>(null);
@@ -552,41 +548,60 @@ const WorkbenchPanelInline = memo(({
 
   // Состояние для перевода (если есть item)
   const { translatedText, isTranslating, error, translate } = useTranslation({
-    tref: item?.ref || '',
+    tref: typeof item === 'string' ? item : item?.ref || '',
   });
 
+  // Состояние для отслеживания показа перевода
+  const [showTranslation, setShowTranslation] = useState(false);
+
+  // Сброс состояния перевода при смене элемента
+  useEffect(() => {
+    console.log('[WorkbenchPanelInline] Item changed, resetting translation state');
+    setShowTranslation(false);
+  }, [typeof item === 'string' ? item : item?.ref]);
+
+  // Отслеживание изменений состояния перевода
+  useEffect(() => {
+    console.log('[WorkbenchPanelInline] Translation state changed:', {
+      isTranslating,
+      hasTranslatedText: !!translatedText,
+      translatedTextLength: translatedText?.length || 0,
+      error,
+      showTranslation
+    });
+  }, [isTranslating, translatedText, error, showTranslation]);
+
+  // Функция для переключения между переводом и оригиналом
+  const handleTranslateClick = async () => {
+    if (showTranslation) {
+      // Если показывается перевод, переключаемся на оригинал
+      setShowTranslation(false);
+    } else {
+      // Если показывается оригинал, получаем перевод и переключаемся на него
+      if (!translatedText) {
+        console.log('[WorkbenchPanelInline] Starting translation for item:', typeof item === 'string' ? item : item?.ref);
+        try {
+          await translate();
+          console.log('[WorkbenchPanelInline] Translation completed, result:', translatedText);
+        } catch (err) {
+          console.error('[WorkbenchPanelInline] Translation failed:', err);
+        }
+      }
+      setShowTranslation(true);
+    }
+  };
+
   // TTS функциональность
-  const { isPlaying, isPaused, currentText, play, stop, pause, resume } = useTTS({
+  const { isPlaying, isPaused, currentText } = useTTS({
     language: 'he', // Hebrew by default
     speed: 1.0
   });
 
   // Получаем текст для озвучки
-  const textToPlay = item?.heTextFull || item?.text_full || item?.preview || item?.hePreview || '';
+  const textToPlay = typeof item === 'string' ? '' : (item?.heTextFull || item?.text_full || item?.preview || item?.hePreview || '');
   const isCurrentText = currentText === textToPlay;
   const isActive = isCurrentText && (isPlaying || isPaused);
 
-  // Обработчик для кнопки проигрывания
-  const handlePlayClick = async () => {
-    if (!textToPlay.trim()) return;
-    
-    try {
-      if (isActive) {
-        if (isPlaying) {
-          await pause();
-        } else if (isPaused) {
-          await resume();
-        } else {
-          await stop();
-        }
-      } else {
-        await stop(); // Stop any current playback
-        await play(textToPlay);
-      }
-    } catch (err) {
-      console.error('TTS play error:', err);
-    }
-  };
 
   // Размеры для разных режимов - ограничиваем высоту чтобы не превышать FocusReader
   const sizeConfig = {
@@ -602,7 +617,7 @@ const WorkbenchPanelInline = memo(({
   }[size];
 
 
-  if (!item) {
+  if (!item || typeof item === 'string') {
     return <EmptyWorkbenchPanel title={title} onDrop={onDropRef} />;
   }
 
@@ -652,13 +667,11 @@ const WorkbenchPanelInline = memo(({
       <WorkbenchHeader
         item={item}
         headerVariant={headerVariant}
-        onTranslateClick={translate}
+        onTranslateClick={handleTranslateClick}
         isTranslating={isTranslating}
-        translated={!!translatedText}
+        translated={showTranslation}
         onClear={onClear}
-        onPlayClick={handlePlayClick}
         isPlaying={isPlaying}
-        isPaused={isPaused}
         isActive={isActive}
         textToPlay={textToPlay}
       />
@@ -670,7 +683,7 @@ const WorkbenchPanelInline = memo(({
         hebrewScale={hebrewScale}
         hebrewLineHeight={hebrewLineHeight}
         maxWidth={maxWidth}
-        translatedText={translatedText || undefined}
+        translatedText={showTranslation ? translatedText || undefined : undefined}
         error={error || undefined}
         fontSize={fontSettings.fontSize}
         fontSizeValues={fontSizeValues}

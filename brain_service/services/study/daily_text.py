@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import logging
+import re
 from itertools import zip_longest
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -29,15 +30,14 @@ class DailyTextPayload:
 async def build_full_daily_text(
     ref: str,
     sefaria_service: Any,
-    index_service: Any,  # Reserved for future enhancements / parity with legacy signature
+    index_service: Any,  # Used for canonical title resolution when primary lookups fail
     *,
     session_id: Optional[str] = None,
     redis_client: Any = None,
 ) -> Optional[Dict[str, Any]]:
     """Return the full daily payload for ``ref`` using modular helpers."""
 
-    _ = index_service  # compatibility placeholder; kept for signature parity
-    data = await _load_primary_range(ref, sefaria_service)
+    resolved_ref, data = await _load_primary_range(ref, sefaria_service, index_service)
     if data is None:
         logger.debug("daily_text.primary_range.miss", extra={"ref": ref})
         special = await _handle_special_ranges(
@@ -50,7 +50,13 @@ async def build_full_daily_text(
             return special
         return None
 
-    payload = _build_payload_from_data(ref, data)
+    active_ref = resolved_ref or ref
+    segments = await _resolve_segments(active_ref, data, sefaria_service)
+    if not segments:
+        logger.warning("daily_text.segments.empty", extra={"ref": active_ref})
+        return None
+
+    payload = _build_payload(active_ref, data, segments)
     if payload is None:
         logger.warning("daily_text.payload.empty", extra={"ref": ref})
         return None
@@ -63,14 +69,33 @@ async def build_full_daily_text(
     }
 
 
-async def _load_primary_range(ref: str, sefaria_service: Any) -> Optional[Dict[str, Any]]:
+async def _load_primary_range(
+    ref: str,
+    sefaria_service: Any,
+    index_service: Any,
+) -> Tuple[Optional[str], Optional[Dict[str, Any]]]:
     """Fetch the main Sefaria payload for the reference if available."""
 
     try:
-        return await try_load_range(sefaria_service, ref)
+        data = await try_load_range(sefaria_service, ref)
+        if data:
+            return ref, data
+
+        normalized = _normalize_ref_with_index(ref, index_service)
+        if normalized and normalized != ref:
+            logger.debug(
+                "daily_text.primary_range.retry_normalized",
+                extra={"original": ref, "normalized": normalized},
+            )
+            data = await try_load_range(sefaria_service, normalized)
+            if data:
+                data.setdefault("ref", normalized)
+                return normalized, data
+
+        return None, None
     except Exception as exc:  # pragma: no cover - defensive logging
         logger.exception("daily_text.primary_range.exception", extra={"ref": ref, "error": str(exc)})
-        return None
+        return None, None
 
 
 async def _handle_special_ranges(
@@ -104,10 +129,27 @@ async def _handle_special_ranges(
     return None
 
 
-def _build_payload_from_data(ref: str, data: Dict[str, Any]) -> Optional[DailyTextPayload]:
-    """Convert Sefaria response data into the daily payload."""
+async def _resolve_segments(
+    ref: str,
+    data: Dict[str, Any],
+    sefaria_service: Any,
+) -> List[Dict[str, Any]]:
+    """Build the list of raw segments for the payload, applying fallbacks as needed."""
 
     segments = _extract_segments(ref, data)
+    parsed = parse_ref(ref)
+
+    if _should_use_talmud_fallback(parsed, segments, data):
+        fallback_segments = await _build_talmud_segments(ref, data, sefaria_service)
+        if fallback_segments:
+            return fallback_segments
+
+    return segments
+
+
+def _build_payload(ref: str, data: Dict[str, Any], segments: List[Dict[str, Any]]) -> Optional[DailyTextPayload]:
+    """Convert raw segments into the structured daily payload."""
+
     if not segments:
         return None
 
@@ -150,10 +192,15 @@ def _extract_segments(ref: str, data: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def _is_spanning_payload(data: Dict[str, Any]) -> bool:
+    segments = data.get("text_segments")
+    if isinstance(segments, list) and any(isinstance(item, list) for item in segments):
+        return True
+
     text = data.get("text")
-    if not isinstance(text, list):
-        return False
-    return any(isinstance(item, list) for item in text) or bool(data.get("isSpanning"))
+    if isinstance(text, list) and any(isinstance(item, list) for item in text):
+        return True
+
+    return bool(data.get("isSpanning"))
 
 
 def _iter_spanning_segments(
@@ -308,13 +355,174 @@ def _safe_index(source: Any, index: int) -> Any:
 
 
 def _looks_like_inter_chapter_range(ref: str) -> bool:
-    if "-" not in ref or ":" not in ref:
+    if "-" not in ref:
         return False
+
     try:
         start_part, end_part = ref.split("-", 1)
-        start_chapter = int(start_part.rsplit(":", 2)[-2])
-        end_chapter = int(end_part.rsplit(":", 2)[-2])
-        return start_chapter != end_chapter
-    except (ValueError, IndexError):
+    except ValueError:
         return False
+
+    start_match = re.search(r"(\d+)(?::\d+)?\s*$", start_part.strip())
+    end_match = re.search(r"(\d+)(?::\d+)?\s*$", end_part.strip())
+    if not start_match or not end_match:
+        return False
+
+    try:
+        start_chapter = int(start_match.group(1))
+        end_chapter = int(end_match.group(1))
+    except ValueError:
+        return False
+
+    return start_chapter != end_chapter
+
+
+def _normalize_ref_with_index(ref: str, index_service: Any) -> Optional[str]:
+    """Use the Sefaria index aliases to coerce a ref into its canonical title."""
+
+    resolver = getattr(index_service, "resolve_book_name", None)
+    aliases = getattr(index_service, "aliases", None)
+    if resolver is None and not aliases:
+        return None
+
+    book_part, suffix = _split_ref_parts(ref)
+    candidate = resolver(book_part) if resolver else None
+    if not candidate and aliases:
+        lowered = ref.lower()
+        best_alias: Optional[Tuple[str, str]] = None
+        for alias_key, canonical in aliases.items():
+            if lowered.startswith(alias_key):
+                if best_alias is None or len(alias_key) > len(best_alias[0]):
+                    best_alias = (alias_key, canonical)
+        if best_alias:
+            alias, canonical = best_alias
+            suffix = ref[len(alias):].lstrip(", ")
+            candidate = canonical
+
+    if not candidate:
+        return None
+
+    normalized_suffix = suffix.lstrip(", ")
+    if normalized_suffix:
+        return f"{candidate} {normalized_suffix}".strip()
+    return candidate.strip()
+
+
+def _split_ref_parts(ref: str) -> Tuple[str, str]:
+    """Split a reference into book/title and trailing numeric portion."""
+
+    match = re.search(r"\d", ref)
+    if not match:
+        return ref.strip(" ,"), ""
+    idx = match.start()
+    book = ref[:idx].strip(" ,")
+    suffix = ref[idx:].strip()
+    return book, suffix
+
+
+def _should_use_talmud_fallback(
+    parsed: Any,
+    segments: List[Dict[str, Any]],
+    data: Dict[str, Any],
+) -> bool:
+    """Determine whether the Bavli fallback should run."""
+
+    type_label = str(data.get("type", "") or "").lower()
+    is_talmud_payload = parsed.collection == "talmud" or type_label == "talmud"
+    if not is_talmud_payload:
+        return False
+    if parsed.segment is not None:
+        return False
+    if len(segments) > 2:
+        return False
+    if not isinstance(data.get("text_segments"), list):
+        return False
+    return True
+
+
+async def _build_talmud_segments(
+    ref: str,
+    data: Dict[str, Any],
+    sefaria_service: Any,
+) -> List[Dict[str, Any]]:
+    """Fetch amud/segment level entries for Bavli references."""
+
+    parsed = parse_ref(ref)
+    book = parsed.book or data.get("indexTitle") or data.get("title")
+    if not book:
+        book = ref.rsplit(" ", 1)[0]
+
+    daf = None
+    if parsed.page is not None:
+        daf = str(parsed.page)
+    else:
+        match = re.search(r"(\d+)", ref)
+        if match:
+            daf = match.group(1)
+    if daf is None:
+        return []
+
+    sides = [parsed.amud] if parsed.amud in {"a", "b"} else ["a", "b"]
+    metadata_source = {
+        "title": data.get("title"),
+        "indexTitle": data.get("indexTitle"),
+        "heRef": data.get("heRef"),
+    }
+
+    collected: List[Dict[str, Any]] = []
+    for side in sides:
+        side_segments = await _collect_talmud_amud_segments(
+            book,
+            daf,
+            side,
+            sefaria_service,
+            metadata_source,
+        )
+        collected.extend(side_segments)
+
+    return collected
+
+
+async def _collect_talmud_amud_segments(
+    book: str,
+    daf: str,
+    side: str,
+    sefaria_service: Any,
+    metadata: Dict[str, Any],
+) -> List[Dict[str, Any]]:
+    """Load individual segments for a single amud."""
+
+    segments: List[Dict[str, Any]] = []
+    for segment_number in range(1, 41):
+        segment_ref = f"{book} {daf}{side}:{segment_number}"
+        try:
+            response = await sefaria_service.get_text(segment_ref)
+        except Exception as exc:  # pragma: no cover - network failure logging
+            logger.warning(
+                "daily_text.talmud.segment.error",
+                extra={"ref": segment_ref, "error": str(exc)},
+            )
+            break
+
+        if not isinstance(response, dict) or not response.get("ok"):
+            break
+
+        segment_data = response.get("data") or {}
+        en_source = segment_data.get("en_text") or segment_data.get("text") or ""
+        he_source = segment_data.get("he_text") or segment_data.get("he") or ""
+
+        if isinstance(en_source, list):
+            en_source = " ".join(str(item).strip() for item in en_source if item)
+        if isinstance(he_source, list):
+            he_source = " ".join(str(item).strip() for item in he_source if item)
+
+        if not (en_source or he_source):
+            break
+
+        base_meta = {k: v for k, v in metadata.items() if v}
+        combined_meta = {**base_meta, "book": metadata.get("indexTitle") or book}
+        segment = _raw_segment(segment_ref, en_source, he_source, combined_meta)
+        segments.append(segment)
+
+    return segments
 

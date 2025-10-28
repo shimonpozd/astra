@@ -223,7 +223,13 @@ export default function StudyMode({
               <FocusReader
                 continuousText={continuousText}
                 isLoading={isLoading}
-                onSegmentClick={(segment) => onNavigateToRef && onNavigateToRef(segment.ref, segment)}
+                onSegmentClick={(segment) => {
+                  if (segment) {
+                    onNavigateToRef?.(segment.ref, segment);
+                  } else if (snapshot?.ref) {
+                    onNavigateToRef?.(snapshot.ref);
+                  }
+                }}
                 onNavigateToRef={onNavigateToRef}
                 onLexiconDoubleClick={handleLexiconDoubleClick}
                 isDailyMode={studySessionId?.startsWith('daily-') || false}

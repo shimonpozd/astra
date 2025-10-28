@@ -15,6 +15,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes drift1 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-200px, -80px, 0);
+  }
+}
+
+@keyframes drift2 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(180px, 60px, 0);
+  }
+}
+
+@keyframes drift3 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-120px, 140px, 0);
+  }
+}
+
+
 /* =============================================================================
    ЦВЕТОВАЯ СИСТЕМА - единая тёплая тема для светлого и тёмного режимов
    ============================================================================= */

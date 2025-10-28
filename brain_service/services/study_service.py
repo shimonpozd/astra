@@ -292,7 +292,7 @@ class StudyService:
                         for segment in window_data["segments"]:
                             segment_data = {
                                 "ref": segment.get("ref"),
-                                "en_text": segment.get("text", ""),
+                                "en_text": segment.get("enText") or segment.get("metadata", {}).get("enText", "") or segment.get("text", ""),
                                 "he_text": segment.get("heText", ""),
                                 "title": segment.get("metadata", {}).get("title", ""),
                                 "indexTitle": segment.get("metadata", {}).get("indexTitle", ""),

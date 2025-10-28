@@ -29,10 +29,20 @@ def detect_collection(ref: str) -> str:
     if ' on ' in ref_lower:
         return "Commentary"
     # This can be improved by using the categories from get_book_structure
-    talmud_tractates = ['shabbat', 'berakhot', 'pesachim', 'ketubot', 'gittin', 'kiddushin', 'bava kamma', 'bava metzia', 'bava batra', 'sanhedrin', 'makkot']
+    talmud_tractates = [
+        'shabbat', 'berakhot', 'pesachim', 'ketubot', 'gittin', 'kiddushin', 'bava kamma', 'bava metzia', 'bava batra', 'sanhedrin', 'makkot',
+        'zevachim', 'menachot', 'hullin', 'bekhorot', 'arakhin', 'temurah', 'keritot', 'meilah', 'tamid', 'middot', 'kinnim', 'niddah',
+        'yoma', 'sukkah', 'beitza', 'rosh hashana', 'taanit', 'megillah', 'moed katan', 'chagigah', 'yevamot', 'nedarim', 'nazir', 'sotah',
+        'horayot', 'shevuot', 'avodah zarah', 'avot', 'eduoyot', 'abodah zarah', 'pirkei avot', 'tosefta', 'jerusalem talmud'
+    ]
     if any(tractate in ref_lower for tractate in talmud_tractates):
         return "Talmud"
-    bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel']
+    bible_books = [
+        'genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel',
+        'psalms', 'proverbs', 'job', 'song of songs', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles',
+        'hosea', 'joel', 'amos', 'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah', 'haggai', 'zechariah', 'malachi',
+        'i samuel', 'ii samuel', 'i kings', 'ii kings', 'i chronicles', 'ii chronicles'
+    ]
     if any(book in ref_lower for book in bible_books):
         return "Bible"
     if 'mishnah' in ref_lower:
@@ -45,7 +55,12 @@ def _coerce_bible_ref_string(ref: str) -> str:
     """
     try:
         lowered = ref.lower()
-        bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel', 'psalms', 'proverbs', 'job', 'song', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles']
+        bible_books = [
+            'genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel',
+            'psalms', 'proverbs', 'job', 'song of songs', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles',
+            'hosea', 'joel', 'amos', 'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah', 'haggai', 'zechariah', 'malachi',
+            'i samuel', 'ii samuel', 'i kings', 'ii kings', 'i chronicles', 'ii chronicles'
+        ]
         if not any(book in lowered for book in bible_books):
             return ref
         # Match '<Book> <chapter>[ab][.:]<verse>'
@@ -59,42 +74,232 @@ def _coerce_bible_ref_string(ref: str) -> str:
 def _parse_ref(ref: str) -> Optional[Dict[str, Any]]:
     # First, try to detect if this is likely Tanakh/Bible based on book names
     ref_lower = ref.lower()
-    bible_books = ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel', 'psalms', 'proverbs', 'job', 'song', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles']
+    bible_books = [
+        'genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy', 'joshua', 'judges', 'samuel', 'kings', 'isaiah', 'jeremiah', 'ezekiel',
+        'psalms', 'proverbs', 'job', 'song of songs', 'ruth', 'lamentations', 'ecclesiastes', 'esther', 'daniel', 'ezra', 'nehemiah', 'chronicles',
+        'hosea', 'joel', 'amos', 'obadiah', 'jonah', 'micah', 'nahum', 'habakkuk', 'zephaniah', 'haggai', 'zechariah', 'malachi',
+        'i samuel', 'ii samuel', 'i kings', 'ii kings', 'i chronicles', 'ii chronicles'
+    ]
     
     # Check if this looks like a Bible book
     is_likely_bible = any(book in ref_lower for book in bible_books)
     
-    logger.debug(f"🔥 PARSE_REF: '{ref}' -> is_likely_bible={is_likely_bible}")
+    logger.debug(f"[daily] PARSE_REF: '{ref}' -> is_likely_bible={is_likely_bible}")
     
     if is_likely_bible:
         # For Bible books, prioritize the Bible format
         match = re.match(r"([\w\s'.]+) (\d+):(\d+)", ref)
         if match:
             result = {"type": "bible", "book": match.group(1).strip(), "chapter": int(match.group(2)), "verse": int(match.group(3))}
-            logger.debug(f"🔥 PARSE_REF: Bible format matched -> {result}")
+            logger.debug(f"[daily] PARSE_REF: Bible format matched -> {result}")
             return result
         # Fallback to Talmud format if Bible format doesn't match
         match = re.match(r"([\w\s'.]+) (\d+)([ab])(?:[.:](\d+))?", ref)
         if match:
             result = {"type": "talmud", "book": match.group(1).strip(), "page": int(match.group(2)), "amud": match.group(3), "segment": int(match.group(4)) if match.group(4) else 1}
-            logger.warning(f"🔥 PARSE_REF: Bible book but Talmud format matched -> {result}")
+            logger.warning(f"[daily] PARSE_REF: Bible book but Talmud format matched -> {result}")
             return result
     else:
         # For non-Bible books, try Talmud format first
         match = re.match(r"([\w\s'.]+) (\d+)([ab])(?:[.:](\d+))?", ref)
         if match:
             result = {"type": "talmud", "book": match.group(1).strip(), "page": int(match.group(2)), "amud": match.group(3), "segment": int(match.group(4)) if match.group(4) else 1}
-            logger.debug(f"🔥 PARSE_REF: Talmud format matched -> {result}")
+            logger.debug(f"[daily] PARSE_REF: Talmud format matched -> {result}")
             return result
         # Fallback to Bible format
         match = re.match(r"([\w\s'.]+) (\d+):(\d+)", ref)
         if match:
             result = {"type": "bible", "book": match.group(1).strip(), "chapter": int(match.group(2)), "verse": int(match.group(3))}
-            logger.debug(f"🔥 PARSE_REF: Bible format matched (fallback) -> {result}")
+            logger.debug(f"[daily] PARSE_REF: Bible format matched (fallback) -> {result}")
             return result
     
-    logger.warning(f"🔥 PARSE_REF: No format matched for '{ref}'")
+    logger.warning(f"[daily] PARSE_REF: No format matched for '{ref}'")
     return None
+
+
+def _should_delegate_to_modular(ref: str, data: Dict[str, Any]) -> bool:
+    """Decide whether legacy daily flow should reuse the modular builder output."""
+
+    segments = data.get("text_segments")
+    if not isinstance(segments, list) or len(segments) <= 1:
+        return False
+    collection = detect_collection(ref)
+    type_label = str(data.get("type", "") or "").lower()
+    return collection == "Bible" or type_label in {"bible", "tanakh"}
+
+
+def _flatten_talmud_lines(values: Any) -> List[str]:
+    """Flatten nested lists of Talmud lines into a simple list of strings."""
+    flattened: List[str] = []
+    if isinstance(values, list):
+        for entry in values:
+            flattened.extend(_flatten_talmud_lines(entry))
+    elif isinstance(values, str):
+        if values.strip():
+            flattened.append(values)
+    elif values:
+        flattened.append(str(values))
+    return flattened
+
+
+async def _collect_talmud_amud_segments(
+    book: str,
+    daf: str,
+    side: str,
+    sefaria_service: SefariaService,
+    metadata_source: Optional[Dict[str, Any]] = None,
+) -> List[Dict[str, Any]]:
+    """
+    Fetch a single amud (e.g., Zevachim 53a) and convert its lines into segments.
+    """
+    amud_ref = f"{book} {daf}{side}"
+    logger.debug("daily.talmud.amud.fetch", extra={"ref": amud_ref})
+
+    try:
+        response = await sefaria_service.get_text(amud_ref)
+    except Exception as exc:  # pragma: no cover - network errors
+        logger.warning(
+            "daily.talmud.amud.fetch_failed",
+            extra={"ref": amud_ref, "error": str(exc)},
+        )
+        return []
+
+    if not isinstance(response, dict) or not response.get("ok"):
+        logger.debug(
+            "daily.talmud.amud.empty_response",
+            extra={"ref": amud_ref, "response_type": type(response)},
+        )
+        return []
+
+    data = response.get("data") or {}
+    text_candidates = data.get("text_segments") or data.get("text")
+    he_candidates = data.get("he_segments") or data.get("he")
+
+    text_lines = _flatten_talmud_lines(text_candidates)
+    he_lines = _flatten_talmud_lines(he_candidates)
+    total = max(len(text_lines), len(he_lines))
+
+    if total == 0:
+        logger.debug(
+            "daily.talmud.amud.no_lines",
+            extra={"ref": amud_ref, "text_type": type(text_candidates)},
+        )
+        return []
+
+    base_title = (metadata_source or {}).get("title") or data.get("title") or amud_ref
+    index_title = (
+        (metadata_source or {}).get("indexTitle")
+        or data.get("indexTitle")
+        or (metadata_source or {}).get("book")
+        or book
+    )
+    he_ref = data.get("heRef", "")
+
+    segments: List[Dict[str, Any]] = []
+    for idx in range(total):
+        en_text = text_lines[idx] if idx < len(text_lines) else ""
+        he_text = he_lines[idx] if idx < len(he_lines) else ""
+
+        if not (en_text or he_text):
+            continue
+
+        clean_en = _clean_html_text(en_text)
+        clean_he = _clean_html_text(he_text)
+
+        segment_ref = f"{book} {daf}{side}:{idx + 1}"
+        segments.append(
+            {
+                "ref": segment_ref,
+                "text": clean_he or clean_en,
+                "heText": clean_he or clean_en,
+                "enText": clean_en,
+                "metadata": {
+                    "title": base_title,
+                    "indexTitle": index_title,
+                    "heRef": he_ref,
+                    "page": daf,
+                    "amud": side,
+                    "segment": idx + 1,
+                },
+            }
+        )
+
+    return segments
+
+
+async def _build_talmud_payload(
+    ref: str,
+    data: Optional[Dict[str, Any]],
+    sefaria_service: SefariaService,
+    *,
+    session_id: Optional[str] = None,
+    redis_client=None,
+) -> Optional[Dict[str, Any]]:
+    """
+    Build a segment payload for a Babylonian Talmud daf.
+    """
+    parsed = _parse_ref(ref)
+    book: Optional[str] = None
+    daf_number: Optional[int] = None
+    forced_side: Optional[str] = None
+
+    if parsed and parsed.get("type") == "talmud":
+        book = parsed.get("book")
+        daf_number = parsed.get("page")
+        forced_side = parsed.get("amud")
+    else:
+        match = re.match(r"([\w\s'.]+) (\d+)([ab])?$", ref)
+        if match:
+            book = match.group(1).strip()
+            daf_number = int(match.group(2))
+            forced_side = match.group(3)
+
+    if not book or daf_number is None:
+        return None
+
+    daf_str = str(daf_number)
+    sides = [forced_side] if forced_side in {"a", "b"} else ["a", "b"]
+
+    segments: List[Dict[str, Any]] = []
+    for side in sides:
+        amud_segments = await _collect_talmud_amud_segments(
+            book,
+            daf_str,
+            side,
+            sefaria_service,
+            metadata_source=data if isinstance(data, dict) else None,
+        )
+        if amud_segments:
+            segments.extend(amud_segments)
+
+    if not segments:
+        return None
+
+    total_segments = len(segments)
+    for idx, segment in enumerate(segments):
+        position = idx / (total_segments - 1) if total_segments > 1 else 0.5
+        segment["position"] = float(position)
+
+    if session_id and redis_client:
+        try:
+            count_key = f"daily:sess:{session_id}:total_segments"
+            await redis_client.set(count_key, total_segments, ex=3600 * 24 * 7)
+        except Exception as exc:  # pragma: no cover
+            logger.warning(
+                "daily.talmud.redis_total_failed",
+                extra={"ref": ref, "session_id": session_id, "error": str(exc)},
+            )
+
+    return {
+        "segments": segments,
+        "focusIndex": 0,
+        "totalLength": total_segments,
+        "ref": ref,
+        "loadedAt": str(int(time.time() * 1000)),
+        "he_ref": segments[0]["metadata"].get("heRef") if segments else None,
+    }
+
+
 
 # --- Navigation & Windowing Logic ---
 
@@ -337,10 +542,10 @@ async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_
             chapter_result = await sefaria_service.get_text(chapter_ref)
             if chapter_result.get("ok") and chapter_result.get("data"):
                 chapter_data = chapter_result["data"]
-                logger.info(f"🔥 TANAKH FULL CHAPTER: Loading full chapter {chapter_ref}")
-                logger.info(f"🔥 TANAKH CHAPTER DATA KEYS: {list(chapter_data.keys())}")
-                logger.info(f"🔥 TANAKH CHAPTER TEXT TYPE: {type(chapter_data.get('text'))}")
-                logger.info(f"🔥 TANAKH CHAPTER HE TYPE: {type(chapter_data.get('he'))}")
+                logger.info(f"[daily] TANAKH FULL CHAPTER: Loading full chapter {chapter_ref}")
+                logger.info(f"[daily] TANAKH CHAPTER DATA KEYS: {list(chapter_data.keys())}")
+                logger.info(f"[daily] TANAKH CHAPTER TEXT TYPE: {type(chapter_data.get('text'))}")
+                logger.info(f"[daily] TANAKH CHAPTER HE TYPE: {type(chapter_data.get('he'))}")
                 
                 # Create segments for each verse in the chapter
                 formatted_segments = []
@@ -352,7 +557,7 @@ async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_
                 # If text_data is not a list, try to get individual verses
                 if not isinstance(text_data, list) or len(text_data) == 0:
                     # Try to load individual verses - get real chapter length
-                    logger.info(f"🔥 TANAKH: Chapter data doesn't have verse list, trying individual verses")
+                    logger.info(f"[daily] TANAKH: Chapter data doesn't have verse list, trying individual verses")
                     
                     # Get real chapter length using existing mechanism
                     chapter_length = await _ensure_chapter_length(
@@ -365,7 +570,7 @@ async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_
                     
                     # Use real chapter length when available; otherwise use a high safety guard
                     max_verses = chapter_length if chapter_length else 200
-                    logger.debug(f"🔥 TANAKH: Loading up to {max_verses} verses for chapter {parsed_ref['chapter']}")
+                    logger.debug(f"[daily] TANAKH: Loading up to {max_verses} verses for chapter {parsed_ref['chapter']}")
                     
                     for verse_num in range(1, max_verses + 1):
                         verse_ref = _coerce_bible_ref_string(f"{parsed_ref['book']} {parsed_ref['chapter']}:{verse_num}")
@@ -397,12 +602,12 @@ async def get_text_with_window(ref: str, sefaria_service: SefariaService, index_
                     
                     # If we still don't have segments, something is wrong - log and return None
                     if len(formatted_segments) == 0:
-                        logger.error(f"🔥 TANAKH: No segments found for chapter {chapter_ref}")
+                        logger.error(f"[daily] TANAKH: No segments found for chapter {chapter_ref}")
                         return None
                 else:
                     # Use the list data directly with its full length
                     max_verses = len(text_data)
-                    logger.debug(f"🔥 TANAKH: Using chapter list data with {max_verses} verses")
+                    logger.debug(f"[daily] TANAKH: Using chapter list data with {max_verses} verses")
                     for i, (en_text, he_text) in enumerate(zip_longest(text_data, (he_data or []), fillvalue="")):
                         verse_num = i + 1
                         segment_ref = _coerce_bible_ref_string(f"{parsed_ref['book']} {parsed_ref['chapter']}:{verse_num}")
@@ -501,20 +706,24 @@ def _should_load_full_range(ref: str, data: Dict[str, Any]) -> bool:
         text_data = data.get("text", [])
         if isinstance(text_data, list) and len(text_data) > 1:
             return True
-    
+
     return False
+
+def _extract_text_entry(text_data, index: Optional[int] = None) -> str:
+    """Extract a single text string from Sefaria API responses (list or string)."""
+    if isinstance(text_data, list) and len(text_data) > 0:
+        if index is not None and isinstance(index, int):
+            zero_based = max(0, min(len(text_data) - 1, index - 1 if index > 0 else index))
+            return text_data[zero_based]
+        return text_data[0]
+    if isinstance(text_data, str):
+        return text_data
+    return ""
+
 
 def _extract_hebrew_text(he_data, index: Optional[int] = None) -> str:
     """Helper function to extract Hebrew text from various data structures."""
-    if isinstance(he_data, list) and len(he_data) > 0:
-        if index is not None and isinstance(index, int):
-            zero_based = max(0, min(len(he_data) - 1, index - 1 if index > 0 else index))
-            return he_data[zero_based]
-        return he_data[0]  # Default to the first element
-    elif isinstance(he_data, str):
-        return he_data
-    else:
-        return ""
+    return _extract_text_entry(he_data, index)
 
 def _clean_html_text(text: str) -> str:
     """Clean HTML entities and tags from text."""
@@ -535,134 +744,199 @@ def _clean_html_text(text: str) -> str:
 async def _try_load_range(sefaria_service: SefariaService, ref: str) -> Optional[Dict[str, Any]]:
     """Try to load a range from Sefaria API."""
     try:
-        logger.info(f"🔥 TRY_LOAD_RANGE: calling sefaria_service.get_text for '{ref}'")
+        logger.info(f"[daily] TRY_LOAD_RANGE: calling sefaria_service.get_text for '{ref}'")
         result = await sefaria_service.get_text(ref)
-        logger.info(f"🔥 TRY_LOAD_RANGE RESULT: ok={result.get('ok')}, has_data={bool(result.get('data'))}")
-        logger.info(f"🔥 SEFARIA RESULT: ok={result.get('ok')}, has_data={bool(result.get('data'))}")
+        logger.info(f"[daily] TRY_LOAD_RANGE RESULT: ok={result.get('ok')}, has_data={bool(result.get('data'))}")
+        logger.info(f"[daily] SEFARIA RESULT: ok={result.get('ok')}, has_data={bool(result.get('data'))}")
         
         if result.get("ok") and result.get("data"):
             return result["data"]
         else:
-            logger.warning(f"🔥 FAILED TO LOAD: ref={ref}, result={result}")
+            logger.warning(f"[daily] FAILED TO LOAD: ref={ref}, result={result}")
             return None
     except Exception as e:
-        logger.error(f"🔥 EXCEPTION IN GET_TEXT: ref={ref}, error={str(e)}", exc_info=True)
+        logger.error(f"[daily] EXCEPTION IN GET_TEXT: ref={ref}, error={str(e)}", exc_info=True)
         return None
 
-async def _handle_jerusalem_talmud_range(ref: str, sefaria_service: SefariaService, session_id: str = None, redis_client = None) -> Optional[Dict[str, Any]]:
-    """Handle Jerusalem Talmud ranges with triple structure: Chapter:Mishnah:Halakhah."""
-    logger.info(f"🔥 HANDLING JERUSALEM TALMUD RANGE: {ref}")
-    
-    # Parse Jerusalem Talmud range like "Jerusalem Talmud Sotah 5:4:3-6:3"
-    if "-" in ref:
-        start_ref, end_ref = ref.split("-", 1)
-        # Extract book name
-        book_parts = start_ref.split()
-        book_name = " ".join(book_parts[:-1])  # "Jerusalem Talmud Sotah"
-        
-        # Parse start and end references
-        start_parts = start_ref.split(":")[-3:]  # Get last 3 parts
-        end_parts = end_ref.split(":")[-3:]     # Get last 3 parts
-        
-        if len(start_parts) >= 3 and len(end_parts) >= 3:
-            start_chapter = int(start_parts[0])
-            start_mishnah = int(start_parts[1])
-            start_halakhah = int(start_parts[2])
-            end_chapter = int(end_parts[0])
-            end_mishnah = int(end_parts[1])
-            end_halakhah = int(end_parts[2])
-            
-            logger.info(f"🔥 JERUSALEM TALMUD RANGE: {start_chapter}:{start_mishnah}:{start_halakhah} to {end_chapter}:{end_mishnah}:{end_halakhah}")
-            
-            all_segments_data = []
-            
-            # Load segments from start chapter
-            current_chapter = start_chapter
-            current_mishnah = start_mishnah
-            current_halakhah = start_halakhah
-            
-            while current_chapter <= end_chapter:
-                max_mishnah = end_mishnah if current_chapter == end_chapter else 20  # Assume max 20 mishnayot per chapter
-                min_mishnah = current_mishnah if current_chapter == start_chapter else 1
-                
-                for mishnah in range(min_mishnah, max_mishnah + 1):
-                    max_halakhah = end_halakhah if (current_chapter == end_chapter and mishnah == end_mishnah) else 20  # Assume max 20 halakhot per mishnah
-                    min_halakhah = current_halakhah if (current_chapter == start_chapter and mishnah == start_mishnah) else 1
-                    
-                    for halakhah in range(min_halakhah, max_halakhah + 1):
-                        segment_ref = f"{book_name} {current_chapter}:{mishnah}:{halakhah}"
-                        try:
-                            segment_result = await sefaria_service.get_text(segment_ref)
-                            if segment_result.get("ok") and segment_result.get("data"):
-                                segment_data_item = segment_result["data"]
-                                en_text = segment_data_item.get("en_text", "") or segment_data_item.get("text", "")
-                                he_text = segment_data_item.get("he_text", "") or segment_data_item.get("he", "")
-                                
-                                if en_text or he_text:
-                                    segment_data = {
-                                        "ref": segment_ref,
-                                        "en_text": en_text,
-                                        "he_text": _extract_hebrew_text(he_text),
-                                        "title": segment_data_item.get("title", ref),
-                                        "indexTitle": segment_data_item.get("indexTitle", ""),
-                                        "heRef": segment_data_item.get("heRef", "")
-                                    }
-                                    all_segments_data.append(segment_data)
-                                    logger.info(f"🔥 JERUSALEM TALMUD SEGMENT: {segment_ref}")
-                                else:
-                                    break  # No more halakhot in this mishnah
-                            else:
-                                break  # No more halakhot in this mishnah
-                        except Exception as e:
-                            logger.warning(f"🔥 FAILED TO FETCH JERUSALEM TALMUD SEGMENT {segment_ref}: {str(e)}")
-                            break
-                    
-                    current_halakhah = 1  # Reset for next mishnah
-                
-                current_mishnah = 1  # Reset for next chapter
-                current_chapter += 1
-            
-            if all_segments_data:
-                # Format segments for frontend
-                formatted_segments = []
-                total_segments = len(all_segments_data)
-                for i, seg_data in enumerate(all_segments_data):
-                    formatted_segments.append({
-                        "ref": seg_data.get("ref"),
-                        "text": getattr(seg_data, "he_text", "") or seg_data.get("he_text") or "",
-                        "heText": getattr(seg_data, "he_text", "") or seg_data.get("he_text") or "",
-                        "position": (i / (total_segments - 1)) if total_segments > 1 else 0.5,
-                        "metadata": {
-                            "title": seg_data.get("title"),
-                            "indexTitle": seg_data.get("indexTitle"),
-                            "heRef": seg_data.get("heRef")
-                        }
-                    })
-                
-                logger.info(f"🔥 JERUSALEM TALMUD COMPLETE: loaded {len(formatted_segments)} segments")
-                
-                # Save total_segments to Redis if session_id and redis_client are provided
-                if session_id and redis_client:
-                    try:
-                        count_key = f"daily:sess:{session_id}:total_segments"
-                        await redis_client.set(count_key, total_segments, ex=3600*24*7)  # 7 days TTL
-                        logger.info(f"🔥 SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
-                    except Exception as e:
-                        logger.warning(f"Failed to save total_segments to Redis: {e}")
-                
-                return {
-                    "segments": formatted_segments,
-                    "focusIndex": 0,
-                    "ref": ref,
-                    "he_ref": all_segments_data[0].get("heRef") if all_segments_data else None,
+async def _handle_jerusalem_talmud_range(
+    ref: str,
+    sefaria_service: SefariaService,
+    session_id: str = None,
+    redis_client=None,
+) -> Optional[Dict[str, Any]]:
+    """Handle Jerusalem Talmud ranges with triple structure (chapter:mishnah:halakhah)."""
+    logger.info(f"[daily] HANDLING JERUSALEM TALMUD RANGE: {ref}")
+
+    if "-" not in ref:
+        return None
+
+    start_ref, end_ref = ref.split("-", 1)
+    start_ref = start_ref.strip()
+    end_ref = end_ref.strip()
+
+    def _parse_triple(raw: str) -> Optional[Tuple[int, int, int]]:
+        parts = raw.split(":")
+        try:
+            if len(parts) == 3:
+                return int(parts[0]), int(parts[1]), int(parts[2])
+            if len(parts) == 2:
+                return int(parts[0]), int(parts[1]), 1
+            if len(parts) == 1:
+                return int(parts[0]), 1, 1
+        except ValueError:
+            return None
+        return None
+
+    try:
+        book_part, start_numbers = start_ref.rsplit(" ", 1)
+    except ValueError:
+        logger.warning("[daily] JERUSALEM RANGE START UNPARSEABLE", extra={"ref": ref})
+        return None
+    start_triple = _parse_triple(start_numbers)
+    if not start_triple:
+        logger.warning("[daily] JERUSALEM RANGE START UNPARSEABLE", extra={"ref": ref})
+        return None
+
+    if " " in end_ref:
+        end_book_part, end_numbers = end_ref.rsplit(" ", 1)
+    else:
+        end_book_part, end_numbers = book_part, end_ref
+    end_triple = _parse_triple(end_numbers)
+    if not end_triple:
+        logger.warning("[daily] JERUSALEM RANGE END UNPARSEABLE", extra={"ref": ref})
+        return None
+
+    book_name = end_book_part.strip()
+    logger.info(
+        "[daily] JERUSALEM TALMUD RANGE PARSED",
+        extra={
+            "ref": ref,
+            "book": book_name,
+            "start": start_triple,
+            "end": end_triple,
+        },
+    )
+
+    segments: List[Dict[str, Any]] = []
+
+    def triple_leq(a: Tuple[int, int, int], b: Tuple[int, int, int]) -> bool:
+        return a <= b
+
+    current = start_triple
+    done = False
+
+    while not done:
+        chapter, mishnah, halakhah = current
+
+        mishnah_ref = f"{book_name} {chapter}:{mishnah}"
+        try:
+            mishnah_result = await sefaria_service.get_text(mishnah_ref)
+        except Exception as exc:
+            logger.warning(
+                "[daily] JERUSALEM TALMUD MISHNAH FETCH FAILED",
+                extra={"ref": mishnah_ref, "error": str(exc)},
+            )
+            break
+
+        if not (mishnah_result.get("ok") and mishnah_result.get("data")):
+            logger.debug(
+                "[daily] JERUSALEM TALMUD MISHNAH EMPTY",
+                extra={"ref": mishnah_ref, "response": mishnah_result},
+            )
+            break
+
+        data = mishnah_result["data"]
+        text_values = data.get("text", []) or data.get("en_text", [])
+        he_values = data.get("he", []) or data.get("he_text", [])
+
+        if isinstance(text_values, str):
+            text_values = [text_values]
+        if isinstance(he_values, str):
+            he_values = [he_values]
+
+        max_halakhot = max(len(text_values), len(he_values), 1)
+
+        for hal_index in range(1, max_halakhot + 1):
+            triple = (chapter, mishnah, hal_index)
+            if not triple_leq(start_triple, triple):
+                continue
+            if not triple_leq(triple, end_triple):
+                done = True
+                break
+
+            en_text = _clean_html_text(_extract_text_entry(text_values, hal_index))
+            he_text = _clean_html_text(_extract_hebrew_text(he_values, hal_index))
+
+            if not (en_text or he_text):
+                continue
+
+            segment_ref = f"{book_name} {chapter}:{mishnah}:{hal_index}"
+            metadata = {
+                "title": data.get("title", ref),
+                "indexTitle": data.get("indexTitle", ""),
+                "heRef": data.get("heRef", ""),
+                "chapter": chapter,
+                "mishnah": mishnah,
+                "halakhah": hal_index,
+                "enText": en_text,
+            }
+
+            segments.append(
+                {
+                    "ref": segment_ref,
+                    "text": he_text or en_text,
+                    "heText": he_text or en_text,
+                    "enText": en_text,
+                    "metadata": metadata,
                 }
-    
-    logger.warning(f"🔥 NO SEGMENTS LOADED FOR JERUSALEM TALMUD RANGE: {ref}")
-    return None
+            )
+            logger.debug(
+                "[daily] JERUSALEM TALMUD SEGMENT ADDED",
+                extra={"segment_ref": segment_ref},
+            )
+
+        if done:
+            break
+
+        if triple_leq((chapter, mishnah + 1, 1), end_triple):
+            current = (chapter, mishnah + 1, 1)
+        else:
+            current = (chapter + 1, 1, 1)
+
+        if not triple_leq(current, end_triple):
+            break
+
+    if not segments:
+        logger.warning("[daily] NO SEGMENTS LOADED FOR JERUSALEM TALMUD RANGE", extra={"ref": ref})
+        return None
+
+    total_segments = len(segments)
+    for idx, segment in enumerate(segments):
+        position = idx / (total_segments - 1) if total_segments > 1 else 0.5
+        segment["position"] = float(position)
+
+    if session_id and redis_client:
+        try:
+            count_key = f"daily:sess:{session_id}:total_segments"
+            await redis_client.set(count_key, total_segments, ex=3600 * 24 * 7)
+        except Exception as exc:
+            logger.warning(
+                "[daily] JERUSALEM TALMUD REDIS TOTAL FAILED",
+                extra={"ref": ref, "session_id": session_id, "error": str(exc)},
+            )
+
+    return {
+        "segments": segments,
+        "focusIndex": 0,
+        "totalLength": total_segments,
+        "ref": ref,
+        "loadedAt": str(int(time.time() * 1000)),
+        "he_ref": segments[0]["metadata"].get("heRef") if segments else None,
+    }
 
 async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService, session_id: str = None, redis_client = None) -> Optional[Dict[str, Any]]:
     """Handle inter-chapter ranges by loading each chapter separately."""
-    logger.info(f"🔥 HANDLING INTER-CHAPTER RANGE: {ref}")
+    logger.info(f"[daily] HANDLING INTER-CHAPTER RANGE: {ref}")
     
     # Parse the range
     start_ref, end_ref = ref.split("-", 1)
@@ -676,7 +950,7 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
     end_chapter = int(end_chapter_verse[-2])
     end_verse = int(end_chapter_verse[-1])
     
-    logger.info(f"🔥 INTER-CHAPTER PARSED: {book_name}, {start_chapter}:{start_verse} to {end_chapter}:{end_verse}")
+    logger.info(f"[daily] INTER-CHAPTER PARSED: {book_name}, {start_chapter}:{start_verse} to {end_chapter}:{end_verse}")
     
     all_segments_data = []
     
@@ -691,22 +965,35 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
                 he_text = verse_data.get("he_text", "") or verse_data.get("he", "")
                 
                 if en_text or he_text:
+                    english_text = _clean_html_text(_extract_text_entry(en_text, verse_num))
+                    hebrew_text = _clean_html_text(_extract_hebrew_text(he_text, verse_num))
                     segment_data = {
                         "ref": verse_ref,
-                        "en_text": _clean_html_text(en_text),
-                        "he_text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                        "text": hebrew_text,
+                        "heText": hebrew_text,
+                        "enText": english_text,
                         "title": verse_data.get("title", ref),
                         "indexTitle": verse_data.get("indexTitle", ""),
-                        "heRef": verse_data.get("heRef", "")
+                        "heRef": verse_data.get("heRef", ""),
+                        "chapter": start_chapter,
+                        "verse": verse_num,
+                        "metadata": {
+                            "title": verse_data.get("title", ref),
+                            "indexTitle": verse_data.get("indexTitle", ""),
+                            "heRef": verse_data.get("heRef", ""),
+                            "chapter": start_chapter,
+                            "verse": verse_num,
+                            "enText": english_text,
+                        },
                     }
                     all_segments_data.append(segment_data)
-                    logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}")
+                    logger.info(f"[daily] INTER-CHAPTER VERSE: {verse_ref}")
                 else:
                     break  # No more verses in this chapter
             else:
                 break  # No more verses in this chapter
         except Exception as e:
-            logger.error(f"🔥 ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
+            logger.error(f"[daily] ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
             break
     
     # Load verses from end chapter
@@ -721,26 +1008,39 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
                     he_text = verse_data.get("he_text", "") or verse_data.get("he", "")
                     
                     if en_text or he_text:
+                        english_text = _clean_html_text(_extract_text_entry(en_text, verse_num))
+                        hebrew_text = _clean_html_text(_extract_hebrew_text(he_text, verse_num))
                         segment_data = {
                             "ref": verse_ref,
-                            "en_text": _clean_html_text(en_text),
-                        "he_text": _clean_html_text(_extract_hebrew_text(he_text, verse_num)),
+                            "text": hebrew_text,
+                            "heText": hebrew_text,
+                            "enText": english_text,
                             "title": verse_data.get("title", ref),
                             "indexTitle": verse_data.get("indexTitle", ""),
-                            "heRef": verse_data.get("heRef", "")
+                            "heRef": verse_data.get("heRef", ""),
+                            "chapter": end_chapter,
+                            "verse": verse_num,
+                            "metadata": {
+                                "title": verse_data.get("title", ref),
+                                "indexTitle": verse_data.get("indexTitle", ""),
+                                "heRef": verse_data.get("heRef", ""),
+                                "chapter": end_chapter,
+                                "verse": verse_num,
+                                "enText": english_text,
+                            },
                         }
                         all_segments_data.append(segment_data)
-                        logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}")
+                        logger.info(f"[daily] INTER-CHAPTER VERSE: {verse_ref}")
                     else:
                         break
                 else:
                     break
             except Exception as e:
-                logger.error(f"🔥 ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
+                logger.error(f"[daily] ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
                 break
     
     if not all_segments_data:
-        logger.warning(f"🔥 NO SEGMENTS LOADED FOR INTER-CHAPTER RANGE: {ref}")
+        logger.warning(f"[daily] NO SEGMENTS LOADED FOR INTER-CHAPTER RANGE: {ref}")
         return None
     
     # Format segments for frontend
@@ -759,14 +1059,14 @@ async def _handle_inter_chapter_range(ref: str, sefaria_service: SefariaService,
             }
         })
     
-    logger.info(f"🔥 INTER-CHAPTER RANGE COMPLETE: loaded {len(formatted_segments)} segments")
+    logger.info(f"[daily] INTER-CHAPTER RANGE COMPLETE: loaded {len(formatted_segments)} segments")
     
     # Save total_segments to Redis if session_id and redis_client are provided
     if session_id and redis_client:
         try:
             count_key = f"daily:sess:{session_id}:total_segments"
             await redis_client.set(count_key, total_segments, ex=3600*24*7)  # 7 days TTL
-            logger.info(f"🔥 SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
+            logger.info(f"[daily] SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
         except Exception as e:
             logger.warning(f"Failed to save total_segments to Redis: {e}")
     
@@ -787,7 +1087,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
     - Ranges: "Deuteronomy 32:1-52" -> load specified range
     - Mishnah: "Mishnah Menachot 9:5-6" -> load specified mishnayot
     """
-    logger.info(f"🔥 GET_FULL_DAILY_TEXT STARTED: ref='{ref}'")
+    logger.info(f"[daily] GET_FULL_DAILY_TEXT STARTED: ref='{ref}'")
     collection = detect_collection(ref)
     
     # Check if this is an inter-chapter range first
@@ -808,7 +1108,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                     end_chapter = None
                 
                 if start_chapter and end_chapter and start_chapter != end_chapter:
-                    logger.info(f"🔥 DETECTED INTER-CHAPTER RANGE: {ref} ({start_chapter} -> {end_chapter})")
+                    logger.info(f"[daily] DETECTED INTER-CHAPTER RANGE: {ref} ({start_chapter} -> {end_chapter})")
                     # Handle inter-chapter range directly without trying to load the full range
                     data = None
                 else:
@@ -827,55 +1127,117 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
     if data is None:
         # Check if this is Jerusalem Talmud (triple structure: Chapter:Mishnah:Halakhah)
         if "jerusalem talmud" in ref.lower() and ":" in ref and "-" in ref:
-            logger.info(f"🔥 HANDLING JERUSALEM TALMUD RANGE: {ref}")
+            logger.info(f"[daily] HANDLING JERUSALEM TALMUD RANGE: {ref}")
             return await _handle_jerusalem_talmud_range(ref, sefaria_service, session_id, redis_client)
         
+        talmud_payload = await _build_talmud_payload(
+            ref, None, sefaria_service, session_id=session_id, redis_client=redis_client
+        )
+        if talmud_payload:
+            return talmud_payload
+
         # Check if this is an inter-chapter range that we detected earlier
         if "-" in ref and ":" in ref:
             start_ref, end_ref = ref.split("-", 1)
-            if ":" in start_ref and ":" in end_ref:
-                start_chapter_verse = start_ref.split(":")
-                end_chapter_verse = end_ref.split(":")
-                
-                if len(start_chapter_verse) >= 2 and len(end_chapter_verse) >= 2:
-                    start_chapter = int(start_chapter_verse[-2]) if len(start_chapter_verse) > 1 else None
-                    end_chapter = int(end_chapter_verse[-2]) if len(end_chapter_verse) > 1 else None
-                    
-                    if start_chapter and end_chapter and start_chapter != end_chapter:
-                        # This is an inter-chapter range, handle it specially
-                        return await _handle_inter_chapter_range(ref, sefaria_service, session_id, redis_client)
+            start_ref = start_ref.strip()
+            end_ref = end_ref.strip()
+
+            start_info = _parse_ref(start_ref)
+            end_candidate = end_ref
+            if start_info and end_ref and not any(ch.isalpha() for ch in end_ref.split(":", 1)[0]):
+                book_name = (start_info.get("book") or "").strip()
+                end_candidate = f"{book_name} {end_ref}".strip()
+            end_info = _parse_ref(end_candidate)
+
+            start_chapter = start_info.get("chapter") if start_info else None
+            end_chapter = end_info.get("chapter") if end_info else None
+
+            logger.debug(
+                "daily.range.same_chapter.inspect",
+                extra={
+                    "ref": ref,
+                    "start_ref": start_ref,
+                    "end_ref": end_ref,
+                    "start_info": start_info,
+                    "end_candidate": end_candidate,
+                    "end_info": end_info,
+                },
+            )
+
+            if start_chapter is not None and end_chapter is not None:
+                if start_chapter != end_chapter:
+                    return await _handle_inter_chapter_range(ref, sefaria_service, session_id, redis_client)
+                else:
+                    same_chapter_payload = await _handle_same_chapter_range(
+                        ref,
+                        start_info,
+                        end_info,
+                        sefaria_service,
+                        session_id=session_id,
+                        redis_client=redis_client,
+                    )
+                    if same_chapter_payload:
+                        return same_chapter_payload
         
-        logger.warning(f"🔥 FAILED TO LOAD: ref={ref}")
+        logger.warning(f"[daily] FAILED TO LOAD: ref={ref}")
         return None
     
     # Debug language content
-    text_data = data.get("text", [])
-    he_data = data.get("he", [])
+    if _should_delegate_to_modular(ref, data):
+        try:
+            from brain_service.services.study.daily_text import build_full_daily_text as modular_builder
+        except Exception as exc:  # pragma: no cover - optional dependency
+            logger.debug("[daily] modular_builder_unavailable", extra={"error": str(exc)})
+        else:
+            modular_payload = await modular_builder(
+                ref,
+                sefaria_service,
+                index_service,
+                session_id=session_id,
+                redis_client=redis_client,
+            )
+            if modular_payload:
+                return modular_payload
+
+    talmud_payload = await _build_talmud_payload(
+        ref,
+        data if isinstance(data, dict) else {},
+        sefaria_service,
+        session_id=session_id,
+        redis_client=redis_client,
+    )
+    if talmud_payload:
+        return talmud_payload
+
+    text_data = data.get("text_segments") or data.get("text", [])
+    he_data = data.get("he_segments") or data.get("he", [])
     en_text = getattr(data, "en_text", "") or data.get("en_text", "")
     he_text = getattr(data, "he_text", "") or data.get("he_text", "")
-    logger.info(f"🔥 LANGUAGE DEBUG: ref={ref}")
-    logger.info(f"🔥 TEXT TYPE: text={type(text_data)}, he={type(he_data)}")
-    logger.info(f"🔥 COMPACT TEXT: en_text={bool(en_text)} (len={len(en_text)}), he_text={bool(he_text)} (len={len(he_text)})")
+    logger.info(f"[daily] LANGUAGE DEBUG: ref={ref}")
+    logger.info(f"[daily] TEXT TYPE: text={type(text_data)}, he={type(he_data)}")
+    en_len = len(en_text) if isinstance(en_text, (str, list, tuple)) else 0
+    he_len = len(he_text) if isinstance(he_text, (str, list, tuple)) else 0
+    logger.info(f"[daily] COMPACT TEXT: en_text={bool(en_text)} (len={en_len}), he_text={bool(he_text)} (len={he_len})")
     if en_text:
-        logger.info(f"🔥 EN_TEXT PREVIEW: {en_text[:100]}...")
+        logger.info(f"[daily] EN_TEXT PREVIEW: {en_text[:100]}...")
     if he_text:
-        logger.info(f"🔥 HE_TEXT PREVIEW: [Hebrew text - {len(he_text)} chars]")
+        logger.info(f"[daily] HE_TEXT PREVIEW: [Hebrew text - {he_len} chars]")
     else:
-        logger.info(f"🔥 HE_TEXT IS EMPTY - checking he_data type: {type(he_data)}")
+        logger.info(f"[daily] HE_TEXT IS EMPTY - checking he_data type: {type(he_data)}")
         if isinstance(he_data, list) and len(he_data) > 0:
-            logger.info(f"🔥 HE_DATA LIST[0]: {he_data[0][:100] if he_data[0] else 'EMPTY'}...")
+            logger.info(f"[daily] HE_DATA LIST[0]: {he_data[0][:100] if he_data[0] else 'EMPTY'}...")
     if isinstance(text_data, list) and len(text_data) > 0:
-        logger.info(f"🔥 SAMPLE TEXT[0]: en='{text_data[0][:100] if text_data[0] else 'EMPTY'}...'")
+        logger.info(f"[daily] SAMPLE TEXT[0]: en='{text_data[0][:100] if text_data[0] else 'EMPTY'}...'")
     if isinstance(he_data, list) and len(he_data) > 0:
-        logger.info(f"🔥 SAMPLE HE[0]: he='{he_data[0][:100] if he_data[0] else 'EMPTY'}...'")
+        logger.info(f"[daily] SAMPLE HE[0]: he='{he_data[0][:100] if he_data[0] else 'EMPTY'}...'")
     elif isinstance(he_data, str):
-        logger.info(f"🔥 SAMPLE HE STRING: he='{he_data[:100]}...'")
+        logger.info(f"[daily] SAMPLE HE STRING: he='{he_data[:100]}...'")
     elif isinstance(text_data, str):
-        logger.info(f"🔥 SAMPLE TEXT STRING: en='{text_data[:100]}...'")
+        logger.info(f"[daily] SAMPLE TEXT STRING: en='{text_data[:100]}...'")
         he_string = data.get("he", "")
-        logger.info(f"🔥 SAMPLE HE STRING: he='{he_string[:100] if he_string else 'EMPTY'}...'")
+        logger.info(f"[daily] SAMPLE HE STRING: he='{he_string[:100] if he_string else 'EMPTY'}...'")
     else:
-        logger.warning(f"🔥 UNEXPECTED DATA STRUCTURE: text={text_data}, he={he_data}")
+        logger.warning(f"[daily] UNEXPECTED DATA STRUCTURE: text={text_data}, he={he_data}")
     all_segments_data = []
     focus_index = 0
     
@@ -886,15 +1248,15 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
         he_sections = data.get("he", [])
         spanning_refs = data.get("spanningRefs", [])
         
-        logger.info(f"🔥 SPANNING TEXT: {ref} has {len(text_sections)} sections, isSpanning: {data.get('isSpanning')}")
-        logger.info(f"🔥 TEXT STRUCTURE: text={type(data.get('text'))}, he={type(data.get('he'))}")
-        logger.info(f"🔥 SPANNING REFS: {spanning_refs}")
+        logger.info(f"[daily] SPANNING TEXT: {ref} has {len(text_sections)} sections, isSpanning: {data.get('isSpanning')}")
+        logger.info(f"[daily] TEXT STRUCTURE: text={type(data.get('text'))}, he={type(data.get('he'))}")
+        logger.info(f"[daily] SPANNING REFS: {spanning_refs}")
         
         for section_idx, (text_section, he_section) in enumerate(zip(text_sections, he_sections)):
             # Each section represents one amud (side) of the daf
             base_ref = spanning_refs[section_idx] if section_idx < len(spanning_refs) else f"{ref}#{section_idx}"
             
-            logger.info(f"🔥 SECTION {section_idx}: base_ref={base_ref}, segments={len(text_section)}")
+            logger.info(f"[daily] SECTION {section_idx}: base_ref={base_ref}, segments={len(text_section)}")
             
             # Process each segment within this section
             for segment_idx, (en_text, he_text) in enumerate(zip(text_section, he_section)):
@@ -916,7 +1278,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                 }
                 
                 all_segments_data.append(segment_data)
-                logger.info(f"🔥 SEGMENT: {segment_ref}, en_len={len(en_text) if en_text else 0}, he_len={len(he_text) if he_text else 0}")
+                logger.info(f"[daily] SEGMENT: {segment_ref}, en_len={len(en_text) if en_text else 0}, he_len={len(he_text) if he_text else 0}")
                 
                 # Set focus to first segment
                 if len(all_segments_data) == 1:
@@ -928,7 +1290,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
         he_data = data.get("he", [])
         
         if isinstance(text_data, list) and len(text_data) > 0:
-            logger.info(f"🔥 SIMPLE/RANGE TEXT: {ref} has {len(text_data)} segments")
+            logger.info(f"[daily] SIMPLE/RANGE TEXT: {ref} has {len(text_data)} segments")
             
             # Parse the base reference to generate individual segment refs
             base_ref = data.get("ref", ref)
@@ -958,7 +1320,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                             
                             # For inter-chapter ranges, we need to handle each chapter separately
                             
-                            logger.info(f"🔥 INTER-CHAPTER RANGE: {start_chapter}:{start_verse} to {end_chapter}:{end_verse}")
+                            logger.info(f"[daily] INTER-CHAPTER RANGE: {start_chapter}:{start_verse} to {end_chapter}:{end_verse}")
                             
                             # Fetch verses from start chapter (162:28 to end of chapter)
                             for verse_num in range(start_verse, 1000):  # Go up to 1000 verses per chapter
@@ -983,13 +1345,13 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                 }
                                             }
                                             all_segments_data.append(segment_data)
-                                            logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
+                                            logger.info(f"[daily] INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
                                         else:
                                             break  # No more verses in this chapter
                                     else:
                                         break  # No more verses in this chapter
                                 except Exception as e:
-                                    logger.error(f"🔥 ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
+                                    logger.error(f"[daily] ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
                                     break
                             
                             # Fetch verses from end chapter
@@ -1017,13 +1379,13 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                     }
                                                 }
                                                 all_segments_data.append(segment_data)
-                                                logger.info(f"🔥 INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
+                                                logger.info(f"[daily] INTER-CHAPTER VERSE: {verse_ref}, en_len={len(en_text)}, he_len={len(_extract_hebrew_text(he_text, verse_num))}")
                                             else:
                                                 break
                                         else:
                                             break
                                     except Exception as e:
-                                        logger.error(f"🔥 ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
+                                        logger.error(f"[daily] ERROR FETCHING INTER-CHAPTER VERSE {verse_ref}: {str(e)}")
                                         break
                             
                             if len(all_segments_data) > 0:
@@ -1042,7 +1404,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         # Just verse number in end_ref: "52"
                         end_verse = int(end_ref.strip())            # 52
                     
-                    logger.info(f"🔥 FETCHING RANGE INDIVIDUALLY: {book_chapter}, verses {start_verse}-{end_verse}")
+                    logger.info(f"[daily] FETCHING RANGE INDIVIDUALLY: {book_chapter}, verses {start_verse}-{end_verse}")
                     
                     # Load first segments for immediate display, then load rest dynamically
                     total_segments = end_verse - start_verse + 1
@@ -1057,44 +1419,82 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                     else:
                         segments_to_load = 20  # Load 20 for large ranges
                     
-                    logger.info(f"🔥 DAILY MODE: Loading first {segments_to_load} segments from range {start_verse}-{end_verse} (total: {total_segments})")
-                    logger.info(f"🔥 LOADING FIRST SEGMENTS: {book_chapter}:{start_verse} to {book_chapter}:{start_verse + segments_to_load - 1}")
+                    logger.info(f"[daily] DAILY MODE: Preparing first {segments_to_load} segments from range {start_verse}-{end_verse} (total: {total_segments})")
+                    
+                    chapter_match = re.search(r"(\d+)$", book_chapter.strip())
+                    chapter_num = int(chapter_match.group(1)) if chapter_match else parsed_ref['chapter']
                     
                     for i in range(segments_to_load):
                         verse_num = start_verse + i
+                        if verse_num > end_verse:
+                            break
+                        relative_index = verse_num - start_verse
+                        he_text_entry = _extract_hebrew_text(he_data, relative_index + 1)
+                        en_text_entry = _extract_text_entry(text_data, relative_index + 1)
+
+                        # If the API returned a blob instead of per-verse content, fetch the verse directly
+                        needs_direct_fetch = (
+                            isinstance(he_data, str)
+                            or isinstance(text_data, str)
+                            or (not he_text_entry and not en_text_entry)
+                        )
+
                         verse_ref = f"{book_chapter}:{verse_num}"
+
+                        if needs_direct_fetch:
+                            try:
+                                verse_result = await sefaria_service.get_text(verse_ref)
+                                if verse_result.get("ok") and verse_result.get("data"):
+                                    verse_data = verse_result["data"]
+                                    ve_text = verse_data.get("text", "") or verse_data.get("en_text", "")
+                                    ve_he = verse_data.get("he", "") or verse_data.get("he_text", "")
+                                    if ve_text:
+                                        en_text_entry = (
+                                            _extract_text_entry(ve_text, None)
+                                            if isinstance(ve_text, list)
+                                            else ve_text
+                                        )
+                                    if ve_he:
+                                        he_text_entry = (
+                                            _extract_hebrew_text(ve_he, None)
+                                            if isinstance(ve_he, list)
+                                            else ve_he
+                                        )
+                                else:
+                                    logger.debug(f"?? DAILY MODE: Direct fetch for {verse_ref} returned no data")
+                            except Exception as fetch_exc:
+                                logger.warning(f"?? DAILY MODE: Failed direct fetch for {verse_ref}: {fetch_exc}")
+
+                        if not he_text_entry and not en_text_entry:
+                            logger.debug(f"?? DAILY MODE: No content for verse {verse_ref}, stopping range expansion")
+                            break
                         
-                        try:
-                            verse_result = await sefaria_service.get_text(verse_ref)
-                            if verse_result.get("ok") and verse_result.get("data"):
-                                verse_data = verse_result["data"]
-                                en_text = verse_data.get("text", "")
-                                he_text = verse_data.get("he", "")
-                                
-                                segment_data = {
-                                    "ref": verse_ref,
-                                    "text": _clean_html_text(_extract_hebrew_text(he_text)),
-                                    "heText": _clean_html_text(_extract_hebrew_text(he_text)),
-                                    "position": 0,  # normalize later
-                                    "metadata": {
-                                        "title": data.get("title", ref),
-                                        "indexTitle": data.get("indexTitle", data.get("book", "")),
-                                        "heRef": verse_data.get("heRef", "")
-                                    }
-                                }
-                                all_segments_data.append(segment_data)
-                                logger.info(f"🔥 DAILY SEGMENT {i+1}/{segments_to_load}: {verse_ref}")
-                            else:
-                                logger.warning(f"🔥 FAILED TO LOAD VERSE: {verse_ref}")
-                        except Exception as e:
-                            logger.error(f"🔥 ERROR LOADING VERSE {verse_ref}: {str(e)}")
+                        hebrew_text = _clean_html_text(he_text_entry)
+                        english_text = _clean_html_text(en_text_entry)
+                        segment_data = {
+                            "ref": verse_ref,
+                            "text": hebrew_text,
+                            "heText": hebrew_text,
+                            "enText": english_text,
+                            "position": 0,  # normalize later
+                            "metadata": {
+                                "title": data.get("title", ref),
+                                "indexTitle": data.get("indexTitle", data.get("book", "")),
+                                "heRef": data.get("heRef", ""),
+                                "chapter": chapter_num,
+                                "verse": verse_num,
+                                "enText": english_text,
+                            }
+                        }
+                        all_segments_data.append(segment_data)
+                        logger.info(f"[daily] DAILY SEGMENT {i+1}/{segments_to_load}: {verse_ref}")
                     
                     # Normalize positions post-factum for the initially loaded subset
                     n_partial = len(all_segments_data)
                     for j, seg in enumerate(all_segments_data):
                         seg["position"] = (j / (n_partial - 1)) if n_partial > 1 else 0.5
 
-                    logger.info(f"🔥 DAILY MODE COMPLETE: loaded {len(all_segments_data)} segments, total range: {end_verse - start_verse + 1} verses")
+                    logger.info(f"[daily] DAILY MODE COMPLETE: loaded {len(all_segments_data)} segments, total range: {end_verse - start_verse + 1} verses")
                         
                 elif ":" not in start_ref and ":" not in end_ref:
                     # Range like "Genesis 1-3" (chapters)
@@ -1126,7 +1526,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                 
                 # Check if this is Mishneh Torah (needs special handling)
                 if "Mishneh Torah" in base_ref:
-                    logger.info(f"🔥 DETECTED MISHNEH TORAH: {base_ref}")
+                    logger.info(f"[daily] DETECTED MISHNEH TORAH: {base_ref}")
                     # For Mishneh Torah, try to fetch individual halakhot (sub-chapters)
                     # Extract the chapter number
                     chapter_num = base_ref.split()[-1]  # "12"
@@ -1152,14 +1552,14 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                         "heRef": halakha_data.get("heRef", "")
                                     }
                                     all_segments_data.append(segment_data)
-                                    logger.info(f"🔥 MISHNEH TORAH HALAKHA: {halakha_ref}, en_len={len(en_text)}, he_len={len(he_text) if he_text else 0}")
+                                    logger.info(f"[daily] MISHNEH TORAH HALAKHA: {halakha_ref}, en_len={len(en_text)}, he_len={len(he_text) if he_text else 0}")
                                 else:
-                                    logger.info(f"🔥 MISHNEH TORAH HALAKHA EMPTY: {halakha_ref}")
+                                    logger.info(f"[daily] MISHNEH TORAH HALAKHA EMPTY: {halakha_ref}")
                             else:
-                                logger.info(f"🔥 MISHNEH TORAH HALAKHA NOT FOUND: {halakha_ref}")
+                                logger.info(f"[daily] MISHNEH TORAH HALAKHA NOT FOUND: {halakha_ref}")
                                 break  # Stop if we can't find more halakhot
                         except Exception as e:
-                            logger.error(f"🔥 ERROR FETCHING MISHNEH TORAH HALAKHA {halakha_ref}: {str(e)}")
+                            logger.error(f"[daily] ERROR FETCHING MISHNEH TORAH HALAKHA {halakha_ref}: {str(e)}")
                             break
                 else:
                     # Regular chapter segmentation (like Genesis 25)
@@ -1176,7 +1576,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                             "heRef": data.get("heRef", "")
                         }
                         all_segments_data.append(segment_data)
-                    logger.info(f"🔥 CHAPTER SEGMENT: {segment_ref}")
+                    logger.info(f"[daily] CHAPTER SEGMENT: {segment_ref}")
                     
             else:
                 # Fallback: use original ref for all segments
@@ -1197,14 +1597,16 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             
         else:
             # Single text string - check if this should be a range or full tractate page
-            logger.info(f"🔥 SINGLE TEXT: {ref}")
+            logger.info(f"[daily] SINGLE TEXT: {ref}")
             
             # Check if we have CompactText data (en_text/he_text)
-            logger.info(f"🔥 CHECKING COMPACT TEXT: en_text={bool(en_text)} (len={len(en_text)}), he_text={bool(he_text)} (len={len(he_text)})")
+            en_len = len(en_text) if isinstance(en_text, (str, list, tuple)) else 0
+            he_len = len(he_text) if isinstance(he_text, (str, list, tuple)) else 0
+            logger.info(f"[daily] CHECKING COMPACT TEXT: en_text={bool(en_text)} (len={en_len}), he_text={bool(he_text)} (len={he_len})")
             
             # If CompactText data is available, use it
             if en_text or he_text:
-                logger.info(f"🔥 COMPACT TEXT DATA FOUND: en_text={bool(en_text)}, he_text={bool(he_text)}")
+                logger.info(f"[daily] COMPACT TEXT DATA FOUND: en_text={bool(en_text)}, he_text={bool(he_text)}")
                 # Create single segment from CompactText data
                 segment_data = {
                     "ref": ref,
@@ -1228,14 +1630,16 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                     }
                 }]
                 
-                logger.info(f"🔥 COMPACT TEXT SEGMENT CREATED: {ref} - EN: {len(en_text)} chars, HE: {len(he_text)} chars")
+                en_len = len(en_text) if isinstance(en_text, (str, list, tuple)) else 0
+                he_len = len(he_text) if isinstance(he_text, (str, list, tuple)) else 0
+                logger.info(f"[daily] COMPACT TEXT SEGMENT CREATED: {ref} - EN: {en_len} chars, HE: {he_len} chars")
                 
                 # Save total_segments to Redis if session_id and redis_client are provided
                 if session_id and redis_client:
                     try:
                         count_key = f"daily:sess:{session_id}:total_segments"
                         await redis_client.set(count_key, 1, ex=3600*24*7)  # 7 days TTL
-                        logger.info(f"🔥 SAVED TOTAL SEGMENTS: 1 for session {session_id}")
+                        logger.info(f"[daily] SAVED TOTAL SEGMENTS: 1 for session {session_id}")
                     except Exception as e:
                         logger.warning(f"Failed to save total_segments to Redis: {e}")
                 
@@ -1248,11 +1652,11 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             
             # If CompactText data is not available, try to process he_data as list
             elif isinstance(he_data, list) and len(he_data) > 0 and he_data[0]:
-                logger.info(f"🔥 PROCESSING HE_DATA AS LIST: {len(he_data)} items")
+                logger.info(f"[daily] PROCESSING HE_DATA AS LIST: {len(he_data)} items")
                 he_text_from_list = _clean_html_text(_extract_hebrew_text(he_data[0]))
                 
                 if he_text_from_list:
-                    logger.info(f"🔥 HE_TEXT FROM LIST: {len(he_text_from_list)} chars")
+                    logger.info(f"[daily] HE_TEXT FROM LIST: {len(he_text_from_list)} chars")
                     # Format for frontend - FocusReader показывает только иврит
                     formatted_segments = [{
                         "ref": ref,
@@ -1266,14 +1670,14 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         }
                     }]
                     
-                    logger.info(f"🔥 HE_DATA SEGMENT CREATED: {ref} - HE: {len(he_text_from_list)} chars")
+                    logger.info(f"[daily] HE_DATA SEGMENT CREATED: {ref} - HE: {len(he_text_from_list)} chars")
                     
                     # Save total_segments to Redis if session_id and redis_client are provided
                     if session_id and redis_client:
                         try:
                             count_key = f"daily:sess:{session_id}:total_segments"
                             await redis_client.set(count_key, 1, ex=3600*24*7)  # 7 days TTL
-                            logger.info(f"🔥 SAVED TOTAL SEGMENTS: 1 for session {session_id}")
+                            logger.info(f"[daily] SAVED TOTAL SEGMENTS: 1 for session {session_id}")
                         except Exception as e:
                             logger.warning(f"Failed to save total_segments to Redis: {e}")
                     
@@ -1284,11 +1688,11 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         "he_ref": data.get("heRef", ""),
                     }
             
-            logger.info(f"🔥 NO TEXT DATA AVAILABLE: en_text={bool(en_text)}, he_text={bool(he_text)}, he_data_type={type(he_data)}")
+            logger.info(f"[daily] NO TEXT DATA AVAILABLE: en_text={bool(en_text)}, he_text={bool(he_text)}, he_data_type={type(he_data)}")
             
             # Check if this is Jerusalem Talmud (triple structure: Chapter:Mishnah:Halakhah)
             if "jerusalem talmud" in ref.lower() and ":" in ref:
-                logger.info(f"🔥 DETECTED JERUSALEM TALMUD: {ref}")
+                logger.info(f"[daily] DETECTED JERUSALEM TALMUD: {ref}")
                 
                 # Parse Jerusalem Talmud range like "Jerusalem Talmud Sotah 5:4:3-6:3"
                 if "-" in ref:
@@ -1309,7 +1713,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         end_mishnah = int(end_parts[1])
                         end_halakhah = int(end_parts[2])
                         
-                        logger.info(f"🔥 JERUSALEM TALMUD RANGE: {start_chapter}:{start_mishnah}:{start_halakhah} to {end_chapter}:{end_mishnah}:{end_halakhah}")
+                        logger.info(f"[daily] JERUSALEM TALMUD RANGE: {start_chapter}:{start_mishnah}:{start_halakhah} to {end_chapter}:{end_mishnah}:{end_halakhah}")
                         
                         all_segments_data = []
                         
@@ -1345,13 +1749,13 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                                     "heRef": segment_data_item.get("heRef", "")
                                                 }
                                                 all_segments_data.append(segment_data)
-                                                logger.info(f"🔥 JERUSALEM TALMUD SEGMENT: {segment_ref}")
+                                                logger.info(f"[daily] JERUSALEM TALMUD SEGMENT: {segment_ref}")
                                             else:
                                                 break  # No more halakhot in this mishnah
                                         else:
                                             break  # No more halakhot in this mishnah
                                     except Exception as e:
-                                        logger.warning(f"🔥 FAILED TO FETCH JERUSALEM TALMUD SEGMENT {segment_ref}: {str(e)}")
+                                        logger.warning(f"[daily] FAILED TO FETCH JERUSALEM TALMUD SEGMENT {segment_ref}: {str(e)}")
                                         break
                                 
                                 current_halakhah = 1  # Reset for next mishnah
@@ -1376,14 +1780,14 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                     }
                                 })
                             
-                            logger.info(f"🔥 JERUSALEM TALMUD COMPLETE: loaded {len(formatted_segments)} segments")
+                            logger.info(f"[daily] JERUSALEM TALMUD COMPLETE: loaded {len(formatted_segments)} segments")
                             
                             # Save total_segments to Redis if session_id and redis_client are provided
                             if session_id and redis_client:
                                 try:
                                     count_key = f"daily:sess:{session_id}:total_segments"
                                     await redis_client.set(count_key, total_segments, ex=3600*24*7)  # 7 days TTL
-                                    logger.info(f"🔥 SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
+                                    logger.info(f"[daily] SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
                                 except Exception as e:
                                     logger.warning(f"Failed to save total_segments to Redis: {e}")
                             
@@ -1399,12 +1803,12 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             elif (" " in ref and not ":" in ref and not "-" in ref and 
                 any(word in ref.lower() for word in ["zevachim", "shabbat", "berakhot", "gittin", "ketubot", "baba", "sanhedrin", "yoma", "sukkah", "beitzah", "rosh", "taanit", "megillah", "moed", "pesachim", "yevamot", "nedarim", "nazir", "sotah", "kiddushin", "avodah", "horayot", "menachot", "hullin", "bekhorot", "arakhin", "temurah", "keritot", "meilah", "tamid", "middot", "kinnim", "niddah"])):
                 
-                logger.info(f"🔥 DETECTED TALMUD DAF: {ref}, checking if it can be segmented")
-                logger.info(f"🔥 TALMUD DEBUG: isSpanning={data.get('isSpanning')}, text_data={text_data}, text_type={type(text_data)}")
+                logger.info(f"[daily] DETECTED TALMUD DAF: {ref}, checking if it can be segmented")
+                logger.info(f"[daily] TALMUD DEBUG: isSpanning={data.get('isSpanning')}, text_data={text_data}, text_type={type(text_data)}")
                 
                 # Try to detect if this is actually spanning/segmented content
                 if data.get("isSpanning") or (isinstance(text_data, str) and len(text_data) > 1000) or (text_data is None and data.get("isSpanning")):
-                    logger.info(f"🔥 TALMUD DAF SEGMENTATION: {ref} appears to be a full daf, attempting to retrieve individual segments")
+                    logger.info(f"[daily] TALMUD DAF SEGMENTATION: {ref} appears to be a full daf, attempting to retrieve individual segments")
                     
                     # For Talmud, try to get individual segments by querying for 18a:1, 18a:2, 18b:1, 18b:2, etc.
                     base_daf = ref  # e.g., "Zevachim 18"
@@ -1440,7 +1844,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                             }
                                             side_segments.append(segment_data)
                                             segment_count += 1
-                                            logger.info(f"🔥 TALMUD SEGMENT #{segment_count}: {segment_ref}, en_len={len(en_text)}, he_len={len(he_text) if he_text else 0}")
+                                            logger.info(f"[daily] TALMUD SEGMENT #{segment_count}: {segment_ref}, en_len={len(en_text)}, he_len={len(he_text) if he_text else 0}")
                                         else:
                                             # No content, probably reached the end of this side
                                             break
@@ -1448,7 +1852,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                         # API call failed or no data, probably reached the end of this side
                                         break
                                 except Exception as e:
-                                    logger.warning(f"🔥 FAILED TO FETCH TALMUD SEGMENT {segment_ref}: {str(e)}")
+                                    logger.warning(f"[daily] FAILED TO FETCH TALMUD SEGMENT {segment_ref}: {str(e)}")
                                     break
 
                             # Ensure :1 exists as a placeholder if the side has content but started after 1
@@ -1471,7 +1875,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                 all_segments_data.extend(side_segments)
                     
                     if segment_count > 0:
-                        logger.info(f"🔥 TALMUD SEGMENTATION COMPLETED: {ref} -> {segment_count} segments")
+                        logger.info(f"[daily] TALMUD SEGMENTATION COMPLETED: {ref} -> {segment_count} segments")
                         focus_index = 0
                     # Normalize positions post-factum
                     n = len(all_segments_data)
@@ -1488,9 +1892,9 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             
             # If this is actually a range but returned as single text, try individual fetching
             if "-" in ref and ":" in ref:
-                logger.info(f"🔥 RANGE DETECTED IN SINGLE TEXT: {ref}, attempting individual fetching")
+                logger.info(f"[daily] RANGE DETECTED IN SINGLE TEXT: {ref}, attempting individual fetching")
                 start_ref, end_ref = ref.split("-", 1)
-                logger.info(f"🔥 SPLIT RESULT: start_ref='{start_ref}', end_ref='{end_ref}'")
+                logger.info(f"[daily] SPLIT RESULT: start_ref='{start_ref}', end_ref='{end_ref}'")
                 
                 if ":" in start_ref:
                     # Handle verse ranges like "Deuteronomy 32:1-52" or "Deuteronomy 32:1-Deuteronomy 32:52"
@@ -1504,15 +1908,15 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                         # Just verse number in end_ref: "52"
                         end_verse = int(end_ref.strip())            # 52
                     
-                    logger.info(f"🔥 FETCHING SINGLE-TEXT RANGE: {book_chapter}, verses {start_verse}-{end_verse}")
-                    logger.info(f"🔥 ABOUT TO LOOP: range({start_verse}, {end_verse + 1})")
+                    logger.info(f"[daily] FETCHING SINGLE-TEXT RANGE: {book_chapter}, verses {start_verse}-{end_verse}")
+                    logger.info(f"[daily] ABOUT TO LOOP: range({start_verse}, {end_verse + 1})")
                     
                     # Fetch each verse individually
                     verse_count = 0
                     for verse_num in range(start_verse, end_verse + 1):
                         verse_ref = f"{book_chapter}:{verse_num}"
                         verse_count += 1
-                        logger.info(f"🔥 FETCHING VERSE #{verse_count}: {verse_ref}")
+                        logger.info(f"[daily] FETCHING VERSE #{verse_count}: {verse_ref}")
                         try:
                             verse_result = await sefaria_service.get_text(verse_ref)
                             if verse_result.get("ok") and verse_result.get("data"):
@@ -1522,17 +1926,17 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                 he_text = getattr(verse_data, "he_text", "") or verse_data.get("he_text", "") or verse_data.get("he", "")
                                 
                                 # Debug Hebrew text availability for ranges
-                                logger.info(f"🔥 RANGE VERSE DEBUG: {verse_ref}")
-                                logger.info(f"🔥 EN available: {bool(en_text)}, HE available: {bool(he_text)}")
-                                logger.info(f"🔥 Raw verse_data keys: {list(verse_data.keys())}")
+                                logger.info(f"[daily] RANGE VERSE DEBUG: {verse_ref}")
+                                logger.info(f"[daily] EN available: {bool(en_text)}, HE available: {bool(he_text)}")
+                                logger.info(f"[daily] Raw verse_data keys: {list(verse_data.keys())}")
                                 if isinstance(he_text, str) and he_text:
-                                    logger.info(f"🔥 HE text preview: '{he_text[:50]}...'")
+                                    logger.info(f"[daily] HE text preview: '{he_text[:50]}...'")
                                 elif isinstance(he_text, list):
-                                    logger.info(f"🔥 HE text is list, length: {len(he_text)}")
+                                    logger.info(f"[daily] HE text is list, length: {len(he_text)}")
                                     if he_text and he_text[0]:
-                                        logger.info(f"🔥 HE[0] preview: '{he_text[0][:50]}...'")
+                                        logger.info(f"[daily] HE[0] preview: '{he_text[0][:50]}...'")
                                 else:
-                                    logger.info(f"🔥 HE text type: {type(he_text)}, value: '{he_text}'")
+                                    logger.info(f"[daily] HE text type: {type(he_text)}, value: '{he_text}'")
                                 
                                 segment_data = {
                                     "ref": verse_ref,
@@ -1543,16 +1947,16 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                                     "heRef": verse_data.get("heRef", "")
                                 }
                                 all_segments_data.append(segment_data)
-                                logger.info(f"🔥 SINGLE-RANGE VERSE #{verse_count}: {verse_ref}, added to segments (total now: {len(all_segments_data)})")
+                                logger.info(f"[daily] SINGLE-RANGE VERSE #{verse_count}: {verse_ref}, added to segments (total now: {len(all_segments_data)})")
                             else:
-                                logger.warning(f"🔥 FAILED TO FETCH VERSE: {verse_ref}, result: {verse_result}")
+                                logger.warning(f"[daily] FAILED TO FETCH VERSE: {verse_ref}, result: {verse_result}")
                         except Exception as e:
-                            logger.error(f"🔥 ERROR FETCHING SINGLE-RANGE VERSE {verse_ref}: {str(e)}", exc_info=True)
+                            logger.error(f"[daily] ERROR FETCHING SINGLE-RANGE VERSE {verse_ref}: {str(e)}", exc_info=True)
                             continue
                             
-                    logger.info(f"🔥 LOOP COMPLETED: processed {verse_count} verses, segments: {len(all_segments_data)}")
+                    logger.info(f"[daily] LOOP COMPLETED: processed {verse_count} verses, segments: {len(all_segments_data)}")
                 else:
-                    logger.info(f"🔥 RANGE PARSING FAILED: Could not parse range format for {ref}")
+                    logger.info(f"[daily] RANGE PARSING FAILED: Could not parse range format for {ref}")
                     # Fall back to single segment
                     segment_data = {
                         "ref": data.get("ref", ref),
@@ -1591,13 +1995,22 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
     formatted_segments = []
     total_segments = len(all_segments_data)
     for i, seg_data in enumerate(all_segments_data):
+        raw_en_text = ""
         raw_he_text = ""
         if hasattr(seg_data, "he_text"):
             raw_he_text = getattr(seg_data, "he_text") or ""
+        if hasattr(seg_data, "en_text"):
+            raw_en_text = getattr(seg_data, "en_text") or ""
         if not raw_he_text and isinstance(seg_data, dict):
             raw_he_text = (
                 seg_data.get("he_text")
                 or seg_data.get("heText")
+                or ""
+            )
+        if not raw_en_text and isinstance(seg_data, dict):
+            raw_en_text = (
+                seg_data.get("en_text")
+                or seg_data.get("enText")
                 or seg_data.get("text")
                 or ""
             )
@@ -1607,6 +2020,12 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             raw_he_text = ""
         else:
             raw_he_text = str(raw_he_text)
+        if isinstance(raw_en_text, list):
+            raw_en_text = " ".join(str(item) for item in raw_en_text if item)
+        elif raw_en_text is None:
+            raw_en_text = ""
+        else:
+            raw_en_text = str(raw_en_text)
 
         metadata = {}
         if isinstance(seg_data, dict):
@@ -1616,6 +2035,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
             "ref": seg_data.get("ref") if isinstance(seg_data, dict) else getattr(seg_data, "ref", None),
             "text": raw_he_text,
             "heText": raw_he_text,
+            "enText": raw_en_text,
             "position": (i / (total_segments - 1)) if total_segments > 1 else 0.5,
             "metadata": {
                 "title": (seg_data.get("title") if isinstance(seg_data, dict) else getattr(seg_data, "title", None)) or metadata.get("title"),
@@ -1623,6 +2043,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
                 "chapter": (seg_data.get("chapter") if isinstance(seg_data, dict) else getattr(seg_data, "chapter", None)) or metadata.get("chapter"),
                 "verse": (seg_data.get("verse") if isinstance(seg_data, dict) else getattr(seg_data, "verse", None)) or metadata.get("verse"),
                 "heRef": (seg_data.get("heRef") if isinstance(seg_data, dict) else getattr(seg_data, "heRef", None)) or metadata.get("heRef"),
+                "enText": metadata.get("enText") if metadata.get("enText") else raw_en_text,
             }
         })
     
@@ -1633,7 +2054,7 @@ async def get_full_daily_text(ref: str, sefaria_service: SefariaService, index_s
         try:
             count_key = f"daily:sess:{session_id}:total_segments"
             await redis_client.set(count_key, total_segments, ex=3600*24*7)  # 7 days TTL
-            logger.info(f"🔥 SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
+            logger.info(f"[daily] SAVED TOTAL SEGMENTS: {total_segments} for session {session_id}")
         except Exception as e:
             logger.warning(f"Failed to save total_segments to Redis: {e}")
     
