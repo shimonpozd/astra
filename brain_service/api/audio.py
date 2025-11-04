@@ -11,7 +11,7 @@ from fastapi import APIRouter, HTTPException, UploadFile, File, Form, Depends
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-# from services.chat_service import ChatService
+# from brain_service.services.chat_service import ChatService
 # from core.dependencies import get_chat_service
 
 router = APIRouter(prefix="/audio", tags=["audio"])

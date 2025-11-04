@@ -1,0 +1,59 @@
+{
+  "title": "Marit HaAyin on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Marit HaAyin",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "marit-haayin",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      21
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "מראית העין על נדרים"
+      },
+      {
+        "text": "Marit HaAyin on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Marit HaAyin on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.047Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Marit%20HaAyin%20on%20Nedarim"
+}

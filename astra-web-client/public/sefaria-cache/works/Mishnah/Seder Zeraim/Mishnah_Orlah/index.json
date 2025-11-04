@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Orlah",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "orlah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "orlah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "orlah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      35
+    ],
+    "titles": [
+      {
+        "text": "M Orlah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Orlah",
+        "lang": "en"
+      },
+      {
+        "text": "M. Orlah",
+        "lang": "en"
+      },
+      {
+        "text": "Orl.",
+        "lang": "en"
+      },
+      {
+        "text": "ʿOrlah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Orl.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah ʿOrlah",
+        "lang": "en"
+      },
+      {
+        "text": "ערלה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה ערלה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Orlah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Orlah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.092Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Orlah"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Halachot on Sotah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      384
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חדושי הלכות על סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Halachot on Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Sotah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.906Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Sotah"
+}

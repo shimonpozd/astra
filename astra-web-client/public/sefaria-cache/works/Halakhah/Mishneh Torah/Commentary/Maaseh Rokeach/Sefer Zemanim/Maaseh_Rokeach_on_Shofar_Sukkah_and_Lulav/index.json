@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      99,
+      165
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.347Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

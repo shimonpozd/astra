@@ -1,0 +1,357 @@
+{
+  "title": "Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "taanit1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      895
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Taanith",
+        "lang": "en"
+      },
+      {
+        "text": "Ta'anith",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Ta’anit",
+        "lang": "en"
+      },
+      {
+        "text": "Taan.",
+        "lang": "en"
+      },
+      {
+        "text": "Taʿãnith",
+        "lang": "en"
+      },
+      {
+        "text": "Ta‘an.",
+        "lang": "en"
+      },
+      {
+        "text": "Ta‘anith",
+        "lang": "en"
+      },
+      {
+        "text": "BT Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Taanis",
+        "lang": "en"
+      },
+      {
+        "text": "Ta'anit",
+        "lang": "en"
+      },
+      {
+        "text": "תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Taanit",
+    "checkFirst": {
+      "he": "משנה תענית",
+      "en": "Mishnah Taanit"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Taanit 2a:1-15a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-139"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-139"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1; MeEimatai Mazkirin",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "מאימתי מזכירין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Taanit 15a:4-18b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-233"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-233"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2; Seder Ta'anit",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "סדר תעניות כיצד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Taanit 18b:14-26a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-331"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-331"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3; Seder Ta'aniyot Elu",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "סדר תעניות אלו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Taanit 26a:3-31a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-427"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-427"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4; BiShloshah Perakim",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "בשלשה פרקים",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.064Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Taanit"
+}

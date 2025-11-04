@@ -1,0 +1,97 @@
+{
+  "title": "Ikar Tosafot Yom Tov on Mishnah Parah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Ikar Tosafot Yom Tov",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ikar-tosafot-yom-tov",
+          "mishnah",
+          "parah"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      82,
+      203
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.*?)\\."
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ikar Tosafot Yom Tov on M Parah"
+      },
+      {
+        "lang": "en",
+        "text": "Ikar Tosafot Yom Tov on Mishna Parah"
+      },
+      {
+        "lang": "en",
+        "text": "Ikar Tosafot Yom Tov on M. Parah"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר תוספות יום טוב על משנה פרה",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "עיקר התוספות יו\"ט על משנה פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר התוספות יו\"ט על פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר התוספות יום-טוב על משנה פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר התוספות יום-טוב על פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר ר' יום טוב ליפמן הלוי הלר על משנה פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר ר' יום טוב ליפמן הלוי הלר על פרה"
+      },
+      {
+        "lang": "he",
+        "text": "עיקר תוספות יום טוב על פרה"
+      },
+      {
+        "text": "Ikar Tosafot Yom Tov on Mishnah Parah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ikar Tosafot Yom Tov on Mishnah Parah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:38.902Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ikar%20Tosafot%20Yom%20Tov%20on%20Mishnah%20Parah"
+}

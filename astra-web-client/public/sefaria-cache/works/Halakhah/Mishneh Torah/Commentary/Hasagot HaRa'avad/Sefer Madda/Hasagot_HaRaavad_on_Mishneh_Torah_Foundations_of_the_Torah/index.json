@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.929Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Niddah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      2
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה נדה",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:30.137Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Niddah"
+}

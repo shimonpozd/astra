@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "משנה למלך על משנה תורה, הלכות מגילה",
+        "primary": true
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.101Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

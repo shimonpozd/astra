@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Bava Metzia",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      684,
+      687
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין בבא מציעא",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:24.367Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Bava%20Metzia"
+}

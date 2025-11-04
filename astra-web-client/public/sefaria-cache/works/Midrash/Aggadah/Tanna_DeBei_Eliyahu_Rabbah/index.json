@@ -1,0 +1,118 @@
+{
+  "title": "Tanna DeBei Eliyahu Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tanna-debei-eliyahu-rabbah"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      57
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Tanna Debei Eliyahu Rabah",
+        "lang": "en"
+      },
+      {
+        "text": "Tanna d'bei Eliyahu Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Tanna de bê Elijahu Rab.",
+        "lang": "en"
+      },
+      {
+        "text": "Tanna Debei Eliyahu Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "תנדבא\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "תדבא\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "תדב\"א רבה",
+        "lang": "he"
+      },
+      {
+        "text": "תדב\"א רבא",
+        "lang": "he"
+      },
+      {
+        "text": "תנא דבי אליהו רבא",
+        "lang": "he"
+      },
+      {
+        "text": "תנדבא״ר",
+        "lang": "he"
+      },
+      {
+        "text": "תנדבא”ר",
+        "lang": "he"
+      },
+      {
+        "text": "תדבא״ר",
+        "lang": "he"
+      },
+      {
+        "text": "תדבא”ר",
+        "lang": "he"
+      },
+      {
+        "text": "תדב״א רבה",
+        "lang": "he"
+      },
+      {
+        "text": "תדב”א רבה",
+        "lang": "he"
+      },
+      {
+        "text": "תדב״א רבא",
+        "lang": "he"
+      },
+      {
+        "text": "תדב”א רבא",
+        "lang": "he"
+      },
+      {
+        "text": "תנא דבי אליהו רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tanna DeBei Eliyahu Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tanna DeBei Eliyahu Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.753Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tanna%20DeBei%20Eliyahu%20Rabbah"
+}

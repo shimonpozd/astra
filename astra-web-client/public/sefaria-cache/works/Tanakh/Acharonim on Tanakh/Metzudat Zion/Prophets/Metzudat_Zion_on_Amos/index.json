@@ -1,0 +1,57 @@
+{
+  "title": "Metzudat Zion on Amos",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "amos"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      117,
+      280
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מצודת ציון על עמוס",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Amos",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Amos"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.328Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Amos"
+}

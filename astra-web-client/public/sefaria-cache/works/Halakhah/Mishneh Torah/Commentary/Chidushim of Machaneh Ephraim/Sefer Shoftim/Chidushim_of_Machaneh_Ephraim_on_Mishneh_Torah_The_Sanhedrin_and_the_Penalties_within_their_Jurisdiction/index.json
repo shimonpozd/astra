@@ -1,0 +1,60 @@
+{
+  "title": "Chidushim of Machaneh Ephraim on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chidushim of Machaneh Ephraim",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      }
+    ],
+    "lengths": [
+      26,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושים מהגאון בעל מחנה אפרים על משנה תורה, הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushim of Machaneh Ephraim on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushim of Machaneh Ephraim on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.928Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushim%20of%20Machaneh%20Ephraim%20on%20Mishneh%20Torah%2C%20The%20Sanhedrin%20and%20the%20Penalties%20within%20their%20Jurisdiction"
+}

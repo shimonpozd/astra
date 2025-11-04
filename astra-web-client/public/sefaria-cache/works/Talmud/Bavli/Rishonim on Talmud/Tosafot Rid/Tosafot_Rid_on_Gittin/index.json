@@ -1,0 +1,58 @@
+{
+  "title": "Tosafot Rid on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Rid"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-rid",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      180,
+      602
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "תוספות רי\"ד על גיטין",
+        "lang": "he"
+      },
+      {
+        "text": "Tosafot Rid on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Rid on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.668Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Rid%20on%20Gittin"
+}

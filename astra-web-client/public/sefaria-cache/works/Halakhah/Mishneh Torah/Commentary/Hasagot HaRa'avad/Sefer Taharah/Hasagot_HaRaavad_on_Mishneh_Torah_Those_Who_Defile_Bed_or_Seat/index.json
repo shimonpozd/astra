@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Those Who Defile Bed or Seat",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "those-who-defile-bed-or-seat"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      23,
+      23
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Those Who Defile Bed or Seat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Those Who Defile Bed or Seat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.419Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Those%20Who%20Defile%20Bed%20or%20Seat"
+}

@@ -1,0 +1,281 @@
+{
+  "title": "Steinsaltz on Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      283,
+      4383
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ביאור שטיינזלץ על חולין",
+        "lang": "he"
+      },
+      {
+        "text": "Steinsaltz on Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Chullin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 2a:1-26b:19",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הכל שוחטין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 27a:1-42a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "השוחט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 42a:3-67b:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אלו טרפות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 68a:1-78a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "בהמה המקשה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 78a:5-83b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אותו ואת בנו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 83b:3-89b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כסוי הדם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 89b:3-103b:15",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "גיד הנשה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 103b:16-117b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כל הבשר",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 117b:6-129b:18",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 9",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "העור והרוטב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 130a:1-134b:25",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 10",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הזרוע והלחיים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 135a:1-138b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 11",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ראשית הגז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chullin 138b:3-142a:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 12",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שילוח הקן",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:14.058Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Chullin"
+}

@@ -1,0 +1,106 @@
+{
+  "title": "Mishnah Sheviit",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "sheviit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sheviit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "sheviit"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      89
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Sheviit"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Sheviit"
+      },
+      {
+        "lang": "en",
+        "text": "M. Sheviit"
+      },
+      {
+        "lang": "en",
+        "text": "Shevi'it"
+      },
+      {
+        "lang": "en",
+        "text": "Sheviit"
+      },
+      {
+        "lang": "en",
+        "text": "Shevi’it"
+      },
+      {
+        "lang": "en",
+        "text": "Shebi."
+      },
+      {
+        "lang": "en",
+        "text": "Sh’biith"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Shebi."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Sh’biith"
+      },
+      {
+        "lang": "he",
+        "text": "שביעית"
+      },
+      {
+        "lang": "he",
+        "text": "מסכת שביעית"
+      },
+      {
+        "text": "משנה שביעית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Sheviit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Sheviit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.052Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Sheviit"
+}

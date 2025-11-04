@@ -1,0 +1,253 @@
+{
+  "title": "Rif Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      451
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Eruvin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 1a:1-5a:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מבוי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 5b:1-7a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "עושין פסין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 7a:8-10b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בכל מערבין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 10b:6-15b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מי שהוציאוהו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 15b:3-19a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד מעברין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 19a:4-24a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הדר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 24a:3-26b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "חלון",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 27a:1-29b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד משתתפין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 30a:1-31a:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל גגות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Eruvin 31a:11-35b:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוצא תפילין",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.064Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Eruvin"
+}

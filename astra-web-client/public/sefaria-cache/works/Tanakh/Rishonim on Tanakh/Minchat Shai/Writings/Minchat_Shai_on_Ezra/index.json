@@ -1,0 +1,58 @@
+{
+  "title": "Minchat Shai on Ezra",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Minchat Shai",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "minchat-shai",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      110,
+      150
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מנחת שי על עזרא",
+        "primary": true
+      },
+      {
+        "text": "Minchat Shai on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Minchat Shai on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.084Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Minchat%20Shai%20on%20Ezra"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Halachot on Niddah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      145,
+      369
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " חידושי הלכות על מסכת נדה",
+        "primary": true
+      },
+      {
+        "text": "Chidushei Halachot on Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.076Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Niddah"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Yad Ramah on Bava Batra",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Yad Ramah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-ramah",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      352,
+      3771
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "יד רמה על בבא בתרא",
+        "primary": true
+      },
+      {
+        "text": "Yad Ramah on Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Ramah on Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.798Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Ramah%20on%20Bava%20Batra"
+}

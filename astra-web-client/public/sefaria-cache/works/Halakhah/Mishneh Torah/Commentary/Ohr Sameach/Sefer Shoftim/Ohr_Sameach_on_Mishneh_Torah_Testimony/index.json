@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Testimony",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "testimony"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      37,
+      43
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות עדות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Testimony",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Testimony"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.663Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Testimony"
+}

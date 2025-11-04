@@ -1,0 +1,60 @@
+{
+  "title": "Birkat Avraham on Mishneh Torah, Vows",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Birkat Avraham",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "hilchot",
+          "vows"
+        ]
+      },
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "vows"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "text": "ברכת אברהם על משנה תורה, הלכות נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Birkat Avraham on Mishneh Torah, Vows",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Birkat Avraham on Mishneh Torah, Vows"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.374Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Birkat%20Avraham%20on%20Mishneh%20Torah%2C%20Vows"
+}

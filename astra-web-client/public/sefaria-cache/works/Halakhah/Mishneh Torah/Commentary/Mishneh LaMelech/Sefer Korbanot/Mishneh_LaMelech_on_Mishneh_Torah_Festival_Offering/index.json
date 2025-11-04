@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      6,
+      6
+    ],
+    "titles": [
+      {
+        "text": "משנה למלך על משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.466Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

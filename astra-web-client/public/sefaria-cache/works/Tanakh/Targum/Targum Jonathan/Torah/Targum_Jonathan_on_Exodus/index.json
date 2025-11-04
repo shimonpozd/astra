@@ -1,0 +1,65 @@
+{
+  "title": "Targum Jonathan on Exodus",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Targum Jonathan",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-jonathan",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      1210
+    ],
+    "titles": [
+      {
+        "text": "Targum Yonatan on Exodus",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. Ex.",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. I Ex.",
+        "lang": "en"
+      },
+      {
+        "text": "תרגום יונתן שמות",
+        "lang": "he"
+      },
+      {
+        "text": "תרגום יונתן על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Jonathan on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Jonathan on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.754Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Jonathan%20on%20Exodus"
+}

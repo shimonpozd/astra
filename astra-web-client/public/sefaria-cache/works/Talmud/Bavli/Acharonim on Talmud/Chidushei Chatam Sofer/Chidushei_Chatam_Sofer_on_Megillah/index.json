@@ -1,0 +1,50 @@
+{
+  "title": "Chidushei Chatam Sofer on Megillah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Chatam Sofer"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      63,
+      64
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי חתם סופר על מגילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chidushei Chatam Sofer on Megillah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Chatam Sofer on Megillah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.122Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Chatam%20Sofer%20on%20Megillah"
+}

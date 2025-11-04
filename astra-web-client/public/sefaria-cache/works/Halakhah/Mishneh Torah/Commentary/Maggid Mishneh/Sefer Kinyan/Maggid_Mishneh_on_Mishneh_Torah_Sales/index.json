@@ -1,0 +1,60 @@
+{
+  "title": "Maggid Mishneh on Mishneh Torah, Sales",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maggid Mishneh",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "hilchot",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "sales"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      389,
+      705
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגיד משנה על משנה תורה, הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "Maggid Mishneh on Mishneh Torah, Sales",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maggid Mishneh on Mishneh Torah, Sales"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.116Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maggid%20Mishneh%20on%20Mishneh%20Torah%2C%20Sales"
+}

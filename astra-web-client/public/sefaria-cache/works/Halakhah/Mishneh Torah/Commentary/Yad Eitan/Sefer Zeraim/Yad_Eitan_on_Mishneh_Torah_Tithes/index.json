@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Tithes",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "tithes"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "tithes"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      8,
+      8
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות מעשרות",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Tithes",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Tithes"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.163Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Tithes"
+}

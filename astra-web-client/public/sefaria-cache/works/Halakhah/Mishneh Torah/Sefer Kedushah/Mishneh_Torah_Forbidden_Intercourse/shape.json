@@ -1,0 +1,33 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    23,
+    14,
+    17,
+    22,
+    25,
+    23,
+    24,
+    22,
+    39,
+    21,
+    19,
+    25,
+    18,
+    19,
+    33,
+    13,
+    21,
+    30,
+    23,
+    20,
+    32,
+    21
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.049Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Forbidden%20Intercourse"
+}

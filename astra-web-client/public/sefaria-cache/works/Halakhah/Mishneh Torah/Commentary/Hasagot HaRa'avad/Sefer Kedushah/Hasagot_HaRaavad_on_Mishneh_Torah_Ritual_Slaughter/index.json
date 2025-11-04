@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Ritual Slaughter",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "ritual-slaughter"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      25,
+      27
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Ritual Slaughter",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Ritual Slaughter"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.177Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Ritual%20Slaughter"
+}

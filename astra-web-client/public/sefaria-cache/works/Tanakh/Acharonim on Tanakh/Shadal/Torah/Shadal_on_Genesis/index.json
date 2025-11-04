@@ -1,0 +1,161 @@
+{
+  "title": "Shadal on Genesis",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Shadal",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shadal",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      975,
+      1675
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shadal on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "שד\"ל על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shadal on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shadal on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.625Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shadal%20on%20Genesis"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of Minchat Chinukh on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Minchat Chinukh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושים ומקורים מבעל מנחת חינוך על משנה תורה, הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "Annotations of Minchat Chinukh on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of Minchat Chinukh on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:18.125Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20Minchat%20Chinukh%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

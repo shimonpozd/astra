@@ -1,0 +1,55 @@
+{
+  "title": "Chiddushei Anshei Shem on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Chiddushei Anshei Shem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-anshei-shem",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      12
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אנשי שם על תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Anshei Shem on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Anshei Shem on Taanit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:22.952Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Chiddushei%20Anshei%20Shem%20on%20Taanit"
+}

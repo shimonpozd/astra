@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Mikvaot",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "mikvaot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mikvaot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "mikvaot"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      71
+    ],
+    "titles": [
+      {
+        "text": "M. Mikvaot",
+        "lang": "en"
+      },
+      {
+        "text": "M Mikvaot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Mikvaot",
+        "lang": "en"
+      },
+      {
+        "text": "Mikv.",
+        "lang": "en"
+      },
+      {
+        "text": "Miḳvaoth",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Mikv.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Miḳvaoth",
+        "lang": "en"
+      },
+      {
+        "text": "מקואות",
+        "lang": "he"
+      },
+      {
+        "text": "מקוואות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה מקואות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Mikvaot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Mikvaot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.460Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Mikvaot"
+}

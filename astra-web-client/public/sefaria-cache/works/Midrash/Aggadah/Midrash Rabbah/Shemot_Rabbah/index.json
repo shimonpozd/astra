@@ -1,0 +1,141 @@
+{
+  "title": "Shemot Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "exodus",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash",
+          "exodus",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash-rabbah",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      52,
+      464
+    ],
+    "titles": [
+      {
+        "text": "Exodus Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Shemoth Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Shmot Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Exodus Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Shemoth Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Shmot Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Shemot Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Rabbah Shemot",
+        "lang": "en"
+      },
+      {
+        "text": "Exod. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Ex. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Sh’mot Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Sh’mot ‎Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "שמו\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "מדרש רבה שמות",
+        "lang": "he"
+      },
+      {
+        "text": "שמו''ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמו״ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמ\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמ״ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמו”ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמ”ר",
+        "lang": "he"
+      },
+      {
+        "text": "שמות רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shemot Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shemot Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.321Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shemot%20Rabbah"
+}

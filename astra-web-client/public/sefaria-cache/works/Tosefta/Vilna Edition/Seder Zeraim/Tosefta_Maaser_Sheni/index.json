@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Maaser Sheni",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "maaser-sheni"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      89
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Maaser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Ma'aser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "T. Ma'aser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Maaser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Maas. Sh."
+      },
+      {
+        "text": "Tosefta Ma'aser Sheni",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא מעשר שני",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Maaser Sheni",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Maaser Sheni"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.468Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Maaser%20Sheni"
+}

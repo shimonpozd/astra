@@ -1,0 +1,125 @@
+{
+  "title": "Bartenura on Mishnah Eruvin",
+  "categories": [
+    "Mishnah",
+    "Rishonim on Mishnah",
+    "Bartenura",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "bartenura",
+          "mishnah",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      96,
+      454
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishna Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishnah Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishna Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishnah Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on Mishna Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishna Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishnah Eruvin"
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על משנה עירובין",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על משנה עירובין"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על משנה עירובין"
+      },
+      {
+        "text": "Bartenura on Mishnah Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bartenura on Mishnah Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:12.364Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Bartenura%20on%20Mishnah%20Eruvin"
+}

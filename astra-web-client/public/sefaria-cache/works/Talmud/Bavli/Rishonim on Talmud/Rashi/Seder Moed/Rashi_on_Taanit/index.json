@@ -1,0 +1,349 @@
+{
+  "title": "Rashi on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashi",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      738,
+      1628
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "\\.(.+?)$",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Taanith"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ta'anit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ta'anith"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Masekhet Taanit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Talmud Taanit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Tractate Taanit"
+      },
+      {
+        "text": "רש״י על תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Taanit"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Taanit 2a:1-15a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-139"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-139"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-139"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-139"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "מאימתי מזכירין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Taanit 15a:4-18b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-233"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-233"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-233"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-233"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "סדר תעניות כיצד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Taanit 18b:14-26a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-331"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-331"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-331"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-331"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "סדר תעניות אלו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Taanit 26a:3-31a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-427"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-427"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-427"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-427"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "בשלשה פרקים",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.494Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Taanit"
+}

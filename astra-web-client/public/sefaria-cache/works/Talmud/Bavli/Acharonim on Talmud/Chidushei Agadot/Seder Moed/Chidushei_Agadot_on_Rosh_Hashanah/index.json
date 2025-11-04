@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Agadot on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-agadot",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      163
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושי אגדות על ראש השנה",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Agadot on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Agadot on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.492Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Agadot%20on%20Rosh%20Hashanah"
+}

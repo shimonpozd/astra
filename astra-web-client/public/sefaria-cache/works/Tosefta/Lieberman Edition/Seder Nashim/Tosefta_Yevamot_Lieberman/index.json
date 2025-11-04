@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Yevamot (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      114
+    ],
+    "titles": [
+      {
+        "text": "תוספתא יבמות (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Yevamot (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Yevamot (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.846Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Yevamot%20(Lieberman)"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    12,
+    8,
+    12,
+    9,
+    14,
+    8,
+    16,
+    11,
+    8
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.840Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Negaim"
+}

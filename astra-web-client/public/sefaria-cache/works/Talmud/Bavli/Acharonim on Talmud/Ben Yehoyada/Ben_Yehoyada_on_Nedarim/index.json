@@ -1,0 +1,50 @@
+{
+  "title": "Ben Yehoyada on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Ben Yehoyada"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      182,
+      121
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בן יהוידע על נדרים",
+        "primary": true
+      },
+      {
+        "text": "Ben Yehoyada on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ben Yehoyada on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.955Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ben%20Yehoyada%20on%20Nedarim"
+}

@@ -1,0 +1,129 @@
+{
+  "title": "Metzudat Zion on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      368,
+      606
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Second Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Shmuel Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Shmuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Samuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Shemuel"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שמואל ב",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ש״ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ש\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שמואל ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שמואל ב'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שמ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שמ״ב"
+      },
+      {
+        "text": "Metzudat Zion on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.215Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20II%20Samuel"
+}

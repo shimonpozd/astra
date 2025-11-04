@@ -1,0 +1,61 @@
+{
+  "title": "Korban Netanel on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Commentary",
+    "Korban Netanel",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Seif",
+      "siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "korban-netanel",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      182
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " קרבן נתנאל על ראש השנה",
+        "primary": true
+      },
+      {
+        "text": "Korban Netanel on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Korban Netanel on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.364Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Korban%20Netanel%20on%20Rosh%20Hashanah"
+}

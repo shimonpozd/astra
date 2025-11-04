@@ -1,0 +1,60 @@
+{
+  "title": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Reading the Shema",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chiddushei Rabbi Akiva Eiger",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "hilchot",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "reading-the-shema"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "חידושי רבי עקיבא איגר על משנה תורה, הלכות קריאת שמע",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Reading the Shema",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Reading the Shema"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.525Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Rabbi%20Akiva%20Eiger%20on%20Mishneh%20Torah%2C%20Reading%20the%20Shema"
+}

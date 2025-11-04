@@ -1,0 +1,60 @@
+{
+  "title": "Ruth",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "ruth"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ruth"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      85
+    ],
+    "titles": [
+      {
+        "text": "Rut",
+        "lang": "en"
+      },
+      {
+        "text": "Rus",
+        "lang": "en"
+      },
+      {
+        "text": "רות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ruth",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ruth"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.488Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ruth"
+}

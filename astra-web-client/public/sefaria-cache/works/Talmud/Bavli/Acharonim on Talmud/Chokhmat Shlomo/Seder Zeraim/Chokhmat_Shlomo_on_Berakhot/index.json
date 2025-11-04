@@ -1,0 +1,67 @@
+{
+  "title": "Chokhmat Shlomo on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chokhmat Shlomo",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chokhmat-shlomo",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      306
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Maharshal on Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "מהרש\"ל ברכות",
+        "lang": "he"
+      },
+      {
+        "primary": true,
+        "text": "חכמת שלמה על ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "Chokhmat Shlomo on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chokhmat Shlomo on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.204Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chokhmat%20Shlomo%20on%20Berakhot"
+}

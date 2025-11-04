@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Beitzah",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      42
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "M. Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "M Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Bets."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Betsah"
+      },
+      {
+        "text": "משנה ביצה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.144Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Beitzah"
+}

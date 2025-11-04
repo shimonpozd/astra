@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, Service on the Day of Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "service-on-the-day-of-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      3,
+      4
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "שער המלך על משנה תורה, הלכות עבודת יום הכפורים"
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, Service on the Day of Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, Service on the Day of Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.142Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20Service%20on%20the%20Day%20of%20Atonement"
+}

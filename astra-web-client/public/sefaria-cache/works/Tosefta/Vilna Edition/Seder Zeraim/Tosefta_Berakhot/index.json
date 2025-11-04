@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Berakhot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      151
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Brachot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ber."
+      },
+      {
+        "text": "תוספתא ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.426Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Berakhot"
+}

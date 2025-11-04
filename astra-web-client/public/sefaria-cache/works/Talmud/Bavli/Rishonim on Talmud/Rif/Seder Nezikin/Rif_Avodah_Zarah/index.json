@@ -1,0 +1,163 @@
+{
+  "title": "Rif Avodah Zarah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "avodah-zarah"
+        ]
+      }
+    ],
+    "lengths": [
+      152,
+      282
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף עבודה זרה",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף עבודה זרה",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף עבודה זרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Avodah Zarah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Avodah Zarah 1a:1-7a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "לפני אידיהן",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Avodah Zarah 7a:4-17b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "אין מעמידין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Avodah Zarah 17b:4-23a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "כל הצלמים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Avodah Zarah 23a:3-30a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "רבי ישמעאל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Avodah Zarah 30a:3-40a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "השוכר את הפועל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.255Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Avodah%20Zarah"
+}

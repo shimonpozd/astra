@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    17,
+    17,
+    11,
+    16,
+    16,
+    12,
+    14,
+    14
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.495Z",
+  "source": "http://localhost:8000/api/shape/Song%20of%20Songs"
+}

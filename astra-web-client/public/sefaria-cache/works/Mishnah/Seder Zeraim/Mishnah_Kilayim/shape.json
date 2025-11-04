@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    9,
+    11,
+    7,
+    9,
+    8,
+    9,
+    8,
+    6,
+    10
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.067Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Kilayim"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    12,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:35.774Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Challah%20(Lieberman)"
+}

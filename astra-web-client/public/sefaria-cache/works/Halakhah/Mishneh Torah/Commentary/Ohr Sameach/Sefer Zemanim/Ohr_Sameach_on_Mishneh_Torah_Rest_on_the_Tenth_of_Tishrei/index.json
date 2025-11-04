@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Rest on the Tenth of Tishrei",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      6,
+      7
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "אור שמח על משנה תורה, הלכות שביתת עשור",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Rest on the Tenth of Tishrei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Rest on the Tenth of Tishrei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.116Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Rest%20on%20the%20Tenth%20of%20Tishrei"
+}

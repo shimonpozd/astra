@@ -1,0 +1,52 @@
+{
+  "title": "Hagahot HaBach on Rif Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot HaBach"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-habach",
+          "rif",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      39,
+      582
+    ],
+    "titles": [
+      {
+        "text": "הגהות הב\"ח על רי\"ף סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot HaBach on Rif Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot HaBach on Rif Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:26.080Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20HaBach%20on%20Rif%20Sanhedrin"
+}

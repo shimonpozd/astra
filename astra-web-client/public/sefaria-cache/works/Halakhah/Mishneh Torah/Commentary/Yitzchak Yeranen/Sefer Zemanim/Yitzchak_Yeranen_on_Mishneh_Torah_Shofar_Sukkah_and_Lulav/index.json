@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      17,
+      20
+    ],
+    "titles": [
+      {
+        "text": "יצחק ירנן על משנה תורה, הלכות שופר וסוכה ולולב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.726Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

@@ -1,0 +1,573 @@
+{
+  "title": "Rashi on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashi",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      1039,
+      1832
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "\\.(.+?)$",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Masekhet Shevuot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Talmud Shevuot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Tractate Shevuot"
+      },
+      {
+        "text": "רש״י על שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Shevuot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 2a:1-14a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-136"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-136"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-136"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-136"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים קמא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 14a:12-19b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-229"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-229"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-229"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-229"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ידיעות הטומאה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 19b:13-29b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-328"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-328"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-328"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-328"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים בתרא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 30a:1-36b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-424"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-424"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-424"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-424"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת העדות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 36b:5-38b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-521"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-521"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-521"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-521"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הפקדון",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 38b:8-44b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-619"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-619"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-619"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-619"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הדיינין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 44b:8-49a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-717"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-717"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-717"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-717"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כל הנשבעין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Shevuot 49a:4-49b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-817"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-817"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-817"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-817"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ארבעה שומרין",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.205Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Shevuot"
+}

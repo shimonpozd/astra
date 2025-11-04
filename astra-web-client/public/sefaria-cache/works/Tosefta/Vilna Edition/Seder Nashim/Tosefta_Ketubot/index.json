@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Ketubot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      125
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Kesuvos"
+      },
+      {
+        "lang": "en",
+        "text": "T. Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Ktubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Kesuvos"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Keth."
+      },
+      {
+        "text": "תוספתא כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.601Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Ketubot"
+}

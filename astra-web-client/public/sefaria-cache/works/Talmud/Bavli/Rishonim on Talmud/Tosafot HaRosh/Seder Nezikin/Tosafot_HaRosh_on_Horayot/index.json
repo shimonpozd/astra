@@ -1,0 +1,59 @@
+{
+  "title": "Tosafot HaRosh on Horayot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot HaRosh",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-harosh",
+          "horayot"
+        ]
+      }
+    ],
+    "lengths": [
+      28,
+      159
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות הרא\"ש על מסכת הוריות"
+      },
+      {
+        "text": "Tosafot HaRosh on Horayot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot HaRosh on Horayot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.529Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20HaRosh%20on%20Horayot"
+}

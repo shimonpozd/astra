@@ -1,4 +1,5 @@
 import React from "react";
+import { debugLog } from '../utils/debugLogger';
 
 interface Commentator {
   ref: string;
@@ -25,7 +26,7 @@ export default function RightSidePanel({
   bookshelfItems,
   currentReference
 }: RightSidePanelProps) {
-  console.log('🔄 RightSidePanel render:', sources.length, 'sources, bookshelf:', bookshelfItems.length);
+  debugLog('🔄 RightSidePanel render:', sources.length, 'sources, bookshelf:', bookshelfItems.length);
 
   // Check if text contains Hebrew characters
   const containsHebrew = (text: string) => {
@@ -144,7 +145,7 @@ export default function RightSidePanel({
               📖 Источники ({sources.length})
             </div>
             {sources.map((src, idx) => {
-              console.log('📖 Rendering source:', src.id || idx, src);
+              debugLog('📖 Rendering source:', src.id || idx, src);
               const isHebrewText = src.text && containsHebrew(src.text);
               const fontFamily = src.text ? getFontFamily(src.text) : 'inherit';
 
@@ -262,4 +263,3 @@ export default function RightSidePanel({
     </div>
   );
 }
-

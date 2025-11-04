@@ -1,0 +1,55 @@
+{
+  "title": "Shiltei HaGiborim on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      135,
+      316
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.925Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Shabbat"
+}

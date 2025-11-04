@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Terumot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "terumot"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      168
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Trumot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Trumot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Trumot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ter."
+      },
+      {
+        "text": "תוספתא תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Terumot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Terumot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.428Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Terumot"
+}

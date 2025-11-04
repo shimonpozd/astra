@@ -1,0 +1,56 @@
+{
+  "title": "Targum Neofiti",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Targum Neofiti"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-neofiti",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      8
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Neofiti"
+      },
+      {
+        "lang": "he",
+        "text": "תרגום נאופיטי"
+      },
+      {
+        "text": "תרגום ניאופיטי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Neofiti",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Neofiti"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.970Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Neofiti"
+}

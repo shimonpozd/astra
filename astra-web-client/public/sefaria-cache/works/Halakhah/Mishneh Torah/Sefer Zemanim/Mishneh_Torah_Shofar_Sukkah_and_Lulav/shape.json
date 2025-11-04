@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    8,
+    10,
+    13,
+    16,
+    25,
+    16,
+    27,
+    15
+  ],
+  "fetchedAt": "2025-10-30T14:42:16.971Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

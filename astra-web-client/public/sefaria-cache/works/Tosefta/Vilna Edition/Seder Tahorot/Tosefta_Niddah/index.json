@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Niddah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      71
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Nidah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Niddah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Niddah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Nidah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Nidah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Nidd."
+      },
+      {
+        "text": "תוספתא נדה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.828Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Niddah"
+}

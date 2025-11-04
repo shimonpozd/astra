@@ -1,0 +1,263 @@
+{
+  "title": "Steinsaltz on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      1498
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ביאור שטיינזלץ על נדרים",
+        "lang": "he"
+      },
+      {
+        "text": "Steinsaltz on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Nedarim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 2a:1-13b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כל כנויי",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 13b:7-20b:13",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ואלו מותרין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 20b:14-32b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ארבעה נדרים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 32b:10-45a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אין בין המודר",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 45b:1-48b:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "השותפין שנדרו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 49a:1-53b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הנודר מן המבושל",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 54a:1-60a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הנודר מן הירק",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 60a:4-63b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "קונם יין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 64a:1-66b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 9",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "רבי אליעזר",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 66b:10-79a:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 10",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "נערה המאורסה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Nedarim 79a:11-91b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 11",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ואלו נדרים",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.951Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Nedarim"
+}

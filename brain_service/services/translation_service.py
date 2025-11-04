@@ -4,8 +4,8 @@ import logging
 import html
 from typing import Dict, Any, AsyncGenerator, Optional, List
 
-from services.sefaria_service import SefariaService
-from services.llm_service import LLMService
+from brain_service.services.sefaria_service import SefariaService
+from brain_service.services.llm_service import LLMService
 from config.prompts import get_prompt
 from core.llm_config import get_llm_for_task, LLMConfigError
 

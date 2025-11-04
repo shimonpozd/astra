@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Forbidden Intercourse",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "forbidden-intercourse"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      60,
+      81
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות איסורי ביאה",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Forbidden Intercourse",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Forbidden Intercourse"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.859Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Forbidden%20Intercourse"
+}

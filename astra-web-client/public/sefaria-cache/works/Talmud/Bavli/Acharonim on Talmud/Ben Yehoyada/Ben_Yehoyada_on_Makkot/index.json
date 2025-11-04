@@ -1,0 +1,50 @@
+{
+  "title": "Ben Yehoyada on Makkot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Ben Yehoyada"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      48,
+      58
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בן יהוידע על מכות",
+        "primary": true
+      },
+      {
+        "text": "Ben Yehoyada on Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ben Yehoyada on Makkot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.015Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ben%20Yehoyada%20on%20Makkot"
+}

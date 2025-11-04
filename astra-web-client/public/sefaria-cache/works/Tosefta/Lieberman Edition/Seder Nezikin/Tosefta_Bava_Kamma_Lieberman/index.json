@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Bava Kamma (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      218
+    ],
+    "titles": [
+      {
+        "text": "תוספתא בבא קמא (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Bava Kamma (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Bava Kamma (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.958Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Bava%20Kamma%20(Lieberman)"
+}

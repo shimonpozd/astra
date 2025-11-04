@@ -1,0 +1,54 @@
+{
+  "title": "Rabbeinu Yehonatan of Lunel on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-yehonatan-of-lunel",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      70,
+      1146
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "רבינו יהונתן מלוניל על עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Yehonatan of Lunel on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Yehonatan of Lunel on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.194Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rabbeinu%20Yehonatan%20of%20Lunel%20on%20Eruvin"
+}

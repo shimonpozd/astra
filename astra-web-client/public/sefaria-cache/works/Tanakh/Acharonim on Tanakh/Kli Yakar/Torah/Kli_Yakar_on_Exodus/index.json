@@ -1,0 +1,93 @@
+{
+  "title": "Kli Yakar on Exodus",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Kli Yakar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kli-yakar",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      200,
+      575
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Exod."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Ex."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Exo"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Shmot"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Shemot"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Ex"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Exo."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Exod"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Shemoth"
+      },
+      {
+        "text": "כלי יקר על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kli Yakar on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kli Yakar on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.370Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kli%20Yakar%20on%20Exodus"
+}

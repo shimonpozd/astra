@@ -1,0 +1,57 @@
+{
+  "title": "Rashash on Mishnah Sheviit",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Rashash",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "mishnah",
+          "sheviit"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      39,
+      48
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "רש״ש על משנה שביעית"
+      },
+      {
+        "text": "Rashash on Mishnah Sheviit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Mishnah Sheviit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:49.364Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rashash%20on%20Mishnah%20Sheviit"
+}

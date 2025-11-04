@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      96,
+      201
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על חולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:33.458Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Chullin"
+}

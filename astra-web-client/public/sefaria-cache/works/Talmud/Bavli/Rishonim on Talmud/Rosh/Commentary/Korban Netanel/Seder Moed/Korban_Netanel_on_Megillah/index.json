@@ -1,0 +1,61 @@
+{
+  "title": "Korban Netanel on Megillah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Commentary",
+    "Korban Netanel",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Seif",
+      "siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "korban-netanel",
+          "megillah"
+        ]
+      }
+    ],
+    "lengths": [
+      63,
+      242
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " קרבן נתנאל על מגילה",
+        "primary": true
+      },
+      {
+        "text": "Korban Netanel on Megillah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Korban Netanel on Megillah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.391Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Korban%20Netanel%20on%20Megillah"
+}

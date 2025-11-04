@@ -1,0 +1,373 @@
+{
+  "title": "Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      164,
+      2406
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Masechet Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Qiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Qiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "kedushin"
+      },
+      {
+        "lang": "en",
+        "text": "Kidd."
+      },
+      {
+        "lang": "en",
+        "text": "Ḳiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Kidushin"
+      },
+      {
+        "lang": "en",
+        "text": "Qid."
+      },
+      {
+        "lang": "he",
+        "text": "קדושין"
+      },
+      {
+        "lang": "he",
+        "text": "קדושי'"
+      },
+      {
+        "lang": "he",
+        "text": "קידושי'"
+      },
+      {
+        "lang": "he",
+        "text": "קידושי׳"
+      },
+      {
+        "lang": "he",
+        "text": "קדושי׳"
+      },
+      {
+        "text": "BT Kiddushin",
+        "lang": "en"
+      },
+      {
+        "text": "קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kiddushin",
+    "checkFirst": {
+      "he": "משנה קידושין",
+      "en": "Mishnah Kiddushin"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Kiddushin 2a:1-41a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-117"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-117"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1; HaIshah Nikneit"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האשה נקנית"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Kiddushin 41a:3-58b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-215"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-215"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2; HaIsh Mekaddesh"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האיש מקדש"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Kiddushin 58b:12-69a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-315"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-315"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3; HaOmer LeChavero"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האומר לחברו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Kiddushin 69a:12-82b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-413"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-413"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4; Asarah Yochasin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "עשרה יוחסין"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.144Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kiddushin"
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Maasrot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "maasrot"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      54
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Maasrot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Maasros"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Ma'asrot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Maasrot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Ma'asrot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Maasr."
+      },
+      {
+        "text": "Tosefta Ma'asrot",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא מעשרות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Maasrot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Maasrot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.466Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Maasrot"
+}

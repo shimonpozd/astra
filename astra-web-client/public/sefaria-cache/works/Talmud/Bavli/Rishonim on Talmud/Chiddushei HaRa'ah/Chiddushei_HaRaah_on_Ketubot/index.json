@@ -1,0 +1,49 @@
+{
+  "title": "Chiddushei HaRa'ah on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Chiddushei HaRa'ah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-haraah",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      681
+    ],
+    "titles": [
+      {
+        "text": "חדושי הרא\"ה על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei HaRa'ah on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei HaRa'ah on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:35.328Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Chiddushei%20HaRa'ah%20on%20Ketubot"
+}

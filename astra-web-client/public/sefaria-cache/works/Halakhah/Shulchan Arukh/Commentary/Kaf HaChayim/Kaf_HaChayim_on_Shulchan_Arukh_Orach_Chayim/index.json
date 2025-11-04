@@ -1,0 +1,97 @@
+{
+  "title": "Kaf HaChayim on Shulchan Arukh, Orach Chayim",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Kaf HaChayim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Siman",
+      "SeifKatan",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif Katan",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kaf-hachayim",
+          "orach-chayim"
+        ]
+      }
+    ],
+    "lengths": [
+      697,
+      29266,
+      29895
+    ],
+    "toc_zoom": 2,
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Kaf HaChaim"
+      },
+      {
+        "lang": "en",
+        "text": "Kaf HaChaim, Orach Chaim"
+      },
+      {
+        "lang": "he",
+        "text": "כה\"ח או\"ח"
+      },
+      {
+        "lang": "en",
+        "text": "Kaf ha-Hayyim"
+      },
+      {
+        "lang": "en",
+        "text": "<i>Kaf ha-Hayyim</i>"
+      },
+      {
+        "lang": "he",
+        "text": "כה\"ח"
+      },
+      {
+        "lang": "en",
+        "text": "Kaf ha-Chayim"
+      },
+      {
+        "text": "כה״ח או״ח",
+        "lang": "he"
+      },
+      {
+        "text": "כה”ח או”ח",
+        "lang": "he"
+      },
+      {
+        "text": "כה״ח",
+        "lang": "he"
+      },
+      {
+        "text": "כה”ח",
+        "lang": "he"
+      },
+      {
+        "text": "כף החיים על שולחן ערוך אורח חיים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kaf HaChayim on Shulchan Arukh, Orach Chayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kaf HaChayim on Shulchan Arukh, Orach Chayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.448Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kaf%20HaChayim%20on%20Shulchan%20Arukh%2C%20Orach%20Chayim"
+}

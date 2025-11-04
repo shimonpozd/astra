@@ -1,0 +1,34 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      2,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      3
+    ],
+    [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      9
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:42.043Z",
+  "source": "https://www.sefaria.org/api/shape/Lechem%20Shamayim%20on%20Mishnah%20Horayot"
+}

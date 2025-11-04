@@ -1,0 +1,64 @@
+{
+  "title": "Tosefta Rosh Hashanah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      31
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Rosh Hashanah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Rosh Hashanah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Rosh HaShannah"
+      },
+      {
+        "text": "Tosefta Rosh HaShanah",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.563Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Rosh%20Hashanah"
+}

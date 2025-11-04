@@ -1,0 +1,750 @@
+{
+  "title": "Rashi on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashi",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      3198,
+      6193
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "\\.(.+?)$",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Tractate Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Talmud Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Masekhet Sanhedrin"
+      },
+      {
+        "text": "רש״י על סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Sanhedrin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 2a:1-18a:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-133"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-133"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-133"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-133"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "דיני ממונות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 18a:5-22b:23",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-226"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-226"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-226"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-226"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "כהן גדול"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 23a:1-31b:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-326"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-326"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-326"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-326"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "זה בורר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 32a:1-39b:22",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-422"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-422"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-422"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-422"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אחד דיני ממונות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 40a:1-42a:20",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-519"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-519"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-519"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-519"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "היו בודקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 42b:1-49a:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-617"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-617"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-617"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-617"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "נגמר הדין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 49b:1-68a:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-715"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-715"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-715"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-715"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "ארבע מיתות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 68b:1-75a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-815"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-815"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-815"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-815"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "בן סורר ומורה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 75a:7-84a:18",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-915"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-915"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-915"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-915"
+              ]
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הנשרפין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 84b:1-90a:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-1010"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-1010"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1010"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1010"
+              ]
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו הן הנחנקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sanhedrin 90a:15-113b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-1112"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-1112"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1112"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1112"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 11,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 11"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "חלק"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.652Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Sanhedrin"
+}

@@ -1,0 +1,253 @@
+{
+  "title": "Rif Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      255
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Sanhedrin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 1a:1-3a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "דיני ממונות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 3b:1-10a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "זה בורר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 10a:3-13b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אחד דיני ממונות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 14a:1-14a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "היו בודקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 14b:1-15b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "נגמר הדין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 15b:4-16b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "ארבע מיתות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 17a:1-18b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "בן סורר ומורה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 18b:5-19a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הנשרפין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 19a:5-19a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו הן הנחנקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Sanhedrin 19b:1-20a:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 11"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "חלק"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.242Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Sanhedrin"
+}

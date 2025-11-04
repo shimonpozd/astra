@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Sales",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "sales"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      257,
+      409
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Sales",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Sales"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.943Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Sales"
+}

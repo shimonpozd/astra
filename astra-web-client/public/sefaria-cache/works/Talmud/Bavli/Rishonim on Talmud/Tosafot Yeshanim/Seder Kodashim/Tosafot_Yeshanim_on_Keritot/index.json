@@ -1,0 +1,91 @@
+{
+  "title": "Tosafot Yeshanim on Keritot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Yeshanim",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-yeshanim",
+          "keritot"
+        ]
+      }
+    ],
+    "lengths": [
+      56,
+      102,
+      108
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Talmud Keritot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Masekhet Keritot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Tractate Keritot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Keritut"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Talmud Keritut"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Masekhet Keritut"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot Yeshanim on Tractate Keritut"
+      },
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות ישנים  על כריתות"
+      },
+      {
+        "text": "Tosafot Yeshanim on Keritot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Yeshanim on Keritot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.780Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Yeshanim%20on%20Keritot"
+}

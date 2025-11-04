@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות ביאת מקדש"
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.785Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

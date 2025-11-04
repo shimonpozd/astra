@@ -1,0 +1,31 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    1,
+    0,
+    2,
+    1,
+    2,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "fetchedAt": "2025-10-30T14:22:24.925Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20Chavot%20Yair%20on%20Taanit"
+}

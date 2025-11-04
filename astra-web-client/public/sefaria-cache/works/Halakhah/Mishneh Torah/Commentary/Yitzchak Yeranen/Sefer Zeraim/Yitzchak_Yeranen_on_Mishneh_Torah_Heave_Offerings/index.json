@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Heave Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "heave-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      58,
+      70
+    ],
+    "titles": [
+      {
+        "text": "יצחק ירנן על משנה תורה, הלכות תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Heave Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Heave Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.906Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Heave%20Offerings"
+}

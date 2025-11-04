@@ -1,0 +1,73 @@
+{
+  "title": "Metzudat Zion on Ezekiel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "ezekiel"
+        ]
+      }
+    ],
+    "lengths": [
+      48,
+      761,
+      1607
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ezek"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ezek."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Yehezkel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Yechezkel"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על יחזקאל",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Ezekiel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Ezekiel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.285Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Ezekiel"
+}

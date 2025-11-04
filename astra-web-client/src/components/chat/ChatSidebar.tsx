@@ -10,6 +10,7 @@ interface ChatSidebarProps {
   selectedChatId: string | null;
   onSelectChat: (id: string, type: 'chat' | 'study' | 'daily') => void;
   onCreateChat: () => void;
+  onCreateStudy?: () => void;
   onDeleteSession: (id: string, type: 'chat' | 'study' | 'daily') => void;
 }
 
@@ -20,6 +21,7 @@ export default function ChatSidebar({
   selectedChatId,
   onSelectChat,
   onCreateChat,
+  onCreateStudy,
   onDeleteSession,
 }: ChatSidebarProps) {
   
@@ -27,7 +29,7 @@ export default function ChatSidebar({
     try { return (localStorage.getItem('astra_sidebar_mode') as 'split' | 'compact') || 'split'; } catch { return 'split'; }
   });
   const [activeCategory, setActiveCategory] = useState<'daily' | 'study' | 'chat'>(() => {
-    try { return (localStorage.getItem('astra_active_category') as 'daily'|'study'|'chat') || 'chat'; } catch { return 'chat'; }
+    try { return (localStorage.getItem('astra_active_category') as 'daily'|'study'|'chat') || 'study'; } catch { return 'study'; }
   });
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
   const { theme } = useTheme();
@@ -126,9 +128,9 @@ export default function ChatSidebar({
         </div>
 
         {([
-          { key: 'daily', icon: <Calendar className="w-5 h-5" />, label: 'Daily' },
           { key: 'study', icon: <BookOpen className="w-5 h-5" />, label: 'Study' },
-          { key: 'chat',  icon: <MessageSquare className="w-5 h-5" />, label: 'Chat'  }
+          { key: 'chat',  icon: <MessageSquare className="w-5 h-5" />, label: 'Chat'  },
+          { key: 'daily', icon: <Calendar className="w-5 h-5" />, label: 'Daily' }
         ] as Array<{key: 'daily'|'study'|'chat'; icon: React.ReactNode; label: string}>).map(cat => {
           const selected = activeCategory === cat.key;
           return (
@@ -143,7 +145,7 @@ export default function ChatSidebar({
                 transition: 'all 0.25s cubic-bezier(0.25, 1, 0.5, 1)'
               }}
               onClick={() => handleSelectCategory(cat.key)}
-              title={cat.label}
+              title={cat.key === 'daily' ? `${cat.label} · в разработке` : cat.label}
             >
               {cat.icon}
             </button>
@@ -151,14 +153,22 @@ export default function ChatSidebar({
         })}
       </div>
 
-      {/* Right List (visible in split) */}
-      {mode === 'split' && (
-        <div className="flex-1 min-h-0 overflow-hidden flex flex-col" style={{ width: 300, boxShadow: isDark ? '-1px 0 0 rgba(255,255,255,0.05)' : '-1px 0 0 rgba(0,0,0,0.05)' }}>
+      {/* Right List (always visible for easy switching) */}
+      <div className="flex-1 min-h-0 overflow-hidden flex flex-col" style={{ width: 300, boxShadow: isDark ? '-1px 0 0 rgba(255,255,255,0.05)' : '-1px 0 0 rgba(0,0,0,0.05)' }}>
           <div className="panel-padding border-b border-[color:var(--color-separator,transparent)]" style={{ borderColor: colorSeparator }}>
             <div className="flex items-center justify-between">
-              <h3 className="text-[12px] font-medium tracking-wide" style={{ color: colorFgMuted }}>{activeCategory[0].toUpperCase() + activeCategory.slice(1)}</h3>
+              <h3 className="text-[12px] font-medium tracking-wide" style={{ color: colorFgMuted }}>
+                {activeCategory[0].toUpperCase() + activeCategory.slice(1)}
+                {activeCategory === 'daily' ? ' · в разработке' : ''}
+              </h3>
               <button
-                onClick={onCreateChat}
+                onClick={() => {
+                  if (activeCategory === 'study') {
+                    onCreateStudy && onCreateStudy();
+                  } else if (activeCategory === 'chat') {
+                    onCreateChat();
+                  }
+                }}
                 className="h-8 w-8 grid place-items-center rounded-md"
                 style={{ border: '1px solid transparent', color: colorAccent }}
                 aria-label="New"
@@ -238,8 +248,7 @@ export default function ChatSidebar({
           </div>
         )}
           </div>
-        </div>
-      )}
+      </div>
     </aside>
   );
 }

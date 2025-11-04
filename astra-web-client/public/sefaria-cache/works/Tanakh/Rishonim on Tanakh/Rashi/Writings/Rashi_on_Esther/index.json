@@ -1,0 +1,77 @@
+{
+  "title": "Rashi on Esther",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "esther"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      94,
+      148
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Est."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Est"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ester"
+      },
+      {
+        "text": "רש״י על אסתר",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על אסתר",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על אסתר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Esther",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Esther"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.423Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Esther"
+}

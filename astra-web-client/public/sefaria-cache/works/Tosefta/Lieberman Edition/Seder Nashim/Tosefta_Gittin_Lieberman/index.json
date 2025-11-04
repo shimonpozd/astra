@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Gittin (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      83
+    ],
+    "titles": [
+      {
+        "text": "תוספתא גיטין (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Gittin (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Gittin (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.906Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Gittin%20(Lieberman)"
+}

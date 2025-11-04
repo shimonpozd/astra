@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Yevamot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      103
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Yevamos"
+      },
+      {
+        "lang": "en",
+        "text": "T. Yevamot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Yevamos"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Yevamot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Yeb."
+      },
+      {
+        "text": "תוספתא יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.578Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Yevamot"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      8,
+      8
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.084Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

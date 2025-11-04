@@ -1,0 +1,60 @@
+{
+  "title": "Yad David on Mishneh Torah, Diverse Species",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad David",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-david",
+          "hilchot",
+          "diverse-species"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-david",
+          "diverse-species"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד דוד על משנה תורה, הלכות כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "Yad David on Mishneh Torah, Diverse Species",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad David on Mishneh Torah, Diverse Species"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.822Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20David%20on%20Mishneh%20Torah%2C%20Diverse%20Species"
+}

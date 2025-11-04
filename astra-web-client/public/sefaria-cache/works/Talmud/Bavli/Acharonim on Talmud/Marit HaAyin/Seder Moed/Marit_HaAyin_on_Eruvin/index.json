@@ -1,0 +1,59 @@
+{
+  "title": "Marit HaAyin on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Marit HaAyin",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "marit-haayin",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      5
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "מראית העין על עירובין"
+      },
+      {
+        "text": "Marit HaAyin on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Marit HaAyin on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.973Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Marit%20HaAyin%20on%20Eruvin"
+}

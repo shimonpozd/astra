@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Download, Volume2, Clock, Loader2 } from 'lucide-react';
 import type { AudioMessage } from '../types/text';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 interface StreamingAudioMessageProps {
   text: string;
@@ -63,7 +64,7 @@ export function StreamingAudioMessage({
       setError(null);
 
       // Start streaming from TTS service
-      const response = await fetch('/api/tts/stream', {
+      const response = await authorizedFetch('/api/tts/stream', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -192,7 +193,7 @@ export function StreamingAudioMessage({
       };
 
       // Save to backend
-      const response = await fetch('/api/audio/synthesize', {
+      const response = await authorizedFetch('/api/audio/synthesize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -339,5 +340,4 @@ export function StreamingAudioMessage({
     </div>
   );
 }
-
 

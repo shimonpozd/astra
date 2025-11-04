@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Halachot on Yevamot; Alternate Version",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      383
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יבמות מהדורא בתרא",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Halachot on Yevamot; Alternate Version",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Yevamot; Alternate Version"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.832Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Yevamot%3B%20Alternate%20Version"
+}

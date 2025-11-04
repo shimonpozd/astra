@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Niddah",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "niddah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "niddah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      79
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Niddah"
+      },
+      {
+        "lang": "en",
+        "text": "M Niddah"
+      },
+      {
+        "lang": "en",
+        "text": "M. Niddah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Nidd."
+      },
+      {
+        "lang": "he",
+        "text": "משנה נידה"
+      },
+      {
+        "text": "משנה נדה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.456Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Niddah"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Chomat Anakh on Hosea",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "hosea"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      39,
+      45
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על הושע",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on Hosea",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on Hosea"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.858Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20Hosea"
+}

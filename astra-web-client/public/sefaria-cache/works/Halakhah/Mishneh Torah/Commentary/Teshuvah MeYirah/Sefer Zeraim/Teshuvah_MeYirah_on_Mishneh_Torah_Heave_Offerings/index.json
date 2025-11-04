@@ -1,0 +1,60 @@
+{
+  "title": "Teshuvah MeYirah on Mishneh Torah, Heave Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Teshuvah MeYirah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "heave-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "קונטרס תשובה מיראה על משנה תורה, הלכות תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Teshuvah MeYirah on Mishneh Torah, Heave Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Teshuvah MeYirah on Mishneh Torah, Heave Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.301Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Teshuvah%20MeYirah%20on%20Mishneh%20Torah%2C%20Heave%20Offerings"
+}

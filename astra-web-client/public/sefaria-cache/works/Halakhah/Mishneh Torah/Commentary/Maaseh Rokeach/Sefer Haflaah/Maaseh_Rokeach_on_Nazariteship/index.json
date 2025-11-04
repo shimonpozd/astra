@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Nazariteship",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "nazariteship"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      109,
+      145
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Nazariteship",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Nazariteship"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.554Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Nazariteship"
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Metzudat David on Joel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "joel"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      72,
+      176
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Yoel"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על יואל",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Joel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Joel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.981Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Joel"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      0,
+      0,
+      0,
+      4
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      2,
+      3,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      1,
+      1
+    ],
+    0,
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      6
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:42.504Z",
+  "source": "https://www.sefaria.org/api/shape/Lechem%20Shamayim%20on%20Mishnah%20Meilah"
+}

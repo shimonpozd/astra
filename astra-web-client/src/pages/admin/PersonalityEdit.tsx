@@ -5,6 +5,8 @@ import { Input } from '../../components/ui/input';
 import { Label } from '../../components/ui/label';
 import { Textarea } from '../../components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { debugLog } from '../../utils/debugLogger';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 
 interface Personality {
   id: string;
@@ -52,10 +54,9 @@ const PersonalityEdit: React.FC = () => {
 
   const fetchPersonality = async (personalityId: string) => {
     try {
-      const response = await fetch(`/admin/personalities/${personalityId}`, {
+      const response = await authorizedFetch(`/admin/personalities/${personalityId}`, {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -77,17 +78,16 @@ const PersonalityEdit: React.FC = () => {
 
     setSaving(true);
     try {
-      const response = await fetch(`/admin/personalities/${id}`, {
+      const response = await authorizedFetch(`/admin/personalities/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Token': 'super-secret-token'
-        },
+                  },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('Personality updated successfully');
+        debugLog('Personality updated successfully');
         navigate('/admin/personalities');
       } else {
         console.error('Failed to update personality');

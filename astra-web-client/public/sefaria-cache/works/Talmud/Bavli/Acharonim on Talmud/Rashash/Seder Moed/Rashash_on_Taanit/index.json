@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      265
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "רש\"ש על תענית"
+      },
+      {
+        "text": "Rashash on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Taanit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.678Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Taanit"
+}

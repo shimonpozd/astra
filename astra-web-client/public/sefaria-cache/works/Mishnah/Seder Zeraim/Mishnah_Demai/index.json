@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Demai",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "demai"
+        ]
+      },
+      {
+        "term_slugs": [
+          "demai"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "demai"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      53
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Demai"
+      },
+      {
+        "lang": "en",
+        "text": "M Demai"
+      },
+      {
+        "lang": "en",
+        "text": "M. Demai"
+      },
+      {
+        "lang": "he",
+        "text": "דמאי"
+      },
+      {
+        "lang": "en",
+        "text": "Dem."
+      },
+      {
+        "lang": "en",
+        "text": "D’mai"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Dem."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah D’mai"
+      },
+      {
+        "text": "משנה דמאי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Demai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Demai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.046Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Demai"
+}

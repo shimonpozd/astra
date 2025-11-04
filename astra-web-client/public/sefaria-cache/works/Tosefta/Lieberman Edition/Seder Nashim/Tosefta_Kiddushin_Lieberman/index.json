@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Kiddushin (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      73
+    ],
+    "titles": [
+      {
+        "text": "תוספתא קידושין (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kiddushin (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kiddushin (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.910Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kiddushin%20(Lieberman)"
+}

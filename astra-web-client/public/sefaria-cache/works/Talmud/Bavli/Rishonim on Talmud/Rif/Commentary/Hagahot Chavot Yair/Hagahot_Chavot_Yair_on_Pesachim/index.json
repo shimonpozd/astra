@@ -1,0 +1,51 @@
+{
+  "title": "Hagahot Chavot Yair on Pesachim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot Chavot Yair"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-chavot-yair",
+          "pesachim"
+        ]
+      }
+    ],
+    "lengths": [
+      55,
+      35
+    ],
+    "titles": [
+      {
+        "text": "הגהות חוות יאיר על פסחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot Chavot Yair on Pesachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot Chavot Yair on Pesachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:25.030Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20Chavot%20Yair%20on%20Pesachim"
+}

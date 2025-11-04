@@ -1,0 +1,67 @@
+{
+  "title": "Chidushei Agadot on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-agadot",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      689
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אגדות על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "חידושי אגדות על מסכת ברכות",
+        "lang": "he"
+      },
+      {
+        "text": " חידושי אגדות על מסכת ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Agadot on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Agadot on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.400Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Agadot%20on%20Berakhot"
+}

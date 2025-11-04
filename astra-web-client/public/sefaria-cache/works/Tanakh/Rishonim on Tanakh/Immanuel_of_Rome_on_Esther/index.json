@@ -1,0 +1,44 @@
+{
+  "title": "Immanuel of Rome on Esther",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "lengths": [
+      10,
+      142,
+      330
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "titles": [
+      {
+        "text": "עמנואל הרומי על אסתר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Immanuel of Rome on Esther",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Immanuel of Rome on Esther"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.145Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Immanuel%20of%20Rome%20on%20Esther"
+}

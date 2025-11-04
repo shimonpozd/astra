@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Pesachim",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "pesachim"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      19
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה פסחים",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Pesachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Pesachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:27.298Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Pesachim"
+}

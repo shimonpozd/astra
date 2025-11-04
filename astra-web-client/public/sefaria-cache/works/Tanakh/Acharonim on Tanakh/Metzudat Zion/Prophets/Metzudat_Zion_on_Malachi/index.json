@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat Zion on Malachi",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "malachi"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      48,
+      115
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Mal."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Mal"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מלאכי",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Malachi",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Malachi"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.410Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Malachi"
+}

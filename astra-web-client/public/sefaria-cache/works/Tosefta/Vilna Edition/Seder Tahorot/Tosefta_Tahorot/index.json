@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Tahorot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "tahorot"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      84
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Toharot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Toharos"
+      },
+      {
+        "lang": "en",
+        "text": "T. Toharot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Toharos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Toharot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Tohorot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Toh."
+      },
+      {
+        "text": "תוספתא טהרות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Tahorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Tahorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.841Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Tahorot"
+}

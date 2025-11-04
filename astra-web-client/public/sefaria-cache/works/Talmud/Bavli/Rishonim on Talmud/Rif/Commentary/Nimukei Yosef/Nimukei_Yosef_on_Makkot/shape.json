@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    16,
+    13,
+    12,
+    18,
+    24,
+    25,
+    35,
+    18
+  ],
+  "fetchedAt": "2025-10-30T14:22:31.162Z",
+  "source": "https://www.sefaria.org/api/shape/Nimukei%20Yosef%20on%20Makkot"
+}

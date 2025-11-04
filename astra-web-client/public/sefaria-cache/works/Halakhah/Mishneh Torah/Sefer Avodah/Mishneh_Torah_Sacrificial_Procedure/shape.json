@@ -1,0 +1,30 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    19,
+    15,
+    15,
+    11,
+    21,
+    23,
+    12,
+    21,
+    25,
+    23,
+    9,
+    23,
+    14,
+    17,
+    8,
+    17,
+    15,
+    18,
+    16
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.194Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Sacrificial%20Procedure"
+}

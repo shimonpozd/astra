@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Yevamot",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      128
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Yevamot"
+      },
+      {
+        "lang": "en",
+        "text": "M. Yevamot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Yevamot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Yeb."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Y’bamoth"
+      },
+      {
+        "text": "משנה יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.190Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Yevamot"
+}

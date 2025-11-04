@@ -1,0 +1,31 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    14,
+    6,
+    12,
+    14,
+    3,
+    10,
+    7,
+    15,
+    8,
+    22,
+    28,
+    9,
+    11,
+    17,
+    26,
+    29,
+    9,
+    16,
+    10,
+    14
+  ],
+  "fetchedAt": "2025-10-30T14:22:32.175Z",
+  "source": "https://www.sefaria.org/api/shape/Ran%20on%20Taanit"
+}

@@ -1,0 +1,127 @@
+{
+  "title": "Rif Moed Katan",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "moed-katan"
+        ]
+      }
+    ],
+    "lengths": [
+      57,
+      259
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף מועד קטן",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף מועד קטן",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף מועד קטן",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Moed Katan",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Moed Katan"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Moed Katan 1a:1-5a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "משקין בית השלחין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Moed Katan 5a:3-7a:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "מי שהפך",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Moed Katan 7a:6-18b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "ואלו מגלחין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.121Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Moed%20Katan"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    18,
+    12,
+    14,
+    10
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.562Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Beitzah"
+}

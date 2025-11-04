@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Second Tithes and Fourth Year's Fruit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "second-tithes-and-fourth-years-fruit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "second-tithes-and-fourth-years-fruit"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      29,
+      30
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות מעשר שני ונטע רבעי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Second Tithes and Fourth Year's Fruit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Second Tithes and Fourth Year's Fruit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.325Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Second%20Tithes%20and%20Fourth%20Year's%20Fruit"
+}

@@ -1,0 +1,577 @@
+{
+  "title": "Ateret Zekenim on Shulchan Arukh, Orach Chayim",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Ateret Zekenim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ateret-zekenim",
+          "orach-chayim"
+        ]
+      }
+    ],
+    "lengths": [
+      697,
+      1003
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "עטרת זקנים על שולחן ערוך אורח חיים",
+        "primary": true
+      },
+      {
+        "text": "Ateret Zekenim on Shulchan Arukh, Orach Chayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ateret Zekenim on Shulchan Arukh, Orach Chayim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 1-7",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws Upon Awakening in the Morning",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות הנהגת האדם בבוקר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 8-24",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Tzitzit",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ציצית",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 25-46",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Tefillin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תפילין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 47-57",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Morning Blessings",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ברכות השחר ושאר ברכות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 58-88",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Reciting Shema",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות קריאת שמע",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 89-127",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Prayer",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תפילה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 128-135",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Priestly Blessing",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נשיאת כפים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 136-149",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Reading the Torah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות קריאת התורה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 150-156",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Synagogue",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות בית הכנסת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 157-165",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Washing One's Hands for a Meal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נטילת ידים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 166-201",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Meal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות סעודה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 202-214",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Blessings on Fruit",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ברכת הפירות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 215-241",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Other Blessings",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות שאר ברכות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 242-344",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Shabbat",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות שבת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 345-395",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Eruvin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ערובין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 396-407",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Techumin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תחומין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 408-416",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Eruv Techumin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות עירובי תחומין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 417-428",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Rosh Chodesh",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ראש חודש",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 429-494",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Passover",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות פסח",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 495-529",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Festivals",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות יום טוב",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 530-548",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Chol HaMoed",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חול המועד",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 549-561",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Ninth of Av",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תשעה באב",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 562-580",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Fast Days",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תענית",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 581-603",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Rosh Hashanah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ראש השנה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 604-624",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Yom Kippur",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות יום הכיפורים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 625-644",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Sukkot",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות סוכה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 645-669",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of the Four Species",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות לולב",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 670-685",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Chanukah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חנוכה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ateret Zekenim on Shulchan Arukh, Orach Chayim 686-697",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Laws of Purim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מגילה",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.253Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ateret%20Zekenim%20on%20Shulchan%20Arukh%2C%20Orach%20Chayim"
+}

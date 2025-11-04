@@ -1,0 +1,1316 @@
+{
+  "title": "Shulchan Arukh, Yoreh De'ah",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shulchan-arukh",
+          "yoreh-deah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yoreh-deah"
+        ]
+      }
+    ],
+    "lengths": [
+      403,
+      3701
+    ],
+    "titles": [
+      {
+        "text": "Yoreh De'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh Yoreh De'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch, Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh, Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulḥan Arukh, Yoreh De'ah",
+        "lang": "en"
+      },
+      {
+        "text": "<i>Shulḥan Arukh, Yoreh De'ah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "S.A. Y.D.",
+        "lang": "en"
+      },
+      {
+        "text": "SA YD",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch YD",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh YD",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch, YD",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh, YD",
+        "lang": "en"
+      },
+      {
+        "text": "Yore Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Yore De'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Yore De'a",
+        "lang": "en"
+      },
+      {
+        "text": "Yoreh De'a",
+        "lang": "en"
+      },
+      {
+        "text": "Shulhan Arukh, Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulhan Arukh Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "Shulhan Aruch Yoreh Deah",
+        "lang": "en"
+      },
+      {
+        "text": "YD",
+        "lang": "en"
+      },
+      {
+        "text": "שולחן ערוך יורה דעה",
+        "lang": "he"
+      },
+      {
+        "text": "שו\"ע יו\"ד",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך יו\"ד",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך יו\"ד",
+        "lang": "he"
+      },
+      {
+        "text": "יו״ד סי'",
+        "lang": "he"
+      },
+      {
+        "text": "יו\"ד",
+        "lang": "he"
+      },
+      {
+        "text": "יו״ד",
+        "lang": "he"
+      },
+      {
+        "text": "שו״ע יו״ד",
+        "lang": "he"
+      },
+      {
+        "text": "שו”ע יו”ד",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך יו״ד",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך יו”ד",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך יו״ד",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך יו”ד",
+        "lang": "he"
+      },
+      {
+        "text": "יו\"ד סי'",
+        "lang": "he"
+      },
+      {
+        "text": "יו”ד סי'",
+        "lang": "he"
+      },
+      {
+        "text": "יו”ד",
+        "lang": "he"
+      },
+      {
+        "text": "יורה דעה",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך, יורה דעה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shulchan Arukh, Yoreh De'ah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shulchan Arukh, Yoreh De'ah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 1-28",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Ritual Slaughter",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות שחיטה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 29-60",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Unslaughterable Animals",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות טריפות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 61",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Priestly Gifts",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מתנות כהונה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 62",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "A Limb from a Live Animal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות אבר מן החי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 63",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Meat that was Unobserved",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות בשר שנתעלם מן העין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 64",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Prohibited Fats",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חלב",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 65-68",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Blood",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות דם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 69-78",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Salting",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מליחה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 79-80",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Domesticated and Undomesticated Animals",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "סימני בהמה וחיה טהורה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 81",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Things that Come From a Live Animal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "דיני דברים היוצאים מן החי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 82",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Birds",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "דיני עוף טהור",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 83",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Fish",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "דיני דגים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 84-85",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Insects",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "דיני תולעים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 86",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Eggs",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ביצים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 87-97",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Meat with Milk",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות בשר בחלב",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 98-111",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Admixtures",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תערובות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 112-119",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Food of Idol Worshipers",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "דיני פת ושלקות וחלב וגבינה של עובדי כוכבים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 120-121",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "The Koshering of Implements",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות הכשר כלים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 122",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "That Which Gives Detrimental Taste",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נותן טעם לפגם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 123-134",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Libational Wine",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות יין נסך",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 135-138",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Wine Vessels",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלי היין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 139-158",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Idolatry",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות עבודת כוכבים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 159-177",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interest",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ריבית",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 178",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Practices of Idolaters",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חקות העובדי כוכבים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 179",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Divination and Magic",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מעונן ומכשף",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 180",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Tattooing and the Making of Bald Spots",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כתובת קעקע וקריחה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 181",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Shaving",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות גילוח",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 182",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "A Man Shall Not Wear a Woman's Garment",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות לא ילבש גבר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 183-200",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "The Menstruant",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נדה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 201-202",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Ritual Baths",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מקואות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 203-235",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Vows",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נדרים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 236-239",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Oaths",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות שבועות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 240-241",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Honoring One's Father and Mother",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כבוד אב ואם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 242",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Honoring One's Rabbi and a Torah Scholar",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כבוד רבו ות\"ח",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 243-244",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Honoring a Torah Scholar",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כבוד תלמיד חכם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 245",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Teachers",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מלמדים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 246",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Torah Study",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תלמוד תורה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 247-259",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Charity",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות צדקה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 260-266",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Circumcision",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מילה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 267",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Slaves",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות עבדים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 268-269",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Converts",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות גרים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 270-284",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "A Torah Scroll",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ספר תורה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 285-291",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Mezuzah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות מזוזה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 292",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Sending Away the Mother Bird",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות שלוח הקן",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 293",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "New Grain",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חדש",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 294",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Orlah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ערלה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 295",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interspecies Mingling of Trees",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלאי אילן",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 296",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interspecies Mingling of the Vineyard",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלאי הכרם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 297:1-40",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interspecies Mingling of Vegetation",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלאי זרעים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 297:41-56",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interspecies Mingling of Animals",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלאי בהמה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 298-304",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Interspecies Mingling of Clothing",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות כלאי בגדים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 305",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Redemption of the Firstborn",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות פדיון בכור",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 306-320",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "The Firstborn of a Kosher Animal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות בכור בהמה טהורה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 321",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "The First Birth of a Donkey",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות פטר חמור",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 322-330",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Challah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות חלה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 331-333",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Tithes",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות תרומות ומעשרות ומתנות עניים וראשית הגז",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 334",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Excommunication",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות נידוי וחרם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 335-339",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Visiting the Sick",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות ביקור חולים ורפואה ונוטה למות וגוסס",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 340",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Rending One's Clothes",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות קריעה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 341",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "First Day Mourning",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות אנינות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Yoreh De'ah 342-402",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "\tMourning",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הלכות אבילות",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.239Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shulchan%20Arukh%2C%20Yoreh%20De'ah"
+}

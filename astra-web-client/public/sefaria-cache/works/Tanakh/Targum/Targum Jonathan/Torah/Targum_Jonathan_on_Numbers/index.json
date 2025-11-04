@@ -1,0 +1,65 @@
+{
+  "title": "Targum Jonathan on Numbers",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Targum Jonathan",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-jonathan",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      1288
+    ],
+    "titles": [
+      {
+        "text": "Targum Yonatan on Numbers",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. Num.",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. I Num.",
+        "lang": "en"
+      },
+      {
+        "text": "תרגום יונתן במדבר",
+        "lang": "he"
+      },
+      {
+        "text": "תרגום יונתן על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Jonathan on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Jonathan on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.755Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Jonathan%20on%20Numbers"
+}

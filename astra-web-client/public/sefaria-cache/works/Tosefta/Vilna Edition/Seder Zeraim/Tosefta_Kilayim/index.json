@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Kilayim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kilayim"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      70
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Kilaim"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Kilaim"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Kil."
+      },
+      {
+        "text": "Tosefta Kilaim",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא כלאים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kilayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kilayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.438Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kilayim"
+}

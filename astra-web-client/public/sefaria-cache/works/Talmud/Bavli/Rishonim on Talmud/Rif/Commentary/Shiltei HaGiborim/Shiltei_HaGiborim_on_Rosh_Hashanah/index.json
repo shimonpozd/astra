@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      47
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.537Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Rosh%20Hashanah"
+}

@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Sabbath",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sabbath"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      659
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sabbath"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Sabbath"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Sabbath"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shabbos"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, <i>Hilkhot Shabbat</i>"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shabbat"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שבת"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שבת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שבת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שבת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שבת"
+      },
+      {
+        "text": "רמב״ם, הלכות שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שבת",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sabbath",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sabbath"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.906Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sabbath"
+}

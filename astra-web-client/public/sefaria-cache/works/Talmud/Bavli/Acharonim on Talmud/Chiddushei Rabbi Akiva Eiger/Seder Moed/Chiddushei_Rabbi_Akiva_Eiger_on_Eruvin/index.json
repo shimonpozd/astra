@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Rabbi Akiva Eiger on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chiddushei Rabbi Akiva Eiger",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      62
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושי רבי עקיבא איגר על מסכת עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "Chiddushei Rabbi Akiva Eiger on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Rabbi Akiva Eiger on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.185Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Rabbi%20Akiva%20Eiger%20on%20Eruvin"
+}

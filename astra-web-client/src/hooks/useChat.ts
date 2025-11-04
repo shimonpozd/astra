@@ -2,17 +2,34 @@ import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api, Chat, Message, ChatRequest } from '../services/api';
 
-// Helper function to synchronously get user ID, preventing race conditions
-function getUserId(): string {
-  let storedUserId = localStorage.getItem("astra_user_id");
-  if (!storedUserId) {
-    storedUserId = "web_user_" + crypto.randomUUID();
-    localStorage.setItem("astra_user_id", storedUserId);
-  }
-  return storedUserId;
-}
+import { debugLog } from '../utils/debugLogger';
+function generateId(): string {
+  const cryptoObj: Crypto | undefined =
+    typeof globalThis !== 'undefined' ? (globalThis.crypto as Crypto | undefined) : undefined;
 
-const userId = getUserId();
+  if (cryptoObj?.randomUUID) {
+    return cryptoObj.randomUUID();
+  }
+
+  if (cryptoObj?.getRandomValues) {
+    const bytes = new Uint8Array(16);
+    cryptoObj.getRandomValues(bytes);
+    // Align with UUID v4 layout
+    bytes[6] = (bytes[6] & 0x0f) | 0x40;
+    bytes[8] = (bytes[8] & 0x3f) | 0x80;
+    const hexParts = Array.from(bytes, (byte) => byte.toString(16).padStart(2, '0'));
+    return [
+      hexParts.slice(0, 4).join(''),
+      hexParts.slice(4, 6).join(''),
+      hexParts.slice(6, 8).join(''),
+      hexParts.slice(8, 10).join(''),
+      hexParts.slice(10, 16).join(''),
+    ].join('-');
+  }
+
+  const randomSuffix = Math.random().toString(16).slice(2);
+  return `fallback-${Date.now().toString(16)}-${randomSuffix}`;
+}
 
 export function useChat(agentId: string = 'default', initialChatId?: string | null) {
   const navigate = useNavigate();
@@ -35,26 +52,30 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
         setError(null);
         
         // Load regular chats and daily virtual chats in parallel
-        const [chatList, dailyCalendar] = await Promise.all([
+        const [sessionList, dailyCalendar] = await Promise.all([
           api.getChatList(),
           api.getDailyCalendar()
         ]);
         
-        console.log('📅 Daily calendar loaded:', dailyCalendar);
+        debugLog('Daily calendar loaded:', dailyCalendar);
+
+        const existingIds = new Set(sessionList.map(item => item.session_id));
         
         // Convert daily calendar to Chat format
-        const dailyChats: Chat[] = dailyCalendar.map(item => ({
-          session_id: item.session_id,
-          name: item.title, // Just the title: "Daf Yomi", "Parashat Hashavua", etc.
-          last_modified: item.date, // Use date as last_modified for sorting
-          type: 'daily' as const,
-          completed: false // Will be updated when we check if session exists
-        }));
+        const dailyChats: Chat[] = dailyCalendar
+          .filter(item => !existingIds.has(item.session_id))
+          .map(item => ({
+            session_id: item.session_id,
+            name: item.title, // Just the title: "Daf Yomi", "Parashat Hashavua", etc.
+            last_modified: item.date, // Use date as last_modified for sorting
+            type: 'daily' as const,
+            completed: false // Will be updated when we check if session exists
+          }));
         
-        console.log('📚 Daily chats created:', dailyChats);
+        debugLog('Daily chats created:', dailyChats);
         
         // Combine and sort (daily chats first, then by last_modified)
-        const allChats = [...dailyChats, ...chatList].sort((a, b) => {
+        const allChats = [...dailyChats, ...sessionList].sort((a, b) => {
           // Daily chats always come first
           if (a.type === 'daily' && b.type !== 'daily') return -1;
           if (a.type !== 'daily' && b.type === 'daily') return 1;
@@ -103,7 +124,7 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
   }, [navigate]);
 
   const createChat = useCallback(() => {
-    const newId = crypto.randomUUID();
+    const newId = generateId();
     const newChat: Chat = {
       session_id: newId,
       name: "Новый чат",
@@ -142,13 +163,31 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
 
   const reloadChats = useCallback(async () => {
     try {
-      console.log('🔄 Reloading chats from API...');
+      debugLog('Reloading chats from API...');
       setIsLoading(true);
       setError(null);
-      const chatList = await api.getChatList();
-      console.log('📋 API returned chats:', chatList);
-      setChats(chatList);
-      console.log('✅ Chats state updated');
+      const [sessionList, dailyCalendar] = await Promise.all([
+        api.getChatList(),
+        api.getDailyCalendar(),
+      ]);
+      const existingIds = new Set(sessionList.map((item) => item.session_id));
+      const dailyChats: Chat[] = dailyCalendar
+        .filter((item) => !existingIds.has(item.session_id))
+        .map((item) => ({
+          session_id: item.session_id,
+          name: item.title,
+          last_modified: item.date,
+          type: 'daily' as const,
+          completed: false,
+        }));
+      const allChats = [...dailyChats, ...sessionList].sort((a, b) => {
+        if (a.type === 'daily' && b.type !== 'daily') return -1;
+        if (a.type !== 'daily' && b.type === 'daily') return 1;
+        return new Date(b.last_modified).getTime() - new Date(a.last_modified).getTime();
+      });
+      debugLog('API returned sessions:', allChats);
+      setChats(allChats);
+      debugLog('Chats state updated');
     } catch (e) {
       const errorMessage = e instanceof Error ? e.message : 'An unknown error occurred';
       console.error('❌ Failed to reload chats:', errorMessage);
@@ -164,7 +203,7 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
     setIsSending(true);
 
     const userMessage: Message = {
-      id: crypto.randomUUID(),
+      id: generateId(),
       role: 'user',
       content: text,
       content_type: 'text.v1',
@@ -172,7 +211,7 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
     };
     setMessages((prev) => [...prev, userMessage]);
 
-    const assistantMessageId = crypto.randomUUID();
+    const assistantMessageId = generateId();
     const assistantMessage: Message = {
       id: assistantMessageId,
       role: 'assistant',
@@ -185,7 +224,6 @@ export function useChat(agentId: string = 'default', initialChatId?: string | nu
     const request: ChatRequest = {
       text,
       session_id: selectedChatId!,
-      user_id: userId,
       agent_id: agentId,
       context: context || undefined,
     };

@@ -8,6 +8,7 @@ import FocusNavOverlay from './nav/FocusNavOverlay';
 import { useTranslation } from '../../hooks/useTranslation';
 import { useSpeechify } from '../../hooks/useSpeechify';
 import { useTTS } from '../../hooks/useTTS';
+import { debugWarn } from '../../utils/debugLogger';
 // import { useKeyboardNavigation } from '../../hooks/useKeyboardNavigation';
 
 const FONT_SIZE_VALUES: Record<string, string> = {
@@ -44,6 +45,24 @@ function formatDisplayRef(ref?: string | null): string {
   return normalizeRefForAPI(ref);
 }
 
+// Функция для чтения начальных настроек шрифта из localStorage
+function readInitialFontSettings() {
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = window.localStorage.getItem(FOCUS_READER_SETTINGS_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return {
+          readerFontSize: ['small', 'medium', 'large'].includes(parsed.readerFontSize) ? parsed.readerFontSize : 'medium',
+          hebrewScale: typeof parsed.hebrewScale === 'number' && parsed.hebrewScale >= 1.0 && parsed.hebrewScale <= 2.0 ? parsed.hebrewScale : 1.2,
+          translationScale: typeof parsed.translationScale === 'number' && parsed.translationScale >= 0.8 && parsed.translationScale <= 2.0 ? parsed.translationScale : 1.2,
+        };
+      }
+    } catch (err) {}
+  }
+  return { readerFontSize: 'medium', hebrewScale: 1.2, translationScale: 1.2 };
+}
+
 const FocusReader = memo(({
   continuousText,
   isLoading,
@@ -68,9 +87,10 @@ const FocusReader = memo(({
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
   const [stableTranslatedText, setStableTranslatedText] = useState('');
-  const [readerFontSize, setReaderFontSize] = useState<'small' | 'medium' | 'large'>('medium');
-  const [hebrewScale, setHebrewScale] = useState(1.2);
-  const [translationScale, setTranslationScale] = useState(1.2);
+  const initialFontSettings = readInitialFontSettings();
+  const [readerFontSize, setReaderFontSize] = useState<'small' | 'medium' | 'large'>(() => initialFontSettings.readerFontSize);
+  const [hebrewScale, setHebrewScale] = useState(() => initialFontSettings.hebrewScale);
+  const [translationScale, setTranslationScale] = useState(() => initialFontSettings.translationScale);
   const [activeTTSRef, setActiveTTSRef] = useState<string | null>(null);
 
   const activeSegment = useMemo(() => {
@@ -206,7 +226,7 @@ const FocusReader = memo(({
           textToSpeak = trimmed;
         }
       } catch (err) {
-        console.warn('[FocusReader] Speechify failed, fallback to direct text', err);
+        debugWarn('[FocusReader] Speechify failed, fallback to direct text', err);
       }
 
       if (!textToSpeak) {
@@ -221,7 +241,7 @@ const FocusReader = memo(({
       await play(textToSpeak, { language: playbackLanguage });
       setActiveTTSRef(activeSegmentRef);
     } catch (err) {
-      console.warn('[FocusReader] TTS error:', err);
+      debugWarn('[FocusReader] TTS error:', err);
       setActiveTTSRef(null);
     }
   }, [
@@ -267,7 +287,7 @@ const FocusReader = memo(({
         setTranslationScale(parsed.translationScale);
       }
     } catch (err) {
-      console.warn('[FocusReader] Failed to restore font settings', err);
+      debugWarn('[FocusReader] Failed to restore font settings', err);
     }
   }, []);
 
@@ -283,7 +303,7 @@ const FocusReader = memo(({
     try {
       window.localStorage.setItem(FOCUS_READER_SETTINGS_KEY, JSON.stringify(payload));
     } catch (err) {
-      console.warn('[FocusReader] Failed to persist font settings', err);
+      debugWarn('[FocusReader] Failed to persist font settings', err);
     }
   }, [readerFontSize, hebrewScale, translationScale]);
 
@@ -366,7 +386,7 @@ const FocusReader = memo(({
           <button
             type="button"
             onClick={() => setIsNavOpen(true)}
-            className="flex items-center gap-1 rounded px-2 py-1 text-xs bg-emerald-500/80 text-emerald-950 transition-colors hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/70"
+            className="fr-chip"
             title="Открыть навигацию"
           >
             <Compass className="w-3 h-3" />
@@ -374,10 +394,10 @@ const FocusReader = memo(({
           </button>
 
           <div className="flex-1">
-            <div className="rounded-xl border border-white/10 bg-muted/20 px-3 py-2">
-              <div className="font-mono text-sm text-foreground">
+            <div className="fr-badge w-full justify-start gap-1">
+              <span className="font-mono">
                 {formatDisplayRef(currentRef || activeSegment?.ref)}
-              </div>
+              </span>
             </div>
           </div>
 
@@ -392,9 +412,7 @@ const FocusReader = memo(({
                   translate().catch(() => {});
                 }
               }}
-              className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
-                showTranslation ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
-              }`}
+              className={`fr-chip ${showTranslation ? 'is-active' : ''}`}
               title={showTranslation ? 'Скрыть перевод' : 'Показать перевод'}
             >
               <Languages className="w-3 h-3" />
@@ -408,9 +426,7 @@ const FocusReader = memo(({
                 isPlaybackLoading ||
                 (!hasHebrew && !hasEnglish)
               }
-              className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
-                isActiveTTS ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
-              } ${isPlaybackLoading ? 'opacity-50 cursor-wait' : ''}`}
+              className={`fr-chip ${isActiveTTS ? 'is-active' : ''} ${isPlaybackLoading ? 'opacity-50 cursor-wait' : ''}`}
               title={isActiveTTS ? 'Остановить озвучку' : 'Озвучить текущий отрывок'}
             >
               {isPlaybackLoading ? (
@@ -425,22 +441,22 @@ const FocusReader = memo(({
 
                  <button
               onClick={() => setShowSettings((prev) => !prev)}
-                   className={`flex items-center gap-1 px-2 py-1 rounded transition-colors text-xs ${
-                showSettings ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'
-                   }`}
+                   className={`fr-chip ${showSettings ? 'is-active' : ''}`}
               title="Настройки отображения"
                  >
                    <Settings className="w-3 h-3" />
+                   <span>Настройки</span>
                  </button>
 
             {onExit && (
               <button
                 onClick={onExit}
                 disabled={isLoading}
-                className="flex items-center gap-1 px-2 py-1 bg-destructive/10 hover:bg-destructive/20 text-destructive rounded transition-colors disabled:opacity-50 text-xs"
+                className="fr-chip disabled:opacity-50"
                 title="Закрыть"
               >
                 <X className="w-3 h-3" />
+                <span>Закрыть</span>
               </button>
             )}
                </div>
@@ -568,5 +584,4 @@ const FocusReader = memo(({
 FocusReader.displayName = 'FocusReader';
 
 export default FocusReader;
-
 

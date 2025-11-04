@@ -1,0 +1,55 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    0,
+    0,
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:24.004Z",
+  "source": "http://localhost:8000/api/shape/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Rest%20on%20a%20Holiday"
+}

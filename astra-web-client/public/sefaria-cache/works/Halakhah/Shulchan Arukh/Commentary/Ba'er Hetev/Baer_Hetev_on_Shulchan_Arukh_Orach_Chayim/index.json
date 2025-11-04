@@ -1,0 +1,73 @@
+{
+  "title": "Ba'er Hetev on Shulchan Arukh, Orach Chayim",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Ba'er Hetev"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif Katan"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "baer-hetev",
+          "orach-chayim"
+        ]
+      }
+    ],
+    "lengths": [
+      697,
+      5485
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Beer Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "lang": "en",
+        "text": "Be'ir Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "lang": "en",
+        "text": "Beir Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "lang": "en",
+        "text": "Baer Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "lang": "en",
+        "text": "Be'er Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "lang": "en",
+        "text": "Ba'er Hetev on Shulchan Arukh, Orach Chayyim"
+      },
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "באר היטב אורח חיים"
+      },
+      {
+        "text": "Ba'er Hetev on Shulchan Arukh, Orach Chayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ba'er Hetev on Shulchan Arukh, Orach Chayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.255Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ba'er%20Hetev%20on%20Shulchan%20Arukh%2C%20Orach%20Chayim"
+}

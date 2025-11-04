@@ -1,0 +1,73 @@
+{
+  "title": "Metzudat David on Micah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "micah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      105,
+      274
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Mic."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Mic"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Mikha"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Michah"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מיכה",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Micah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Micah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.045Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Micah"
+}

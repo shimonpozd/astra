@@ -1,0 +1,74 @@
+{
+  "title": "Mishnah Tamid",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "tamid"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      34
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "M. Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "M Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Tam."
+      },
+      {
+        "text": "משנה תמיד",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Tamid",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Tamid"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.391Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Tamid"
+}

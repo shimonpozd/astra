@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { debugWarn } from '../utils/debugLogger';
 
 export interface FontSettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge';
@@ -45,7 +46,7 @@ export function FontSettingsProvider({ children }: { children: ReactNode }) {
         try {
           return { ...defaultFontSettings, ...JSON.parse(saved) };
         } catch (e) {
-          console.warn('Failed to parse font settings from localStorage:', e);
+          debugWarn('Failed to parse font settings from localStorage:', e);
         }
       }
     }

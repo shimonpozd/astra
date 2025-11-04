@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Megillah (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "megillah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      80
+    ],
+    "titles": [
+      {
+        "text": "תוספתא מגילה (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Megillah (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Megillah (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.840Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Megillah%20(Lieberman)"
+}

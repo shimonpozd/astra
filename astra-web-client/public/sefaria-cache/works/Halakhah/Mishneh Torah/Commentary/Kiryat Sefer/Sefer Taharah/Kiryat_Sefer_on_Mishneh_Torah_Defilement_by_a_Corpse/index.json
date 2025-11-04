@@ -1,0 +1,60 @@
+{
+  "title": "Kiryat Sefer on Mishneh Torah, Defilement by a Corpse",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kiryat Sefer",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "hilchot",
+          "defilement-by-a-corpse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "defilement-by-a-corpse"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      157,
+      157
+    ],
+    "titles": [
+      {
+        "text": "קרית ספר על משנה תורה, הלכות טומאת מת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kiryat Sefer on Mishneh Torah, Defilement by a Corpse",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kiryat Sefer on Mishneh Torah, Defilement by a Corpse"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.779Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kiryat%20Sefer%20on%20Mishneh%20Torah%2C%20Defilement%20by%20a%20Corpse"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Chelkat Mechokek",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Chelkat Mechokek"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif Katan"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chelkat-mechokek",
+          "even-haezer"
+        ]
+      }
+    ],
+    "lengths": [
+      178,
+      2112
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חלקת מחוקק",
+        "primary": true
+      },
+      {
+        "text": "Chelkat Mechokek",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chelkat Mechokek"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.376Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chelkat%20Mechokek"
+}

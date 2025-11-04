@@ -1,0 +1,55 @@
+{
+  "title": "Chiddushei Anshei Shem on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Chiddushei Anshei Shem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-anshei-shem",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      33
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אנשי שם על קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Anshei Shem on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Anshei Shem on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:23.983Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Chiddushei%20Anshei%20Shem%20on%20Kiddushin"
+}

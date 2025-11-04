@@ -1,0 +1,60 @@
+{
+  "title": "Har HaMoriyah on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Har HaMoriyah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      32,
+      101
+    ],
+    "titles": [
+      {
+        "text": "הר המוריה על משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Har HaMoriyah on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Har HaMoriyah on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.890Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Har%20HaMoriyah%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

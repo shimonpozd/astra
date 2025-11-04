@@ -1,0 +1,464 @@
+{
+  "title": "Temurah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      1150
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Masekhet Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tem."
+      },
+      {
+        "lang": "en",
+        "text": "T’murah"
+      },
+      {
+        "text": "BT Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "תמורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Temurah",
+    "checkFirst": {
+      "en": "Mishnah Temurah",
+      "he": "משנה תמורה"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 2a:1-13b:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-142"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-142"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; HaKol Memirin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הכל ממירין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 14a:1-17b:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-235"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-235"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Yesh BeKorbenot",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "יש בקרבנות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 17b:3-21b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-333"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-333"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Ellu Kadashim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אלו קדשים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 21b:15-24a:30",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-429"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-429"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Velad Chatat",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ולד חטאת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 24b:1-27b:19",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-525"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-525"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; Keitzad Ma'arimin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד מערימין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 28a:1-31a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-622"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-622"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; Kol HaAsurin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל האסורין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Temurah 31a:13-34a:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-720"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-720"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; Yesh BeKodshei Mizbeach",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "יש בקדשי מזבח",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.242Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Temurah"
+}

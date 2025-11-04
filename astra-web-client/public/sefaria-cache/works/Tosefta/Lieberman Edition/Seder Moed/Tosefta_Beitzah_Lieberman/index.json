@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Beitzah (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      74
+    ],
+    "titles": [
+      {
+        "text": "תוספתא ביצה (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Beitzah (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Beitzah (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.798Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Beitzah%20(Lieberman)"
+}

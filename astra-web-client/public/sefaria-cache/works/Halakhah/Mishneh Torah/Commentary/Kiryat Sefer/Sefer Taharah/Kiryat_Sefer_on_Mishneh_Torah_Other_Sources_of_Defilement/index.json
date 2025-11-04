@@ -1,0 +1,60 @@
+{
+  "title": "Kiryat Sefer on Mishneh Torah, Other Sources of Defilement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kiryat Sefer",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "other-sources-of-defilement"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      81,
+      81
+    ],
+    "titles": [
+      {
+        "text": "קרית ספר על משנה תורה, הלכות שאר אבות הטומאות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kiryat Sefer on Mishneh Torah, Other Sources of Defilement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kiryat Sefer on Mishneh Torah, Other Sources of Defilement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.808Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kiryat%20Sefer%20on%20Mishneh%20Torah%2C%20Other%20Sources%20of%20Defilement"
+}

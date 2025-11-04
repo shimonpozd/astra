@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    8,
+    7,
+    11,
+    6,
+    7,
+    8,
+    5,
+    9
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.169Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Yoma"
+}

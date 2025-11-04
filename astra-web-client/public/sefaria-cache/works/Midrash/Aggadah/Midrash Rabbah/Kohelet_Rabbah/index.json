@@ -1,0 +1,108 @@
+{
+  "title": "Kohelet Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Parasha",
+      "Chapter",
+      "Midrash"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ecclesiastes",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash",
+          "ecclesiastes",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash-rabbah",
+          "ecclesiastes"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      193,
+      271
+    ],
+    "titles": [
+      {
+        "text": "Koheleth Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Kohelet Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Koheleth Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Koh. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Eccl. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Eccles. Rab.",
+        "lang": "en"
+      },
+      {
+        "text": "Ecclesiastes Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "קה\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "קה״ר",
+        "lang": "he"
+      },
+      {
+        "text": "קהלת רבה",
+        "lang": "he"
+      },
+      {
+        "text": "קה”ר",
+        "lang": "he"
+      },
+      {
+        "text": "קוהלת רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kohelet Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kohelet Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.373Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kohelet%20Rabbah"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Temurah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      288
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רש\"ש על תמורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashash on Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Temurah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.914Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Temurah"
+}

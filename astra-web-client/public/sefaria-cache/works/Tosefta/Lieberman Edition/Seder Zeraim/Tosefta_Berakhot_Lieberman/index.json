@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Berakhot (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      140
+    ],
+    "titles": [
+      {
+        "text": "תוספתא ברכות (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Berakhot (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Berakhot (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.577Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Berakhot%20(Lieberman)"
+}

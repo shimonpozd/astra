@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Daily Offerings and Additional Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "daily-offerings-and-additional-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "daily-offerings-and-additional-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "daily-offerings-and-additional-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "daily-offerings-and-additional-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "daily-offerings-and-additional-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      168
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Temidin uMusafim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Daily Offerings and Additional Offerings"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Daily Offerings and Additional Offerings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Daily Offerings and Additional Offerings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Temidim u-Musafim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, <i>Hilkhot Temidim u-Musafim</i>"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות תמידים ומוספין"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' תמידים ומוספין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' תמידים ומוספין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות תמידים ומוספין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' תמידים ומוספין"
+      },
+      {
+        "text": "רמב״ם, הלכות תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תמידים ומוספין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תמידים ומוספין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Daily Offerings and Additional Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Daily Offerings and Additional Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.178Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Daily%20Offerings%20and%20Additional%20Offerings"
+}

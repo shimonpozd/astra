@@ -1,0 +1,81 @@
+{
+  "title": "Shemonah Kevatzim",
+  "categories": [
+    "Jewish Thought",
+    "Modern",
+    "Rav Kook"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Kovetz",
+      "Paragraph",
+      "Segment "
+    ],
+    "lengths": [
+      8
+    ],
+    "titles": [
+      {
+        "text": "Shemonah Kvatzim",
+        "lang": "en"
+      },
+      {
+        "text": "Arpilei Tohar",
+        "lang": "en"
+      },
+      {
+        "text": "Shmonah Kevatzim",
+        "lang": "en"
+      },
+      {
+        "text": "Eight Files",
+        "lang": "en"
+      },
+      {
+        "text": "Shmoneh Kvatzim",
+        "lang": "en"
+      },
+      {
+        "text": "Eight Collections",
+        "lang": "en"
+      },
+      {
+        "text": "Sh'mona Kvatzim",
+        "lang": "en"
+      },
+      {
+        "text": "Rav Kook's notebooks",
+        "lang": "en"
+      },
+      {
+        "text": "Shmonah Kvatzim",
+        "lang": "en"
+      },
+      {
+        "text": "שמונה קבצים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "ערפילי טוהר",
+        "lang": "he"
+      },
+      {
+        "text": "Shemonah Kevatzim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shemonah Kevatzim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.398Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shemonah%20Kevatzim"
+}

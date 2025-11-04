@@ -1,0 +1,59 @@
+{
+  "title": "Marit HaAyin on Arakhin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Marit HaAyin",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "marit-haayin",
+          "arakhin"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      13
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "מראית העין על ערכין"
+      },
+      {
+        "text": "Marit HaAyin on Arakhin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Marit HaAyin on Arakhin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.174Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Marit%20HaAyin%20on%20Arakhin"
+}

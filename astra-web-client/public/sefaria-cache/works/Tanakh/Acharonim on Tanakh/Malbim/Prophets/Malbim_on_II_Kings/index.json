@@ -1,0 +1,133 @@
+{
+  "title": "Malbim on II Kings",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "ii-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      349,
+      400
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Melachim Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Melachim II"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Second Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on 2 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on II Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Kings II"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on II Melakhim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Melachim Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Melachim II"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Second Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on 2 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on II Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Kings II"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on II Melakhim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on II Kings"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים ב",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מ״ב"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים ב'"
+      },
+      {
+        "text": "Malbim on II Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on II Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.491Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20II%20Kings"
+}

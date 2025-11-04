@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      101,
+      264
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:33.527Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Gittin"
+}

@@ -1,0 +1,25 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    3,
+    4,
+    3,
+    7,
+    7,
+    10,
+    1,
+    5,
+    9,
+    6,
+    13,
+    13,
+    10,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.606Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Yevamot"
+}

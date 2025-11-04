@@ -1,0 +1,93 @@
+{
+  "title": "Rabbeinu Chananel on Leviticus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rabbeinu Chananel",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-chananel",
+          "leviticus"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      4,
+      5
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Rabbeinu Chananel on Vayikra",
+        "lang": "en"
+      },
+      {
+        "text": "Rabbeinu Chananel on Lev.",
+        "lang": "en"
+      },
+      {
+        "text": "Rabbeinu Chananel on Lev",
+        "lang": "en"
+      },
+      {
+        "text": "ר' חננאל על ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבנו חננאל על ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבינו חננאל, ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבינו חננאל ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבנו חננאל ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבנו חננאל, ויקרא",
+        "lang": "he"
+      },
+      {
+        "text": "רבינו חננאל על ויקרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Chananel on Leviticus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Chananel on Leviticus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.159Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Chananel%20on%20Leviticus"
+}

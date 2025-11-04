@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    20,
+    27,
+    5,
+    21
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.384Z",
+  "source": "http://localhost:8000/api/shape/Joel"
+}

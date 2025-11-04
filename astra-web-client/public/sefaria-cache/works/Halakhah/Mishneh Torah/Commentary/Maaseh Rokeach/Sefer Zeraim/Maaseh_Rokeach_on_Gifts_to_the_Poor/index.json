@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Gifts to the Poor",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "gifts-to-the-poor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "gifts-to-the-poor"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      80,
+      101
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Gifts to the Poor",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Gifts to the Poor"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.607Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Gifts%20to%20the%20Poor"
+}

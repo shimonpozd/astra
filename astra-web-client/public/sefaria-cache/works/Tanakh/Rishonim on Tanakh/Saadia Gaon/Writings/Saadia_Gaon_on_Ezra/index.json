@@ -1,0 +1,57 @@
+{
+  "title": "Saadia Gaon on Ezra",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Saadia Gaon",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "saadia-gaon",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      108,
+      219
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ר' סעדיה גאון על עזרא",
+        "lang": "he"
+      },
+      {
+        "text": "Saadia Gaon on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Saadia Gaon on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.653Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Saadia%20Gaon%20on%20Ezra"
+}

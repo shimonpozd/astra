@@ -1,0 +1,67 @@
+{
+  "title": "Chidushei Agadot on Bekhorot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-agadot",
+          "bekhorot"
+        ]
+      }
+    ],
+    "lengths": [
+      121,
+      27
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אגדות על בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "חידושי אגדות על מסכת בכורות",
+        "lang": "he"
+      },
+      {
+        "text": " חידושי אגדות על מסכת בכורות",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Agadot on Bekhorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Agadot on Bekhorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.690Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Agadot%20on%20Bekhorot"
+}

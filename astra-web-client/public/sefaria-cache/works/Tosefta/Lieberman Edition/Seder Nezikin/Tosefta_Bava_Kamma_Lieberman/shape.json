@@ -1,0 +1,22 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    9,
+    13,
+    7,
+    10,
+    14,
+    31,
+    24,
+    19,
+    33,
+    40,
+    18
+  ],
+  "fetchedAt": "2025-10-30T14:42:35.989Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Bava%20Kamma%20(Lieberman)"
+}

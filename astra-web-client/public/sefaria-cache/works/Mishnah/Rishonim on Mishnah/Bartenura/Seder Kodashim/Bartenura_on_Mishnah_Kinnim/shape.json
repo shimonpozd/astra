@@ -1,0 +1,32 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      7,
+      8,
+      6,
+      1
+    ],
+    [
+      4,
+      3,
+      3,
+      2,
+      9
+    ],
+    [
+      2,
+      2,
+      1,
+      2,
+      4,
+      15
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:15.299Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Kinnim"
+}

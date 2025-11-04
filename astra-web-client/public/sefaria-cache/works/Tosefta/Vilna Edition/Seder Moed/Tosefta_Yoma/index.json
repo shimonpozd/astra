@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Yoma",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "yoma"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      61
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "T. Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Yoma"
+      },
+      {
+        "text": "תוספתא יומא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Yoma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Yoma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.521Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Yoma"
+}

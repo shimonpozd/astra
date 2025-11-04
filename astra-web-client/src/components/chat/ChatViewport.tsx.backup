@@ -4,6 +4,7 @@ import { MessageRenderer } from '../MessageRenderer';
 import UnifiedMessageRenderer from '../UnifiedMessageRenderer';
 import type { Doc, DocV1, ChatMessage } from '../../types/text';
 import { coerceDoc, sanitizeBlock, coerceText, clamp } from '../../lib/text/normalize';
+import { debugLog, debugWarn } from '../../utils/debugLogger';
 
 // Support both legacy API messages and the newer ChatMessage shape
 type AnyMessage = (ApiMessage | ChatMessage | (ApiMessage & Partial<ChatMessage>)) & {
@@ -88,7 +89,7 @@ const normalizeMessage = (message: AnyMessage): UiMessage => {
     if (['text.v1', 'doc.v1', 'thought.v1'].includes(ct)) {
       content_type = ct as UiMessage['content_type'];
     } else {
-      console.warn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
+      debugWarn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
     }
   }
 
@@ -315,7 +316,7 @@ const coerceDoc = (payload: unknown): Doc | DocV1 | null => {
   // 2) String: strip fences and parse 1-2 times, limit size to 1MB
   if (typeof payload === "string") {
     if (payload.length > 1024 * 1024) {
-      console.warn('Payload too large for doc parsing');
+      debugWarn('Payload too large for doc parsing');
       return null;
     }
 
@@ -457,7 +458,7 @@ export default function ChatViewport({ messages, isLoading }: ChatViewportProps)
               );
             } else {
               // 🎯 UNIFIED RENDERER - handles ALL formats in one place
-              // console.log('🔄 Using UnifiedMessageRenderer for:', message.content);
+              // debugLog('🔄 Using UnifiedMessageRenderer for:', message.content);
               renderedContent = (
                 <article dir="auto" style={{ unicodeBidi: "plaintext" }}>
                   <UnifiedMessageRenderer input={message.content} />

@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Virgin Maiden",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "virgin-maiden"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      44
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Virgin Maiden"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Naarah Besulah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Virgin Maiden"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Naarah Besulah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Naarah Besulah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Virgin Maiden"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Naarah Besulah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות נערה בתולה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Naarah Besulah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Naarah Besulah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' נערה בתולה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' נערה בתולה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות נערה בתולה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' נערה בתולה"
+      },
+      {
+        "text": "רמב״ם, הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות נערה בתולה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Virgin Maiden",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Virgin Maiden"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.001Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Virgin%20Maiden"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Rabbeinu Gershom on Tamid",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rabbeinu Gershom",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-gershom",
+          "tamid"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      136
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רבינו גרשום על תמיד",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Gershom on Tamid",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Gershom on Tamid"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.792Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Gershom%20on%20Tamid"
+}

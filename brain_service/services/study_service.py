@@ -607,7 +607,7 @@ class StudyService:
                 request.ref, 
                 self.sefaria_service, 
                 self.sefaria_index_service,
-                limit=40,
+                limit=800,
                 categories=request.categories
             )
             

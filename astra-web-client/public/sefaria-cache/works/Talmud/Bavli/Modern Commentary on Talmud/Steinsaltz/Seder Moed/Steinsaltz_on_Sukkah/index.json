@@ -1,0 +1,155 @@
+{
+  "title": "Steinsaltz on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      112,
+      1356
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Sukkah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Sukkah 2a:1-20b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "סוכה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Sukkah 20b:10-29b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הישן",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Sukkah 29b:4-42b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "לולב הגזול",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Sukkah 42b:5-50a:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "לולב וערבה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Sukkah 50a:6-56b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "החליל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.894Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Sukkah"
+}

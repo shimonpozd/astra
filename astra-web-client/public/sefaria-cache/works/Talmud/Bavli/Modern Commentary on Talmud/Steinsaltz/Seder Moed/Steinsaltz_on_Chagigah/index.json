@@ -1,0 +1,119 @@
+{
+  "title": "Steinsaltz on Chagigah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "chagigah"
+        ]
+      }
+    ],
+    "lengths": [
+      53,
+      732
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ביאור שטיינזלץ על חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "Steinsaltz on Chagigah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Chagigah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chagigah 2a:1-11b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הכל חייבין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chagigah 11b:6-20b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אין דורשין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Chagigah 20b:7-27a:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "חומר בקודש",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.922Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Chagigah"
+}

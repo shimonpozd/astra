@@ -1,0 +1,60 @@
+{
+  "title": "Tzafnat Pa'neach on Mishneh Torah, Sabbath",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tzafnat Pa'neach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "hilchot",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "sabbath"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      147,
+      182
+    ],
+    "titles": [
+      {
+        "text": "צפנת פענח על משנה תורה, הלכות שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tzafnat Pa'neach on Mishneh Torah, Sabbath",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tzafnat Pa'neach on Mishneh Torah, Sabbath"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.682Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tzafnat%20Pa'neach%20on%20Mishneh%20Torah%2C%20Sabbath"
+}

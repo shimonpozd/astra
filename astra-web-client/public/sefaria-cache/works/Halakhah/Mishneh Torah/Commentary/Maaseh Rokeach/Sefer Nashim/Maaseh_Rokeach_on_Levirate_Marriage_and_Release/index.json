@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Levirate Marriage and Release",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "levirate-marriage-and-release"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "levirate-marriage-and-release"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      122,
+      153
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות יבום וחליצה",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Levirate Marriage and Release",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Levirate Marriage and Release"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.423Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Levirate%20Marriage%20and%20Release"
+}

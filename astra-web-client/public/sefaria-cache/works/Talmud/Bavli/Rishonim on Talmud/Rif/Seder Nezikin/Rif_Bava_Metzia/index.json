@@ -1,0 +1,253 @@
+{
+  "title": "Rif Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      876
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף בבא מציעא",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף בבא מציעא",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף בבא מציעא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Bava Metzia"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 1a:1-12a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "שנים אוחזין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 12a:4-18a:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו מציאות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 18a:6-25b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המפקיד"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 25b:8-33b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הזהב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 33b:10-45b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "איזהו נשך"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 45b:3-51b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השוכר את האומנין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 51b:8-54b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השוכר את הפועלים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 54b:3-60a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השואל את הפרה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 60b:1-70b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המקבל שדה מחבירו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Bava Metzia 70b:5-73a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הבית והעלייה"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.189Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Bava%20Metzia"
+}

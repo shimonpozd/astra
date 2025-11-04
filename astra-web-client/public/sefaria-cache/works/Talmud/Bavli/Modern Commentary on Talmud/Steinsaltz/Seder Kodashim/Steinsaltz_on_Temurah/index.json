@@ -1,0 +1,191 @@
+{
+  "title": "Steinsaltz on Temurah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      1143
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "ביאור שטיינזלץ על תמורה"
+      },
+      {
+        "text": "Steinsaltz on Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Temurah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 2a:1-13b:17",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הכל ממירין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 14a:1-17b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "יש בקרבנות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 17b:3-21b:14",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו קדשים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 21b:15-24a:30",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "ולד חטאת"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 24b:1-27b:19",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "כיצד מערימין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 28a:1-31a:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "כל האסורין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Temurah 31a:13-34a:21",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "יש בקדשי מזבח"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:14.091Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Temurah"
+}

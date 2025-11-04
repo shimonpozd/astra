@@ -1,0 +1,59 @@
+{
+  "title": "Piskei Tosafot on Menachot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Piskei Tosafot",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Comment",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "piskei-tosafot",
+          "menachot"
+        ]
+      }
+    ],
+    "lengths": [
+      248,
+      248
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי תוספות על מנחות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Piskei Tosafot on Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Piskei Tosafot on Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.523Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Piskei%20Tosafot%20on%20Menachot"
+}

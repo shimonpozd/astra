@@ -1,0 +1,53 @@
+{
+  "title": "Tractate Kallah Rabbati",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kallah-rabbati"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kallah-rabbati"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      129
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מסכת כלה רבתי",
+        "primary": true
+      },
+      {
+        "text": "Tractate Kallah Rabbati",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Kallah Rabbati"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.318Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Kallah%20Rabbati"
+}

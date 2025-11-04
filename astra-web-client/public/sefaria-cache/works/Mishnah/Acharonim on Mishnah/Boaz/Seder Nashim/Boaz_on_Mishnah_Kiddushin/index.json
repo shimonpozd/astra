@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Kiddushin",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      8
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה קידושין",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:28.340Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Kiddushin"
+}

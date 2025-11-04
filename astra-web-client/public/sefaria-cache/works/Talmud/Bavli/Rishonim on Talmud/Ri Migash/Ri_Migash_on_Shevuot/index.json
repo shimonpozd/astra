@@ -1,0 +1,49 @@
+{
+  "title": "Ri Migash on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ri Migash"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hari-migash",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      575
+    ],
+    "titles": [
+      {
+        "text": "חדושי הר\"י מיגאש על שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ri Migash on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ri Migash on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:40.924Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ri%20Migash%20on%20Shevuot"
+}

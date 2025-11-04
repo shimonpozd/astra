@@ -1,0 +1,60 @@
+{
+  "title": "Yad David on Mishneh Torah, Other Sources of Defilement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad David",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-david",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-david",
+          "other-sources-of-defilement"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד דוד על משנה תורה, הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "Yad David on Mishneh Torah, Other Sources of Defilement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad David on Mishneh Torah, Other Sources of Defilement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.889Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20David%20on%20Mishneh%20Torah%2C%20Other%20Sources%20of%20Defilement"
+}

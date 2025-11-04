@@ -1,0 +1,627 @@
+{
+  "title": "Bava Batra",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      352,
+      3804
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Masekhet Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "Bava Bathra"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "Baba Batra"
+      },
+      {
+        "lang": "en",
+        "text": "B. Bath."
+      },
+      {
+        "lang": "en",
+        "text": "Baba Bathra"
+      },
+      {
+        "lang": "en",
+        "text": "B.B."
+      },
+      {
+        "lang": "he",
+        "text": "ב\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "ב״ב"
+      },
+      {
+        "text": "BT Bava Batra",
+        "lang": "en"
+      },
+      {
+        "text": "Bava Basra",
+        "lang": "en"
+      },
+      {
+        "text": "ב”ב",
+        "lang": "he"
+      },
+      {
+        "text": "בבא בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bava Batra",
+    "checkFirst": {
+      "en": "Mishnah Bava Batra",
+      "he": "משנה בבא בתרא"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 2a:1-17a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-12"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-12"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; HaShuttafin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "השותפין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 17a:8-27b:24",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-22"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-22"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Lo Yachpor",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לא יחפור",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 28a:1-60b:22",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-32"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-32"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Chezkat HaBattim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "חזקת הבתים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 61a:1-73a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-42"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-42"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; HaMokher et HaBayit",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוכר את הבית",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 73a:3-91b:18",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-52"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-52"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; HaMokher et HaSefinah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוכר את הספינה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 92a:1-102b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-61"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-61"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; HaMokher Peirot",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוכר פירות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 102b:9-108a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-71"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-71"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; Beit Kur",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בית כור",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 108a:3-139b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-81"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-81"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8; Yesh Nochalin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "יש נוחלין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 139b:7-159b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-91"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-91"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9; Mi SheMet",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מי שמת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Batra 160a:1-176b:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-10"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-10"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10; Get Pashut",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "גט פשוט",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.158Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Bava%20Batra"
+}

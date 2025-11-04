@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "שער המלך על משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.154Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

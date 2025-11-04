@@ -1,0 +1,91 @@
+{
+  "title": "Rif Yoma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "yoma"
+        ]
+      }
+    ],
+    "lengths": [
+      175,
+      64
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף יומא",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף יומא",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף יומא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Yoma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Yoma"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Yoma 1a:1-6b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 8"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "יום הכפורים"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.073Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Yoma"
+}

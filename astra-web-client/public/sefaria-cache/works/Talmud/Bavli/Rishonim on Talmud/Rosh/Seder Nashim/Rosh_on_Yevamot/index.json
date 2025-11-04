@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      183,
+      279
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.173Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Yevamot"
+}

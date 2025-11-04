@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Oholot",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "oholot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "oholot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "oholot"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      134
+    ],
+    "titles": [
+      {
+        "text": "M. Oholot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Oholot",
+        "lang": "en"
+      },
+      {
+        "text": "M Oholot",
+        "lang": "en"
+      },
+      {
+        "text": "Ohol.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Ohalot",
+        "lang": "en"
+      },
+      {
+        "text": "M Ohalot",
+        "lang": "en"
+      },
+      {
+        "text": "M. Ohalot",
+        "lang": "en"
+      },
+      {
+        "text": "אהלות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה אהלות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Oholot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Oholot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.421Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Oholot"
+}

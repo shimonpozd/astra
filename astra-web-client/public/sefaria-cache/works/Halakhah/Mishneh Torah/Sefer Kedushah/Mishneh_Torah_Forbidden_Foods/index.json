@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Forbidden Foods",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "forbidden-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "forbidden-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "forbidden-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "forbidden-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "forbidden-foods"
+        ]
+      }
+    ],
+    "lengths": [
+      17,
+      424
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilchot Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Forbidden Foods",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Forbidden Foods",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Forbidden Foods",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Ma'achalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Ma'akhalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "Hilkhot Ma'akhalot Assurot",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מאכלות אסורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Forbidden Foods",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Forbidden Foods"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.021Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Forbidden%20Foods"
+}

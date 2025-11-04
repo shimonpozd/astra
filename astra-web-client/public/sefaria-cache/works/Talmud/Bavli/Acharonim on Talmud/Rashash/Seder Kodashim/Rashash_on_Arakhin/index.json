@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Arakhin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "arakhin"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      341
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רש\"ש על ערכין",
+        "lang": "he"
+      },
+      {
+        "text": "Rashash on Arakhin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Arakhin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.910Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Arakhin"
+}

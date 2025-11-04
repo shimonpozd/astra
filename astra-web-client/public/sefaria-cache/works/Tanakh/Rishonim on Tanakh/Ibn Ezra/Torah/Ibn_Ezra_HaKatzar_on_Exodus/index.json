@@ -1,0 +1,56 @@
+{
+  "title": "Ibn Ezra HaKatzar on Exodus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ibn Ezra",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ibn-ezra-hakatzar",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      667,
+      1021
+    ],
+    "titles": [
+      {
+        "text": "אבן עזרא על שמות; פירוש הקצר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "אבן עזרא הקצר על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "Ibn Ezra HaKatzar on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ibn Ezra HaKatzar on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:28:02.293Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ibn%20Ezra%20HaKatzar%20on%20Exodus"
+}

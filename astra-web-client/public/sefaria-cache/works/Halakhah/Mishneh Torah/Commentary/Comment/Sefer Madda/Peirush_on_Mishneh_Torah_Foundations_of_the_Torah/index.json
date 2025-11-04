@@ -1,0 +1,45 @@
+{
+  "title": "Peirush on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Comment",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "lengths": [
+      10,
+      42,
+      125
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "פירוש על משנה תורה, הלכות יסודי התורה",
+        "primary": true
+      },
+      {
+        "text": "Peirush on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Peirush on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.951Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Peirush%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

@@ -1,0 +1,133 @@
+{
+  "title": "Rashi on I Kings",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "i-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      371,
+      631
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on I Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Melachim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Kings I"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Melachim I"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 1 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on First Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on I Melakhim"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מ״א"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מ\"א"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מלכים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מלכים א'"
+      },
+      {
+        "text": "רש״י על מלכים א",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים א",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מ״א",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מ”א",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מלכים א׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים א׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מלכים א'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים א'",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על מלכים א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on I Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on I Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.112Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20I%20Kings"
+}

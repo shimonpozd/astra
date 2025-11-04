@@ -1,0 +1,411 @@
+{
+  "title": "Tosafot on Avodah Zarah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot",
+          "avodah-zarah"
+        ]
+      }
+    ],
+    "lengths": [
+      152,
+      640,
+      776
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Avodah Zara"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Masekhet Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Avoda Zara"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Avoda Zarah"
+      },
+      {
+        "lang": "he",
+        "text": "תוספות על ע\"ז"
+      },
+      {
+        "lang": "he",
+        "text": "תוספות על ע״ז"
+      },
+      {
+        "text": "תוספות על ע”ז",
+        "lang": "he"
+      },
+      {
+        "text": "תוספות על עבודה זרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot on Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot on Avodah Zarah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Avodah Zarah 2a:1-22a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-11"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-11"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-11"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-11"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "לפני אידיהן",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Avodah Zarah 22a:11-40b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-21"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-21"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-21"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-21"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "אין מעמידין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Avodah Zarah 40b:12-49b:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-31"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-31"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-31"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-31"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "כל הצלמים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Avodah Zarah 49b:18-61b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-41"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-41"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-41"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-41"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "רבי ישמעאל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Avodah Zarah 62a:1-76b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-51"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-51"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-51"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-51"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "השוכר את הפועל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.646Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20on%20Avodah%20Zarah"
+}

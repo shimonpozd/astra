@@ -1,3 +1,4 @@
+import { debugLog } from './debugLogger';
 // ---------- REF utils: универсальные утилиты для работы со ссылками ----------
 
 const normalizeBookName = (book: string): string => book.replace(/[\s]*[,:;]+$/g, '').trim();
@@ -34,7 +35,7 @@ export function parseRefSmart(ref: string): ParsedRef | null {
       fullRef: ref,
     };
     if (process.env.NODE_ENV !== 'production') {
-      console.log('📖 Parsed Talmud ref:', { ref, result });
+      debugLog('📖 Parsed Talmud ref:', { ref, result });
     }
     return result;
   }
@@ -50,7 +51,7 @@ export function parseRefSmart(ref: string): ParsedRef | null {
       fullRef: ref,
     };
     if (process.env.NODE_ENV !== 'production') {
-      console.log('📖 Parsed Tanakh ref:', { ref, result });
+      debugLog('📖 Parsed Tanakh ref:', { ref, result });
     }
     return result;
   }
@@ -66,14 +67,14 @@ export function parseRefSmart(ref: string): ParsedRef | null {
       fullRef: ref,
     };
     if (process.env.NODE_ENV !== 'production') {
-      console.log('📖 Parsed Tanakh chapter ref:', { ref, result });
+      debugLog('📖 Parsed Tanakh chapter ref:', { ref, result });
     }
     return result;
   }
 
   const result: ParsedRef = { type: 'other', book, fullRef: ref };
   if (process.env.NODE_ENV !== 'production') {
-    console.log('📖 Parsed other ref:', { ref, result });
+    debugLog('📖 Parsed other ref:', { ref, result });
   }
   return result;
 }
@@ -111,5 +112,4 @@ export function normalizeRefForAPI(ref: string): string {
   
   return ref;
 }
-
 

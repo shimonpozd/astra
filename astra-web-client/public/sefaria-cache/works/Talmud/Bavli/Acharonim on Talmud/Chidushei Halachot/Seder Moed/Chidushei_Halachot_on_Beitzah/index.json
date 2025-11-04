@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Halachot on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      80,
+      165
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חדושי הלכות על ביצה",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Halachot on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.797Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Beitzah"
+}

@@ -1,0 +1,1135 @@
+{
+  "title": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Torat HaShlamim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "torat-hashlamim",
+          "yoreh-deah"
+        ]
+      }
+    ],
+    "lengths": [
+      403,
+      281
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "תורת השלמים על שולחן ערוך יורה דעה",
+        "lang": "he"
+      },
+      {
+        "text": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 1-28",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Ritual Slaughter",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות שחיטה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 29-60",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Unslaughterable Animals",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות טריפות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 61",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Priestly Gifts",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מתנות כהונה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 62",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "A Limb from a Live Animal",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות אבר מן החי",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 63",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Meat that was Unobserved",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות בשר שנתעלם מן העין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 64",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Prohibited Fats",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות חלב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 65-68",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Blood",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות דם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 69-78",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Salting",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מליחה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 79-80",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Domesticated and Undomesticated Animals",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "סימני בהמה וחיה טהורה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 81",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Things that Come From a Live Animal",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דיני דברים היוצאים מן החי",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 82",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Birds",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דיני עוף טהור",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 83",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Fish",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דיני דגים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 84-85",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Insects",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דיני תולעים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 86",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Eggs",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות ביצים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 87-97",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Meat with Milk",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות בשר בחלב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 98-111",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Admixtures",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות תערובות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 112-119",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Food of Idol Worshipers",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דיני פת ושלקות וחלב וגבינה של עובדי כוכבים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 120-121",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "The Koshering of Implements",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות הכשר כלים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 122",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "That Which Gives Detrimental Taste",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות נותן טעם לפגם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 123-134",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Libational Wine",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות יין נסך",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 135-138",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Wine Vessels",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלי היין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 139-177",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Idolatry",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות עבודת כוכבים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 178",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Practices of Idolaters",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות חקות העובדי כוכבים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 179",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Divination and Magic",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מעונן ומכשף",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 180",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Tattooing and the Making of Bald Spots",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כתובת קעקע וקריחה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 181",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Shaving",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות גילוח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 182",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "A Man Shall Not Wear a Woman's Garment",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות לא ילבש גבר",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 183-200",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "The Menstruant",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות נדה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 201-202",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Ritual Baths",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מקואות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 203-235",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Vows",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות נדרים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 236-239",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Oaths",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות שבועות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 240-241",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Honoring One's Father and Mother",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כבוד אב ואם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 242",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Honoring One's Rabbi and a Torah Scholar",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כבוד רבו ות\"ח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 243-244",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Honoring a Torah Scholar",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כבוד תלמיד חכם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 245",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Teachers",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מלמדים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 246",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Torah Study",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות תלמוד תורה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 247-259",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Charity",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות צדקה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 260-266",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Circumcision",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מילה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 267",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Slaves",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות עבדים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 268-269",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Converts",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות גרים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 270-284",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "A Torah Scroll",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות ספר תורה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 285-291",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Mezuzah",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות מזוזה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 292",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Sending Away the Mother Bird",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות שלוח הקן",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 293",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "New Grain",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות חדש",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 294",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Orlah",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות ערלה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 295",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Interspecies Mingling of Trees",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלאי אילן",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 296",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Interspecies Mingling of the Vineyard",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלאי הכרם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 297:1-40",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Interspecies Mingling of Vegetation",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלאי זרעים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 297:41-56",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Interspecies Mingling of Animals",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלאי בהמה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 298-304",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Interspecies Mingling of Clothing",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות כלאי בגדים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 305",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Redemption of the Firstborn",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות פדיון בכור",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 306-320",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "The Firstborn of a Kosher Animal",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות בכור בהמה טהורה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 321",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "The First Birth of a Donkey",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות פטר חמור",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 322-330",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Challah",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות חלה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 331-333",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Tithes",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות תרומות ומעשרות ומתנות עניים וראשית הגז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 334",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Excommunication",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות נידוי וחרם",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 335-339",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Visiting the Sick",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות ביקור חולים ורפואה ונוטה למות וגוסס",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 340",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Rending One's Clothes",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות קריעה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 341",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "First Day Mourning",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות אנינות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Torat HaShlamim on Shulchan Arukh, Yoreh De'ah 342-402",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "\tMourning",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הלכות אבילות",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.676Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Torat%20HaShlamim%20on%20Shulchan%20Arukh%2C%20Yoreh%20De'ah"
+}

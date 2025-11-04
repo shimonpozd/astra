@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Virgin Maiden",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "virgin-maiden"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Virgin Maiden",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Virgin Maiden"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.621Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Virgin%20Maiden"
+}

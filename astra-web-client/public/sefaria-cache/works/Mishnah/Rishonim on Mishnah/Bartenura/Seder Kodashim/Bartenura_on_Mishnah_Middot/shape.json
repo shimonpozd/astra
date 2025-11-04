@@ -1,0 +1,55 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      8,
+      1,
+      6,
+      6,
+      4,
+      7,
+      4,
+      6,
+      5
+    ],
+    [
+      2,
+      4,
+      12,
+      4,
+      11,
+      8
+    ],
+    [
+      15,
+      4,
+      7,
+      6,
+      7,
+      7,
+      5,
+      4
+    ],
+    [
+      4,
+      3,
+      3,
+      1,
+      4,
+      7,
+      7
+    ],
+    [
+      7,
+      0,
+      3,
+      4
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:15.156Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Middot"
+}

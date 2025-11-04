@@ -1,0 +1,109 @@
+{
+  "title": "Rashi on Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      113,
+      386
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Shir HaShirim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Canticles"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Song."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Song"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שה\"ש"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שיר"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שה״ש"
+      },
+      {
+        "text": "רש״י על שיר השירים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שיר השירים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שה״ש",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שה”ש",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שיר",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שיר",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על שיר השירים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.365Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Song%20of%20Songs"
+}

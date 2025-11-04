@@ -1,0 +1,65 @@
+{
+  "title": "Chelkat Mechokek on Job",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Alshich",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "alshich",
+          "job"
+        ]
+      }
+    ],
+    "lengths": [
+      42,
+      1017,
+      1183
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Alshich on Job",
+        "lang": "en"
+      },
+      {
+        "text": "חלקת מחוקק על איוב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "אלשיך על איוב",
+        "lang": "he"
+      },
+      {
+        "text": "Chelkat Mechokek on Job",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chelkat Mechokek on Job"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.006Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chelkat%20Mechokek%20on%20Job"
+}

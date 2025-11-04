@@ -1,0 +1,50 @@
+{
+  "title": "Penei Yehoshua on Pesachim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Penei Yehoshua"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      242,
+      606
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "פני יהושע על פסחים"
+      },
+      {
+        "text": "Penei Yehoshua on Pesachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Penei Yehoshua on Pesachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.235Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Penei%20Yehoshua%20on%20Pesachim"
+}

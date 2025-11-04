@@ -1,0 +1,50 @@
+{
+  "title": "Ben Yehoyada on Avodah Zarah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Ben Yehoyada"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      152,
+      158
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "בן יהוידע על עבודה זרה"
+      },
+      {
+        "text": "Ben Yehoyada on Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ben Yehoyada on Avodah Zarah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.045Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ben%20Yehoyada%20on%20Avodah%20Zarah"
+}

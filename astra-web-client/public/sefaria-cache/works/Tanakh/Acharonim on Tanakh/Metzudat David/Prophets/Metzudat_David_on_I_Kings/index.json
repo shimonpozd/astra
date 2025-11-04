@@ -1,0 +1,101 @@
+{
+  "title": "Metzudat David on I Kings",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "i-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      612,
+      1187
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Melachim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Kings I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Melachim I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on First Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Melakhim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מלכים א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מ״א"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מ\"א"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מלכים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על מלכים א'"
+      },
+      {
+        "text": "Metzudat David on I Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on I Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.914Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20I%20Kings"
+}

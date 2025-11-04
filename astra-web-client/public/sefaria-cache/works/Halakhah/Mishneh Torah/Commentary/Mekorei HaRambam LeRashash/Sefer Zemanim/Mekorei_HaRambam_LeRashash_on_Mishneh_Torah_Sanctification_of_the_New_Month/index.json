@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Sanctification of the New Month",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "sanctification-of-the-new-month"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות קידוש החודש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Sanctification of the New Month",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Sanctification of the New Month"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.578Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Sanctification%20of%20the%20New%20Month"
+}

@@ -1,0 +1,40 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      20,
+      4,
+      2,
+      3,
+      3,
+      3,
+      6,
+      14
+    ],
+    [
+      17,
+      7,
+      5,
+      5,
+      5,
+      3,
+      3
+    ],
+    [
+      8,
+      10,
+      4,
+      12,
+      3,
+      3,
+      4,
+      5
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.568Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Chagigah"
+}

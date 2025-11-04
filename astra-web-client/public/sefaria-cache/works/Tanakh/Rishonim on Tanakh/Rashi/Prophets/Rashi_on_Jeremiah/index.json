@@ -1,0 +1,117 @@
+{
+  "title": "Rashi on Jeremiah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "jeremiah"
+        ]
+      }
+    ],
+    "lengths": [
+      52,
+      778,
+      1392
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Yirmiyahu"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Jer"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Jer."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Yirmiyohu"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ירמיה"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ירמי׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ירמי'"
+      },
+      {
+        "text": "רש״י על ירמיהו",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ירמיהו",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על ירמיה",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ירמיה",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על ירמי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ירמי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על ירמי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ירמי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על ירמיהו",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Jeremiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Jeremiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.141Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Jeremiah"
+}

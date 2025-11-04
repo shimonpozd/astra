@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Sanctification of the New Month",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "sanctification-of-the-new-month"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      9,
+      10
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות קידוש החודש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Sanctification of the New Month",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Sanctification of the New Month"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.181Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Sanctification%20of%20the%20New%20Month"
+}

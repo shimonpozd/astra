@@ -1,0 +1,32 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    36,
+    23,
+    31,
+    24,
+    31,
+    40,
+    25,
+    35,
+    57,
+    18,
+    40,
+    15,
+    25,
+    20,
+    20,
+    31,
+    13,
+    31,
+    30,
+    48,
+    25
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.311Z",
+  "source": "http://localhost:8000/api/shape/Judges"
+}

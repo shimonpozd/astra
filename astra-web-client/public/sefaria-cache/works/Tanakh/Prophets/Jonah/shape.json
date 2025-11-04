@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    16,
+    11,
+    10,
+    11
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.413Z",
+  "source": "http://localhost:8000/api/shape/Jonah"
+}

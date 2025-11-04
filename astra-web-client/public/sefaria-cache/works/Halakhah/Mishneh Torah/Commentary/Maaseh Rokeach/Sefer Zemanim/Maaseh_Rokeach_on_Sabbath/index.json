@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Sabbath",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "sabbath"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      648,
+      1349
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות שבת",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Sabbath",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Sabbath"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.296Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Sabbath"
+}

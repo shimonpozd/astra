@@ -1,0 +1,67 @@
+{
+  "title": "Chidushei Halachot on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      144
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי הלכות על תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "חידושי הלכות על מסכת תענית",
+        "lang": "he"
+      },
+      {
+        "text": "חידושי הלכות",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Halachot on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Taanit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.814Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Taanit"
+}

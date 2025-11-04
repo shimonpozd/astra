@@ -1,0 +1,60 @@
+{
+  "title": "Birkat Avraham on Mishneh Torah, Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Birkat Avraham",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      7,
+      7
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ברכת אברהם על משנה תורה, הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "Birkat Avraham on Mishneh Torah, Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Birkat Avraham on Mishneh Torah, Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.340Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Birkat%20Avraham%20on%20Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

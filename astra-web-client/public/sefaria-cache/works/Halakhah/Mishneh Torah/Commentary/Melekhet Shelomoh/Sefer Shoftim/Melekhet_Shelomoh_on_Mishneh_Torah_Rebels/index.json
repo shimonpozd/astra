@@ -1,0 +1,64 @@
+{
+  "title": "Melekhet Shelomoh on Mishneh Torah, Rebels",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Melekhet Shelomoh",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "hilchot",
+          "rebels"
+        ]
+      },
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "rebels"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלאכת שלמה על משנה תורה, הלכות ממרים",
+        "lang": "he"
+      },
+      {
+        "text": "Melechet Shlomo on Mishneh Torah, Rebels",
+        "lang": "en"
+      },
+      {
+        "text": "Melekhet Shelomoh on Mishneh Torah, Rebels",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Melekhet Shelomoh on Mishneh Torah, Rebels"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.520Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Melekhet%20Shelomoh%20on%20Mishneh%20Torah%2C%20Rebels"
+}

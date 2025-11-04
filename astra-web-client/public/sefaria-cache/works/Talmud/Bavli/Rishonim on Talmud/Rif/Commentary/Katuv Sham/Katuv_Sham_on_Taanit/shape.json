@@ -1,0 +1,16 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    2,
+    0,
+    0,
+    3
+  ],
+  "fetchedAt": "2025-10-30T14:22:28.875Z",
+  "source": "https://www.sefaria.org/api/shape/Katuv%20Sham%20on%20Taanit"
+}

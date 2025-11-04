@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Damages to Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "damages-to-property"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      8,
+      9
+    ],
+    "titles": [
+      {
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות נזקי ממון",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Damages to Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Damages to Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.973Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Damages%20to%20Property"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Milchemet Hashem on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Milchemet Hashem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "milchemet-hashem",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      8
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "מלחמת השם על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Milchemet Hashem on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Milchemet Hashem on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.925Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Milchemet%20Hashem%20on%20Rosh%20Hashanah"
+}

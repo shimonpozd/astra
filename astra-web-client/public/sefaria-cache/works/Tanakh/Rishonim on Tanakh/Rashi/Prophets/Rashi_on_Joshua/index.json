@@ -1,0 +1,85 @@
+{
+  "title": "Rashi on Joshua",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "joshua"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      231,
+      362
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Jos"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Yehoshua"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Jos."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Josh"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Josh."
+      },
+      {
+        "text": "רש״י על יהושע",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על יהושע",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על יהושע",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Joshua",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Joshua"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.023Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Joshua"
+}

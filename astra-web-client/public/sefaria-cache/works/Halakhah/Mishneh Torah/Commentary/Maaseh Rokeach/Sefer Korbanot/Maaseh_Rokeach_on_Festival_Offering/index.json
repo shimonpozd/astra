@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      20,
+      31
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.782Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Festival%20Offering"
+}

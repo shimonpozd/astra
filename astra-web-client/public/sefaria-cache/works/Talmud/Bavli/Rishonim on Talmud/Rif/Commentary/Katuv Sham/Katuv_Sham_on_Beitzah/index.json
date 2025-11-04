@@ -1,0 +1,55 @@
+{
+  "title": "Katuv Sham on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Katuv Sham"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "katuv-sham",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      42,
+      37
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "כתוב שם ביצה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Katuv Sham on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Katuv Sham on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:28.955Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Katuv%20Sham%20on%20Beitzah"
+}

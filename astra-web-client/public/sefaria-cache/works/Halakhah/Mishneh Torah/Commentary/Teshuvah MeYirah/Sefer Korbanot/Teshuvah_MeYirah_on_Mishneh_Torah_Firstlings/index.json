@@ -1,0 +1,60 @@
+{
+  "title": "Teshuvah MeYirah on Mishneh Torah, Firstlings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Teshuvah MeYirah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "hilchot",
+          "firstlings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "firstlings"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "קונטרס תשובה מיראה על משנה תורה, הלכות בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Teshuvah MeYirah on Mishneh Torah, Firstlings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Teshuvah MeYirah on Mishneh Torah, Firstlings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.398Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Teshuvah%20MeYirah%20on%20Mishneh%20Torah%2C%20Firstlings"
+}

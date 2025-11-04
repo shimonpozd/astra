@@ -1,0 +1,85 @@
+{
+  "title": "Metzudat David on Zechariah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "zechariah"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      204,
+      495
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zech."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zech"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zachariah"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zekharia"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zekharya"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Zecharia"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על זכריה",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על זכרי'"
+      },
+      {
+        "text": "Metzudat David on Zechariah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Zechariah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.089Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Zechariah"
+}

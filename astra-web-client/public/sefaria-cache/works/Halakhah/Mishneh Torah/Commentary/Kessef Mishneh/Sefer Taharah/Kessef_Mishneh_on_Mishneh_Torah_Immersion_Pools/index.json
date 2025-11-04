@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Immersion Pools",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "immersion-pools"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "immersion-pools"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      129,
+      268
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מקואות",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Immersion Pools",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Immersion Pools"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.173Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Immersion%20Pools"
+}

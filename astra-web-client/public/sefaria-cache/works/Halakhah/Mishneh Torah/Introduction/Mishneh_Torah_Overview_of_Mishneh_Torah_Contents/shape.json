@@ -1,0 +1,25 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    23,
+    9,
+    13,
+    8,
+    6,
+    7,
+    10,
+    12,
+    9,
+    11,
+    8,
+    8,
+    8,
+    10
+  ],
+  "fetchedAt": "2025-10-30T14:42:16.837Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Overview%20of%20Mishneh%20Torah%20Contents"
+}

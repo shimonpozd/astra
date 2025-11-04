@@ -1,0 +1,109 @@
+{
+  "title": "Shadal on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Shadal",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shadal",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      301,
+      371
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shadal on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "שד\"ל על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "שד״ל על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shadal on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shadal on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.643Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shadal%20on%20Deuteronomy"
+}

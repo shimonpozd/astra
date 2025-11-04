@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Tahorot",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "tahorot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tahorot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "tahorot"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      92
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Tahorot"
+      },
+      {
+        "lang": "en",
+        "text": "M Tahorot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Tahorot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Taharot"
+      },
+      {
+        "lang": "he",
+        "text": "טהרות"
+      },
+      {
+        "lang": "en",
+        "text": "Toh."
+      },
+      {
+        "lang": "en",
+        "text": "Tohãroth"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Toh."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Tohãroth"
+      },
+      {
+        "text": "משנה טהרות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Tahorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Tahorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.445Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Tahorot"
+}

@@ -1,0 +1,101 @@
+{
+  "title": "Rashi on Exodus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      857,
+      1818
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Exod."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ex."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Exo"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shmot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shemot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ex"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Exo."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Exod"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shemoth"
+      },
+      {
+        "text": "רש״י על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.002Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Exodus"
+}

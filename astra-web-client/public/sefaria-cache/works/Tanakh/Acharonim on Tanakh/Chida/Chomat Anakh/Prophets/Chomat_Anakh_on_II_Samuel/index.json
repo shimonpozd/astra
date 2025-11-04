@@ -1,0 +1,59 @@
+{
+  "title": "Chomat Anakh on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      130,
+      148
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על שמואל ב",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.807Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20II%20Samuel"
+}

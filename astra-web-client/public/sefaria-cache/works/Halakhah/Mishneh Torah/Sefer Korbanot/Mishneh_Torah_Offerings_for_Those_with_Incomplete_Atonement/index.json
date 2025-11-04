@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Offerings for Those with Incomplete Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      48
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Mechussarey Kapparah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Mechussarey Kapparah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Mechussarey Kapparah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Offerings for Those with Incomplete Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Offerings for Those with Incomplete Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Offerings for Those with Incomplete Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Mechussarey Kapparah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מחוסרי כפרה"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Mechussarey Kapparah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Mechussarey Kapparah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מחוסרי כפרה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מחוסרי כפרה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מחוסרי כפרה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מחוסרי כפרה"
+      },
+      {
+        "text": "רמב״ם, הלכות מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מחוסרי כפרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Offerings for Those with Incomplete Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Offerings for Those with Incomplete Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.252Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Offerings%20for%20Those%20with%20Incomplete%20Atonement"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Defilement of Foods",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "defilement-of-foods"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      222,
+      434
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות טומאת אוכלים",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Defilement of Foods",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Defilement of Foods"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.165Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Defilement%20of%20Foods"
+}

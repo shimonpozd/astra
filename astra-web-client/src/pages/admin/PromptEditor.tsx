@@ -5,6 +5,7 @@ import { Label } from '../../components/ui/label';
 import { Textarea } from '../../components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { cn } from '../../lib/utils';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 
 interface Prompt {
   id: string;
@@ -32,10 +33,9 @@ const PromptEditor: React.FC = () => {
 
   const fetchPrompts = async () => {
     try {
-      const response = await fetch('/admin/prompts', {
+      const response = await authorizedFetch('/admin/prompts', {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -52,10 +52,9 @@ const PromptEditor: React.FC = () => {
 
   const fetchPrompt = async (id: string) => {
     try {
-      const response = await fetch(`/admin/prompts/${id}`, {
+      const response = await authorizedFetch(`/admin/prompts/${id}`, {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -75,12 +74,11 @@ const PromptEditor: React.FC = () => {
     setNotification(null);
 
     try {
-      const response = await fetch(`/admin/prompts/${selectedPrompt.id}`, {
+      const response = await authorizedFetch(`/admin/prompts/${selectedPrompt.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Token': 'super-secret-token'
-        },
+                  },
         body: JSON.stringify({ text: selectedPrompt.text }),
       });
 

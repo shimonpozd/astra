@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Orlah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "orlah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      5
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה ערלה",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Orlah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Orlah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:27.089Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Orlah"
+}

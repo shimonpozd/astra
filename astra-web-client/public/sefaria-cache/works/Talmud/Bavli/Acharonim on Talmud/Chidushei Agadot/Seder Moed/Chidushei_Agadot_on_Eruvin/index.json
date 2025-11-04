@@ -1,0 +1,67 @@
+{
+  "title": "Chidushei Agadot on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-agadot",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      168
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אגדות על עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": " חידושי אגדות על עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "חידושי אגדות על מסכת עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Agadot on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Agadot on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.481Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Agadot%20on%20Eruvin"
+}

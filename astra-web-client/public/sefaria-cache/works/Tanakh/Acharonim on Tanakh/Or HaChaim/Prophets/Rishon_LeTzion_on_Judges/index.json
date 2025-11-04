@@ -1,0 +1,52 @@
+{
+  "title": "Rishon LeTzion on Judges",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Or HaChaim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rishon-letzion",
+          "judges"
+        ]
+      }
+    ],
+    "lengths": [
+      21,
+      1,
+      2
+    ],
+    "titles": [
+      {
+        "text": "ראשון לציון על שופטים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rishon LeTzion on Judges",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rishon LeTzion on Judges"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:01.384Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rishon%20LeTzion%20on%20Judges"
+}

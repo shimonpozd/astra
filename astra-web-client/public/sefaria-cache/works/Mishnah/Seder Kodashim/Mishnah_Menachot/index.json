@@ -1,0 +1,110 @@
+{
+  "title": "Mishnah Menachot",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "menachot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "menachot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "menachot"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      93
+    ],
+    "titles": [
+      {
+        "text": "M Menachot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Menachot",
+        "lang": "en"
+      },
+      {
+        "text": "M. Menachot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Menahot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Men.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah M’naḥoth",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Menaḥot",
+        "lang": "en"
+      },
+      {
+        "text": "Menaḥot",
+        "lang": "en"
+      },
+      {
+        "text": "מש' מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה, מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה מסכת מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה, מסכת מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "משנ' מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה מנחות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.332Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Menachot"
+}

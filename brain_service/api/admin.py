@@ -1,10 +1,10 @@
 import logging
 from typing import Any, Dict, List
-from fastapi import APIRouter, HTTPException, Response, status, Depends
+from fastapi import APIRouter, Depends, HTTPException, Response, status
 
 # Imports from the new model location
 from models.admin_models import PersonalityFull, PersonalityPublic, PromptUpdateRequest
-from core.dependencies import require_admin_token
+from core.dependencies import require_admin_user
 
 # Imports from the existing config modules (assuming they are in PYTHONPATH)
 from config import get_config, update_config
@@ -16,7 +16,7 @@ router = APIRouter()
 
 # --- ADMIN ENDPOINTS ---
 @router.get("/config")
-async def get_config_handler(_: str = Depends(require_admin_token)):
+async def get_config_handler(_: str = Depends(require_admin_user)):
     return get_config()
 
 @router.get("/config/public")
@@ -33,7 +33,7 @@ async def get_public_config_handler():
     }
 
 @router.patch("/config")
-async def update_config_handler(settings: Dict[str, Any], _: str = Depends(require_admin_token)):
+async def update_config_handler(settings: Dict[str, Any], _: str = Depends(require_admin_user)):
     try:
         updated_config = update_config(settings)
         logger.info("AUDIT: Configuration updated", extra={"settings_changed": settings})
@@ -43,18 +43,18 @@ async def update_config_handler(settings: Dict[str, Any], _: str = Depends(requi
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/prompts")
-async def list_prompts_handler(_: str = Depends(require_admin_token)):
+async def list_prompts_handler(_: str = Depends(require_admin_user)):
     return list_prompts()
 
 @router.get("/prompts/{prompt_id:path}")
-async def get_prompt_handler(prompt_id: str, _: str = Depends(require_admin_token)):
+async def get_prompt_handler(prompt_id: str, _: str = Depends(require_admin_user)):
     prompt_text = get_prompt(prompt_id)
     if prompt_text is None:
         raise HTTPException(status_code=404, detail=f"Prompt '{prompt_id}' not found.")
     return {"id": prompt_id, "text": prompt_text}
 
 @router.put("/prompts/{prompt_id:path}")
-async def update_prompt_handler(prompt_id: str, request: PromptUpdateRequest, _: str = Depends(require_admin_token)):
+async def update_prompt_handler(prompt_id: str, request: PromptUpdateRequest, _: str = Depends(require_admin_user)):
     success = update_prompt(prompt_id, request.text)
     if not success:
         raise HTTPException(status_code=500, detail=f"Failed to update prompt '{prompt_id}'.")
@@ -62,7 +62,7 @@ async def update_prompt_handler(prompt_id: str, request: PromptUpdateRequest, _:
     return {"status": "ok"}
 
 @router.get("/personalities", response_model=List[PersonalityPublic])
-async def list_personalities_handler(_: str = Depends(require_admin_token)):
+async def list_personalities_handler(_: str = Depends(require_admin_user)):
     return personality_service.list_personalities()
 
 @router.get("/personalities/public", response_model=List[PersonalityPublic])
@@ -71,28 +71,28 @@ async def list_personalities_public_handler():
     return personality_service.list_personalities()
 
 @router.get("/personalities/{personality_id}", response_model=PersonalityFull)
-async def get_personality_handler(personality_id: str, _: str = Depends(require_admin_token)):
+async def get_personality_handler(personality_id: str, _: str = Depends(require_admin_user)):
     personality = personality_service.get_personality(personality_id)
     if not personality:
         raise HTTPException(status_code=404, detail=f"Personality '{personality_id}' not found.")
     return personality
 
 @router.post("/personalities", response_model=PersonalityFull, status_code=status.HTTP_201_CREATED)
-async def create_personality_handler(personality_data: PersonalityFull, _: str = Depends(require_admin_token)):
+async def create_personality_handler(personality_data: PersonalityFull, _: str = Depends(require_admin_user)):
     created = personality_service.create_personality(personality_data.model_dump())
     if not created:
         raise HTTPException(status_code=409, detail=f"Personality with ID '{personality_data.id}' already exists or is invalid.")
     return created
 
 @router.put("/personalities/{personality_id}", response_model=PersonalityFull)
-async def update_personality_handler(personality_id: str, personality_data: PersonalityFull, _: str = Depends(require_admin_token)):
+async def update_personality_handler(personality_id: str, personality_data: PersonalityFull, _: str = Depends(require_admin_user)):
     updated = personality_service.update_personality(personality_id, personality_data.model_dump())
     if not updated:
         raise HTTPException(status_code=404, detail=f"Personality with ID '{personality_id}' not found.")
     return updated
 
 @router.delete("/personalities/{personality_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_personality_handler(personality_id: str, _: str = Depends(require_admin_token)):
+async def delete_personality_handler(personality_id: str, _: str = Depends(require_admin_user)):
     success = personality_service.delete_personality(personality_id)
     if not success:
         raise HTTPException(status_code=404, detail=f"Personality with ID '{personality_id}' not found.")

@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Pesachim (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "pesachim"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      167
+    ],
+    "titles": [
+      {
+        "text": "תוספתא פסחים (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Pesachim (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Pesachim (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.789Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Pesachim%20(Lieberman)"
+}

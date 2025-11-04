@@ -1,0 +1,45 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      22,
+      8,
+      7
+    ],
+    [
+      16,
+      8,
+      9,
+      6
+    ],
+    [
+      5,
+      6,
+      9,
+      4,
+      7,
+      10
+    ],
+    [
+      12,
+      7,
+      8,
+      7,
+      4,
+      14
+    ],
+    [
+      11,
+      21,
+      11,
+      9,
+      20
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.379Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Maaser%20Sheni"
+}

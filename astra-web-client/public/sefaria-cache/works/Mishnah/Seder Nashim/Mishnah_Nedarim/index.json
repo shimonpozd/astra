@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Nedarim",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      90
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "M Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "M. Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ned."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah N’darim"
+      },
+      {
+        "text": "משנה נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.228Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Nedarim"
+}

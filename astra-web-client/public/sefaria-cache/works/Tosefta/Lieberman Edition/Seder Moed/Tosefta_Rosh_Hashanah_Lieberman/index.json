@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Rosh Hashanah (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      36
+    ],
+    "titles": [
+      {
+        "text": "תוספתא ראש השנה (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Rosh Hashanah (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Rosh Hashanah (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.830Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Rosh%20Hashanah%20(Lieberman)"
+}

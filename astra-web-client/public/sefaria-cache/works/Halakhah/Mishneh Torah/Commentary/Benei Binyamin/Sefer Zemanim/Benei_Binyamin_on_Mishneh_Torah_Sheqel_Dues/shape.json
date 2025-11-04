@@ -1,0 +1,40 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    0,
+    [
+      1,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:19.272Z",
+  "source": "http://localhost:8000/api/shape/Benei%20Binyamin%20on%20Mishneh%20Torah%2C%20Sheqel%20Dues"
+}

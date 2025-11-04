@@ -1,0 +1,867 @@
+{
+  "title": "Tosafot on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      1002,
+      1248
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Masekhet Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Kethuvoth"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Ketuvot"
+      },
+      {
+        "text": "תוספות על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot on Ketubot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 2a:1-15b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-115"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-115"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-115"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-115"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "בתולה נשאת"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 15b:12-28b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-214"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-214"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-214"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-214"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האשה שנתארמלה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 29a:1-41b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-314"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-314"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-314"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-314"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו נערות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 41b:11-54b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-412"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-412"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-412"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-412"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "נערה שנתפתתה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 54b:6-65b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-512"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-512"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-512"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-512"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אף על פי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 65b:13-70a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-610"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-610"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-610"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-610"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "מציאת האשה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 70a:7-77b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-79"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-79"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-79"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-79"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המדיר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 78a:1-82b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-89"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-89"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-89"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-89"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האשה שנפלו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 83a:1-90a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-99"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-99"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-99"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-99"
+              ]
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הכותב לאשתו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 90a:8-95b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-105"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-105"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-105"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-105"
+              ]
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "מי שהיה נשוי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 95b:15-101b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-116"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-116"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-116"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-116"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eleventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 11,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 11"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלמנה ניזונת"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 101b:13-104b:18",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-122"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-122"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-122"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "twelfth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-122"
+              ]
+            },
+            {
+              "term_slugs": [
+                "twelfth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 12,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 12"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הנושא את האשה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Ketubot 104b:19-112b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-131"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-131"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-131"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "thirteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-131"
+              ]
+            },
+            {
+              "term_slugs": [
+                "thirteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 13,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 13"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "שני דייני גזירות"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.507Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20on%20Ketubot"
+}

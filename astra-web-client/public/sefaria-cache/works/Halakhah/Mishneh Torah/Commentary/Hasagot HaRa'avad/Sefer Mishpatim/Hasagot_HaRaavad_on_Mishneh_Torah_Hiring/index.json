@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Hiring",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "hiring"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hiring"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      23,
+      27
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות שכירות",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Hiring",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Hiring"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.530Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Hiring"
+}

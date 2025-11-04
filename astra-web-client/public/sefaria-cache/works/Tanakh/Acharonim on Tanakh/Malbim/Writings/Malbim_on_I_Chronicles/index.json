@@ -1,0 +1,57 @@
+{
+  "title": "Malbim on I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      452,
+      652
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלבי\"ם על דברי הימים א",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.687Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20I%20Chronicles"
+}

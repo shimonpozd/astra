@@ -1,0 +1,198 @@
+{
+  "title": "Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      146
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Tefillin, Mezuzah and the Torah Scroll"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Tefillin, Mezuzah and the Torah Scroll"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Tefillin, Mezuzah and the Torah Scroll"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Tefillin, Mezuzah, v'Sefer Torah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות תפילין ומזוזה וספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' תפילין ומזוזה וספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' תפילין ומזוזה וספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות תפילין ומזוזה וספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' תפילין ומזוזה וספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה לרמב\"ם, הלכות ספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות ספר תורה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות ס\"ת"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות תפילין"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות מזוזה"
+      },
+      {
+        "text": "רמב״ם, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה לרמב״ם, הלכות ספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה לרמב”ם, הלכות ספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ס״ת",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ס”ת",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.862Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

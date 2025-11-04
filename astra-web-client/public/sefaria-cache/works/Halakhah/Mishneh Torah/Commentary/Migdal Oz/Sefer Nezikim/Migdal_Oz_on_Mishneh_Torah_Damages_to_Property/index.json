@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Damages to Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "damages-to-property"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      214,
+      282
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מגדל עוז על משנה תורה, הלכות נזקי ממון",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Damages to Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Damages to Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.818Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Damages%20to%20Property"
+}

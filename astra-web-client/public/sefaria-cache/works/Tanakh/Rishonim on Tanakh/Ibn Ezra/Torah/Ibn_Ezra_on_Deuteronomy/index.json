@@ -1,0 +1,85 @@
+{
+  "title": "Ibn Ezra on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ibn Ezra",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ibn-ezra",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      635,
+      1200
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Deut"
+      },
+      {
+        "lang": "he",
+        "text": "אבן עזרא על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "אבן עזרא על דברי׳"
+      },
+      {
+        "text": "אבן עזרא על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ibn Ezra on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ibn Ezra on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.509Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ibn%20Ezra%20on%20Deuteronomy"
+}

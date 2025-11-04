@@ -8,8 +8,8 @@ from models.study_models import (
     StudyChatSetFocusRequest, StudyChatRequest
 )
 from core.dependencies import get_study_service, get_lexicon_service
-from services.study_service import StudyService
-from services.lexicon_service import LexiconService
+from brain_service.services.study_service import StudyService
+from brain_service.services.lexicon_service import LexiconService
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -67,7 +67,7 @@ async def study_workbench_set_handler(
 @router.get("/categories")
 async def study_categories_handler():
     """Get bookshelf categories."""
-    from services.sefaria_index import get_bookshelf_categories
+    from brain_service.services.sefaria_index import get_bookshelf_categories
     return get_bookshelf_categories()
 
 @router.post("/bookshelf")

@@ -1,0 +1,439 @@
+{
+  "title": "Keritot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "keritot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "keritot"
+        ]
+      }
+    ],
+    "lengths": [
+      56,
+      1211
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Talmud Keritot",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Keritot",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Keritot",
+        "lang": "en"
+      },
+      {
+        "text": "Keritut",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Keritut",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Keritut",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Keritut",
+        "lang": "en"
+      },
+      {
+        "text": "Ker.",
+        "lang": "en"
+      },
+      {
+        "text": "K’rithoth",
+        "lang": "en"
+      },
+      {
+        "text": "Kerith.",
+        "lang": "en"
+      },
+      {
+        "text": "BT Keritot",
+        "lang": "en"
+      },
+      {
+        "text": "כריתות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Keritot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Keritot",
+    "checkFirst": {
+      "en": "Mishnah Keritot",
+      "he": "משנה כריתות"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 2a:1-8b:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-114"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-114"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "text": "Chapter 1; Sheloshim VeShesh",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "שלשים ושש",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 8b:4-11b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-213"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-213"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "text": "Chapter 2; Arba'ah Mechusrei Kapparah",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "ארבעה מחוסרי כפרה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 11b:6-17a:25",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-313"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-313"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "text": "Chapter 3; Amru Lo",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "אמרו לו",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 17a:26-20b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-411"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-411"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "text": "Chapter 4; Safek Akhal Chelev",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "ספק אכל חלב",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 20b:7-23b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-511"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-511"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "text": "Chapter 5; Dam Shechitah",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "דם שחיטה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Keritot 23b:12-28b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-69"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-69"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "text": "Chapter 6; HaMevi Asham",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "המביא אשם",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.245Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Keritot"
+}

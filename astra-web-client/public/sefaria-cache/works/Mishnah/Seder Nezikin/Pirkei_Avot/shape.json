@@ -1,0 +1,17 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    18,
+    16,
+    18,
+    22,
+    23,
+    11
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.348Z",
+  "source": "http://localhost:8000/api/shape/Pirkei%20Avot"
+}

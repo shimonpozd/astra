@@ -5,9 +5,11 @@ import { Label } from '../../components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
+import { debugLog } from '../../utils/debugLogger';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 // Simple toast replacement
 const toast = {
-  success: (message: string) => console.log('Success:', message),
+  success: (message: string) => debugLog('Success:', message),
   error: (message: string) => console.error('Error:', message),
 };
 
@@ -241,10 +243,9 @@ const GeneralSettings: React.FC = () => {
 
   const fetchConfig = async () => {
     try {
-      const response = await fetch('/admin/config', {
+      const response = await authorizedFetch('/admin/config', {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -273,12 +274,11 @@ const GeneralSettings: React.FC = () => {
     try {
       const changes = getConfigChanges(originalConfig, config);
 
-      const response = await fetch('/admin/config', {
+      const response = await authorizedFetch('/admin/config', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Token': 'super-secret-token'
-        },
+                  },
         body: JSON.stringify(changes),
       });
 

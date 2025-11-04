@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Sanctification of the New Month",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "sanctification-of-the-new-month"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      182,
+      308
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מגדל עוז על משנה תורה, הלכות קידוש החודש",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Sanctification of the New Month",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Sanctification of the New Month"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.710Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Sanctification%20of%20the%20New%20Month"
+}

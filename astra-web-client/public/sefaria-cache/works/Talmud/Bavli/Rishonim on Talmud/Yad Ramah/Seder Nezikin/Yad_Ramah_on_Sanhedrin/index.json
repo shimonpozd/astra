@@ -1,0 +1,67 @@
+{
+  "title": "Yad Ramah on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Yad Ramah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-ramah",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      1268
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "יד רמה על סנהדרין",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "יד רמה על מסכת סנהדרין"
+      },
+      {
+        "lang": "en",
+        "text": "Yad Ramah on Tractate Sanhedrin"
+      },
+      {
+        "text": "Yad Ramah on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Ramah on Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.787Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Ramah%20on%20Sanhedrin"
+}

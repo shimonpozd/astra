@@ -1,0 +1,52 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    0,
+    0,
+    0,
+    0,
+    [
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:59.815Z",
+  "source": "https://www.sefaria.org/api/shape/Yesh%20Seder%20LaMishnah%20on%20Mishnah%20Kilayim"
+}

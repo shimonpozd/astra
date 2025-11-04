@@ -1,0 +1,133 @@
+{
+  "title": "Malbim on I Kings",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "i-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      565,
+      656
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on I Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Melachim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Kings I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Melachim I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on 1 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on First Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on I Melakhim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Melachim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Kings I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Melachim I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on 1 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on First Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Melakhim"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Kings"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מ״א"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מ\"א"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מלכים א'"
+      },
+      {
+        "text": "Malbim on I Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on I Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.485Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20I%20Kings"
+}

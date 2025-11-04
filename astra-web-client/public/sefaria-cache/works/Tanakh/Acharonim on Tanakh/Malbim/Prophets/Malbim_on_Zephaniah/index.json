@@ -1,0 +1,85 @@
+{
+  "title": "Malbim on Zephaniah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "zephaniah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      52,
+      57
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Malbim on Zeph.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim on Tzephaniah",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim on Zeph",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Zeph.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Tzephaniah",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Zeph",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Zephaniah",
+        "lang": "en"
+      },
+      {
+        "primary": true,
+        "text": "מלבי\"ם על צפניה",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on Zephaniah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Zephaniah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.588Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Zephaniah"
+}

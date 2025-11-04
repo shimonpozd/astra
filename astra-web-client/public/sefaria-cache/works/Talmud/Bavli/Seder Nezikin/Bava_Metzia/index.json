@@ -1,0 +1,655 @@
+{
+  "title": "Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bava-metzia"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      3660
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Masekhet Bava Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Bava Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Bava Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Baba Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Baba Mezi’a",
+        "lang": "en"
+      },
+      {
+        "text": "Baba Mezi'a",
+        "lang": "en"
+      },
+      {
+        "text": "B. Mets.",
+        "lang": "en"
+      },
+      {
+        "text": "Baba M’tsiʿa",
+        "lang": "en"
+      },
+      {
+        "text": "B.M.",
+        "lang": "en"
+      },
+      {
+        "text": "Baba Meẓi‘a",
+        "lang": "en"
+      },
+      {
+        "text": "BT Bava Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Baba Metsia",
+        "lang": "en"
+      },
+      {
+        "text": "Bava Metsia",
+        "lang": "en"
+      },
+      {
+        "text": "ב\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "ב״מ",
+        "lang": "he"
+      },
+      {
+        "text": "בבא מציע'",
+        "lang": "he"
+      },
+      {
+        "text": "בבא מציע׳",
+        "lang": "he"
+      },
+      {
+        "text": "בב' מציע'",
+        "lang": "he"
+      },
+      {
+        "text": "בב׳ מציע׳",
+        "lang": "he"
+      },
+      {
+        "text": "ב”מ",
+        "lang": "he"
+      },
+      {
+        "text": "בבא מציעא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bava Metzia",
+    "checkFirst": {
+      "he": "משנה בבא מציעא",
+      "en": "Mishnah Bava Metzia"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 2a:1-21a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-14"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-14"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1; Shenayim Ochazin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "שנים אוחזין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 21a:7-33b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-24"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-24"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2; Ellu Metziot"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו מציאות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 33b:7-44a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-34"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-34"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3; HaMafkid"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המפקיד"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 44a:8-60b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-44"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-44"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4; HaZahav"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הזהב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 60b:8-75b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-54"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-54"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5; Eizehu Neshekh"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "איזהו נשך"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 75b:15-83a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-63"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-63"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6; HaSokher et HaUmmanin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השוכר את האומנין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 83a:12-94a:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-73"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-73"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7; HaSokher et HaPoalim"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השוכר את הפועלים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 94a:16-103a:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-83"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-83"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8; HaShoel et HaParah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "השואל את הפרה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 103a:16-116a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-93"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-93"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9; HaMekabbel Sadeh MeChavero"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המקבל שדה מחבירו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Metzia 116b:1-119a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-102"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-102"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10; HaBayit VeHa'aliyyah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הבית והעלייה"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.152Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Bava%20Metzia"
+}

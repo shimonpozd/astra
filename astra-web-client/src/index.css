@@ -70,6 +70,11 @@
     --input: 30 15% 80%;           /* #d1c7b8 — поля ввода */
     --ring: 30 20% 30%;            /* #4d4138 — фокус-кольцо */
     --radius: 0.5rem;              /* Радиус скругления */
+
+    /* Segments: theme-aware subtle borders */
+    --seg-border: color-mix(in oklab, hsl(var(--foreground)) 12%, hsl(var(--background)));
+    --seg-separator: color-mix(in oklab, hsl(var(--foreground)) 10%, hsl(var(--background)));
+    --seg-chrome-border: color-mix(in oklab, hsl(var(--foreground)) 14%, hsl(var(--background)));
   }
 
   .dark {
@@ -100,6 +105,17 @@
     --border: 28 12% 26%;
     --input: var(--border);
     --ring: 42 32% 86%;
+
+    /* Bookshelf theme variables */
+    --bg: 28 16% 15%;                  /* #1F1A17 – глубокий кофе */
+    --panel: 28 14% 14%;               /* #1b1916 – карточки */
+    --text: 42 28% 90%;                /* #e9e3d7 – кремовый текст */
+    --muted: 42 18% 72%;               /* #b7ad98 – подписи */
+
+    /* Segments: tuned for dark mode slightly higher contrast */
+    --seg-border: color-mix(in oklab, hsl(var(--foreground)) 18%, hsl(var(--background)));
+    --seg-separator: color-mix(in oklab, hsl(var(--foreground)) 14%, hsl(var(--background)));
+    --seg-chrome-border: color-mix(in oklab, hsl(var(--foreground)) 20%, hsl(var(--background)));
   }
 
   /* Базовые глобальные стили (только необходимые) */
@@ -518,6 +534,61 @@
    ============================================================================= */
 
 @layer utilities {
+  /* Focusreader controls: unified accent and sizes */
+  :root { --focus-accent: #c2a970; }
+
+  .fr-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+    border: 1px solid var(--focus-accent);
+    border-radius: 9999px;
+    color: var(--focus-accent);
+    background: color-mix(in oklab, var(--focus-accent) 0%, hsl(var(--background)));
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .fr-btn:hover { background: color-mix(in oklab, var(--focus-accent) 12%, hsl(var(--background))); }
+  .fr-btn.is-active {
+    background: color-mix(in oklab, var(--focus-accent) 18%, hsl(var(--background)));
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--focus-accent) 36%, hsl(var(--background)));
+  }
+
+  .fr-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    min-width: 28px;
+    padding: 0 8px;
+    border: 1px solid var(--focus-accent);
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--focus-accent) 12%, hsl(var(--background)));
+    color: var(--focus-accent);
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .fr-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid var(--focus-accent);
+    border-radius: 9999px;
+    background: color-mix(in oklab, var(--focus-accent) 12%, hsl(var(--background)));
+    color: var(--focus-accent);
+    font-size: 12px;
+    line-height: 1;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .fr-chip:hover { background: color-mix(in oklab, var(--focus-accent) 16%, hsl(var(--background))); }
+  .fr-chip.is-active {
+    background: color-mix(in oklab, var(--focus-accent) 22%, hsl(var(--background)));
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--focus-accent) 36%, hsl(var(--background)));
+  }
   /* Суженный форс-системный шрифт (не ломает иврит) */
   .force-system-font {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -626,5 +697,87 @@
     --tw-ring-offset-color: hsl(var(--background)) !important;
   }
 
+  /* Bookshelf helpers: rely on current theme vars; do NOT override base vars */
 
+  /* Bookshelf expandable preview */
+  .bookshelf-preview {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .bookshelf-preview.expanded {
+    max-height: 8rem;
+  }
+
+  /* EN badge styling */
+  .bookshelf-en-badge {
+    font-size: 10px;
+    border: 1px solid var(--accent, #c2a970);
+    padding: 0 6px;
+    border-radius: 999px;
+    opacity: 0.95;
+    background: color-mix(in oklab, var(--accent, #c2a970) 12%, transparent);
+    color: var(--accent, #c2a970);
+  }
+
+  /* Category button bar */
+  .bookshelf-catbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid hsl(var(--border) / 0.28);
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1;
+    color: hsl(var(--foreground) / 0.92);
+    background: hsl(var(--panel));
+    white-space: nowrap;
+    max-width: 14rem;
+  }
+  .bookshelf-catbtn.is-active {
+    color: hsl(var(--foreground));
+    box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.16);
+  }
+  .bookshelf-catbtn:hover {
+    border-color: hsl(var(--border) / 0.36);
+    background: color-mix(in oklab, var(--accent, #c2a970) 10%, transparent);
+  }
+  .bookshelf-catcount {
+    font-size: 10px;
+    padding: 0 0.4rem;
+    border: 1px solid hsl(var(--border) / 0.22);
+    border-radius: 999px;
+    opacity: 0.9;
+  }
+
+  /* Active tab styling for CategoryTabs */
+  .tab-active {
+    position: relative;
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+  }
+  .tab-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+}
+
+.soft-divider { border-top: 1px solid hsl(var(--border)/.22); margin: 0.5rem 0;}
+.bookshelf-catbtn { border-color: hsl(var(--border)/.22); }
+.bookshelf-catbtn:hover { border-color: hsl(var(--border)/.36); background: color-mix(in oklab, var(--accent) 8%, transparent); }
+.bookshelf-catbtn.is-active { box-shadow: inset 0 0 0 1px hsl(var(--border)/.16); background: color-mix(in oklab, var(--accent) 14%, transparent); }
+.bookshelf-lang-badge{
+  font-size:10px;
+  padding:0 .4rem;
+  border:1px solid hsl(var(--border) / .22);
+  border-radius:999px;
+  background: color-mix(in oklab, var(--accent) 12%, transparent);
+  color: hsl(var(--foreground) / .92);
+  opacity:.95;
 }

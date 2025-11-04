@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      8,
+      9
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "שער המלך על משנה תורה, הלכות ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.102Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

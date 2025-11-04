@@ -1,0 +1,54 @@
+{
+  "title": "Boaz on Mishnah Menachot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "menachot"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      14
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.*?)\\."
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה מנחות",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:29.057Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Menachot"
+}

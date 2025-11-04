@@ -1,0 +1,178 @@
+{
+  "title": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      156
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Hilchot Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Kli Hamikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Klei ha-Mikdash</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Klei ha-Mikdash",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות כלי המקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות כלי המקדש והעובדין בו",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.147Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Vessels%20of%20the%20Sanctuary%20and%20Those%20Who%20Serve%20Therein"
+}

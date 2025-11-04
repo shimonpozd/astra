@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Maasrot (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "maasrot"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      49
+    ],
+    "titles": [
+      {
+        "text": "תוספתא מעשרות (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Maasrot (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Maasrot (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.675Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Maasrot%20(Lieberman)"
+}

@@ -1,0 +1,55 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      16,
+      6,
+      7,
+      3,
+      4,
+      3,
+      6,
+      4
+    ],
+    [
+      8,
+      4,
+      3,
+      8,
+      6,
+      2,
+      2,
+      4
+    ],
+    [
+      10,
+      2,
+      4,
+      3,
+      6,
+      3,
+      2,
+      2,
+      3,
+      2
+    ],
+    [
+      2,
+      3,
+      3,
+      4,
+      2,
+      5,
+      6,
+      4,
+      3,
+      5
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.482Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Rosh%20Hashanah"
+}

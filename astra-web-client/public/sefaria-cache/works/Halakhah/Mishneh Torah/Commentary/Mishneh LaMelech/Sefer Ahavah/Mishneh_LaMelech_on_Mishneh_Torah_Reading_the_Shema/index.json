@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Reading the Shema",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "reading-the-shema"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "משנה למלך על משנה תורה, הלכות קריאת שמע"
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Reading the Shema",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Reading the Shema"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.008Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Reading%20the%20Shema"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Chidushim of Machaneh Ephraim on Mishneh Torah, Offerings for Unintentional Transgressions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chidushim of Machaneh Ephraim",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "offerings-for-unintentional-transgressions"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושים מהגאון בעל מחנה אפרים על משנה תורה, הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushim of Machaneh Ephraim on Mishneh Torah, Offerings for Unintentional Transgressions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushim of Machaneh Ephraim on Mishneh Torah, Offerings for Unintentional Transgressions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.856Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushim%20of%20Machaneh%20Ephraim%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Unintentional%20Transgressions"
+}

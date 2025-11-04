@@ -1,0 +1,59 @@
+{
+  "title": "Chomat Anakh on I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      83,
+      88
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על דברי הימים א'",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.072Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20I%20Chronicles"
+}

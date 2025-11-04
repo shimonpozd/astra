@@ -1,0 +1,49 @@
+{
+  "title": "Joseph ibn Yahya on Daniel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Joseph ibn Yahya",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "lengths": [
+      12,
+      333,
+      376
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יוסף אבן יחיא על דניאל",
+        "lang": "he"
+      },
+      {
+        "text": "Joseph ibn Yahya on Daniel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Joseph ibn Yahya on Daniel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.146Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Joseph%20ibn%20Yahya%20on%20Daniel"
+}

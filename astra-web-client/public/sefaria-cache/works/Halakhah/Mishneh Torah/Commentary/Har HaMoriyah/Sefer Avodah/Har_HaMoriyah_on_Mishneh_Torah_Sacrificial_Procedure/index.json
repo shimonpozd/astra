@@ -1,0 +1,60 @@
+{
+  "title": "Har HaMoriyah on Mishneh Torah, Sacrificial Procedure",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Har HaMoriyah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "sacrificial-procedure"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      317,
+      909
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "הר המוריה על משנה תורה, הלכות מעשה הקרבנות"
+      },
+      {
+        "text": "Har HaMoriyah on Mishneh Torah, Sacrificial Procedure",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Har HaMoriyah on Mishneh Torah, Sacrificial Procedure"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.845Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Har%20HaMoriyah%20on%20Mishneh%20Torah%2C%20Sacrificial%20Procedure"
+}

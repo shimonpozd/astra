@@ -1,0 +1,161 @@
+{
+  "title": "Da'at Zekenim on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Da'at Zekenim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "daat-zkenim",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      163,
+      252
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Minchat yehuda baaley hatosfot on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Da'at Zekenim on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Da'at Zekenim on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.080Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Da'at%20Zekenim%20on%20Deuteronomy"
+}

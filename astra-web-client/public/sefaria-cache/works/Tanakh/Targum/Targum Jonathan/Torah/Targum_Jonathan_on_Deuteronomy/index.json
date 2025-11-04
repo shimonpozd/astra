@@ -1,0 +1,65 @@
+{
+  "title": "Targum Jonathan on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Targum Jonathan",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-jonathan",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      956
+    ],
+    "titles": [
+      {
+        "text": "Targum Yonatan on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. I Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Targ. Y. Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "תרגום יונתן דברים",
+        "lang": "he"
+      },
+      {
+        "text": "תרגום יונתן על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Jonathan on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Jonathan on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.790Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Jonathan%20on%20Deuteronomy"
+}

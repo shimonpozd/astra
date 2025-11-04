@@ -1,0 +1,77 @@
+{
+  "title": "Ralbag on Ezra",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      121,
+      138
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on Ezr."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Ezr"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Ezr."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Ezr"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Ezra"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על עזרא",
+        "primary": true
+      },
+      {
+        "text": "Ralbag on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.498Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20Ezra"
+}

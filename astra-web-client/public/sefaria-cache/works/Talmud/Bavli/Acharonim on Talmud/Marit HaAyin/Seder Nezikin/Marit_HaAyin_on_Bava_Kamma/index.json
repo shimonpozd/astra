@@ -1,0 +1,59 @@
+{
+  "title": "Marit HaAyin on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Marit HaAyin",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "marit-haayin",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      20
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מראית העין על בבא קמא",
+        "primary": true
+      },
+      {
+        "text": "Marit HaAyin on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Marit HaAyin on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.082Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Marit%20HaAyin%20on%20Bava%20Kamma"
+}

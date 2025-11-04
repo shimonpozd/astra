@@ -1,0 +1,210 @@
+{
+  "title": "Mishneh Torah, Forbidden Intercourse",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "forbidden-intercourse"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      504
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Hilchot Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Forbidden Intercourse",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Forbidden Intercourse",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Forbidden Intercourse",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Issurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Issurei Bi'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Issurei Bi'ah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Isurei Biah",
+        "lang": "en"
+      },
+      {
+        "text": "Isurei Bi’ah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "הל׳ איסו״ב",
+        "lang": "he"
+      },
+      {
+        "text": "הל' איסו\"ב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' איסורי ביאה",
+        "lang": "he"
+      },
+      {
+        "text": "הל׳ איסו\"ב",
+        "lang": "he"
+      },
+      {
+        "text": "הל׳ איסו”ב",
+        "lang": "he"
+      },
+      {
+        "text": "הל' איסו״ב",
+        "lang": "he"
+      },
+      {
+        "text": "הל' איסו”ב",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות איסורי ביאה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Forbidden Intercourse",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Forbidden Intercourse"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.014Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Forbidden%20Intercourse"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Tosefta Peah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "peah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      80
+    ],
+    "titles": [
+      {
+        "text": "T. Peah",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Pe'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Peah",
+        "lang": "en"
+      },
+      {
+        "text": "T. Pe'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Pe'ah",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Péah",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. Peah",
+        "lang": "en"
+      },
+      {
+        "text": "Tosephta Peah",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא פאה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Peah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Peah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.426Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Peah"
+}

@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Rest on a Holiday",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "rest-on-a-holiday"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      175
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shevitat Yom Tov"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shevitat Yom Tov"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shevitat Yom Tov"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shevitat Yom Tov"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Rest on a Holiday"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Rest on a Holiday"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Rest on a Holiday"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shevitat Yom Tov"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shevitat Yom Tov"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שביתת יום טוב"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שביתת יום טוב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שביתת יום טוב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שביתת יום טוב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שביתת יום טוב"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות יום טוב"
+      },
+      {
+        "text": "רמב״ם, הלכות שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שביתת יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שביתת יום טוב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Rest on a Holiday",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Rest on a Holiday"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.927Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Rest%20on%20a%20Holiday"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Benei Binyamin on Mishneh Torah, Sheqel Dues",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Benei Binyamin",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "benei-binyamin",
+          "hilchot",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "benei-binyamin",
+          "sheqel-dues"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      8,
+      11
+    ],
+    "titles": [
+      {
+        "text": "בני בנימין על משנה תורה, הלכות שקלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Benei Binyamin on Mishneh Torah, Sheqel Dues",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Benei Binyamin on Mishneh Torah, Sheqel Dues"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.235Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Benei%20Binyamin%20on%20Mishneh%20Torah%2C%20Sheqel%20Dues"
+}

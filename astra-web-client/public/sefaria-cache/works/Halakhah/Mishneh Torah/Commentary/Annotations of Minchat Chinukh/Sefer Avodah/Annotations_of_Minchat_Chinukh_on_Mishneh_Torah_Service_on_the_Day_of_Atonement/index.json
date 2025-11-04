@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of Minchat Chinukh on Mishneh Torah, Service on the Day of Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Minchat Chinukh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "service-on-the-day-of-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      8,
+      8
+    ],
+    "titles": [
+      {
+        "text": "חידושים ומקורים מבעל מנחת חינוך על משנה תורה, הלכות עבודת יום הכפורים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Annotations of Minchat Chinukh on Mishneh Torah, Service on the Day of Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of Minchat Chinukh on Mishneh Torah, Service on the Day of Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:18.086Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20Minchat%20Chinukh%20on%20Mishneh%20Torah%2C%20Service%20on%20the%20Day%20of%20Atonement"
+}

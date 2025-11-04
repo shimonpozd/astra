@@ -1,0 +1,787 @@
+{
+  "title": "Zevachim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "zevachim"
+        ]
+      }
+    ],
+    "lengths": [
+      240,
+      3817
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Talmud Zevachim",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Zevachim",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Zevachim",
+        "lang": "en"
+      },
+      {
+        "text": "Zebachim",
+        "lang": "en"
+      },
+      {
+        "text": "Zeb.",
+        "lang": "en"
+      },
+      {
+        "text": "Z’baḥim",
+        "lang": "en"
+      },
+      {
+        "text": "Zev.",
+        "lang": "en"
+      },
+      {
+        "text": "BT Zevachim",
+        "lang": "en"
+      },
+      {
+        "text": "זבחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Zevachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Zevachim",
+    "checkFirst": {
+      "en": "Mishnah Zevachim",
+      "he": "משנה זבחים"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 2a:1-15b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-146"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-146"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "text": "Chapter 1; Kol HaZevachim",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הזבחים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 15b:9-31b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-238"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-238"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "text": "Chapter 2; Kol HaZevachim SheKibblu Daman",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הזבחים שקבלו דמן",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 31b:14-36b:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-336"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-336"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "text": "Chapter 3; Kol HaPesulin",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הפסולין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 36b:16-47a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-432"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-432"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "text": "Chapter 4; Beit Shammai",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "בית שמאי",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 47a:12-57b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-528"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-528"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "text": "Chapter 5; Eizehu Mekoman",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "איזהו מקומן",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 58a:1-66a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-625"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-625"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "text": "Chapter 6; Kodshei Kodashim",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "קדשי קדשים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 66a:7-70b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-723"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-723"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "text": "Chapter 7; Chatat HaOf",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "חטאת העוף",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 70b:15-83a:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-821"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-821"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "text": "Chapter 8; Kol HaZevachim SheNitarvu",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הזבחים שנתערבו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 83a:15-88b:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-919"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-919"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "text": "Chapter 9; HaMizbeach Mekaddesh",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המזבח מקדש",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 89a:1-92a:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1013"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1013"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "text": "Chapter 10; Kol HaTadir",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל התדיר",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 92a:6-98b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1115"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1115"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eleventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 11,
+          "titles": [
+            {
+              "text": "Chapter 11; Dam Chatat",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "דם חטאת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 98b:6-106a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1212"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "twelfth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1212"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "twelfth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 12,
+          "titles": [
+            {
+              "text": "Chapter 12; Tevul Yom",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "טבול יום",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 106a:9-112a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1311"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "thirteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1311"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "thirteenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 13,
+          "titles": [
+            {
+              "text": "Chapter 13; HaShochet VeHama'aleh",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "השוחט והמעלה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Zevachim 112a:11-120b:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-147"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-147"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 14,
+          "titles": [
+            {
+              "text": "Chapter 14; Parat Chatat",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרת חטאת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.204Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Zevachim"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Maggid Mishneh on Mishneh Torah, Borrowing and Deposit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maggid Mishneh",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "hilchot",
+          "borrowing-and-deposit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "borrowing-and-deposit"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      64,
+      161
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגיד משנה על משנה תורה, הלכות שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "Maggid Mishneh on Mishneh Torah, Borrowing and Deposit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maggid Mishneh on Mishneh Torah, Borrowing and Deposit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.142Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maggid%20Mishneh%20on%20Mishneh%20Torah%2C%20Borrowing%20and%20Deposit"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Agents and Partners",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "agents-and-partners"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      15,
+      16
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "אור שמח על משנה תורה, הלכות שלוחין ושותפין"
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Agents and Partners",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Agents and Partners"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.589Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

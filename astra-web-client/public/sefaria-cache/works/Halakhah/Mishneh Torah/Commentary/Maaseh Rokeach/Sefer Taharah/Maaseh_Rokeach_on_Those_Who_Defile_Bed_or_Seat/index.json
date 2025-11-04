@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Those Who Defile Bed or Seat",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "those-who-defile-bed-or-seat"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      76,
+      109
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Those Who Defile Bed or Seat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Those Who Defile Bed or Seat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.874Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Those%20Who%20Defile%20Bed%20or%20Seat"
+}

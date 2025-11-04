@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, Circumcision",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "circumcision"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות מילה",
+        "primary": true
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, Circumcision",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, Circumcision"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.962Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20Circumcision"
+}

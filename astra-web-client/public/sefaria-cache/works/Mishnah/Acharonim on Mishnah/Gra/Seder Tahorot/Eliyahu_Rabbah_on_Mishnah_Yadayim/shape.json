@@ -1,0 +1,36 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      4,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      2
+    ],
+    [
+      0,
+      2,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      2
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:31.088Z",
+  "source": "https://www.sefaria.org/api/shape/Eliyahu%20Rabbah%20on%20Mishnah%20Yadayim"
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Metzudat Zion on Zephaniah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "zephaniah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      47,
+      120
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Zeph."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Tzephaniah"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Zeph"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על צפניה",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Zephaniah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Zephaniah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.395Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Zephaniah"
+}

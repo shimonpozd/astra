@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Mishneh on Mishneh Torah, Testimony",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Mishneh",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "hilchot",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "testimony"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      72,
+      86
+    ],
+    "titles": [
+      {
+        "text": "לחם משנה על משנה תורה, הלכות עדות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Mishneh on Mishneh Torah, Testimony",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Mishneh on Mishneh Torah, Testimony"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.862Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Mishneh%20on%20Mishneh%20Torah%2C%20Testimony"
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Tractate Avadim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "avadim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "avadim"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      25
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Abad."
+      },
+      {
+        "lang": "en",
+        "text": "Abadim"
+      },
+      {
+        "lang": "en",
+        "text": "‘Ăbadim"
+      },
+      {
+        "lang": "en",
+        "text": "Treat. Abadim"
+      },
+      {
+        "text": "מסכת עבדים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tractate Avadim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Avadim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.286Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Avadim"
+}

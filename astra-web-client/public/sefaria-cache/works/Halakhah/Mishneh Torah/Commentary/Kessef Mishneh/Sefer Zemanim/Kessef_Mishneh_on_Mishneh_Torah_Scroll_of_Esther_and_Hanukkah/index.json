@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      6,
+      8
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מגילה וחנוכה",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.815Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

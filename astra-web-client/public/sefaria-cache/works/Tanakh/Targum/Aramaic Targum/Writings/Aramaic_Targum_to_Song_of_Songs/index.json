@@ -1,0 +1,53 @@
+{
+  "title": "Aramaic Targum to Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Aramaic Targum",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Section"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "aramaic-targum",
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      117
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Targ. Cant."
+      },
+      {
+        "text": "תרגום על שיר השירים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Aramaic Targum to Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Aramaic Targum to Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.601Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Aramaic%20Targum%20to%20Song%20of%20Songs"
+}

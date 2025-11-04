@@ -1,0 +1,627 @@
+{
+  "title": "Tosafot on Sotah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot",
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      280,
+      307
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Masekhet Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Sota"
+      },
+      {
+        "text": "תוספות על סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot on Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot on Sotah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 2a:1-14a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-137"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-137"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-137"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-137"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 1"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "המקנא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 14a:12-19a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-230"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-230"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-230"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-230"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 2"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "היה מביא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 19a:7-23b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-329"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-329"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-329"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-329"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 3"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "היה נוטל"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 23b:14-27b:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-425"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-425"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-425"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-425"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 4"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "ארוסה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 27b:3-31a:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-522"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-522"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-522"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-522"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 5"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "כשם שהמים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 31a:14-32a:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-620"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-620"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-620"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-620"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 6"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "מי שקינא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 32a:5-42a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-718"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-718"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-718"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-718"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 7"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "אלו נאמרין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 42a:8-44b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-818"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-818"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-818"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-818"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 8"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "משוח מלחמה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Sotah 44b:10-49b:20",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-917"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-917"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-917"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-917"
+              ]
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 9"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "עגלה ערופה"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.563Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20on%20Sotah"
+}

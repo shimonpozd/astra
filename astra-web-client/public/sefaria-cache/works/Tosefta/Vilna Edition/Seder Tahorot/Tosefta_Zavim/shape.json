@@ -1,0 +1,16 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    4,
+    5,
+    3,
+    7,
+    11
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.881Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Zavim"
+}

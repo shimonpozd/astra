@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Sanhedrin",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      582,
+      582
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:24.581Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Sanhedrin"
+}

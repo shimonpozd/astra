@@ -1,0 +1,28 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    24,
+    24,
+    24,
+    22,
+    15,
+    21,
+    21,
+    18,
+    28,
+    24,
+    26,
+    29,
+    28,
+    19,
+    34,
+    35,
+    32
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.056Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Forbidden%20Foods"
+}

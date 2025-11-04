@@ -1,0 +1,51 @@
+{
+  "title": "Chiddushei Anshei Shem on Makkot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Chiddushei Anshei Shem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-anshei-shem",
+          "makkot"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      6
+    ],
+    "titles": [
+      {
+        "text": "חידושי אנשי שם על מכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Anshei Shem on Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Anshei Shem on Makkot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:24.133Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Chiddushei%20Anshei%20Shem%20on%20Makkot"
+}

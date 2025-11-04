@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Inheritances",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "inheritances"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "inheritances"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "inheritances"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "inheritances"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "inheritances"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      117
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Malveh veLoveh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Inheritances"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Malveh veLoveh"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Inheritances"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Malveh veLoveh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Inheritances"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Malveh veLoveh"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות נחלות"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Malveh veLoveh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Malveh veLoveh"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' נחלות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' נחלות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות נחלות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' נחלות"
+      },
+      {
+        "text": "רמב״ם, הלכות נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' נחלות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות נחלות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Inheritances",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Inheritances"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.486Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Inheritances"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Circumcision",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "circumcision"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      35,
+      88
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מילה",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Circumcision",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Circumcision"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.743Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Circumcision"
+}

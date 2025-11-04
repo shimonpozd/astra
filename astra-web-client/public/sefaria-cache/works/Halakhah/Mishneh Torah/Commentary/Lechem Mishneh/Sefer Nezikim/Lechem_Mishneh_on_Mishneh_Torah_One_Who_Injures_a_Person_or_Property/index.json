@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Mishneh on Mishneh Torah, One Who Injures a Person or Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Mishneh",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "one-who-injures-a-person-or-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      42,
+      46
+    ],
+    "titles": [
+      {
+        "text": "לחם משנה על משנה תורה, הלכות חובל ומזיק",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Mishneh on Mishneh Torah, One Who Injures a Person or Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Mishneh on Mishneh Torah, One Who Injures a Person or Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.764Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Mishneh%20on%20Mishneh%20Torah%2C%20One%20Who%20Injures%20a%20Person%20or%20Property"
+}

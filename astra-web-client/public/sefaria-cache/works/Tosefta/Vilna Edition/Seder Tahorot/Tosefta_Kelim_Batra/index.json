@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Kelim Batra",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kelim-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      29
+    ],
+    "titles": [
+      {
+        "text": "Tosefta Keilim Basra",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Keilim Batra",
+        "lang": "en"
+      },
+      {
+        "text": "T. Keilim Batra",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Keilim Basra",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. Kel. B. Bath.",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Keilim Batra",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא כלים בבא בתרא",
+        "lang": "he"
+      },
+      {
+        "text": "תוספתא כלים בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kelim Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kelim Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.795Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kelim%20Batra"
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Malbim on Haggai",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "haggai"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      33,
+      34
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Chaggai"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Hag"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Hag."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Chaggai"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Hag"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Hag."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Haggai"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על חגי",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Haggai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Haggai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.591Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Haggai"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Piskei Tosafot on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Piskei Tosafot",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Comment",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "piskei-tosafot",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      392,
+      394
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי תוספות על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Piskei Tosafot on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Piskei Tosafot on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.415Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Piskei%20Tosafot%20on%20Ketubot"
+}

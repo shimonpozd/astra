@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat Zion on Nahum",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "nahum"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      44,
+      152
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Nah."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Nah"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על נחום",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Nahum",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Nahum"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.356Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Nahum"
+}

@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Eruvin",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      96
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "M. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Erub."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Erubin"
+      },
+      {
+        "text": "משנה עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.124Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Eruvin"
+}

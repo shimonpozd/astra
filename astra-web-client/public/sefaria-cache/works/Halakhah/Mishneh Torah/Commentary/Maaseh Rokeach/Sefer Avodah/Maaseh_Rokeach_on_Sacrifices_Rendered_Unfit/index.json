@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Sacrifices Rendered Unfit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "sacrifices-rendered-unfit"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      149,
+      205
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Sacrifices Rendered Unfit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Sacrifices Rendered Unfit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.765Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Sacrifices%20Rendered%20Unfit"
+}

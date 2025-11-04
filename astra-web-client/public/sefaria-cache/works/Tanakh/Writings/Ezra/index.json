@@ -1,0 +1,64 @@
+{
+  "title": "Ezra",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "ezra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      280
+    ],
+    "titles": [
+      {
+        "text": "Ezr.",
+        "lang": "en"
+      },
+      {
+        "text": "Ezr",
+        "lang": "en"
+      },
+      {
+        "text": "Esdras",
+        "lang": "en"
+      },
+      {
+        "text": "עזרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.512Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ezra"
+}

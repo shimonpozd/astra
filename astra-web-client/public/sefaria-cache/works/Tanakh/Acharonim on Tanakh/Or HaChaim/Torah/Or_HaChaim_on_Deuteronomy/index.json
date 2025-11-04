@@ -1,0 +1,109 @@
+{
+  "title": "Or HaChaim on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Or HaChaim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "or-hachaim",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      300,
+      902
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Deut"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Deut"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Deuteronomy"
+      },
+      {
+        "lang": "he",
+        "text": "אור החיים על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "אור החיים על דברי׳"
+      },
+      {
+        "text": "אור החיים על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Or HaChaim on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Or HaChaim on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.564Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Or%20HaChaim%20on%20Deuteronomy"
+}

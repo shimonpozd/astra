@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Chagigah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "chagigah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      31
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Hagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Hagigah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Hagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ḥag."
+      },
+      {
+        "text": "תוספתא חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Chagigah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Chagigah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.573Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Chagigah"
+}

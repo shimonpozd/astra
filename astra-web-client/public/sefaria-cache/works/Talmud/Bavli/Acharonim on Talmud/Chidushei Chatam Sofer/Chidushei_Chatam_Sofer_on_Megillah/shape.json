@@ -1,0 +1,31 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    3,
+    1,
+    6,
+    5,
+    2,
+    3,
+    2,
+    4,
+    4,
+    8,
+    7,
+    1,
+    0,
+    2,
+    8,
+    0,
+    4,
+    4
+  ],
+  "fetchedAt": "2025-10-30T14:42:11.146Z",
+  "source": "http://localhost:8000/api/shape/Chidushei%20Chatam%20Sofer%20on%20Megillah"
+}

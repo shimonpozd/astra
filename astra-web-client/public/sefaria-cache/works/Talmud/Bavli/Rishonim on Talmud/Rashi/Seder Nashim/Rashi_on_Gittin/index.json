@@ -1,0 +1,632 @@
+{
+  "title": "Rashi on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashi",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      180,
+      2330,
+      4652
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "\\.(.+?)$",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Tractate Gittin"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Talmud Gittin"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Masekhet Gittin"
+      },
+      {
+        "text": "רש״י על גיטין",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על גיטין",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Gittin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 2a:1-15a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-112"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-112"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-112"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-112"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המביא קמא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 15a:8-24a:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-211"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-211"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-211"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-211"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המביא בתרא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 24a:16-32a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-311"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-311"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-311"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-311"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הגט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 32a:3-48b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-410"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-410"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-410"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-410"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "השולח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 48b:6-62a:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-510"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-510"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-510"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-510"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הניזקין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 62b:1-67b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-68"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-68"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-68"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-68"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 6",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "האומר התקבל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 67b:9-77a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-78"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-78"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-78"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-78"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 7",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מי שאחזו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 77a:10-82a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-88"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-88"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-88"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-88"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 8",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הזורק גט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Gittin 82a:7-90b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-98"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-98"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-98"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-98"
+              ]
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "text": "Chapter 9",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המגרש",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.571Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Gittin"
+}

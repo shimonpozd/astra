@@ -1,0 +1,64 @@
+{
+  "title": "Tosefta Sotah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      101
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Sota"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Sot."
+      },
+      {
+        "text": "תוספתא סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Sotah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.612Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Sotah"
+}

@@ -1,21 +1,20 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { memo, useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { Search, BookOpen, Loader2 } from 'lucide-react';
+import { Search, BookOpen, Loader2, ArrowDownWideNarrow, ArrowDownNarrowWide } from 'lucide-react';
 import { BookshelfPanelProps } from '../../types/bookshelf';
-import { containsHebrew, getTextDirection } from '../../utils/hebrewUtils';
 import { api } from '../../services/api';
 
 // Помощник: извлечь человекочитаемое превью из старой (string) или новой ({he,en}) схемы.
-// Правило: если в текущем item больше иврита — берём he; иначе — en; затем fallback на любую непустую строку.
-function coalescePreview(raw: any): string | undefined {
-  if (!raw) return undefined;
+// Правило: всегда приоритет he, затем en как fallback.
+function coalescePreview(raw: any): { text: string | undefined; lang: 'he' | 'en' | undefined } {
+  if (!raw) return { text: undefined, lang: undefined };
 
   const val = raw.preview ?? raw.text ?? raw.snippet ?? raw.summary;
 
-  // Старый кейс: plain string
+  // Старый кейс: plain string (считаем как he для обратной совместимости)
   if (typeof val === 'string') {
     const s = val.trim();
-    return s.length ? s : undefined;
+    return s.length ? { text: s, lang: 'he' } : { text: undefined, lang: undefined };
   }
 
   // Новый кейс: объект {he?, en?} или вложенный {text:{he?,en?}}
@@ -25,18 +24,90 @@ function coalescePreview(raw: any): string | undefined {
     const he = typeof obj.he === 'string' ? obj.he.trim() : '';
     const en = typeof obj.en === 'string' ? obj.en.trim() : '';
 
-    // если явно есть he — используем его
-    if (he) return he;
-    // иначе en
-    if (en) return en;
+    // всегда приоритет he
+    if (he) return { text: he, lang: 'he' };
+    // fallback на en
+    if (en) return { text: en, lang: 'en' };
   }
 
-  return undefined;
+  return { text: undefined, lang: undefined };
+}
+
+// Утилита: проверяет, есть ли английский перевод
+function hasEnglish(raw: any): boolean {
+  if (!raw) return false;
+  const val = raw.preview ?? raw.text ?? raw.snippet ?? raw.summary;
+  const obj = typeof val === 'string' ? null : (val?.text ? val.text : val);
+  const en = obj?.en || (typeof val === 'object' ? val?.en : undefined);
+  return typeof en === 'string' && en.trim().length > 0;
+}
+
+// Есть ли иврит (по тем же полям, что и coalescePreview)
+function hasHebrew(raw: any): boolean {
+  if (!raw) return false;
+  const val = raw.preview ?? raw.text ?? raw.snippet ?? raw.summary;
+  const obj = typeof val === 'string' ? { he: val } : (val?.text ? val.text : val);
+  const he = obj?.he;
+  return typeof he === 'string' && he.trim().length > 0;
+}
+// Возвращает текст и css-класс бейджа для языков
+function getLangBadge(raw: any): { text: string; className: string } | null {
+  const he = hasHebrew(raw);
+  const en = hasEnglish(raw);
+  if (he && en) return { text: 'Иврит+EN', className: 'bookshelf-lang-badge' };
+  if (!he && en) return { text: 'EN', className: 'bookshelf-lang-badge' };
+  return null;
 }
 
 interface Category {
   name: string;
   color: string;
+}
+
+function CategoryButtonBar({
+  categories,
+  selected,
+  onSelect,
+  getCount,
+  accent = '#c2a970'
+}: {
+  categories: { name: string; color?: string }[];
+  selected: string | null;
+  onSelect: (name: string) => void;
+  getCount?: (name: string) => number;
+  accent?: string;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      {categories.slice(0, 12).map((c) => {
+        const isActive = selected === c.name;
+        const count = getCount ? getCount(c.name) : undefined;
+
+        return (
+          <button
+            key={c.name}
+            type="button"
+            aria-pressed={isActive}
+            onClick={() => onSelect(c.name)}
+            className={`bookshelf-catbtn ${isActive ? 'is-active' : ''}`}
+            style={{
+              // мягкие рамки без «жёстких светлых линий»
+              borderColor: isActive ? accent : 'hsl(var(--border) / 0.28)',
+              background: isActive
+                ? `color-mix(in oklab, ${accent} 16%, transparent)`
+                : 'hsl(var(--panel))',
+            }}
+            title={c.name}
+          >
+            <span className="truncate">{CATEGORY_LOCALE[c.name] || c.name}</span>
+            {typeof count === 'number' && count > 0 && (
+              <span className="bookshelf-catcount">{count}</span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
 export type GroupKey = string; // "Rashi on Shabbat 12a:2"
@@ -162,6 +233,10 @@ function naturalPartValue(ref: string): { n?: number; s?: string } {
 
 export function sortGroupItems(items: any[]): any[] {
   return [...items].sort((a, b) => {
+    const ae = hasEnglish(a) ? 1 : 0;
+    const be = hasEnglish(b) ? 1 : 0;
+    if (ae !== be) return be - ae; // EN first
+
     const as = a.score ?? 0, bs = b.score ?? 0;
     if (as !== bs) return bs - as;
 
@@ -175,14 +250,15 @@ export function sortGroupItems(items: any[]): any[] {
 }
 
 // Сортировка групп
-function maxScore(items: any[]) {
-  return items.reduce((m, it) => Math.max(m, it.score ?? -Infinity), -Infinity);
-}
-
 export function sortGroups(groups: GroupNode[]): GroupNode[] {
+  const groupHasEN = (g: GroupNode) => g.items.some(hasEnglish) ? 1 : 0;
+  const maxScore = (items: any[]) => items.reduce((m, it) => Math.max(m, it.score ?? -Infinity), -Infinity);
+
   return [...groups].sort((g1, g2) => {
+    const e1 = groupHasEN(g1), e2 = groupHasEN(g2);
+    if (e1 !== e2) return e2 - e1;                 // EN-first по группам
     const s1 = maxScore(g1.items), s2 = maxScore(g2.items);
-    if (s1 !== s2) return s2 - s1;
+    if (s1 !== s2) return s2 - s1;                  // затем score
     const t1 = `${g1.parsed.tractate} ${g1.parsed.page}:${g1.parsed.section}`;
     const t2 = `${g2.parsed.tractate} ${g2.parsed.page}:${g2.parsed.section}`;
     return t1.localeCompare(t2, undefined, { numeric: true, sensitivity: 'base' });
@@ -212,6 +288,21 @@ export function pickColor(category?: string, commentator?: string) {
   if (commentator && COMMENTATOR_COLORS[commentator]) return COMMENTATOR_COLORS[commentator];
   return '#7A7A7A';
 }
+
+const CATEGORY_LOCALE = {
+  'Commentary': 'Комментарий',
+  'Quoting Commentary': 'Цитируемый комментарий',
+  'Midrash': 'Мидраш',
+  'Mishnah': 'Мишна',
+  'Targum': 'Таргум',
+  'Halakhah': 'Галаха',
+  'Responsa': 'Респонсы',
+  'Chasidut': 'Хасидизм',
+  'Kabbalah': 'Каббала',
+  'Jewish Thought': 'Еврейская мысль',
+  'Liturgy': 'Литургия',
+  'Bible': 'Танах'
+};
 
 const BookshelfPanel = memo(({
   sessionId,
@@ -258,6 +349,7 @@ const BookshelfPanel = memo(({
   const [isLoadingCategories, setIsLoadingCategories] = useState(false);
   const [isLoadingItems, setIsLoadingItems] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [density, setDensity] = useState<'compact'|'normal'>('compact');
 
   // Load categories on mount
   useEffect(() => {
@@ -356,17 +448,17 @@ const BookshelfPanel = memo(({
         group.parsed.commentator.toLowerCase().includes(query) ||
         group.key.toLowerCase().includes(query) ||
         group.items.some((item: any) => {
-          const previewText = coalescePreview(item);
+          const preview = coalescePreview(item);
           return item.ref.toLowerCase().includes(query) ||
                  item.category?.toLowerCase().includes(query) ||
-                 (previewText && previewText.toLowerCase().includes(query));
+                 (preview.text && preview.text.toLowerCase().includes(query));
         })
       );
       filteredOrphans = filteredOrphans.filter((item: any) => {
-        const previewText = coalescePreview(item);
+        const preview = coalescePreview(item);
         return item.ref.toLowerCase().includes(query) ||
                item.category?.toLowerCase().includes(query) ||
-               (previewText && previewText.toLowerCase().includes(query));
+               (preview.text && preview.text.toLowerCase().includes(query));
       });
     }
 
@@ -386,11 +478,13 @@ const BookshelfPanel = memo(({
     const parsed = parseRefStrict(item.ref); // может вернуть null, проверим
     const part = parsed?.part;
 
+    const langBadge = getLangBadge(item);
+
     return (
       <div
         key={group.key}
-        className="p-3 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors"
-        style={{ borderColor: group.color, borderWidth: '2px' }}
+        className={`rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors ${density === 'compact' ? 'p-2' : 'p-2.5'}`}
+        style={{ borderColor: `${group.color}80`, borderWidth: '2px' }}
         draggable
         onDragStart={(e) => {
           // Для совместимости передаем конкретный ref части
@@ -412,10 +506,20 @@ const BookshelfPanel = memo(({
               </div>
               {part && (
                 <span className="text-[10px] uppercase tracking-wide bg-muted/60 text-muted-foreground px-1.5 py-0.5 rounded whitespace-nowrap">
-                  Part {part}
+                  Часть {part}
+                </span>
+              )}
+              {hasEnglish(item) && (
+                <span className="bookshelf-en-badge ml-2">
+                  EN
                 </span>
               )}
             </div>
+            {langBadge && (
+              <span className={langBadge.className} aria-label={`Язык: ${langBadge.text}`}>
+                {langBadge.text}
+              </span>
+            )}
 
             {/* ДОП. ПОДПИСИ (если есть) */}
             {(item.heRef || item.indexTitle) && (
@@ -434,23 +538,22 @@ const BookshelfPanel = memo(({
             )}
 
             {/* РЕФЕРЕНТ В МОНО (адрес части) */}
-            <div className="text-xs font-mono text-muted-foreground mt-1">
+            <div className="text-[10px] font-mono text-muted-foreground mt-0.5">
               {parsed ? `${parsed.page}:${parsed.section}:${parsed.part ?? '?'}` : item.ref}
             </div>
 
-            {/* ПРЕВЬЮ (1 строка, RTL при иврите) */}
-            {(() => {
-              const previewText = coalescePreview(item);
-              if (!previewText) return null;
+            {/* ПРЕВЬЮ (2 строки, RTL при иврите) */}
+            {density === 'normal' && (() => {
+              const preview = coalescePreview(item);
+              if (!preview.text) return null;
+              const dir = preview.lang === 'he' ? 'rtl' : 'ltr';
               return (
                 <div
-                  className={`text-xs mt-1 opacity-80 line-clamp-1 ${
-                    containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
-                  }`}
-                  dir={getTextDirection(previewText)}
-                  title={previewText}
+                  className={`mt-1 opacity-85 line-clamp-2 ${preview.lang === 'he' ? 'text-right font-hebrew' : 'text-left'} text-[11px]`}
+                  dir={dir}
+                  title={preview.text}
                 >
-                  {previewText}
+                  {preview.text}
                 </div>
               );
             })()}
@@ -458,7 +561,7 @@ const BookshelfPanel = memo(({
         </div>
       </div>
     );
-  }, [onDragStart]);
+  }, [onDragStart, density]);
 
   // Render multi-part group
   const renderMultiPartGroup = useCallback((group: GroupNode) => {
@@ -466,8 +569,8 @@ const BookshelfPanel = memo(({
       <div key={group.key} className="space-y-1">
         {/* Group header - compact "series line" */}
         <div
-          className="p-2 rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors relative"
-          style={{ borderColor: group.color, borderWidth: '2px' }}
+          className={`rounded-lg border panel-card cursor-move hover:bg-accent/5 transition-colors relative ${density === 'compact' ? 'p-2' : 'p-2.5'}`}
+          style={{ borderColor: `${group.color}80`, borderWidth: '2px' }}
           title={`Drag entire series: ${group.parsed.commentator} on ${group.parsed.tractate} ${group.parsed.page}:${group.parsed.section} (${group.items.length} parts)`}
           draggable
           onDragStart={(e) => {
@@ -509,12 +612,9 @@ const BookshelfPanel = memo(({
               <div className="font-semibold text-sm truncate">
                 {group.parsed.commentator} on {group.parsed.tractate} {group.parsed.page}:{group.parsed.section}
               </div>
-              <span className="text-[10px] uppercase tracking-wide bg-muted/60 text-muted-foreground px-1.5 py-0.5 rounded">
-                Series
-              </span>
             </div>
             <div className="text-xs text-muted-foreground whitespace-nowrap">
-              {group.items.length} parts
+              {group.items.length} частей
             </div>
           </div>
         </div>
@@ -523,10 +623,11 @@ const BookshelfPanel = memo(({
         <div className="ml-6 space-y-1">
           {group.items.map((item: any, idx: number) => {
             const part = parseRefStrict(item.ref)?.part;
+            const langBadge = getLangBadge(item);
             return (
               <div
                 key={`${item.ref}__${idx}`}
-                className="flex items-start gap-2 p-2 rounded border panel-card hover:bg-accent/10 transition-colors cursor-move"
+                className={`flex items-start gap-2 rounded border panel-card hover:bg-accent/10 transition-colors cursor-move ${density==='compact' ? 'py-1 px-2' : 'py-1.5 px-3'}`}
                 title={`Drag individual part: ${item.ref}`}
                 draggable
                 onDragStart={(e) => {
@@ -557,44 +658,45 @@ const BookshelfPanel = memo(({
                   <div className="text-sm font-mono text-muted-foreground">
                     {part ? `${group.parsed.page}:${group.parsed.section}:${part}` : item.ref}
                   </div>
-                  {(() => {
-                    const previewText = coalescePreview(item);
-                    if (!previewText) return null;
+                  {density === 'normal' && (() => {
+                    const preview = coalescePreview(item);
+                    if (!preview.text) return null;
+                    const dir = preview.lang === 'he' ? 'rtl' : 'ltr';
                     return (
                       <div
-                        className={`text-xs opacity-75 mt-0.5 line-clamp-1 ${
-                          containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
-                        }`}
-                        dir={getTextDirection(previewText)}
+                        className={`text-[11px] opacity-85 mt-0.5 line-clamp-2 ${preview.lang==='he' ? 'text-right font-hebrew' : 'text-left'}`}
+                        dir={dir}
                       >
-                        {previewText}
+                        {preview.text}
                       </div>
                     );
                   })()}
                 </div>
+                {langBadge && <span className={langBadge.className} aria-label={`Язык: ${langBadge.text}`}>{langBadge.text}</span>}
               </div>
             );
           })}
         </div>
       </div>
     );
-  }, [onDragStart]);
+  }, [onDragStart, density]);
 
   // Main render group function
   const renderGroup = useCallback((group: GroupNode) => {
     return group.items.length === 1
       ? renderSinglePartGroup(group)
       : renderMultiPartGroup(group);
-  }, [renderSinglePartGroup, renderMultiPartGroup]);
+  }, [renderSinglePartGroup, renderMultiPartGroup, density]);
 
   // Render orphan item
   const renderOrphan = useCallback((item: any, idx?: number) => {
     const parsed = parseRefStrict(item.ref); // может быть null
+    const langBadge = getLangBadge(item);
 
     return (
       <div
         key={`${item.ref}__${idx ?? 0}`}
-        className="flex items-start gap-2 p-3 rounded-lg border panel-card hover:bg-accent/10 transition-colors cursor-move"
+        className={`flex items-start gap-2 rounded-lg border panel-card hover:bg-accent/10 transition-colors cursor-move ${density==='compact' ? 'p-2' : 'p-2.5'}`}
         draggable
         onDragStart={(e) => {
           e.dataTransfer.setData('text/astra-commentator-ref', item.ref);
@@ -605,29 +707,31 @@ const BookshelfPanel = memo(({
       >
         <span className="text-muted-foreground mt-0.5">≡</span>
         <div className="flex-1 min-w-0">
-          <div className="text-sm font-medium truncate">
-            {parsed
-              ? `${parsed.commentator} on ${parsed.tractate} ${parsed.page}:${parsed.section}${parsed.part ? ` (Part ${parsed.part})` : ''}`
-              : item.ref}
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="text-sm font-medium truncate">
+              {parsed
+                ? `${parsed.commentator} on ${parsed.tractate} ${parsed.page}:${parsed.section}${parsed.part ? ` (Part ${parsed.part})` : ''}`
+                : item.ref}
+            </div>
+            {langBadge && <span className={langBadge.className} aria-label={`Язык: ${langBadge.text}`}>{langBadge.text}</span>}
           </div>
-          {(() => {
-            const previewText = coalescePreview(item);
-            if (!previewText) return null;
+          {density === 'normal' && (() => {
+            const preview = coalescePreview(item);
+            if (!preview.text) return null;
+            const dir = preview.lang === 'he' ? 'rtl' : 'ltr';
             return (
               <div
-                className={`text-xs opacity-75 mt-1 line-clamp-2 ${
-                  containsHebrew(previewText) ? 'text-right font-hebrew' : 'text-left'
-                }`}
-                dir={getTextDirection(previewText)}
+                className={`text-[11px] opacity-85 mt-1 line-clamp-2 ${preview.lang === 'he' ? 'text-right font-hebrew' : 'text-left'}`}
+                dir={dir}
               >
-                {previewText}
+                {preview.text}
               </div>
             );
           })()}
         </div>
       </div>
     );
-  }, [onDragStart]);
+  }, [onDragStart, density]);
 
   if (error) {
     return <ErrorState error={error} />;
@@ -641,113 +745,43 @@ const BookshelfPanel = memo(({
     <div className="h-full flex flex-col panel-outer border-l">
       {/* Header */}
       <div className="flex-shrink-0 panel-padding border-b border-border/50">
-        <h3 className="text-lg font-semibold mb-3">Sources</h3>
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-lg font-semibold">Источники</h3>
+          <div className="flex gap-2">
+            <button onClick={()=>setDensity('compact')} aria-pressed={density==='compact'} type="button"
+              title="Компактно" className={`rounded p-1 border ${density==='compact'?'bg-accent text-accent-foreground border-accent':'border-border bg-background text-muted-foreground'} transition-colors`}> <ArrowDownNarrowWide className="w-4 h-4"/></button>
+            <button onClick={()=>setDensity('normal')} aria-pressed={density==='normal'} type="button"
+              title="Стандартно" className={`rounded p-1 border ${density==='normal'?'bg-accent text-accent-foreground border-accent':'border-border bg-background text-muted-foreground'} transition-colors`}> <ArrowDownWideNarrow className="w-4 h-4"/></button>
+          </div>
+        </div>
 
         {/* Search */}
         <div className="relative mb-3">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <input
             type="text"
-            placeholder="Search sources..."
+            placeholder="Поиск источников..."
             className="w-full pl-9 pr-3 py-2 text-sm panel-card rounded-lg border-border/40 focus:outline-none focus:ring-0 focus:border-primary/50 transition-colors"
             value={bookshelfState.searchQuery}
             onChange={(e) => setBookshelfState(prev => ({ ...prev, searchQuery: e.target.value }))}
           />
         </div>
 
-        {/* Commentators Filter */}
-        <div className="flex flex-wrap gap-compact mb-3">
-          {Array.from(new Set([
-            ...bookshelfState.groups.map(g => g.parsed.commentator),
-            ...bookshelfState.orphans.map((item: any) => parseRefStrict(item.ref)?.commentator).filter((c): c is string => Boolean(c))
-          ])).slice(0, 6).map(commentator => (
-            <button
-              key={commentator}
-              onClick={() => {
-                setBookshelfState(prev => {
-                  const newCommentators = prev.activeFilters.commentators.includes(commentator)
-                    ? prev.activeFilters.commentators.filter(c => c !== commentator)
-                    : [...prev.activeFilters.commentators, commentator];
-                  return {
-                    ...prev,
-                    activeFilters: { ...prev.activeFilters, commentators: newCommentators }
-                  };
-                });
-              }}
-              className={`px-3 py-1 text-xs rounded-full border transition-colors panel-hover ${
-                bookshelfState.activeFilters.commentators.includes(commentator)
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'panel-card border-border/40'
-              }`}
-              style={{
-                borderColor: bookshelfState.activeFilters.commentators.includes(commentator) ? undefined : undefined,
-                backgroundColor: bookshelfState.activeFilters.commentators.includes(commentator) ? undefined : undefined
-              }}
-            >
-              {commentator}
-            </button>
-          ))}
-          {Array.from(new Set([
-            ...bookshelfState.groups.map(g => g.parsed.commentator),
-            ...bookshelfState.orphans.map((item: any) => parseRefStrict(item.ref)?.commentator).filter((c): c is string => Boolean(c))
-          ])).length > 6 && (
-            <select
-              className="text-xs border rounded-full px-2 py-1 bg-secondary"
-              value=""
-              onChange={(e) => {
-                if (e.target.value) {
-                  setBookshelfState(prev => ({
-                    ...prev,
-                    activeFilters: {
-                      ...prev.activeFilters,
-                      commentators: [...prev.activeFilters.commentators, e.target.value]
-                    }
-                  }));
-                }
-              }}
-            >
-              <option value="">More...</option>
-              {Array.from(new Set([
-                ...bookshelfState.groups.map(g => g.parsed.commentator),
-                ...bookshelfState.orphans.map((item: any) => parseRefStrict(item.ref)?.commentator).filter((c): c is string => Boolean(c))
-              ])).slice(6).map(commentator => (
-                <option key={commentator} value={commentator}>{commentator}</option>
-              ))}
-            </select>
-          )}
-        </div>
-
-        {/* Category Tabs */}
-        <div className="flex flex-wrap gap-compact">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              onClick={() => setSelectedCategory(category.name)}
-              className={`px-3 py-1 text-xs rounded-full border transition-colors panel-hover ${
-                selectedCategory === category.name
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'panel-card border-border/40'
-              }`}
-              style={{
-                borderColor: selectedCategory === category.name ? category.color : undefined,
-                backgroundColor: selectedCategory === category.name ? category.color : undefined
-              }}
-            >
-              {category.name}
-              {(() => {
-                const count = [
-                  ...filteredData.groups.flatMap(g => g.items),
-                  ...filteredData.orphans
-                ].filter(item => item.category === category.name).length;
-                return count > 0 ? (
-                  <span className="ml-1 opacity-75">
-                    ({count})
-                  </span>
-                ) : null;
-              })()}
-            </button>
-          ))}
-        </div>
+        {/* Category Buttons (compact, 12 max) */}
+        <CategoryButtonBar
+          categories={categories}
+          selected={selectedCategory}
+          onSelect={setSelectedCategory}
+          accent="#c2a970"
+          getCount={(catName) => {
+            // те же правила, что у тебя раньше — считаем сколько элементов в этой категории
+            const all = [
+              ...filteredData.groups.flatMap(g => g.items),
+              ...filteredData.orphans,
+            ];
+            return all.filter(it => it.category === catName).length;
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -760,8 +794,19 @@ const BookshelfPanel = memo(({
           <EmptyState hasSearch={!!bookshelfState.searchQuery} />
         ) : (
           <div className="panel-padding-sm space-compact">
-            {filteredData.groups.map((group) => renderGroup(group))}
-            {filteredData.orphans.map((item, idx) => renderOrphan(item, idx))}
+            {filteredData.groups.map((group, i) => (
+              <>
+                {i>0 && <div className="soft-divider" />}
+                {renderGroup(group)}
+              </>
+            ))}
+            {filteredData.groups.length>0 && filteredData.orphans.length>0 && <div className="soft-divider" />}
+            {filteredData.orphans.map((item, i) => (
+              <>
+                {i>0 && <div className="soft-divider" />}
+                {renderOrphan(item, i)}
+              </>
+            ))}
           </div>
         )}
       </div>
@@ -776,12 +821,12 @@ const EmptyState = ({ hasSearch }: { hasSearch: boolean }) => (
   <div className="flex flex-col items-center justify-center h-full p-6 text-center">
     <BookOpen className="w-12 h-12 text-muted-foreground/30 mb-4" />
     <h4 className="text-sm font-medium text-muted-foreground mb-2">
-      {hasSearch ? 'No sources found' : 'No sources yet'}
+      {hasSearch ? 'Ничего не найдено' : 'Источники ещё не добавлены'}
     </h4>
     <p className="text-xs text-muted-foreground/70">
       {hasSearch
-        ? 'Try adjusting your search terms'
-        : 'Drag sources here or start a new study'
+        ? 'Попробуйте изменить параметры поиска'
+        : 'Перетащите источники сюда или начните новое исследование'
       }
     </p>
   </div>

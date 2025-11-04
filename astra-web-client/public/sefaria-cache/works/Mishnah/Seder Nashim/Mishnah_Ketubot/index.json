@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Ketubot",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "ketubot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ketubot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      111
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "M. Ketubot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Ketubot"
+      },
+      {
+        "lang": "he",
+        "text": "משנה מסכת כתובות"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Keth."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah K’thuboth"
+      },
+      {
+        "text": "משנה כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.219Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Ketubot"
+}

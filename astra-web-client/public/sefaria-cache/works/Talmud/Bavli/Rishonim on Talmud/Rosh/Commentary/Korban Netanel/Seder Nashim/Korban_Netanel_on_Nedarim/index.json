@@ -1,0 +1,61 @@
+{
+  "title": "Korban Netanel on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Commentary",
+    "Korban Netanel",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Seif",
+      "siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "korban-netanel",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      330
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " קרבן נתנאל על נדרים",
+        "primary": true
+      },
+      {
+        "text": "Korban Netanel on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Korban Netanel on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.415Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Korban%20Netanel%20on%20Nedarim"
+}

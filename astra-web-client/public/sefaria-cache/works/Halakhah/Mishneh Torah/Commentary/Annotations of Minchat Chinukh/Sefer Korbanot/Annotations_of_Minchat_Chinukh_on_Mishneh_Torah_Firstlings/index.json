@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of Minchat Chinukh on Mishneh Torah, Firstlings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Minchat Chinukh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "hilchot",
+          "firstlings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "firstlings"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "חידושים ומקורים מבעל מנחת חינוך על משנה תורה, הלכות בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Annotations of Minchat Chinukh on Mishneh Torah, Firstlings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of Minchat Chinukh on Mishneh Torah, Firstlings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:18.129Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20Minchat%20Chinukh%20on%20Mishneh%20Torah%2C%20Firstlings"
+}

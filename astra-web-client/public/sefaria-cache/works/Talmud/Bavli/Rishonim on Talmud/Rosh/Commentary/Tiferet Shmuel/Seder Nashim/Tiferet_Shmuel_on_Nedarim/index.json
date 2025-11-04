@@ -1,0 +1,53 @@
+{
+  "title": "Tiferet Shmuel on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Commentary",
+    "Tiferet Shmuel",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Siman"
+    ],
+    "sectionNames": [
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tiferet-shmuel",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      23
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " תפארת שמואל על נדרים",
+        "primary": true
+      },
+      {
+        "text": "Tiferet Shmuel on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tiferet Shmuel on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:45.814Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Tiferet%20Shmuel%20on%20Nedarim"
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Urim VeTumim, Tumim",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Urim VeTumim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "urim-vetumim-tumim",
+          "choshen-mishpat"
+        ]
+      }
+    ],
+    "lengths": [
+      427,
+      1625
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "אורים ותומים, תומים"
+      },
+      {
+        "lang": "he",
+        "text": "אורים ותומים, ,תומים"
+      },
+      {
+        "text": "Urim VeTumim, Tumim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Urim VeTumim, Tumim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.750Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Urim%20VeTumim%2C%20Tumim"
+}

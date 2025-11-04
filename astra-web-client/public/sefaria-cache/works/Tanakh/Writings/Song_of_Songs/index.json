@@ -1,0 +1,148 @@
+{
+  "title": "Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "song-of-songs"
+        ]
+      },
+      {
+        "term_slugs": [
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      117
+    ],
+    "titles": [
+      {
+        "text": "Shir HaShirim",
+        "lang": "en"
+      },
+      {
+        "text": "Canticles",
+        "lang": "en"
+      },
+      {
+        "text": "Song.",
+        "lang": "en"
+      },
+      {
+        "text": "Song",
+        "lang": "en"
+      },
+      {
+        "text": "Song of Solomon",
+        "lang": "en"
+      },
+      {
+        "text": "Cant.",
+        "lang": "en"
+      },
+      {
+        "text": "Canticum",
+        "lang": "en"
+      },
+      {
+        "text": "Songs",
+        "lang": "en"
+      },
+      {
+        "text": "Shir haShirim",
+        "lang": "en"
+      },
+      {
+        "text": "Shir Hashirim",
+        "lang": "en"
+      },
+      {
+        "text": "Cantique des cant.",
+        "lang": "en"
+      },
+      {
+        "text": "S. S.",
+        "lang": "en"
+      },
+      {
+        "text": "S.S.",
+        "lang": "en"
+      },
+      {
+        "text": "שה\"ש",
+        "lang": "he"
+      },
+      {
+        "text": "שיר",
+        "lang": "he"
+      },
+      {
+        "text": "שה״ש",
+        "lang": "he"
+      },
+      {
+        "text": "שה''ש",
+        "lang": "he"
+      },
+      {
+        "text": "שיה\"ש",
+        "lang": "he"
+      },
+      {
+        "text": "שיה״ש",
+        "lang": "he"
+      },
+      {
+        "text": "שה”ש",
+        "lang": "he"
+      },
+      {
+        "text": "שיה”ש",
+        "lang": "he"
+      },
+      {
+        "text": "שה״‎ש",
+        "lang": "he"
+      },
+      {
+        "text": "שה\"‎ש",
+        "lang": "he"
+      },
+      {
+        "text": "שה”‎ש",
+        "lang": "he"
+      },
+      {
+        "text": "שיר השירים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.456Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Song%20of%20Songs"
+}

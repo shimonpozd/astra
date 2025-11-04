@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Moed Katan (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "moed-katan"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      29
+    ],
+    "titles": [
+      {
+        "text": "תוספתא מועד קטן (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Moed Katan (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Moed Katan (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.840Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Moed%20Katan%20(Lieberman)"
+}

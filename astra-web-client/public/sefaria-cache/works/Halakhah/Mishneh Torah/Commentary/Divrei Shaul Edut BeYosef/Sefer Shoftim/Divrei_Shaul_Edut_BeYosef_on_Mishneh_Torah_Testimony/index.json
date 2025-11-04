@@ -1,0 +1,60 @@
+{
+  "title": "Divrei Shaul Edut BeYosef on Mishneh Torah, Testimony",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Divrei Shaul Edut BeYosef",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "divrei-shaul-edut-beyosef",
+          "hilchot",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "divrei-shaul-edut-beyosef",
+          "testimony"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      92,
+      123
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "דברי שאול - עדות ביוסף על משנה תורה, הלכות עדות"
+      },
+      {
+        "text": "Divrei Shaul Edut BeYosef on Mishneh Torah, Testimony",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Divrei Shaul Edut BeYosef on Mishneh Torah, Testimony"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.988Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Divrei%20Shaul%20Edut%20BeYosef%20on%20Mishneh%20Torah%2C%20Testimony"
+}

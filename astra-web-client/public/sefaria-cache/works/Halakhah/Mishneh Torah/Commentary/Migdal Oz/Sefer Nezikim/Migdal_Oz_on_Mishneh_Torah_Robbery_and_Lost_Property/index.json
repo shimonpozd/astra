@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Robbery and Lost Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "robbery-and-lost-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "robbery-and-lost-property"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      274,
+      391
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות גזילה ואבידה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Robbery and Lost Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Robbery and Lost Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.829Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Robbery%20and%20Lost%20Property"
+}

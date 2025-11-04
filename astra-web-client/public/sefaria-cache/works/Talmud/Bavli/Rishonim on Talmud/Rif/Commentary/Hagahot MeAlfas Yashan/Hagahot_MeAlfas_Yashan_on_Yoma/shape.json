@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    1,
+    0,
+    2
+  ],
+  "fetchedAt": "2025-10-30T14:22:27.398Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20MeAlfas%20Yashan%20on%20Yoma"
+}

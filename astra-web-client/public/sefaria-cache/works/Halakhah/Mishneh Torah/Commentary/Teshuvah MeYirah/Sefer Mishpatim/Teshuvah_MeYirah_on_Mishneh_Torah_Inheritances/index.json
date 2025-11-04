@@ -1,0 +1,60 @@
+{
+  "title": "Teshuvah MeYirah on Mishneh Torah, Inheritances",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Teshuvah MeYirah",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "hilchot",
+          "inheritances"
+        ]
+      },
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "inheritances"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "text": "קונטרס תשובה מיראה על משנה תורה, הלכות נחלות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Teshuvah MeYirah on Mishneh Torah, Inheritances",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Teshuvah MeYirah on Mishneh Torah, Inheritances"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.540Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Teshuvah%20MeYirah%20on%20Mishneh%20Torah%2C%20Inheritances"
+}

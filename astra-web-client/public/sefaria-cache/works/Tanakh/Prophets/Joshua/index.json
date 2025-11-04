@@ -1,0 +1,80 @@
+{
+  "title": "Joshua",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "joshua"
+        ]
+      },
+      {
+        "term_slugs": [
+          "joshua"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      658
+    ],
+    "titles": [
+      {
+        "text": "Jos",
+        "lang": "en"
+      },
+      {
+        "text": "Yehoshua",
+        "lang": "en"
+      },
+      {
+        "text": "Jos.",
+        "lang": "en"
+      },
+      {
+        "text": "Josh",
+        "lang": "en"
+      },
+      {
+        "text": "Josh.",
+        "lang": "en"
+      },
+      {
+        "text": "Josué",
+        "lang": "en"
+      },
+      {
+        "text": "יהושוע",
+        "lang": "he"
+      },
+      {
+        "text": "יהושע",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Joshua",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Joshua"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.236Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Joshua"
+}

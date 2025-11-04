@@ -1,0 +1,127 @@
+{
+  "title": "Ran on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ran",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ran",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      1115,
+      1984
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ran on Tractate Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Ran on Masekhet Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Ran on Talmud Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Ran on Ned."
+      },
+      {
+        "lang": "en",
+        "text": "Nissim Gaon on Tractate Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Nissim Gaon on Masekhet Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Nissim Gaon on Talmud Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Nissim Gaon on Ned."
+      },
+      {
+        "lang": "en",
+        "text": "Nissim Gaon on Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rabbeinu Nissim on Tractate Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rabbeinu Nissim on Masekhet Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rabbeinu Nissim on Talmud Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rabbeinu Nissim on Ned."
+      },
+      {
+        "lang": "en",
+        "text": "Rabbeinu Nissim on Nedarim"
+      },
+      {
+        "lang": "he",
+        "text": "ר\"ן על נדרים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "רב ניסים גאון על נדרים"
+      },
+      {
+        "lang": "he",
+        "text": "רבנו_נסים על נדרים"
+      },
+      {
+        "text": "Ran on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ran on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.819Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ran%20on%20Nedarim"
+}

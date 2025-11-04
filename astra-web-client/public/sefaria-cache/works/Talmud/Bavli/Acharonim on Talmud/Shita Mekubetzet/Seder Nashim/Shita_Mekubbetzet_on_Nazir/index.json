@@ -1,0 +1,63 @@
+{
+  "title": "Shita Mekubbetzet on Nazir",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Shita Mekubetzet",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shita-mekubetzet",
+          "nazir"
+        ]
+      }
+    ],
+    "lengths": [
+      132,
+      872
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shita Mekubetzet on Nazir",
+        "lang": "en"
+      },
+      {
+        "text": "שיטה מקובצת על נזיר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shita Mekubbetzet on Nazir",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shita Mekubbetzet on Nazir"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.092Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shita%20Mekubbetzet%20on%20Nazir"
+}

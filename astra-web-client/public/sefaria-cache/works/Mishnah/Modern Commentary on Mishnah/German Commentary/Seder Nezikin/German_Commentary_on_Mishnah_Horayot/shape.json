@@ -1,0 +1,37 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      15,
+      17,
+      13,
+      19,
+      28
+    ],
+    [
+      10,
+      8,
+      14,
+      11,
+      11,
+      6,
+      15
+    ],
+    [
+      6,
+      2,
+      4,
+      15,
+      7,
+      5,
+      5,
+      9
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:22:04.343Z",
+  "source": "https://www.sefaria.org/api/shape/German%20Commentary%20on%20Mishnah%20Horayot"
+}

@@ -3,6 +3,7 @@ import { Volume2, Play, Pause, Download, X } from 'lucide-react';
 import { SimpleStreamingTTS } from '../SimpleStreamingTTS';
 import { StreamingAudioMessage } from '../StreamingAudioMessage';
 import { AudioTTSButton } from '../ui/AudioTTSButton';
+import { debugLog } from '../../utils/debugLogger';
 
 interface AudioRequestPanelProps {
   text: string;
@@ -26,7 +27,7 @@ export function AudioRequestPanel({
   };
 
   const handleAudioSaved = (message: any) => {
-    console.log('Audio message saved:', message);
+    debugLog('Audio message saved:', message);
     // TODO: Add to chat messages
   };
 
@@ -139,5 +140,4 @@ export function AudioRequestPanel({
     </div>
   );
 }
-
 

@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      21,
+      24
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות כלי המקדש והעובדין בו",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.275Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Vessels%20of%20the%20Sanctuary%20and%20Those%20who%20Serve%20Therein"
+}

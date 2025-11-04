@@ -1,0 +1,64 @@
+{
+  "title": "Tosefta Sanhedrin",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      67
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Sandhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Snh."
+      },
+      {
+        "text": "תוספתא סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.666Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Sanhedrin"
+}

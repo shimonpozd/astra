@@ -1,0 +1,118 @@
+{
+  "title": "Mishnah Eduyot",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "eduyot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "eduyot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "eduyot"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      74
+    ],
+    "titles": [
+      {
+        "text": "M. Eduyot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Eduyot",
+        "lang": "en"
+      },
+      {
+        "text": "M Eduyot",
+        "lang": "en"
+      },
+      {
+        "text": "Eduyot",
+        "lang": "en"
+      },
+      {
+        "text": "Eduyoth",
+        "lang": "en"
+      },
+      {
+        "text": "Eyduos",
+        "lang": "en"
+      },
+      {
+        "text": "Ed.",
+        "lang": "en"
+      },
+      {
+        "text": "Eduy.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Ed.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Eduyoth",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Eduy.",
+        "lang": "en"
+      },
+      {
+        "text": "Eduyyot",
+        "lang": "en"
+      },
+      {
+        "text": "משנה עדויות",
+        "lang": "he"
+      },
+      {
+        "text": "עדיות",
+        "lang": "he"
+      },
+      {
+        "text": "עדויות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה עדיות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Eduyot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Eduyot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.305Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Eduyot"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Virgin Maiden",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "virgin-maiden"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      5,
+      7
+    ],
+    "titles": [
+      {
+        "text": "השגות הראב\"ד על משנה תורה, הלכות נערה בתולה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Virgin Maiden",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Virgin Maiden"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.125Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Virgin%20Maiden"
+}

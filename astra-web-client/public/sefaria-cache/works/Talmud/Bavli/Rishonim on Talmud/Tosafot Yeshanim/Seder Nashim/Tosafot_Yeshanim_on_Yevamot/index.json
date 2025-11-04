@@ -1,0 +1,59 @@
+{
+  "title": "Tosafot Yeshanim on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Yeshanim",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-yeshanim",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      469
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות ישנים על יבמות"
+      },
+      {
+        "text": "Tosafot Yeshanim on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Yeshanim on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.768Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Yeshanim%20on%20Yevamot"
+}

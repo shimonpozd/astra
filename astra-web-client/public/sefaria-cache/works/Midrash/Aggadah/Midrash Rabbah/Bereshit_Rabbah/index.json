@@ -1,0 +1,169 @@
+{
+  "title": "Bereshit Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "genesis",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash",
+          "genesis",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash-rabbah",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      100,
+      1036
+    ],
+    "titles": [
+      {
+        "text": "Genesis Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Gen. Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Gen Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Bereishith Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Genesis Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Gen. Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Bereshit Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Gen Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Bereishith Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Bereishit Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Breishit Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Breishit Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Rabbah Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Bereshith Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Gen. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Gen. Rab.",
+        "lang": "en"
+      },
+      {
+        "text": "B’reshit Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "B’reishit Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Bereishis Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Bereishit Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "ב\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "מדרש רבה בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "ב״ר",
+        "lang": "he"
+      },
+      {
+        "text": "בר\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "בר״ר",
+        "lang": "he"
+      },
+      {
+        "text": "ב”ר",
+        "lang": "he"
+      },
+      {
+        "text": "בר”ר",
+        "lang": "he"
+      },
+      {
+        "text": "בראשית רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Bereshit Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bereshit Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.311Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Bereshit%20Rabbah"
+}

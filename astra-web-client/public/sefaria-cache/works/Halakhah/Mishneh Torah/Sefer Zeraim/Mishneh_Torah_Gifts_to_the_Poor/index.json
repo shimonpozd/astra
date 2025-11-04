@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Gifts to the Poor",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "gifts-to-the-poor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "gifts-to-the-poor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "gifts-to-the-poor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "gifts-to-the-poor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "gifts-to-the-poor"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      200
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Gifts to the Poor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Matnot Aniyiim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Gifts to the Poor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Gifts to the Poor"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Matnot Aniyiim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Matnot Aniyiim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Matnot Aniyiim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Matnot Aniyiim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Matnot Aniyiim"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מתנות עניים"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מתנות עניים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מתנות עניים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מתנות עניים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מתנות עניים"
+      },
+      {
+        "text": "רמב״ם, הלכות מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מתנות עניים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מתנות עניים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Gifts to the Poor",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Gifts to the Poor"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.080Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Gifts%20to%20the%20Poor"
+}

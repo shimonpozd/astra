@@ -1,0 +1,53 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      8,
+      4,
+      1,
+      2,
+      3,
+      6
+    ],
+    [
+      5,
+      16,
+      8,
+      5
+    ],
+    [
+      13,
+      12,
+      3
+    ],
+    [
+      6,
+      9,
+      7,
+      9,
+      6,
+      5,
+      10
+    ],
+    [
+      7,
+      12,
+      9,
+      2,
+      6,
+      3,
+      2,
+      3,
+      3,
+      4,
+      3,
+      9
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:15.835Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Zavim"
+}

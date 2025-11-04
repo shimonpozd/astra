@@ -1,0 +1,23 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    16,
+    21,
+    14,
+    17,
+    15,
+    20,
+    13,
+    15,
+    22,
+    17,
+    30,
+    24
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.148Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20First%20Fruits%20and%20other%20Gifts%20to%20Priests%20Outside%20the%20Sanctuary"
+}

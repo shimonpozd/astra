@@ -1,0 +1,505 @@
+{
+  "title": "Yoma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yoma"
+        ]
+      }
+    ],
+    "lengths": [
+      175,
+      2271
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Talmud Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "T.B. Joma"
+      },
+      {
+        "text": "BT Yoma",
+        "lang": "en"
+      },
+      {
+        "text": "יומא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yoma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yoma",
+    "checkFirst": {
+      "he": "משנה יומא",
+      "en": "Mishnah Yoma"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 2a:1-21b:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-145"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-145"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 1; Shivat Yamim"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "שבעת ימים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 22a:1-28a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-237"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-237"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 2; BaRishonah"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "בראשונה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 28a:10-39a:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-335"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-335"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 3; Amar Lahem HaMemunneh"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "אמר להם הממונה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 39a:6-46b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-431"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-431"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 4; Taraf BaKalpi"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "טרף בקלפי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 47a:1-62a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-527"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-527"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 5; Hotziu Lo"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "הוציאו לו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 62a:8-68b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-624"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-624"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 6; Shenei Seirei"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "שני שעירי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 68b:12-73b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-722"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-722"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 7; Ba Lo"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "בא לו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yoma 73b:13-88a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-820"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-820"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 8; Yom HaKippurim"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "יום הכפורים"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.030Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yoma"
+}

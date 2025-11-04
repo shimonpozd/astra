@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    5,
+    8,
+    6,
+    7
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.501Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Tevul%20Yom"
+}

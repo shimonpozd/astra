@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Damages to Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "damages-to-property"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      216
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Nizkei Mammon"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Damages to Property"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Damages to Property"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Nizkei Mammon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Damages to Property"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchos Nizkei Mammon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Nizkei Mammon"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Nizkei Mammon"
+      },
+      {
+        "lang": "en",
+        "text": "Hilkhot Nizkei Mamon"
+      },
+      {
+        "lang": "en",
+        "text": "Hilkhot Nizkei Mammon"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות נזקי ממון"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' נזקי ממון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' נזקי ממון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות נזקי ממון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' נזקי ממון"
+      },
+      {
+        "text": "רמב״ם, הלכות נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות נזקי ממון",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Damages to Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Damages to Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.343Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Damages%20to%20Property"
+}

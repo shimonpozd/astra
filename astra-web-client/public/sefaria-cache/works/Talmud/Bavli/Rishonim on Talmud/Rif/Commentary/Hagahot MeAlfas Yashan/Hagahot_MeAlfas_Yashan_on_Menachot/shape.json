@@ -1,0 +1,33 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    6,
+    2,
+    5,
+    2,
+    4,
+    2,
+    4,
+    4,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    4,
+    1
+  ],
+  "fetchedAt": "2025-10-30T14:22:27.705Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20MeAlfas%20Yashan%20on%20Menachot"
+}

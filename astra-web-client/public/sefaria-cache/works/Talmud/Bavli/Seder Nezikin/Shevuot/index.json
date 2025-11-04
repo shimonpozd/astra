@@ -1,0 +1,533 @@
+{
+  "title": "Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      1555
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Masekhet Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Shebu.",
+        "lang": "en"
+      },
+      {
+        "text": "Shʾbuoth",
+        "lang": "en"
+      },
+      {
+        "text": "Shavuos",
+        "lang": "en"
+      },
+      {
+        "text": "Shavuot",
+        "lang": "en"
+      },
+      {
+        "text": "Shebu’ot",
+        "lang": "en"
+      },
+      {
+        "text": "BT Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Shevuos",
+        "lang": "en"
+      },
+      {
+        "text": "שבועו'",
+        "lang": "he"
+      },
+      {
+        "text": "שבועו׳",
+        "lang": "he"
+      },
+      {
+        "text": "שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shevuot",
+    "checkFirst": {
+      "he": "משנה שבועות",
+      "en": "Mishnah Shevuot"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 2a:1-14a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-136"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-136"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1; Shevuot Shetayim Kamma",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים קמא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 14a:12-19b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-229"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-229"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2; Yediot HaTumah",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ידיעות הטומאה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 19b:13-29b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-328"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-328"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3; Shevuot Shetayim Batra",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים בתרא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 30a:1-36b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-424"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-424"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4; Shevuat HaEdut",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת העדות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 36b:5-38b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-521"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-521"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5; Shevuat HaPikkadon",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הפקדון",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 38b:8-44b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-619"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-619"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6; Shevuat HaDayyanin",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הדיינין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 44b:8-49a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-717"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-717"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7; Kol HaNishbain",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כל הנשבעין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shevuot 49a:4-49b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-817"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-817"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8; Arba'ah Shomrim",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ארבעה שומרין",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.194Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shevuot"
+}

@@ -1,0 +1,209 @@
+{
+  "title": "Steinsaltz on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      1546
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ביאור שטיינזלץ על שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "Steinsaltz on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Shevuot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 2a:1-14a:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים קמא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 14a:12-19b:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ידיעות הטומאה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 19b:13-29b:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועות שתים בתרא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 30a:1-36b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת העדות",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 36b:5-38b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הפקדון",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 38b:8-44b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שבועת הדיינין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 44b:8-49a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כל הנשבעין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shevuot 49a:4-49b:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ארבעה שומרין",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:14.027Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Shevuot"
+}

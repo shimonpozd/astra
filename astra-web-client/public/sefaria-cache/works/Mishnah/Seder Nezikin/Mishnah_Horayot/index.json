@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Horayot",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "horayot"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      20
+    ],
+    "titles": [
+      {
+        "text": "M. Horayot",
+        "lang": "en"
+      },
+      {
+        "text": "M Horayot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Horayot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Hor.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Horayoth",
+        "lang": "en"
+      },
+      {
+        "text": "Horaiot",
+        "lang": "en"
+      },
+      {
+        "text": "משנה הוריות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Horayot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Horayot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.318Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Horayot"
+}

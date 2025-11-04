@@ -1,0 +1,178 @@
+{
+  "title": "Mishneh Torah, One Who Injures a Person or Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      135
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilchot Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, One Who Injures a Person or Property",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of One Who Injures a Person or Property",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of One Who Injures a Person or Property",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Chovel uMazzik",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Hovel u-Mazik</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Hovel u-Mazik",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות חובל ומזיק",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות חובל ומזיק",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, One Who Injures a Person or Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, One Who Injures a Person or Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.383Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20One%20Who%20Injures%20a%20Person%20or%20Property"
+}

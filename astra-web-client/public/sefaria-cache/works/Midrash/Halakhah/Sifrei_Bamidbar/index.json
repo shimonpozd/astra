@@ -1,0 +1,819 @@
+{
+  "title": "Sifrei Bamidbar",
+  "categories": [
+    "Midrash",
+    "Halakhah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sifrei-bamidbar"
+        ]
+      }
+    ],
+    "lengths": [
+      161,
+      295
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Siphre bamidbar",
+        "lang": "en"
+      },
+      {
+        "text": "Sifré Num.",
+        "lang": "en"
+      },
+      {
+        "text": "Sifrei Numbers",
+        "lang": "en"
+      },
+      {
+        "text": "Siphrê, Numb.",
+        "lang": "en"
+      },
+      {
+        "text": "ספרי במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sifrei Bamidbar",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sifrei Bamidbar"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Parasha": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 1:1-58:2",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "nasso"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "nasso"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Nasso",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "נשא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 59:1-106:1",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "behaalotcha"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "behaalotcha"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Beha'alotcha",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "בהעלתך",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 107:1-115:2",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "shlach"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "shlach"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Sh'lach",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שלח לך",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 116:1-122:1",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "korach"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "korach"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Korach",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "קרח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 123:1-130:1",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "chukat"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "chukat"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Chukat",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "חקת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 131:1-5",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "balak"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "balak"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Balak",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "בלק",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 132:1-152:1",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "pinchas"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "pinchas"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Pinchas",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פינחס",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 153:1-158:3",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "matot"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "matot"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Matot",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מטות",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 158:4-161:5",
+          "addressTypes": [],
+          "sectionNames": [],
+          "refs": [],
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "masei"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "masei"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "text": "Masei",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מסעי",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    },
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 1:1-21:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 22:1-43:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 6",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 44:1-59:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 7",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ז",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 60:1-63:2",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 8",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 64:1-71:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 9",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 72:1-84:4",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 10",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק י",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 85:1-98:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 11",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק יא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 99:1-106:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 12",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק יב",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 107:1-115:2",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 15",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק טו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 116:1-122:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 18",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק יח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 123:1-130:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 19",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק יט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 131:1-5",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 25",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק כה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 132:1-4",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 26",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק כו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 133:1-141:3",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 27",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק כז",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 142:1-149:2",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 28",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק כח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 150:1-152:1",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 29",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק כט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 153:1-156:3",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 30",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק ל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 157:1-158:3",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 31",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק לא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Bamidbar 158:4-161:5",
+          "addressTypes": [],
+          "sectionNames": [
+            "Piska"
+          ],
+          "refs": [],
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 35",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "פרק לה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:16.288Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sifrei%20Bamidbar"
+}

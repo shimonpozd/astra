@@ -1,0 +1,60 @@
+{
+  "title": "Chidushim of Machaneh Ephraim on Mishneh Torah, Other Sources of Defilement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chidushim of Machaneh Ephraim",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chidushim-of-machaneh-ephraim",
+          "other-sources-of-defilement"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושים מהגאון בעל מחנה אפרים על משנה תורה, הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushim of Machaneh Ephraim on Mishneh Torah, Other Sources of Defilement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushim of Machaneh Ephraim on Mishneh Torah, Other Sources of Defilement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.876Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushim%20of%20Machaneh%20Ephraim%20on%20Mishneh%20Torah%2C%20Other%20Sources%20of%20Defilement"
+}

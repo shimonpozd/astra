@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of R' Zalman of Vilna on Mishneh Torah, Rest on a Holiday",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of R' Zalman of Vilna",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-r-zalman-of-vilna",
+          "hilchot",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-r-zalman-of-vilna",
+          "rest-on-a-holiday"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושים ומקורים מהרב זלמן מווילנא על משנה תורה, הלכות שביתת יום טוב",
+        "primary": true
+      },
+      {
+        "text": "Annotations of R' Zalman of Vilna on Mishneh Torah, Rest on a Holiday",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of R' Zalman of Vilna on Mishneh Torah, Rest on a Holiday"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:18.326Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20R'%20Zalman%20of%20Vilna%20on%20Mishneh%20Torah%2C%20Rest%20on%20a%20Holiday"
+}

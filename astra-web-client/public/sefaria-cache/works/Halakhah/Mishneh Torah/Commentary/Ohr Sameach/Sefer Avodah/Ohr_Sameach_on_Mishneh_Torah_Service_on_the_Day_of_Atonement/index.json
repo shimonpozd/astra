@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Service on the Day of Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "service-on-the-day-of-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      16,
+      20
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "אור שמח על משנה תורה, הלכות עבודת יום הכפורים"
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Service on the Day of Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Service on the Day of Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.402Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Service%20on%20the%20Day%20of%20Atonement"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Tosafot Rid on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Rid"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-rid",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      248
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "תוספות רי\"ד על שבת",
+        "lang": "he"
+      },
+      {
+        "text": "Tosafot Rid on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Rid on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.559Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Rid%20on%20Shabbat"
+}

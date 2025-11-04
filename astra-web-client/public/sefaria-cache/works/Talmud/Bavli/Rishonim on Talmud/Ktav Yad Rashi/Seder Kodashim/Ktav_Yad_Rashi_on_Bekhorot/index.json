@@ -1,0 +1,79 @@
+{
+  "title": "Ktav Yad Rashi on Bekhorot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ktav Yad Rashi",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ktav-yad-rashi",
+          "bekhorot"
+        ]
+      }
+    ],
+    "lengths": [
+      121,
+      103,
+      174
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Talmud Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Tractate Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Masekhet Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Bechorot"
+      },
+      {
+        "lang": "he",
+        "text": "כתב יד רש\"י על בכורות",
+        "primary": true
+      },
+      {
+        "text": "Ktav Yad Rashi on Bekhorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ktav Yad Rashi on Bekhorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.172Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ktav%20Yad%20Rashi%20on%20Bekhorot"
+}

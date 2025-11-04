@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Middot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "middot"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      22
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה מדות",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Middot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Middot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:29.603Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Middot"
+}

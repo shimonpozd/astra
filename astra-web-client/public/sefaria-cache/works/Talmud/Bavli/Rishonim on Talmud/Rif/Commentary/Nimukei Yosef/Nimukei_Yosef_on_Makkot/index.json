@@ -1,0 +1,55 @@
+{
+  "title": "Nimukei Yosef on Makkot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Nimukei Yosef"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nimukei-yosef",
+          "makkot"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      161
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "נימוקי יוסף על מכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nimukei Yosef on Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nimukei Yosef on Makkot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:30.971Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Nimukei%20Yosef%20on%20Makkot"
+}

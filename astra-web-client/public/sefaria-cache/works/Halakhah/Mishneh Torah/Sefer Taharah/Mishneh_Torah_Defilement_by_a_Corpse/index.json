@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Defilement by a Corpse",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "defilement-by-a-corpse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "defilement-by-a-corpse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "defilement-by-a-corpse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "defilement-by-a-corpse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "defilement-by-a-corpse"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      246
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Tum'at Met"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Defilement by a Corpse"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Defilement by a Corpse"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Defilement by a Corpse"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Tum'at Met"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Tum'at Met"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Tum'at Met"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות טומאת מת"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Tum'at Met"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Tum'at Met"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' טומאת מת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' טומאת מת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות טומאת מת"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' טומאת מת"
+      },
+      {
+        "text": "רמב״ם, הלכות טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' טומאת מת",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות טומאת מת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Defilement by a Corpse",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Defilement by a Corpse"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.264Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Defilement%20by%20a%20Corpse"
+}

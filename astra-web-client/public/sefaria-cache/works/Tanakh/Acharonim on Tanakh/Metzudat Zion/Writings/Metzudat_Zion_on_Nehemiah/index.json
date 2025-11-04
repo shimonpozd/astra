@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat Zion on Nehemiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "nehemiah"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      132,
+      188
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Neh."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Neh"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על נחמיה",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Nehemiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Nehemiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.476Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Nehemiah"
+}

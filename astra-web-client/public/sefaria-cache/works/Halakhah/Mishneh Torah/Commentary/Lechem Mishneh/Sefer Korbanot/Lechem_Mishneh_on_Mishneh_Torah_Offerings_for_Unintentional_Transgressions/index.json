@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Mishneh on Mishneh Torah, Offerings for Unintentional Transgressions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Mishneh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "offerings-for-unintentional-transgressions"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      62,
+      91
+    ],
+    "titles": [
+      {
+        "text": "לחם משנה על משנה תורה, הלכות שגגות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Mishneh on Mishneh Torah, Offerings for Unintentional Transgressions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Mishneh on Mishneh Torah, Offerings for Unintentional Transgressions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.691Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Mishneh%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Unintentional%20Transgressions"
+}

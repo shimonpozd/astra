@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Murderer and the Preservation of Life",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "murderer-and-the-preservation-of-life"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      106,
+      142
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות רוצח ושמירת הנפש",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Murderer and the Preservation of Life",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Murderer and the Preservation of Life"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.936Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Murderer%20and%20the%20Preservation%20of%20Life"
+}

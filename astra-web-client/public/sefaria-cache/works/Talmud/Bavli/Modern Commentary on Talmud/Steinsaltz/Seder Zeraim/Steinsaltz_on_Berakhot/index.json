@@ -1,0 +1,227 @@
+{
+  "title": "Steinsaltz on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      2748
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ביאור שטיינזלץ על ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "Steinsaltz on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Berakhot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 2a:1-13a:15",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "מאימתי",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 13a:16-17b:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "היה קורא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 17b:12-26a:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "מי שמתו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 26a:11-30b:13",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "תפלת השחר",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 30b:14-34b:32",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אין עומדין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 35a:1-45a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כיצד מברכין",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 45a:4-51b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שלשה שאכלו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 51b:11-53b:33",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אלו דברים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Berakhot 54a:1-64a:15",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 9",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "הרואה",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.843Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Berakhot"
+}

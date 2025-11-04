@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Oholot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "oholot"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      145
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Ohalot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Ohalot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Ohalos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Ohalos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ohol."
+      },
+      {
+        "text": "Tosefta Ohalot",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא אהלות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Oholot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Oholot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.804Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Oholot"
+}

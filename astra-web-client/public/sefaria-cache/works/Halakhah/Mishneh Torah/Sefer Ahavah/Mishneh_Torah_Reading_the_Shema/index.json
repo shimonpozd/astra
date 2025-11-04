@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Reading the Shema",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "reading-the-shema"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      57
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Kri'at Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Kri'at Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Kri'at Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Reading the Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Kri'at Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Reading the Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Reading the Shema"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות קריאת שמע"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Kri'at Shema"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Kri'at Shema"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' קריאת שמע"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' קריאת שמע"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות קריאת שמע"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' קריאת שמע"
+      },
+      {
+        "text": "רמב״ם, הלכות קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות קריאת שמע",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Reading the Shema",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Reading the Shema"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.861Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Reading%20the%20Shema"
+}

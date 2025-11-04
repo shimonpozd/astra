@@ -1,0 +1,55 @@
+{
+  "title": "Shiltei HaGiborim on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      93,
+      229
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.722Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Yevamot"
+}

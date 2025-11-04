@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    22,
+    23,
+    18,
+    22
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.512Z",
+  "source": "http://localhost:8000/api/shape/Ruth"
+}

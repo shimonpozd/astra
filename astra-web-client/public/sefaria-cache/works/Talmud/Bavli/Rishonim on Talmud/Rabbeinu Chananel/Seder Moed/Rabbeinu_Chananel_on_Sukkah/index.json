@@ -1,0 +1,59 @@
+{
+  "title": "Rabbeinu Chananel on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rabbeinu Chananel",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-chananel",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      112,
+      535
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רבינו חננאל על מסכת סוכה",
+        "lang": "he"
+      },
+      {
+        "text": "Rabbeinu Chananel on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Chananel on Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.644Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Chananel%20on%20Sukkah"
+}

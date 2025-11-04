@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Forbidden Intercourse",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "forbidden-intercourse"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "forbidden-intercourse"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      13,
+      15
+    ],
+    "titles": [
+      {
+        "text": "יצחק ירנן על משנה תורה, הלכות איסורי ביאה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Forbidden Intercourse",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Forbidden Intercourse"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.835Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Forbidden%20Intercourse"
+}

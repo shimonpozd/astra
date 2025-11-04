@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Plaintiff and Defendant",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "plaintiff-and-defendant"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "plaintiff-and-defendant"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "plaintiff-and-defendant"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "plaintiff-and-defendant"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "plaintiff-and-defendant"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      187
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Plaintiff and Defendant"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Plaintiff and Defendant"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Plaintiff and Defendant"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Nehalot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, <i>Hilkhot To'en ve-Nit'an</i>"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot To'en ve-Nit'an"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות טוען ונטען"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' טוען ונטען"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' טוען ונטען"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות טוען ונטען"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' טוען ונטען"
+      },
+      {
+        "text": "רמב״ם, הלכות טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' טוען ונטען",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות טוען ונטען",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Plaintiff and Defendant",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Plaintiff and Defendant"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.449Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Plaintiff%20and%20Defendant"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    24,
+    18,
+    17,
+    26,
+    20,
+    24,
+    25,
+    22
+  ],
+  "fetchedAt": "2025-10-30T14:42:16.953Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Rest%20on%20a%20Holiday"
+}

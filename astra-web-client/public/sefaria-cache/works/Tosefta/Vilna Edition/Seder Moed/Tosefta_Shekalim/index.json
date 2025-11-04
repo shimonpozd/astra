@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Shekalim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "shekalim"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      43
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Shkalim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Shkalim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Shkalim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Shek."
+      },
+      {
+        "text": "תוספתא שקלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Shekalim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Shekalim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.520Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Shekalim"
+}

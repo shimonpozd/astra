@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Bekhorot",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "bekhorot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bekhorot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bekhorot"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      73
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "M. Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Bekh."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah B’khoroth"
+      },
+      {
+        "text": "משנה בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Bekhorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Bekhorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.358Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Bekhorot"
+}

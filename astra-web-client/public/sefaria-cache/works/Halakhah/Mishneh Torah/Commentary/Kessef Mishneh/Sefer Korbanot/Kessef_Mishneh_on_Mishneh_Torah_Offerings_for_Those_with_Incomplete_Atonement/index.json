@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      42,
+      94
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מחוסרי כפרה",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Offerings for Those with Incomplete Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.093Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Those%20with%20Incomplete%20Atonement"
+}

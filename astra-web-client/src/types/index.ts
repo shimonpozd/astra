@@ -36,7 +36,6 @@ export interface ChatSession {
 export interface ChatRequest {
   text: string;
   agent_id?: string;
-  user_id?: string;
   session_id?: string;
   temperature?: number;
   maxTokens?: number;

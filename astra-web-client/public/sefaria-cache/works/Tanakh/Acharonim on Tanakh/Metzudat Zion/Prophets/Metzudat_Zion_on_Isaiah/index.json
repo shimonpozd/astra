@@ -1,0 +1,81 @@
+{
+  "title": "Metzudat Zion on Isaiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "isaiah"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      1038,
+      2816
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Isa."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Yishayahu"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Isa"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ישעיהו",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ישעיה"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ישעי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על ישעי'"
+      },
+      {
+        "text": "Metzudat Zion on Isaiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Isaiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.277Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Isaiah"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Harchev Davar on Exodus",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Harchev Davar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Passuk"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "harchev-davar",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      83
+    ],
+    "titles": [
+      {
+        "text": "הרחב דבר על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Harchev Davar on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Harchev Davar on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.291Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Harchev%20Davar%20on%20Exodus"
+}

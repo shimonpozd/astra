@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Diverse Species",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "diverse-species"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "diverse-species"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "diverse-species"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "diverse-species"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "diverse-species"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      182
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Diverse Species"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Kilaayim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Kilaayim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Diverse Species"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Kilaayim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Diverse Species"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Kilaayim"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות כלאים"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Kilaayim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Kilaayim"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' כלאים"
+      },
+      {
+        "text": "רמב״ם, הלכות כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' כלאים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות כלאים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Diverse Species",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Diverse Species"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.078Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Diverse%20Species"
+}

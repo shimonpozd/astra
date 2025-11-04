@@ -1,0 +1,65 @@
+{
+  "title": "Malbim on Genesis",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      1042,
+      1202
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "מלבי\"ם על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "מלב\"ים על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "התורה והמצוה בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.415Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Genesis"
+}

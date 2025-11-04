@@ -1,0 +1,59 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      12,
+      2,
+      6,
+      13
+    ],
+    [
+      6,
+      3,
+      2,
+      3,
+      6
+    ],
+    [
+      4,
+      0,
+      4,
+      1,
+      2,
+      0,
+      0,
+      5,
+      6
+    ],
+    [
+      9,
+      8,
+      16
+    ],
+    [
+      4,
+      1,
+      1,
+      4,
+      6,
+      2
+    ],
+    [
+      3,
+      0,
+      3
+    ],
+    [
+      3,
+      2,
+      9,
+      5
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:38.730Z",
+  "source": "https://www.sefaria.org/api/shape/Ikar%20Tosafot%20Yom%20Tov%20on%20Mishnah%20Tamid"
+}

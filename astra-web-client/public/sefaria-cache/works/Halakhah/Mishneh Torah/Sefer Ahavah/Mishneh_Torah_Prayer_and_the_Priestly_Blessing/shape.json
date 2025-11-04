@@ -1,0 +1,26 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    10,
+    19,
+    11,
+    19,
+    15,
+    10,
+    18,
+    12,
+    14,
+    16,
+    21,
+    24,
+    25,
+    14,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:16.888Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Prayer%20and%20the%20Priestly%20Blessing"
+}

@@ -1,0 +1,398 @@
+{
+  "title": "Avodah Zarah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "avodah-zarah"
+        ]
+      }
+    ],
+    "lengths": [
+      152,
+      2131
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Talmud Avodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "Avodah Zara",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Avodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Avodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "Avoda Zara",
+        "lang": "en"
+      },
+      {
+        "text": "Avoda Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "Abodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "Ab. Zar.",
+        "lang": "en"
+      },
+      {
+        "text": "ע\"ז",
+        "lang": "he"
+      },
+      {
+        "text": "ע״ז",
+        "lang": "he"
+      },
+      {
+        "text": "BT Avodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "ע”ז",
+        "lang": "he"
+      },
+      {
+        "text": "עבודה זרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Avodah Zarah",
+    "checkFirst": {
+      "en": "Mishnah Avodah Zarah",
+      "he": "משנה עבודה זרה"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Avodah Zarah 2a:1-22a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-11"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-11"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "text": "Chapter 1; Lifnei Eideihen",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "לפני אידיהן",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Avodah Zarah 22a:11-40b:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-21"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-21"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "text": "Chapter 2; Ein Ma'amidin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "אין מעמידין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Avodah Zarah 40b:12-49b:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-31"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-31"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "text": "Chapter 3; Kol HaTzelamim",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "כל הצלמים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Avodah Zarah 49b:18-61b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-41"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-41"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "text": "Chapter 4; Rabbi Yishmael",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "רבי ישמעאל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Avodah Zarah 62a:1-76b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-51"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-51"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "text": "Chapter 5; HaSokher et HaPoel",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "השוכר את הפועל",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.195Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Avodah%20Zarah"
+}

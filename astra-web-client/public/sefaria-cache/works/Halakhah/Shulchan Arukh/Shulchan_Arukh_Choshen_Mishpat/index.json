@@ -1,0 +1,870 @@
+{
+  "title": "Shulchan Arukh, Choshen Mishpat",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shulchan-arukh",
+          "choshen-mishpat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "choshen-mishpat"
+        ]
+      }
+    ],
+    "lengths": [
+      427,
+      3694
+    ],
+    "titles": [
+      {
+        "text": "C.M.",
+        "lang": "en"
+      },
+      {
+        "text": "Hoshen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "Choshen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh Choshen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "Ch.M.",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch Choshen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch, Chosen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "<i>Shulḥan Arukh, Hoshen Mishpat</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Shulḥan Arukh, Hoshen Mishpat",
+        "lang": "en"
+      },
+      {
+        "text": "SA CM",
+        "lang": "en"
+      },
+      {
+        "text": "S.A. C.M.CM",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch CM",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh CM",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Aruch, CM",
+        "lang": "en"
+      },
+      {
+        "text": "Shulchan Arukh, CM",
+        "lang": "en"
+      },
+      {
+        "text": "שולחן ערוך חושן משפט",
+        "lang": "he"
+      },
+      {
+        "text": "שו\"ע ח\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "שו\"ע חו\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך חו\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך חו\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "חו\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "ח\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "חו\"מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "ח\"מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "חו״מ",
+        "lang": "he"
+      },
+      {
+        "text": "שו״ע ח״מ",
+        "lang": "he"
+      },
+      {
+        "text": "שו”ע ח”מ",
+        "lang": "he"
+      },
+      {
+        "text": "שו״ע חו״מ",
+        "lang": "he"
+      },
+      {
+        "text": "שו”ע חו”מ",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך חו״מ",
+        "lang": "he"
+      },
+      {
+        "text": "שלחן ערוך חו”מ",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך חו״מ",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך חו”מ",
+        "lang": "he"
+      },
+      {
+        "text": "חו”מ",
+        "lang": "he"
+      },
+      {
+        "text": "ח״מ",
+        "lang": "he"
+      },
+      {
+        "text": "ח”מ",
+        "lang": "he"
+      },
+      {
+        "text": "חו״מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "חו”מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "ח״מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "ח”מ סי'",
+        "lang": "he"
+      },
+      {
+        "text": "חושן משפט",
+        "lang": "he"
+      },
+      {
+        "text": "שולחן ערוך, חושן משפט",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shulchan Arukh, Choshen Mishpat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shulchan Arukh, Choshen Mishpat"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 1-27",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Jurisprudence"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות דיינים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 28-38",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Testimony"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות עדות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 39-74",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Loans"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הלואה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 75-106",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Plaintiff and Defendant "
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות טוען ונטען"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 107-110",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Estate Debt "
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גביית חוב מהיתומים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 111-116",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Liens"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גביית חוב מנכסים משועבדים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 117-120",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Mortgage Loans"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אפותיקי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 121",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Debt Collection"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות העושה שליח לגבות חובו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 122-128",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Authorizations"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הרשאה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 129-152",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Guarantors"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות ערב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 153-156",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Neighbor Disputes"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזקי שכנים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 157-170",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Land Partnerships"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שותפים בקרקע"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 171:1-175:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Partnership Termination"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חלוקת שותפות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 175:5-175:63",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Pre emption Rights"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מצרנות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 176-181",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Partnerships"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שותפים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 182-226",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Agents"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שלוחין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 227-240",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Ona'ah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אונאה ומקח טעות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 241-249",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Gifts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מתנה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 250-258",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Deathbed Gifts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מתנת שכיב מרע"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 259-271",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Lost Property"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אבידה ומציאה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 272",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Loading and unloading"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות פריקה וטעינה ודין הולכי דרכים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 273-275",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Ownerless Property"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הפקר ונכסי הגר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 276-289",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Inheritances"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נחלות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 290",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Executors"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אפוטרופוס"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 291-302",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Deposit"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות פקדון"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 303-305",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Paid Bailee"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שומר שכר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 306",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Skilled Labor"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אומנים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 307-319",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Hiring"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שוכר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 320-330",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Leases and Contracts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חכירות וקבלנות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 331-347",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Employing Labor"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שכירות פועלים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 348-358",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Theft"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גניבה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 359-377",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Robbery"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גזילה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 378-387",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Tort"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזיקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 388",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Mesirah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מאבד ממון חבירו בידים ומוסר ומלשין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 389-419",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Monetary Damages"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזקי ממון"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Shulchan Arukh, Choshen Mishpat 420-427",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Personal Injury"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חובל בחבירו"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.246Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shulchan%20Arukh%2C%20Choshen%20Mishpat"
+}

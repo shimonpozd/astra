@@ -1,0 +1,51 @@
+{
+  "title": "Tosafot Shantz on Sotah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Shantz",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      98,
+      211
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות שאנץ על סוטה"
+      },
+      {
+        "text": "Tosafot Shantz on Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Shantz on Sotah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.758Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Shantz%20on%20Sotah"
+}

@@ -1,0 +1,125 @@
+{
+  "title": "Saadia Gaon on Numbers",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Saadia Gaon",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "saadia-gaon",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      0,
+      0
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rasag on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Rasag on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Rasag on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rasag on Bemidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rasag on Numbers"
+      },
+      {
+        "lang": "en",
+        "text": "Saadia Gaon on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Saadia Gaon on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Saadia Gaon on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Saadia Gaon on Bemidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rav Saadia on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Rav Saadia on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Rav Saadia on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rav Saadia on Bemidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rav Saadia on Numbers"
+      },
+      {
+        "lang": "he",
+        "text": "רס\"ג על במדבר"
+      },
+      {
+        "text": "רס״ג על במדבר",
+        "lang": "he"
+      },
+      {
+        "text": "רס”ג על במדבר",
+        "lang": "he"
+      },
+      {
+        "text": "ר' סעדיה גאון על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Saadia Gaon on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Saadia Gaon on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.638Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Saadia%20Gaon%20on%20Numbers"
+}

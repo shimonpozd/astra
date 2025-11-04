@@ -1,0 +1,497 @@
+{
+  "title": "Steinsaltz on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      3754
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Shabbat"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 2a:1-20b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "יציאות השבת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 20b:5-36b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "במה מדליקין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 36b:3-47b:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כירה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 47b:8-51b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "במה טומנין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 51b:7-56b:20",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "במה בהמה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 57a:1-67b:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 6",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "במה אשה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 67b:17-76b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 7",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כלל גדול",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 76b:6-82a:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 8",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המוציא יין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 82a:12-90b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 9",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "אמר רבי עקיבא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 90b:7-96a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 10",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המצניע",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 96a:4-102a:13",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 11",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הזורק",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 102b:1-105a:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 12",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הבונה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 105a:9-107a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 13",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "האורג",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 107a:5-111b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 14",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שמנה שרצים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 111b:5-115a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 15",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "ואלו קשרים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 115a:3-122b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 16",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל כתבי",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 122b:4-126b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 17",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הכלים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 126b:11-129b:18",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 18",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מפנין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 130a:1-137b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 19",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "רבי אליעזר דמילה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 137b:11-141b:18",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 20",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "תולין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 141b:19-143a:15",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 21",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "נוטל אדם את בנו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 143b:1-148a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 22",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "חבית",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 148a:5-153a:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 23",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שואל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Shabbat 153a:11-157b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 24",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מי שהחשיך",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.845Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Shabbat"
+}

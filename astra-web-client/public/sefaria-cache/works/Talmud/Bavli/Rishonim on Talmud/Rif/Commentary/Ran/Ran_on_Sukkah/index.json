@@ -1,0 +1,55 @@
+{
+  "title": "Ran on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Ran"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ran",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      45,
+      584
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ר\"ן על סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ran on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ran on Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.903Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ran%20on%20Sukkah"
+}

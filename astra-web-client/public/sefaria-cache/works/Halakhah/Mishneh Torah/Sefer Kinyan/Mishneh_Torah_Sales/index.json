@@ -1,0 +1,174 @@
+{
+  "title": "Mishneh Torah, Sales",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sales"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      414
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Laws of Sales",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Sales",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Sales",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Mechirah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "הלכ' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "הל' מכירה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מכירה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sales",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sales"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.394Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sales"
+}

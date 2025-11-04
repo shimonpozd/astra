@@ -1,0 +1,607 @@
+{
+  "title": "Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "eruvin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      3646
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Talmud Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Eiruvin"
+      },
+      {
+        "lang": "he",
+        "text": "ערובין"
+      },
+      {
+        "lang": "en",
+        "text": "Erub."
+      },
+      {
+        "lang": "en",
+        "text": "Erubin"
+      },
+      {
+        "text": "BT Eruvin",
+        "lang": "en"
+      },
+      {
+        "text": "עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Eruvin",
+    "checkFirst": {
+      "en": "Mishnah Eruvin",
+      "he": "משנה עירובין"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 2a:1-17b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-110"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-110"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Mavoi",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מבוי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 17b:15-26b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-210"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-210"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Osin Passin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "עושין פסין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 26b:17-41b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-310"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-310"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; BaKol Mearvin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בכל מערבין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 41b:6-52b:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-49"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-49"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Mi SheHotziuhu",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מי שהוציאוהו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 52b:16-61b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-59"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-59"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; Keitzad",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד מעברין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 61b:11-76a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-67"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-67"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; HaDar",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הדר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 76a:7-82a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-77"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-77"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; Challon",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "חלון",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 82a:10-89a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-87"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-87"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8; Keitzad Mishtattfin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד משתתפין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 89a:4-95a:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-97"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-97"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9; Kol Gaggot",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל גגות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eruvin 95a:22-105a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-104"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-104"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10; HaMotzei Tefillin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוצא תפילין",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.023Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Eruvin"
+}

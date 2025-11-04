@@ -1,0 +1,121 @@
+{
+  "title": "Bamidbar Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "numbers",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash",
+          "numbers",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash-rabbah",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      23,
+      444
+    ],
+    "titles": [
+      {
+        "text": "Numbers Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Bemidbar Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Bamidbar Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "B'midbar Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "B'midbar Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Numbers Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Num. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Numeri Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Numb. R.",
+        "lang": "en"
+      },
+      {
+        "text": "Bemidbar Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Num. Rab.",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Rabbah Numbers",
+        "lang": "en"
+      },
+      {
+        "text": "במ\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "במ״ר",
+        "lang": "he"
+      },
+      {
+        "text": "במ”ר",
+        "lang": "he"
+      },
+      {
+        "text": "במדבר רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Bamidbar Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bamidbar Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.330Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Bamidbar%20Rabbah"
+}

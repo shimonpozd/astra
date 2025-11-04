@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Play, Pause, Volume2, Loader2 } from 'lucide-react';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 interface SimpleStreamingTTSProps {
   text: string;
@@ -36,7 +37,7 @@ export function SimpleStreamingTTS({
       setError(null);
 
       // Start streaming from TTS service
-      const response = await fetch('/api/tts/stream', {
+      const response = await authorizedFetch('/api/tts/stream', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -136,5 +137,4 @@ export function SimpleStreamingTTS({
     </div>
   );
 }
-
 

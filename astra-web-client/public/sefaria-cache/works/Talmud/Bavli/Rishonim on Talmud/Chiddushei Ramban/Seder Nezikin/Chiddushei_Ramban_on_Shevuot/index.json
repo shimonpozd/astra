@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Ramban on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Chiddushei Ramban",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ramban",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      194
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "חידושי רמב\"ן על שבועות"
+      },
+      {
+        "text": "Chiddushei Ramban on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Ramban on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:06.999Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Ramban%20on%20Shevuot"
+}

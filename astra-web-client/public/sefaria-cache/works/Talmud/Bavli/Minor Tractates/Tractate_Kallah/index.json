@@ -1,0 +1,61 @@
+{
+  "title": "Tractate Kallah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kallah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kallah"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      26
+    ],
+    "titles": [
+      {
+        "text": "Kallah",
+        "lang": "en"
+      },
+      {
+        "text": "Treat. Kallah",
+        "lang": "en"
+      },
+      {
+        "text": "מסכת כלה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tractate Kallah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Kallah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.309Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Kallah"
+}

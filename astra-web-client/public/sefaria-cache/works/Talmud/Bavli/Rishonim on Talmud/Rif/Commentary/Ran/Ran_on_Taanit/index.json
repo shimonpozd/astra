@@ -1,0 +1,55 @@
+{
+  "title": "Ran on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Ran"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ran",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      280
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ר\"ן על תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ran on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ran on Taanit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.008Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ran%20on%20Taanit"
+}

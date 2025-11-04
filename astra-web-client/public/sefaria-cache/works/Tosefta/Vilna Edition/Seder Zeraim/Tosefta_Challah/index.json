@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Challah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "challah"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      22
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Challah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Hallah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Challah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Hallah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ḥall."
+      },
+      {
+        "text": "תוספתא חלה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Challah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Challah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.476Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Challah"
+}

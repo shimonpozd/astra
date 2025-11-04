@@ -1,0 +1,86 @@
+{
+  "title": "Malbim Beur Hamilot on Zephaniah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Malbim Beur Hamilot",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim-beur-hamilot",
+          "zephaniah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      33,
+      52
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Malbim Lexical Commentary on Zeph.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Lexical Commentary on Tzephaniah",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Lexical Commentary on Zeph",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Lexical Commentary on Zephaniah",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Beur Hamilot on Zeph.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Beur Hamilot on Tzephaniah",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Beur Hamilot on Zeph",
+        "lang": "en"
+      },
+      {
+        "primary": true,
+        "text": "מלבי\"ם באור המילות על צפניה",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim Beur Hamilot on Zephaniah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim Beur Hamilot on Zephaniah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.798Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20Beur%20Hamilot%20on%20Zephaniah"
+}

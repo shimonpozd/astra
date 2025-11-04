@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Sabbatical Year and the Jubilee",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      253
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Sabbatical Year and the Jubilee"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sabbatical Year and the Jubilee"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shemita"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shemita"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shemita"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shemita"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Sabbatical Year and the Jubilee"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שמיטה ויובל"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shemita"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shemita"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שמיטה ויובל"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שמיטה ויובל"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שמיטה ויובל"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שמיטה ויובל"
+      },
+      {
+        "text": "רמב״ם, הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שמיטה ויובל",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sabbatical Year and the Jubilee",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sabbatical Year and the Jubilee"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.124Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sabbatical%20Year%20and%20the%20Jubilee"
+}

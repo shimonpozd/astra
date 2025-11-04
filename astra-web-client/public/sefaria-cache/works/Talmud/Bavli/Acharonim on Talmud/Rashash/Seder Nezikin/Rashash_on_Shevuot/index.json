@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      393
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רש\"ש על שבועות",
+        "primary": true,
+        "lang": "he"
+      },
+      {
+        "text": "Rashash on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.829Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Shevuot"
+}

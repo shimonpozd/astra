@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Torah Study",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "torah-study"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      7,
+      7
+    ],
+    "titles": [
+      {
+        "text": "משנה למלך על משנה תורה, הלכות תלמוד תורה",
+        "primary": true,
+        "lang": "he"
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Torah Study",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Torah Study"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.975Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Torah%20Study"
+}

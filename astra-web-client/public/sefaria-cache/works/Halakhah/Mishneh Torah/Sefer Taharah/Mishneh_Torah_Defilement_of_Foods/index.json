@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Defilement of Foods",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "defilement-of-foods"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      259
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Tum'at Okhalin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Defilement of Foods"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Tum'at Okhalin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Defilement of Foods"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Tum'at Okhalin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Defilement of Foods"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Tum'at Okhalin"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות טומאת אוכלים"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Tum'at Okhalin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Tum'at Okhalin"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' טומאת אוכלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' טומאת אוכלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות טומאת אוכלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' טומאת אוכלים"
+      },
+      {
+        "text": "רמב״ם, הלכות טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' טומאת אוכלים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות טומאת אוכלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Defilement of Foods",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Defilement of Foods"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.328Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Defilement%20of%20Foods"
+}

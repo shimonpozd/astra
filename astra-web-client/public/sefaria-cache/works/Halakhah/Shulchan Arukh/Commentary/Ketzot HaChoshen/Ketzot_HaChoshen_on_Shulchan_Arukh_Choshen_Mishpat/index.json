@@ -1,0 +1,731 @@
+{
+  "title": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Ketzot HaChoshen"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Siman",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ketzot-hachoshen",
+          "choshen-mishpat"
+        ]
+      }
+    ],
+    "lengths": [
+      427,
+      1599,
+      1843
+    ],
+    "toc_zoom": 2,
+    "titles": [
+      {
+        "text": "Kezot ha-Hoshen",
+        "lang": "en"
+      },
+      {
+        "text": "<i>Kezot ha-Hoshen</i>",
+        "lang": "en"
+      },
+      {
+        "text": "קצות החושן על שולחן ערוך חושן משפט",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "קצוה\"ח",
+        "lang": "he"
+      },
+      {
+        "text": "קצות החושן",
+        "lang": "he"
+      },
+      {
+        "text": "קצ\"ה",
+        "lang": "he"
+      },
+      {
+        "text": "קצו\"ה",
+        "lang": "he"
+      },
+      {
+        "text": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 1-27",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Jurisprudence"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות דיינים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 28-38",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Testimony"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות עדות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 39-74",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Loans"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הלואה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 75-106",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Plaintiff and Defendant "
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות טוען ונטען"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 107-110",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Estate Debt "
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גביית חוב מהיתומים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 111-116",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Liens"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גביית חוב מנכסים משועבדים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 117-120",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Mortgage Loans"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אפותיקי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 121",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Debt Collection"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות העושה שליח לגבות חובו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 122-128",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Authorizations"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הרשאה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 129-152",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Guarantors"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות ערב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 153-156",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Neighbor Disputes"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזקי שכנים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 157-170",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Land Partnerships"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שותפים בקרקע"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 171:1-175:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Partnership Termination"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חלוקת שותפות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 175:5-175:63",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Pre emption Rights"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מצרנות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 176-181",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Partnerships"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שותפים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 182-226",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Agents"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שלוחין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 227-240",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Ona'ah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אונאה ומקח טעות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 241-249",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Gifts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מתנה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 250-258",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Deathbed Gifts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מתנת שכיב מרע"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 259-271",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Lost Property"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אבידה ומציאה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 272",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Loading and unloading"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות פריקה וטעינה ודין הולכי דרכים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 273-275",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Ownerless Property"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות הפקר ונכסי הגר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 276-289",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Inheritances"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נחלות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 290",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Executors"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אפוטרופוס"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 291-302",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Deposit"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות פקדון"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 303-305",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Paid Bailee"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שומר שכר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 306",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Skilled Labor"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות אומנים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 307-319",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Hiring"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שוכר"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 320-330",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Leases and Contracts"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חכירות וקבלנות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 331-347",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Employing Labor"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות שכירות פועלים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 348-358",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Theft"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גניבה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 359-377",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Robbery"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות גזילה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 378-387",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Tort"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזיקין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 388",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Mesirah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות מאבד ממון חבירו בידים ומוסר ומלשין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 389-419",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Monetary Damages"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות נזקי ממון"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ketzot HaChoshen on Shulchan Arukh, Choshen Mishpat 420-424",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Personal Injury"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הלכות חובל בחבירו"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.459Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ketzot%20HaChoshen%20on%20Shulchan%20Arukh%2C%20Choshen%20Mishpat"
+}

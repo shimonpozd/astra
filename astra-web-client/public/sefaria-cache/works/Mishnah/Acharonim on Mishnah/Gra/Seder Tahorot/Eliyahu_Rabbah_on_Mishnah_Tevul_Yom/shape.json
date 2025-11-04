@@ -1,0 +1,37 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      5,
+      3,
+      0,
+      4,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:30.956Z",
+  "source": "https://www.sefaria.org/api/shape/Eliyahu%20Rabbah%20on%20Mishnah%20Tevul%20Yom"
+}

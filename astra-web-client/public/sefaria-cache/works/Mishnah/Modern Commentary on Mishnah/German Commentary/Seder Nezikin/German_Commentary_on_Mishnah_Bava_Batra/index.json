@@ -1,0 +1,53 @@
+{
+  "title": "German Commentary on Mishnah Bava Batra",
+  "categories": [
+    "Mishnah",
+    "Modern Commentary on Mishnah",
+    "German Commentary",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "german-commentary",
+          "mishnah",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      0,
+      0
+    ],
+    "titles": [
+      {
+        "text": "פירוש גרמני על משנה בבא בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "German Commentary on Mishnah Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "German Commentary on Mishnah Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:04.041Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/German%20Commentary%20on%20Mishnah%20Bava%20Batra"
+}

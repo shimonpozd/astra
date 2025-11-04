@@ -1,0 +1,98 @@
+{
+  "title": "Mishnah Bikkurim",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "bikkurim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bikkurim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bikkurim"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      39
+    ],
+    "titles": [
+      {
+        "text": "M Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "M. Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Bicc.",
+        "lang": "en"
+      },
+      {
+        "text": "Biccurim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Bicc.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Biccurim",
+        "lang": "en"
+      },
+      {
+        "text": "Bik.",
+        "lang": "en"
+      },
+      {
+        "text": "Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה ביכורים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Bikkurim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Bikkurim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.093Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Bikkurim"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Shorshei HaYam on Mishneh Torah, One Who Injures a Person or Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Shorshei HaYam",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shorshei-hayam",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shorshei-hayam",
+          "one-who-injures-a-person-or-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "שורשי הים על משנה תורה, הלכות חובל ומזיק",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shorshei HaYam on Mishneh Torah, One Who Injures a Person or Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shorshei HaYam on Mishneh Torah, One Who Injures a Person or Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.828Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shorshei%20HaYam%20on%20Mishneh%20Torah%2C%20One%20Who%20Injures%20a%20Person%20or%20Property"
+}

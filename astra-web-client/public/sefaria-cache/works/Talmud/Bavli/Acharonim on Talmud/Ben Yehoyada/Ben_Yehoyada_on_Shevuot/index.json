@@ -1,0 +1,50 @@
+{
+  "title": "Ben Yehoyada on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Ben Yehoyada"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      98,
+      42
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בן יהוידע על שבועות",
+        "primary": true
+      },
+      {
+        "text": "Ben Yehoyada on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ben Yehoyada on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.022Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ben%20Yehoyada%20on%20Shevuot"
+}

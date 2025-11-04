@@ -1,0 +1,154 @@
+{
+  "title": "Mishneh Torah, Eruvin",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "eruvin1"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      163
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Eruvin"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות עירובין"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Eruvin"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' עירובין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' עירובין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות עירובין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' עירובין"
+      },
+      {
+        "text": "רמב״ם, הלכות עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.918Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Eruvin"
+}

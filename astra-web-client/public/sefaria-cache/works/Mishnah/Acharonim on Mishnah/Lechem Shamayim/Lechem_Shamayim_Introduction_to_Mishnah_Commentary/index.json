@@ -1,0 +1,44 @@
+{
+  "title": "Lechem Shamayim, Introduction to Mishnah Commentary",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Lechem Shamayim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-shamayim-introduction-to-mishnah-commentary"
+        ]
+      }
+    ],
+    "lengths": [
+      10
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "לחם שמים, הקדמה לפירוש המשנה"
+      },
+      {
+        "text": "Lechem Shamayim, Introduction to Mishnah Commentary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Shamayim, Introduction to Mishnah Commentary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:39.483Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Lechem%20Shamayim%2C%20Introduction%20to%20Mishnah%20Commentary"
+}

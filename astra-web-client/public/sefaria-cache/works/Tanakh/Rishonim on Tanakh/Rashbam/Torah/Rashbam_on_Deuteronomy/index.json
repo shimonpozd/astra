@@ -1,0 +1,157 @@
+{
+  "title": "Rashbam on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashbam",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashbam",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      237,
+      331
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Deut"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Deuteronomy"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Deut"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Deuteronomy"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Deut"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על דברי׳"
+      },
+      {
+        "text": "רשב״ם על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב\"ם על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashbam on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashbam on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.578Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashbam%20on%20Deuteronomy"
+}

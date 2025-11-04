@@ -3,6 +3,8 @@ import { api } from '../services/api';
 import { StudySnapshot } from '../types/study';
 import { TextSegment } from '../types/text';
 import { normalizeRefForAPI } from '../utils/refUtils';
+import { debugLog } from '../utils/debugLogger';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 export function useStudyMode() {
   const [isActive, setIsActive] = useState(false);
@@ -24,7 +26,7 @@ export function useStudyMode() {
       setStudySessionId(sessionId);
 
       const snapshot = await api.setFocus(sessionId, textRef);
-      console.log('🔍 API setFocus response:', snapshot);
+      debugLog('🔍 API setFocus response:', snapshot);
       setStudySnapshot(snapshot);
       setCanNavigateBack(true);
       setCanNavigateForward(true);
@@ -38,7 +40,7 @@ export function useStudyMode() {
         const interval = setInterval(async () => {
           try {
             const segmentsData = await api.getDailySegments(sessionId);
-            console.log('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+            debugLog('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
             
             if (segmentsData.loaded_segments > 0) {
               // Update study snapshot with new segments
@@ -52,7 +54,7 @@ export function useStudyMode() {
               
               // Stop polling if all segments are loaded
               if (segmentsData.loaded_segments >= segmentsData.total_segments) {
-                console.log('✅ All segments loaded, stopping polling');
+                debugLog('✅ All segments loaded, stopping polling');
                 clearInterval(interval);
                 setIsBackgroundLoading(false);
                 setSegmentPollingInterval(null);
@@ -143,7 +145,7 @@ export function useStudyMode() {
     if (!studySessionId) return;
     try {
       setIsLoading(true);
-      const response = await fetch('/api/study/workbench/set', {
+      const response = await authorizedFetch('/api/study/workbench/set', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -171,7 +173,7 @@ export function useStudyMode() {
     if (!studySessionId) return;
     try {
       setIsLoading(true);
-      const response = await fetch('/api/study/workbench/set', {
+      const response = await authorizedFetch('/api/study/workbench/set', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -201,7 +203,7 @@ export function useStudyMode() {
     if (!ref) return;
     try {
       setIsLoading(true);
-      const response = await fetch('/api/study/chat/set_focus', {
+      const response = await authorizedFetch('/api/study/chat/set_focus', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -230,7 +232,7 @@ export function useStudyMode() {
     if (!studySessionId || !studySnapshot?.ref) return;
     try {
       setIsLoading(true);
-      const response = await fetch('/api/study/chat/set_focus', {
+      const response = await authorizedFetch('/api/study/chat/set_focus', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -317,14 +319,14 @@ export function useStudyMode() {
         setIsLoading(true);
       }
 
-      console.log('🧭 NavigateToRef:', { 
+      debugLog('🧭 NavigateToRef:', { 
         studySessionId, 
         ref, 
         isDaily: studySessionId.startsWith('daily-'),
         isLocalNavigation
       });
       
-      const response = await fetch('/api/study/set_focus', {
+      const response = await authorizedFetch('/api/study/set_focus', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -366,20 +368,20 @@ export function useStudyMode() {
       if (sessionId.startsWith('daily-')) {
         try {
           const segmentsData = await api.getDailySegments(sessionId);
-          console.log('📊 Existing session segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+          debugLog('📊 Existing session segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
           
           if (segmentsData.loaded_segments >= segmentsData.total_segments) {
-            console.log('✅ All segments already loaded, no polling needed');
+            debugLog('✅ All segments already loaded, no polling needed');
             setIsBackgroundLoading(false);
           } else {
-            console.log('🔄 Some segments missing, starting polling');
+            debugLog('🔄 Some segments missing, starting polling');
             setIsBackgroundLoading(true);
             
             // Start polling for remaining segments
             const interval = setInterval(async () => {
               try {
                 const segmentsData = await api.getDailySegments(sessionId);
-                console.log('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
+                debugLog('📊 Polling segments:', segmentsData.loaded_segments, '/', segmentsData.total_segments);
                 
                 if (segmentsData.loaded_segments > 0) {
                   // Update study snapshot with new segments
@@ -393,7 +395,7 @@ export function useStudyMode() {
                   
                   // Stop polling if all segments are loaded
                   if (segmentsData.loaded_segments >= segmentsData.total_segments) {
-                    console.log('✅ All segments loaded, stopping polling');
+                    debugLog('✅ All segments loaded, stopping polling');
                     clearInterval(interval);
                     setIsBackgroundLoading(false);
                     setSegmentPollingInterval(null);

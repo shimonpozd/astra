@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    3,
+    2,
+    2,
+    1
+  ],
+  "fetchedAt": "2025-10-30T14:21:28.543Z",
+  "source": "https://www.sefaria.org/api/shape/Boaz%20on%20Mishnah%20Kiddushin"
+}

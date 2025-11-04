@@ -1,0 +1,58 @@
+{
+  "title": "Minchat Shai on II Kings",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Minchat Shai",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "minchat-shai",
+          "ii-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      219,
+      287
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מנחת שי על מלכים ב",
+        "primary": true
+      },
+      {
+        "text": "Minchat Shai on II Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Minchat Shai on II Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.835Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Minchat%20Shai%20on%20II%20Kings"
+}

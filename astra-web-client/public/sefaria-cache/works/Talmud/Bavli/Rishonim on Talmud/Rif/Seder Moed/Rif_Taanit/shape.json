@@ -1,0 +1,31 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    2,
+    6,
+    5,
+    6,
+    2,
+    5,
+    6,
+    6,
+    3,
+    17,
+    13,
+    4,
+    4,
+    7,
+    8,
+    12,
+    8,
+    11,
+    10,
+    9
+  ],
+  "fetchedAt": "2025-10-30T14:42:07.143Z",
+  "source": "http://localhost:8000/api/shape/Rif%20Ta'anit"
+}

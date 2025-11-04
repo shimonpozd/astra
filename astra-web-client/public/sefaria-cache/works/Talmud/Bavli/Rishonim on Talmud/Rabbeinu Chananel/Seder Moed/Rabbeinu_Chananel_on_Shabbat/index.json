@@ -1,0 +1,59 @@
+{
+  "title": "Rabbeinu Chananel on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rabbeinu Chananel",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-chananel",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      1111
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רבינו חננאל על מסכת שבת",
+        "lang": "he"
+      },
+      {
+        "text": "Rabbeinu Chananel on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Chananel on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.598Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Chananel%20on%20Shabbat"
+}

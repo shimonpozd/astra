@@ -1,0 +1,58 @@
+{
+  "title": "Minchat Shai on Psalms",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Minchat Shai",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "minchat-shai",
+          "psalms"
+        ]
+      }
+    ],
+    "lengths": [
+      150,
+      941,
+      1223
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מנחת שי על תהלים",
+        "primary": true
+      },
+      {
+        "text": "Minchat Shai on Psalms",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Minchat Shai on Psalms"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.010Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Minchat%20Shai%20on%20Psalms"
+}

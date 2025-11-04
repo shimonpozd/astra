@@ -1,0 +1,133 @@
+{
+  "title": "Metzudat Zion on I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      186,
+      256
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1 Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1Ch."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1 Chron"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1 Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Chronicles I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on I Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1 Chron."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on I Chr."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on I Divrei HaYamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Divrei HaYamim I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Divrei HaYamim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on First Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 1Ch"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on I Divrei Ha-yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on I Divrei Ha-Yamim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים א'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דה\"א"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דה״א"
+      },
+      {
+        "text": "Metzudat Zion on I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.508Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20I%20Chronicles"
+}

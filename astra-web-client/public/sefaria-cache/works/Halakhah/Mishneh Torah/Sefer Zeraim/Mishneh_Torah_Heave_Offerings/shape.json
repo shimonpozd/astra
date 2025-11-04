@@ -1,0 +1,26 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    26,
+    17,
+    24,
+    21,
+    26,
+    19,
+    23,
+    16,
+    10,
+    26,
+    28,
+    22,
+    16,
+    21,
+    22
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.124Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Heave%20Offerings"
+}

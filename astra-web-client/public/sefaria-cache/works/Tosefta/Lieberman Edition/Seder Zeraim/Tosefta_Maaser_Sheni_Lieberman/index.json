@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Maaser Sheni (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "maaser-sheni"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      100
+    ],
+    "titles": [
+      {
+        "text": "תוספתא מעשר שני (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Maaser Sheni (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Maaser Sheni (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.687Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Maaser%20Sheni%20(Lieberman)"
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Metzudat Zion on Hosea",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "hosea"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      165,
+      394
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Hos."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Hos"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Hoshea"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על הושע",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Hosea",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Hosea"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.285Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Hosea"
+}

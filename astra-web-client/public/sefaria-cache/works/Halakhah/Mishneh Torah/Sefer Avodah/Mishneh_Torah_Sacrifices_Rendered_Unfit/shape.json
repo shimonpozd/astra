@@ -1,0 +1,30 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    37,
+    26,
+    25,
+    27,
+    13,
+    24,
+    12,
+    11,
+    7,
+    5,
+    31,
+    18,
+    9,
+    10,
+    20,
+    11,
+    20,
+    24,
+    15
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.209Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Sacrifices%20Rendered%20Unfit"
+}

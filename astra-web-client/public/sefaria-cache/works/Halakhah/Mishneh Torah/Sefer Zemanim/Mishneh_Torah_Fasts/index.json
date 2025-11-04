@@ -1,0 +1,190 @@
+{
+  "title": "Mishneh Torah, Fasts",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "fasts"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      84
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Laws of Fasts",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Fasts",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Fasts",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Ta'aniyot",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה לרמב\"ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תעניות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה לרמב״ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה לרמב”ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תענית",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תעניות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Fasts",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Fasts"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.963Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Fasts"
+}

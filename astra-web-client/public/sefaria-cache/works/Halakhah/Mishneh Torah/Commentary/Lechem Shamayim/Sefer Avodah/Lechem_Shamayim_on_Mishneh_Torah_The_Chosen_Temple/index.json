@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Shamayim on Mishneh Torah, The Chosen Temple",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Shamayim",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-shamayim",
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-shamayim",
+          "the-chosen-temple"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      30,
+      35
+    ],
+    "titles": [
+      {
+        "text": "לחם שמים על משנה תורה, הלכות בית הבחירה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Shamayim on Mishneh Torah, The Chosen Temple",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Shamayim on Mishneh Torah, The Chosen Temple"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.894Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Shamayim%20on%20Mishneh%20Torah%2C%20The%20Chosen%20Temple"
+}

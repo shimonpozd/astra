@@ -1,0 +1,59 @@
+{
+  "title": "Maharam on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      358
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מהר\"ם על בבא קמא",
+        "lang": "he"
+      },
+      {
+        "text": "Maharam on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.829Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20on%20Bava%20Kamma"
+}

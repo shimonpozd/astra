@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Robbery and Lost Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "robbery-and-lost-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "robbery-and-lost-property"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      33,
+      34
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות גזילה ואבידה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Robbery and Lost Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Robbery and Lost Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.539Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Robbery%20and%20Lost%20Property"
+}

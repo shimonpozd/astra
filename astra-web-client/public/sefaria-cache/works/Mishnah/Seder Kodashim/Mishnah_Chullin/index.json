@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Chullin",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "chullin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chullin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      74
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Chullin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Chullin"
+      },
+      {
+        "lang": "en",
+        "text": "M Chullin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ḥull."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ḥullin"
+      },
+      {
+        "text": "משנה חולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.343Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Chullin"
+}

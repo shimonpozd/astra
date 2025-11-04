@@ -1,0 +1,64 @@
+{
+  "title": "Melekhet Shelomoh on Mishneh Torah, Agents and Partners",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Melekhet Shelomoh",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "hilchot",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "agents-and-partners"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      24,
+      24
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלאכת שלמה על משנה תורה, הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "Melechet Shlomo on Mishneh Torah, Agents and Partners",
+        "lang": "en"
+      },
+      {
+        "text": "Melekhet Shelomoh on Mishneh Torah, Agents and Partners",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Melekhet Shelomoh on Mishneh Torah, Agents and Partners"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.451Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Melekhet%20Shelomoh%20on%20Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

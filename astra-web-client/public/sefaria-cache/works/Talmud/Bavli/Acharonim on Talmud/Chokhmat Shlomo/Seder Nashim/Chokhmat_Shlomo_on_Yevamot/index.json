@@ -1,0 +1,67 @@
+{
+  "title": "Chokhmat Shlomo on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chokhmat Shlomo",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chokhmat-shlomo",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      856
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Maharshal on Yevamot",
+        "lang": "en"
+      },
+      {
+        "text": "מהרש\"ל יבמות",
+        "lang": "he"
+      },
+      {
+        "primary": true,
+        "text": "חכמת שלמה על יבמות",
+        "lang": "he"
+      },
+      {
+        "text": "Chokhmat Shlomo on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chokhmat Shlomo on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.257Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chokhmat%20Shlomo%20on%20Yevamot"
+}

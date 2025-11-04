@@ -1,0 +1,58 @@
+{
+  "title": "Rav Nissim Gaon on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rav Nissim Gaon"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rav-nissim-gaon",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      238
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רב נסים גאון על מסכת שבת",
+        "primary": true
+      },
+      {
+        "text": "Rav Nissim Gaon on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rav Nissim Gaon on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.958Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rav%20Nissim%20Gaon%20on%20Shabbat"
+}

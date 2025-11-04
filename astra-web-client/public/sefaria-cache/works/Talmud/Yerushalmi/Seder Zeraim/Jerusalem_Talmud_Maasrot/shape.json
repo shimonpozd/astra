@@ -1,0 +1,41 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      10,
+      15,
+      5,
+      13,
+      6
+    ],
+    [
+      10,
+      5,
+      8,
+      14
+    ],
+    [
+      14,
+      4,
+      9,
+      14
+    ],
+    [
+      10,
+      8,
+      2,
+      8
+    ],
+    [
+      9,
+      10,
+      12
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.372Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Maasrot"
+}

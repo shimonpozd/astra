@@ -1,0 +1,55 @@
+{
+  "title": "Nimukei Yosef on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Nimukei Yosef"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nimukei-yosef",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      55,
+      945
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "נימוקי יוסף על נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nimukei Yosef on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nimukei Yosef on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.017Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Nimukei%20Yosef%20on%20Nedarim"
+}

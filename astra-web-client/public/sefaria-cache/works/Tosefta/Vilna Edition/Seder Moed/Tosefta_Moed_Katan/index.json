@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Moed Katan",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "moed-katan"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      17
+    ],
+    "titles": [
+      {
+        "text": "Tosefta Mo'ed Kattan",
+        "lang": "en"
+      },
+      {
+        "text": "T. Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "T. Moed Kattan",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Moed Kattan",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. M. Kat.",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Moed Kattan",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא מועד קטן",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Moed Katan",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Moed Katan"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.571Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Moed%20Katan"
+}

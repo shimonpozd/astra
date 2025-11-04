@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { getTTSService } from '../services/ttsService';
 import type { AudioMessage } from '../types/text';
+import { debugLog } from '../utils/debugLogger';
 
 interface UseAudioTTSOptions {
   voiceId?: string;
@@ -37,14 +38,14 @@ export function useAudioTTS(options: UseAudioTTSOptions = {}): UseAudioTTSReturn
         speed: generateOptions?.speed || options.speed || 1.0,
       };
 
-      console.log('🎵 Generating audio message:', {
+      debugLog('🎵 Generating audio message:', {
         text: text.substring(0, 50) + '...',
         options: finalOptions,
       });
 
       const audioMessage = await ttsService.synthesizeAndCreateMessage(text, finalOptions);
       
-      console.log('✅ Audio message generated:', {
+      debugLog('✅ Audio message generated:', {
         id: audioMessage.id,
         duration: audioMessage.content.duration,
         size: audioMessage.content.size,
@@ -71,7 +72,7 @@ export function useAudioTTS(options: UseAudioTTSOptions = {}): UseAudioTTSReturn
       const ttsService = getTTSService();
       await ttsService.saveAudioMessage(audioMessage, chatId);
       
-      console.log('💾 Audio message saved to chat:', {
+      debugLog('💾 Audio message saved to chat:', {
         messageId: audioMessage.id,
         chatId,
       });
@@ -90,5 +91,4 @@ export function useAudioTTS(options: UseAudioTTSOptions = {}): UseAudioTTSReturn
     saveAudioMessage,
   };
 }
-
 

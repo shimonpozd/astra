@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, Agents and Partners",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "agents-and-partners"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, Agents and Partners",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, Agents and Partners"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.519Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

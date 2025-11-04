@@ -1,0 +1,81 @@
+{
+  "title": "Rashi on Numbers",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      687,
+      1292
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Bemidbar"
+      },
+      {
+        "text": "רש״י על במדבר",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על במדבר",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.017Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Numbers"
+}

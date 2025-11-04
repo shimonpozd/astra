@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { authorizedFetch } from '../lib/authorizedFetch';
+import { debugLog } from '../utils/debugLogger';
 import {
   Select,
   SelectContent,
@@ -16,49 +19,78 @@ interface Persona {
   language?: string;
 }
 
+interface PersonaMap {
+  [key: string]: Persona;
+}
+
 interface PersonaSelectorProps {
   selected: string;
   onSelect: (persona: string) => void;
 }
 
 export default function PersonaSelector({ selected, onSelect }: PersonaSelectorProps) {
-  const [personas, setPersonas] = useState<{[key: string]: Persona}>({});
-  const [loading, setLoading] = useState(true);
-
-  const loadPersonas = () => {
-    setLoading(true);
-    fetch(`/admin/personalities/public?t=${Date.now()}`) // Use the public API endpoint
-      .then(res => res.json())
-      .then((data: Persona[]) => {
-        // Transform the array into a key-value object
-        const personasObject = data.reduce((acc, persona) => {
-          acc[persona.id] = persona;
-          return acc;
-        }, {} as {[key: string]: Persona});
-        setPersonas(personasObject);
-        setLoading(false);
-        console.log('✅ Персоны загружены через API:', Object.keys(personasObject));
-      })
-      .catch(err => {
-        console.error('❌ Error loading personas from API:', err);
-        setLoading(false);
-      });
-  };
+  const [personas, setPersonas] = useState<PersonaMap>({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let isMounted = true;
+
+    const loadPersonas = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const response = await authorizedFetch(
+          `/api/admin/personalities/public?t=${Date.now()}`,
+        );
+        if (!response.ok) {
+          throw new Error(`Failed to load personas: ${response.statusText}`);
+        }
+        const data = (await response.json()) as Persona[];
+        if (!isMounted) return;
+        const byId = data.reduce<PersonaMap>((acc, persona) => {
+          acc[persona.id] = persona;
+          return acc;
+        }, {});
+        setPersonas(byId);
+        debugLog('[PersonaSelector] Loaded personas:', Object.keys(byId));
+      } catch (err) {
+        if (!isMounted) return;
+        const message = err instanceof Error ? err.message : 'Failed to load personas';
+        setError(message);
+        debugLog('[PersonaSelector] Failed to load personas', err);
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
     loadPersonas();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
+
+  const options = useMemo(() => Object.entries(personas), [personas]);
 
   return (
     <Select value={selected} onValueChange={onSelect}>
       <SelectTrigger className="w-full">
-        <SelectValue placeholder="Выберите персону" />
+        <SelectValue placeholder="Выберите персонажа" />
       </SelectTrigger>
       <SelectContent>
-        {loading ? (
-          <SelectItem value="loading" disabled>Загрузка...</SelectItem>
+        {isLoading ? (
+          <SelectItem value="loading" disabled>
+            Загрузка...
+          </SelectItem>
+        ) : error ? (
+          <SelectItem value="error" disabled>
+            Ошибка: {error}
+          </SelectItem>
         ) : (
-          Object.entries(personas).map(([key, persona]) => (
+          options.map(([key, persona]) => (
             <SelectItem key={key} value={key}>
               {persona.name || key}
             </SelectItem>

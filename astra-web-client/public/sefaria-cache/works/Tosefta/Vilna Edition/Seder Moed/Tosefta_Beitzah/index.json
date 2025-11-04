@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Beitzah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      54
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Beitsah,"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Beitsah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Bets."
+      },
+      {
+        "lang": "he",
+        "text": "תוספתא יום טוב"
+      },
+      {
+        "text": "Tosefta Beitsah",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא ביצה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.530Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Beitzah"
+}

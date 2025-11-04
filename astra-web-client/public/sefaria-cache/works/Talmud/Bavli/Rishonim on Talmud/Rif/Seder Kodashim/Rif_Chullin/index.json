@@ -1,0 +1,271 @@
+{
+  "title": "Rif Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      283,
+      553
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף חולין",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף חולין",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף חולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Chullin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 1a:1-5b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הכל שוחטין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 5b:7-8b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "השוחט",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 8b:7-24a:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אלו טרפות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 24a:10-27a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בהמה המקשה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 27a:4-28a:15",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אותו ואת בנו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 28b:1-29b:9",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כסוי הדם",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 30a:1-36b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "גיד הנשה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 36b:3-43a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל הבשר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 44b:1-46b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הזרוע והלחיים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 46b:3-47b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 11",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ראשית הגז",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Chullin 47b:4-48b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 12",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שילוח הקן",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.295Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Chullin"
+}

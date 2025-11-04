@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, Heave Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "heave-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      10,
+      10
+    ],
+    "titles": [
+      {
+        "text": "שער המלך על משנה תורה, הלכות תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, Heave Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, Heave Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.051Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20Heave%20Offerings"
+}

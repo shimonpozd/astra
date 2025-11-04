@@ -1,0 +1,57 @@
+{
+  "title": "Malbim on II Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "ii-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      428,
+      581
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלבי\"ם על דברי הימים ב",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on II Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on II Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.698Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20II%20Chronicles"
+}

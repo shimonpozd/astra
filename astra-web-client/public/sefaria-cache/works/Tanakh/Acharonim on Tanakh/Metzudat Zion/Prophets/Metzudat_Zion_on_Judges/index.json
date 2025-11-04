@@ -1,0 +1,77 @@
+{
+  "title": "Metzudat Zion on Judges",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "judges"
+        ]
+      }
+    ],
+    "lengths": [
+      21,
+      333,
+      608
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Shoftim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Jdg"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Judg"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Jdg."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Judg."
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על שופטים",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Judges",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Judges"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.208Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Judges"
+}

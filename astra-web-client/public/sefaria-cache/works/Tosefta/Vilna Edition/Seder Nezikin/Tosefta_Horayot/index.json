@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Horayot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "horayot"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      19
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Horayot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Horayot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Horayos"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Horayos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Hor."
+      },
+      {
+        "text": "תוספתא הוריות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Horayot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Horayot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.706Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Horayot"
+}

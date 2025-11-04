@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Demai",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "demai"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      151
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Dmai"
+      },
+      {
+        "lang": "en",
+        "text": "T. Demai"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Demai"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Dmai"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Dem."
+      },
+      {
+        "text": "תוספתא דמאי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Demai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Demai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.427Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Demai"
+}

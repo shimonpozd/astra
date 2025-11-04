@@ -1,0 +1,76 @@
+{
+  "title": "Micah",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "micah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "micah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      105
+    ],
+    "titles": [
+      {
+        "text": "Mic.",
+        "lang": "en"
+      },
+      {
+        "text": "Mic",
+        "lang": "en"
+      },
+      {
+        "text": "Mikha",
+        "lang": "en"
+      },
+      {
+        "text": "Michah",
+        "lang": "en"
+      },
+      {
+        "text": "Micha",
+        "lang": "en"
+      },
+      {
+        "text": "מיכ'",
+        "lang": "he"
+      },
+      {
+        "text": "מיכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Micah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Micah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.396Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Micah"
+}

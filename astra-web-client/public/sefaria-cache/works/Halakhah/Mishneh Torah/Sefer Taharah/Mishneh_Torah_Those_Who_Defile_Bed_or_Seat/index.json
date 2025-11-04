@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Those Who Defile Bed or Seat",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "those-who-defile-bed-or-seat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "those-who-defile-bed-or-seat"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      143
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Those Who Defile Bed or Seat"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Those Who Defile Bed or Seat"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Those Who Defile Bed or Seat"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מטמאי משכב ומושב"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Metamme'ey Mishkav uMoshav"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מטמאי משכב ומושב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מטמאי משכב ומושב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מטמאי משכב ומושב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מטמאי משכב ומושב"
+      },
+      {
+        "text": "רמב״ם, הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מטמאי משכב ומושב",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מטמאי משכב ומושב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Those Who Defile Bed or Seat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Those Who Defile Bed or Seat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.296Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Those%20Who%20Defile%20Bed%20or%20Seat"
+}

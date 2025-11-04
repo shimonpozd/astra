@@ -1,0 +1,80 @@
+{
+  "title": "Tosefta Zevachim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "zevachim"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      94
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Zevachim"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Zvachim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Zevachim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Zevahim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Zvachim"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Zevahim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Zeb."
+      },
+      {
+        "text": "Tosefta Zevahim",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא זבחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Zevachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Zevachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.714Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Zevachim"
+}

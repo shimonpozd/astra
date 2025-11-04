@@ -1,0 +1,117 @@
+{
+  "title": "Metzudat Zion on Psalms",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "psalms"
+        ]
+      }
+    ],
+    "lengths": [
+      150,
+      1310,
+      2023
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ps"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ps."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Psa"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Tehilim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Psa."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Psalm"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Tehillim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהילים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהלים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תְּהִלִּים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תילים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהילות"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהילי'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהילי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהלי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על תהלי'"
+      },
+      {
+        "text": "Metzudat Zion on Psalms",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Psalms"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.412Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Psalms"
+}

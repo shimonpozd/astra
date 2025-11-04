@@ -1,0 +1,60 @@
+{
+  "title": "Yad David on Mishneh Torah, Paschal Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad David",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-david",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-david",
+          "paschal-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד דוד על משנה תורה, הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "Yad David on Mishneh Torah, Paschal Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad David on Mishneh Torah, Paschal Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.856Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20David%20on%20Mishneh%20Torah%2C%20Paschal%20Offering"
+}

@@ -3,6 +3,7 @@ import { Volume2, Play, Pause, Download, MessageSquare, Zap } from 'lucide-react
 import { SimpleStreamingTTS } from '../SimpleStreamingTTS';
 import { StreamingAudioMessage } from '../StreamingAudioMessage';
 import { AudioTTSButton } from '../ui/AudioTTSButton';
+import { debugLog } from '../../utils/debugLogger';
 
 interface AudioContextMenuProps {
   text: string;
@@ -42,7 +43,7 @@ export function AudioContextMenu({
   };
 
   const handleAudioSaved = (message: any) => {
-    console.log('Audio message saved:', message);
+    debugLog('Audio message saved:', message);
     onClose();
   };
 
@@ -173,5 +174,4 @@ export function AudioContextMenu({
     </div>
   );
 }
-
 

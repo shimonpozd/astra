@@ -1,0 +1,60 @@
+{
+  "title": "Lev Shalem on Mishneh Torah, Sheqel Dues",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lev Shalem",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "hilchot",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "sheqel-dues"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      5,
+      6
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "לב שלם על משנה תורה, הלכות שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "Lev Shalem on Mishneh Torah, Sheqel Dues",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lev Shalem on Mishneh Torah, Sheqel Dues"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.984Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Sheqel%20Dues"
+}

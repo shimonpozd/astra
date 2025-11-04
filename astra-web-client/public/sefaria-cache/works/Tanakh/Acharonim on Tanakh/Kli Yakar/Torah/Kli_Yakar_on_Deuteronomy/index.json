@@ -1,0 +1,85 @@
+{
+  "title": "Kli Yakar on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Kli Yakar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kli-yakar",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      134,
+      393
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Deut"
+      },
+      {
+        "lang": "he",
+        "text": "כלי יקר על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "כלי יקר על דברי׳"
+      },
+      {
+        "text": "כלי יקר על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kli Yakar on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kli Yakar on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.382Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kli%20Yakar%20on%20Deuteronomy"
+}

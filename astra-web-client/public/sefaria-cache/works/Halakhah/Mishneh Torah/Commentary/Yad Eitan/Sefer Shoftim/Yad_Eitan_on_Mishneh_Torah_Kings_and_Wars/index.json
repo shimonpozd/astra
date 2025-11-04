@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Kings and Wars",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "kings-and-wars"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "kings-and-wars"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      16,
+      16
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות מלכים ומלחמות",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Kings and Wars",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Kings and Wars"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.506Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Kings%20and%20Wars"
+}

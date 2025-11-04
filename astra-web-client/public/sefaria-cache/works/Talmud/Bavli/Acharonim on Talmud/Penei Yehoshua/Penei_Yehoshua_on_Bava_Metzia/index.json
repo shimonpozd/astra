@@ -1,0 +1,50 @@
+{
+  "title": "Penei Yehoshua on Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Penei Yehoshua"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      237,
+      851
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "פני יהושע על בבא מציעא"
+      },
+      {
+        "text": "Penei Yehoshua on Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Penei Yehoshua on Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.309Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Penei%20Yehoshua%20on%20Bava%20Metzia"
+}

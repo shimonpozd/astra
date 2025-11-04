@@ -1,4 +1,5 @@
 import type { DocV1 } from '../../types/text';
+import { debugWarn } from '../../utils/debugLogger';
 
 // Валидные типы блоков
 const VALID_BLOCK_TYPES = [
@@ -245,7 +246,7 @@ export function coerceDoc(payload: unknown): DocV1 | null {
   // 2. Строка: снимаем fences и парсим 1-2 раза, ограничиваем размер до 1MB
   if (typeof payload === 'string') {
     if (payload.length > 1024 * 1024) {
-      console.warn('[coerceDoc] Payload too large for doc parsing');
+      debugWarn('[coerceDoc] Payload too large for doc parsing');
       return null;
     }
 

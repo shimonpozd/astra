@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Offerings for Unintentional Transgressions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      137
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Offerings for Unintentional Transgressions"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shegagot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shegagot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Offerings for Unintentional Transgressions"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shegagot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Offerings for Unintentional Transgressions"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shegagot"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שגגות"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shegagot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shegagot"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שגגות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שגגות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שגגות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שגגות"
+      },
+      {
+        "text": "רמב״ם, הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שגגות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Offerings for Unintentional Transgressions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Offerings for Unintentional Transgressions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.233Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Offerings%20for%20Unintentional%20Transgressions"
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Malbim Beur Hamilot on Proverbs",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Malbim Beur Hamilot",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim-beur-hamilot",
+          "proverbs"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      478,
+      621
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Pro."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Proverbs"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Pro."
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על משלי",
+        "primary": true
+      },
+      {
+        "text": "Malbim Beur Hamilot on Proverbs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim Beur Hamilot on Proverbs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.835Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20Beur%20Hamilot%20on%20Proverbs"
+}

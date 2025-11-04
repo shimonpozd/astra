@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Tevul Yom",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "tevul-yom"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tevul-yom"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "tevul-yom"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      26
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Tevul Yom"
+      },
+      {
+        "lang": "en",
+        "text": "M. Tevul Yom"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Tevul Yom"
+      },
+      {
+        "lang": "he",
+        "text": "טבול יום"
+      },
+      {
+        "lang": "en",
+        "text": "T’bul Yom"
+      },
+      {
+        "text": "משנה טבול יום",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Tevul Yom",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Tevul Yom"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.478Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Tevul%20Yom"
+}

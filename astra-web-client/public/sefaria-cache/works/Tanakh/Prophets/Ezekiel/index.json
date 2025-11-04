@@ -1,0 +1,88 @@
+{
+  "title": "Ezekiel",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "ezekiel"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ezekiel"
+        ]
+      }
+    ],
+    "lengths": [
+      48,
+      1273
+    ],
+    "titles": [
+      {
+        "text": "Ezek",
+        "lang": "en"
+      },
+      {
+        "text": "Ezek.",
+        "lang": "en"
+      },
+      {
+        "text": "Yehezkel",
+        "lang": "en"
+      },
+      {
+        "text": "Yechezkel",
+        "lang": "en"
+      },
+      {
+        "text": "Ez.",
+        "lang": "en"
+      },
+      {
+        "text": "Yechezkiel",
+        "lang": "en"
+      },
+      {
+        "text": "Ézéch.",
+        "lang": "en"
+      },
+      {
+        "text": "Ézéchiel",
+        "lang": "en"
+      },
+      {
+        "text": "יחז'",
+        "lang": "he"
+      },
+      {
+        "text": "יחזקאל",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ezekiel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ezekiel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.339Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ezekiel"
+}

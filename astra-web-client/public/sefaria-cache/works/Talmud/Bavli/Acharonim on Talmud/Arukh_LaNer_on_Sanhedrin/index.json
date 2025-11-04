@@ -1,0 +1,48 @@
+{
+  "title": "Arukh LaNer on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "arukh-laner",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      1455
+    ],
+    "titles": [
+      {
+        "text": "ערוך לנר על סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Arukh LaNer on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Arukh LaNer on Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:48.211Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Arukh%20LaNer%20on%20Sanhedrin"
+}

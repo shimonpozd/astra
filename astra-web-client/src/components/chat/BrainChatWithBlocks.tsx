@@ -1,3 +1,4 @@
+import { debugLog } from '../../utils/debugLogger';
 // @ts-nocheck
 import React, { useState, useRef, useEffect } from 'react';
 import { api } from '../../services/api';
@@ -75,13 +76,12 @@ export default function BrainChatWithBlocks({
     const request: ChatRequest = {
       text: input,
       session_id: sessionId,
-      user_id: 'user_123', // TODO: Get from auth
       agent_id: persona
     };
 
     const streamHandler: StreamHandler = {
       onBlockStart: (blockData) => {
-        console.log('Block start:', blockData);
+        debugLog('Block start:', blockData);
         // Initialize streaming blocks if not already done
         if (!currentStreamingBlocks) {
           setCurrentStreamingBlocks({
@@ -92,7 +92,7 @@ export default function BrainChatWithBlocks({
       },
       
       onBlockDelta: (blockData) => {
-        console.log('Block delta:', blockData);
+        debugLog('Block delta:', blockData);
         // Update streaming blocks
         setCurrentStreamingBlocks(prev => {
           if (!prev) return prev;
@@ -122,7 +122,7 @@ export default function BrainChatWithBlocks({
       },
       
       onBlockEnd: (blockData) => {
-        console.log('Block end:', blockData);
+        debugLog('Block end:', blockData);
         // Finalize the block
         setCurrentStreamingBlocks(prev => {
           if (!prev) return prev;
@@ -145,18 +145,18 @@ export default function BrainChatWithBlocks({
       },
       
       onChunk: (chunk) => {
-        console.log('Chunk:', chunk);
+        debugLog('Chunk:', chunk);
         // Handle regular text chunks if needed
       },
       
       onDoc: (doc) => {
-        console.log('Doc:', doc);
+        debugLog('Doc:', doc);
         // Handle complete doc.v1 documents
         setCurrentStreamingBlocks(doc);
       },
       
       onComplete: () => {
-        console.log('Stream complete');
+        debugLog('Stream complete');
         setIsStreaming(false);
         
         // Save the final message
@@ -313,5 +313,4 @@ export default function BrainChatWithBlocks({
     </div>
   );
 }
-
 

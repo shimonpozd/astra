@@ -1,0 +1,460 @@
+{
+  "title": "Tamid",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "tamid"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tamid"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      207
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tractate Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Tam."
+      },
+      {
+        "text": "BT Tamid",
+        "lang": "en"
+      },
+      {
+        "text": "תמיד",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tamid",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tamid",
+    "checkFirst": {
+      "en": "Mishnah Tamid",
+      "he": "משנה תמיד"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 25b:1-28b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-140"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-140"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; BiShloshah Mekomot ",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בשלשה מקומות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 28b:8-30a:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-234"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-234"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Rauhu Echav",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ראוהו אחיו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 30a:5-30b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-332"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-332"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Amar Lahem HaMemunneh Bou",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אמר להם הממונה בואו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 30b:13-32b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-428"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-428"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Lo Hayu Koftin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לא היו כופתין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 32b:8-33a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-524"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-524"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; Amar Lahem HaMemunneh Barkhu",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אמר להם הממונה ברכו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 33a:8-14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-621"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-621"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; Hechellu Olim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "החלו עולים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tamid 33b:1-12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-719"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-719"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; BiZman SheKohen Gadol",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בזמן שכהן גדול",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.257Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tamid"
+}

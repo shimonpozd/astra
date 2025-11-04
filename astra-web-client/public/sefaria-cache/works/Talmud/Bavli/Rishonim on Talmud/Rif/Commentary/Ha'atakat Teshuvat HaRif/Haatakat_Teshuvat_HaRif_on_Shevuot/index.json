@@ -1,0 +1,51 @@
+{
+  "title": "Ha'atakat Teshuvat HaRif on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Ha'atakat Teshuvat HaRif"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "haatakat-teshuvat-harif",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      7
+    ],
+    "titles": [
+      {
+        "text": "העתקת פירוש הרי\"ף שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ha'atakat Teshuvat HaRif on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ha'atakat Teshuvat HaRif on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:24.044Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ha'atakat%20Teshuvat%20HaRif%20on%20Shevuot"
+}

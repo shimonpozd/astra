@@ -1,0 +1,42 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    25,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    10,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2,
+    5,
+    3
+  ],
+  "fetchedAt": "2025-10-30T14:42:16.785Z",
+  "source": "http://localhost:8000/api/shape/Tanna%20DeBei%20Eliyahu%20Rabbah"
+}

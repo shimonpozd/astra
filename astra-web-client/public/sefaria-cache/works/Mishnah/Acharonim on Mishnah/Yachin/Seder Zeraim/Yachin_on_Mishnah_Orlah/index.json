@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Orlah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "orlah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      164,
+      164
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין ערלה",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Orlah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Orlah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:22.861Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Orlah"
+}

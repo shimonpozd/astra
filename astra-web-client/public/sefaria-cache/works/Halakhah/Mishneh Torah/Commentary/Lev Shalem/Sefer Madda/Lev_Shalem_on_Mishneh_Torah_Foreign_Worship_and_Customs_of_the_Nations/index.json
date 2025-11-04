@@ -1,0 +1,60 @@
+{
+  "title": "Lev Shalem on Mishneh Torah, Foreign Worship and Customs of the Nations",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lev Shalem",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      6,
+      6
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "לב שלם על משנה תורה, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "Lev Shalem on Mishneh Torah, Foreign Worship and Customs of the Nations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lev Shalem on Mishneh Torah, Foreign Worship and Customs of the Nations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.918Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Foreign%20Worship%20and%20Customs%20of%20the%20Nations"
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Ran on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Ran"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ran",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      101,
+      1393
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ר\"ן על גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ran on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ran on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.575Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ran%20on%20Gittin"
+}

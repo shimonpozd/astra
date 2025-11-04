@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, One Who Injures a Person or Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "one-who-injures-a-person-or-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      2,
+      3
+    ],
+    "titles": [
+      {
+        "text": "שער המלך על משנה תורה, הלכות חובל ומזיק",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, One Who Injures a Person or Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, One Who Injures a Person or Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.248Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20One%20Who%20Injures%20a%20Person%20or%20Property"
+}

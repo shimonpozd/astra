@@ -1,0 +1,60 @@
+{
+  "title": "HaMaor HaKatan on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Baal HaMaor"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hamaor",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      108
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "המאור הקטן על עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "HaMaor HaKatan on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "HaMaor HaKatan on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.421Z",
+  "source": "http://localhost:8000/api/v2/raw/index/HaMaor%20HaKatan%20on%20Eruvin"
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Mishneh Torah, Positive Mitzvot",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Introduction"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Integer"
+    ],
+    "sectionNames": [
+      "Mitzvah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "positive-mitzvot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "positive-mitzvot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "positive-mitzvot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "positive-mitzvot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "positive-mitzvot"
+        ]
+      }
+    ],
+    "lengths": [
+      248
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Mitzvot Aseh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Positive Mitzvot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Mitzvot Aseh"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, מצוות עשה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם מצוות עשה"
+      },
+      {
+        "text": "רמב״ם, מצוות עשה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, מצוות עשה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם מצוות עשה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם מצוות עשה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, מצוות עשה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Positive Mitzvot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Positive Mitzvot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.791Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Positive%20Mitzvot"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      14,
+      14
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות מגילה וחנוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.181Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

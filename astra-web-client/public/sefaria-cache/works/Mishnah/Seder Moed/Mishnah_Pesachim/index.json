@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Pesachim",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "pesachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "pesachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "pesachim"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      89
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Pesachim"
+      },
+      {
+        "lang": "en",
+        "text": "M. Pesachim"
+      },
+      {
+        "lang": "en",
+        "text": "M Pesachim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Pesahim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Pes."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah P’saḥim"
+      },
+      {
+        "text": "משנה פסחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Pesachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Pesachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.131Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Pesachim"
+}

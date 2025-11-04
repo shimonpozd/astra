@@ -1,0 +1,138 @@
+{
+  "title": "Pirkei DeRabbi Eliezer",
+  "categories": [
+    "Midrash",
+    "Aggadah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "pirkei-derabbi-eliezer"
+        ]
+      }
+    ],
+    "lengths": [
+      54,
+      656
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Baraita de-Rabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirkei Derabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirkei D'Rabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirke de-Rabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirke Rabbi Eliezer ben Hyrcanus",
+        "lang": "en"
+      },
+      {
+        "text": "Haggadah de-Rabbi Eliezer ben Hyrcanus",
+        "lang": "en"
+      },
+      {
+        "text": "Pirke Rabbi Eliezer ha-Gadol",
+        "lang": "en"
+      },
+      {
+        "text": "Pirkei Derabi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirke d'Rabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirké d’R. El.",
+        "lang": "en"
+      },
+      {
+        "text": "Pirqei de-Rabbi Eli’ezer",
+        "lang": "en"
+      },
+      {
+        "text": "Pirqei de-Rabbi Eliezer",
+        "lang": "en"
+      },
+      {
+        "text": "PRE",
+        "lang": "en"
+      },
+      {
+        "text": "PDRE",
+        "lang": "en"
+      },
+      {
+        "text": "פרקי דר\"א",
+        "lang": "he"
+      },
+      {
+        "text": "פרדר\"א",
+        "lang": "he"
+      },
+      {
+        "text": "פרקי דר' אליעזר",
+        "lang": "he"
+      },
+      {
+        "text": "פרקי דר״א",
+        "lang": "he"
+      },
+      {
+        "text": "פרקי דר”א",
+        "lang": "he"
+      },
+      {
+        "text": "פרדר״א",
+        "lang": "he"
+      },
+      {
+        "text": "פרדר”א",
+        "lang": "he"
+      },
+      {
+        "text": "פירקי דרבי אליעזר",
+        "lang": "he"
+      },
+      {
+        "text": "פרקי דרבי אליעזר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Pirkei DeRabbi Eliezer",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Pirkei DeRabbi Eliezer"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.718Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Pirkei%20DeRabbi%20Eliezer"
+}

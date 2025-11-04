@@ -1,0 +1,55 @@
+{
+  "title": "Ran on Avodah Zarah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Ran"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ran",
+          "avodah-zarah"
+        ]
+      }
+    ],
+    "lengths": [
+      79,
+      1092
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ר\"ן על עבודה זרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ran on Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ran on Avodah Zarah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.493Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Ran%20on%20Avodah%20Zarah"
+}

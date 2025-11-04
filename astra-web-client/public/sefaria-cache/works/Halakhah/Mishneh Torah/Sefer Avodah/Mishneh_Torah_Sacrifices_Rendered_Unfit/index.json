@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Sacrifices Rendered Unfit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      345
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Sacrifices Rendered Unfit"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sacrifices Rendered Unfit"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Pesulei Hamukdashim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Pesulei Hamukdashim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Pesulei Hamukdashim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Sacrifices Rendered Unfit"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Pesulei Hamukdashim"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות פסולי המוקדשין"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Pesulei Hamukdashim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Pesulei Hamukdashim"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' פסולי המוקדשין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' פסולי המוקדשין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות פסולי המוקדשין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' פסולי המוקדשין"
+      },
+      {
+        "text": "רמב״ם, הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות פסולי המוקדשין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sacrifices Rendered Unfit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sacrifices Rendered Unfit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.179Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sacrifices%20Rendered%20Unfit"
+}

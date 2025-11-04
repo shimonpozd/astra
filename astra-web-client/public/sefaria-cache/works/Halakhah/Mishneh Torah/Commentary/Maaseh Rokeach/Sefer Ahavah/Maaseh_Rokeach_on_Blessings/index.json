@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Blessings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "blessings"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      165,
+      277
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Blessings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Blessings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.292Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Blessings"
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Malachi",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "malachi"
+        ]
+      },
+      {
+        "term_slugs": [
+          "malachi"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      55
+    ],
+    "titles": [
+      {
+        "text": "Mal.",
+        "lang": "en"
+      },
+      {
+        "text": "Mal",
+        "lang": "en"
+      },
+      {
+        "text": "Malach.",
+        "lang": "en"
+      },
+      {
+        "text": "מלאכי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Malachi",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malachi"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.441Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malachi"
+}

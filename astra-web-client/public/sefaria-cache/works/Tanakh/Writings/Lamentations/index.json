@@ -1,0 +1,76 @@
+{
+  "title": "Lamentations",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "lamentations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lamentations"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      154
+    ],
+    "titles": [
+      {
+        "text": "Lam",
+        "lang": "en"
+      },
+      {
+        "text": "Lam.",
+        "lang": "en"
+      },
+      {
+        "text": "Eichah",
+        "lang": "en"
+      },
+      {
+        "text": "Eicha",
+        "lang": "en"
+      },
+      {
+        "text": "Eikhah",
+        "lang": "en"
+      },
+      {
+        "text": "Lament.",
+        "lang": "en"
+      },
+      {
+        "text": "איכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lamentations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lamentations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.495Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lamentations"
+}

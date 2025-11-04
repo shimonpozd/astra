@@ -1,0 +1,145 @@
+{
+  "title": "Rosh on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      56
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Taanit"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapter": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rosh on Taanit.1-21",
+          "addressTypes": [],
+          "sectionNames": [],
+          "includeSections": "true",
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter One",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "פרק ראשון",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rosh on Taanit.22-25",
+          "addressTypes": [],
+          "sectionNames": [],
+          "includeSections": "true",
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter Two",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "פרק שני",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rosh on Taanit.26-30",
+          "addressTypes": [],
+          "sectionNames": [],
+          "includeSections": "true",
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter Three",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "פרק שלישי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rosh on Taanit.31-41",
+          "addressTypes": [],
+          "sectionNames": [],
+          "includeSections": "true",
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter Four",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "פרק רביעי",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:09.156Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Taanit"
+}

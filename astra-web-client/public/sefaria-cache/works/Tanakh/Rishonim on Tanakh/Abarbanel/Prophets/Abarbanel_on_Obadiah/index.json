@@ -1,0 +1,58 @@
+{
+  "title": "Abarbanel on Obadiah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Abarbanel",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "abarbanel",
+          "obadiah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      13,
+      33
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "אברבנאל על עובדיה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Abarbanel on Obadiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Abarbanel on Obadiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.907Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Abarbanel%20on%20Obadiah"
+}

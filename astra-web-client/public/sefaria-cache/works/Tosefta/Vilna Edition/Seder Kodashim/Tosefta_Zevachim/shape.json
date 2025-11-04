@@ -1,0 +1,24 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    8,
+    4,
+    5,
+    4,
+    7,
+    8,
+    6,
+    14,
+    6,
+    7,
+    8,
+    8,
+    9
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.742Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Zevachim"
+}

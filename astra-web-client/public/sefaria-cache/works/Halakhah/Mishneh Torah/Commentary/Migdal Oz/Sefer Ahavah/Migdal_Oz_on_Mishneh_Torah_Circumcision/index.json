@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Circumcision",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "circumcision"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      36,
+      74
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות מילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Circumcision",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Circumcision"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.627Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Circumcision"
+}

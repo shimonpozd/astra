@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    11,
+    7,
+    13
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.602Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Chagigah"
+}

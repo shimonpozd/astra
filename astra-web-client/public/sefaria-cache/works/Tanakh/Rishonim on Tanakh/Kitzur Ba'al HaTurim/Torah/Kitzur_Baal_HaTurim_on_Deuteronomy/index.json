@@ -1,0 +1,113 @@
+{
+  "title": "Kitzur Ba'al HaTurim on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Kitzur Ba'al HaTurim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kitzur-baal-haturim",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      394,
+      621
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Kitzur Baal HaTurim on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Deu.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Devarim",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Deu",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Deut",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "קיצור בעל הטורים על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kitzur Ba'al HaTurim on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kitzur Ba'al HaTurim on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.770Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kitzur%20Ba'al%20HaTurim%20on%20Deuteronomy"
+}

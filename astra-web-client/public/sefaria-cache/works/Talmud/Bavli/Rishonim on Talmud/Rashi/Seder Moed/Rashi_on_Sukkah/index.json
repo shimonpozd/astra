@@ -1,0 +1,404 @@
+{
+  "title": "Rashi on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashi",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      112,
+      1127,
+      2640
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "\\.(.+?)$",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Tractate Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Succah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Talmud Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Masekhet Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Sukka"
+      },
+      {
+        "text": "רש״י על סוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על סוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Sukkah"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sukkah 2a:1-20b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-138"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-138"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-138"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-138"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "סוכה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sukkah 20b:10-29b:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-232"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-232"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-232"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-232"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הישן",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sukkah 29b:4-42b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-330"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-330"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-330"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-330"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לולב הגזול",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sukkah 42b:5-50a:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-426"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-426"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-426"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-426"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לולב וערבה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rashi on Sukkah 50a:6-56b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "rashi",
+                "perek",
+                "chapter-523"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "rashi",
+                "chapter-523"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-523"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-523"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "החליל",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.477Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Sukkah"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Eliyahu Rabbah on Mishnah Niddah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Gra",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "eliyahu-rabbah",
+          "mishnah",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      26,
+      35
+    ],
+    "titles": [
+      {
+        "text": "אליהו רבא על משנה נדה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "אליהו רבא על משנה נידה",
+        "lang": "he"
+      },
+      {
+        "text": "Eliyahu Rabbah on Mishnah Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Eliyahu Rabbah on Mishnah Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:30.678Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Eliyahu%20Rabbah%20on%20Mishnah%20Niddah"
+}

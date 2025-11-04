@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, Murderer and the Preservation of Life",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "murderer-and-the-preservation-of-life"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, Murderer and the Preservation of Life",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, Murderer and the Preservation of Life"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.499Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20Murderer%20and%20the%20Preservation%20of%20Life"
+}

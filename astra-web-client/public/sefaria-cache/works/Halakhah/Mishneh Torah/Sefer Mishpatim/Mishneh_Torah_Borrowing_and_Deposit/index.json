@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Borrowing and Deposit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "borrowing-and-deposit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "borrowing-and-deposit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "borrowing-and-deposit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "borrowing-and-deposit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "borrowing-and-deposit"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      64
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Borrowing and Deposit"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot She'elah uFikkadon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, She'elah uFikkadon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Borrowing and Deposit"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot She'elah uFikkadon"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, She'elah uFikkadon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Borrowing and Deposit"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שאלה ופיקדון"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot She'elah uFikkadon"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot She'elah uFikkadon"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שאלה ופיקדון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שאלה ופיקדון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שאלה ופיקדון"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שאלה ופיקדון"
+      },
+      {
+        "text": "רמב״ם, הלכות שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שאלה ופיקדון",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שאלה ופיקדון",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Borrowing and Deposit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Borrowing and Deposit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.446Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Borrowing%20and%20Deposit"
+}

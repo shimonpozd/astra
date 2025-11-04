@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on Job",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "job"
+        ]
+      }
+    ],
+    "lengths": [
+      42,
+      1070
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על איוב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Job",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Job"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:06.032Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20Job"
+}

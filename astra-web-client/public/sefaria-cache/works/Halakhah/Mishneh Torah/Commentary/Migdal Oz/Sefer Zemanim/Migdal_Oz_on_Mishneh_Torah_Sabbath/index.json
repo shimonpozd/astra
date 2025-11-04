@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Sabbath",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "sabbath"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "sabbath"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      642,
+      2197
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מגדל עוז על משנה תורה, הלכות שבת",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Sabbath",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Sabbath"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.640Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Sabbath"
+}

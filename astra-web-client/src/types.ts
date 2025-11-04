@@ -4,7 +4,6 @@ export interface ChatRequest {
   text: string;
   agent_id?: string;
   session_id?: string;
-  user_id?: string;
 }
 
 export interface ChatResponse {
@@ -68,5 +67,4 @@ export interface StreamHandler {
   onError?: (error: { message?: string } | any) => void;
   onComplete?: () => void;
 }
-
 

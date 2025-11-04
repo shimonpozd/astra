@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Zavim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "zavim"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      30
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Zavim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Zavim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Zab."
+      },
+      {
+        "text": "תוספתא זבים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Zavim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Zavim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.858Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Zavim"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Yekhahen Pe'er on Mishneh Torah, Sacrificial Procedure",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yekhahen Pe'er",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yekhahen-peer",
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yekhahen-peer",
+          "sacrificial-procedure"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      35,
+      35
+    ],
+    "titles": [
+      {
+        "text": "יכהן פאר על משנה תורה, הלכות מעשה הקרבנות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yekhahen Pe'er on Mishneh Torah, Sacrificial Procedure",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yekhahen Pe'er on Mishneh Torah, Sacrificial Procedure"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.552Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yekhahen%20Pe'er%20on%20Mishneh%20Torah%2C%20Sacrificial%20Procedure"
+}

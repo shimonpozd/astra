@@ -1,0 +1,57 @@
+{
+  "title": "Sha'arei Torat Bavel on Mishnah Tevul Yom",
+  "categories": [
+    "Mishnah",
+    "Modern Commentary on Mishnah",
+    "Sha'arei Torat Bavel",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaarei-torat-bavel",
+          "mishnah",
+          "tevul-yom"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      4,
+      4
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "שערי תורת בבל על משנה טבול יום",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'arei Torat Bavel on Mishnah Tevul Yom",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'arei Torat Bavel on Mishnah Tevul Yom"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:08.004Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Sha'arei%20Torat%20Bavel%20on%20Mishnah%20Tevul%20Yom"
+}

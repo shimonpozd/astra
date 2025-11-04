@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Offerings for Unintentional Transgressions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "offerings-for-unintentional-transgressions"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      4,
+      4
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות שגגות",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Offerings for Unintentional Transgressions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Offerings for Unintentional Transgressions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.312Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Unintentional%20Transgressions"
+}

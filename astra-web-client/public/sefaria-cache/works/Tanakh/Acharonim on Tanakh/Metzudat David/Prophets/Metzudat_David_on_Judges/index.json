@@ -1,0 +1,77 @@
+{
+  "title": "Metzudat David on Judges",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "judges"
+        ]
+      }
+    ],
+    "lengths": [
+      21,
+      493,
+      935
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Shoftim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Jdg"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Judg"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Jdg."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Judg."
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שופטים",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Judges",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Judges"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.907Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Judges"
+}

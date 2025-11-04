@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    11,
+    70,
+    13,
+    24,
+    17,
+    22,
+    28,
+    36,
+    15,
+    44
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.548Z",
+  "source": "http://localhost:8000/api/shape/Ezra"
+}

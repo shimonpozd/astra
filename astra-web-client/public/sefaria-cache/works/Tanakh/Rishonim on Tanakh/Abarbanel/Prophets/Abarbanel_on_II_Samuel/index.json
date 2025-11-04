@@ -1,0 +1,58 @@
+{
+  "title": "Abarbanel on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Abarbanel",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "abarbanel",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      355,
+      421
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "אברבנאל על שמואל ב",
+        "lang": "he"
+      },
+      {
+        "text": "Abarbanel on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Abarbanel on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.870Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Abarbanel%20on%20II%20Samuel"
+}

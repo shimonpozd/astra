@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on Haggai",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "haggai"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      38
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על חגי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Haggai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Haggai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:05.803Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20Haggai"
+}

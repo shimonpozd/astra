@@ -1,0 +1,59 @@
+{
+  "title": "Rashba on Niddah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashba",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashba",
+          "niddah"
+        ]
+      }
+    ],
+    "lengths": [
+      145,
+      359
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רשב״א על נדה",
+        "primary": true
+      },
+      {
+        "text": "Rashba on Niddah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashba on Niddah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.955Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashba%20on%20Niddah"
+}

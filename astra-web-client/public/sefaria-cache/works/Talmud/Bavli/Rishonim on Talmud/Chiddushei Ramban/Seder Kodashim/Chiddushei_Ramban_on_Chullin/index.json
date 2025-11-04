@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Ramban on Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Chiddushei Ramban",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ramban",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      283,
+      330
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "חידושי רמב\"ן על חולין"
+      },
+      {
+        "text": "Chiddushei Ramban on Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Ramban on Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.005Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Ramban%20on%20Chullin"
+}

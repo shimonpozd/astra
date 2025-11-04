@@ -1,0 +1,57 @@
+{
+  "title": "Rashash on Mishnah Oholot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Rashash",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "mishnah",
+          "oholot"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      73,
+      128
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "רש״ש על משנה אהלות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashash on Mishnah Oholot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Mishnah Oholot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:52.296Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rashash%20on%20Mishnah%20Oholot"
+}

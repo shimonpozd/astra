@@ -1,0 +1,61 @@
+{
+  "title": "Tractate Derekh Eretz Rabbah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "derekh-eretz-rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "derekh-eretz-rabbah"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      99
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Der. Er."
+      },
+      {
+        "lang": "en",
+        "text": "Treat. Der. Er."
+      },
+      {
+        "text": "מסכת דרך ארץ רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tractate Derekh Eretz Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Derekh Eretz Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.289Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Derekh%20Eretz%20Rabbah"
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Bava Batra (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      174
+    ],
+    "titles": [
+      {
+        "text": "תוספתא בבא בתרא (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Bava Batra (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Bava Batra (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.964Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Bava%20Batra%20(Lieberman)"
+}

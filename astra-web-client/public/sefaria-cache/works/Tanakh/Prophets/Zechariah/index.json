@@ -1,0 +1,100 @@
+{
+  "title": "Zechariah",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "zechariah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "zechariah"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      211
+    ],
+    "titles": [
+      {
+        "text": "Zech.",
+        "lang": "en"
+      },
+      {
+        "text": "Zech",
+        "lang": "en"
+      },
+      {
+        "text": "Zachariah",
+        "lang": "en"
+      },
+      {
+        "text": "Zekharia",
+        "lang": "en"
+      },
+      {
+        "text": "Zekharya",
+        "lang": "en"
+      },
+      {
+        "text": "Zecharia",
+        "lang": "en"
+      },
+      {
+        "text": "Zach.",
+        "lang": "en"
+      },
+      {
+        "text": "Zecharyah",
+        "lang": "en"
+      },
+      {
+        "text": "Zac.",
+        "lang": "en"
+      },
+      {
+        "text": "Zacharie",
+        "lang": "en"
+      },
+      {
+        "text": "Zekhariah",
+        "lang": "en"
+      },
+      {
+        "text": "זכרי'",
+        "lang": "he"
+      },
+      {
+        "text": "זכריה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Zechariah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Zechariah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.434Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Zechariah"
+}

@@ -1,0 +1,627 @@
+{
+  "title": "Tosafot on Arakhin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot",
+          "arakhin"
+        ]
+      }
+    ],
+    "lengths": [
+      67,
+      292,
+      326
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot on Masekhet Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Arachin"
+      },
+      {
+        "text": "תוספות על ערכין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot on Arakhin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot on Arakhin"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 2a:1-7b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-1"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-1"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הכל מעריכין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 7b:15-13b:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-2"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-2"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-2"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-2"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אין נערכין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 13b:17-17a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-3"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-3"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-3"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-3"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "יש בערכין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 17a:9-19a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-4"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-4"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-4"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-4"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "השג יד",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 19a:4-21b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-5"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-5"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-5"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-5"
+              ]
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "האומר משקלי עלי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 21b:13-24a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-6"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-6"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-6"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-6"
+              ]
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שום היתומים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 24a:12-27a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-7"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-7"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-7"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-7"
+              ]
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אין מקדישין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 27a:7-29a:24",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-8"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-8"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-8"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-8"
+              ]
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המקדיש שדהו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Arakhin 29b:1-34a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-9"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-9"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-9"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-9"
+              ]
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוכר שדהו",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.723Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20on%20Arakhin"
+}

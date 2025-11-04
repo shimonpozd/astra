@@ -1,0 +1,51 @@
+{
+  "title": "Hagahot MeAlfas Yashan on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot MeAlfas Yashan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-mealfas-yashan",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      9
+    ],
+    "titles": [
+      {
+        "text": "הגהות מאלפס ישן על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot MeAlfas Yashan on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot MeAlfas Yashan on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:28.254Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20MeAlfas%20Yashan%20on%20Rosh%20Hashanah"
+}

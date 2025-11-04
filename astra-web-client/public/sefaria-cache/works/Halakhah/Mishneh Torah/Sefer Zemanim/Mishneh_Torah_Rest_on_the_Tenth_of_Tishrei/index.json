@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Rest on the Tenth of Tishrei",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      28
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Rest on the Tenth of Tishrei"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Rest on the Tenth of Tishrei"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shevitat Asor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shevitat Asor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shevitat Asor"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shevitat Asor"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Rest on the Tenth of Tishrei"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שביתת עשור"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shevitat Asor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shevitat Asor"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שביתת עשור"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שביתת עשור"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שביתת עשור"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שביתת עשור"
+      },
+      {
+        "text": "רמב״ם, הלכות שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שביתת עשור",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Rest on the Tenth of Tishrei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Rest on the Tenth of Tishrei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.920Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Rest%20on%20the%20Tenth%20of%20Tishrei"
+}

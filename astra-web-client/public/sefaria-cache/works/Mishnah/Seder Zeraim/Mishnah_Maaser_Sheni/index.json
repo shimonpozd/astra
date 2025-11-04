@@ -1,0 +1,98 @@
+{
+  "title": "Mishnah Maaser Sheni",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "maaser-sheni"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaser-sheni"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "maaser-sheni"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      57
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Maaser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Maaser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "M Maaser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Ma’aser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Maaser Sheni"
+      },
+      {
+        "lang": "he",
+        "text": "מעשר שני"
+      },
+      {
+        "lang": "en",
+        "text": "Maas. Sh."
+      },
+      {
+        "lang": "en",
+        "text": "Maʿǎser Sheni"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Maas. Sh."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Maʿǎser Sheni"
+      },
+      {
+        "text": "משנה מעשר שני",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Maaser Sheni",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Maaser Sheni"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.085Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Maaser%20Sheni"
+}

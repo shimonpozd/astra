@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat David on Nehemiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "nehemiah"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      298,
+      648
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Neh."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Neh"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על נחמיה",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Nehemiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Nehemiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.162Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Nehemiah"
+}

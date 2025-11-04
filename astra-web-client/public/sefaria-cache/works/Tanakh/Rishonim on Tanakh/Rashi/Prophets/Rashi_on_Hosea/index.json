@@ -1,0 +1,77 @@
+{
+  "title": "Rashi on Hosea",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "hosea"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      186,
+      415
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Hos."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Hos"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Hoshea"
+      },
+      {
+        "text": "רש״י על הושע",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על הושע",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על הושע",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Hosea",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Hosea"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.236Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Hosea"
+}

@@ -1,4 +1,6 @@
 import { DocV1 } from '../types/text';
+import { debugLog } from '../utils/debugLogger';
+import { authorizedFetch } from '../lib/authorizedFetch';
 export interface Chat {
   session_id: string;
   name: string;
@@ -15,6 +17,53 @@ export interface Message {
   timestamp: number | Date;
 }
 
+interface AdminUserApiKey {
+  id: string;
+  provider: 'openrouter' | 'openai';
+  last_four: string;
+  daily_limit: number | null;
+  usage_today: number;
+  last_reset_at: string | null;
+  is_active: boolean;
+  created_at: string;
+}
+
+interface AdminUserSummary {
+  id: string;
+  username: string;
+  role: 'admin' | 'member';
+  is_active: boolean;
+  created_manually: boolean;
+  created_at: string;
+  updated_at: string;
+  last_login_at: string | null;
+  api_keys: AdminUserApiKey[];
+}
+
+interface CreateAdminUserPayload {
+  username: string;
+  password: string;
+  role: 'admin' | 'member';
+  is_active?: boolean;
+}
+
+interface UpdateAdminUserPayload {
+  password?: string;
+  role?: 'admin' | 'member';
+  is_active?: boolean;
+}
+
+interface CreateApiKeyPayload {
+  provider?: 'openrouter' | 'openai';
+  api_key: string;
+  daily_limit?: number | null;
+}
+
+interface UpdateApiKeyPayload {
+  daily_limit?: number | null;
+  is_active?: boolean;
+}
+
 interface ChatHistoryResponse {
   history: Message[];
 }
@@ -22,7 +71,6 @@ interface ChatHistoryResponse {
 export interface ChatRequest {
   text: string;
   session_id?: string;
-  user_id?: string;
   agent_id?: string;
   context?: 'focus' | 'workbench-left' | 'workbench-right';
 }
@@ -44,21 +92,21 @@ export interface StreamHandler {
   onError?: (error: Error) => void;
 }
 
-// Vite proxy will strip /api, so we call /api/chats from frontend
-const API_BASE = '/api'; 
+// Vite proxy will strip /api, so we call /api from frontend
+const API_BASE = '/api';
+
 
 async function getChatList(): Promise<Chat[]> {
   try {
-    // Corresponds to backend endpoint GET /chats
-    const response = await fetch(`${API_BASE}/chats`);
+    // Combined sessions (chat, study, daily)
+    const response = await authorizedFetch(`${API_BASE}/sessions`);
     if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.statusText}`);
+      throw new Error(`Failed to fetch sessions: ${response.statusText}`);
     }
-    // Напрямую возвращаем результат response.json(), так как это и есть массив чатов
     return await response.json();
   } catch (error) {
-    console.error("Failed to fetch chat list:", error);
-    return []; // Возвращаем пустой массив в случае ошибки
+    console.error('Failed to fetch session list:', error);
+    return [];
   }
 }
 
@@ -78,7 +126,7 @@ interface VirtualDailyChat {
 async function getDailyCalendar(): Promise<VirtualDailyChat[]> {
   try {
     // Get virtual daily chats from backend
-    const response = await fetch(`${API_BASE}/daily/calendar`);
+    const response = await authorizedFetch(`${API_BASE}/daily/calendar`);
     if (!response.ok) {
       throw new Error(`Failed to get daily calendar: ${response.statusText}`);
     }
@@ -92,7 +140,7 @@ async function getDailyCalendar(): Promise<VirtualDailyChat[]> {
 
 async function createDailySessionLazy(sessionId: string): Promise<boolean> {
   try {
-    const response = await fetch(`${API_BASE}/daily/create/${sessionId}`, {
+    const response = await authorizedFetch(`${API_BASE}/daily/create/${sessionId}`, {
       method: 'POST'
     });
     if (!response.ok) {
@@ -113,7 +161,7 @@ async function getDailySegments(sessionId: string): Promise<{
   loaded_segments: number;
 }> {
   try {
-    const response = await fetch(`${API_BASE}/daily/${sessionId}/segments`);
+    const response = await authorizedFetch(`${API_BASE}/daily/${sessionId}/segments`);
     if (!response.ok) {
       throw new Error(`Failed to get daily segments: ${response.statusText}`);
     }
@@ -127,7 +175,7 @@ async function getDailySegments(sessionId: string): Promise<{
 async function getChatHistory(sessionId: string): Promise<Message[]> {
   try {
     // Corresponds to backend endpoint GET /chats/{sessionId}
-    const response = await fetch(`${API_BASE}/chats/${sessionId}`);
+    const response = await authorizedFetch(`${API_BASE}/chats/${sessionId}`);
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
     }
@@ -141,7 +189,7 @@ async function getChatHistory(sessionId: string): Promise<Message[]> {
 
 async function deleteChat(sessionId: string): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/chats/${sessionId}`, {
+    const response = await authorizedFetch(`${API_BASE}/chats/${sessionId}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
@@ -161,18 +209,18 @@ async function deleteSession(sessionId: string, sessionType: 'chat' | 'study' | 
     }
     
     const url = `${API_BASE}/sessions/${sessionId}/${sessionType}`;
-    console.log('🗑️ API deleteSession call:', {
+    debugLog('API deleteSession call:', {
       url,
       sessionId,
       sessionType,
       method: 'DELETE'
     });
     
-    const response = await fetch(url, {
+    const response = await authorizedFetch(url, {
       method: 'DELETE',
     });
     
-    console.log('📡 API deleteSession response:', {
+    debugLog('API deleteSession response:', {
       status: response.status,
       statusText: response.statusText,
       ok: response.ok,
@@ -190,7 +238,7 @@ async function deleteSession(sessionId: string, sessionType: 'chat' | 'study' | 
       throw new Error(`Failed to delete ${sessionType} session: ${response.status} ${response.statusText} - ${errorText}`);
     }
     
-    console.log('✅ API deleteSession successful');
+    debugLog('API deleteSession successful');
   } catch (error) {
     console.error(`Failed to delete ${sessionType} session ${sessionId}:`, error);
     throw error;
@@ -202,14 +250,14 @@ export async function deleteDailySession(sessionId: string): Promise<void> {
   try {
     // Daily sessions are virtual - they don't exist until created
     // We can't delete what doesn't exist, so we treat this as success
-    console.log('ℹ️ Daily session deletion:', {
+    debugLog('Daily session deletion:', {
       sessionId,
       note: 'Daily sessions are virtual and don\'t exist until created'
     });
     
     // For now, we'll just log that we're "deleting" a virtual session
     // In the future, if daily sessions get persisted, we can add actual deletion logic here
-    console.log('✅ Daily session "deleted" (virtual session)');
+    debugLog('Daily session "deleted" (virtual session)');
   } catch (error) {
     console.error(`Failed to delete daily session ${sessionId}:`, error);
     throw error;
@@ -218,7 +266,7 @@ export async function deleteDailySession(sessionId: string): Promise<void> {
 
 async function getStudyState(sessionId: string): Promise<any> {
   try {
-    const response = await fetch(`${API_BASE}/study/state?session_id=${sessionId}`);
+    const response = await authorizedFetch(`${API_BASE}/study/state?session_id=${sessionId}`);
     if (!response.ok) {
       throw new Error('Failed to get study state');
     }
@@ -235,7 +283,7 @@ async function getStudyState(sessionId: string): Promise<any> {
 
 async function getLexicon(word: string): Promise<any> {
   try {
-    const response = await fetch(`${API_BASE}/study/lexicon?word=${encodeURIComponent(word)}`);
+    const response = await authorizedFetch(`${API_BASE}/study/lexicon?word=${encodeURIComponent(word)}`);
     if (!response.ok) {
       throw new Error('Failed to get lexicon data');
     }
@@ -248,7 +296,7 @@ async function getLexicon(word: string): Promise<any> {
 
 async function getBookshelfCategories(): Promise<Array<{name: string; color: string}>> {
   try {
-    const response = await fetch(`${API_BASE}/study/categories`);
+    const response = await authorizedFetch(`${API_BASE}/study/categories`);
     if (!response.ok) {
       throw new Error('Failed to get bookshelf categories');
     }
@@ -261,7 +309,7 @@ async function getBookshelfCategories(): Promise<Array<{name: string; color: str
 
 async function getBookshelfItems(sessionId: string, ref: string, category?: string): Promise<any> {
   try {
-    const response = await fetch(`${API_BASE}/study/bookshelf`, {
+    const response = await authorizedFetch(`${API_BASE}/study/bookshelf`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ session_id: sessionId, ref, categories: category ? [category] : undefined }),
@@ -277,10 +325,78 @@ async function getBookshelfItems(sessionId: string, ref: string, category?: stri
 }
 
 
+async function adminListUsers(): Promise<AdminUserSummary[]> {
+  const response = await authorizedFetch(`${API_BASE}/users`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch users');
+  }
+  return response.json();
+}
+
+async function adminCreateUser(payload: CreateAdminUserPayload): Promise<AdminUserSummary> {
+  const response = await authorizedFetch(`${API_BASE}/users`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...payload, created_manually: true }),
+  });
+  if (!response.ok) {
+    const message = await response.text().catch(() => 'Failed to create user');
+    throw new Error(message || 'Failed to create user');
+  }
+  return response.json();
+}
+
+async function adminUpdateUser(userId: string, payload: UpdateAdminUserPayload): Promise<AdminUserSummary> {
+  const response = await authorizedFetch(`${API_BASE}/users/${userId}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    const message = await response.text().catch(() => 'Failed to update user');
+    throw new Error(message || 'Failed to update user');
+  }
+  return response.json();
+}
+
+async function adminCreateUserApiKey(userId: string, payload: CreateApiKeyPayload): Promise<AdminUserApiKey> {
+  const response = await authorizedFetch(`${API_BASE}/users/${userId}/api-keys`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    const message = await response.text().catch(() => 'Failed to create API key');
+    throw new Error(message || 'Failed to create API key');
+  }
+  return response.json();
+}
+
+async function adminUpdateUserApiKey(userId: string, keyId: string, payload: UpdateApiKeyPayload): Promise<AdminUserApiKey> {
+  const response = await authorizedFetch(`${API_BASE}/users/${userId}/api-keys/${keyId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    const message = await response.text().catch(() => 'Failed to update API key');
+    throw new Error(message || 'Failed to update API key');
+  }
+  return response.json();
+}
+
+async function adminDeleteUserApiKey(userId: string, keyId: string): Promise<void> {
+  const response = await authorizedFetch(`${API_BASE}/users/${userId}/api-keys/${keyId}`, { method: 'DELETE' });
+  if (!response.ok) {
+    const message = await response.text().catch(() => 'Failed to delete API key');
+    throw new Error(message || 'Failed to delete API key');
+  }
+}
+
 
 async function explainTerm(term: string, contextText: string, handler: StreamHandler): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/actions/explain-term`, {
+    const response = await authorizedFetch(`${API_BASE}/actions/explain-term`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ term, context_text: contextText }),
@@ -310,7 +426,7 @@ async function explainTerm(term: string, contextText: string, handler: StreamHan
 }
 
 async function resolveRef(text: string): Promise<any> {
-  const response = await fetch(`${API_BASE}/study/resolve`, {
+  const response = await authorizedFetch(`${API_BASE}/study/resolve`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ text }),
@@ -322,7 +438,7 @@ async function resolveRef(text: string): Promise<any> {
 }
 
 async function setFocus(sessionId: string, ref: string, focusRef?: string): Promise<any> {
-  const response = await fetch(`${API_BASE}/study/set_focus`, {
+  const response = await authorizedFetch(`${API_BASE}/study/set_focus`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
@@ -344,7 +460,7 @@ async function setFocus(sessionId: string, ref: string, focusRef?: string): Prom
 }
 
 async function navigateBack(sessionId: string): Promise<any> {
-  const response = await fetch(`${API_BASE}/study/back`, {
+  const response = await authorizedFetch(`${API_BASE}/study/back`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ session_id: sessionId }),
@@ -360,7 +476,7 @@ async function navigateBack(sessionId: string): Promise<any> {
 }
 
 async function navigateForward(sessionId: string): Promise<any> {
-  const response = await fetch(`${API_BASE}/study/forward`, {
+  const response = await authorizedFetch(`${API_BASE}/study/forward`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ session_id: sessionId }),
@@ -376,7 +492,7 @@ async function navigateForward(sessionId: string): Promise<any> {
 }
 
 async function setDiscussionFocus(sessionId: string, ref: string): Promise<any> {
-  const response = await fetch(`${API_BASE}/study/chat/set_focus`, {
+  const response = await authorizedFetch(`${API_BASE}/study/chat/set_focus`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ session_id: sessionId, ref }),
@@ -393,7 +509,7 @@ async function setDiscussionFocus(sessionId: string, ref: string): Promise<any> 
 
 async function sendMessage(request: ChatRequest, handler: StreamHandler): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/chat/stream`, {
+    const response = await authorizedFetch(`${API_BASE}/chat/stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -522,7 +638,7 @@ async function sendMessage(request: ChatRequest, handler: StreamHandler): Promis
 
 async function sendMessageWithBlocks(request: ChatRequest, handler: StreamHandler): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/chat/stream-blocks`, {
+    const response = await authorizedFetch(`${API_BASE}/chat/stream-blocks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -675,7 +791,7 @@ async function sendStudyMessage(
   selectedPanelId?: string | null
 ): Promise<void> {
   try {
-    const response = await fetch(`${API_BASE}/study/chat/stream`, {
+    const response = await authorizedFetch(`${API_BASE}/study/chat/stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -827,4 +943,10 @@ export const api = {
   getDailyCalendar,
   createDailySessionLazy,
   getDailySegments,
+  adminListUsers,
+  adminCreateUser,
+  adminUpdateUser,
+  adminCreateUserApiKey,
+  adminUpdateUserApiKey,
+  adminDeleteUserApiKey,
 };

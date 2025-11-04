@@ -2,8 +2,8 @@ import json
 import logging
 from typing import Dict, Any, Optional, List
 import redis.asyncio as redis
-from services.study_state import get_current_snapshot, push_new_snapshot, StudySnapshot
-from services.sefaria_service import SefariaService
+from brain_service.services.study_state import get_current_snapshot, push_new_snapshot, StudySnapshot
+from brain_service.services.sefaria_service import SefariaService
 
 logger = logging.getLogger(__name__)
 

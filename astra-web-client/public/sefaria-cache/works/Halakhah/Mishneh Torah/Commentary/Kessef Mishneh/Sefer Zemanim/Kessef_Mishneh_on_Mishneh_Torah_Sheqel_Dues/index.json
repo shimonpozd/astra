@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Sheqel Dues",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "sheqel-dues"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      40,
+      93
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות שקלים",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Sheqel Dues",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Sheqel Dues"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.803Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Sheqel%20Dues"
+}

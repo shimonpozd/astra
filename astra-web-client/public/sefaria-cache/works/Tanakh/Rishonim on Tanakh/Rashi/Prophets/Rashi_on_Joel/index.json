@@ -1,0 +1,69 @@
+{
+  "title": "Rashi on Joel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "joel"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      56,
+      98
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Yoel"
+      },
+      {
+        "text": "רש״י על יואל",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על יואל",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על יואל",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Joel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Joel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.239Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Joel"
+}

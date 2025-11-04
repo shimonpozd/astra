@@ -1,0 +1,285 @@
+{
+  "title": "Tosafot on Makkot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot",
+          "makkot"
+        ]
+      }
+    ],
+    "lengths": [
+      48,
+      143,
+      167
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^(.+?)[\\-–]",
+      "^(?:(?:מתני'|גמ')\\s?)?(.+)$"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Makkot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Makkot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Masekhet Makkot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Makkos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Talmud Makkos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Tractate Makkos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosafot on Makot"
+      },
+      {
+        "text": "תוספות על מכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot on Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot on Makkot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Makkot 2a:1-7a:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-118"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-118"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-118"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-118"
+              ]
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "כיצד העדים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Makkot 7a:14-13a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-216"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-216"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-216"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-216"
+              ]
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו הן הגולין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot on Makkot 13a:8-24b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "tosafot",
+                "perek",
+                "chapter-316"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "tosafot",
+                "chapter-316"
+              ],
+              "scope": "alone"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-316"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-316"
+              ]
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "isSegmentLevelDiburHamatchil": true,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלו הן הלוקין"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:06.639Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20on%20Makkot"
+}

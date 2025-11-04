@@ -1,0 +1,80 @@
+{
+  "title": "The Book of Maccabees I",
+  "categories": [
+    "Second Temple",
+    "Apocrypha"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "i-maccabees"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sefer",
+          "i-maccabees"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      954
+    ],
+    "titles": [
+      {
+        "text": "First Maccabees",
+        "lang": "en"
+      },
+      {
+        "text": "Sefer Hashmonaim I",
+        "lang": "en"
+      },
+      {
+        "text": "The first Book of Maccabees",
+        "lang": "en"
+      },
+      {
+        "text": "I maccabees",
+        "lang": "en"
+      },
+      {
+        "text": "I Macc.",
+        "lang": "en"
+      },
+      {
+        "text": "ספר מקבים",
+        "lang": "he"
+      },
+      {
+        "text": "ספר חשמונאים א",
+        "lang": "he"
+      },
+      {
+        "text": "ספר מקבים א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "The Book of Maccabees I",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "The Book of Maccabees I"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:37.836Z",
+  "source": "http://localhost:8000/api/v2/raw/index/The%20Book%20of%20Maccabees%20I"
+}

@@ -1,0 +1,271 @@
+{
+  "title": "Rif Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      392
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף נדרים",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף נדרים",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Nedarim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 1a:1-3a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל כנויי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 3b:1-6b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ואלו מותרין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 6b:4-11a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ארבעה נדרים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 11a:7-14b:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אין בין המודר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 14b:3-16a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "השותפין שנדרו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 16a:4-18a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הנודר מן המבושל",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 18a:3-19b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הנודר מן הירק",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 19b:11-21a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "קונם יין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 21a:3-22b:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "רבי אליעזר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 23a:1-25a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "נערה המאורסה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Nedarim 25a:3-28a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 11",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ואלו נדרים",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.165Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Nedarim"
+}

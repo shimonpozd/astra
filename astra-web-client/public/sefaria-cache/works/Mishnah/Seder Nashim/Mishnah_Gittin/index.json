@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Gittin",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      75
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Gittin"
+      },
+      {
+        "lang": "en",
+        "text": "M Gittin"
+      },
+      {
+        "lang": "en",
+        "text": "M. Gittin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Gitt."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Giṭṭin"
+      },
+      {
+        "text": "משנה גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.241Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Gittin"
+}

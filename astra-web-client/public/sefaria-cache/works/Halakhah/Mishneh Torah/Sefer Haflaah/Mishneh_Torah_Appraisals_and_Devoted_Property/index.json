@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Appraisals and Devoted Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "appraisals-and-devoted-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      171
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Appraisals and Devoted Property",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Appraisals and Devoted Property",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Appraisals and Devoted Property",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Arachim Vacharamim",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות ערכין וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ערכים וחרמין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Appraisals and Devoted Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Appraisals and Devoted Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.071Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Appraisals%20and%20Devoted%20Property"
+}

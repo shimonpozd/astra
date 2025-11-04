@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Sukkah",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      53
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "M. Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "M Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Succa"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Succah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Succ."
+      },
+      {
+        "text": "משנה סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.139Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Sukkah"
+}

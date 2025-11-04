@@ -1,0 +1,64 @@
+{
+  "title": "Tosefta Eduyot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "eduyot"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      27
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Eduyot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Eduyot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ed."
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Eduy."
+      },
+      {
+        "text": "תוספתא עדויות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Eduyot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Eduyot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.691Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Eduyot"
+}

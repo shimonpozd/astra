@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Loader2, AlertCircle, FileText, MessageSquare, Search, ArrowLeft } from 'lucide-react';
+import { debugWarn } from '../utils/debugLogger';
 
 interface BrainChatProps {
   persona: string;
@@ -89,7 +90,7 @@ export default function BrainChat({
           setChatTitle('Новый чат');
         }
       } catch (error) {
-        console.warn('Не удалось загрузить историю чата:', error);
+        debugWarn('Не удалось загрузить историю чата:', error);
         setMessages([]);
         setChatTitle('Новый чат');
       }
@@ -116,7 +117,6 @@ export default function BrainChat({
         text: currentInput,
         agent_id: persona,
         session_id: sessionId,
-        user_id: 'user_' + Date.now()
     };
 
     const assistantMessageId = `asst_${Date.now()}`;
@@ -198,7 +198,6 @@ export default function BrainChat({
         text: researchInput,
         agent_id: persona,
         session_id: sessionId,
-        user_id: 'user_' + Date.now()
       };
 
       const streamHandler: StreamHandler = {

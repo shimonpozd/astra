@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Creditor and Debtor",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "creditor-and-debtor"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      286,
+      388
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות מלווה ולווה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Creditor and Debtor",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Creditor and Debtor"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.907Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Creditor%20and%20Debtor"
+}

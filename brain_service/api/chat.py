@@ -6,12 +6,17 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
-from core.dependencies import get_chat_service, get_session_service, get_redis_client
+from core.dependencies import (
+    get_chat_service,
+    get_session_service,
+    get_redis_client,
+    get_current_user,
+)
 from core.rate_limiting import rate_limit_dependency
-from services.chat_service import ChatService
-from services.session_service import SessionService
-from services.study.stream_router import select_today_unit
-from services.study.tz_utils import now_in_tz, resolve_timezone, seconds_until_next_midnight, next_midnight
+from brain_service.services.chat_service import ChatService
+from brain_service.services.session_service import SessionService
+from brain_service.services.study.stream_router import select_today_unit
+from brain_service.services.study.tz_utils import now_in_tz, resolve_timezone, seconds_until_next_midnight, next_midnight
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -19,65 +24,87 @@ router = APIRouter()
 # --- Models ---
 class ChatRequest(BaseModel):
     text: str
-    user_id: str
     session_id: Optional[str] = None
     agent_id: Optional[str] = None
+    user_id: Optional[str] = None
 
 # --- Endpoints ---
 @router.post("/chat/stream")
 async def chat_stream_handler(
-    request: ChatRequest, 
+    request: ChatRequest,
     chat_service: ChatService = Depends(get_chat_service),
-    _: bool = Depends(rate_limit_dependency(limit=5))  # Stricter limit for LLM endpoints
+    _: bool = Depends(rate_limit_dependency(limit=5)),  # Stricter limit for LLM endpoints
+    current_user=Depends(get_current_user),
 ):
     """Stream chat response with LLM and tool integration."""
+    expected_user_id = str(current_user.id)
+    if request.user_id and request.user_id != expected_user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="User mismatch")
     return StreamingResponse(
         chat_service.process_chat_stream(
             text=request.text,
-            user_id=request.user_id,
+            user_id=expected_user_id,
             session_id=request.session_id,
             agent_id=request.agent_id
-        ), 
+        ),
         media_type="application/x-ndjson"
     )
 
 @router.post("/chat/stream-blocks")
 async def chat_stream_blocks_handler(
-    request: ChatRequest, 
+    request: ChatRequest,
     chat_service: ChatService = Depends(get_chat_service),
-    _: bool = Depends(rate_limit_dependency(limit=5))  # Stricter limit for LLM endpoints
+    _: bool = Depends(rate_limit_dependency(limit=5)),  # Stricter limit for LLM endpoints
+    current_user=Depends(get_current_user),
 ):
     """Stream chat response with block-by-block rendering."""
+    expected_user_id = str(current_user.id)
+    if request.user_id and request.user_id != expected_user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="User mismatch")
     return StreamingResponse(
         chat_service.process_chat_stream_with_blocks(
             text=request.text,
-            user_id=request.user_id,
+            user_id=expected_user_id,
             session_id=request.session_id,
             agent_id=request.agent_id
-        ), 
+        ),
         media_type="application/x-ndjson"
     )
 
 @router.get("/chats")
-async def get_chats(chat_service: ChatService = Depends(get_chat_service)):
-    """Get all chat and study sessions."""
-    logger.info(f"ChatService redis_client is None: {chat_service.redis_client is None}")
-    return await chat_service.get_all_chats()
+async def get_chats(
+    chat_service: ChatService = Depends(get_chat_service),
+    current_user=Depends(get_current_user),
+):
+    """Get chat sessions for the authenticated user."""
+    return await chat_service.get_all_chats(str(current_user.id))
 
 @router.get("/chats/{session_id}")
-async def get_chat_history(session_id: str, chat_service: ChatService = Depends(get_chat_service)):
+async def get_chat_history(
+    session_id: str,
+    chat_service: ChatService = Depends(get_chat_service),
+    current_user=Depends(get_current_user),
+):
     """Get chat history for a specific session."""
-    history = await chat_service.get_chat_history(session_id)
+    history = await chat_service.get_chat_history(session_id, str(current_user.id))
     return {"history": history}
 
 @router.delete("/sessions/{session_id}/{session_type}", status_code=204)
 async def delete_session(
     session_id: str, 
     session_type: str, 
-    chat_service: ChatService = Depends(get_chat_service)
+    chat_service: ChatService = Depends(get_chat_service),
+    current_user=Depends(get_current_user),
 ):
     """Delete a session by ID and type."""
-    success = await chat_service.delete_session(session_id, session_type)
+    from brain_service.services.session_service import SessionService  # lazy import to avoid circular
+
+    session_service = SessionService(
+        chat_service.redis_client,
+        chat_service.user_service,  # type: ignore[arg-type]
+    )
+
+    success = await session_service.delete_session(session_id, str(current_user.id))
     if not success:
         raise HTTPException(status_code=404, detail=f"{session_type.title()} session not found.")
     return Response(status_code=status.HTTP_204_NO_CONTENT)
@@ -86,18 +113,20 @@ async def delete_session(
 
 @router.get("/sessions")
 async def get_all_sessions_handler(
-    session_service: SessionService = Depends(get_session_service)
+    session_service: SessionService = Depends(get_session_service),
+    current_user=Depends(get_current_user),
 ):
     """Get all chat and study sessions using SessionService."""
-    return await session_service.get_all_sessions()
+    return await session_service.get_all_sessions(str(current_user.id))
 
 @router.get("/sessions/{session_id}")
 async def get_session_handler(
     session_id: str,
-    session_service: SessionService = Depends(get_session_service)
+    session_service: SessionService = Depends(get_session_service),
+    current_user=Depends(get_current_user),
 ):
     """Get a specific session by ID using SessionService."""
-    session = await session_service.get_session(session_id)
+    session = await session_service.get_session(str(current_user.id), session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")
     return session
@@ -196,7 +225,8 @@ async def get_daily_calendar(
 async def create_daily_session_lazy(
     session_id: str,
     tz: Optional[str] = Query(None, description="IANA timezone, e.g. Europe/Amsterdam"),
-    session_service: SessionService = Depends(get_session_service)
+    session_service: SessionService = Depends(get_session_service),
+    current_user=Depends(get_current_user),
 ):
     """Lazy create daily session when first accessed."""
     from datetime import datetime
@@ -204,7 +234,7 @@ async def create_daily_session_lazy(
     import re
     
     # Check if already exists
-    existing_session = await session_service.get_session(session_id)
+    existing_session = await session_service.get_session(str(current_user.id), session_id)
     if existing_session:
         return {"session_id": session_id, "message": "Daily session already exists", "created": False}
     
@@ -265,7 +295,7 @@ async def create_daily_session_lazy(
         }
 
         # Save session
-        success = await session_service.save_session(session_id, session_data, "daily")
+        success = await session_service.save_session(str(current_user.id), session_id, session_data, "daily")
         
         if success:
             return {
@@ -288,12 +318,13 @@ async def create_daily_session_lazy(
 async def mark_daily_complete(
     session_id: str,
     completed: bool,
-    session_service: SessionService = Depends(get_session_service)
+    session_service: SessionService = Depends(get_session_service),
+    current_user=Depends(get_current_user),
 ):
     """Mark daily session as completed or uncompleted."""
     
     # Get existing session
-    session = await session_service.get_session(session_id)
+    session = await session_service.get_session(str(current_user.id), session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Daily session not found")
     
@@ -301,7 +332,7 @@ async def mark_daily_complete(
     session["completed"] = completed
     
     # Save updated session
-    success = await session_service.save_session(session_id, session, "daily")
+    success = await session_service.save_session(str(current_user.id), session_id, session, "daily")
     
     if success:
         return {"session_id": session_id, "completed": completed, "message": "Status updated"}
@@ -312,7 +343,8 @@ async def mark_daily_complete(
 async def get_daily_segments(
     session_id: str,
     session_service: SessionService = Depends(get_session_service),
-    redis_client = Depends(get_redis_client)
+    redis_client = Depends(get_redis_client),
+    current_user=Depends(get_current_user),
 ):
     """Get all loaded segments for a daily session."""
     

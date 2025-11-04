@@ -1,0 +1,86 @@
+{
+  "title": "Mishnah Parah",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "parah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "parah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "parah"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      96
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Parah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Parah"
+      },
+      {
+        "lang": "en",
+        "text": "M. Parah"
+      },
+      {
+        "lang": "he",
+        "text": "פרה"
+      },
+      {
+        "lang": "en",
+        "text": "Par."
+      },
+      {
+        "lang": "en",
+        "text": "Parah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Par."
+      },
+      {
+        "text": "משנה פרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Parah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Parah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.429Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Parah"
+}

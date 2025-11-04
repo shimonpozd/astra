@@ -1,0 +1,473 @@
+{
+  "title": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Tosafot Rabbi Akiva Eiger",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-rabbi-akiva-eiger1",
+          "makkot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tosafot-rabbi-akiva-eiger1",
+          "mishnah",
+          "makkot"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      11,
+      17
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות רבי עקיבא איגר על משנה מכות"
+      },
+      {
+        "text": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Letter": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-1"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 1"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות א"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:1:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-2"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 2"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:1:3",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-3"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 3"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ג"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:1:4",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-4"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 4"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ד"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-5"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 5"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-6"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 6"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:6:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-7"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 7"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ז"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:9:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-8"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 8"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ח"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 1:9:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-9"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 9"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות ט"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 2:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-10"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 10"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות י"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 2:3:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-11"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 11"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות יא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 2:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-12"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 12"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות יב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 3:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-13"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 13"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות יג"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 3:2:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-14"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 14"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות יד"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 3:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-15"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 15"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות טו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 3:9:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-16"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 16"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות טז"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Makkot 3:9:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-17"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Letter 17"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אות יז"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:03.778Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Rabbi%20Akiva%20Eiger%20on%20Mishnah%20Makkot"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Tosefta Bekhorot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "bekhorot"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      43
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Bekhorot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Bechorot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Bechoros"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Bechoros"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Bechorot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Bechorot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Bekh."
+      },
+      {
+        "text": "תוספתא בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Bekhorot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Bekhorot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.735Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Bekhorot"
+}

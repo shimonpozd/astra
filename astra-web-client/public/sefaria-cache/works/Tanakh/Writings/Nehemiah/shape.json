@@ -1,0 +1,24 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    11,
+    20,
+    38,
+    17,
+    19,
+    19,
+    72,
+    18,
+    37,
+    40,
+    36,
+    47,
+    31
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.570Z",
+  "source": "http://localhost:8000/api/shape/Nehemiah"
+}

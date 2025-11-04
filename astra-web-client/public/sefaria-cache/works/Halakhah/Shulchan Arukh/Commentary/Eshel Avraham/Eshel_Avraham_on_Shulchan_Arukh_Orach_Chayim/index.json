@@ -1,0 +1,577 @@
+{
+  "title": "Eshel Avraham on Shulchan Arukh, Orach Chayim",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Eshel Avraham"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Seif"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "eshel-avraham",
+          "orach-chayim"
+        ]
+      }
+    ],
+    "lengths": [
+      697,
+      479
+    ],
+    "titles": [
+      {
+        "text": "אשל אברהם על שולחן ערוך אורח חיים",
+        "primary": true,
+        "lang": "he"
+      },
+      {
+        "text": "Eshel Avraham on Shulchan Arukh, Orach Chayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Eshel Avraham on Shulchan Arukh, Orach Chayim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Topic": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 1-7",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws Upon Awakening in the Morning",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות הנהגת האדם בבוקר",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 8-24",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Tzitzit",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ציצית",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 25-46",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Tefillin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות תפילין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 47-57",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Morning Blessings",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ברכות השחר ושאר ברכות",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 58-88",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Reciting Shema",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות קריאת שמע",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 89-127",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Prayer",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות תפילה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 128-135",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Priestly Blessing",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות נשיאת כפים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 136-149",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Reading the Torah",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות קריאת התורה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 150-156",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Synagogue",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות בית הכנסת",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 157-165",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Washing One's Hands for a Meal",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות נטילת ידים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 166-201",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Meal",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות סעודה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 202-214",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Blessings on Fruit",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ברכת הפירות",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 215-241",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Other Blessings",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות שאר ברכות",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 242-344",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Shabbat",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות שבת",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 345-395",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Eruvin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ערובין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 396-407",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Techumin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות תחומין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 408-416",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Eruv Techumin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות עירובי תחומין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 417-428",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Rosh Chodesh",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ראש חודש",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 429-494",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Passover",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות פסח",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 495-529",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Festivals",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות יום טוב",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 530-548",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Chol HaMoed",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות חול המועד",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 549-561",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Ninth of Av",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות תשעה באב",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 562-580",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Fast Days",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות תענית",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 581-603",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Rosh Hashanah",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות ראש השנה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 604-624",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Yom Kippur",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות יום הכיפורים",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 625-644",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Sukkot",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות סוכה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 645-669",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of the Four Species",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות לולב",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 670-685",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Chanukah",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות חנוכה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Eshel Avraham on Shulchan Arukh, Orach Chayim 686-697",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Laws of Purim",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "הלכות מגילה",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:33.421Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Eshel%20Avraham%20on%20Shulchan%20Arukh%2C%20Orach%20Chayim"
+}

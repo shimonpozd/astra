@@ -1,0 +1,53 @@
+{
+  "title": "German Commentary, Introduction to Seder Nezikin",
+  "categories": [
+    "Mishnah",
+    "Modern Commentary on Mishnah",
+    "German Commentary",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "german-commentary-introduction-to-seder-nezikin"
+        ]
+      }
+    ],
+    "lengths": [
+      113
+    ],
+    "titles": [
+      {
+        "text": "פירוש גרמני, הקדמה לסדר נזיקין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "פירוש גרמני על משנה, הקדמה לסדר נזיקין",
+        "lang": "he"
+      },
+      {
+        "text": "פירוש גרמני על המשנה, הקדמה לסדר נזיקין",
+        "lang": "he"
+      },
+      {
+        "text": "German Commentary, Introduction to Seder Nezikin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "German Commentary, Introduction to Seder Nezikin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:04.510Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/German%20Commentary%2C%20Introduction%20to%20Seder%20Nezikin"
+}

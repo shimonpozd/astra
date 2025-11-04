@@ -1,0 +1,245 @@
+{
+  "title": "Steinsaltz on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      4304
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Bava Kamma"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 2a:1-17a:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "ארבעה אבות",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 17a:13-27a:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כיצד רגל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 27a:13-36a:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המניח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 36a:9-46a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שור שנגח ד' וה'",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 46a:7-55a:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שור שנגח את הפרה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 55b:1-62b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 6",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הכונס",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 62b:7-83a:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 7",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מרובה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 83b:1-93a:20",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 8",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "החובל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 93b:1-111a:21",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 9",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הגוזל עצים",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Bava Kamma 111b:1-119b:21",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 10",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הגוזל בתרא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.996Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Bava%20Kamma"
+}

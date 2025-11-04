@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Sacrificial Procedure",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "sacrificial-procedure"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      144,
+      193
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Sacrificial Procedure",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Sacrificial Procedure"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.715Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Sacrificial%20Procedure"
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Benayahu on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Benayahu"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "lengths": [
+      80,
+      8
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "בניהו על ביצה",
+        "lang": "he"
+      },
+      {
+        "text": "Benayahu on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Benayahu on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.141Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Benayahu%20on%20Beitzah"
+}

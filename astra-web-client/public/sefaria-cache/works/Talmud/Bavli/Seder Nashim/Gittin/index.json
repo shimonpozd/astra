@@ -1,0 +1,562 @@
+{
+  "title": "Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "gittin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      180,
+      2992
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Tractate Gittin",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Gittin",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Gittin",
+        "lang": "en"
+      },
+      {
+        "text": "Git.",
+        "lang": "en"
+      },
+      {
+        "text": "Gitt.",
+        "lang": "en"
+      },
+      {
+        "text": "Giṭṭin",
+        "lang": "en"
+      },
+      {
+        "text": "Gitin",
+        "lang": "en"
+      },
+      {
+        "text": "BT Gittin",
+        "lang": "en"
+      },
+      {
+        "text": "גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gittin",
+    "checkFirst": {
+      "en": "Mishnah Gittin",
+      "he": "משנה גיטין"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 2a:1-15a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-112"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-112"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "text": "Chapter 1; HaMevi Kamma",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המביא קמא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 15a:8-24a:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-211"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-211"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "text": "Chapter 2; HaMevi Batra",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המביא בתרא",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 24a:16-32a:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-311"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-311"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "text": "Chapter 3; Kol HaGet",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "כל הגט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 32a:3-48b:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-410"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-410"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "text": "Chapter 4; HaSholeach",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "השולח",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 48b:6-62a:17",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-510"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-510"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "text": "Chapter 5; HaNizzakin",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הניזקין",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 62b:1-67b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-68"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-68"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "text": "Chapter 6; HaOmer Hitkabbel",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "האומר התקבל",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 67b:9-77a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-78"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-78"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "text": "Chapter 7; Mi SheAchazo",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מי שאחזו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 77a:10-82a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-88"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-88"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "text": "Chapter 8; HaZorek Get",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הזורק גט",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Gittin 82a:7-90b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-98"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-98"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "text": "Chapter 9; HaMegaresh",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המגרש",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.116Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gittin"
+}

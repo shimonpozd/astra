@@ -1,0 +1,56 @@
+{
+  "title": "Yachin on Pirkei Avot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "pirkei-avot"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      851,
+      852
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין אבות",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Pirkei Avot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Pirkei Avot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:24.828Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Pirkei%20Avot"
+}

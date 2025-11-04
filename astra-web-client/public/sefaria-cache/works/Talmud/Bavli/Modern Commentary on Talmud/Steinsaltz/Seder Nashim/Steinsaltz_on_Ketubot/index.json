@@ -1,0 +1,299 @@
+{
+  "title": "Steinsaltz on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Steinsaltz",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      3025
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Ketubot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 2a:1-15b:11",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 1",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "בתולה נשאת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 15b:12-28b:14",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 2",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "האשה שנתארמלה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 29a:1-41b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 3",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "אלו נערות",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 41b:11-54b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 4",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "נערה שנתפתתה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 54b:6-65b:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 5",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "אף על פי",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 65b:13-70a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 6",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מציאת האשה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 70a:7-77b:14",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 7",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "המדיר",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 78a:1-82b:14",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 8",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "האשה שנפלו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 83a:1-90a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 9",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הכותב לאשתו",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 90a:8-95b:14",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 10",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "מי שהיה נשוי",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 95b:15-101b:12",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 11",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "אלמנה ניזונת",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 101b:13-104b:18",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 12",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "הנושא את האשה",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Steinsaltz on Ketubot 104b:19-112b:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "text": "Chapter 13",
+              "lang": "en",
+              "primary": true
+            },
+            {
+              "text": "שני דייני גזירות",
+              "lang": "he",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:13.947Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Steinsaltz%20on%20Ketubot"
+}

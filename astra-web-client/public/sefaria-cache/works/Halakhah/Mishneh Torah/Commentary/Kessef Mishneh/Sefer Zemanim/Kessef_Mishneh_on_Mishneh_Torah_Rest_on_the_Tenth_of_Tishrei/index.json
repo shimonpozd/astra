@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Rest on the Tenth of Tishrei",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות שביתת עשור",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Rest on the Tenth of Tishrei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Rest on the Tenth of Tishrei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.756Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Rest%20on%20the%20Tenth%20of%20Tishrei"
+}

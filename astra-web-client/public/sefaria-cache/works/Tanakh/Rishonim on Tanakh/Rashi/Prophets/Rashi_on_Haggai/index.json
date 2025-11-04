@@ -1,0 +1,77 @@
+{
+  "title": "Rashi on Haggai",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "haggai"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      25,
+      49
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Chaggai"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Hag"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Hag."
+      },
+      {
+        "text": "רש״י על חגי",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על חגי",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על חגי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Haggai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Haggai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.314Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Haggai"
+}

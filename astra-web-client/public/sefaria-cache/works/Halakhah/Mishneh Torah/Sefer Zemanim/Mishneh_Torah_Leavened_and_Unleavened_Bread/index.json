@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Leavened and Unleavened Bread",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "leavened-and-unleavened-bread"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      158
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Leavened and Unleavened Bread",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Leavened and Unleavened Bread",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Leavened and Unleavened Bread",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Chometz U'Matzah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות חמץ",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות חמץ ומצה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Leavened and Unleavened Bread",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Leavened and Unleavened Bread"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.940Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Leavened%20and%20Unleavened%20Bread"
+}

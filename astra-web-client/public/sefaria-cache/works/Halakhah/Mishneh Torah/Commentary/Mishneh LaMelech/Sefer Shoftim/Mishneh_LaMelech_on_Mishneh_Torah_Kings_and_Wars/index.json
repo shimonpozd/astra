@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Kings and Wars",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "kings-and-wars"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "kings-and-wars"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      17,
+      21
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "משנה למלך על משנה תורה, הלכות מלכים ומלחמות"
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Kings and Wars",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Kings and Wars"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.765Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Kings%20and%20Wars"
+}

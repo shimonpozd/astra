@@ -1,0 +1,60 @@
+{
+  "title": "Maggid Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maggid Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      55,
+      108
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגיד משנה על משנה תורה, הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "Maggid Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maggid Mishneh on Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.026Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maggid%20Mishneh%20on%20Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

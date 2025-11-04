@@ -1,0 +1,54 @@
+{
+  "title": "Haggahot Ya'avetz on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Haggahot Ya'avetz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "haggahot-yaavetz",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      178
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "הגהות יעב\"ץ על עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Haggahot Ya'avetz on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Haggahot Ya'avetz on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:23:01.785Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Haggahot%20Ya'avetz%20on%20Eruvin"
+}

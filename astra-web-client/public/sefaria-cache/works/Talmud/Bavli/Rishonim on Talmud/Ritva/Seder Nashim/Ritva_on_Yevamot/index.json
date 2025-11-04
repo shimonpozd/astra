@@ -1,0 +1,353 @@
+{
+  "title": "Ritva on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ritva",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ritva",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      1530
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ריטב\"א על יבמות",
+        "lang": "he"
+      },
+      {
+        "text": "Ritva on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ritva on Yevamot"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.2a.1-16b.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "חמש עשרה נשים",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.17a.1-26a.5",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "כיצד אשת אחיו",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 2",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.26b.1-35a.6",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "ארבעה אחין",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.35b.1-50a.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "החולץ ליבמתו",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 4",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.50a.3-53b.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "רבן גמליאל",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 5",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.53b.3-66a.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "הבא על יבמתו",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.66a.3-70a.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "אלמנה לכהן גדול",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.70a.3-83b.8",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "הערל",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 8",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.84a.1-87b.2",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "יש מותרות",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 9",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.87b.3-96b.9",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "האשה רבה",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 10",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.96b.10-101a.3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "נושאין על האנוסה",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 11",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.101a.4-106b.4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "מצות חליצה",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 12",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.106b.5-112a.11",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "בית שמאי",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 13",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.112b.1-114b.4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "חרש שנשא",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 14",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.114b.5-118b.3",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "האשה שלום",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 15",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Ritva on Yevamot.119a.1-122b.4",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "האשה בתרא",
+              "lang": "he"
+            },
+            {
+              "primary": true,
+              "text": "Chapter 16",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:09.036Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ritva%20on%20Yevamot"
+}

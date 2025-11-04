@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    19,
+    14,
+    19,
+    15,
+    18,
+    16,
+    23,
+    14,
+    12,
+    18
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.456Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Terumot"
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Mikvaot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "mikvaot"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      53
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Mikvaos"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Mikvaos"
+      },
+      {
+        "lang": "en",
+        "text": "T. Mikvaot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Mikvaot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Mikv."
+      },
+      {
+        "text": "תוספתא מקוואות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Mikvaot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Mikvaot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.836Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Mikvaot"
+}

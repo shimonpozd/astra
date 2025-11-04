@@ -1,0 +1,60 @@
+{
+  "title": "Lev Shalem on Mishneh Torah, Woman Suspected of Infidelity",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lev Shalem",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "woman-suspected-of-infidelity"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "לב שלם על משנה תורה, הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "Lev Shalem on Mishneh Torah, Woman Suspected of Infidelity",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lev Shalem on Mishneh Torah, Woman Suspected of Infidelity"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.059Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Woman%20Suspected%20of%20Infidelity"
+}

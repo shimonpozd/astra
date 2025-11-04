@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Nazariteship",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "nazariteship"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      184
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Nezirut"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Nezirut"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Nazariteship"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Nezirut"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Nazariteship"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Nazariteship"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Nezirut"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות נזירות"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Nezirut"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Nezirut"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' נזירות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' נזירות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות נזירות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' נזירות"
+      },
+      {
+        "text": "רמב״ם, הלכות נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' נזירות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות נזירות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Nazariteship",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Nazariteship"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.071Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Nazariteship"
+}

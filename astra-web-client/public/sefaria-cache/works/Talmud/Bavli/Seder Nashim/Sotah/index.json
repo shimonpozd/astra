@@ -1,0 +1,562 @@
+{
+  "title": "Sotah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      1635
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tractate Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Sota"
+      },
+      {
+        "lang": "en",
+        "text": "Sot."
+      },
+      {
+        "lang": "en",
+        "text": "Soṭah"
+      },
+      {
+        "lang": "en",
+        "text": "T.B. Soṭah"
+      },
+      {
+        "text": "BT Sotah",
+        "lang": "en"
+      },
+      {
+        "text": "סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sotah",
+    "checkFirst": {
+      "he": "משנה סוטה",
+      "en": "Mishnah Sotah"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 2a:1-14a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-137"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-137"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 1; HaMekannei"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "המקנא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 14a:12-19a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-230"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-230"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 2; Hayah Mevi "
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "היה מביא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 19a:7-23b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-329"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-329"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 3; Hayah Notel"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "היה נוטל"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 23b:14-27b:2",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-425"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-425"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 4; Arusah"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "ארוסה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 27b:3-31a:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-522"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-522"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 5; KeShem SheHamayim"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "כשם שהמים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 31a:14-32a:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-620"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-620"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 6; Mi SheKinnei"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "מי שקינא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 32a:5-42a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-718"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-718"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 7; Ellu Ne'emarin"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "אלו נאמרין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 42a:8-44b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-818"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-818"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 8; Mashuach Milchamah"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "משוח מלחמה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sotah 44b:10-49b:20",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-917"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-917"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "lang": "en",
+              "primary": true,
+              "text": "Chapter 9; Eglah Arufah"
+            },
+            {
+              "lang": "he",
+              "primary": true,
+              "text": "עגלה ערופה"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.111Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sotah"
+}

@@ -1,0 +1,84 @@
+{
+  "title": "Obadiah",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "obadiah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "obadiah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      21
+    ],
+    "titles": [
+      {
+        "text": "Ovadiah",
+        "lang": "en"
+      },
+      {
+        "text": "Ob.",
+        "lang": "en"
+      },
+      {
+        "text": "Oba.",
+        "lang": "en"
+      },
+      {
+        "text": "Ovadyah",
+        "lang": "en"
+      },
+      {
+        "text": "Ovadia",
+        "lang": "en"
+      },
+      {
+        "text": "Ovadya",
+        "lang": "en"
+      },
+      {
+        "text": "Abdias",
+        "lang": "en"
+      },
+      {
+        "text": "Obad",
+        "lang": "en"
+      },
+      {
+        "text": "עובדיה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Obadiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Obadiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.359Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Obadiah"
+}

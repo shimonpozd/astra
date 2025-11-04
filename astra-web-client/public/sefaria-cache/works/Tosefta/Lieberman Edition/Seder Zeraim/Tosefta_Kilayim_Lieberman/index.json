@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Kilayim (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kilayim"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      92
+    ],
+    "titles": [
+      {
+        "text": "תוספתא כלאים (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kilayim (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kilayim (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.598Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kilayim%20(Lieberman)"
+}

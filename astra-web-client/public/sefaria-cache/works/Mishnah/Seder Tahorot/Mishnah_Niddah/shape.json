@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    7,
+    7,
+    7,
+    7,
+    9,
+    14,
+    5,
+    4,
+    11,
+    8
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.477Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Niddah"
+}

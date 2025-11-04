@@ -1,0 +1,178 @@
+{
+  "title": "Mishneh Torah, Prayer and the Priestly Blessing",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "prayer-and-the-priestly-blessing"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "prayer-and-the-priestly-blessing"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "prayer-and-the-priestly-blessing"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "prayer-and-the-priestly-blessing"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "prayer-and-the-priestly-blessing"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      240
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Laws of Prayer and the Priestly Blessing",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Prayer and the Priestly Blessing",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Prayer and the Priestly Blessing",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Tefillah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Tefillah",
+        "lang": "en"
+      },
+      {
+        "text": "Hilchot Tefilah and Birkat Kohanim",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תפילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תפילה וברכת כהנים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תפילה וברכת כהנים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Prayer and the Priestly Blessing",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Prayer and the Priestly Blessing"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.862Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Prayer%20and%20the%20Priestly%20Blessing"
+}

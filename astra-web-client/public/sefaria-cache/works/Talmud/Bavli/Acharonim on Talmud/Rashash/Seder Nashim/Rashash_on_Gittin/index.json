@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      180,
+      908
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רש\"ש על גיטין",
+        "primary": true
+      },
+      {
+        "text": "Rashash on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.754Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Gittin"
+}

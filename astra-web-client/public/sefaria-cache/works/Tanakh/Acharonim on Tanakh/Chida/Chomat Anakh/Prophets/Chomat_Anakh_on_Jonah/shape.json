@@ -1,0 +1,44 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1,
+      1,
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:41:58.928Z",
+  "source": "http://localhost:8000/api/shape/Chomat%20Anakh%20on%20Jonah"
+}

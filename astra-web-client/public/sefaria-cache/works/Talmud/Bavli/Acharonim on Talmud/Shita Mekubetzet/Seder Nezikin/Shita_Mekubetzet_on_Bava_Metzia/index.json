@@ -1,0 +1,63 @@
+{
+  "title": "Shita Mekubetzet on Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Shita Mekubetzet",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shita-mekubetzet",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      3788
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shitah Mekubeẓet, Baba Meẓi‘a",
+        "lang": "en"
+      },
+      {
+        "primary": true,
+        "text": "שיטה מקובצת על בבא מציעא",
+        "lang": "he"
+      },
+      {
+        "text": "Shita Mekubetzet on Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shita Mekubetzet on Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.641Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shita%20Mekubetzet%20on%20Bava%20Metzia"
+}

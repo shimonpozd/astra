@@ -1,0 +1,86 @@
+{
+  "title": "Mishnah Kilayim",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "kilayim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kilayim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kilayim"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      77
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "M Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Kilayim"
+      },
+      {
+        "lang": "he",
+        "text": "כלאים"
+      },
+      {
+        "lang": "en",
+        "text": "Kil."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Kil."
+      },
+      {
+        "text": "משנה כלאים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Kilayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Kilayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.046Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Kilayim"
+}

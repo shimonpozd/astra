@@ -1,0 +1,29 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    11,
+    9,
+    6,
+    15,
+    10,
+    7,
+    10,
+    12,
+    17,
+    14,
+    13,
+    12,
+    19,
+    16,
+    14,
+    14,
+    17,
+    17
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.513Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Shabbat"
+}

@@ -1,0 +1,644 @@
+{
+  "title": "Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "nedarim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      1509
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tractate Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Ned."
+      },
+      {
+        "lang": "en",
+        "text": "N’darim"
+      },
+      {
+        "text": "BT Nedarim",
+        "lang": "en"
+      },
+      {
+        "text": "נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nedarim",
+    "checkFirst": {
+      "en": "Mishnah Nedarim",
+      "he": "משנה נדרים"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 2a:1-13b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-127"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-127"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Kol Kinnuyei",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל כנויי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 13b:7-20b:13",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-222"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-222"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; VeEllu Muttarin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ואלו מותרין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 20b:14-32b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-322"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-322"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Arba'ah Nedarim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ארבעה נדרים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 32b:10-45a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-418"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-418"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Ein Bein HaMuddar",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אין בין המודר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 45b:1-48b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-516"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-516"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; HaShuttafin SheNadru",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "השותפין שנדרו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 49a:1-53b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-614"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-614"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; HaNoder Min HaMevushal",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הנודר מן המבושל",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 54a:1-60a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-712"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-712"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; HaNoder Min HaYarak",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הנודר מן הירק",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 60a:4-63b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-812"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-812"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8; Konam Yayin",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "קונם יין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 64a:1-66b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-912"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-912"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9; Rabbi Eliezer",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "רבי אליעזר",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 66b:10-79a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-107"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-107"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10; Na'arah HaMeorasah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "נערה המאורסה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Nedarim 79a:11-91b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1111"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1111"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 11,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 11; VeEllu Nedarim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ואלו נדרים",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.105Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Nedarim"
+}

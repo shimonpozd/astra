@@ -1,0 +1,59 @@
+{
+  "title": "Maharam on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      106
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מהר\"ם על כתובות",
+        "lang": "he"
+      },
+      {
+        "text": "Maharam on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.821Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20on%20Ketubot"
+}

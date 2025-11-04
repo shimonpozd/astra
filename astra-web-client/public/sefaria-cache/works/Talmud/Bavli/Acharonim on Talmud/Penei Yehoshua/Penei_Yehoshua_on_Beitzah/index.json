@@ -1,0 +1,50 @@
+{
+  "title": "Penei Yehoshua on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Penei Yehoshua"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      80,
+      444
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "פני יהושע על ביצה",
+        "lang": "he"
+      },
+      {
+        "text": "Penei Yehoshua on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Penei Yehoshua on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.271Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Penei%20Yehoshua%20on%20Beitzah"
+}

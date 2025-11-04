@@ -1,0 +1,42 @@
+{
+  "title": "Asarah Perakim LeRamchal",
+  "categories": [
+    "Kabbalah",
+    "Ramchal"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "lengths": [
+      10
+    ],
+    "titles": [
+      {
+        "text": "Assarah Perakim L'Ramchal",
+        "lang": "en"
+      },
+      {
+        "text": "עשרה פרקים להרמח''ל",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Asarah Perakim LeRamchal",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Asarah Perakim LeRamchal"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:34.501Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Asarah%20Perakim%20LeRamchal"
+}

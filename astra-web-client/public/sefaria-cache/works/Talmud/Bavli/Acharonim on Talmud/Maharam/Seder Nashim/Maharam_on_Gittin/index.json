@@ -1,0 +1,59 @@
+{
+  "title": "Maharam on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      180,
+      221
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מהר\"ם על גיטין",
+        "lang": "he"
+      },
+      {
+        "text": "Maharam on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.826Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20on%20Gittin"
+}

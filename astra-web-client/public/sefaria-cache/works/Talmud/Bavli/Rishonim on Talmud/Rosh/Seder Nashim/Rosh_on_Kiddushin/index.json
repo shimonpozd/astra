@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      164,
+      139,
+      181
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.239Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Kiddushin"
+}

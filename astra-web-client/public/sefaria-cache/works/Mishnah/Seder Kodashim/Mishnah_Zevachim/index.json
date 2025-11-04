@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Zevachim",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "zevachim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "zevachim"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      101
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Zevachim"
+      },
+      {
+        "lang": "en",
+        "text": "M. Zevachim"
+      },
+      {
+        "lang": "en",
+        "text": "M Zevachim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Zeb."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Z’baḥim"
+      },
+      {
+        "text": "משנה זבחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Zevachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Zevachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.326Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Zevachim"
+}

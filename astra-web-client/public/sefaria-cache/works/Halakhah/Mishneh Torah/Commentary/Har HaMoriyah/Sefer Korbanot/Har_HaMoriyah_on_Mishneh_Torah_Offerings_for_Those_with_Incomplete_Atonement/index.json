@@ -1,0 +1,60 @@
+{
+  "title": "Har HaMoriyah on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Har HaMoriyah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      48,
+      153
+    ],
+    "titles": [
+      {
+        "text": "הר המוריה על משנה תורה, הלכות מחוסרי כפרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Har HaMoriyah on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Har HaMoriyah on Mishneh Torah, Offerings for Those with Incomplete Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.899Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Har%20HaMoriyah%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Those%20with%20Incomplete%20Atonement"
+}

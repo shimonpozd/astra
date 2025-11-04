@@ -1,0 +1,60 @@
+{
+  "title": "Lev Shalem on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lev Shalem",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      11,
+      11
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "לב שלם על משנה תורה, הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "Lev Shalem on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lev Shalem on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.907Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

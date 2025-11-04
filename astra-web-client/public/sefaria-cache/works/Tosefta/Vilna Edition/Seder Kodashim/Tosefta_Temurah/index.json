@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Temurah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      29
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Tmurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Tmurah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Tem."
+      },
+      {
+        "text": "תוספתא תמורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Temurah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.754Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Temurah"
+}

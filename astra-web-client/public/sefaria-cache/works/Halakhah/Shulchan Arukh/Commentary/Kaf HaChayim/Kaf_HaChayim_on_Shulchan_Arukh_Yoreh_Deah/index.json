@@ -1,0 +1,65 @@
+{
+  "title": "Kaf HaChayim on Shulchan Arukh, Yoreh De'ah",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Kaf HaChayim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Siman",
+      "SeifKatan",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif Katan",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kaf-hachayim",
+          "yoreh-deah"
+        ]
+      }
+    ],
+    "lengths": [
+      403,
+      8348,
+      8648
+    ],
+    "toc_zoom": 2,
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כה\"ח יו\"ד"
+      },
+      {
+        "text": "כה״ח יו״ד",
+        "lang": "he"
+      },
+      {
+        "text": "כה”ח יו”ד",
+        "lang": "he"
+      },
+      {
+        "text": "כף החיים על שולחן ערוך יורה דעה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kaf HaChayim on Shulchan Arukh, Yoreh De'ah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kaf HaChayim on Shulchan Arukh, Yoreh De'ah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.448Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kaf%20HaChayim%20on%20Shulchan%20Arukh%2C%20Yoreh%20De'ah"
+}

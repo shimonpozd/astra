@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Nazir",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "nazir"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      50
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Nazir"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Nazir"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Naz."
+      },
+      {
+        "text": "תוספתא נזיר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Nazir",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Nazir"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.611Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Nazir"
+}

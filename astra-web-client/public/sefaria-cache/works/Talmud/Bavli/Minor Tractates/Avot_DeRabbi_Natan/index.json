@@ -1,0 +1,105 @@
+{
+  "title": "Avot DeRabbi Natan",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "avot-drabbi-natan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "avot-drabbi-natan"
+        ]
+      }
+    ],
+    "lengths": [
+      41,
+      253
+    ],
+    "titles": [
+      {
+        "text": "Ab. d’R. N.",
+        "lang": "en"
+      },
+      {
+        "text": "Aboth d’Rabbi Nathan",
+        "lang": "en"
+      },
+      {
+        "text": "Aboth d. R. Nathan",
+        "lang": "en"
+      },
+      {
+        "text": "Aboth de R. Nathan",
+        "lang": "en"
+      },
+      {
+        "text": "Aboth d. R. Nathan (<i>a</i>)",
+        "lang": "en"
+      },
+      {
+        "text": "Avot D’Rebbe Natan",
+        "lang": "en"
+      },
+      {
+        "text": "Avos d'Rabbi Natan",
+        "lang": "en"
+      },
+      {
+        "text": "Avos d'rebbe Natan",
+        "lang": "en"
+      },
+      {
+        "text": "ARN",
+        "lang": "en"
+      },
+      {
+        "text": "Avot D'Rabbi Natan",
+        "lang": "en"
+      },
+      {
+        "text": "אדר\"נ",
+        "lang": "he"
+      },
+      {
+        "text": "אדר״נ",
+        "lang": "he"
+      },
+      {
+        "text": "אדר”נ",
+        "lang": "he"
+      },
+      {
+        "text": "אבות דרבי נתן",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Avot DeRabbi Natan",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Avot DeRabbi Natan"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.279Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Avot%20DeRabbi%20Natan"
+}

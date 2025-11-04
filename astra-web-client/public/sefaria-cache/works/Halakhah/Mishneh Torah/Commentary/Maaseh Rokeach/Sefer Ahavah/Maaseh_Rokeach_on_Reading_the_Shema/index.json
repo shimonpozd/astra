@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Reading the Shema",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "reading-the-shema"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "reading-the-shema"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      57,
+      112
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות קריאת שמע",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Reading the Shema",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Reading the Shema"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.253Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Reading%20the%20Shema"
+}

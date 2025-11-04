@@ -1,0 +1,60 @@
+{
+  "title": "Even Ha'azel on Mishneh Torah, Sales",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Even Ha'azel",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "even-haazel",
+          "hilchot",
+          "sales"
+        ]
+      },
+      {
+        "term_slugs": [
+          "even-haazel",
+          "sales"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      131,
+      134
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "אבן האזל על משנה תורה, הלכות מכירה"
+      },
+      {
+        "text": "Even Ha'azel on Mishneh Torah, Sales",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Even Ha'azel on Mishneh Torah, Sales"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.651Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Even%20Ha'azel%20on%20Mishneh%20Torah%2C%20Sales"
+}

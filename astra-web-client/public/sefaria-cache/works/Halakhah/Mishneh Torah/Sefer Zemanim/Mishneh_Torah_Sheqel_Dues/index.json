@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Sheqel Dues",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sheqel-dues"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sheqel-dues"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      47
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Sheqel Dues"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sheqel Dues"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Sheqel Dues"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שקלים"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shekalim"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שקלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שקלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שקלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שקלים"
+      },
+      {
+        "text": "רמב״ם, הלכות שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שקלים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שקלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sheqel Dues",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sheqel Dues"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.951Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sheqel%20Dues"
+}

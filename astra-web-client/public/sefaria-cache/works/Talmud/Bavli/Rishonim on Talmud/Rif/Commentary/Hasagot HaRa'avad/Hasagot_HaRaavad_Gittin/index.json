@@ -1,0 +1,51 @@
+{
+  "title": "Hasagot HaRa'avad Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hasagot HaRa'avad"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      101,
+      66
+    ],
+    "titles": [
+      {
+        "text": "השגות הראב\"ד גיטין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hasagot HaRa'avad Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:28.384Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hasagot%20HaRa'avad%20Gittin"
+}

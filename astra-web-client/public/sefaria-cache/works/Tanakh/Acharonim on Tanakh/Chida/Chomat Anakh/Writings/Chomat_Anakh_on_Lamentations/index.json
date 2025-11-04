@@ -1,0 +1,63 @@
+{
+  "title": "Chomat Anakh on Lamentations",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "lamentations"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      15,
+      15
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על איכה",
+        "lang": "he"
+      },
+      {
+        "text": "חומת אנך על מגלת איכה",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on Lamentations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on Lamentations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.004Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20Lamentations"
+}

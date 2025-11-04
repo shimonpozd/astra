@@ -4,6 +4,7 @@ import UnifiedMessageRenderer from '../UnifiedMessageRenderer';
 import { AudioMessageRenderer } from '../AudioMessageRenderer';
 import type { ChatMessage, AudioMessage } from '../../types/text';
 import { safeScrollToBottom } from '../../utils/scrollUtils';
+import { debugWarn } from '../../utils/debugLogger';
 
 // Support both legacy API messages and the newer ChatMessage shape
 type AnyMessage = (ApiMessage | ChatMessage | (ApiMessage & Partial<ChatMessage>)) & {
@@ -52,7 +53,7 @@ const normalizeMessage = (message: AnyMessage): UiMessage => {
     if (['text.v1', 'doc.v1', 'thought.v1', 'audio.v1'].includes(ct)) {
       content_type = ct as UiMessage['content_type'];
     } else if (process.env.NODE_ENV === 'development') {
-      console.warn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
+      debugWarn(`Unknown content_type '${ct}', falling back to 'text.v1'`);
     }
   }
 

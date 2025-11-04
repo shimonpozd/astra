@@ -1,0 +1,64 @@
+{
+  "title": "Rabbeinu Yonah on Pirkei Avot",
+  "categories": [
+    "Mishnah",
+    "Rishonim on Mishnah",
+    "Rabbeinu Yonah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-yonah",
+          "pirkei-avot"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      97,
+      437
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רבינו יונה על פרקי אבות",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "רבנו יונה על אבות"
+      },
+      {
+        "lang": "he",
+        "text": "פירוש רבינו יונה על מסכת אבות"
+      },
+      {
+        "text": "Rabbeinu Yonah on Pirkei Avot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Yonah on Pirkei Avot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:16.413Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rabbeinu%20Yonah%20on%20Pirkei%20Avot"
+}

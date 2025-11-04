@@ -1,0 +1,55 @@
+{
+  "title": "Maharam Schiff on Gittin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam Schiff",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      180,
+      1181
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מהר\"ם שיף על גיטין",
+        "primary": true
+      },
+      {
+        "text": "Maharam Shif on Gittin",
+        "lang": "en"
+      },
+      {
+        "text": "Maharam Schiff on Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam Schiff on Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.910Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20Schiff%20on%20Gittin"
+}

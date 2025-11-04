@@ -1,0 +1,55 @@
+{
+  "title": "Sefer HaZekhut on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Sefer HaZekhut"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer-hazekhut",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      130,
+      18
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ספר הזכות על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sefer HaZekhut on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sefer HaZekhut on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.254Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Sefer%20HaZekhut%20on%20Ketubot"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      862
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רש\"ש על בבא מציעא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashash on Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.813Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Bava%20Metzia"
+}

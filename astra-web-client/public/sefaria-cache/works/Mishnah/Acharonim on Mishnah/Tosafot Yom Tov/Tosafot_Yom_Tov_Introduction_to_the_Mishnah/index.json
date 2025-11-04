@@ -1,0 +1,54 @@
+{
+  "title": "Tosafot Yom Tov Introduction to the Mishnah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Tosafot Yom Tov"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-yom-tov",
+          "introduction",
+          "mishnah"
+        ]
+      }
+    ],
+    "lengths": [
+      31
+    ],
+    "titles": [
+      {
+        "text": "Introduction of the Tosafot Yom Tov Commentary to the Mishna",
+        "lang": "en"
+      },
+      {
+        "text": "הקדמת תוספות יום טוב למשנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "הקדמת המחבר תוספות יום טוב",
+        "lang": "he"
+      },
+      {
+        "text": "Tosafot Yom Tov Introduction to the Mishnah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Yom Tov Introduction to the Mishnah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:59.427Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Tosafot%20Yom%20Tov%20Introduction%20to%20the%20Mishnah"
+}

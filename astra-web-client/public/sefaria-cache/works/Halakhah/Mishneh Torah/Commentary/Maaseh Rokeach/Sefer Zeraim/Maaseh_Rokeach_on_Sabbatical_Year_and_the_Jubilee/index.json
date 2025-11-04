@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Sabbatical Year and the Jubilee",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      91,
+      113
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Sabbatical Year and the Jubilee",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Sabbatical Year and the Jubilee"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.644Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Sabbatical%20Year%20and%20the%20Jubilee"
+}

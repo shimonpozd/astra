@@ -1,0 +1,114 @@
+{
+  "title": "Mishnah Oktzin",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "oktzin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "oktzin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "oktzin"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      28
+    ],
+    "titles": [
+      {
+        "text": "M. Oktzin",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Oktzin",
+        "lang": "en"
+      },
+      {
+        "text": "M Oktzin",
+        "lang": "en"
+      },
+      {
+        "text": "Ukzim",
+        "lang": "en"
+      },
+      {
+        "text": "M Ukzim",
+        "lang": "en"
+      },
+      {
+        "text": "Uktsin",
+        "lang": "en"
+      },
+      {
+        "text": "Ukts.",
+        "lang": "en"
+      },
+      {
+        "text": "ʿUḳtsin",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Ukts.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah ʿUḳtsin",
+        "lang": "en"
+      },
+      {
+        "text": "Uktzin",
+        "lang": "en"
+      },
+      {
+        "text": "עוקצים",
+        "lang": "he"
+      },
+      {
+        "text": "עוקצין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה עוקצין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה עוקצים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Oktzin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Oktzin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.494Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Oktzin"
+}

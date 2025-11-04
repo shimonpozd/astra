@@ -1,0 +1,98 @@
+{
+  "title": "Malbim Beur Hamilot on Isaiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Malbim Beur Hamilot",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim-beur-hamilot",
+          "isaiah"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      832,
+      1397
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Isa."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Yishayahu"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Isa"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Isaiah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Isa."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Yishayahu"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Isa"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על ישעיהו",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על ישעיה"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על ישעי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על ישעי'"
+      },
+      {
+        "text": "Malbim Beur Hamilot on Isaiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim Beur Hamilot on Isaiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.711Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20Beur%20Hamilot%20on%20Isaiah"
+}

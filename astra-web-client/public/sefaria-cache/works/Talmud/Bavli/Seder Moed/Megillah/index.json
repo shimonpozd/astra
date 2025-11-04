@@ -1,0 +1,345 @@
+{
+  "title": "Megillah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "megillah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "megillah"
+        ]
+      }
+    ],
+    "lengths": [
+      63,
+      1213
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Megilah"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Megillah"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Megillah"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Megillah"
+      },
+      {
+        "lang": "en",
+        "text": "Megilla"
+      },
+      {
+        "lang": "en",
+        "text": "Maseches Megillah"
+      },
+      {
+        "lang": "he",
+        "text": "מגלה"
+      },
+      {
+        "lang": "en",
+        "text": "Meg."
+      },
+      {
+        "lang": "en",
+        "text": "M’gillah"
+      },
+      {
+        "text": "BT Megillah",
+        "lang": "en"
+      },
+      {
+        "text": "מגילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Megillah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Megillah",
+    "checkFirst": {
+      "en": "Mishnah Megillah",
+      "he": "משנה מגילה"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Megillah 2a:1-17a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-119"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-119"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Megillah Nikreit",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מגילה נקראת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Megillah 17a:9-21a:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-217"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-217"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; HaKorei Lemafrea",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הקורא למפרע",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Megillah 21a:10-25b:19",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-317"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-317"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; HaKorei Omed",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הקורא עומד",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Megillah 25b:20-32a:18",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-414"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-414"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Benei HaIr",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "בני העיר",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.070Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Megillah"
+}

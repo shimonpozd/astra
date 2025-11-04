@@ -1,0 +1,336 @@
+{
+  "title": "Moed Katan",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "moed-katan"
+        ]
+      }
+    ],
+    "lengths": [
+      57,
+      1026
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Masekhet Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Mo'ed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Talmud Mo'ed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Mo'ed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Mo'ed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "M. Kat.",
+        "lang": "en"
+      },
+      {
+        "text": "Moʿed Ḳaṭon",
+        "lang": "en"
+      },
+      {
+        "text": "M.K.",
+        "lang": "en"
+      },
+      {
+        "text": "BT Moed Katan",
+        "lang": "en"
+      },
+      {
+        "text": "Moed Qatan",
+        "lang": "en"
+      },
+      {
+        "text": "Mo’ed Qatan",
+        "lang": "en"
+      },
+      {
+        "text": "מ\"ק",
+        "lang": "he"
+      },
+      {
+        "text": "מו״ק",
+        "lang": "he"
+      },
+      {
+        "text": "מ״ק",
+        "lang": "he"
+      },
+      {
+        "text": "מו\"ק",
+        "lang": "he"
+      },
+      {
+        "text": "מ”ק",
+        "lang": "he"
+      },
+      {
+        "text": "מו”ק",
+        "lang": "he"
+      },
+      {
+        "text": "מועד קטן",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Moed Katan",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Moed Katan",
+    "checkFirst": {
+      "he": "משנה מועד קטן",
+      "en": "Mishnah Moed Katan"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Moed Katan 2a:1-11a:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-125"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-125"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "text": "Chapter 1; Mashkin Beit HaShelachin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "משקין בית השלחין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Moed Katan 11b:1-13b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-220"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-220"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "text": "Chapter 2; Mi SheHafakh",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "מי שהפך",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Moed Katan 13b:15-29a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-320"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-320"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "text": "Chapter 3; VeEllu Megallechin",
+              "primary": true,
+              "lang": "en"
+            },
+            {
+              "text": "ואלו מגלחין",
+              "primary": true,
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.072Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Moed%20Katan"
+}

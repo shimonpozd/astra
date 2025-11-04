@@ -1,0 +1,137 @@
+{
+  "title": "Kitzur Ba'al HaTurim on Exodus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Kitzur Ba'al HaTurim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kitzur-baal-haturim",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      405,
+      584
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Kitzur Baal HaTurim on Exod.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Ex.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Exo",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Shmot",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Shemot",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Ex",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Exo.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Exod",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Shemoth",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Exod.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Ex.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Exo",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Shmot",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Shemot",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Ex",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Exo.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Exod",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Shemoth",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Exodus",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Exodus",
+        "lang": "en"
+      },
+      {
+        "text": "קיצור בעל הטורים על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kitzur Ba'al HaTurim on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kitzur Ba'al HaTurim on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.156Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kitzur%20Ba'al%20HaTurim%20on%20Exodus"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Petach Einayim on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Petach Einayim",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "petach-einayim",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      80,
+      73
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "פתח עינים על ביצה",
+        "lang": "he"
+      },
+      {
+        "text": "Petach Einayim on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Petach Einayim on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.395Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Petach%20Einayim%20on%20Beitzah"
+}

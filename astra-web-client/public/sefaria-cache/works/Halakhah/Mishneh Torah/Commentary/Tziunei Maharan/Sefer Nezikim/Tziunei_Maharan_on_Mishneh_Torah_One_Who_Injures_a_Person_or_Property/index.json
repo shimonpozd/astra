@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, One Who Injures a Person or Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "one-who-injures-a-person-or-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "one-who-injures-a-person-or-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      5,
+      5
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות חובל ומזיק",
+        "primary": true
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, One Who Injures a Person or Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, One Who Injures a Person or Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.491Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20One%20Who%20Injures%20a%20Person%20or%20Property"
+}

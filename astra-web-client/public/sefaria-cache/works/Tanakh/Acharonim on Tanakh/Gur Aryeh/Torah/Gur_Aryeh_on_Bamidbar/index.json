@@ -1,0 +1,57 @@
+{
+  "title": "Gur Aryeh on Bamidbar",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Gur Aryeh",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gur-aryeh",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      484,
+      805
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "גור אריה על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gur Aryeh on Bamidbar",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gur Aryeh on Bamidbar"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.187Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gur%20Aryeh%20on%20Bamidbar"
+}

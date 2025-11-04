@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Theft",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "theft"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "theft"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "theft"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "theft"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "theft"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      131
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Theft"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Theft"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Theft"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Genevah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, <i>Hilkhot Geneivah</i>"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Geneivah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות גניבה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' גניבה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' גניבה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות גניבה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' גניבה"
+      },
+      {
+        "text": "רמב״ם, הלכות גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' גניבה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות גניבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Theft",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Theft"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.356Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Theft"
+}

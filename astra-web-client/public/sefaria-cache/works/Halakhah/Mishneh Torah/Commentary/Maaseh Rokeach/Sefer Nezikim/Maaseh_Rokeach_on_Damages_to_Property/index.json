@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Damages to Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "damages-to-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "damages-to-property"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      124,
+      143
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות נזקי ממון",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Damages to Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Damages to Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.895Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Damages%20to%20Property"
+}

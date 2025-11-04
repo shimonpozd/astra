@@ -1,0 +1,51 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      6,
+      12,
+      1,
+      2,
+      1,
+      4,
+      2,
+      4,
+      2,
+      3
+    ],
+    [
+      4,
+      3,
+      8,
+      7,
+      4,
+      3
+    ],
+    [
+      6,
+      1,
+      1,
+      9,
+      21,
+      7
+    ],
+    [
+      7,
+      5,
+      11,
+      4,
+      4,
+      2,
+      4,
+      7,
+      2,
+      8
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:37.009Z",
+  "source": "https://www.sefaria.org/api/shape/Ikar%20Tosafot%20Yom%20Tov%20on%20Mishnah%20Megillah"
+}

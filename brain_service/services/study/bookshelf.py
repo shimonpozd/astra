@@ -25,7 +25,7 @@ class BookshelfService:
     async def get_for(
         self,
         ref: str,
-        limit: int = 40,
+        limit: int = 800,
         categories: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """Return a stub payload until the full bookshelf extraction ships."""

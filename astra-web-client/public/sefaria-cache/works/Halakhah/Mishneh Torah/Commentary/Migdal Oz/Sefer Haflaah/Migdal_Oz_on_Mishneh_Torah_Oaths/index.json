@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Oaths",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "oaths"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      198,
+      229
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Oaths",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Oaths"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.775Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Oaths"
+}

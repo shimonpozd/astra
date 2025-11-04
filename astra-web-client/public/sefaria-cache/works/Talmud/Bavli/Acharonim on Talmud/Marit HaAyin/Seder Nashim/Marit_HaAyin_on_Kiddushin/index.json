@@ -1,0 +1,59 @@
+{
+  "title": "Marit HaAyin on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Marit HaAyin",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "marit-haayin",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      164,
+      23
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "מראית העין על קידושין"
+      },
+      {
+        "text": "Marit HaAyin on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Marit HaAyin on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.069Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Marit%20HaAyin%20on%20Kiddushin"
+}

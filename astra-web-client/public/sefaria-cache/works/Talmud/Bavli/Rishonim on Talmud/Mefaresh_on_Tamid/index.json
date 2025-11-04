@@ -1,0 +1,97 @@
+{
+  "title": "Mefaresh on Tamid",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mefaresh",
+          "tamid"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      146,
+      391
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mefaresh on Tractate Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Mefaresh on Talmud Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Mefaresh on Masekhet Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Meforash on Tractate Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Meforash on Talmud Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Meforash on Masekhet Tamid"
+      },
+      {
+        "lang": "en",
+        "text": "Meforash on Tamid"
+      },
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "מפרש על תמיד"
+      },
+      {
+        "lang": "he",
+        "text": "מפורש על תמיד"
+      },
+      {
+        "lang": "he",
+        "text": "המפרש על תמיד"
+      },
+      {
+        "text": "Mefaresh on Tamid",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mefaresh on Tamid"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.206Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mefaresh%20on%20Tamid"
+}

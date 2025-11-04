@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "משנה למלך על משנה תורה, הלכות ספר תורה",
+        "primary": true
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.010Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

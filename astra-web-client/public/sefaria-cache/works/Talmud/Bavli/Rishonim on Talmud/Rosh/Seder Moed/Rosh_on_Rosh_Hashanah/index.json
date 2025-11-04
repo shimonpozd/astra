@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      34,
+      64
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.124Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Rosh%20Hashanah"
+}

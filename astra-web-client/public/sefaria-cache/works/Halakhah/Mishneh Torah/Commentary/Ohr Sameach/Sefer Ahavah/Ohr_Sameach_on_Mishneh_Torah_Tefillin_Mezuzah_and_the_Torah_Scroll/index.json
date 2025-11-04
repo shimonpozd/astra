@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      26,
+      30
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "אור שמח על משנה תורה, הלכות תפילין ומזוזה וספר תורה"
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.047Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

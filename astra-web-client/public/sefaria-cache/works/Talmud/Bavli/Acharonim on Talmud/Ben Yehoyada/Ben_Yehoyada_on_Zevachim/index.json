@@ -1,0 +1,50 @@
+{
+  "title": "Ben Yehoyada on Zevachim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Ben Yehoyada"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      240,
+      38
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "בן יהוידע על זבחים",
+        "lang": "he"
+      },
+      {
+        "text": "Ben Yehoyada on Zevachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ben Yehoyada on Zevachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.052Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ben%20Yehoyada%20on%20Zevachim"
+}

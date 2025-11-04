@@ -1,0 +1,59 @@
+{
+  "title": "Ritva on Taanit",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ritva",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ritva",
+          "taanit1"
+        ]
+      }
+    ],
+    "lengths": [
+      61,
+      116
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "ריטב\"א על תענית",
+        "lang": "he"
+      },
+      {
+        "text": "Ritva on Taanit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ritva on Taanit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.022Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ritva%20on%20Taanit"
+}

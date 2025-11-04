@@ -1,0 +1,57 @@
+{
+  "title": "Lechem Shamayim on Mishnah Negaim",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Lechem Shamayim",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-shamayim",
+          "mishnah",
+          "negaim"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      62,
+      166
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "לחם שמים על משנה נגעים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Shamayim on Mishnah Negaim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Shamayim on Mishnah Negaim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:42.671Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Lechem%20Shamayim%20on%20Mishnah%20Negaim"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Shita Mekubetzet on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Shita Mekubetzet",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shita-mekubetzet",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      2719
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "שיטה מקובצת על כתובות",
+        "primary": true
+      },
+      {
+        "text": "Shita Mekubetzet on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shita Mekubetzet on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.084Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shita%20Mekubetzet%20on%20Ketubot"
+}

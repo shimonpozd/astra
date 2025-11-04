@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Torah Study",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "torah-study"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      81
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Torah Study"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Talmud Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Talmud Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Talmud Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Torah Study"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Talmud Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Torah Study"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות תלמוד תורה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Talmud Torah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Talmud Torah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' תלמוד תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' תלמוד תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות תלמוד תורה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' תלמוד תורה"
+      },
+      {
+        "text": "רמב״ם, הלכות תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תלמוד תורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Torah Study",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Torah Study"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.826Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Torah%20Study"
+}

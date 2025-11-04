@@ -1,0 +1,65 @@
+{
+  "title": "Pilpula Charifta on Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Commentary",
+    "Pilpula Charifta",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Seif",
+      "siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "pilpula-charifta",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      736
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": " פלפולא חריפתא על בבא מציעא",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "פילפולא חריפתא על בבא מציעא"
+      },
+      {
+        "text": "Pilpula Charifta on Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Pilpula Charifta on Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.464Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Pilpula%20Charifta%20on%20Bava%20Metzia"
+}

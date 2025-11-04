@@ -1,0 +1,49 @@
+{
+  "title": "Yad Ephraim on Shulchan Arukh, Yoreh De'ah",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Yad Ephraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-ephraim",
+          "yoreh-deah"
+        ]
+      }
+    ],
+    "lengths": [
+      403,
+      366
+    ],
+    "titles": [
+      {
+        "text": "יד אפרים על שלחן ערוך יורה דעה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yad Ephraim on Shulchan Arukh, Yoreh De'ah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Ephraim on Shulchan Arukh, Yoreh De'ah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.771Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Ephraim%20on%20Shulchan%20Arukh%2C%20Yoreh%20De'ah"
+}

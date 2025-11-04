@@ -1,0 +1,60 @@
+{
+  "title": "Even Ha'azel on Mishneh Torah, Fasts",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Even Ha'azel",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "even-haazel",
+          "hilchot",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "even-haazel",
+          "fasts"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "אבן האזל על משנה תורה, הלכות תעניות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Even Ha'azel on Mishneh Torah, Fasts",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Even Ha'azel on Mishneh Torah, Fasts"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.370Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Even%20Ha'azel%20on%20Mishneh%20Torah%2C%20Fasts"
+}

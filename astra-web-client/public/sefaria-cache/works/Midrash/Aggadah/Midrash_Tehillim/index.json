@@ -1,0 +1,94 @@
+{
+  "title": "Midrash Tehillim",
+  "categories": [
+    "Midrash",
+    "Aggadah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Psalm",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "midrash-tehillim"
+        ]
+      }
+    ],
+    "lengths": [
+      150,
+      806
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Midrash Shocher Tov",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Shohar Tov",
+        "lang": "en"
+      },
+      {
+        "text": "Midr. Till.",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Tillim",
+        "lang": "en"
+      },
+      {
+        "text": "Midr. Till. to Ps.",
+        "lang": "en"
+      },
+      {
+        "text": "Midrash Schohartob",
+        "lang": "en"
+      },
+      {
+        "text": "מדרש שוחר טוב",
+        "lang": "he"
+      },
+      {
+        "text": "שוח\"ט",
+        "lang": "he"
+      },
+      {
+        "text": "מדרש תהלים",
+        "lang": "he"
+      },
+      {
+        "text": "שוח״ט",
+        "lang": "he"
+      },
+      {
+        "text": "שוח”ט",
+        "lang": "he"
+      },
+      {
+        "text": "מדרש תהילים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Midrash Tehillim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Midrash Tehillim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.680Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Midrash%20Tehillim"
+}

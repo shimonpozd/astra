@@ -45,7 +45,7 @@ batch_size = 120
 facade_enabled = true
 
 [llm.api.openrouter]
-api_key = "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"
+api_key = "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"
 referrer = "http://localhost:5173/"
 title = "Astra Admin"
 

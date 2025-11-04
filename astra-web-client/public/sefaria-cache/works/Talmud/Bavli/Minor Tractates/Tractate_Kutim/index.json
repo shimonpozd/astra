@@ -1,0 +1,57 @@
+{
+  "title": "Tractate Kutim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kutim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kutim"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      21
+    ],
+    "titles": [
+      {
+        "text": "Treat. Kuthim",
+        "lang": "en"
+      },
+      {
+        "text": "מסכת כותים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tractate Kutim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Kutim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.321Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Kutim"
+}

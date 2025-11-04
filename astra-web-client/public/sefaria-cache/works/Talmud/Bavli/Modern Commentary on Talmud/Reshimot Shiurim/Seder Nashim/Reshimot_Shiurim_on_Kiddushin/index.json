@@ -1,0 +1,59 @@
+{
+  "title": "Reshimot Shiurim on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Reshimot Shiurim",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "reshimot-shiurim",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      164,
+      4393
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רשימות שיעורים על קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Reshimot Shiurim on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Reshimot Shiurim on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.791Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Reshimot%20Shiurim%20on%20Kiddushin"
+}

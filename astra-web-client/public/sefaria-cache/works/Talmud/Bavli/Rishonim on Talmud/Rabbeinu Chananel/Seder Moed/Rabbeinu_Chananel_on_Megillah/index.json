@@ -1,0 +1,59 @@
+{
+  "title": "Rabbeinu Chananel on Megillah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rabbeinu Chananel",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-chananel",
+          "megillah"
+        ]
+      }
+    ],
+    "lengths": [
+      63,
+      345
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רבינו חננאל על מגילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Chananel on Megillah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Chananel on Megillah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.658Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Chananel%20on%20Megillah"
+}

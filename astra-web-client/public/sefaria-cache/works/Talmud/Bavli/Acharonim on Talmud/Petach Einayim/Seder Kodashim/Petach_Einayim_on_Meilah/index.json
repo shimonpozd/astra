@@ -1,0 +1,59 @@
+{
+  "title": "Petach Einayim on Meilah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Petach Einayim",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "petach-einayim",
+          "meilah"
+        ]
+      }
+    ],
+    "lengths": [
+      43,
+      7
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "פתח עינים על מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "Petach Einayim on Meilah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Petach Einayim on Meilah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.595Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Petach%20Einayim%20on%20Meilah"
+}

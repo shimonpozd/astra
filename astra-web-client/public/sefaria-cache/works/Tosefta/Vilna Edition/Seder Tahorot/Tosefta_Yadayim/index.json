@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Yadayim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "yadayim"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      18
+    ],
+    "titles": [
+      {
+        "text": "Tos. Yadayim",
+        "lang": "en"
+      },
+      {
+        "text": "T. Yadayim",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Yadaim",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Yadaim",
+        "lang": "en"
+      },
+      {
+        "text": "T. Yadaim",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. Yad.",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא ידיים",
+        "lang": "he"
+      },
+      {
+        "text": "תוספתא ידים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Yadayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Yadayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.868Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Yadayim"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, Nazariteship",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "nazariteship"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      7,
+      7
+    ],
+    "titles": [
+      {
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות נזירות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, Nazariteship",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, Nazariteship"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.143Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20Nazariteship"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Birkat Avraham on Mishneh Torah, Paschal Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Birkat Avraham",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "paschal-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      6,
+      6
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "ברכת אברהם על משנה תורה, הלכות קרבן פסח",
+        "primary": true
+      },
+      {
+        "text": "Birkat Avraham on Mishneh Torah, Paschal Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Birkat Avraham on Mishneh Torah, Paschal Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.384Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Birkat%20Avraham%20on%20Mishneh%20Torah%2C%20Paschal%20Offering"
+}

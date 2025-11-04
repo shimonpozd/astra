@@ -1,0 +1,133 @@
+{
+  "title": "Metzudat Zion on II Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "ii-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      279,
+      420
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Divrei HaYamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Second Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Chron"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Chron."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2Ch."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Chr."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Chronicles II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2Ch"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Divrei HaYamim II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Divrei HaYamim Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Divrei Ha-yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Divrei Ha-Yamim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים ב",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דברי הימים ב'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דה\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על דה״ב"
+      },
+      {
+        "text": "Metzudat Zion on II Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on II Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.508Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20II%20Chronicles"
+}

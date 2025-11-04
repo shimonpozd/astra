@@ -1,0 +1,378 @@
+{
+  "title": "Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "sukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      112,
+      1361
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tractate Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Succah"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Sukka"
+      },
+      {
+        "lang": "en",
+        "text": "Succ."
+      },
+      {
+        "text": "BT Sukkah",
+        "lang": "en"
+      },
+      {
+        "text": "סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sukkah",
+    "checkFirst": {
+      "en": "Mishnah Sukkah",
+      "he": "משנה סוכה"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sukkah 2a:1-20b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-138"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-138"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Sukkah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "סוכה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sukkah 20b:10-29b:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-232"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-232"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; HaYashen",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הישן",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sukkah 29b:4-42b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-330"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-330"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Lulav HaGazul",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לולב הגזול",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sukkah 42b:5-50a:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-426"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-426"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Lulav VeAravah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "לולב וערבה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sukkah 50a:6-56b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-523"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-523"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; HeChalil",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "החליל",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.057Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sukkah"
+}

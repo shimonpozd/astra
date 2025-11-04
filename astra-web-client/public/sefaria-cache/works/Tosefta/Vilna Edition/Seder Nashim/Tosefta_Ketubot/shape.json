@@ -1,0 +1,23 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    9,
+    9,
+    10,
+    18,
+    8,
+    11,
+    11,
+    8,
+    12,
+    6,
+    9,
+    14
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.623Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Ketubot"
+}

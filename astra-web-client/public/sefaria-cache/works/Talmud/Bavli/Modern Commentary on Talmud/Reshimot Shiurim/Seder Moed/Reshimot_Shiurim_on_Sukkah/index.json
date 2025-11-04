@@ -1,0 +1,59 @@
+{
+  "title": "Reshimot Shiurim on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Reshimot Shiurim",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "reshimot-shiurim",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      112,
+      2136
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רשימות שיעורים על סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Reshimot Shiurim on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Reshimot Shiurim on Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.777Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Reshimot%20Shiurim%20on%20Sukkah"
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Sforno on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Sforno",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sforno",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      406,
+      722
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Sforno on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Sforno on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Sforno on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Sforno on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Sforno on Deut"
+      },
+      {
+        "lang": "he",
+        "text": "ספורנו על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "ספורנו על דברי׳"
+      },
+      {
+        "text": "ספורנו על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sforno on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sforno on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.714Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sforno%20on%20Deuteronomy"
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Hasagot HaRa'avad Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hasagot HaRa'avad"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      91,
+      5
+    ],
+    "titles": [
+      {
+        "text": "השגות הראב\"ד בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hasagot HaRa'avad Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:28.340Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hasagot%20HaRa'avad%20Bava%20Kamma"
+}

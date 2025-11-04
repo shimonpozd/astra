@@ -1,0 +1,60 @@
+{
+  "title": "Milchemet Hashem on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Milchemet Hashem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "milchemet-hashem",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      21
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "מלחמת השם על שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Milchemet Hashem on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Milchemet Hashem on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.959Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Milchemet%20Hashem%20on%20Shevuot"
+}

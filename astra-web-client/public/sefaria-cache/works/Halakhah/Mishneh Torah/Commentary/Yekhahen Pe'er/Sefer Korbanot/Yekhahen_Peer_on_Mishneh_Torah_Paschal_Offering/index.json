@@ -1,0 +1,60 @@
+{
+  "title": "Yekhahen Pe'er on Mishneh Torah, Paschal Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yekhahen Pe'er",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yekhahen-peer",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yekhahen-peer",
+          "paschal-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      10,
+      10
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכהן פאר על משנה תורה, הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "Yekhahen Pe'er on Mishneh Torah, Paschal Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yekhahen Pe'er on Mishneh Torah, Paschal Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.562Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yekhahen%20Pe'er%20on%20Mishneh%20Torah%2C%20Paschal%20Offering"
+}

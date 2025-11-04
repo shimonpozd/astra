@@ -1,0 +1,60 @@
+{
+  "title": "Yad David on Mishneh Torah, Virgin Maiden",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad David",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-david",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-david",
+          "virgin-maiden"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "יד דוד על משנה תורה, הלכות נערה בתולה"
+      },
+      {
+        "text": "Yad David on Mishneh Torah, Virgin Maiden",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad David on Mishneh Torah, Virgin Maiden"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.774Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20David%20on%20Mishneh%20Torah%2C%20Virgin%20Maiden"
+}

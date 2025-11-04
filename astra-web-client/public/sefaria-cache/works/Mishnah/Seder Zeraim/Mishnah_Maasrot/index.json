@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Maasrot",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "maasrot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maasrot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "maasrot"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      40
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Maasrot"
+      },
+      {
+        "lang": "en",
+        "text": "M Maasrot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Maasrot"
+      },
+      {
+        "lang": "he",
+        "text": "מעשרות"
+      },
+      {
+        "lang": "en",
+        "text": "Maasr."
+      },
+      {
+        "lang": "en",
+        "text": "Maʿasroth"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Maasr."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Maʿasroth"
+      },
+      {
+        "text": "משנה מעשרות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Maasrot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Maasrot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.079Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Maasrot"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Tzafnat Pa'neach on Mishneh Torah, Oaths",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tzafnat Pa'neach",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "hilchot",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "oaths"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      61,
+      67
+    ],
+    "titles": [
+      {
+        "text": "צפנת פענח על משנה תורה, הלכות שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tzafnat Pa'neach on Mishneh Torah, Oaths",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tzafnat Pa'neach on Mishneh Torah, Oaths"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.822Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tzafnat%20Pa'neach%20on%20Mishneh%20Torah%2C%20Oaths"
+}

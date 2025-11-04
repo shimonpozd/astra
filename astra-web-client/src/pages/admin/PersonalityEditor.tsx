@@ -6,6 +6,8 @@ import { Textarea } from '../../components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
 import { Card, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../../components/ui/dialog';
+import { debugLog } from '../../utils/debugLogger';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 
 interface Personality {
   id: string;
@@ -66,10 +68,9 @@ const PersonalityEditor: React.FC = () => {
 
   const fetchPersonalities = async () => {
     try {
-      const response = await fetch('/admin/personalities', {
+      const response = await authorizedFetch('/admin/personalities', {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -86,10 +87,9 @@ const PersonalityEditor: React.FC = () => {
 
   const fetchPersonality = async (id: string) => {
     try {
-      const response = await fetch(`/admin/personalities/${id}`, {
+      const response = await authorizedFetch(`/admin/personalities/${id}`, {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -124,12 +124,11 @@ const PersonalityEditor: React.FC = () => {
   const handleCreate = async () => {
     setSaving(true);
     try {
-      const response = await fetch('/admin/personalities', {
+      const response = await authorizedFetch('/admin/personalities', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Token': 'super-secret-token'
-        },
+                  },
         body: JSON.stringify(formData),
       });
 
@@ -137,7 +136,7 @@ const PersonalityEditor: React.FC = () => {
         await fetchPersonalities();
         setIsCreateDialogOpen(false);
         resetForm();
-        console.log('Personality created successfully');
+        debugLog('Personality created successfully');
       } else {
         console.error('Failed to create personality');
       }
@@ -153,12 +152,11 @@ const PersonalityEditor: React.FC = () => {
 
     setSaving(true);
     try {
-      const response = await fetch(`/admin/personalities/${selectedPersonality.id}`, {
+      const response = await authorizedFetch(`/admin/personalities/${selectedPersonality.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Token': 'super-secret-token'
-        },
+                  },
         body: JSON.stringify(formData),
       });
 
@@ -167,7 +165,7 @@ const PersonalityEditor: React.FC = () => {
         setIsEditDialogOpen(false);
         setSelectedPersonality(null);
         resetForm();
-        console.log('Personality updated successfully');
+        debugLog('Personality updated successfully');
       } else {
         console.error('Failed to update personality');
       }
@@ -182,18 +180,17 @@ const PersonalityEditor: React.FC = () => {
     if (!selectedPersonality) return;
 
     try {
-      const response = await fetch(`/admin/personalities/${selectedPersonality.id}`, {
+      const response = await authorizedFetch(`/admin/personalities/${selectedPersonality.id}`, {
         method: 'DELETE',
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
 
       if (response.ok) {
         await fetchPersonalities();
         setIsDeleteDialogOpen(false);
         setSelectedPersonality(null);
-        console.log('Personality deleted successfully');
+        debugLog('Personality deleted successfully');
       } else {
         console.error('Failed to delete personality');
       }

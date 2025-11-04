@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      144,
+      380
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.611Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

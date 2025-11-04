@@ -1,0 +1,39 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    18,
+    17,
+    10,
+    17,
+    14,
+    15,
+    35,
+    41,
+    25,
+    25,
+    31,
+    40,
+    29,
+    33,
+    16,
+    15,
+    27,
+    16,
+    15,
+    0,
+    4,
+    17,
+    10,
+    25,
+    30,
+    0,
+    2,
+    5
+  ],
+  "fetchedAt": "2025-10-30T14:22:30.793Z",
+  "source": "https://www.sefaria.org/api/shape/Nimukei%20Yosef%20on%20Menachot"
+}

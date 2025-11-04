@@ -1,0 +1,202 @@
+{
+  "title": "Mishneh Torah, Foreign Worship and Customs of the Nations",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      148
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Foreign Worship and Customs of the Nations",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Foreign Worship and Customs of the Nations",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Foreign Worship and Customs of the Nations",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Avodah Kochavim",
+        "lang": "en"
+      },
+      {
+        "text": "<i>Hilkhot Avodah Zarah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Avodah Zarah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Avodah Zarah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות עבודה זרה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עכו\"ם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הלכות עכו\"ם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' עבודה זרה וחוקות הגויים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עכו״ם",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עכו”ם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות עכו״ם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות עכו”ם",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Foreign Worship and Customs of the Nations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Foreign Worship and Customs of the Nations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.832Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Foreign%20Worship%20and%20Customs%20of%20the%20Nations"
+}

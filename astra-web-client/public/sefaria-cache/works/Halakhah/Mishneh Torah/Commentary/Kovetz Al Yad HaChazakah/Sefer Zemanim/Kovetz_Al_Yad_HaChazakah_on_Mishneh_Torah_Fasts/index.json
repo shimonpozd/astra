@@ -1,0 +1,60 @@
+{
+  "title": "Kovetz Al Yad HaChazakah on Mishneh Torah, Fasts",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kovetz Al Yad HaChazakah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "hilchot",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "fasts"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      12,
+      12
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "קובץ על היד החזקה על משנה תורה, הלכות תעניות",
+        "primary": true
+      },
+      {
+        "text": "Kovetz Al Yad HaChazakah on Mishneh Torah, Fasts",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kovetz Al Yad HaChazakah on Mishneh Torah, Fasts"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.254Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kovetz%20Al%20Yad%20HaChazakah%20on%20Mishneh%20Torah%2C%20Fasts"
+}

@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Sanctification of the New Month",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sanctification-of-the-new-month"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sanctification-of-the-new-month"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      235
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Kiddush HaChodesh"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Sanctification of the New Month"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Kiddush HaChodesh"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Kiddush HaChodesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Sanctification of the New Month"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Kiddush HaChodesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sanctification of the New Month"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות קידוש החודש"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Kiddush HaChodesh"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Kiddush HaChodesh"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' קידוש החודש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' קידוש החודש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות קידוש החודש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' קידוש החודש"
+      },
+      {
+        "text": "רמב״ם, הלכות קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' קידוש החודש",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות קידוש החודש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Sanctification of the New Month",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sanctification of the New Month"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.956Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sanctification%20of%20the%20New%20Month"
+}

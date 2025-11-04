@@ -1,0 +1,52 @@
+{
+  "title": "Rishon LeTzion on Proverbs",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Or HaChaim",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rishon-letzion",
+          "proverbs"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      30,
+      43
+    ],
+    "titles": [
+      {
+        "text": "ראשון לציון על משלי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rishon LeTzion on Proverbs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rishon LeTzion on Proverbs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:01.645Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rishon%20LeTzion%20on%20Proverbs"
+}

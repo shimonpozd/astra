@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Shekalim",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "shekalim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shekalim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "shekalim"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      52
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Shekalim"
+      },
+      {
+        "lang": "en",
+        "text": "M Shekalim"
+      },
+      {
+        "lang": "he",
+        "text": "שקלים"
+      },
+      {
+        "lang": "en",
+        "text": "Shek."
+      },
+      {
+        "lang": "en",
+        "text": "Sh’ḳalim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Shek."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Sh’ḳalim"
+      },
+      {
+        "text": "משנה שקלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Shekalim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Shekalim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.132Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Shekalim"
+}

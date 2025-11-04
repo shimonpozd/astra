@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Other Sources of Defilement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "other-sources-of-defilement"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      5,
+      5
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות שאר אבות הטומאות",
+        "primary": true
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Other Sources of Defilement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Other Sources of Defilement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.951Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Other%20Sources%20of%20Defilement"
+}

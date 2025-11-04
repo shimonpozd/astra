@@ -1,0 +1,55 @@
+{
+  "title": "Nimukei Yosef on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Nimukei Yosef"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nimukei-yosef",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      93,
+      1679
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "נימוקי יוסף על יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nimukei Yosef on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nimukei Yosef on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.114Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Nimukei%20Yosef%20on%20Yevamot"
+}

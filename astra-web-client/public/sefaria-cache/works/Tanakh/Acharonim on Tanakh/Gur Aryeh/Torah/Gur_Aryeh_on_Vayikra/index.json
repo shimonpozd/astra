@@ -1,0 +1,57 @@
+{
+  "title": "Gur Aryeh on Vayikra",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Gur Aryeh",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gur-aryeh",
+          "leviticus"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      459,
+      873
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "גור אריה על ויקרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gur Aryeh on Vayikra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gur Aryeh on Vayikra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.178Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gur%20Aryeh%20on%20Vayikra"
+}

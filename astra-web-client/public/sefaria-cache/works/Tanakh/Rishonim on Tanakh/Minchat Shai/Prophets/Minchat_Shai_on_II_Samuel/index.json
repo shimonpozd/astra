@@ -1,0 +1,58 @@
+{
+  "title": "Minchat Shai on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Minchat Shai",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "minchat-shai",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      261,
+      351
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מנחת שי על שמואל ב",
+        "primary": true
+      },
+      {
+        "text": "Minchat Shai on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Minchat Shai on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.823Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Minchat%20Shai%20on%20II%20Samuel"
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Metzudat Zion on Joshua",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "joshua"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      192,
+      270
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Jos"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Yehoshua"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Jos."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Josh"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Josh."
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על יהושע",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Joshua",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Joshua"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.204Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Joshua"
+}

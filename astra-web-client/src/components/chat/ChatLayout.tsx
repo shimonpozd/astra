@@ -12,6 +12,8 @@ import MessageComposer from "./MessageComposer";
 import TopBar from "../layout/TopBar"; // Import the new TopBar
 import { api } from "../../services/api"; // Import api for daily session creation
 import { useLayout } from "../../contexts/LayoutContext";
+import { debugLog } from '../../utils/debugLogger';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 
 export function ChatLayout() {
   const navigate = useNavigate();
@@ -92,6 +94,7 @@ export function ChatLayout() {
     sendMessage,
     isSending,
     deleteSession,
+    reloadChats,
   } = useChat(agentId, urlChatId);
   const { mode } = useLayout();
   // Derive study UI mode for composer indicator (iyun/girsa)
@@ -104,10 +107,10 @@ export function ChatLayout() {
   // Function to load daily session as study mode
   const loadDailyAsStudy = async (dailySessionId: string) => {
     try {
-      console.log('📖 Loading daily session as study:', dailySessionId);
+      debugLog('Loading daily session as study:', dailySessionId);
       
       // Get daily session details
-      const response = await fetch(`/api/sessions/${dailySessionId}`);
+      const response = await authorizedFetch(`/api/sessions/${dailySessionId}`);
       if (!response.ok) {
         console.error('Failed to get daily session:', response.status);
         return;
@@ -117,11 +120,11 @@ export function ChatLayout() {
       const textRef = dailySession.ref;
       
       if (textRef) {
-        console.log('Starting study with ref:', textRef, 'and daily session ID:', dailySessionId);
+        debugLog('Starting study with ref:', textRef, 'and daily session ID:', dailySessionId);
         // Start study mode with the calendar text using the existing daily session ID
         try {
           const sessionId = await startStudy(textRef, dailySessionId);
-          console.log('✅ Study started successfully with session ID:', sessionId);
+          debugLog('Study started successfully with session ID:', sessionId);
         } catch (error) {
           console.error('❌ Failed to start study:', error);
         }
@@ -173,8 +176,23 @@ export function ChatLayout() {
     });
   };
 
+  const handleCreateStudyGenesis = async () => {
+    // Default study session for plus button in Study category
+    try {
+      const newSessionId = await startStudy('Genesis 1:1');
+      // Refresh chat list so the new study appears immediately
+      try { (reloadChats && (await reloadChats())); } catch {}
+      if (newSessionId) {
+        navigate(`/study/${newSessionId}`);
+      }
+      setIsStudySetupOpen(false);
+    } catch (error) {
+      console.error('Failed to create default study session (Genesis 1:1):', error);
+    }
+  };
+
   const handleSelectSession = async (sessionId: string, type: 'chat' | 'study' | 'daily') => {
-    console.log('🖱️ Chat clicked:', { sessionId, type });
+    debugLog('Chat clicked:', { sessionId, type });
     
     if (type === 'study') {
       // Just navigate. The useEffect hook will handle loading the session.
@@ -182,16 +200,20 @@ export function ChatLayout() {
     } else if (type === 'daily') {
       // Lazy create daily session if needed, then navigate
       try {
-        console.log('📅 Creating daily session:', sessionId);
+        debugLog('Creating daily session:', sessionId);
         const created = await api.createDailySessionLazy(sessionId);
-        console.log('📅 Daily session created:', created);
+        debugLog('Daily session created:', created);
         
-        console.log('🧭 Navigating to:', `/daily/${sessionId}`);
+        debugLog('Navigating to:', `/daily/${sessionId}`);
         navigate(`/daily/${sessionId}`);
       } catch (error) {
         console.error('❌ Failed to create daily session:', error);
       }
     } else {
+      // Exiting study if active to reveal chat UI
+      if (isStudyActive) {
+        try { await exitStudy(); } catch (e) { console.warn('Failed to exit study cleanly:', e); }
+      }
       selectChat(sessionId);
     }
   };
@@ -201,10 +223,10 @@ export function ChatLayout() {
     data?: any;
   }) => {
     try {
-      console.log('ChatLayout: handleWorkbenchDrop:', side, ref, dragData);
+      debugLog('ChatLayout: handleWorkbenchDrop:', side, ref, dragData);
       
       if (dragData?.type === 'group') {
-        console.log('Handling group drop - all refs:', dragData.data?.refs);
+        debugLog('Handling group drop - all refs:', dragData.data?.refs);
         // TODO: Здесь можно добавить специальную логику для групп
         // Например, создать специальный UI для выбора конкретной части
         // Или добавить все части группы последовательно
@@ -256,6 +278,7 @@ export function ChatLayout() {
                 selectedChatId={selectedChatId}
                 onSelectChat={handleSelectSession}
                 onCreateChat={createChat}
+                onCreateStudy={handleCreateStudyGenesis}
                 onDeleteSession={deleteSession}
               />
             </div>
@@ -285,6 +308,7 @@ export function ChatLayout() {
               selectedChatId={selectedChatId}
               onSelectChat={handleSelectSession}
               onCreateChat={createChat}
+              onCreateStudy={handleCreateStudyGenesis}
               onDeleteSession={deleteSession}
             />
           )
@@ -352,8 +376,8 @@ export function ChatLayout() {
                   <BookshelfPanel
                     sessionId={studySessionId || undefined}
                     currentRef={getCurrentRefForBookshelf()}
-                    onDragStart={(ref) => console.log('Dragging from bookshelf:', ref)}
-                    onItemClick={(item) => console.log('Clicked bookshelf item:', item)}
+                    onDragStart={(ref) => debugLog('Dragging from bookshelf:', ref)}
+                    onItemClick={(item) => debugLog('Clicked bookshelf item:', item)}
                   />
                 </div>
               )}
@@ -364,8 +388,8 @@ export function ChatLayout() {
               <BookshelfPanel
                 sessionId={studySessionId || undefined}
                 currentRef={getCurrentRefForBookshelf()}
-                onDragStart={(ref) => console.log('Dragging from bookshelf:', ref)}
-                onItemClick={(item) => console.log('Clicked bookshelf item:', item)}
+                onDragStart={(ref) => debugLog('Dragging from bookshelf:', ref)}
+                onItemClick={(item) => debugLog('Clicked bookshelf item:', item)}
               />
             </div>
           )}

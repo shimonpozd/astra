@@ -1,0 +1,51 @@
+{
+  "title": "Hagahot Chavot Yair on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot Chavot Yair"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-chavot-yair",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      7
+    ],
+    "titles": [
+      {
+        "text": "הגהות חוות יאיר על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot Chavot Yair on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot Chavot Yair on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:25.345Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20Chavot%20Yair%20on%20Rosh%20Hashanah"
+}

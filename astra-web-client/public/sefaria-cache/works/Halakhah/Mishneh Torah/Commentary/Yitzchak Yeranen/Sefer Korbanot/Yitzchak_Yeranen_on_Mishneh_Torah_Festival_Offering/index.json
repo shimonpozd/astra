@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      10,
+      13
+    ],
+    "titles": [
+      {
+        "text": "יצחק ירנן על משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.025Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

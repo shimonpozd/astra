@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Bava Batra",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bava-batra"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      86
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "M Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Bava Batra"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah B. Bath."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Baba Bathra"
+      },
+      {
+        "text": "משנה בבא בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.276Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Bava%20Batra"
+}

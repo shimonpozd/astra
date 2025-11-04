@@ -129,7 +129,12 @@ def _get_reasoning_params_from_config() -> Dict[str, Any]:
     return result
 
 
-def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[str]]:
+def get_llm_for_task(
+    task: str,
+    *,
+    provider_override: str | None = None,
+    api_key_override: str | None = None,
+) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[str]]:
     """Return OpenAI-compatible client, resolved model id, reasoning params, and capabilities."""
     if task not in TASK_ENV_MAPPING:
         raise LLMConfigError(f"Unknown task: {task}")
@@ -150,7 +155,16 @@ def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[
     if USE_ASTRA_CONFIG:
         reasoning_params.update(_get_reasoning_params_from_config())
 
-    if model.startswith("ollama/"):
+    provider = provider_override
+    if not provider:
+        if model.startswith("ollama/"):
+            provider = "ollama"
+        elif model.startswith("openrouter/"):
+            provider = "openrouter"
+        else:
+            provider = "openai"
+
+    if provider == "ollama":
         api_cfg = _get_api_section("ollama") if USE_ASTRA_CONFIG else {}
         ollama_base_url = _resolve_env_var(api_cfg.get("base_url")) or os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
@@ -158,11 +172,11 @@ def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[
         clean_model = model.replace("ollama/", "")
         capabilities: List[str] = []
 
-    elif model.startswith("openrouter/"):
+    elif provider == "openrouter":
         api_cfg = _get_api_section("openrouter") if USE_ASTRA_CONFIG else {}
 
         openrouter_base_url = _resolve_env_var(api_cfg.get("base_url")) or os.getenv("OPENROUTER_API_BASE", "https://openrouter.ai/api/v1")
-        api_key = _resolve_env_var(api_cfg.get("api_key")) or os.getenv("OPENROUTER_API_KEY")
+        api_key = api_key_override or _resolve_env_var(api_cfg.get("api_key")) or os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             raise LLMConfigError("OPENROUTER_API_KEY not set for OpenRouter models")
 
@@ -179,13 +193,13 @@ def get_llm_for_task(task: str) -> Tuple[AsyncOpenAI, str, Dict[str, Any], List[
             client_kwargs["default_headers"] = default_headers
 
         client = AsyncOpenAI(**client_kwargs)
-        clean_model = model.replace("openrouter/", "")
+        clean_model = model.replace("openrouter/", "") if model.startswith("openrouter/") else model
         capabilities = ["json_mode"]
 
     else:
         api_cfg = _get_api_section("openai") if USE_ASTRA_CONFIG else {}
 
-        api_key = _resolve_env_var(api_cfg.get("api_key")) or os.getenv("OPENAI_API_KEY")
+        api_key = api_key_override or _resolve_env_var(api_cfg.get("api_key")) or os.getenv("OPENAI_API_KEY")
         if not api_key:
             raise LLMConfigError("OPENAI_API_KEY not set for OpenAI models")
 
@@ -226,6 +240,9 @@ def get_tooling_config() -> Dict[str, Any]:
             merged[key] = value
         return merged
     return defaults
+
+
+
 
 
 

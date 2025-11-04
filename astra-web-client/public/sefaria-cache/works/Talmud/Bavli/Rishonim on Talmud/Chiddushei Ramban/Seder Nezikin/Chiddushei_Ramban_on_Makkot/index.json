@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Ramban on Makkot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Chiddushei Ramban",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ramban",
+          "makkot"
+        ]
+      }
+    ],
+    "lengths": [
+      48,
+      76
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושי רמב\"ן על מכות",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Ramban on Makkot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Ramban on Makkot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:06.994Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Ramban%20on%20Makkot"
+}

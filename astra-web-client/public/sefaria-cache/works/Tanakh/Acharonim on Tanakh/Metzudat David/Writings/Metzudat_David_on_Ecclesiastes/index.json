@@ -1,0 +1,77 @@
+{
+  "title": "Metzudat David on Ecclesiastes",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "ecclesiastes"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      219,
+      555
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Eccles."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ecc"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Kohelet"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ecc."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Koheleth"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על קהלת",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Ecclesiastes",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Ecclesiastes"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.134Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Ecclesiastes"
+}

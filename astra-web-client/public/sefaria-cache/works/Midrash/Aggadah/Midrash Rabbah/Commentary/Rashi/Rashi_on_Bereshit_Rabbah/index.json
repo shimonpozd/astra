@@ -1,0 +1,82 @@
+{
+  "title": "Rashi on Bereshit Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah",
+    "Commentary",
+    "Rashi"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "genesis",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rashi",
+          "midrash",
+          "genesis",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rashi",
+          "midrash-rabbah",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      100,
+      751,
+      3024
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רש״י על בראשית רבה",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על בראשית רבה",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על בראשית רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Bereshit Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Bereshit Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.387Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Bereshit%20Rabbah"
+}

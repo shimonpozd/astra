@@ -1,0 +1,45 @@
+{
+  "title": "Peirush on Mishneh Torah, Repentance",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Comment",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "lengths": [
+      10,
+      3,
+      4
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "פירוש על משנה תורה, הלכות תשובה",
+        "primary": true
+      },
+      {
+        "text": "Peirush on Mishneh Torah, Repentance",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Peirush on Mishneh Torah, Repentance"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.961Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Peirush%20on%20Mishneh%20Torah%2C%20Repentance"
+}

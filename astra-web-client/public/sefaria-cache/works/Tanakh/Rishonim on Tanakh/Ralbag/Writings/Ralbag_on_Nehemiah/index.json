@@ -1,0 +1,77 @@
+{
+  "title": "Ralbag on Nehemiah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "nehemiah"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      179,
+      223
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on Neh."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Neh"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Neh."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Neh"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Nehemiah"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על נחמיה",
+        "primary": true
+      },
+      {
+        "text": "Ralbag on Nehemiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on Nehemiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.501Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20Nehemiah"
+}

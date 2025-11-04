@@ -1,0 +1,43 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    4,
+    8,
+    0,
+    6,
+    1,
+    4,
+    6,
+    1,
+    4,
+    1,
+    2,
+    4,
+    7,
+    2,
+    4,
+    11,
+    6,
+    1,
+    6,
+    13,
+    8,
+    4,
+    10,
+    13,
+    7,
+    7,
+    4,
+    2,
+    8,
+    2,
+    7,
+    4
+  ],
+  "fetchedAt": "2025-10-30T14:22:25.914Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20HaBach%20on%20Rif%20Megillah"
+}

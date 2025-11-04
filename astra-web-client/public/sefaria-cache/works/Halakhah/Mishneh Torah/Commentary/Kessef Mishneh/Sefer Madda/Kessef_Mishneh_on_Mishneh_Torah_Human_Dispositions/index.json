@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Human Dispositions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "human-dispositions"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      35,
+      73
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות דעות",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Human Dispositions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Human Dispositions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.637Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Human%20Dispositions"
+}

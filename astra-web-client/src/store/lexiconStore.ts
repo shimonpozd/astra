@@ -1,6 +1,7 @@
 
 import { create } from 'zustand';
 import { api } from '../services/api';
+import { debugLog } from '../utils/debugLogger';
 
 interface LexiconState {
   term: string | null;
@@ -23,19 +24,19 @@ export const useLexiconStore = create<LexiconState>((set, get) => ({
   error: null,
 
   setSelection: (term, context) => {
-    console.log('[LexiconStore] setSelection:', term, context);
+    debugLog('[LexiconStore] setSelection:', term, context);
     set({ term, context });
   },
 
   fetchExplanation: async () => {
     const { term, context, isLoading } = get();
-    console.log('[LexiconStore] fetchExplanation called, term:', term, 'context:', context, 'isLoading:', isLoading);
+    debugLog('[LexiconStore] fetchExplanation called, term:', term, 'context:', context, 'isLoading:', isLoading);
     if (!term || isLoading) {
-      console.log('[LexiconStore] Skipping fetch: no term or already loading');
+      debugLog('[LexiconStore] Skipping fetch: no term or already loading');
       return; // Prevent concurrent fetches
     }
 
-    console.log('[LexiconStore] Starting fetch, opening panel');
+    debugLog('[LexiconStore] Starting fetch, opening panel');
     set({ isLoading: true, explanation: '', error: null, isPanelOpen: true });
 
     try {
@@ -47,7 +48,7 @@ export const useLexiconStore = create<LexiconState>((set, get) => ({
         },
         onComplete: () => {
           const fullExplanation = chunks.join('');
-          console.log('[LexiconStore] Fetch complete, explanation:', fullExplanation);
+          debugLog('[LexiconStore] Fetch complete, explanation:', fullExplanation);
           set({ explanation: fullExplanation, isLoading: false });
         },
         onError: (error: Error) => {

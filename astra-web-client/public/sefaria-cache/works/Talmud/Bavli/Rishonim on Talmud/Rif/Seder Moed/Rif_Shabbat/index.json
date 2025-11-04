@@ -1,0 +1,505 @@
+{
+  "title": "Rif Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rif",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      1103
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רי״ף שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רי”ף שבת",
+        "lang": "he"
+      },
+      {
+        "text": "רי\"ף שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rif Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rif Shabbat"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 1a:1-8b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "יציאות השבת",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 8b:6-15a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "במה מדליקין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 15b:1-21b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כירה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 21b:7-23b:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "במה טומנין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 24a:1-25b:13",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "במה בהמה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 25b:14-30b:25",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "במה אשה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 31a:1-33a:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כלל גדול",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 33a:6-34b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המוציא יין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 34b:11-35a:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "אמר רבי עקיבא",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 35a:9-36a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המצניע",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 36a:8-37a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 11",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הזורק",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 37a:3-37b:10",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 12",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הבונה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 37b:11-38b:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 13",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "האורג",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 38b:4-41a:4",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 14",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שמנה שרצים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 41a:5-42b:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 15",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ואלו קשרים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 42b:6-47a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 16",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל כתבי",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 47a:3-49b:8",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 17",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כל הכלים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 50a:1-52a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 18",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מפנין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 52a:7-56a:7",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 19",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "רבי אליעזר דמילה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 56a:8-59a:3",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 20",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "תולין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 59a:4-60a:2",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 21",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "נוטל אדם את בנו",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 60a:3-63a:5",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 22",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "חבית",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 63a:6-65b:16",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 23",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שואל",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Rif Shabbat 65b:17-68a:6",
+          "includeSections": true,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 24",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מי שהחשיך",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:07.059Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rif%20Shabbat"
+}

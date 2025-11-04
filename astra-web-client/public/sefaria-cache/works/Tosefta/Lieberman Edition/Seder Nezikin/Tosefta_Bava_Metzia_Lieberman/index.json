@@ -1,0 +1,52 @@
+{
+  "title": "Tosefta Bava Metzia (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      285
+    ],
+    "titles": [
+      {
+        "text": "תוספתא בבא מציעא (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "תוספתא ב\"מ",
+        "lang": "he"
+      },
+      {
+        "text": "Tosefta Bava Metzia (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Bava Metzia (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.961Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Bava%20Metzia%20(Lieberman)"
+}

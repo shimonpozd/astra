@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    23,
+    21,
+    19,
+    35,
+    30,
+    31,
+    22,
+    13
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.021Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Levirate%20Marriage%20and%20Release"
+}

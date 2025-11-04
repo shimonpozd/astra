@@ -1,0 +1,186 @@
+{
+  "title": "Mishneh Torah, The Sanhedrin and the Penalties within Their Jurisdiction",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      }
+    ],
+    "lengths": [
+      26,
+      254
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Sanhedrin veha'Onashin haMesurin lahem",
+        "lang": "en"
+      },
+      {
+        "text": "Hilkhot Sanhedrin",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הלכות סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' סנהדרין והעונשין המסורין להם",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות סנהדרין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות סנהדרין והעונשין המסורין להם",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, The Sanhedrin and the Penalties within Their Jurisdiction",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, The Sanhedrin and the Penalties within Their Jurisdiction"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.494Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20The%20Sanhedrin%20and%20the%20Penalties%20within%20Their%20Jurisdiction"
+}

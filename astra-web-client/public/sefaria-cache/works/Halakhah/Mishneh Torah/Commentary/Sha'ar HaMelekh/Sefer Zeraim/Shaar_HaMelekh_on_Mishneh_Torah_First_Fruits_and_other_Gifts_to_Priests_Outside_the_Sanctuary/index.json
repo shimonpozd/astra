@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      6,
+      6
+    ],
+    "titles": [
+      {
+        "text": "שער המלך על משנה תורה, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.067Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20First%20Fruits%20and%20other%20Gifts%20to%20Priests%20Outside%20the%20Sanctuary"
+}

@@ -1,0 +1,173 @@
+{
+  "title": "Ralbag on I Samuel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "i-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      267,
+      318
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on I Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on First Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Shmuel Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Samuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Shmuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Shemuel"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on First Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Shmuel Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Samuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Shmuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Shemuel"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Samuel"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שמואל א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על ש״א"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על ש\"א"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שמואל א׳"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שמואל א'"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שמ״א"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שמ\"א"
+      },
+      {
+        "text": "Ralbag on I Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on I Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.419Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20I%20Samuel"
+}

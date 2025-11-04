@@ -1,0 +1,105 @@
+{
+  "title": "Devarim Rabbah",
+  "categories": [
+    "Midrash",
+    "Aggadah",
+    "Midrash Rabbah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "deuteronomy",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash",
+          "deuteronomy",
+          "rabbah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "midrash-rabbah",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      17,
+      162
+    ],
+    "titles": [
+      {
+        "text": "Dvarim Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Dvarim Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "Deuteronomy Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "D'varim Rabbah",
+        "lang": "en"
+      },
+      {
+        "text": "D'varim Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Devarim Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Deuteronomy Rabba",
+        "lang": "en"
+      },
+      {
+        "text": "Deut. R.",
+        "lang": "en"
+      },
+      {
+        "text": "דב\"ר",
+        "lang": "he"
+      },
+      {
+        "text": "דב״ר",
+        "lang": "he"
+      },
+      {
+        "text": "דב”ר",
+        "lang": "he"
+      },
+      {
+        "text": "דברים רבה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Devarim Rabbah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Devarim Rabbah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.345Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Devarim%20Rabbah"
+}

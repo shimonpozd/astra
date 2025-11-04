@@ -1,0 +1,60 @@
+{
+  "title": "Peri Chadash on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Peri Chadash",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "peri-chadash",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "peri-chadash",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      16,
+      17
+    ],
+    "titles": [
+      {
+        "text": "פרי חדש על משנה תורה, הלכות יסודי התורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Peri Chadash on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Peri Chadash on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.707Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Peri%20Chadash%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

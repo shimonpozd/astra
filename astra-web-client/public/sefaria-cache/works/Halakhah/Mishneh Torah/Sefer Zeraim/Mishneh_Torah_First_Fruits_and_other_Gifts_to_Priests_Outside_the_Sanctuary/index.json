@@ -1,0 +1,242 @@
+{
+  "title": "Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      224
+    ],
+    "titles": [
+      {
+        "text": "Rambam, First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Bikkurim",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, בכורים",
+        "lang": "he"
+      },
+      {
+        "text": "הל' ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות ביכורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.113Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20First%20Fruits%20and%20other%20Gifts%20to%20Priests%20Outside%20the%20Sanctuary"
+}

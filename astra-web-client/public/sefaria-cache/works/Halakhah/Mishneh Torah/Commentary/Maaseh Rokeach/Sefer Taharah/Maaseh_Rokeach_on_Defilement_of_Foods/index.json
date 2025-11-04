@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Defilement of Foods",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "defilement-of-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "defilement-of-foods"
+        ]
+      }
+    ],
+    "lengths": [
+      16,
+      108,
+      147
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות טומאת אוכלין",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Defilement of Foods",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Defilement of Foods"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.885Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Defilement%20of%20Foods"
+}

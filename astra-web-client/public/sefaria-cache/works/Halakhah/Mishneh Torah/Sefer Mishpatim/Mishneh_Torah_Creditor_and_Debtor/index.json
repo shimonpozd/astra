@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Creditor and Debtor",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "creditor-and-debtor"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      298
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Creditor and Debtor"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, To`en veNit`an"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Creditor and Debtor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Creditor and Debtor"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, To`en veNit`an"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot To`en veNit`an"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot To`en veNit`an"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מלווה ולווה"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot To`en veNit`an"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot To`en veNit`an"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מלווה ולווה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מלווה ולווה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מלווה ולווה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מלווה ולווה"
+      },
+      {
+        "text": "רמב״ם, הלכות מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מלווה ולווה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מלווה ולווה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Creditor and Debtor",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Creditor and Debtor"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.446Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Creditor%20and%20Debtor"
+}

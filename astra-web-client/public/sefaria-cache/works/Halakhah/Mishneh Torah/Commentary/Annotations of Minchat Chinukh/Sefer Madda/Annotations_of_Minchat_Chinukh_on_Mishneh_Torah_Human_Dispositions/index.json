@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of Minchat Chinukh on Mishneh Torah, Human Dispositions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Minchat Chinukh",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "hilchot",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "human-dispositions"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      4,
+      4
+    ],
+    "titles": [
+      {
+        "text": "חידושים ומקורים מבעל מנחת חינוך על משנה תורה, הלכות דעות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Annotations of Minchat Chinukh on Mishneh Torah, Human Dispositions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of Minchat Chinukh on Mishneh Torah, Human Dispositions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.795Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20Minchat%20Chinukh%20on%20Mishneh%20Torah%2C%20Human%20Dispositions"
+}

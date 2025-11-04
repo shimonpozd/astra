@@ -1,0 +1,61 @@
+{
+  "title": "Gur Aryeh on Bereishit",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Gur Aryeh",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gur-aryeh",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      782,
+      1418
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Gur Aryeh on Genesis"
+      },
+      {
+        "text": "גור אריה על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gur Aryeh on Bereishit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gur Aryeh on Bereishit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.178Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gur%20Aryeh%20on%20Bereishit"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    4,
+    6,
+    11,
+    9,
+    7,
+    6,
+    7,
+    7,
+    12,
+    10
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.284Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Bava%20Kamma"
+}

@@ -1,0 +1,181 @@
+{
+  "title": "Rashbam on Exodus",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashbam",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashbam",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      534,
+      789
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Exod."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Ex."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Exo"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Shmot"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Shemot"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Ex"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Exo."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Exod"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Shemoth"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Exodus"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Exod."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Ex."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Exo"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Shmot"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Shemot"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Ex"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Exo."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Exod"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Shemoth"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Exodus"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Exod."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Ex."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Exo"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Shmot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Shemot"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Ex"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Exo."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Exod"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Shemoth"
+      },
+      {
+        "text": "רשב״ם על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "רשב\"ם על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashbam on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashbam on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.547Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashbam%20on%20Exodus"
+}

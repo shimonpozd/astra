@@ -1,0 +1,60 @@
+{
+  "title": "Yad David on Mishneh Torah, Offerings for Unintentional Transgressions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad David",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-david",
+          "hilchot",
+          "offerings-for-unintentional-transgressions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-david",
+          "offerings-for-unintentional-transgressions"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "יד דוד על משנה תורה, הלכות שגגות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yad David on Mishneh Torah, Offerings for Unintentional Transgressions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad David on Mishneh Torah, Offerings for Unintentional Transgressions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.856Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20David%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Unintentional%20Transgressions"
+}

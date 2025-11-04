@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      137,
+      335
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות ביאת מקדש",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.995Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

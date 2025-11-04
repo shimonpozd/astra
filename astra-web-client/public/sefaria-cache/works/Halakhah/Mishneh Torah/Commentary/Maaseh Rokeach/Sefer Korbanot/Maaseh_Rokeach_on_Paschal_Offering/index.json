@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Paschal Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "paschal-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      68,
+      90
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Paschal Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Paschal Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.779Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Paschal%20Offering"
+}

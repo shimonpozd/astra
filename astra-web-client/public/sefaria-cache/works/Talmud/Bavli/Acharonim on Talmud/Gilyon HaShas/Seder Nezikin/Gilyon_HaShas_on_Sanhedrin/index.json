@@ -1,0 +1,59 @@
+{
+  "title": "Gilyon HaShas on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Gilyon HaShas",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gilyon-hashas",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      117
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "גליון הש\"ס על סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gilyon HaShas on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gilyon HaShas on Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.555Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gilyon%20HaShas%20on%20Sanhedrin"
+}

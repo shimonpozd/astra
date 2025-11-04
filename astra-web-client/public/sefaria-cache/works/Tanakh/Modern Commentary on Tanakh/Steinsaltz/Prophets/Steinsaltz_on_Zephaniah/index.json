@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on Zephaniah",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "zephaniah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      53
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על צפניה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Zephaniah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Zephaniah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:05.673Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20Zephaniah"
+}

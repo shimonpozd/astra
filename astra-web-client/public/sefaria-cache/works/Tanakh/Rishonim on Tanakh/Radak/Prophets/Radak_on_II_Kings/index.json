@@ -1,0 +1,61 @@
+{
+  "title": "Radak on II Kings",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Radak",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "radak",
+          "ii-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      429,
+      719
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "רד\"ק על מלכים ב'",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "רד\"ק על מלכים ב",
+        "lang": "he"
+      },
+      {
+        "text": "Radak on II Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Radak on II Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:20:43.529Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Radak%20on%20II%20Kings"
+}

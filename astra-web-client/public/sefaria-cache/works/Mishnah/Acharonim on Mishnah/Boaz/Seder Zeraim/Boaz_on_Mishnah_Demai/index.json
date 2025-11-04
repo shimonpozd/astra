@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Demai",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "demai"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      27
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה דמאי",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Demai",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Demai"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:26.697Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Demai"
+}

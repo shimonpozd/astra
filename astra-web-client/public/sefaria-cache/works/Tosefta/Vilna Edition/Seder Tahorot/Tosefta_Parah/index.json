@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Parah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "parah"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      79
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Parah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Parah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Par."
+      },
+      {
+        "text": "תוספתא פרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Parah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Parah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.822Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Parah"
+}

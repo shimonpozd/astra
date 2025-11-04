@@ -1,0 +1,173 @@
+{
+  "title": "Malbim on I Samuel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "i-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      681,
+      830
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on I Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on 1Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on First Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Shmuel Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on 1Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on I Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Samuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Shmuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on 1 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on I Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on I Shemuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on 1Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on First Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Shmuel Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on 1Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Samuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Shmuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on 1 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Shemuel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on I Samuel"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על שמואל א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על ש״א"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על ש\"א"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על שמואל א׳"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על שמואל א'"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על שמ״א"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על שמ\"א"
+      },
+      {
+        "text": "Malbim on I Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on I Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.482Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20I%20Samuel"
+}

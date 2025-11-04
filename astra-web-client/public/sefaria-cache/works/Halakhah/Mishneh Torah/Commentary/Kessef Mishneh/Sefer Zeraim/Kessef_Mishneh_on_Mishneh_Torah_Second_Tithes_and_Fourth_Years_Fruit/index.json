@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Second Tithes and Fourth Year's Fruit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "second-tithes-and-fourth-years-fruit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "second-tithes-and-fourth-years-fruit"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      173,
+      336
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מעשר שני ונטע רבעי",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Second Tithes and Fourth Year's Fruit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Second Tithes and Fourth Year's Fruit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.951Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Second%20Tithes%20and%20Fourth%20Year's%20Fruit"
+}

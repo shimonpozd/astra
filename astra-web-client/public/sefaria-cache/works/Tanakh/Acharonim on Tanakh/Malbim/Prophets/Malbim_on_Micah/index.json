@@ -1,0 +1,93 @@
+{
+  "title": "Malbim on Micah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "micah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      97,
+      107
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Mic."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Mic"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Mikha"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Michah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Mic."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Mic"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Mikha"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Michah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Micah"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על מיכה",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Micah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Micah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.576Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Micah"
+}

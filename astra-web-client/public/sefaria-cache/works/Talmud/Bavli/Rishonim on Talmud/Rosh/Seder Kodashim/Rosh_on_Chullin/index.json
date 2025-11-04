@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      283,
+      243,
+      330
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על חולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.326Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Chullin"
+}

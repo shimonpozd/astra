@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Chagigah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "chagigah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      172,
+      172
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Chagigah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Chagigah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:23.863Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Chagigah"
+}

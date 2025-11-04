@@ -1,0 +1,113 @@
+{
+  "title": "Second Version of Ibn Ezra on Esther",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ibn Ezra",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "second-version-of-ibn-ezra",
+          "esther"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      152,
+      336
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Abenezra on Est.",
+        "lang": "en"
+      },
+      {
+        "text": "Abenezra on Est",
+        "lang": "en"
+      },
+      {
+        "text": "Abenezra on Ester",
+        "lang": "en"
+      },
+      {
+        "text": "Abenezra on Esther",
+        "lang": "en"
+      },
+      {
+        "text": "Aben Ezra, Eben Ezra on Est.",
+        "lang": "en"
+      },
+      {
+        "text": "Aben Ezra, Eben Ezra on Est",
+        "lang": "en"
+      },
+      {
+        "text": "Aben Ezra, Eben Ezra on Ester",
+        "lang": "en"
+      },
+      {
+        "text": "Aben Ezra, Eben Ezra on Esther",
+        "lang": "en"
+      },
+      {
+        "text": "Second Version of Ibn Ezra on Est.",
+        "lang": "en"
+      },
+      {
+        "text": "Second Version of Ibn Ezra on Est",
+        "lang": "en"
+      },
+      {
+        "text": "Second Version of Ibn Ezra on Ester",
+        "lang": "en"
+      },
+      {
+        "text": "אבן עזרא מהדורא תניינא על אסתר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "אבן עזרא על אסתר על אסתר",
+        "lang": "he"
+      },
+      {
+        "text": "ויוסף אברהם על אסתר",
+        "lang": "he"
+      },
+      {
+        "text": "אבן עזרא מהדורא תננינא על אסתר",
+        "lang": "he"
+      },
+      {
+        "text": "Second Version of Ibn Ezra on Esther",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Second Version of Ibn Ezra on Esther"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.692Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Second%20Version%20of%20Ibn%20Ezra%20on%20Esther"
+}

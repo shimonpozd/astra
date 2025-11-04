@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Appraisals and Devoted Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "appraisals-and-devoted-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      5,
+      5
+    ],
+    "titles": [
+      {
+        "text": "יצחק ירנן על משנה תורה, הלכות ערכים וחרמין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Appraisals and Devoted Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Appraisals and Devoted Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.893Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Appraisals%20and%20Devoted%20Property"
+}

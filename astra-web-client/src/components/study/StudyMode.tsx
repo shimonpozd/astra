@@ -8,6 +8,7 @@ import WorkbenchPanelInline from './WorkbenchPanelInline';
 import { api } from '../../services/api';
 import { useLexiconStore } from '../../store/lexiconStore';
 import { Message } from '../../services/api';
+import { debugLog } from '../../utils/debugLogger';
 
 interface StudyModeProps {
   snapshot: StudySnapshot | null;
@@ -154,7 +155,7 @@ export default function StudyMode({
   } : null;
 
   // Debug logging for segments
-  console.log('📖 StudyMode segments:', {
+  debugLog('📖 StudyMode segments:', {
     hasSnapshot: !!snapshot,
     segmentsCount: snapshot?.segments?.length || 0,
     focusIndex: snapshot?.focusIndex,
@@ -187,9 +188,9 @@ export default function StudyMode({
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.left?.ref}
                 selected={selectedPanelId === 'left_workbench'}
                 onDropRef={(ref: string, dragData) => {
-                  console.log('StudyMode: Dropped on left workbench:', ref, dragData);
+                  debugLog('StudyMode: Dropped on left workbench:', ref, dragData);
                   if (dragData?.type === 'group') {
-                    console.log('Group data:', dragData.data);
+                    debugLog('Group data:', dragData.data);
                     // TODO: Здесь можно добавить специальную обработку для групп
                     // Например, добавить все части группы в workbench или показать специальный UI
                   }
@@ -252,9 +253,9 @@ export default function StudyMode({
                 active={snapshot?.discussion_focus_ref === snapshot?.workbench?.right?.ref}
                 selected={selectedPanelId === 'right_workbench'}
                 onDropRef={(ref: string, dragData) => {
-                  console.log('StudyMode: Dropped on right workbench:', ref, dragData);
+                  debugLog('StudyMode: Dropped on right workbench:', ref, dragData);
                   if (dragData?.type === 'group') {
-                    console.log('Group data:', dragData.data);
+                    debugLog('Group data:', dragData.data);
                     // TODO: Здесь можно добавить специальную обработку для групп
                     // Например, добавить все части группы в workbench или показать специальный UI
                   }

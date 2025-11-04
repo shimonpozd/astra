@@ -1,0 +1,15 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    22,
+    23,
+    18,
+    22
+  ],
+  "fetchedAt": "2025-10-30T14:21:06.400Z",
+  "source": "https://www.sefaria.org/api/shape/Steinsaltz%20on%20Ruth"
+}

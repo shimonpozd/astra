@@ -1,0 +1,42 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    3,
+    1,
+    0,
+    1,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    3,
+    0,
+    2
+  ],
+  "fetchedAt": "2025-10-30T14:22:28.077Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20MeAlfas%20Yashan%20on%20Megillah"
+}

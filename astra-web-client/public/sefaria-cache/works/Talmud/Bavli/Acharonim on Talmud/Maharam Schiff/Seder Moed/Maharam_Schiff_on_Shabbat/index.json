@@ -1,0 +1,55 @@
+{
+  "title": "Maharam Schiff on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam Schiff",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      314,
+      65
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מהר\"ם שיף על שבת",
+        "primary": true
+      },
+      {
+        "text": "Maharam Shif on Shabbat",
+        "lang": "en"
+      },
+      {
+        "text": "Maharam Schiff on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam Schiff on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.876Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20Schiff%20on%20Shabbat"
+}

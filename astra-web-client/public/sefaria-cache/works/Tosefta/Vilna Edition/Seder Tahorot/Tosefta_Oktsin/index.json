@@ -1,0 +1,84 @@
+{
+  "title": "Tosefta Oktsin",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "oktzin"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      21
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Oktzin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Oktsin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Uktsin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Uktsin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Uktzin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Uktzin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Uktzin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ukts."
+      },
+      {
+        "text": "Tosefta Uktsin",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא עוקצין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Oktsin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Oktsin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.881Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Oktsin"
+}

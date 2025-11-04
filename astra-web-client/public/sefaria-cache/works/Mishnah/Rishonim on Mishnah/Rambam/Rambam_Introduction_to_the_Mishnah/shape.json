@@ -1,0 +1,40 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    3,
+    27,
+    4,
+    1,
+    5,
+    7,
+    49,
+    42,
+    1,
+    1,
+    13,
+    4,
+    5,
+    7,
+    95,
+    42,
+    61,
+    12,
+    2,
+    2,
+    5,
+    5,
+    11,
+    8,
+    17,
+    5,
+    4,
+    5,
+    23
+  ],
+  "fetchedAt": "2025-10-30T14:21:16.609Z",
+  "source": "https://www.sefaria.org/api/shape/Rambam%20Introduction%20to%20the%20Mishnah"
+}

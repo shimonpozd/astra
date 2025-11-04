@@ -1,0 +1,98 @@
+{
+  "title": "Mishnah Kinnim",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "kinnim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kinnim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kinnim"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      15
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Kinnim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Kinnim"
+      },
+      {
+        "lang": "en",
+        "text": "M Kinnim"
+      },
+      {
+        "lang": "he",
+        "text": "קינים"
+      },
+      {
+        "lang": "he",
+        "text": "קנים"
+      },
+      {
+        "lang": "he",
+        "text": "משנה קנים"
+      },
+      {
+        "lang": "en",
+        "text": "Kinn."
+      },
+      {
+        "lang": "en",
+        "text": "Ḳinnim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Kinn."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ḳinnim"
+      },
+      {
+        "text": "משנה קינים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Kinnim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Kinnim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.412Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Kinnim"
+}

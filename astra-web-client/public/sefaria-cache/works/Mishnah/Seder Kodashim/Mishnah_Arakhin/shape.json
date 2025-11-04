@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    4,
+    6,
+    5,
+    4,
+    6,
+    5,
+    5,
+    7,
+    8
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.395Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Arakhin"
+}

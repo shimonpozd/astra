@@ -1,0 +1,101 @@
+{
+  "title": "Ralbag on Judges",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "judges"
+        ]
+      }
+    ],
+    "lengths": [
+      21,
+      206,
+      233
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on Shoftim"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Jdg"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Judg"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Jdg."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Judg."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Shoftim"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Jdg"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Judg"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Jdg."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Judg."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Judges"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על שופטים",
+        "primary": true
+      },
+      {
+        "text": "Ralbag on Judges",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on Judges"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.414Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20Judges"
+}

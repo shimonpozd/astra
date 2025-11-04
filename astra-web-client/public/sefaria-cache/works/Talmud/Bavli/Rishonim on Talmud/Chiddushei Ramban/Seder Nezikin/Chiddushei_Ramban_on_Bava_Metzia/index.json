@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Ramban on Bava Metzia",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Chiddushei Ramban",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ramban",
+          "bava-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      237,
+      438
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושי רמב\"ן על בבא מציעא",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Ramban on Bava Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Ramban on Bava Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:06.958Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Ramban%20on%20Bava%20Metzia"
+}

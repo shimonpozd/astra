@@ -1,0 +1,55 @@
+{
+  "title": "Alon Bakhut on Lamentations",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "alon-bakhut",
+          "lamentations"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      136,
+      192
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "אלון בכות על איכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Alon Bakhut on Lamentations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Alon Bakhut on Lamentations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.776Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Alon%20Bakhut%20on%20Lamentations"
+}

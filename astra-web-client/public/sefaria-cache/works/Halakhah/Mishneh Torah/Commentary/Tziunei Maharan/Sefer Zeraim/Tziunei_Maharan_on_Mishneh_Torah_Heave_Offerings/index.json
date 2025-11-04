@@ -1,0 +1,60 @@
+{
+  "title": "Tziunei Maharan on Mishneh Torah, Heave Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tziunei Maharan",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tziunei-maharan",
+          "heave-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      11,
+      11
+    ],
+    "titles": [
+      {
+        "text": "ציוני מהר\"ן על משנה תורה, הלכות תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tziunei Maharan on Mishneh Torah, Heave Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tziunei Maharan on Mishneh Torah, Heave Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:31.161Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tziunei%20Maharan%20on%20Mishneh%20Torah%2C%20Heave%20Offerings"
+}

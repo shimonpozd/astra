@@ -1,0 +1,18 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    12,
+    16,
+    15,
+    18,
+    13,
+    15,
+    11
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.188Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Things%20Forbidden%20on%20the%20Altar"
+}

@@ -198,6 +198,12 @@ sefaria_mcp_timeout_sec = 30
 [services.brain]
 # Brain service specific settings
 log_level = "DEBUG"
+database_url = "postgresql+asyncpg://astra:astra@localhost:5432/astra_brain"
+
+[services.brain.jwt]
+secret = "change-me"
+algorithm = "HS256"
+access_token_expires_minutes = 60
 port = 7030
 admin_token = "super-secret-token"
 cors_origins = "http://localhost:5173,http://localhost:3000"

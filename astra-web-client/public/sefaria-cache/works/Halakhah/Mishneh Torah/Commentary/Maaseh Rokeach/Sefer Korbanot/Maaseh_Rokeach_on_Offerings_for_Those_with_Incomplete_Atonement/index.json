@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Offerings for Those with Incomplete Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      27,
+      33
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מחוסרי כפרה",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Offerings for Those with Incomplete Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Offerings for Those with Incomplete Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.826Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Offerings%20for%20Those%20with%20Incomplete%20Atonement"
+}

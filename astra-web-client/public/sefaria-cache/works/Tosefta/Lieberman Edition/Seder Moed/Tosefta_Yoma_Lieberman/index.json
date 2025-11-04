@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Yoma (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "yoma"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      76
+    ],
+    "titles": [
+      {
+        "text": "תוספתא יומא (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Yoma (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Yoma (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.797Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Yoma%20(Lieberman)"
+}

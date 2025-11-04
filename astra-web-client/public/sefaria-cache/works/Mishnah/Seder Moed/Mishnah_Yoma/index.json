@@ -1,0 +1,70 @@
+{
+  "title": "Mishnah Yoma",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yoma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "yoma"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      61
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Yoma"
+      },
+      {
+        "lang": "en",
+        "text": "M. Yoma"
+      },
+      {
+        "text": "משנה יומא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Yoma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Yoma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.136Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Yoma"
+}

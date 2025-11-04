@@ -1,0 +1,49 @@
+{
+  "title": "Boaz on Pirkei Avot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "pirkei-avot"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      10
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה אבות",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Pirkei Avot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Pirkei Avot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:28.853Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Pirkei%20Avot"
+}

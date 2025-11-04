@@ -1,0 +1,50 @@
+{
+  "title": "Penei Yehoshua on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Penei Yehoshua"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      98,
+      80
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "פני יהושע על שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "Penei Yehoshua on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Penei Yehoshua on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.332Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Penei%20Yehoshua%20on%20Shevuot"
+}

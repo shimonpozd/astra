@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      59,
+      81
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות שופר וסוכה ולולב",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.798Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

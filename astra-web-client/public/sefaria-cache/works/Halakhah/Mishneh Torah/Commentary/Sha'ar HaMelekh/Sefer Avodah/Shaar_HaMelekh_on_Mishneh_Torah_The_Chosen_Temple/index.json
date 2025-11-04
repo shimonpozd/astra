@@ -1,0 +1,60 @@
+{
+  "title": "Sha'ar HaMelekh on Mishneh Torah, The Chosen Temple",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Sha'ar HaMelekh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shaar-hamelekh",
+          "the-chosen-temple"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      4,
+      4
+    ],
+    "titles": [
+      {
+        "text": "שער המלך על משנה תורה, הלכות בית הבחירה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sha'ar HaMelekh on Mishneh Torah, The Chosen Temple",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sha'ar HaMelekh on Mishneh Torah, The Chosen Temple"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:29.097Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sha'ar%20HaMelekh%20on%20Mishneh%20Torah%2C%20The%20Chosen%20Temple"
+}

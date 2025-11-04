@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Arakhin",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "arakhin"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      44
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Arachin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Arachin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Arachin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Arakh."
+      },
+      {
+        "text": "תוספתא ערכין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Arakhin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Arakhin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.756Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Arakhin"
+}

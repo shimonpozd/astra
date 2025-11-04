@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    159,
+    102,
+    76,
+    49,
+    115,
+    64,
+    23,
+    71,
+    67,
+    10
+  ],
+  "fetchedAt": "2025-10-30T14:42:09.485Z",
+  "source": "http://localhost:8000/api/shape/Pilpula%20Charifta%20on%20Bava%20Metzia"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Nachal Eitan on Mishneh Torah, Ritual Slaughter",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Nachal Eitan",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "hilchot",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "ritual-slaughter"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      8,
+      8
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "נחל איתן על משנה תורה, הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "Nachal Eitan on Mishneh Torah, Ritual Slaughter",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nachal Eitan on Mishneh Torah, Ritual Slaughter"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.992Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Nachal%20Eitan%20on%20Mishneh%20Torah%2C%20Ritual%20Slaughter"
+}

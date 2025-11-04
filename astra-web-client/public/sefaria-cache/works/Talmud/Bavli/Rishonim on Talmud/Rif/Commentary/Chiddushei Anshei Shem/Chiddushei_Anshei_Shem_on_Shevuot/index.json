@@ -1,0 +1,55 @@
+{
+  "title": "Chiddushei Anshei Shem on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Chiddushei Anshei Shem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-anshei-shem",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      66,
+      39
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "חידושי אנשי שם על שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Anshei Shem on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Anshei Shem on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:22.893Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Chiddushei%20Anshei%20Shem%20on%20Shevuot"
+}

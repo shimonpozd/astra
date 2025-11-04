@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '../../components/ui/dialog';
+import { debugLog } from '../../utils/debugLogger';
+import { authorizedFetch } from '../../lib/authorizedFetch';
 
 interface PersonalityListItem {
   id: string;
@@ -27,10 +29,9 @@ const PersonalityList: React.FC = () => {
 
   const fetchPersonalities = async () => {
     try {
-      const response = await fetch('/admin/personalities', {
+      const response = await authorizedFetch('/admin/personalities', {
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
       if (response.ok) {
         const data = await response.json();
@@ -49,18 +50,17 @@ const PersonalityList: React.FC = () => {
     if (!selectedPersonality) return;
 
     try {
-      const response = await fetch(`/admin/personalities/${selectedPersonality.id}`, {
+      const response = await authorizedFetch(`/admin/personalities/${selectedPersonality.id}`, {
         method: 'DELETE',
         headers: {
-          'X-Admin-Token': 'super-secret-token'
-        }
+                  }
       });
 
       if (response.ok) {
         await fetchPersonalities();
         setIsDeleteDialogOpen(false);
         setSelectedPersonality(null);
-        console.log('Personality deleted successfully');
+        debugLog('Personality deleted successfully');
       } else {
         console.error('Failed to delete personality');
       }

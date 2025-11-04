@@ -1,0 +1,27 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    16,
+    9,
+    9,
+    6,
+    12,
+    12,
+    12,
+    14,
+    7,
+    13,
+    9,
+    12,
+    11,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:08.754Z",
+  "source": "http://localhost:8000/api/shape/Rabbeinu%20Chananel%20on%20Horayot"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    10,
+    5,
+    9
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.207Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Moed%20Katan"
+}

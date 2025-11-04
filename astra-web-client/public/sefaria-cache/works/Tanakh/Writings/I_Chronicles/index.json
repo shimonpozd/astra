@@ -1,0 +1,184 @@
+{
+  "title": "I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "i-chronicles"
+        ]
+      },
+      {
+        "term_slugs": [
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      943
+    ],
+    "titles": [
+      {
+        "text": "1 Chronicles",
+        "lang": "en"
+      },
+      {
+        "text": "1Ch.",
+        "lang": "en"
+      },
+      {
+        "text": "1 Chron",
+        "lang": "en"
+      },
+      {
+        "text": "1 Chr",
+        "lang": "en"
+      },
+      {
+        "text": "Chronicles I",
+        "lang": "en"
+      },
+      {
+        "text": "I Chr",
+        "lang": "en"
+      },
+      {
+        "text": "1 Chron.",
+        "lang": "en"
+      },
+      {
+        "text": "I Chr.",
+        "lang": "en"
+      },
+      {
+        "text": "I Divrei HaYamim",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei HaYamim I",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei HaYamim Aleph",
+        "lang": "en"
+      },
+      {
+        "text": "First Chronicles",
+        "lang": "en"
+      },
+      {
+        "text": "1Ch",
+        "lang": "en"
+      },
+      {
+        "text": "I Divrei Ha-yamim",
+        "lang": "en"
+      },
+      {
+        "text": "I Divrei Ha-Yamim",
+        "lang": "en"
+      },
+      {
+        "text": "I Divrei Hayomim",
+        "lang": "en"
+      },
+      {
+        "text": "I Chron.",
+        "lang": "en"
+      },
+      {
+        "text": "Chron. I",
+        "lang": "en"
+      },
+      {
+        "text": "First Chr.",
+        "lang": "en"
+      },
+      {
+        "text": "Divre HaYamim I",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei Hayamim I",
+        "lang": "en"
+      },
+      {
+        "text": "דברי הימים א׳",
+        "lang": "he"
+      },
+      {
+        "text": "דברי הימים א'",
+        "lang": "he"
+      },
+      {
+        "text": "דה\"א",
+        "lang": "he"
+      },
+      {
+        "text": "דה״א",
+        "lang": "he"
+      },
+      {
+        "text": "דהי''א",
+        "lang": "he"
+      },
+      {
+        "text": "דהי\"א",
+        "lang": "he"
+      },
+      {
+        "text": "דהי״א",
+        "lang": "he"
+      },
+      {
+        "text": "דה”א",
+        "lang": "he"
+      },
+      {
+        "text": "דהי”א",
+        "lang": "he"
+      },
+      {
+        "text": "דה״י א'",
+        "lang": "he"
+      },
+      {
+        "text": "דה\"י א'",
+        "lang": "he"
+      },
+      {
+        "text": "דברי הימים א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "דה”י א'",
+        "lang": "he"
+      },
+      {
+        "text": "I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.547Z",
+  "source": "http://localhost:8000/api/v2/raw/index/I%20Chronicles"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Yekar Tiferet on Mishneh Torah, Slaves",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yekar Tiferet",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yekar-tiferet",
+          "hilchot",
+          "slaves"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yekar-tiferet",
+          "slaves"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      106,
+      215
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יקר תפארת על משנה תורה, הלכות עבדים",
+        "lang": "he"
+      },
+      {
+        "text": "Yekar Tiferet on Mishneh Torah, Slaves",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yekar Tiferet on Mishneh Torah, Slaves"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.514Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yekar%20Tiferet%20on%20Mishneh%20Torah%2C%20Slaves"
+}

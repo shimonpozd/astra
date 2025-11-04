@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Halachot on Bava Batra",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Halachot",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-halachot",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      352,
+      853
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חדושי הלכות על בבא בתרא",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Halachot on Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Halachot on Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.005Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Halachot%20on%20Bava%20Batra"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Rest on the Tenth of Tishrei",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "יצחק ירנן על משנה תורה, הלכות שביתת עשור"
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Rest on the Tenth of Tishrei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Rest on the Tenth of Tishrei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.720Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Rest%20on%20the%20Tenth%20of%20Tishrei"
+}

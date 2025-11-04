@@ -1,0 +1,60 @@
+{
+  "title": "Annotations of Minchat Chinukh on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Annotations of Minchat Chinukh",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "annotations-of-minchat-chinukh",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      }
+    ],
+    "lengths": [
+      26,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושים ומקורים מבעל מנחת חינוך על משנה תורה, הלכות סנהדרין והעונשין המסורין להם",
+        "primary": true
+      },
+      {
+        "text": "Annotations of Minchat Chinukh on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Annotations of Minchat Chinukh on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:18.231Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Annotations%20of%20Minchat%20Chinukh%20on%20Mishneh%20Torah%2C%20The%20Sanhedrin%20and%20the%20Penalties%20within%20their%20Jurisdiction"
+}

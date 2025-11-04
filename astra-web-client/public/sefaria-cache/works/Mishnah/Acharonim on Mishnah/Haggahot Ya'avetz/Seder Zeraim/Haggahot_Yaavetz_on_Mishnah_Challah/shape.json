@@ -1,0 +1,25 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:31.576Z",
+  "source": "https://www.sefaria.org/api/shape/Haggahot%20Ya'avetz%20on%20Mishnah%20Challah"
+}

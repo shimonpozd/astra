@@ -1,5 +1,9 @@
-from fastapi import Request, HTTPException, Header
+from fastapi import Depends, Header, HTTPException, Request, status
 import redis.asyncio as redis
+
+from brain_service.models.db import User
+from brain_service.services.auth_service import AuthService
+from brain_service.services.user_service import UserService
 
 def get_redis_client(request: Request) -> redis.Redis:
     """Dependency to get the Redis client from the application state."""
@@ -56,8 +60,52 @@ def get_navigation_service(request: Request):
     return request.app.state.navigation_service
 
 
-def require_admin_token(x_admin_token: str = Header(None)):
+def get_user_service(request: Request) -> UserService:
+    service = getattr(request.app.state, "user_service", None)
+    if service is None:
+        raise HTTPException(status_code=503, detail="User service unavailable")
+    return service
+
+
+def get_auth_service(request: Request) -> AuthService:
+    service = getattr(request.app.state, "auth_service", None)
+    if service is None:
+        raise HTTPException(status_code=503, detail="Auth service unavailable")
+    return service
+
+
+async def get_current_user(
+    request: Request,
+    authorization: str = Header(None, alias="Authorization"),
+) -> User:
+    if not authorization:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authenticated")
+
+    scheme, _, token = authorization.partition(" ")
+    if scheme.lower() != "bearer" or not token:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid authorization header")
+
+    auth_service = get_auth_service(request)
+    try:
+        user = await auth_service.resolve_user(token)
+    except ValueError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+    if not user or not user.is_active:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User inactive or not found")
+
+    return user
+
+
+def require_admin_user(current_user: User = Depends(get_current_user)) -> User:
+    if current_user.role != "admin":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Admin privileges required")
+    return current_user
+
+
+def require_admin_token(request: Request, x_admin_token: str = Header(None)):
     """Dependency to require admin token for protected endpoints."""
-    if x_admin_token != "super-secret-token":
-        raise HTTPException(status_code=401, detail="Invalid admin token")
+    expected = getattr(request.app.state.settings, "ADMIN_TOKEN", None)
+    if not expected or x_admin_token != expected:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid admin token")
     return x_admin_token

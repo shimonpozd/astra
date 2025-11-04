@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Trespass",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "trespass"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "trespass"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      47,
+      67
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Trespass",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Trespass"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.775Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Trespass"
+}

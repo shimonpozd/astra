@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Vessels",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "vessels"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "vessels"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "vessels"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "vessels"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "vessels"
+        ]
+      }
+    ],
+    "lengths": [
+      28,
+      409
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Vessels"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Vessels"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Vessels"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות כלים"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Kelim"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' כלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' כלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות כלים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' כלים"
+      },
+      {
+        "text": "רמב״ם, הלכות כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' כלים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' כלים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות כלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Vessels",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Vessels"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.330Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Vessels"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Chullin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      283,
+      1153
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "רש\"ש על חולין"
+      },
+      {
+        "text": "Rashash on Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.894Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Chullin"
+}

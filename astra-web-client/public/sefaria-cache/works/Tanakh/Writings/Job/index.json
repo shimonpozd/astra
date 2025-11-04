@@ -1,0 +1,60 @@
+{
+  "title": "Job",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "job"
+        ]
+      },
+      {
+        "term_slugs": [
+          "job"
+        ]
+      }
+    ],
+    "lengths": [
+      42,
+      1070
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Iyov"
+      },
+      {
+        "lang": "en",
+        "text": "Iyyov"
+      },
+      {
+        "text": "איוב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Job",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Job"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.448Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Job"
+}

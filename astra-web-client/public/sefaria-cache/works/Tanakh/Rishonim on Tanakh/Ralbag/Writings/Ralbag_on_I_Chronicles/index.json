@@ -1,0 +1,197 @@
+{
+  "title": "Ralbag on I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      302,
+      340
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on 1 Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1Ch."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1 Chron"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1 Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Chronicles I"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1 Chron."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Chr."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Divrei HaYamim"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Divrei HaYamim I"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Divrei HaYamim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on First Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on 1Ch"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Divrei Ha-yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on I Divrei Ha-Yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1 Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1Ch."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1 Chron"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1 Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Chronicles I"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1 Chron."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Chr."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Divrei HaYamim"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Divrei HaYamim I"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Divrei HaYamim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on First Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on 1Ch"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Divrei Ha-yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Divrei Ha-Yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on I Chronicles"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על דברי הימים א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על דברי הימים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על דברי הימים א'"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על דה\"א"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על דה״א"
+      },
+      {
+        "text": "Ralbag on I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.510Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20I%20Chronicles"
+}

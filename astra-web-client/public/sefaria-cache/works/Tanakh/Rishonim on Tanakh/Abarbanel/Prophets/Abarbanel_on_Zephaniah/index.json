@@ -1,0 +1,58 @@
+{
+  "title": "Abarbanel on Zephaniah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Abarbanel",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "abarbanel",
+          "zephaniah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      38,
+      49
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "אברבנאל על צפניה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Abarbanel on Zephaniah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Abarbanel on Zephaniah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.954Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Abarbanel%20on%20Zephaniah"
+}

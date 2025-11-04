@@ -7,6 +7,7 @@ import { useSpeechify } from "../../hooks/useSpeechify";
 import { safeScrollIntoView } from "../../utils/scrollUtils";
 import { useFontSettings } from "../../contexts/FontSettingsContext";
 import { AudioContextMenu } from "./AudioContextMenu";
+import { debugLog, debugWarn } from '../../utils/debugLogger';
 // Note: Tooltip import would be added if using shadcn/ui
 
 // Типы
@@ -85,7 +86,7 @@ const extractDragData = (dataTransfer: DataTransfer): {
         data: JSON.parse(groupData)
       };
     } catch (e) {
-      console.warn('Failed to parse group data:', e);
+      debugWarn('Failed to parse group data:', e);
     }
   }
 
@@ -99,7 +100,7 @@ const extractDragData = (dataTransfer: DataTransfer): {
         data: JSON.parse(partData)
       };
     } catch (e) {
-      console.warn('Failed to parse part data:', e);
+      debugWarn('Failed to parse part data:', e);
     }
   }
 
@@ -480,13 +481,13 @@ const EmptyWorkbenchPanel = memo(({
         setIsOver(false);
         const dragData = extractDragData(e.dataTransfer);
         if (dragData) {
-          if (process.env.NODE_ENV !== 'production') console.log('Dropped in empty workbench:', dragData);
+          if (process.env.NODE_ENV !== 'production') debugLog('Dropped in empty workbench:', dragData);
           if (dragData.type === 'group') {
-            if (process.env.NODE_ENV !== 'production') console.log('Dropped group with refs:', dragData.data?.refs);
+            if (process.env.NODE_ENV !== 'production') debugLog('Dropped group with refs:', dragData.data?.refs);
             // TODO: Здесь можно добавить специальную обработку для групп
             // Пока используем первый ref из группы
           } else if (dragData.type === 'part') {
-            if (process.env.NODE_ENV !== 'production') console.log('Dropped individual part:', dragData.data?.ref);
+            if (process.env.NODE_ENV !== 'production') debugLog('Dropped individual part:', dragData.data?.ref);
           }
           onDrop(dragData.ref.trim(), {
             type: dragData.type,
@@ -532,7 +533,7 @@ const WorkbenchPanelInline = memo(({
   // Отладка: логируем текущие настройки шрифта
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
-      console.log('🔍 WorkbenchPanelInline font settings:', {
+      debugLog('🔍 WorkbenchPanelInline font settings:', {
         fontSize: fontSettings.fontSize,
         fontSizeValue: fontSizeValues[fontSettings.fontSize],
         hebrewScale,
@@ -556,13 +557,13 @@ const WorkbenchPanelInline = memo(({
 
   // Сброс состояния перевода при смене элемента
   useEffect(() => {
-    console.log('[WorkbenchPanelInline] Item changed, resetting translation state');
+    debugLog('[WorkbenchPanelInline] Item changed, resetting translation state');
     setShowTranslation(false);
   }, [typeof item === 'string' ? item : item?.ref]);
 
   // Отслеживание изменений состояния перевода
   useEffect(() => {
-    console.log('[WorkbenchPanelInline] Translation state changed:', {
+    debugLog('[WorkbenchPanelInline] Translation state changed:', {
       isTranslating,
       hasTranslatedText: !!translatedText,
       translatedTextLength: translatedText?.length || 0,
@@ -579,10 +580,10 @@ const WorkbenchPanelInline = memo(({
     } else {
       // Если показывается оригинал, получаем перевод и переключаемся на него
       if (!translatedText) {
-        console.log('[WorkbenchPanelInline] Starting translation for item:', typeof item === 'string' ? item : item?.ref);
+        debugLog('[WorkbenchPanelInline] Starting translation for item:', typeof item === 'string' ? item : item?.ref);
         try {
           await translate();
-          console.log('[WorkbenchPanelInline] Translation completed, result:', translatedText);
+          debugLog('[WorkbenchPanelInline] Translation completed, result:', translatedText);
         } catch (err) {
           console.error('[WorkbenchPanelInline] Translation failed:', err);
         }
@@ -640,11 +641,11 @@ const WorkbenchPanelInline = memo(({
         const dragData = extractDragData(e.dataTransfer);
         if (!dragData) return;
           if (dragData.type === 'group') {
-            if (process.env.NODE_ENV !== 'production') console.log('Dropped group with refs:', dragData.data?.refs);
+            if (process.env.NODE_ENV !== 'production') debugLog('Dropped group with refs:', dragData.data?.refs);
             // TODO: Здесь можно добавить специальную обработку для групп
             // Пока используем первый ref из группы
           } else if (dragData.type === 'part') {
-            if (process.env.NODE_ENV !== 'production') console.log('Dropped individual part:', dragData.data?.ref);
+            if (process.env.NODE_ENV !== 'production') debugLog('Dropped individual part:', dragData.data?.ref);
           }
           onDropRef(dragData.ref.trim(), {
             type: dragData.type,

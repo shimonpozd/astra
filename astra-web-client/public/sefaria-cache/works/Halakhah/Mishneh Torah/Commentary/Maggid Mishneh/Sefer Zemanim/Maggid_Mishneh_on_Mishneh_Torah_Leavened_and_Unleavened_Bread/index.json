@@ -1,0 +1,60 @@
+{
+  "title": "Maggid Mishneh on Mishneh Torah, Leavened and Unleavened Bread",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maggid Mishneh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "hilchot",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "leavened-and-unleavened-bread"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      107,
+      194
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגיד משנה על משנה תורה, הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "Maggid Mishneh on Mishneh Torah, Leavened and Unleavened Bread",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maggid Mishneh on Mishneh Torah, Leavened and Unleavened Bread"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.992Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maggid%20Mishneh%20on%20Mishneh%20Torah%2C%20Leavened%20and%20Unleavened%20Bread"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Chidushei Agadot on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chidushei Agadot",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-agadot",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      603
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושי אגדות על שבת",
+        "primary": true
+      },
+      {
+        "text": "Chidushei Agadot on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Agadot on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.425Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Agadot%20on%20Shabbat"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Maharam of Padua on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maharam of Padua",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam-of-padua",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maharam-of-padua",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      5,
+      5
+    ],
+    "titles": [
+      {
+        "text": "הגהות מהר\"ם פדווא על משנה תורה, הלכות יסודי התורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Maharam of Padua on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam of Padua on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.189Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20of%20Padua%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

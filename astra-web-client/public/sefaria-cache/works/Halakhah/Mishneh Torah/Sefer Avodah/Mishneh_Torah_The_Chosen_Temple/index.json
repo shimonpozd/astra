@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, The Chosen Temple",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      137
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of The Chosen Temple"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, The Chosen Temple"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of The Chosen Temple"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Beis Habechirah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Bet haBeḥirah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות בית הבחירה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' בית הבחירה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' בית הבחירה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות בית הבחירה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' בית הבחירה"
+      },
+      {
+        "text": "רמב״ם, הלכות בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' בית הבחירה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות בית הבחירה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, The Chosen Temple",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, The Chosen Temple"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.129Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20The%20Chosen%20Temple"
+}

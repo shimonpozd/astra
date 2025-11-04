@@ -1,0 +1,90 @@
+{
+  "title": "Pesikta DeRav Kahana",
+  "categories": [
+    "Midrash",
+    "Aggadah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph",
+      "Ot"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "pesikta-drav-kahanna"
+        ]
+      }
+    ],
+    "lengths": [
+      28,
+      304
+    ],
+    "titles": [
+      {
+        "text": "Pesikta D'Rav Kahana",
+        "lang": "en"
+      },
+      {
+        "text": "Pesik.",
+        "lang": "en"
+      },
+      {
+        "text": "P’siḳta d’R. Kahãna",
+        "lang": "en"
+      },
+      {
+        "text": "Pesikta de Rav Kahana",
+        "lang": "en"
+      },
+      {
+        "text": "Pesikta D'Rav Kahanna",
+        "lang": "en"
+      },
+      {
+        "text": "Pesikta DeRav Kahanna",
+        "lang": "en"
+      },
+      {
+        "text": "Pesiqta dRav Kahana",
+        "lang": "en"
+      },
+      {
+        "text": "פסיקתא דר\"כ",
+        "lang": "he"
+      },
+      {
+        "text": "פסיקתא",
+        "lang": "he"
+      },
+      {
+        "text": "פסיקתא דר״כ",
+        "lang": "he"
+      },
+      {
+        "text": "פסיקתא דר”כ",
+        "lang": "he"
+      },
+      {
+        "text": "פסיקתא דרב כהנא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Pesikta DeRav Kahana",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Pesikta DeRav Kahana"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.712Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Pesikta%20DeRav%20Kahana"
+}

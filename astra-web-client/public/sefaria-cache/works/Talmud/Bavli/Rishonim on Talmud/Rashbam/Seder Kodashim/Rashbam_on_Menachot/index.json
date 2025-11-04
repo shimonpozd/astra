@@ -1,0 +1,87 @@
+{
+  "title": "Rashbam on Menachot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashbam",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashbam",
+          "menachot"
+        ]
+      }
+    ],
+    "lengths": [
+      219,
+      15,
+      21
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Dikduk on Masekhet Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Dikduk on Talmud Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Dikduk on Tractate Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Dikduk on Menahot"
+      },
+      {
+        "lang": "en",
+        "text": "Dikduk on Menachot"
+      },
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "רשב\"ם על מנחות"
+      },
+      {
+        "lang": "he",
+        "text": "דקדוק על מנחות"
+      },
+      {
+        "text": "Rashbam on Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashbam on Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:06.357Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashbam%20on%20Menachot"
+}

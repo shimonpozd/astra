@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Heave Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "heave-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "heave-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      317
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Heave Offerings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Heave Offerings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Heave Offerings"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות תרומות"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Terumot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Terumot"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' תרומות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' תרומות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות תרומות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' תרומות"
+      },
+      {
+        "text": "רמב״ם, הלכות תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תרומות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תרומות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Heave Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Heave Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.099Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Heave%20Offerings"
+}

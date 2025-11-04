@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 interface UseStreamingTTSOptions {
   voiceId?: string;
@@ -41,7 +42,7 @@ export function useStreamingTTS(options: UseStreamingTTSOptions = {}): UseStream
       }
 
       // Start streaming from TTS service
-      const response = await fetch('/api/tts/stream', {
+      const response = await authorizedFetch('/api/tts/stream', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -185,5 +186,4 @@ export function useStreamingTTS(options: UseStreamingTTSOptions = {}): UseStream
     seek,
   };
 }
-
 

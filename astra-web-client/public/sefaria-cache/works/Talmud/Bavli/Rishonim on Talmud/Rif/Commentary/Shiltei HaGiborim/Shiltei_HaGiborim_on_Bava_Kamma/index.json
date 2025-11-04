@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      91,
+      135
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:33.480Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Bava%20Kamma"
+}

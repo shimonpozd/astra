@@ -1,0 +1,67 @@
+{
+  "title": "Chokhmat Shlomo on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chokhmat Shlomo",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chokhmat-shlomo",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      443
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Maharshal on Bava Kamma",
+        "lang": "en"
+      },
+      {
+        "text": "מהרש\"ל בבא קמא",
+        "lang": "he"
+      },
+      {
+        "primary": true,
+        "text": "חכמת שלמה על בבא קמא",
+        "lang": "he"
+      },
+      {
+        "text": "Chokhmat Shlomo on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chokhmat Shlomo on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.291Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chokhmat%20Shlomo%20on%20Bava%20Kamma"
+}

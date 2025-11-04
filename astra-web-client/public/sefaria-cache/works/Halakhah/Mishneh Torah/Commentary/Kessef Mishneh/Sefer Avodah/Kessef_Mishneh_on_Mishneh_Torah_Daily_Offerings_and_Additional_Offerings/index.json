@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Daily Offerings and Additional Offerings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "daily-offerings-and-additional-offerings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "daily-offerings-and-additional-offerings"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      125,
+      259
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות תמידים ומוספין",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Daily Offerings and Additional Offerings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Daily Offerings and Additional Offerings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.034Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Daily%20Offerings%20and%20Additional%20Offerings"
+}

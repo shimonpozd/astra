@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      7,
+      7
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.974Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

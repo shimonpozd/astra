@@ -1,0 +1,26 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      9
+    ],
+    2,
+    0,
+    0,
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:11.376Z",
+  "source": "http://localhost:8000/api/shape/Ein%20Ayah"
+}

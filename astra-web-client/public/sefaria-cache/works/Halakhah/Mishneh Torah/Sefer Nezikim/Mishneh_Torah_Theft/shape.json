@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    18,
+    18,
+    17,
+    12,
+    12,
+    9,
+    12,
+    20,
+    13
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.382Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Theft"
+}

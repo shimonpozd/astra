@@ -7,27 +7,32 @@ from typing import Any, Dict, List, Optional
 
 from .settings import Settings
 from .logging_config import setup_logging
-from services.sefaria_service import SefariaService
-from services.sefaria_index_service import SefariaIndexService
-from services.sefaria_mcp_service import SefariaMCPService
-from services.memory_service import MemoryService
-from services.summary_service import SummaryService
-from services.llm_service import LLMService
-from services.chat_service import ChatService
-from services.study import fetch_study_config, register_study_config_listener
-from services.study_service import StudyService
-from services.config_service import ConfigService
-from services.lexicon_service import LexiconService
-from services.session_service import SessionService
-from services.translation_service import TranslationService
-from services.wiki_service import WikiService
-from services.navigation_service import NavigationService
+from brain_service.services.sefaria_service import SefariaService
+from brain_service.services.sefaria_index_service import SefariaIndexService
+from brain_service.services.sefaria_mcp_service import SefariaMCPService
+from brain_service.services.memory_service import MemoryService
+from brain_service.services.summary_service import SummaryService
+from brain_service.services.llm_service import LLMService
+from brain_service.services.chat_service import ChatService
+from brain_service.services.study import fetch_study_config, register_study_config_listener
+from brain_service.services.study_service import StudyService
+from brain_service.services.config_service import ConfigService
+from brain_service.services.lexicon_service import LexiconService
+from brain_service.services.session_service import SessionService
+from brain_service.services.translation_service import TranslationService
+from brain_service.services.wiki_service import WikiService
+from brain_service.services.navigation_service import NavigationService
 from domain.chat.tools import ToolRegistry
 from .rate_limiting import setup_rate_limiter
-import sys
-import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+from .database import create_engine, create_session_factory, shutdown_engine
+from models.db import Base
+from brain_service.services.user_service import UserService
+from brain_service.services.auth_service import AuthService
+from .config_loader import ensure_config_root
+
+ensure_config_root()
 from config import get_config
+from sqlalchemy import text
 
 logger = logging.getLogger(__name__)
 
@@ -40,6 +45,36 @@ async def lifespan(app: FastAPI):
     settings = Settings()
     setup_logging(settings)
     app.state.settings = settings
+
+    # Database
+    app.state.db_engine = create_engine(settings.DATABASE_URL)
+    app.state.db_session_factory = create_session_factory(app.state.db_engine)
+    async with app.state.db_engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await conn.execute(
+            text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS created_manually BOOLEAN NOT NULL DEFAULT FALSE"
+            )
+        )
+        await conn.execute(
+            text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS last_login_at TIMESTAMPTZ NULL"
+            )
+        )
+    app.state.user_service = UserService(
+        app.state.db_session_factory, encryption_secret=settings.API_KEY_SECRET
+    )
+    app.state.auth_service = AuthService(
+        app.state.user_service,
+        jwt_secret=settings.JWT_SECRET,
+        jwt_algorithm=settings.JWT_ALGORITHM,
+        jwt_expires_minutes=settings.JWT_ACCESS_TOKEN_EXPIRES_MINUTES,
+    )
+
+    if not await app.state.user_service.has_admin():
+        logger.warning(
+            "No admin user detected. Use the bootstrap endpoint or CLI to create one."
+        )
 
     # Initialize and store clients
     app.state.http_client = httpx.AsyncClient(
@@ -80,7 +115,8 @@ async def lifespan(app: FastAPI):
 
     # Instantiate session service
     app.state.session_service = SessionService(
-        redis_client=app.state.redis_client
+        redis_client=app.state.redis_client,
+        user_service=app.state.user_service,
     )
 
     # Instantiate translation service
@@ -170,7 +206,8 @@ async def lifespan(app: FastAPI):
     app.state.chat_service = ChatService(
         redis_client=app.state.redis_client,
         tool_registry=app.state.tool_registry,
-        memory_service=app.state.memory_service
+        memory_service=app.state.memory_service,
+        user_service=app.state.user_service,
     )
 
     # Instantiate study service
@@ -620,4 +657,5 @@ async def lifespan(app: FastAPI):
     await app.state.http_client.aclose()
     if app.state.redis_client:
         await app.state.redis_client.aclose()
+    await shutdown_engine(getattr(app.state, "db_engine", None))
     print("Clients closed. Shutdown complete.")

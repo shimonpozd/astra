@@ -1,0 +1,79 @@
+{
+  "title": "Ktav Yad Rashi on Menachot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Ktav Yad Rashi",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ktav-yad-rashi",
+          "menachot"
+        ]
+      }
+    ],
+    "lengths": [
+      219,
+      554,
+      1026
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Masekhet Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Talmud Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Tractate Menachot"
+      },
+      {
+        "lang": "en",
+        "text": "Ktav Yad Rashi on Menahot"
+      },
+      {
+        "lang": "he",
+        "text": "כתב יד רש\"י על מנחות",
+        "primary": true
+      },
+      {
+        "text": "Ktav Yad Rashi on Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ktav Yad Rashi on Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.171Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ktav%20Yad%20Rashi%20on%20Menachot"
+}

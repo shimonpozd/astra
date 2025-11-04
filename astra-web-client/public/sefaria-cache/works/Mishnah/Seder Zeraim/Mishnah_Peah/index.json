@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Peah",
+  "categories": [
+    "Mishnah",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "peah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "peah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "peah"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      69
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Peah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Peah"
+      },
+      {
+        "lang": "en",
+        "text": "M. Peah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Péah"
+      },
+      {
+        "lang": "en",
+        "text": "Pe’ah"
+      },
+      {
+        "lang": "en",
+        "text": "Pe'ah"
+      },
+      {
+        "lang": "en",
+        "text": "Peah"
+      },
+      {
+        "lang": "he",
+        "text": "פאה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה פיאה"
+      },
+      {
+        "text": "משנה פאה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Peah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Peah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.046Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Peah"
+}

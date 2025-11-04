@@ -1,0 +1,16 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    14,
+    12,
+    12,
+    8,
+    14
+  ],
+  "fetchedAt": "2025-10-30T14:42:05.355Z",
+  "source": "http://localhost:8000/api/shape/Tractate%20Sefer%20Torah"
+}

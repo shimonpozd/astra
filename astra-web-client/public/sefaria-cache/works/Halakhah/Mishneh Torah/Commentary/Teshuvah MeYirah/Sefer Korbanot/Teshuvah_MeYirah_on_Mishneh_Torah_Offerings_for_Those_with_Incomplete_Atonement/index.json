@@ -1,0 +1,60 @@
+{
+  "title": "Teshuvah MeYirah on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Teshuvah MeYirah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "hilchot",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "teshuvah-meyirah",
+          "offerings-for-those-with-incomplete-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "קונטרס תשובה מיראה על משנה תורה, הלכות מחוסרי כפרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Teshuvah MeYirah on Mishneh Torah, Offerings for Those with Incomplete Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Teshuvah MeYirah on Mishneh Torah, Offerings for Those with Incomplete Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.410Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Teshuvah%20MeYirah%20on%20Mishneh%20Torah%2C%20Offerings%20for%20Those%20with%20Incomplete%20Atonement"
+}

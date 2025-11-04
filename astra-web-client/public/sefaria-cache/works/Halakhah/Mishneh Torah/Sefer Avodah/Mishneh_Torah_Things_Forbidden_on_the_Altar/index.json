@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Things Forbidden on the Altar",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "things-forbidden-on-the-altar"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "things-forbidden-on-the-altar"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "things-forbidden-on-the-altar"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "things-forbidden-on-the-altar"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "things-forbidden-on-the-altar"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      100
+    ],
+    "titles": [
+      {
+        "text": "Mishneh Torah, Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Issurei Mizbeiach",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Things Forbidden on the Altar",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Things Forbidden on the Altar",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Things Forbidden on the Altar",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' איסורי המזבח",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות איסורי המזבח",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Things Forbidden on the Altar",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Things Forbidden on the Altar"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.168Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Things%20Forbidden%20on%20the%20Altar"
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Melekhet Shelomoh on Mishneh Torah, Leavened and Unleavened Bread",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Melekhet Shelomoh",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "hilchot",
+          "leavened-and-unleavened-bread"
+        ]
+      },
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "leavened-and-unleavened-bread"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלאכת שלמה על משנה תורה, הלכות חמץ ומצה",
+        "lang": "he"
+      },
+      {
+        "text": "Melechet Shlomo on Mishneh Torah, Leavened and Unleavened Bread",
+        "lang": "en"
+      },
+      {
+        "text": "Melekhet Shelomoh on Mishneh Torah, Leavened and Unleavened Bread",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Melekhet Shelomoh on Mishneh Torah, Leavened and Unleavened Bread"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.176Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Melekhet%20Shelomoh%20on%20Mishneh%20Torah%2C%20Leavened%20and%20Unleavened%20Bread"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    20,
+    18,
+    18,
+    13,
+    17,
+    16,
+    23,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.157Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20The%20Chosen%20Temple"
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Ibn Ezra on Jonah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ibn Ezra",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ibn-ezra",
+          "jonah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      47,
+      75
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Yonah"
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Jon."
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Jon"
+      },
+      {
+        "lang": "he",
+        "text": "אבן עזרא על יונה",
+        "primary": true
+      },
+      {
+        "text": "Ibn Ezra on Jonah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ibn Ezra on Jonah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.562Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ibn%20Ezra%20on%20Jonah"
+}

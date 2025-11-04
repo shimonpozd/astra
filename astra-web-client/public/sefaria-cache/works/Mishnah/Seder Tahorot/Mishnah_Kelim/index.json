@@ -1,0 +1,90 @@
+{
+  "title": "Mishnah Kelim",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "kelim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kelim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kelim"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      254
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "M Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Keilim"
+      },
+      {
+        "lang": "he",
+        "text": "כלים"
+      },
+      {
+        "lang": "en",
+        "text": "Kel."
+      },
+      {
+        "lang": "en",
+        "text": "Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Kel."
+      },
+      {
+        "text": "משנה כלים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Kelim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Kelim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.420Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Kelim"
+}

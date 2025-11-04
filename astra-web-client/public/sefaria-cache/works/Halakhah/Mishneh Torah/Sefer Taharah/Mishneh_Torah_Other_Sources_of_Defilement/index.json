@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Other Sources of Defilement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Taharah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "other-sources-of-defilement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "other-sources-of-defilement"
+        ]
+      }
+    ],
+    "lengths": [
+      20,
+      254
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Other Sources of Defilement"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Other Sources of Defilement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Other Sources of Defilement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שאר אבות הטומאות"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot She'ar Avot haTum'ah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שאר אבות הטומאות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שאר אבות הטומאות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שאר אבות הטומאות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שאר אבות הטומאות"
+      },
+      {
+        "text": "רמב״ם, הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שאר אבות הטומאות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שאר אבות הטומאות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Other Sources of Defilement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Other Sources of Defilement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.318Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Other%20Sources%20of%20Defilement"
+}

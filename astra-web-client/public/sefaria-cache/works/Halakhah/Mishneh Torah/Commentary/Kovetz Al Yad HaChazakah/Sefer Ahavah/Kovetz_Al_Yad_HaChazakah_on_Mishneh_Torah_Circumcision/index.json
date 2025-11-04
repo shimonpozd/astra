@@ -1,0 +1,60 @@
+{
+  "title": "Kovetz Al Yad HaChazakah on Mishneh Torah, Circumcision",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kovetz Al Yad HaChazakah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "circumcision"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      15,
+      15
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "קובץ על היד החזקה על משנה תורה, הלכות מילה",
+        "primary": true
+      },
+      {
+        "text": "Kovetz Al Yad HaChazakah on Mishneh Torah, Circumcision",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kovetz Al Yad HaChazakah on Mishneh Torah, Circumcision"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.153Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kovetz%20Al%20Yad%20HaChazakah%20on%20Mishneh%20Torah%2C%20Circumcision"
+}

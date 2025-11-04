@@ -1,0 +1,60 @@
+{
+  "title": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Blessings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chiddushei Rabbi Akiva Eiger",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "hilchot",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "blessings"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      5,
+      5
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושי רבי עקיבא איגר על משנה תורה, הלכות ברכות",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Blessings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Rabbi Akiva Eiger on Mishneh Torah, Blessings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.560Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Rabbi%20Akiva%20Eiger%20on%20Mishneh%20Torah%2C%20Blessings"
+}

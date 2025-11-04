@@ -1,0 +1,189 @@
+{
+  "title": "Rashi on Psalms",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "psalms"
+        ]
+      }
+    ],
+    "lengths": [
+      150,
+      1582,
+      2519
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Ps"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Ps."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Psa"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Tehilim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Psa."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Psalm"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Tehillim"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהלים"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תְּהִלִּים"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תילים"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהילות"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהילי'"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהילי׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהלי׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על תהלי'"
+      },
+      {
+        "text": "רש״י על תהילים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהילים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהלים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהלים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תְּהִלִּים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תְּהִלִּים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תילים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תילים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהילות",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהילות",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהילי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהילי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהילי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהילי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהלי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהלי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על תהלי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על תהלי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על תהילים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Psalms",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Psalms"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.356Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Psalms"
+}

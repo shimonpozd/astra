@@ -1,0 +1,153 @@
+{
+  "title": "Bartenura on Mishnah Kilayim",
+  "categories": [
+    "Mishnah",
+    "Rishonim on Mishnah",
+    "Bartenura",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "bartenura",
+          "mishnah",
+          "kilayim"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      77,
+      381
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishna Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishnah Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishna Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishnah Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on Mishna Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M. Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishna Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Kilayim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishnah Kilayim"
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על משנה כלאים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על משנה כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על משנה כלאים"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על כלאים"
+      },
+      {
+        "text": "Bartenura on Mishnah Kilayim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bartenura on Mishnah Kilayim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:11.519Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Bartenura%20on%20Mishnah%20Kilayim"
+}

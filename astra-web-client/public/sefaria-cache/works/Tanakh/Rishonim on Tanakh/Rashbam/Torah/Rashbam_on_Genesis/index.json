@@ -1,0 +1,241 @@
+{
+  "title": "Rashbam on Genesis",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashbam",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashbam",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      537,
+      799
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Bereshit"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Gen"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Gen."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Breishit"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Ber"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Bereishit"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Ber."
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Beresheet"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Bereshith"
+      },
+      {
+        "lang": "en",
+        "text": "Shumel ben Meir on Genesis"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Bereshit"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Gen"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Gen."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Breishit"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Ber"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Bereishit"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Ber."
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Beresheet"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Bereshith"
+      },
+      {
+        "lang": "en",
+        "text": "Samuel ben Meir on Genesis"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Bereshit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Gen"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Gen."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Breishit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Ber"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Bereishit"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Ber."
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Beresheet"
+      },
+      {
+        "lang": "en",
+        "text": "Rashbam on Bereshith"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על ברא'"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על בר'"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על בר׳"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על ברא׳"
+      },
+      {
+        "lang": "he",
+        "text": "רשב\"ם על בְּרֵאשִׁית"
+      },
+      {
+        "text": "רשב״ם על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "רשב״ם על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "רשב”ם על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "רשב\"ם על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashbam on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashbam on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.515Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashbam%20on%20Genesis"
+}

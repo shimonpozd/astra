@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "the-sanhedrin-and-the-penalties-within-their-jurisdiction"
+        ]
+      }
+    ],
+    "lengths": [
+      26,
+      20,
+      20
+    ],
+    "titles": [
+      {
+        "text": "משנה למלך על משנה תורה, הלכות סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, The Sanhedrin and the Penalties within their Jurisdiction"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.736Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20The%20Sanhedrin%20and%20the%20Penalties%20within%20their%20Jurisdiction"
+}

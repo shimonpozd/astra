@@ -1,0 +1,61 @@
+{
+  "title": "Melekhet Shelomoh on Mishnah Rosh Hashanah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Melekhet Shelomoh",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "melekhet-shelomoh",
+          "mishnah",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      34,
+      150
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מלאכת שלמה על משנה ראש השנה",
+        "primary": true
+      },
+      {
+        "text": "Melechet Shlomo on Mishnah Rosh Hashanah",
+        "lang": "en"
+      },
+      {
+        "text": "Melekhet Shelomoh on Mishnah Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Melekhet Shelomoh on Mishnah Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:44.732Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Melekhet%20Shelomoh%20on%20Mishnah%20Rosh%20Hashanah"
+}

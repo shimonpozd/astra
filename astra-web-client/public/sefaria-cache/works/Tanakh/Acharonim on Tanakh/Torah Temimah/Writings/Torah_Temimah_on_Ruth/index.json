@@ -1,0 +1,57 @@
+{
+  "title": "Torah Temimah on Ruth",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Torah Temimah",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "torah-temimah",
+          "ruth"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      63,
+      151
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "תורה תמימה על רות",
+        "primary": true
+      },
+      {
+        "text": "Torah Temimah on Ruth",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Torah Temimah on Ruth"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.709Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Torah%20Temimah%20on%20Ruth"
+}

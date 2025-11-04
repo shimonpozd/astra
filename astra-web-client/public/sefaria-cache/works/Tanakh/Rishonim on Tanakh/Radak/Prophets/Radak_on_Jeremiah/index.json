@@ -1,0 +1,66 @@
+{
+  "title": "Radak on Jeremiah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Radak",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "radak",
+          "jeremiah"
+        ]
+      }
+    ],
+    "lengths": [
+      52,
+      1054,
+      2152
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רד\"ק על ירמי׳",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "רד\"ק על ירמיה"
+      },
+      {
+        "lang": "he",
+        "text": "רד\"ק על ירמיהו"
+      },
+      {
+        "text": "Radak on Jeremiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Radak on Jeremiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.257Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Radak%20on%20Jeremiah"
+}

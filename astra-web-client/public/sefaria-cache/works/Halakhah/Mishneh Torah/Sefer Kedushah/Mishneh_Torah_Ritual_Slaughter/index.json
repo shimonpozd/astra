@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Ritual Slaughter",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "ritual-slaughter"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "ritual-slaughter"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      279
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Ritual Slaughter"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Ritual Slaughter"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Ritual Slaughter"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shechitah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Sheḥitah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שחיטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שחיטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שחיטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שחיטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שחיטה"
+      },
+      {
+        "text": "רמב״ם, הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שחיטה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שחיטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Ritual Slaughter",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Ritual Slaughter"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.028Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Ritual%20Slaughter"
+}

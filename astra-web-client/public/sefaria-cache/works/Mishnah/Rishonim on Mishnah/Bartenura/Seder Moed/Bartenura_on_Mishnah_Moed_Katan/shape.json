@@ -1,0 +1,41 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      6,
+      8,
+      3,
+      5,
+      8,
+      5,
+      4,
+      4,
+      2,
+      10
+    ],
+    [
+      7,
+      2,
+      2,
+      7,
+      6
+    ],
+    [
+      6,
+      5,
+      12,
+      6,
+      6,
+      1,
+      9,
+      5,
+      2
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:13.157Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Moed%20Katan"
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Kessef HaKodashim on Shulchan Arukh, Choshen Mishpat",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-hakodashim",
+          "choshen-mishpat"
+        ]
+      }
+    ],
+    "lengths": [
+      427,
+      527
+    ],
+    "titles": [
+      {
+        "text": "כסף הקדשים על שולחן ערוך חושן משפט",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kessef HaKodashim on Shulchan Arukh, Choshen Mishpat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef HaKodashim on Shulchan Arukh, Choshen Mishpat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.457Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20HaKodashim%20on%20Shulchan%20Arukh%2C%20Choshen%20Mishpat"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Harchev Davar on Numbers",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Harchev Davar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Passuk"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "harchev-davar",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      59
+    ],
+    "titles": [
+      {
+        "text": "הרחב דבר על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Harchev Davar on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Harchev Davar on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.295Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Harchev%20Davar%20on%20Numbers"
+}

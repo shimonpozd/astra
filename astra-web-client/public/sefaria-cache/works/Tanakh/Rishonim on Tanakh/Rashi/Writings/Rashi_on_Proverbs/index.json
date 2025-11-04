@@ -1,0 +1,85 @@
+{
+  "title": "Rashi on Proverbs",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "proverbs"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      712,
+      1161
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Pro."
+      },
+      {
+        "text": "רש״י על משלי",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על משלי",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על משלי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Proverbs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Proverbs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.357Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Proverbs"
+}

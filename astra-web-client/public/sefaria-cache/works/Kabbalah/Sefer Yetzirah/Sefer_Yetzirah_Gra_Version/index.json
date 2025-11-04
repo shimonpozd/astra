@@ -1,0 +1,62 @@
+{
+  "title": "Sefer Yetzirah Gra Version",
+  "categories": [
+    "Kabbalah",
+    "Sefer Yetzirah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yetzirah",
+          "gra1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sefer",
+          "yetzirah",
+          "gra1"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      62
+    ],
+    "titles": [
+      {
+        "text": "The Book of Formation",
+        "lang": "en"
+      },
+      {
+        "text": "ספר יצירה נוסח הגר\"א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "ספר יצירה: נוסח הגר\"א",
+        "lang": "he"
+      },
+      {
+        "text": "Sefer Yetzirah Gra Version",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sefer Yetzirah Gra Version"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:34.326Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sefer%20Yetzirah%20Gra%20Version"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Radak on Habakkuk",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Radak",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "radak",
+          "habakkuk"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      56,
+      170
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רד\"ק על חבקוק",
+        "lang": "he"
+      },
+      {
+        "text": "Radak on Habakkuk",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Radak on Habakkuk"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.330Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Radak%20on%20Habakkuk"
+}

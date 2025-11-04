@@ -1,0 +1,70 @@
+{
+  "title": "Malbim Beur Hamilot on Obadiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Malbim Beur Hamilot",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim-beur-hamilot",
+          "obadiah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      16,
+      21
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Ovadiah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Obadiah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Ovadiah"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על עובדיה",
+        "primary": true
+      },
+      {
+        "text": "Malbim Beur Hamilot on Obadiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim Beur Hamilot on Obadiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.779Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20Beur%20Hamilot%20on%20Obadiah"
+}

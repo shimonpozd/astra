@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Mishneh on Mishneh Torah, Service on the Day of Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Mishneh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "service-on-the-day-of-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      24,
+      32
+    ],
+    "titles": [
+      {
+        "text": "לחם משנה על משנה תורה, הלכות עבודת יום הכפורים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Mishneh on Mishneh Torah, Service on the Day of Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Mishneh on Mishneh Torah, Service on the Day of Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.619Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Mishneh%20on%20Mishneh%20Torah%2C%20Service%20on%20the%20Day%20of%20Atonement"
+}

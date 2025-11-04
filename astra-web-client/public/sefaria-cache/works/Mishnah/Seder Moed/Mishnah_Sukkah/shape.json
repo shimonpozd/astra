@@ -1,0 +1,16 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    11,
+    9,
+    15,
+    10,
+    8
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.172Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Sukkah"
+}

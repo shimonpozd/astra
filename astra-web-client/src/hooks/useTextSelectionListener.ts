@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import { useLexiconStore } from '../store/lexiconStore';
+import { debugLog } from '../utils/debugLogger';
 
 export const useTextSelectionListener = () => {
   const { setSelection, fetchExplanation, term } = useLexiconStore();
@@ -9,7 +10,7 @@ export const useTextSelectionListener = () => {
     const handleMouseUp = () => {
       const selection = window.getSelection();
       const selectedText = selection?.toString().trim();
-      console.log('[Lexicon] Mouse up, selected text:', selectedText);
+      debugLog('[Lexicon] Mouse up, selected text:', selectedText);
 
       if (selectedText) {
         const range = selection?.getRangeAt(0);
@@ -18,10 +19,10 @@ export const useTextSelectionListener = () => {
           const ancestor = range.commonAncestorContainer;
           const textElement = ancestor.nodeType === Node.TEXT_NODE ? ancestor.parentElement : ancestor as Element;
           const isInTextArea = textElement?.closest('.select-text') !== null;
-          console.log('[Lexicon] Is in text area:', isInTextArea);
+          debugLog('[Lexicon] Is in text area:', isInTextArea);
 
           if (!isInTextArea) {
-            console.log('[Lexicon] Selection not in text area, ignoring');
+            debugLog('[Lexicon] Selection not in text area, ignoring');
             return;
           }
 
@@ -31,20 +32,20 @@ export const useTextSelectionListener = () => {
           if (parentElement) {
             contextText = parentElement.textContent;
           }
-          console.log('[Lexicon] Setting selection:', selectedText, 'context:', contextText);
+          debugLog('[Lexicon] Setting selection:', selectedText, 'context:', contextText);
           setSelection(selectedText, contextText);
         }
       } else {
         // If user clicks away, clear the selection
-        console.log('[Lexicon] Clearing selection');
+        debugLog('[Lexicon] Clearing selection');
         setSelection(null, null);
       }
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      console.log('[Lexicon] Key down:', event.key, 'term:', term);
+      debugLog('[Lexicon] Key down:', event.key, 'term:', term);
       if (event.key === 'Enter' && term) {
-        console.log('[Lexicon] Enter pressed with term, fetching explanation');
+        debugLog('[Lexicon] Enter pressed with term, fetching explanation');
         // Don't prevent default to avoid blocking other Enter key uses
         fetchExplanation();
       }

@@ -1,0 +1,45 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      3,
+      5,
+      3,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      4,
+      5,
+      0,
+      4,
+      1,
+      0,
+      2,
+      1,
+      5
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:30.891Z",
+  "source": "https://www.sefaria.org/api/shape/Eliyahu%20Rabbah%20on%20Mishnah%20Zavim"
+}

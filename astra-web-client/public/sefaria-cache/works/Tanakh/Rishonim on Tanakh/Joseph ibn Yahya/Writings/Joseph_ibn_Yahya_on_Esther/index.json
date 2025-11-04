@@ -1,0 +1,57 @@
+{
+  "title": "Joseph ibn Yahya on Esther",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Joseph ibn Yahya",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "lengths": [
+      10,
+      151,
+      259
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Yosef ibn Yahya on Esther"
+      },
+      {
+        "lang": "he",
+        "text": "יוסף אבן יחיא על אסתר",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "יוסף בן יחיא על אסתר"
+      },
+      {
+        "text": "Joseph ibn Yahya on Esther",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Joseph ibn Yahya on Esther"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.146Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Joseph%20ibn%20Yahya%20on%20Esther"
+}

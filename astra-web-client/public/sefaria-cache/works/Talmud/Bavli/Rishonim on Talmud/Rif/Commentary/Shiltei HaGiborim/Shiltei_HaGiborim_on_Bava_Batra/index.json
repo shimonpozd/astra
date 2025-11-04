@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Bava Batra",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      165,
+      211
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על בבא בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:33.206Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Bava%20Batra"
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Temurah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      12
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה תמורה",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Temurah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:29.422Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Temurah"
+}

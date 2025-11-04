@@ -1,0 +1,88 @@
+{
+  "title": "Tosefta Kelim Kamma",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kelim-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      58
+    ],
+    "titles": [
+      {
+        "text": "Tosefta Keilim",
+        "lang": "en"
+      },
+      {
+        "text": "T. Keilim Kama",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Keilim Kamma",
+        "lang": "en"
+      },
+      {
+        "text": "T. Keilim Kamma",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Keilim Kama",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Keilim Kama",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Keilim Kamma",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. Kel. B. Kam.",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא כלים",
+        "lang": "he"
+      },
+      {
+        "text": "תוספתא כלים בבא קמא",
+        "lang": "he"
+      },
+      {
+        "text": "תוספתא כלים קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kelim Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kelim Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.787Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kelim%20Kamma"
+}

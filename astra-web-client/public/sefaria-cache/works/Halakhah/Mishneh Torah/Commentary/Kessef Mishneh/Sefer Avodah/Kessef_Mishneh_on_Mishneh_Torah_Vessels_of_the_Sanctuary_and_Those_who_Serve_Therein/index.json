@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "vessels-of-the-sanctuary-and-those-who-serve-therein"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      141,
+      324
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות כלי המקדש והעובדין בו",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Vessels of the Sanctuary and Those who Serve Therein"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.993Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Vessels%20of%20the%20Sanctuary%20and%20Those%20who%20Serve%20Therein"
+}

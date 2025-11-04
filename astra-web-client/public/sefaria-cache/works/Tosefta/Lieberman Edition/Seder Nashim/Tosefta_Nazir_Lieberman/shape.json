@@ -1,0 +1,17 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    7,
+    15,
+    18,
+    11,
+    4,
+    6
+  ],
+  "fetchedAt": "2025-10-30T14:42:35.931Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Nazir%20(Lieberman)"
+}

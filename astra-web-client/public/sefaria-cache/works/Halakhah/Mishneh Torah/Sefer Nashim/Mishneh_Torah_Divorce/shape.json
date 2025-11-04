@@ -1,0 +1,24 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    28,
+    20,
+    19,
+    25,
+    18,
+    30,
+    24,
+    24,
+    41,
+    23,
+    28,
+    24,
+    29
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.009Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Divorce"
+}

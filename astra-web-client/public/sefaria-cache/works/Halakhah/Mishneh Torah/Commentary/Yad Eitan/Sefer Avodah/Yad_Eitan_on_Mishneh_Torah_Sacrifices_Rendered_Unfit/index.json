@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Sacrifices Rendered Unfit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "sacrifices-rendered-unfit"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      18,
+      18
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות פסולי המוקדשין",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Sacrifices Rendered Unfit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Sacrifices Rendered Unfit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.267Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Sacrifices%20Rendered%20Unfit"
+}

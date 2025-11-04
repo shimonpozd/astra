@@ -1,0 +1,51 @@
+{
+  "title": "Hagahot MeAlfas Yashan on Megillah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot MeAlfas Yashan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-mealfas-yashan",
+          "megillah"
+        ]
+      }
+    ],
+    "lengths": [
+      32,
+      16
+    ],
+    "titles": [
+      {
+        "text": "הגהות מאלפס ישן על מגילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot MeAlfas Yashan on Megillah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot MeAlfas Yashan on Megillah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:27.883Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20MeAlfas%20Yashan%20on%20Megillah"
+}

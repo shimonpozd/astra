@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Trespass",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "trespass"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "trespass"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "trespass"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "trespass"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "trespass"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      102
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Me'ilah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Trespass"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Trespass"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Me'ilah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Me'ilah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Trespass"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Me'ilah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מעילה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Me'ilah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Me'ilah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מעילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מעילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מעילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מעילה"
+      },
+      {
+        "text": "רמב״ם, הלכות מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מעילה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מעילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Trespass",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Trespass"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.208Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Trespass"
+}

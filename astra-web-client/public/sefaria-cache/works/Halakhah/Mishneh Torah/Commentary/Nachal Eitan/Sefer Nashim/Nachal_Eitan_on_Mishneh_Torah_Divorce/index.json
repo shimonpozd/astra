@@ -1,0 +1,60 @@
+{
+  "title": "Nachal Eitan on Mishneh Torah, Divorce",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Nachal Eitan",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "hilchot",
+          "divorce"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "divorce"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      21,
+      21
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "נחל איתן על משנה תורה, הלכות גירושין",
+        "lang": "he"
+      },
+      {
+        "text": "Nachal Eitan on Mishneh Torah, Divorce",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nachal Eitan on Mishneh Torah, Divorce"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.946Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Nachal%20Eitan%20on%20Mishneh%20Torah%2C%20Divorce"
+}

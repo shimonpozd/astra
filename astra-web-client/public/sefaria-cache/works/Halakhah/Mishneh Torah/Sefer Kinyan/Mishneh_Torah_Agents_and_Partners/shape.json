@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    9,
+    9,
+    11,
+    5,
+    11,
+    5,
+    7,
+    7,
+    9,
+    6
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.460Z",
+  "source": "http://localhost:8000/api/shape/Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

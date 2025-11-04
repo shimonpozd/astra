@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Nedarim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      182,
+      585
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רש\"ש על נדרים",
+        "lang": "he"
+      },
+      {
+        "text": "Rashash on Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.729Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Nedarim"
+}

@@ -1,3 +1,4 @@
+import { debugLog } from '../../utils/debugLogger';
 interface ChatHeaderProps {
   onOpenStudy: () => void;
 }
@@ -5,7 +6,7 @@ interface ChatHeaderProps {
 export default function ChatHeader({ onOpenStudy }: ChatHeaderProps) {
   // Placeholder for agent selection logic
   const agentId = 'default';
-  const setAgentId = (id: string) => console.log('Agent selected:', id);
+  const setAgentId = (id: string) => debugLog('Agent selected:', id);
 
   return (
     <header className="h-14 border-b bg-card/50 backdrop-blur-sm flex items-center justify-between px-4 flex-shrink-0">

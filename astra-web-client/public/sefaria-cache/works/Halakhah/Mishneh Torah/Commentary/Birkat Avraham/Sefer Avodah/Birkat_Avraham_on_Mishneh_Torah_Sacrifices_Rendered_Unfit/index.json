@@ -1,0 +1,60 @@
+{
+  "title": "Birkat Avraham on Mishneh Torah, Sacrifices Rendered Unfit",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Birkat Avraham",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "hilchot",
+          "sacrifices-rendered-unfit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "birkat-avraham",
+          "sacrifices-rendered-unfit"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "ברכת אברהם על משנה תורה, הלכות פסולי המוקדשין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Birkat Avraham on Mishneh Torah, Sacrifices Rendered Unfit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Birkat Avraham on Mishneh Torah, Sacrifices Rendered Unfit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.374Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Birkat%20Avraham%20on%20Mishneh%20Torah%2C%20Sacrifices%20Rendered%20Unfit"
+}

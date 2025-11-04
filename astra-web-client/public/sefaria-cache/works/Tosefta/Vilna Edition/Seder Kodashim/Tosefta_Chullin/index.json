@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Chullin",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "chullin"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      53
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Chullin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Chullin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Hullin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Hullin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Hullin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ḥull."
+      },
+      {
+        "text": "תוספתא חולין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Chullin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Chullin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.716Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Chullin"
+}

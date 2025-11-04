@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Paschal Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "paschal-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "paschal-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      125
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Korban Pesach"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Korban Pesach"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Korban Pesach"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Paschal Offering"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Paschal Offering"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Korban Pesach"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Paschal Offering"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות קרבן פסח"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Korban Pesach"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Korban Pesach"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' קרבן פסח"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' קרבן פסח"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות קרבן פסח"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' קרבן פסח"
+      },
+      {
+        "text": "רמב״ם, הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' קרבן פסח",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות קרבן פסח",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Paschal Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Paschal Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.210Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Paschal%20Offering"
+}

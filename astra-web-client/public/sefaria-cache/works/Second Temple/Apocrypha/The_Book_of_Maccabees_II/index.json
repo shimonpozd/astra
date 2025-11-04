@@ -1,0 +1,76 @@
+{
+  "title": "The Book of Maccabees II",
+  "categories": [
+    "Second Temple",
+    "Apocrypha"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "i-maccabees1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sefer",
+          "i-maccabees1"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      660
+    ],
+    "titles": [
+      {
+        "text": "Sefer Hashmonaem II",
+        "lang": "en"
+      },
+      {
+        "text": "The Second Book of Maccabees",
+        "lang": "en"
+      },
+      {
+        "text": "II Macc.",
+        "lang": "en"
+      },
+      {
+        "text": "ספר חשמונאים ב",
+        "lang": "he"
+      },
+      {
+        "text": "מקבים ב",
+        "lang": "he"
+      },
+      {
+        "text": "חשמונאים ב",
+        "lang": "he"
+      },
+      {
+        "text": "ספר מקבים ב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "The Book of Maccabees II",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "The Book of Maccabees II"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:37.841Z",
+  "source": "http://localhost:8000/api/v2/raw/index/The%20Book%20of%20Maccabees%20II"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Rest on the Tenth of Tishrei",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "rest-on-the-tenth-of-tishrei"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      28,
+      55
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות שביתת עשור",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Rest on the Tenth of Tishrei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Rest on the Tenth of Tishrei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.311Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Rest%20on%20the%20Tenth%20of%20Tishrei"
+}

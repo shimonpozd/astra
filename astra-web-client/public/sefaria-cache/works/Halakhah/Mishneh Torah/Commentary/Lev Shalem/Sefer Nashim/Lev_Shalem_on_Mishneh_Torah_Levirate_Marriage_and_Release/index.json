@@ -1,0 +1,60 @@
+{
+  "title": "Lev Shalem on Mishneh Torah, Levirate Marriage and Release",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lev Shalem",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "hilchot",
+          "levirate-marriage-and-release"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lev-shalem",
+          "levirate-marriage-and-release"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      9,
+      9
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "לב שלם על משנה תורה, הלכות יבום וחליצה",
+        "lang": "he"
+      },
+      {
+        "text": "Lev Shalem on Mishneh Torah, Levirate Marriage and Release",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lev Shalem on Mishneh Torah, Levirate Marriage and Release"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.031Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lev%20Shalem%20on%20Mishneh%20Torah%2C%20Levirate%20Marriage%20and%20Release"
+}

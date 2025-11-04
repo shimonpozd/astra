@@ -1,0 +1,106 @@
+{
+  "title": "Mishnah Shevuot",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shevuot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      62
+    ],
+    "titles": [
+      {
+        "text": "M Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "M. Shevuot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Shavuos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Shavuos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Shevuos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Shevuos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Shebu.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Shʾbuoth",
+        "lang": "en"
+      },
+      {
+        "text": "M. Shevu’ot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Shevu’ot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Shevu’ot",
+        "lang": "en"
+      },
+      {
+        "text": "משנה שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.289Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Shevuot"
+}

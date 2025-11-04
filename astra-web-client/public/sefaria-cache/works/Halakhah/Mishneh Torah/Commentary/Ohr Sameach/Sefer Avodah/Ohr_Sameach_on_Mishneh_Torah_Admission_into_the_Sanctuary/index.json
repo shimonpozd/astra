@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      28,
+      30
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "אור שמח על משנה תורה, הלכות ביאת מקדש"
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.374Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

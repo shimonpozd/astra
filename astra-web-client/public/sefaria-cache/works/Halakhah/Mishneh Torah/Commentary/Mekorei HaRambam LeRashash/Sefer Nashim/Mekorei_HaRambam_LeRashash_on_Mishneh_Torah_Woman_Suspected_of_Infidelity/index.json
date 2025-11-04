@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Woman Suspected of Infidelity",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "woman-suspected-of-infidelity"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      3,
+      3
+    ],
+    "titles": [
+      {
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Woman Suspected of Infidelity",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Woman Suspected of Infidelity"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.629Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Woman%20Suspected%20of%20Infidelity"
+}

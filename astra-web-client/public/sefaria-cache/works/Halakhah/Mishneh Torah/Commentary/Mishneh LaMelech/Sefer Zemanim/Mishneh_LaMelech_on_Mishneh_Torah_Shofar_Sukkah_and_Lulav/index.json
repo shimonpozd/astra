@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "text": "משנה למלך על משנה תורה, הלכות לולב",
+        "primary": true,
+        "lang": "he"
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.089Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

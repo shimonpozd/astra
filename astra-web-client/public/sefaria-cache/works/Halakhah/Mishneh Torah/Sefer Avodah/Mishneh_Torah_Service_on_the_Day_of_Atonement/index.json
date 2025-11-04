@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Service on the Day of Atonement",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "service-on-the-day-of-atonement"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "service-on-the-day-of-atonement"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      56
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Avodat Yom haKippurim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Service on the Day of Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Service on the Day of Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Avodat Yom haKippurim"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Service on the Day of Atonement"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Avodat Yom haKippurim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Avodat Yom haKippurim"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות עבודת יום הכפורים"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Avodat Yom haKippurim"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Avodat Yom haKippurim"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' עבודת יום הכפורים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' עבודת יום הכפורים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות עבודת יום הכפורים"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' עבודת יום הכפורים"
+      },
+      {
+        "text": "רמב״ם, הלכות עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' עבודת יום הכפורים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עבודת יום הכפורים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Service on the Day of Atonement",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Service on the Day of Atonement"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.195Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Service%20on%20the%20Day%20of%20Atonement"
+}

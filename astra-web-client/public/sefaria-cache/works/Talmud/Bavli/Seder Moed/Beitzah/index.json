@@ -1,0 +1,382 @@
+{
+  "title": "Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "beitzah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      80,
+      1151
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Talmud Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Beitzah"
+      },
+      {
+        "lang": "en",
+        "text": "Beiah"
+      },
+      {
+        "lang": "en",
+        "text": "Beitza"
+      },
+      {
+        "lang": "en",
+        "text": "Bets."
+      },
+      {
+        "lang": "en",
+        "text": "Betsah"
+      },
+      {
+        "text": "BT Beitzah",
+        "lang": "en"
+      },
+      {
+        "text": "ביצה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Beitzah",
+    "checkFirst": {
+      "he": "משנה ביצה",
+      "en": "Mishnah Beitzah"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Beitzah 2a:1-15a:15",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-15"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-15"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1; Beitzah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "ביצה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Beitzah 15b:1-23b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-25"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-25"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2; Yom Tov"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "יום טוב"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Beitzah 23b:11-29b:9",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-35"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-35"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3; Ein Tzadin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אין צדין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Beitzah 29b:10-35b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-45"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-45"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4; HaMevi Kaddei Yayin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "המביא כדי יין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Beitzah 35b:7-40b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-55"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-55"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5; Mashilin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "משילין"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.061Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Beitzah"
+}

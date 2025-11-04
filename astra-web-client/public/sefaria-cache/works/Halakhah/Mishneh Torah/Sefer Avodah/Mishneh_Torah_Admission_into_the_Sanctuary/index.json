@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      147
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Biat Hamikdash"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Biat Hamikdash"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Admission into the Sanctuary"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Biat Hamikdash"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Admission into the Sanctuary"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Admission into the Sanctuary"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Biat Hamikdash"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות ביאת מקדש"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Biat Hamikdash"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Biat Hamikdash"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' ביאת מקדש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' ביאת מקדש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות ביאת מקדש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' ביאת מקדש"
+      },
+      {
+        "text": "רמב״ם, הלכות ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' ביאת מקדש",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ביאת מקדש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.157Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Maaseh Rokeach on Foreign Worship and Customs of the Nations",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maaseh Rokeach",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halacha",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maaseh-rokeach",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      138,
+      239
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מעשה רקח על הלכות עבודת כוכבים",
+        "lang": "he"
+      },
+      {
+        "text": "Maaseh Rokeach on Foreign Worship and Customs of the Nations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maaseh Rokeach on Foreign Worship and Customs of the Nations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.228Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maaseh%20Rokeach%20on%20Foreign%20Worship%20and%20Customs%20of%20the%20Nations"
+}

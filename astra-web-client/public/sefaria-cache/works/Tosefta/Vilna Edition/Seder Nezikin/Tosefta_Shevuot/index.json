@@ -1,0 +1,68 @@
+{
+  "title": "Tosefta Shevuot",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      37
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Shvuot"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Shevuot"
+      },
+      {
+        "lang": "en",
+        "text": "T. Shevuot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Shvuot"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Shebu."
+      },
+      {
+        "text": "תוספתא שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.681Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Shevuot"
+}

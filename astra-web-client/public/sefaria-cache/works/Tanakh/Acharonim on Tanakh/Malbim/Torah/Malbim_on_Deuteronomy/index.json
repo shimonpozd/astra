@@ -1,0 +1,58 @@
+{
+  "title": "Malbim on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      723,
+      1448
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מלבי\"ם על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.440Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Deuteronomy"
+}

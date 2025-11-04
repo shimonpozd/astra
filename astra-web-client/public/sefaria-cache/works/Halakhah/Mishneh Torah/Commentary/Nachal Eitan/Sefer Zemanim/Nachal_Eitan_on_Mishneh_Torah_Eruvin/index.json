@@ -1,0 +1,60 @@
+{
+  "title": "Nachal Eitan on Mishneh Torah, Eruvin",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Nachal Eitan",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "hilchot",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nachal-eitan",
+          "eruvin1"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      7,
+      8
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "נחל איתן על משנה תורה, הלכות עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "Nachal Eitan on Mishneh Torah, Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nachal Eitan on Mishneh Torah, Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.872Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Nachal%20Eitan%20on%20Mishneh%20Torah%2C%20Eruvin"
+}

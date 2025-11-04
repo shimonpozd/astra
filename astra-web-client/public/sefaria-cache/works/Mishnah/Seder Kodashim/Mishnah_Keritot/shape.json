@@ -1,0 +1,17 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    7,
+    6,
+    10,
+    3,
+    8,
+    9
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.402Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Keritot"
+}

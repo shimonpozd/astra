@@ -1,0 +1,85 @@
+{
+  "title": "Metzudat David on Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      117,
+      192
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Shir HaShirim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Canticles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Song."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Song"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שיר השירים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שה\"ש"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שיר"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שה״ש"
+      },
+      {
+        "text": "Metzudat David on Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.134Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Song%20of%20Songs"
+}

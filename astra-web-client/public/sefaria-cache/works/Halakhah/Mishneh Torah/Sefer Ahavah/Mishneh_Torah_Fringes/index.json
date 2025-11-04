@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Fringes",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "fringes"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "fringes"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "fringes"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "fringes"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "fringes"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      39
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Fringes"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Tzitzis"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Fringes"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Fringes"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Tzitzis"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Tzitzis"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Tzitzis"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות ציצית"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Tzitzis"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Tzitzis"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' ציצית"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' ציצית"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות ציצית"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' ציצית"
+      },
+      {
+        "text": "רמב״ם, הלכות ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' ציצית",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ציצית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Fringes",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Fringes"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.874Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Fringes"
+}

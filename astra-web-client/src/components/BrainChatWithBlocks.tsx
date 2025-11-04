@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
+import type { ChatRequest } from '../types';
 import { MessageRenderer } from './MessageRenderer';
 import { useBlockStream } from './BlockStreamRenderer';
 import { DocV1 } from '../types/text';
+import { debugLog } from '../utils/debugLogger';
 
 interface BrainChatWithBlocksProps {
   persona: string;
@@ -109,11 +111,10 @@ export default function BrainChatWithBlocks({
     // Reset block streaming state
     reset();
 
-    const request = {
+    const request: ChatRequest = {
       text: currentInput,
       agent_id: persona,
       session_id: sessionId,
-      user_id: 'user_stable' // Fix: Use stable user ID
     };
 
     const assistantMessageId = crypto.randomUUID(); // Fix: Use crypto.randomUUID()
@@ -131,21 +132,21 @@ export default function BrainChatWithBlocks({
 
     const streamHandler = {
       onBlockStart: (data: any) => {
-        console.log('Block start:', data);
+        debugLog('Block start:', data);
         // Fix: Normalize incoming data
         if (data.block_index !== undefined) {
           addBlock({ kind: 'start', ...data });
         }
       },
       onBlockDelta: (data: any) => {
-        console.log('Block delta:', data);
+        debugLog('Block delta:', data);
         // Fix: Normalize incoming data - ensure block exists
         if (data.block_index !== undefined && data.block) {
           addBlock({ kind: 'delta', ...data });
         }
       },
       onBlockEnd: (data: any) => {
-        console.log('Block end:', data);
+        debugLog('Block end:', data);
         // Fix: Normalize incoming data
         if (data.block_index !== undefined) {
           addBlock({ kind: 'end', ...data });

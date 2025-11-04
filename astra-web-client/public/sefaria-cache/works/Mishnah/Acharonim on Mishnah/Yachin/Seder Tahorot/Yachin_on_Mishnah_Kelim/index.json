@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Kelim",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "kelim"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      2329,
+      2343
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין כלים",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Kelim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Kelim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:25.620Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Kelim"
+}

@@ -1,0 +1,133 @@
+{
+  "title": "Metzudat David on I Chronicles",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "i-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      29,
+      607,
+      1094
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1 Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1Ch."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1 Chron"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1 Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Chronicles I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Chr"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1 Chron."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Chr."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Divrei HaYamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Divrei HaYamim I"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Divrei HaYamim Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on First Chronicles"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 1Ch"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Divrei Ha-yamim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on I Divrei Ha-Yamim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על דברי הימים א",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על דברי הימים א׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על דברי הימים א'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על דה\"א"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על דה״א"
+      },
+      {
+        "text": "Metzudat David on I Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on I Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.161Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20I%20Chronicles"
+}

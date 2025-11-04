@@ -1,0 +1,18 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    0,
+    3,
+    0,
+    1,
+    2
+  ],
+  "fetchedAt": "2025-10-30T14:22:24.311Z",
+  "source": "https://www.sefaria.org/api/shape/Chiddushei%20Anshei%20Shem%20on%20Makkot"
+}

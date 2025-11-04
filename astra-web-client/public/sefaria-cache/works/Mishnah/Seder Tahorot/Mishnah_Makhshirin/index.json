@@ -1,0 +1,86 @@
+{
+  "title": "Mishnah Makhshirin",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "makhshirin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "makhshirin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "makhshirin"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      54
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Makhshirin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Makhshirin"
+      },
+      {
+        "lang": "en",
+        "text": "M Makhshirin"
+      },
+      {
+        "lang": "he",
+        "text": "מכשירין"
+      },
+      {
+        "lang": "en",
+        "text": "Makhsh."
+      },
+      {
+        "lang": "en",
+        "text": "Makhshirin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Makhsh."
+      },
+      {
+        "text": "משנה מכשירין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Makhshirin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Makhshirin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.463Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Makhshirin"
+}

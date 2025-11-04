@@ -1,0 +1,133 @@
+{
+  "title": "Rashi on II Kings",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "ii-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      318,
+      503
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Melachim Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Melachim II"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Second Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 2 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Kings II"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Melakhim"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מ״ב"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מלכים ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על מלכים ב'"
+      },
+      {
+        "text": "רש״י על מלכים ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מ״ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מ”ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מלכים ב׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים ב׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על מלכים ב'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על מלכים ב'",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על מלכים ב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on II Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on II Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.124Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20II%20Kings"
+}

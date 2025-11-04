@@ -1,0 +1,57 @@
+{
+  "title": "Targum Jonathan on Jonah",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Targum Jonathan",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-jonathan",
+          "jonah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      48
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Targ. Jon."
+      },
+      {
+        "lang": "en",
+        "text": "Targ. Jonah"
+      },
+      {
+        "text": "תרגום יונתן על יונה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Jonathan on Jonah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Jonathan on Jonah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.914Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Jonathan%20on%20Jonah"
+}

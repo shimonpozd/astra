@@ -1,0 +1,59 @@
+{
+  "title": "Maharam on Beitzah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Maharam",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      80,
+      194
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מהר\"ם על ביצה",
+        "lang": "he"
+      },
+      {
+        "text": "Maharam on Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam on Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.791Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20on%20Beitzah"
+}

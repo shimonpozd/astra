@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Shabbat",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "shabbat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "shabbat"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      139
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Shabbat"
+      },
+      {
+        "lang": "en",
+        "text": "M. Shabbat"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Shabbat"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Shab."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Sabb."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Sabbath"
+      },
+      {
+        "text": "משנה שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.100Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Shabbat"
+}

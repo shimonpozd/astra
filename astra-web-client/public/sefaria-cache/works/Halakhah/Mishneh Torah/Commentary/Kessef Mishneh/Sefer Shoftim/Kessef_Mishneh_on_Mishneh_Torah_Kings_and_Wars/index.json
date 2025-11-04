@@ -1,0 +1,60 @@
+{
+  "title": "Kessef Mishneh on Mishneh Torah, Kings and Wars",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kessef Mishneh",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "hilchot",
+          "kings-and-wars"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kessef-mishneh",
+          "kings-and-wars"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      95,
+      200
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "כסף משנה על משנה תורה, הלכות מלכים ומלחמות",
+        "primary": true
+      },
+      {
+        "text": "Kessef Mishneh on Mishneh Torah, Kings and Wars",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kessef Mishneh on Mishneh Torah, Kings and Wars"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.360Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kessef%20Mishneh%20on%20Mishneh%20Torah%2C%20Kings%20and%20Wars"
+}

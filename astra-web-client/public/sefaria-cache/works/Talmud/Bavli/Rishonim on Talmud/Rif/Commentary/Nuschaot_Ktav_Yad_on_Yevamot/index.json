@@ -1,0 +1,50 @@
+{
+  "title": "Nuschaot Ktav Yad on Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nuschaot-ktav-yad",
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      93,
+      82
+    ],
+    "titles": [
+      {
+        "text": "נוסחאות כתב יד על יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nuschaot Ktav Yad on Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nuschaot Ktav Yad on Yevamot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.109Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Nuschaot%20Ktav%20Yad%20on%20Yevamot"
+}

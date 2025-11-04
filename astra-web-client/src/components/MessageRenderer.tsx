@@ -1,6 +1,7 @@
 import React from "react";
 import { Doc, DocV1 } from "../types/text";
 import { getTextDirection } from '../utils/hebrewUtils';
+import { debugLog } from '../utils/debugLogger';
 
 /** 1) Декодирование HTML entities */
 function decodeHtml(input: string): string {
@@ -503,16 +504,16 @@ function StudyChatRenderer({ doc }: { doc: StudyChatDoc }) {
 
 export function MessageRenderer({ doc }: MessageRendererProps) {
   // Debug: Log the document structure
-  console.log('🔍 MessageRenderer received doc:', doc);
-  console.log('🔍 Doc type:', typeof doc);
-  console.log('🔍 Doc keys:', Object.keys(doc));
+  debugLog('🔍 MessageRenderer received doc:', doc);
+  debugLog('🔍 Doc type:', typeof doc);
+  debugLog('🔍 Doc keys:', Object.keys(doc));
   
   // Handle Study Chat format (old: doc_version + explanation, new: doc.content, direct format, raw format)
   if (((doc as any).doc_version === 'v1' && (doc as any).explanation) ||
       ((doc as any).doc && (doc as any).doc.version === 'v1' && (doc as any).doc.content) ||
       ((doc as any).version === 'doc.v1' && (doc as any).content) ||
       ((doc as any).paragraph || (doc as any).quote || (doc as any).term)) {
-    console.log('🎯 Using StudyChatRenderer for:', doc);
+    debugLog('🎯 Using StudyChatRenderer for:', doc);
     return <StudyChatRenderer doc={doc as any} />;
   }
 
@@ -584,9 +585,9 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
             );
 
           case "term":
-            console.log('🔍 Term block data:', block);
-            console.log('🔍 Available keys:', Object.keys(block));
-            console.log('🔍 Block values:', {
+            debugLog('🔍 Term block data:', block);
+            debugLog('🔍 Available keys:', Object.keys(block));
+            debugLog('🔍 Block values:', {
               he: block.he,
               text: block.text,
               term: block.term,
@@ -598,7 +599,7 @@ export function MessageRenderer({ doc }: MessageRendererProps) {
             // Show empty terms for debugging - we need to see what's happening
             const hasContent = block.he || block.text || block.term || block.ru || block.definition || block.en;
             if (!hasContent) {
-              console.log('⚠️ Empty term block - showing for debugging');
+              debugLog('⚠️ Empty term block - showing for debugging');
               return (
                 <div key={index} className="bg-red-100 border border-red-300 rounded p-2 text-red-800 text-sm">
                   <strong>DEBUG: Empty Term Block</strong>

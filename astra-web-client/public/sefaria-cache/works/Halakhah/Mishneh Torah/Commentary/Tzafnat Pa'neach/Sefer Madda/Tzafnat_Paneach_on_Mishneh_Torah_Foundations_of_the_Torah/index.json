@@ -1,0 +1,60 @@
+{
+  "title": "Tzafnat Pa'neach on Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Tzafnat Pa'neach",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tzafnat-paneach",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      35,
+      67
+    ],
+    "titles": [
+      {
+        "text": "צפנת פענח על משנה תורה, הלכות יסודי התורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tzafnat Pa'neach on Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tzafnat Pa'neach on Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:30.592Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tzafnat%20Pa'neach%20on%20Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

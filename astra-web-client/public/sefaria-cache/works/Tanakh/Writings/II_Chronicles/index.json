@@ -1,0 +1,188 @@
+{
+  "title": "II Chronicles",
+  "categories": [
+    "Tanakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "ii-chronicles"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ii-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      822
+    ],
+    "titles": [
+      {
+        "text": "2 Chronicles",
+        "lang": "en"
+      },
+      {
+        "text": "II Divrei HaYamim",
+        "lang": "en"
+      },
+      {
+        "text": "Second Chronicles",
+        "lang": "en"
+      },
+      {
+        "text": "2 Chron",
+        "lang": "en"
+      },
+      {
+        "text": "2 Chron.",
+        "lang": "en"
+      },
+      {
+        "text": "2Ch.",
+        "lang": "en"
+      },
+      {
+        "text": "II Chr.",
+        "lang": "en"
+      },
+      {
+        "text": "Chronicles II",
+        "lang": "en"
+      },
+      {
+        "text": "2Ch",
+        "lang": "en"
+      },
+      {
+        "text": "II Chr",
+        "lang": "en"
+      },
+      {
+        "text": "2 Chr",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei HaYamim II",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei HaYamim Bet",
+        "lang": "en"
+      },
+      {
+        "text": "II Divrei Ha-yamim",
+        "lang": "en"
+      },
+      {
+        "text": "II Divrei Ha-Yamim",
+        "lang": "en"
+      },
+      {
+        "text": "II Divrei Hayomim",
+        "lang": "en"
+      },
+      {
+        "text": "II Chron.",
+        "lang": "en"
+      },
+      {
+        "text": "Chron. II",
+        "lang": "en"
+      },
+      {
+        "text": "II Chro.",
+        "lang": "en"
+      },
+      {
+        "text": "Second Chr.",
+        "lang": "en"
+      },
+      {
+        "text": "Divre HaYamim II",
+        "lang": "en"
+      },
+      {
+        "text": "Divrei Hayamim II",
+        "lang": "en"
+      },
+      {
+        "text": "דברי הימים ב׳",
+        "lang": "he"
+      },
+      {
+        "text": "דברי הימים ב'",
+        "lang": "he"
+      },
+      {
+        "text": "דה\"ב",
+        "lang": "he"
+      },
+      {
+        "text": "דה״ב",
+        "lang": "he"
+      },
+      {
+        "text": "דהי״ב",
+        "lang": "he"
+      },
+      {
+        "text": "דהי\"ב",
+        "lang": "he"
+      },
+      {
+        "text": "דהי''ב",
+        "lang": "he"
+      },
+      {
+        "text": "דה”ב",
+        "lang": "he"
+      },
+      {
+        "text": "דהי”ב",
+        "lang": "he"
+      },
+      {
+        "text": "דה״י ב'",
+        "lang": "he"
+      },
+      {
+        "text": "דה\"י ב'",
+        "lang": "he"
+      },
+      {
+        "text": "דברי הימים ב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "דה”י ב'",
+        "lang": "he"
+      },
+      {
+        "text": "II Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "II Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.547Z",
+  "source": "http://localhost:8000/api/v2/raw/index/II%20Chronicles"
+}

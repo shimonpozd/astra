@@ -1,0 +1,40 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      10,
+      1,
+      2,
+      2,
+      1,
+      3,
+      1,
+      11
+    ],
+    [
+      8,
+      2,
+      1,
+      3,
+      1,
+      1,
+      3
+    ],
+    [
+      3,
+      5,
+      2,
+      5,
+      1,
+      3,
+      3,
+      6
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:45.076Z",
+  "source": "https://www.sefaria.org/api/shape/Melekhet%20Shelomoh%20on%20Mishnah%20Chagigah"
+}

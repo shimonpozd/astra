@@ -1,0 +1,26 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    41,
+    35,
+    41,
+    62,
+    34,
+    38,
+    48,
+    45,
+    36,
+    46,
+    42,
+    60,
+    34,
+    52,
+    46
+  ],
+  "fetchedAt": "2025-10-30T14:42:37.866Z",
+  "source": "http://localhost:8000/api/shape/The%20Book%20of%20Maccabees%20II"
+}

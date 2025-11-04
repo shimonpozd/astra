@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Sotah (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      15,
+      193
+    ],
+    "titles": [
+      {
+        "text": "תוספתא סוטה (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Sotah (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Sotah (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.899Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Sotah%20(Lieberman)"
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat Zion on Ezra",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      80,
+      131
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ezr."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Ezr"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על עזרא",
+        "primary": true
+      },
+      {
+        "text": "Metzudat Zion on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.468Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20Ezra"
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Malbim on Joel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "joel"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      71,
+      76
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Yoel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Yoel"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Joel"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על יואל",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Joel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Joel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.534Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Joel"
+}

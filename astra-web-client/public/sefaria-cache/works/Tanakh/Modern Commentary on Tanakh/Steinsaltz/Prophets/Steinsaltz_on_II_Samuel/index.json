@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      695
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על שמואל ב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:04.617Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20II%20Samuel"
+}

@@ -1,0 +1,627 @@
+{
+  "title": "Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      4314
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Talmud Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "Masekhet Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "Bava Kama"
+      },
+      {
+        "lang": "en",
+        "text": "Baba Kama"
+      },
+      {
+        "lang": "en",
+        "text": "Baba Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "B.K."
+      },
+      {
+        "lang": "he",
+        "text": "ב\"ק"
+      },
+      {
+        "lang": "he",
+        "text": "ב״ק"
+      },
+      {
+        "lang": "en",
+        "text": "B. Kam."
+      },
+      {
+        "lang": "en",
+        "text": "Baba Ḳamma"
+      },
+      {
+        "text": "BT Bava Kamma",
+        "lang": "en"
+      },
+      {
+        "text": "ב”ק",
+        "lang": "he"
+      },
+      {
+        "text": "בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bava Kamma",
+    "checkFirst": {
+      "en": "Mishnah Bava Kamma",
+      "he": "משנה בבא קמא"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 2a:1-17a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-13"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-13"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Arba'ah Avot",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "ארבעה אבות",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 17a:13-27a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-23"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-23"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Keitzad HaRegel",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כיצד הרגל",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 27a:13-36a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-33"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-33"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; HaManiach",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "המניח",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 36a:9-46a:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-43"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-43"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 4; Shor SheNagach Arba'ah VaChamishah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שור שנגח ד' וה'",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 46a:7-55a:16",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-53"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-53"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 5; Shor SheNagach et HaParah",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "שור שנגח את הפרה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 55b:1-62b:6",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-62"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-62"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 6; HaKones",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הכונס",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 62b:7-83a:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-72"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-72"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 7; Merubbeh",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "מרובה",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 83b:1-93a:20",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-82"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-82"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 8; HaChovel",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "החובל",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 93b:1-111a:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-92"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-92"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 9; HaGozel Etzim",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הגוזל עצים",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Bava Kamma 111b:1-119b:21",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-101"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-101"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 10; HaGozel Batra",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הגוזל בתרא",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.148Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Bava%20Kamma"
+}

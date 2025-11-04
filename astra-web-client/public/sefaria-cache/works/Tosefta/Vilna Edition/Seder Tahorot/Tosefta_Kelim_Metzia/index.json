@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Kelim Metzia",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "kelim-metzia"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      59
+    ],
+    "titles": [
+      {
+        "text": "Tos. Keilim Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Tos. Keilim Metsia",
+        "lang": "en"
+      },
+      {
+        "text": "T. Keilim Metsia",
+        "lang": "en"
+      },
+      {
+        "text": "T. Keilim Metzia",
+        "lang": "en"
+      },
+      {
+        "text": "Tosef. Kel. B. Mets.",
+        "lang": "en"
+      },
+      {
+        "text": "Tosefta Keilim Metsia",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא כלים בבא מציעא",
+        "lang": "he"
+      },
+      {
+        "text": "תוספתא כלים מציעא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Kelim Metzia",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Kelim Metzia"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.787Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Kelim%20Metzia"
+}

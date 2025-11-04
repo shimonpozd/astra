@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      251,
+      311
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.099Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Berakhot"
+}

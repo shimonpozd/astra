@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Moed Katan",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "moed-katan"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "moed-katan"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      24
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Moed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "M. Moed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Moed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Mo'ed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Mo'ed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "M. Mo'ed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "M Mo'ed Katan"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah M. Kat."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Moʿed Ḳaṭon"
+      },
+      {
+        "text": "משנה מועד קטן",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Moed Katan",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Moed Katan"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.181Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Moed%20Katan"
+}

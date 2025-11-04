@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, Murderer and the Preservation of Life",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "murderer-and-the-preservation-of-life"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      17,
+      18
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, Murderer and the Preservation of Life",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, Murderer and the Preservation of Life"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.478Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20Murderer%20and%20the%20Preservation%20of%20Life"
+}

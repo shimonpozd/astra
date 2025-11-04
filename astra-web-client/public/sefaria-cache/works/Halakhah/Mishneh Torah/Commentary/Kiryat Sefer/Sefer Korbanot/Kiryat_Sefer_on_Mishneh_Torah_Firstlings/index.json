@@ -1,0 +1,60 @@
+{
+  "title": "Kiryat Sefer on Mishneh Torah, Firstlings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kiryat Sefer",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "hilchot",
+          "firstlings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kiryat-sefer",
+          "firstlings"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      75,
+      75
+    ],
+    "titles": [
+      {
+        "text": "קרית ספר על משנה תורה, הלכות בכורות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kiryat Sefer on Mishneh Torah, Firstlings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kiryat Sefer on Mishneh Torah, Firstlings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:22.743Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kiryat%20Sefer%20on%20Mishneh%20Torah%2C%20Firstlings"
+}

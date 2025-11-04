@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Rabbi Akiva Eiger on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chiddushei Rabbi Akiva Eiger",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      4
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "חידושי רבי עקיבא איגר על מסכת בבא קמא",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Rabbi Akiva Eiger on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Rabbi Akiva Eiger on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.320Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Rabbi%20Akiva%20Eiger%20on%20Bava%20Kamma"
+}

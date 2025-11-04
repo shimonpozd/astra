@@ -1,0 +1,198 @@
+{
+  "title": "Mishneh Torah, Shofar, Sukkah and Lulav",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "shofar-sukkah-and-lulav"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "shofar-sukkah-and-lulav"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      130
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shofar, Sukkah and Lulav"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Shofar, Sukkah and Lulav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Shofar, Sukkah and Lulav"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Shofar, Sukkah, vLulav"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שופר וסוכה ולולב"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שופר וסוכה ולולב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שופר וסוכה ולולב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שופר וסוכה ולולב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שופר וסוכה ולולב"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות סוכה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות לולב"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות שופר"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות לולב"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות סוכה"
+      },
+      {
+        "text": "רמב״ם, הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שופר וסוכה ולולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות לולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות לולב",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות סוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות סוכה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שופר וסוכה ולולב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Shofar, Sukkah and Lulav",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Shofar, Sukkah and Lulav"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.944Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Shofar%2C%20Sukkah%20and%20Lulav"
+}

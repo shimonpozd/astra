@@ -1,0 +1,73 @@
+{
+  "title": "Kli Yakar on Numbers",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Kli Yakar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kli-yakar",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      119,
+      322
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Bemidbar"
+      },
+      {
+        "text": "כלי יקר על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kli Yakar on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kli Yakar on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.374Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kli%20Yakar%20on%20Numbers"
+}

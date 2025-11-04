@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Beitzah",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "beitzah"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      13
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה ביצה",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Beitzah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Beitzah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:27.613Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Beitzah"
+}

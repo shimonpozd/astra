@@ -1,0 +1,77 @@
+{
+  "title": "Malbim on Malachi",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "malachi"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      55,
+      65
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Malbim on Mal.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim on Mal",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Mal.",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Mal",
+        "lang": "en"
+      },
+      {
+        "text": "Malbim Literary Commantary on Malachi",
+        "lang": "en"
+      },
+      {
+        "primary": true,
+        "text": "מלבי\"ם על מלאכי",
+        "lang": "he"
+      },
+      {
+        "text": "Malbim on Malachi",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Malachi"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.621Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Malachi"
+}

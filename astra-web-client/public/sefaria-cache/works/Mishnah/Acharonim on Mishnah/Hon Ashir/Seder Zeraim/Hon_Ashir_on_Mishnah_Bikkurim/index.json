@@ -1,0 +1,57 @@
+{
+  "title": "Hon Ashir on Mishnah Bikkurim",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Hon Ashir",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hon-ashir",
+          "mishnah",
+          "bikkurim"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      24,
+      43
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "הון עשיר על משנה ביכורים"
+      },
+      {
+        "text": "Hon Ashir on Mishnah Bikkurim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hon Ashir on Mishnah Bikkurim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:32.255Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hon%20Ashir%20on%20Mishnah%20Bikkurim"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Hiring",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "hiring"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hiring"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      122,
+      233
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגדל עוז על משנה תורה, הלכות שכירות",
+        "lang": "he"
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Hiring",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Hiring"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.888Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Hiring"
+}

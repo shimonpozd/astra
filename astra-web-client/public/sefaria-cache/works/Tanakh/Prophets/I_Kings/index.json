@@ -1,0 +1,120 @@
+{
+  "title": "I Kings",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "i-kings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "i-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      817
+    ],
+    "titles": [
+      {
+        "text": "I Melachim",
+        "lang": "en"
+      },
+      {
+        "text": "Melachim Aleph",
+        "lang": "en"
+      },
+      {
+        "text": "Kings I",
+        "lang": "en"
+      },
+      {
+        "text": "Melachim I",
+        "lang": "en"
+      },
+      {
+        "text": "1 Kings",
+        "lang": "en"
+      },
+      {
+        "text": "First Kings",
+        "lang": "en"
+      },
+      {
+        "text": "I Melakhim",
+        "lang": "en"
+      },
+      {
+        "text": "Kin. I",
+        "lang": "en"
+      },
+      {
+        "text": "I. Kings",
+        "lang": "en"
+      },
+      {
+        "text": "1 Kgs.",
+        "lang": "en"
+      },
+      {
+        "text": "I Rois",
+        "lang": "en"
+      },
+      {
+        "text": "1 Kgs",
+        "lang": "en"
+      },
+      {
+        "text": "מלכים א׳",
+        "lang": "he"
+      },
+      {
+        "text": "מלכים א'",
+        "lang": "he"
+      },
+      {
+        "text": "מל\"א",
+        "lang": "he"
+      },
+      {
+        "text": "מל״א",
+        "lang": "he"
+      },
+      {
+        "text": "מל”א",
+        "lang": "he"
+      },
+      {
+        "text": "מלכים א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "I Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "I Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.295Z",
+  "source": "http://localhost:8000/api/v2/raw/index/I%20Kings"
+}

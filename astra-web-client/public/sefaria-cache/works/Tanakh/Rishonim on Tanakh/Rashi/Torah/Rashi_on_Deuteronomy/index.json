@@ -1,0 +1,109 @@
+{
+  "title": "Rashi on Deuteronomy",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "deuteronomy"
+        ]
+      }
+    ],
+    "lengths": [
+      34,
+      666,
+      1369
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Deu."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Devarim"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Deu"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Deut."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Deut"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על דברי'"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על דברי׳"
+      },
+      {
+        "text": "רש״י על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על דברים",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על דברי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על דברי׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Deuteronomy",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Deuteronomy"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.018Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Deuteronomy"
+}

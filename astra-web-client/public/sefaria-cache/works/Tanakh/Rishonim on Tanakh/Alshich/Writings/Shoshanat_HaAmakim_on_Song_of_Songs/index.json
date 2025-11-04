@@ -1,0 +1,70 @@
+{
+  "title": "Shoshanat HaAmakim on Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Alshich",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "alshich",
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      56,
+      113
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Alshich on Song of Songs",
+        "lang": "en"
+      },
+      {
+        "text": "Shoshanat haAmakim on Song of Songs",
+        "lang": "en"
+      },
+      {
+        "primary": true,
+        "text": "שושנת העמקים על שיר השירים",
+        "lang": "he"
+      },
+      {
+        "text": "אלשיך על שיר השירים",
+        "lang": "he"
+      },
+      {
+        "text": "Shoshanat HaAmakim on Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shoshanat HaAmakim on Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.009Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shoshanat%20HaAmakim%20on%20Song%20of%20Songs"
+}

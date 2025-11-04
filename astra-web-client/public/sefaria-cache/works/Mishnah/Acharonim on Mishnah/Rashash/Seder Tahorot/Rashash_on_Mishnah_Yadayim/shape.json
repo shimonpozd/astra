@@ -1,0 +1,36 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      4,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      3,
+      1,
+      2,
+      3
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:53.051Z",
+  "source": "https://www.sefaria.org/api/shape/Rashash%20on%20Mishnah%20Yadayim"
+}

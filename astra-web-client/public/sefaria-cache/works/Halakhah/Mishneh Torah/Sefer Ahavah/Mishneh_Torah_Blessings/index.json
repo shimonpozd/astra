@@ -1,0 +1,186 @@
+{
+  "title": "Mishneh Torah, Blessings",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "blessings"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "blessings"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      178
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Blessings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Blessings"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Blessings"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Berachot"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות ברכות"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Berachot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Berakhot"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Berakhot"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' ברכות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' ברכות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות ברכות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' ברכות"
+      },
+      {
+        "text": "רמב״ם, הלכות ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' ברכות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Blessings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Blessings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.875Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Blessings"
+}

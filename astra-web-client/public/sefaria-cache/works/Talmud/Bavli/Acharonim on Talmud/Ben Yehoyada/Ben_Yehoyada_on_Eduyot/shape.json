@@ -1,0 +1,19 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    1,
+    10,
+    0,
+    0,
+    7,
+    0,
+    0,
+    7
+  ],
+  "fetchedAt": "2025-10-30T14:22:50.566Z",
+  "source": "https://www.sefaria.org/api/shape/Ben%20Yehoyada%20on%20Eduyot"
+}

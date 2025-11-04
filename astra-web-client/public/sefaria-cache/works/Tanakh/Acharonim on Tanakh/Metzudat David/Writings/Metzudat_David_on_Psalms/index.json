@@ -1,0 +1,117 @@
+{
+  "title": "Metzudat David on Psalms",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "psalms"
+        ]
+      }
+    ],
+    "lengths": [
+      150,
+      2335,
+      3570
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ps"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ps."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Psa"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Tehilim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Psa."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Psalm"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Tehillim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהילים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהלים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תְּהִלִּים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תילים"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהילות"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהילי'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהילי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהלי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על תהלי'"
+      },
+      {
+        "text": "Metzudat David on Psalms",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Psalms"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.097Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Psalms"
+}

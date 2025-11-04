@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Nedarim",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "nedarim"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      59
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "T. Nedarim"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Ned."
+      },
+      {
+        "text": "תוספתא נדרים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Nedarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Nedarim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.607Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Nedarim"
+}

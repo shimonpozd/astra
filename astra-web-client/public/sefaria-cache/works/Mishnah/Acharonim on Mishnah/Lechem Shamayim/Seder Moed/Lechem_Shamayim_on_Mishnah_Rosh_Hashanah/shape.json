@@ -1,0 +1,53 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      2,
+      6,
+      2,
+      2,
+      0,
+      0,
+      1,
+      8,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3
+    ],
+    [
+      9,
+      1,
+      2,
+      0,
+      0,
+      0,
+      2,
+      4
+    ],
+    [
+      0,
+      12,
+      0,
+      0,
+      0,
+      3,
+      3,
+      1,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:40.811Z",
+  "source": "https://www.sefaria.org/api/shape/Lechem%20Shamayim%20on%20Mishnah%20Rosh%20Hashanah"
+}

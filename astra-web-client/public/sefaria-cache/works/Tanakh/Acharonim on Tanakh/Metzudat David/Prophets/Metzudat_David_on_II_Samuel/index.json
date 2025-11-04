@@ -1,0 +1,129 @@
+{
+  "title": "Metzudat David on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      557,
+      1047
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on 2Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Second Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Shmuel Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Shmuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Samuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 2 Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on II Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on II Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on II Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 2Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on 2 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on II Shemuel"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שמואל ב",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ש״ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ש\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שמואל ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שמואל ב'"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שמ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על שמ״ב"
+      },
+      {
+        "text": "Metzudat David on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.909Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20II%20Samuel"
+}

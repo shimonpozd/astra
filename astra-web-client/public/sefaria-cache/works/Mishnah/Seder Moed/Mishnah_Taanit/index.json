@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Ta'anit",
+  "categories": [
+    "Mishnah",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "taanit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "taanit"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "taanit"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      34
+    ],
+    "titles": [
+      {
+        "text": "M. Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "M Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Taan.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Taʿãnith",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Taanit",
+        "lang": "en"
+      },
+      {
+        "text": "משנה תענית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Ta'anit",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Ta'anit"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.179Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Ta'anit"
+}

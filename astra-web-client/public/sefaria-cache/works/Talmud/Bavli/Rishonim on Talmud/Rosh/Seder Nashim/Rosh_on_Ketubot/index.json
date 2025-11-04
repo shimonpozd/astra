@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Ketubot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "ketubot"
+        ]
+      }
+    ],
+    "lengths": [
+      224,
+      307,
+      401
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על כתובות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Ketubot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Ketubot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.206Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Ketubot"
+}

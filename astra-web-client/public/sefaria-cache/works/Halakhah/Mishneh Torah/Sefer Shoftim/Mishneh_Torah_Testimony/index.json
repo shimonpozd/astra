@@ -1,0 +1,178 @@
+{
+  "title": "Mishneh Torah, Testimony",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Shoftim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "testimony"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "testimony"
+        ]
+      }
+    ],
+    "lengths": [
+      22,
+      173
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Edut"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Testimony"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Edut"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Testimony"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Testimony"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Edut"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Edut"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Edut"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Edut"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות עדות"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב''ם עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם עדות"
+      },
+      {
+        "lang": "he",
+        "text": "רמב״ם עדות"
+      },
+      {
+        "text": "רמב״ם, הלכות עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' עדות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם עדות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות עדות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Testimony",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Testimony"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.494Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Testimony"
+}

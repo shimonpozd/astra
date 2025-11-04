@@ -1,0 +1,60 @@
+{
+  "title": "Milchemet Hashem on Pesachim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Milchemet Hashem"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "milchemet-hashem",
+          "pesachim"
+        ]
+      }
+    ],
+    "lengths": [
+      242,
+      31
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "מלחמת השם על פסחים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Milchemet Hashem on Pesachim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Milchemet Hashem on Pesachim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.921Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Milchemet%20Hashem%20on%20Pesachim"
+}

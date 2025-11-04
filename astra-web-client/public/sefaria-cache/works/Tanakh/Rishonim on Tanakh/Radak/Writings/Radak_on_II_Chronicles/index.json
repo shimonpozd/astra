@@ -1,0 +1,57 @@
+{
+  "title": "Radak on II Chronicles",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Radak",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "radak",
+          "ii-chronicles"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      243,
+      307
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רד\"ק על דברי הימים ב'",
+        "primary": true
+      },
+      {
+        "text": "Radak on II Chronicles",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Radak on II Chronicles"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:20:44.971Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Radak%20on%20II%20Chronicles"
+}

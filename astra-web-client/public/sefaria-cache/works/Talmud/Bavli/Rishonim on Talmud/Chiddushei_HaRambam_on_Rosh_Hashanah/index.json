@@ -1,0 +1,61 @@
+{
+  "title": "Chiddushei HaRambam on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-harambam",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      72
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Chidushei Rambam on Rosh Hashanah",
+        "lang": "en"
+      },
+      {
+        "text": "חידושי הרמב\"ם על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei HaRambam on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei HaRambam on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.159Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20HaRambam%20on%20Rosh%20Hashanah"
+}

@@ -1,0 +1,59 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      19,
+      5,
+      2,
+      5
+    ],
+    [
+      5,
+      5,
+      4,
+      4,
+      6
+    ],
+    [
+      8,
+      5,
+      3,
+      4,
+      6,
+      6,
+      5,
+      7,
+      10
+    ],
+    [
+      7,
+      9,
+      10
+    ],
+    [
+      4,
+      3,
+      3,
+      4,
+      10,
+      6
+    ],
+    [
+      6,
+      3,
+      6
+    ],
+    [
+      3,
+      9,
+      11,
+      7
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:15.057Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Tamid"
+}

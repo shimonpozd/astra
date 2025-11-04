@@ -1,0 +1,51 @@
+{
+  "title": "Katuv Sham on Sukkah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Katuv Sham"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "katuv-sham",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      45,
+      32
+    ],
+    "titles": [
+      {
+        "text": "כתוב שם סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Katuv Sham on Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Katuv Sham on Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:28.886Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Katuv%20Sham%20on%20Sukkah"
+}

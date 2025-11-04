@@ -1,0 +1,50 @@
+{
+  "title": "Boaz on Mishnah Gittin",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Boaz",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "boaz",
+          "mishnah",
+          "gittin"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      6
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "בועז על משנה גיטין",
+        "primary": true
+      },
+      {
+        "text": "Boaz on Mishnah Gittin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Boaz on Mishnah Gittin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:28.292Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Boaz%20on%20Mishnah%20Gittin"
+}

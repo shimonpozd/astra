@@ -1,0 +1,76 @@
+{
+  "title": "Tosefta Sukkah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "sukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      42
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Sukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Succah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Sukah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosefta Sukah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Sukah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Succ."
+      },
+      {
+        "text": "תוספתא סוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Sukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Sukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.525Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Sukkah"
+}

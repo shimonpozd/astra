@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Temurah",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "temurah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "temurah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      35
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "M Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Temurah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Tem."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah T’murah"
+      },
+      {
+        "text": "משנה תמורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Temurah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Temurah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.374Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Temurah"
+}

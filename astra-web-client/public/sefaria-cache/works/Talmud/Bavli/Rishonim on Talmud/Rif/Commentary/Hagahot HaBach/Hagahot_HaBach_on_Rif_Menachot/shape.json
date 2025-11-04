@@ -1,0 +1,39 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    24,
+    20,
+    21,
+    18,
+    22,
+    14,
+    19,
+    12,
+    19,
+    16,
+    30,
+    21,
+    21,
+    12,
+    14,
+    21,
+    9,
+    6,
+    15,
+    12,
+    18,
+    8,
+    10,
+    25,
+    18,
+    19,
+    16,
+    1
+  ],
+  "fetchedAt": "2025-10-30T14:22:26.343Z",
+  "source": "https://www.sefaria.org/api/shape/Hagahot%20HaBach%20on%20Rif%20Menachot"
+}

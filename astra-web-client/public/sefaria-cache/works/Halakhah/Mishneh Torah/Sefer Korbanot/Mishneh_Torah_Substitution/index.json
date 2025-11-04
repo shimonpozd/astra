@@ -1,0 +1,190 @@
+{
+  "title": "Mishneh Torah, Substitution",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "substitution"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "substitution"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "substitution"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "substitution"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "substitution"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      46
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilchot Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Substitution",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Substitution",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Substitution",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Temurah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות תמורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "רמב״ם, תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, תמורה",
+        "lang": "he"
+      },
+      {
+        "text": "Mishneh Torah, Substitution",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Substitution"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.260Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Substitution"
+}

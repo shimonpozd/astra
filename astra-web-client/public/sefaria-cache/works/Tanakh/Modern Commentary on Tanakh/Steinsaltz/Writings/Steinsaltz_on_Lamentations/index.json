@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on Lamentations",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "lamentations"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      154
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על איכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Lamentations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Lamentations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:06.207Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20Lamentations"
+}

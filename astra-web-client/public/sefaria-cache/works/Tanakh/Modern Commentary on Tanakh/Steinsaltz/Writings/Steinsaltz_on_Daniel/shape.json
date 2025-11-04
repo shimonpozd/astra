@@ -1,0 +1,23 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    21,
+    49,
+    33,
+    34,
+    30,
+    29,
+    28,
+    27,
+    27,
+    21,
+    45,
+    13
+  ],
+  "fetchedAt": "2025-10-30T14:21:06.584Z",
+  "source": "https://www.sefaria.org/api/shape/Steinsaltz%20on%20Daniel"
+}

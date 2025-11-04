@@ -1,0 +1,52 @@
+{
+  "title": "Targum Sheni on Esther",
+  "categories": [
+    "Tanakh",
+    "Targum",
+    "Aramaic Targum",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "targum-sheni",
+          "esther"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      164,
+      301
+    ],
+    "titles": [
+      {
+        "text": "תרגום שני על אסתר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Targum Sheni on Esther",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Targum Sheni on Esther"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:27:58.098Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Targum%20Sheni%20on%20Esther"
+}

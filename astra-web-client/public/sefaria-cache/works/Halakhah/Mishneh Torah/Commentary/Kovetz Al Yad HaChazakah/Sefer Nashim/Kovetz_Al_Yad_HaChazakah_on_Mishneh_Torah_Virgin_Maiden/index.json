@@ -1,0 +1,60 @@
+{
+  "title": "Kovetz Al Yad HaChazakah on Mishneh Torah, Virgin Maiden",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kovetz Al Yad HaChazakah",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "hilchot",
+          "virgin-maiden"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "virgin-maiden"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      11,
+      12
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "קובץ על היד החזקה על משנה תורה, הלכות נערה בתולה",
+        "lang": "he"
+      },
+      {
+        "text": "Kovetz Al Yad HaChazakah on Mishneh Torah, Virgin Maiden",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kovetz Al Yad HaChazakah on Mishneh Torah, Virgin Maiden"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.311Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kovetz%20Al%20Yad%20HaChazakah%20on%20Mishneh%20Torah%2C%20Virgin%20Maiden"
+}

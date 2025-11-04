@@ -1,0 +1,51 @@
+{
+  "title": "Commentary of the Rosh on Nazir",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Commentary of the Rosh",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      132,
+      1033
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "פירוש הרא\"ש על נזיר"
+      },
+      {
+        "text": "Commentary of the Rosh on Nazir",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Commentary of the Rosh on Nazir"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.159Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Commentary%20of%20the%20Rosh%20on%20Nazir"
+}

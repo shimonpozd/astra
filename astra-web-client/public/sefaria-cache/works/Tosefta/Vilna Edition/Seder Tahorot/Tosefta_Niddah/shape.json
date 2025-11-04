@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    7,
+    7,
+    5,
+    8,
+    7,
+    12,
+    6,
+    7,
+    12
+  ],
+  "fetchedAt": "2025-10-30T14:42:36.858Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Niddah"
+}

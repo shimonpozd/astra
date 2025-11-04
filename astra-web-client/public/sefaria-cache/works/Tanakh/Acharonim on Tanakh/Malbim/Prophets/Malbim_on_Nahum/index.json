@@ -1,0 +1,77 @@
+{
+  "title": "Malbim on Nahum",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "nahum"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      47,
+      47
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Nah."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Nah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Nah."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Nah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Nahum"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על נחום",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Nahum",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Nahum"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.580Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Nahum"
+}

@@ -1,0 +1,60 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      1,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:35.512Z",
+  "source": "https://www.sefaria.org/api/shape/Hon%20Ashir%20on%20Mishnah%20Makhshirin"
+}

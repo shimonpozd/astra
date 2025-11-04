@@ -1,0 +1,57 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Transmission of the Oral Law",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Introduction"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "transmission-of-the-oral-law"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "transmission-of-the-oral-law"
+        ]
+      }
+    ],
+    "lengths": [
+      45,
+      1
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "אור שמח על משנה תורה, מסירת תורה שבעל פה",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Transmission of the Oral Law",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Transmission of the Oral Law"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.992Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Transmission%20of%20the%20Oral%20Law"
+}

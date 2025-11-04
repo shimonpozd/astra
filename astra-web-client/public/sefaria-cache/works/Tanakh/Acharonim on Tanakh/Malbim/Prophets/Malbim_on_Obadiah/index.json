@@ -1,0 +1,69 @@
+{
+  "title": "Malbim on Obadiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "obadiah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      21,
+      24
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Ovadiah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Ovadiah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Obadiah"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על עובדיה",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Obadiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Obadiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.543Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Obadiah"
+}

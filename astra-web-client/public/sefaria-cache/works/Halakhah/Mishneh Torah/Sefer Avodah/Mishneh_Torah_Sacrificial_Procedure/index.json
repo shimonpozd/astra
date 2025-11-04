@@ -1,0 +1,198 @@
+{
+  "title": "Mishneh Torah, Sacrificial Procedure",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "sacrificial-procedure"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "sacrificial-procedure"
+        ]
+      }
+    ],
+    "lengths": [
+      19,
+      322
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilkhot Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot Maaseh Hakorbonos",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Sacrificial Procedure",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Sacrificial Procedure",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Sacrificial Procedure",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מעשה הקרבנות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "רמב״ם מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם מעשה הקרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, קרבנות",
+        "lang": "he"
+      },
+      {
+        "text": "Mishneh Torah, Sacrificial Procedure",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Sacrificial Procedure"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.169Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Sacrificial%20Procedure"
+}

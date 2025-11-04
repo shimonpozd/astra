@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Maaser Sheni",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "maaser-sheni"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      303,
+      303
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין מעשר שני",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Maaser Sheni",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Maaser Sheni"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:22.809Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Maaser%20Sheni"
+}

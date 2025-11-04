@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Kiddushin",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kiddushin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      47
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "M Kiddushin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Kidd."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ḳiddushin"
+      },
+      {
+        "text": "משנה קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.243Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Kiddushin"
+}

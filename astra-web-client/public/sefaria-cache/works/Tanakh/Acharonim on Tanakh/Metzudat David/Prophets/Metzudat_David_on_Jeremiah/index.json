@@ -1,0 +1,85 @@
+{
+  "title": "Metzudat David on Jeremiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "jeremiah"
+        ]
+      }
+    ],
+    "lengths": [
+      52,
+      1269,
+      2938
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Yirmiyahu"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Jer"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Jer."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Yirmiyohu"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ירמיהו",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ירמיה"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ירמי׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על ירמי'"
+      },
+      {
+        "text": "Metzudat David on Jeremiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Jeremiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.975Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Jeremiah"
+}

@@ -1,0 +1,38 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:22.965Z",
+  "source": "http://localhost:8000/api/shape/Kiryat%20Sefer%20on%20Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

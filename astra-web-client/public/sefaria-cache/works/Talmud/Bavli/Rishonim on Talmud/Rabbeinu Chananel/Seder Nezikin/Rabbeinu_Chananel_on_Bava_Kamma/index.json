@@ -1,0 +1,59 @@
+{
+  "title": "Rabbeinu Chananel on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rabbeinu Chananel",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-chananel",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      238,
+      369
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רבינו חננאל על בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Chananel on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Chananel on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.689Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rabbeinu%20Chananel%20on%20Bava%20Kamma"
+}

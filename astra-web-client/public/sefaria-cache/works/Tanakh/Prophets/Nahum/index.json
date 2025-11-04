@@ -1,0 +1,64 @@
+{
+  "title": "Nahum",
+  "categories": [
+    "Tanakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Pasuk"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "nahum"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nahum"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      47
+    ],
+    "titles": [
+      {
+        "text": "Nah.",
+        "lang": "en"
+      },
+      {
+        "text": "Nah",
+        "lang": "en"
+      },
+      {
+        "text": "Nachum",
+        "lang": "en"
+      },
+      {
+        "text": "נחום",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nahum",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nahum"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:55.396Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Nahum"
+}

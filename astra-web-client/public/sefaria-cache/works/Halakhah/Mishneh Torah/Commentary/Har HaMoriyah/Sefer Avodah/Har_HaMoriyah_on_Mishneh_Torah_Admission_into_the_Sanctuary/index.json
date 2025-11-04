@@ -1,0 +1,60 @@
+{
+  "title": "Har HaMoriyah on Mishneh Torah, Admission into the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Har HaMoriyah",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "hilchot",
+          "admission-into-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "har-hamoriyah",
+          "admission-into-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      143,
+      384
+    ],
+    "titles": [
+      {
+        "text": "הר המוריה על משנה תורה, הלכות ביאת מקדש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Har HaMoriyah on Mishneh Torah, Admission into the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Har HaMoriyah on Mishneh Torah, Admission into the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:20.812Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Har%20HaMoriyah%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Rashi on Daniel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "daniel"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      301,
+      764
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Dan."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Dan"
+      },
+      {
+        "text": "רש״י על דניאל",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על דניאל",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על דניאל",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Daniel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Daniel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.425Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Daniel"
+}

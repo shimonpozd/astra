@@ -138,6 +138,11 @@ export default function MessageComposer({
 
   const onDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
+    const ref = e.dataTransfer.getData('text/astra-commentator-ref');
+    if (ref) {
+      setText(prev => (prev ? prev + ' ' + ref : ref));
+      return;
+    }
     const files = Array.from(e.dataTransfer.files);
     if (files.length && onAttachFiles) {
       onAttachFiles(files);

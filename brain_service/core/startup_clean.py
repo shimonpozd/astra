@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 import httpx
 import redis.asyncio as redis
 from fastapi import FastAPI
+from sqlalchemy import text
 
 from .settings import Settings
 from .logging_config import setup_logging
@@ -18,6 +19,13 @@ from ..services.session_service import SessionService
 from ..services.translation_service import TranslationService
 from ..domain.chat.tools import ToolRegistry
 from .rate_limiting import setup_rate_limiter
+from .database import create_engine, create_session_factory, shutdown_engine
+from ..models.db import Base
+from ..services.user_service import UserService
+from ..services.auth_service import AuthService
+from .config_loader import ensure_config_root
+
+ensure_config_root()
 from config import get_config
 
 @asynccontextmanager
@@ -29,6 +37,30 @@ async def lifespan(app: FastAPI):
     settings = Settings()
     setup_logging(settings)
     app.state.settings = settings
+
+    app.state.db_engine = create_engine(settings.DATABASE_URL)
+    app.state.db_session_factory = create_session_factory(app.state.db_engine)
+    async with app.state.db_engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await conn.execute(
+            text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS created_manually BOOLEAN NOT NULL DEFAULT FALSE"
+            )
+        )
+        await conn.execute(
+            text(
+                "ALTER TABLE users ADD COLUMN IF NOT EXISTS last_login_at TIMESTAMPTZ NULL"
+            )
+        )
+    app.state.user_service = UserService(
+        app.state.db_session_factory, encryption_secret=settings.API_KEY_SECRET
+    )
+    app.state.auth_service = AuthService(
+        app.state.user_service,
+        jwt_secret=settings.JWT_SECRET,
+        jwt_algorithm=settings.JWT_ALGORITHM,
+        jwt_expires_minutes=settings.JWT_ACCESS_TOKEN_EXPIRES_MINUTES,
+    )
 
     # Initialize and store clients
     app.state.http_client = httpx.AsyncClient(
@@ -69,7 +101,8 @@ async def lifespan(app: FastAPI):
 
     # Instantiate session service
     app.state.session_service = SessionService(
-        redis_client=app.state.redis_client
+        redis_client=app.state.redis_client,
+        user_service=app.state.user_service,
     )
 
     # Instantiate translation service
@@ -131,7 +164,8 @@ async def lifespan(app: FastAPI):
     app.state.chat_service = ChatService(
         redis_client=app.state.redis_client,
         tool_registry=app.state.tool_registry,
-        memory_service=app.state.memory_service
+        memory_service=app.state.memory_service,
+        user_service=app.state.user_service,
     )
 
     # Instantiate study service
@@ -292,6 +326,7 @@ async def lifespan(app: FastAPI):
     await app.state.http_client.aclose()
     if app.state.redis_client:
         await app.state.redis_client.aclose()
+    await shutdown_engine(getattr(app.state, "db_engine", None))
     print("Clients closed. Shutdown complete.")
 
 

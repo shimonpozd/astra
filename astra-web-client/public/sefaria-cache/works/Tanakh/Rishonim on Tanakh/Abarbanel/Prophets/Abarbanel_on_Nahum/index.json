@@ -1,0 +1,58 @@
+{
+  "title": "Abarbanel on Nahum",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Abarbanel",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "abarbanel",
+          "nahum"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      32,
+      47
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "אברבנאל על נחום",
+        "lang": "he"
+      },
+      {
+        "text": "Abarbanel on Nahum",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Abarbanel on Nahum"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.919Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Abarbanel%20on%20Nahum"
+}

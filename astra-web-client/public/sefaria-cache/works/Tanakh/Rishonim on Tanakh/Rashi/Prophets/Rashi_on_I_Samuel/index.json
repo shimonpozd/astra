@@ -1,0 +1,165 @@
+{
+  "title": "Rashi on I Samuel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "i-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      395,
+      640
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on I Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 1Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on First Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shmuel Aleph"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 1Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on I Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Samuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shmuel I"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 1 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on I Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on I Shemuel"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ש״א"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ש\"א"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמואל א׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמואל א'"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמ״א"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמ\"א"
+      },
+      {
+        "text": "רש״י על שמואל א",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל א",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על ש״א",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ש”א",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמואל א׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל א׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמואל א'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל א'",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמ״א",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמ”א",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על שמואל א",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on I Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on I Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.087Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20I%20Samuel"
+}

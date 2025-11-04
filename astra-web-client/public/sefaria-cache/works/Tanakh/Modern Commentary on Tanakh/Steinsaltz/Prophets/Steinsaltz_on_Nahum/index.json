@@ -1,0 +1,53 @@
+{
+  "title": "Steinsaltz on Nahum",
+  "categories": [
+    "Tanakh",
+    "Modern Commentary on Tanakh",
+    "Steinsaltz",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "steinsaltz",
+          "nahum"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      47
+    ],
+    "isSegmentLevelDiburHamatchil": false,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "ביאור שטיינזלץ על נחום",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Steinsaltz on Nahum",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Steinsaltz on Nahum"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:05.337Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Steinsaltz%20on%20Nahum"
+}

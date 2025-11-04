@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Robbery and Lost Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "robbery-and-lost-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "robbery-and-lost-property"
+        ]
+      }
+    ],
+    "lengths": [
+      18,
+      4,
+      4
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות גזילה ואבידה",
+        "primary": true
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Robbery and Lost Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Robbery and Lost Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.974Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Robbery%20and%20Lost%20Property"
+}

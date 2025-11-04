@@ -1,0 +1,16 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    17,
+    9,
+    10,
+    16,
+    21
+  ],
+  "fetchedAt": "2025-10-30T14:42:35.949Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Kiddushin%20(Lieberman)"
+}

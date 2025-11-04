@@ -1,0 +1,60 @@
+{
+  "title": "Lechem Mishneh on Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Lechem Mishneh",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "lechem-mishneh",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      22,
+      33
+    ],
+    "titles": [
+      {
+        "text": "לחם משנה על משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Lechem Mishneh on Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Lechem Mishneh on Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.653Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Lechem%20Mishneh%20on%20Mishneh%20Torah%2C%20Festival%20Offering"
+}

@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Murderer and the Preservation of Life",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      184
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Murderer and the Preservation of Life"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Murderer and the Preservation of Life"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Murderer and the Preservation of Life"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Rotseah uShmirat Nefesh"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, <i>Hilkhot Rozeaḥ</i>"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Rozeaḥ"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות רוצח ושמירת נפש"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' רוצח ושמירת נפש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' רוצח ושמירת נפש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות רוצח ושמירת נפש"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' רוצח ושמירת נפש"
+      },
+      {
+        "text": "רמב״ם, הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' רוצח ושמירת נפש",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות רוצח ושמירת נפש",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Murderer and the Preservation of Life",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Murderer and the Preservation of Life"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.392Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Murderer%20and%20the%20Preservation%20of%20Life"
+}

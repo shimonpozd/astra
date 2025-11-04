@@ -1,0 +1,101 @@
+{
+  "title": "Ralbag on Proverbs",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "proverbs"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      812,
+      873
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Pro."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Pro."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Proverbs"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על משלי",
+        "primary": true
+      },
+      {
+        "text": "Ralbag on Proverbs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on Proverbs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.452Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20Proverbs"
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Metzudat David on Ezra",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      195,
+      405
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ezr."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ezr"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על עזרא",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.153Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Ezra"
+}

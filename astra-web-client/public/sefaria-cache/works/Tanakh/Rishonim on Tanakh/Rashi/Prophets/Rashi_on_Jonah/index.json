@@ -1,0 +1,77 @@
+{
+  "title": "Rashi on Jonah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "jonah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      33,
+      51
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Yonah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Jon."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Jon"
+      },
+      {
+        "text": "רש״י על יונה",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על יונה",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על יונה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Jonah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Jonah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.253Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Jonah"
+}

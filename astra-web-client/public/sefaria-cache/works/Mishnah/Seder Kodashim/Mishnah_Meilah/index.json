@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Meilah",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "meilah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "meilah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "meilah"
+        ]
+      }
+    ],
+    "lengths": [
+      6,
+      38
+    ],
+    "titles": [
+      {
+        "text": "M Meilah",
+        "lang": "en"
+      },
+      {
+        "text": "M. Meilah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Meilah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Meïl.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah M’ʿilah",
+        "lang": "en"
+      },
+      {
+        "text": "Me'ilah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Me'ilah",
+        "lang": "en"
+      },
+      {
+        "text": "meila",
+        "lang": "en"
+      },
+      {
+        "text": "meilah",
+        "lang": "en"
+      },
+      {
+        "text": "משנה מעילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Meilah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Meilah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.388Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Meilah"
+}

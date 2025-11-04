@@ -1,0 +1,73 @@
+{
+  "title": "Ba'er Hetev on Shulchan Arukh, Choshen Mishpat",
+  "categories": [
+    "Halakhah",
+    "Shulchan Arukh",
+    "Commentary",
+    "Ba'er Hetev"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Seif Katan"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "baer-hetev",
+          "choshen-mishpat"
+        ]
+      }
+    ],
+    "lengths": [
+      427,
+      6253
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Beer Hetev on Shulchan Arukh, Choshen Mishpat"
+      },
+      {
+        "lang": "en",
+        "text": "Be'ir Hetev on Shulchan Arukh, Choshen Mishpat"
+      },
+      {
+        "lang": "en",
+        "text": "Beir Hetev on Shulchan Arukh, Choshen Mishpat"
+      },
+      {
+        "lang": "en",
+        "text": "Baer Hetev on Shulchan Arukh, Choshen Mishpat"
+      },
+      {
+        "lang": "en",
+        "text": "Be'er Hetev on Shulchan Arukh, Choshen Mishpat"
+      },
+      {
+        "lang": "en",
+        "text": "Ba'er Heitev on Shulchan Arukh, Chosen Mishpat"
+      },
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "באר היטב חשן משפט"
+      },
+      {
+        "text": "Ba'er Hetev on Shulchan Arukh, Choshen Mishpat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ba'er Hetev on Shulchan Arukh, Choshen Mishpat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:33.294Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ba'er%20Hetev%20on%20Shulchan%20Arukh%2C%20Choshen%20Mishpat"
+}

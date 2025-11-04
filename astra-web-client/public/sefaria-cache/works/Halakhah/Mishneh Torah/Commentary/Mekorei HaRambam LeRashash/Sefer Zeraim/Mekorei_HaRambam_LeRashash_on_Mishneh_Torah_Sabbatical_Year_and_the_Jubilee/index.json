@@ -1,0 +1,60 @@
+{
+  "title": "Mekorei HaRambam LeRashash on Mishneh Torah, Sabbatical Year and the Jubilee",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mekorei HaRambam LeRashash",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "hilchot",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mekorei-harambam-lerashash",
+          "sabbatical-year-and-the-jubilee"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      3,
+      4
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מקורי הרמב\"ם לרש\"ש על משנה תורה, הלכות שמיטה ויובל",
+        "lang": "he"
+      },
+      {
+        "text": "Mekorei HaRambam LeRashash on Mishneh Torah, Sabbatical Year and the Jubilee",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mekorei HaRambam LeRashash on Mishneh Torah, Sabbatical Year and the Jubilee"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.774Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mekorei%20HaRambam%20LeRashash%20on%20Mishneh%20Torah%2C%20Sabbatical%20Year%20and%20the%20Jubilee"
+}

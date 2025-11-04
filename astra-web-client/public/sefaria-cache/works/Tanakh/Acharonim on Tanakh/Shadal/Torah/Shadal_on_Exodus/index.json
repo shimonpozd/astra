@@ -1,0 +1,101 @@
+{
+  "title": "Shadal on Exodus",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Shadal",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shadal",
+          "exodus"
+        ]
+      }
+    ],
+    "lengths": [
+      40,
+      596,
+      1044
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shadal on Exod.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Ex.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Exo",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Shmot",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Shemot",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Ex",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Exo.",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Exod",
+        "lang": "en"
+      },
+      {
+        "text": "Shadal on Shemoth",
+        "lang": "en"
+      },
+      {
+        "text": "שד״ל על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "שד”ל על שמות",
+        "lang": "he"
+      },
+      {
+        "text": "שד\"ל על שמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shadal on Exodus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shadal on Exodus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.633Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shadal%20on%20Exodus"
+}

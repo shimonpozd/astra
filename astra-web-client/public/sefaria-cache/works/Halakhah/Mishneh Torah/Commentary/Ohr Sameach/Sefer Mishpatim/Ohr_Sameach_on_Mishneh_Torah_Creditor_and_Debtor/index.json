@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Creditor and Debtor",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Mishpatim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "creditor-and-debtor"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "creditor-and-debtor"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      69,
+      73
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות מלווה ולווה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Creditor and Debtor",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Creditor and Debtor"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.632Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Creditor%20and%20Debtor"
+}

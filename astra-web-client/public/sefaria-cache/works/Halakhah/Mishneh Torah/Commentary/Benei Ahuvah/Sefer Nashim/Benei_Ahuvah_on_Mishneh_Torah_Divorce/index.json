@@ -1,0 +1,60 @@
+{
+  "title": "Benei Ahuvah on Mishneh Torah, Divorce",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Benei Ahuvah",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "benei-ahuvah",
+          "hilchot",
+          "divorce"
+        ]
+      },
+      {
+        "term_slugs": [
+          "benei-ahuvah",
+          "divorce"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      33,
+      44
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "בני אהובה על משנה תורה, הלכות גירושין"
+      },
+      {
+        "text": "Benei Ahuvah on Mishneh Torah, Divorce",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Benei Ahuvah on Mishneh Torah, Divorce"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.030Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Benei%20Ahuvah%20on%20Mishneh%20Torah%2C%20Divorce"
+}

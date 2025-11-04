@@ -1,0 +1,288 @@
+{
+  "title": "Horayot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "horayot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "horayot"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      451
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Masekhet Horayot"
+      },
+      {
+        "lang": "en",
+        "text": "Talmud Horayot"
+      },
+      {
+        "lang": "en",
+        "text": "Tractate Horayot"
+      },
+      {
+        "lang": "en",
+        "text": "Horiyot"
+      },
+      {
+        "lang": "en",
+        "text": "Hor."
+      },
+      {
+        "lang": "en",
+        "text": "Horayoth"
+      },
+      {
+        "text": "BT Horayot",
+        "lang": "en"
+      },
+      {
+        "text": "הוריות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Horayot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Horayot",
+    "checkFirst": {
+      "en": "Mishnah Horayot",
+      "he": "משנה הוריות"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Horayot 2a:1-6b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-113"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-113"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 1; Horu Beit Din",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הורו בית דין",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Horayot 6b:11-9b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-212"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-212"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 2; Horah Kohen Mashiach",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "הורה כהן משיח",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Horayot 9b:11-14a:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-312"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-312"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "lang": "en",
+              "text": "Chapter 3; Kohen Mashiach",
+              "primary": true
+            },
+            {
+              "lang": "he",
+              "text": "כהן משיח",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.195Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Horayot"
+}

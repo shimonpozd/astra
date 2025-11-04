@@ -1,0 +1,28 @@
+services:
+  brain_service:
+    build:
+      context: ../../brain_service
+      dockerfile: Dockerfile
+    image: astra/brain-service:local
+    restart: unless-stopped
+    env_file:
+      - ./brain_service.env
+    environment:
+      ASTRA_CONFIG_ROOT: /app
+    ports:
+      - "${BRAIN_PORT:-7030}:7030"
+    volumes:
+      # Mount the production configuration (kept outside version control).
+      - ../../config:/app/config:ro
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7.2-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:

@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      226,
+      94,
+      115
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.289Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Sanhedrin"
+}

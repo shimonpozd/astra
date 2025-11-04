@@ -1,0 +1,58 @@
+{
+  "title": "Petach Einayim on Mishnah Mikvaot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Petach Einayim",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Perek",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "petach-einayim",
+          "mishnah",
+          "mikvaot"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      5,
+      6
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "פתח עינים על משנה מקואות",
+        "primary": true
+      },
+      {
+        "text": "Petach Einayim on Mishnah Mikvaot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Petach Einayim on Mishnah Mikvaot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:48.811Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Petach%20Einayim%20on%20Mishnah%20Mikvaot"
+}

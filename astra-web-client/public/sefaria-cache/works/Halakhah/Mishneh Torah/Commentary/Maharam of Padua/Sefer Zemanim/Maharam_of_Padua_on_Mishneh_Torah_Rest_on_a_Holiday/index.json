@@ -1,0 +1,60 @@
+{
+  "title": "Maharam of Padua on Mishneh Torah, Rest on a Holiday",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maharam of Padua",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maharam-of-padua",
+          "hilchot",
+          "rest-on-a-holiday"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maharam-of-padua",
+          "rest-on-a-holiday"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      1,
+      1
+    ],
+    "titles": [
+      {
+        "text": "הגהות מהר\"ם פדווא על משנה תורה, הלכות שביתת יום טוב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Maharam of Padua on Mishneh Torah, Rest on a Holiday",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maharam of Padua on Mishneh Torah, Rest on a Holiday"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.239Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maharam%20of%20Padua%20on%20Mishneh%20Torah%2C%20Rest%20on%20a%20Holiday"
+}

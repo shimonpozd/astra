@@ -1,0 +1,117 @@
+{
+  "title": "Ba'al HaTurim on Genesis",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ba'al HaTurim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "baal-haturim",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      6,
+      12
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Baal HaTurim on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Baal HaTurim on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "בעל הטורים על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "בעל הטורים על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "בעל הטורים על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "בעל הטורים על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "בעל הטורים על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "בעל הטורים על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ba'al HaTurim on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ba'al HaTurim on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.046Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ba'al%20HaTurim%20on%20Genesis"
+}

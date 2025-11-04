@@ -1,0 +1,72 @@
+{
+  "title": "Tosefta Eruvin",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      117
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Eiruvin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "T. Eiruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Eruvin"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Erub."
+      },
+      {
+        "text": "Tosefta Eiruvin",
+        "lang": "en"
+      },
+      {
+        "text": "תוספתא עירובין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.510Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Eruvin"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Kovetz Al Yad HaChazakah on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Kovetz Al Yad HaChazakah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "hilchot",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      },
+      {
+        "term_slugs": [
+          "kovetz-al-yad-hachazakah",
+          "tefillin-mezuzah-and-the-torah-scroll"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      33,
+      37
+    ],
+    "titles": [
+      {
+        "text": "קובץ על היד החזקה על משנה תורה, הלכות תפילין ומזוזה וספר תורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kovetz Al Yad HaChazakah on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kovetz Al Yad HaChazakah on Mishneh Torah, Tefillin, Mezuzah and the Torah Scroll"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:23.116Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kovetz%20Al%20Yad%20HaChazakah%20on%20Mishneh%20Torah%2C%20Tefillin%2C%20Mezuzah%20and%20the%20Torah%20Scroll"
+}

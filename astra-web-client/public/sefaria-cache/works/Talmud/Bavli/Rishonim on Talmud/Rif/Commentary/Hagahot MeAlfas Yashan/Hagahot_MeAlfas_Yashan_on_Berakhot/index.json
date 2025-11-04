@@ -1,0 +1,51 @@
+{
+  "title": "Hagahot MeAlfas Yashan on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Hagahot MeAlfas Yashan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hagahot-mealfas-yashan",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      89,
+      165
+    ],
+    "titles": [
+      {
+        "text": "הגהות מאלפס ישן על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Hagahot MeAlfas Yashan on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hagahot MeAlfas Yashan on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:27.497Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Hagahot%20MeAlfas%20Yashan%20on%20Berakhot"
+}

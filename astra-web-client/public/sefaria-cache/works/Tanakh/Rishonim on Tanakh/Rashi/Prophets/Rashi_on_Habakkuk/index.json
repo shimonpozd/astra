@@ -1,0 +1,81 @@
+{
+  "title": "Rashi on Habakkuk",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "habakkuk"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      53,
+      143
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Hab."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Hab"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Havakkuk"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Habakuk"
+      },
+      {
+        "text": "רש״י על חבקוק",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על חבקוק",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על חבקוק",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Habakkuk",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Habakkuk"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.309Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Habakkuk"
+}

@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { getTTSService, TTSConfig, Voice } from '../services/ttsService';
+import { debugLog } from '../utils/debugLogger';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 interface UseTTSOptions {
   autoPlay?: boolean;
@@ -53,7 +55,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
         // Fetch provider from admin config
         let provider: any = 'xtts';
         try {
-          const res = await fetch('/admin/config', { headers: { 'X-Admin-Token': 'super-secret-token' } });
+          const res = await authorizedFetch('/admin/config');
           if (res.ok) {
             const cfg = await res.json();
             provider = cfg?.voice?.tts?.provider || provider;
@@ -61,7 +63,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
         } catch (_) {}
 
         // Set initial configuration based on admin config
-        console.log('🎵 useTTS: Setting provider from admin config:', provider);
+        debugLog('useTTS: Setting provider from admin config:', provider);
         ttsService.setConfig({ provider, voiceId: options.voiceId, language: options.language || 'en', speed: options.speed || 1.0 });
 
         // Load voices
@@ -75,7 +77,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
           ttsService.setConfig({ voiceId: defaultVoice.id });
         }
         
-        console.log('🎵 TTS service initialized:', { voices: availableVoices.length });
+        debugLog('TTS service initialized:', { voices: availableVoices.length });
       } catch (err) {
         console.error('Failed to initialize TTS service:', err);
         setError(err instanceof Error ? err.message : 'Failed to initialize TTS');
@@ -107,7 +109,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
       setIsPaused(false);
       setCurrentText(text);
       
-      console.log('🎵 TTS playing:', { text: text.substring(0, 50) + '...', voiceId, language, speed });
+      debugLog('TTS playing:', { text: text.substring(0, 50) + '...', voiceId, language, speed });
     } catch (err) {
       console.error('TTS play error:', err);
       setError(err instanceof Error ? err.message : 'Failed to play text');
@@ -123,7 +125,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
       setIsPlaying(false);
       setIsPaused(false);
       setCurrentText('');
-      console.log('⏹️ TTS stopped');
+      debugLog('TTS stopped');
     } catch (err) {
       console.error('TTS stop error:', err);
       setError(err instanceof Error ? err.message : 'Failed to stop playback');
@@ -135,7 +137,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
     try {
       await ttsService.pause();
       setIsPaused(true);
-      console.log('⏸️ TTS paused');
+      debugLog('TTS paused');
     } catch (err) {
       console.error('TTS pause error:', err);
       setError(err instanceof Error ? err.message : 'Failed to pause playback');
@@ -147,7 +149,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
     try {
       await ttsService.resume();
       setIsPaused(false);
-      console.log('▶️ TTS resumed');
+      debugLog('TTS resumed');
     } catch (err) {
       console.error('TTS resume error:', err);
       setError(err instanceof Error ? err.message : 'Failed to resume playback');
@@ -158,7 +160,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
   const setVoice = useCallback((voiceId: string) => {
     setSelectedVoice(voiceId);
     ttsService.setConfig({ voiceId });
-    console.log('🎵 Voice changed to:', voiceId);
+    debugLog('Voice changed to:', voiceId);
   }, []);
 
   // Refresh voices
@@ -170,7 +172,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
       const availableVoices = await ttsService.getVoices();
       setVoices(availableVoices);
       
-      console.log('🎵 Voices refreshed:', availableVoices.length);
+      debugLog('Voices refreshed:', availableVoices.length);
     } catch (err) {
       console.error('Failed to refresh voices:', err);
       setError(err instanceof Error ? err.message : 'Failed to refresh voices');
@@ -182,7 +184,7 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
   // Set configuration
   const setConfig = useCallback((config: Partial<TTSConfig>) => {
     ttsService.setConfig(config);
-    console.log('🎵 TTS config updated:', config);
+    debugLog('TTS config updated:', config);
   }, []);
 
   // Cleanup on unmount
@@ -211,7 +213,5 @@ export function useTTS(options: UseTTSOptions = {}): UseTTSReturn {
 }
 
 export type { UseTTSOptions, UseTTSReturn };
-
-
 
 

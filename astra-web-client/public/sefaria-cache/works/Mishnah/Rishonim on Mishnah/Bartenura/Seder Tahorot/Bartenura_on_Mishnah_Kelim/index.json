@@ -1,0 +1,137 @@
+{
+  "title": "Bartenura on Mishnah Kelim",
+  "categories": [
+    "Mishnah",
+    "Rishonim on Mishnah",
+    "Bartenura",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "bartenura",
+          "mishnah",
+          "kelim"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      254,
+      1716
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M. Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishna Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishnah Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M. Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishna Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishnah Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M. Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on Mishna Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M. Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishna Kelim"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishnah Kelim"
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על משנה כלים",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על כלים"
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על משנה כלים"
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על כלים"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על משנה כלים"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על כלים"
+      },
+      {
+        "text": "Bartenura on Mishnah Kelim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bartenura on Mishnah Kelim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:15.092Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Bartenura%20on%20Mishnah%20Kelim"
+}

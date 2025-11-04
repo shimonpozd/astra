@@ -1,0 +1,76 @@
+{
+  "title": "Kuntres Zikah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Siman",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "kuntres-zikah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "kuntres-zikah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "kuntres-zikah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "kuntres-zikah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "kuntres-zikah"
+        ]
+      }
+    ],
+    "lengths": [
+      39,
+      86
+    ],
+    "titles": [
+      {
+        "text": "קונטרס זיקה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kuntres Zikah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kuntres Zikah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.212Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kuntres%20Zikah"
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Or HaChaim on Numbers",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Or HaChaim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "or-hachaim",
+          "numbers"
+        ]
+      }
+    ],
+    "lengths": [
+      36,
+      403,
+      1054
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Or HaChaim on Bemidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Num."
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Num"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Bamidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Bemidbar"
+      },
+      {
+        "lang": "en",
+        "text": "Or Hachaim on Numbers"
+      },
+      {
+        "text": "אור החיים על במדבר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Or HaChaim on Numbers",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Or HaChaim on Numbers"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.564Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Or%20HaChaim%20on%20Numbers"
+}

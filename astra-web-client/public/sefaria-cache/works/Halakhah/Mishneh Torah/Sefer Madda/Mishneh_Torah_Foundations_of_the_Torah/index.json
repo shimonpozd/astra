@@ -1,0 +1,190 @@
+{
+  "title": "Mishneh Torah, Foundations of the Torah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "foundations-of-the-torah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "foundations-of-the-torah"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      88
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilchot Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Foundations of the Torah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Foundations of the Torah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Foundations of the Torah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Yesodey haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, <i>Hilkhot Yesodei ha-Torah</i>",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Yesodei ha-Torah",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Yesodei haTorah",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות יסודי תורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות ייסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות יסודי התורה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות יסודי התורה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Foundations of the Torah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Foundations of the Torah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.815Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Foundations%20of%20the%20Torah"
+}

@@ -1,0 +1,94 @@
+{
+  "title": "Mishnah Negaim",
+  "categories": [
+    "Mishnah",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "negaim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "negaim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "negaim"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      115
+    ],
+    "titles": [
+      {
+        "text": "Mishna Negaim",
+        "lang": "en"
+      },
+      {
+        "text": "M. Negaim",
+        "lang": "en"
+      },
+      {
+        "text": "M Negaim",
+        "lang": "en"
+      },
+      {
+        "text": "Neg.",
+        "lang": "en"
+      },
+      {
+        "text": "N’gaʿim",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Neg.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah N’gaʿim",
+        "lang": "en"
+      },
+      {
+        "text": "Negaim",
+        "lang": "en"
+      },
+      {
+        "text": "נגעים",
+        "lang": "he"
+      },
+      {
+        "text": "משנה נגעים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Negaim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Negaim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.428Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Negaim"
+}

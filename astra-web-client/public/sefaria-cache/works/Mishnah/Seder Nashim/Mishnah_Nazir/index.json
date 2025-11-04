@@ -1,0 +1,74 @@
+{
+  "title": "Mishnah Nazir",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "nazir"
+        ]
+      },
+      {
+        "term_slugs": [
+          "nazir"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "nazir"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      60
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M Nazir"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Nazir"
+      },
+      {
+        "lang": "en",
+        "text": "M. Nazir"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Naz."
+      },
+      {
+        "text": "משנה נזיר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Nazir",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Nazir"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.231Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Nazir"
+}

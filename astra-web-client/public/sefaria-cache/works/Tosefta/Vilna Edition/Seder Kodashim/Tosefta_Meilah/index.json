@@ -1,0 +1,64 @@
+{
+  "title": "Tosefta Meilah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "meilah"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      22
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tosefta Me'ilah"
+      },
+      {
+        "lang": "en",
+        "text": "T. Meilah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Meilah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Meïl."
+      },
+      {
+        "text": "תוספתא מעילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Meilah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Meilah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.771Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Meilah"
+}

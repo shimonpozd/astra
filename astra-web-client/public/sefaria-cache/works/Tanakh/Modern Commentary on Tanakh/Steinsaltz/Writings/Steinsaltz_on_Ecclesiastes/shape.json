@@ -1,0 +1,23 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    18,
+    26,
+    22,
+    17,
+    19,
+    12,
+    29,
+    17,
+    18,
+    20,
+    10,
+    14
+  ],
+  "fetchedAt": "2025-10-30T14:21:06.422Z",
+  "source": "https://www.sefaria.org/api/shape/Steinsaltz%20on%20Ecclesiastes"
+}

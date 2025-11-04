@@ -1,0 +1,48 @@
+{
+  "title": "Tosefta Peah (Lieberman)",
+  "categories": [
+    "Tosefta",
+    "Lieberman Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "peah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      71
+    ],
+    "titles": [
+      {
+        "text": "תוספתא פאה (ליברמן)",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Peah (Lieberman)",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Peah (Lieberman)"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:35.577Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Peah%20(Lieberman)"
+}

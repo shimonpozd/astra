@@ -1,0 +1,25 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    12,
+    6,
+    7,
+    21,
+    5,
+    6,
+    8,
+    18,
+    4,
+    6,
+    12,
+    7,
+    6,
+    6
+  ],
+  "fetchedAt": "2025-10-30T14:21:30.037Z",
+  "source": "https://www.sefaria.org/api/shape/Boaz%20on%20Mishnah%20Negaim"
+}

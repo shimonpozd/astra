@@ -1,0 +1,101 @@
+{
+  "title": "Ralbag on Joshua",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ralbag",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ralbag",
+          "joshua"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      92,
+      93
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ralbag on Jos"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Yehoshua"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Jos."
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Josh"
+      },
+      {
+        "lang": "en",
+        "text": "Ralbag on Josh."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Jos"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Yehoshua"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Jos."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Josh"
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Josh."
+      },
+      {
+        "lang": "en",
+        "text": "Gersonides on Joshua"
+      },
+      {
+        "lang": "he",
+        "text": "רלב\"ג על יהושע",
+        "primary": true
+      },
+      {
+        "text": "Ralbag on Joshua",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ralbag on Joshua"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.407Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ralbag%20on%20Joshua"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Cheshek Shlomo on Mishneh Torah, Nazariteship",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Cheshek Shlomo",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "cheshek-shlomo",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "cheshek-shlomo",
+          "nazariteship"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "text": "חשק שלמה על משנה תורה, הלכות נזירות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Cheshek Shlomo on Mishneh Torah, Nazariteship",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Cheshek Shlomo on Mishneh Torah, Nazariteship"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.443Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Cheshek%20Shlomo%20on%20Mishneh%20Torah%2C%20Nazariteship"
+}

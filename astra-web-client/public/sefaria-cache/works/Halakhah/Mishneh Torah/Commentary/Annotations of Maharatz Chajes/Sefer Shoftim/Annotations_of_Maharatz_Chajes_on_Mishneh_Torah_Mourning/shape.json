@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:17.815Z",
+  "source": "http://localhost:8000/api/shape/Annotations%20of%20Maharatz%20Chajes%20on%20Mishneh%20Torah%2C%20Mourning"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    7,
+    10,
+    7,
+    7,
+    7,
+    11,
+    4,
+    2,
+    5
+  ],
+  "fetchedAt": "2025-10-30T14:42:01.259Z",
+  "source": "http://localhost:8000/api/shape/Mishnah%20Nazir"
+}

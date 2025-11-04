@@ -1,0 +1,60 @@
+{
+  "title": "Maggid Mishneh on Mishneh Torah, Forbidden Foods",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Maggid Mishneh",
+    "Sefer Kedushah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "hilchot",
+          "forbidden-foods"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maggid-mishneh",
+          "forbidden-foods"
+        ]
+      }
+    ],
+    "lengths": [
+      17,
+      170,
+      312
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "מגיד משנה על משנה תורה, הלכות מאכלות אסורות",
+        "lang": "he"
+      },
+      {
+        "text": "Maggid Mishneh on Mishneh Torah, Forbidden Foods",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Maggid Mishneh on Mishneh Torah, Forbidden Foods"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:25.062Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Maggid%20Mishneh%20on%20Mishneh%20Torah%2C%20Forbidden%20Foods"
+}

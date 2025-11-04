@@ -1,0 +1,69 @@
+{
+  "title": "Malbim on Ruth",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "ruth"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      77,
+      84
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Rut"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Rut"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Ruth"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על רות",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Ruth",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Ruth"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.650Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Ruth"
+}

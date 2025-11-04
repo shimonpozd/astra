@@ -1,3 +1,5 @@
+import { debugLog } from '../utils/debugLogger';
+import { authorizedFetch } from '../lib/authorizedFetch';
 interface TTSConfig {
   provider: 'elevenlabs' | 'xtts' | 'openai' | 'yandex' | 'orpheus';
   voiceId?: string;
@@ -55,7 +57,7 @@ class TTSService {
     };
 
     try {
-      const response = await fetch('/api/tts/synthesize', {
+      const response = await authorizedFetch('/api/tts/synthesize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +92,7 @@ class TTSService {
 
       // For Yandex, use HTML5 audio element instead of Web Audio API
       if (this.config.provider === 'yandex') {
-        const response = await fetch('/api/tts/synthesize', {
+        const response = await authorizedFetch('/api/tts/synthesize', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -127,7 +129,7 @@ class TTSService {
         this.isPaused = false;
         this.currentText = text;
 
-        console.log('🎵 TTS playback started (HTML5):', { text: text.substring(0, 50) + '...' });
+        debugLog('🎵 TTS playback started (HTML5):', { text: text.substring(0, 50) + '...' });
       } else {
         // Use Web Audio API for other providers
         const audioBuffer = await this.synthesize(text, options);
@@ -150,7 +152,7 @@ class TTSService {
         this.isPaused = false;
         this.currentText = text;
 
-        console.log('🎵 TTS playback started (Web Audio):', { text: text.substring(0, 50) + '...' });
+        debugLog('🎵 TTS playback started (Web Audio):', { text: text.substring(0, 50) + '...' });
       }
     } catch (error) {
       console.error('TTS playback error:', error);
@@ -179,7 +181,7 @@ class TTSService {
     this.isPaused = false;
     this.currentText = '';
     
-    console.log('⏹️ TTS playback stopped');
+    debugLog('⏹️ TTS playback stopped');
   }
 
   async pause(): Promise<void> {
@@ -187,12 +189,12 @@ class TTSService {
       // HTML5 audio element
       this.currentAudio.pause();
       this.isPaused = true;
-      console.log('⏸️ TTS playback paused (HTML5)');
+      debugLog('⏸️ TTS playback paused (HTML5)');
     } else if (this.audioContext && this.audioContext.state === 'running') {
       // Web Audio API
       await this.audioContext.suspend();
       this.isPaused = true;
-      console.log('⏸️ TTS playback paused (Web Audio)');
+      debugLog('⏸️ TTS playback paused (Web Audio)');
     }
   }
 
@@ -201,12 +203,12 @@ class TTSService {
       // HTML5 audio element
       await this.currentAudio.play();
       this.isPaused = false;
-      console.log('▶️ TTS playback resumed (HTML5)');
+      debugLog('▶️ TTS playback resumed (HTML5)');
     } else if (this.audioContext && this.audioContext.state === 'suspended') {
       // Web Audio API
       await this.audioContext.resume();
       this.isPaused = false;
-      console.log('▶️ TTS playback resumed (Web Audio)');
+      debugLog('▶️ TTS playback resumed (Web Audio)');
     }
   }
 
@@ -216,7 +218,7 @@ class TTSService {
       if (TTSService.voicesCache && (now - TTSService.voicesCache.loadedAt) < TTSService.VOICES_TTL_MS) {
         return TTSService.voicesCache.data;
       }
-      const response = await fetch('/api/tts/voices', {
+      const response = await authorizedFetch('/api/tts/voices', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -305,7 +307,7 @@ class TTSService {
         timestamp: Date.now(),
       };
       
-      console.log('🎵 Audio message created:', {
+      debugLog('🎵 Audio message created:', {
         id: audioMessage.id,
         duration: audioBuffer.duration,
         size: `${(size / 1024).toFixed(1)} KB`,
@@ -388,7 +390,7 @@ class TTSService {
    */
   async saveAudioMessage(audioMessage: AudioMessage, chatId: string): Promise<void> {
     try {
-      console.log('💾 Saving audio message to chat:', { 
+      debugLog('💾 Saving audio message to chat:', { 
         messageId: audioMessage.id, 
         chatId 
       });
@@ -403,7 +405,7 @@ class TTSService {
       formData.append('file', audioBlob, `audio-${audioMessage.id}.${audioMessage.content.format || 'wav'}`);
       
       // Upload audio file
-      const uploadResponse = await fetch('/api/audio/upload', {
+      const uploadResponse = await authorizedFetch('/api/audio/upload', {
         method: 'POST',
         body: formData,
       });
@@ -418,7 +420,7 @@ class TTSService {
       audioMessage.content.audioUrl = uploadResult.url;
       
       // Save message to chat via backend
-      const messageResponse = await fetch('/api/chat/messages', {
+      const messageResponse = await authorizedFetch('/api/chat/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -433,7 +435,7 @@ class TTSService {
         throw new Error(`Failed to save message: ${messageResponse.statusText}`);
       }
       
-      console.log('✅ Audio message saved successfully');
+      debugLog('✅ Audio message saved successfully');
     } catch (error) {
       console.error('Failed to save audio message:', error);
       throw error;
@@ -459,6 +461,4 @@ export function getTTSService(config?: TTSConfig): TTSService {
 
 export type { TTSConfig, Voice, TTSRequest };
 export { TTSService };
-
-
 

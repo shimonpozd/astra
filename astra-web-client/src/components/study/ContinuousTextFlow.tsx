@@ -117,10 +117,10 @@ export const ContinuousTextFlow = memo(({
                     style={{ left: 'calc(-1 * var(--rail))' }}
                     aria-hidden={!isFocus}
                   >
-                    <div className={`pointer-events-auto select-none flex items-center gap-1 px-1.5 py-1 rounded-full border bg-background/85 backdrop-blur shadow-sm ${isFocus ? 'border-primary/40' : 'border-muted-foreground/30'}`}>
+                    <div className={`pointer-events-auto select-none flex items-center gap-1 px-1.5 py-1 rounded-full border bg-background/85 backdrop-blur shadow-sm ${isFocus ? 'border-primary/40' : 'border-[var(--seg-chrome-border)]'}`}>
                       <button
                         type="button"
-                        className={`flex h-7 w-7 items-center justify-center rounded-full border ${translationVisible ? 'bg-primary/15 border-primary text-primary' : 'bg-background border-muted-foreground/40 text-muted-foreground hover:bg-muted/50'}`}
+                        className={`fr-btn ${translationVisible ? 'is-active' : ''}`}
                         disabled={isTranslating}
                         title={translationVisible ? 'Скрыть перевод' : 'Показать перевод'}
                         onClick={async (e) => {
@@ -139,7 +139,7 @@ export const ContinuousTextFlow = memo(({
 
                       <button
                         type="button"
-                        className={`flex h-7 w-7 items-center justify-center rounded-full border ${isActive ? 'bg-primary/15 border-primary text-primary' : 'bg-background border-muted-foreground/40 text-muted-foreground hover:bg-muted/50'}`}
+                        className={`fr-btn ${isActive ? 'is-active' : ''}`}
                         title={isActive ? (ttsIsPlaying ? 'Пауза' : 'Продолжить') : 'Прослушать отрывок'}
                         aria-pressed={isActive}
                         onClick={async (e) => { e.stopPropagation(); navOriginRef.current = 'user'; await handlePlayClick(); }}
@@ -156,7 +156,7 @@ export const ContinuousTextFlow = memo(({
                   >
                     <button
                       type="button"
-                      className="pointer-events-auto select-none rounded-full bg-muted/70 px-2 py-0.5 text-[11px] font-medium text-muted-foreground shadow-sm"
+                      className="pointer-events-auto select-none fr-badge font-medium shadow-sm"
                       title={`Скопировать ссылку: ${normalizedRef}`}
                       aria-label="Copy segment reference"
                       onClick={(e) => { e.stopPropagation(); navigator.clipboard?.writeText(normalizedRef); }}
@@ -168,7 +168,7 @@ export const ContinuousTextFlow = memo(({
                   {/* Inner text container with background/border */}
                   <div
                     className={`rounded-[var(--seg-radius)] border transition-colors ${
-                      isFocus ? 'bg-primary/10 border-primary/40 shadow-inner' : 'bg-muted/10 border-muted/30'
+                      isFocus ? 'bg-primary/10 border-primary/40 shadow-inner' : 'bg-muted/10 border-[var(--seg-border)]'
                     }`}
                     style={{ marginLeft: 'calc(var(--rail) + 12px)', marginRight: 'calc(var(--rail) + 12px)' }}
                   >
@@ -193,9 +193,9 @@ export const ContinuousTextFlow = memo(({
 
                 {showSeparator && (
                   <div className="relative my-0.5" style={{ marginLeft: 'calc(var(--rail) + 12px)', marginRight: 'calc(var(--rail) + 12px)' }}>
-                    <div className="border-t border-muted-foreground/30" />
+                    <div className="border-t border-[var(--seg-separator)]" />
                     {separatorText && (
-                      <span className="absolute left-1/2 -top-2 -translate-x-1/2 bg-background px-1 text-[10px] text-muted-foreground/70">
+                      <span className="absolute left-1/2 -top-2 -translate-x-1/2 bg-background px-1 text-[10px] text-muted-foreground/50">
                         {separatorText}
                       </span>
                     )}

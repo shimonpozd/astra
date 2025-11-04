@@ -1,0 +1,53 @@
+{
+  "title": "Tractate Gerim",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Minor Tractates"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gerim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "gerim"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      34
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "מסכת גרים",
+        "primary": true
+      },
+      {
+        "text": "Tractate Gerim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tractate Gerim"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:05.302Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tractate%20Gerim"
+}

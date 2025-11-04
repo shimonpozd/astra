@@ -1,0 +1,69 @@
+{
+  "title": "Kli Yakar on Leviticus",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Kli Yakar",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kli-yakar",
+          "leviticus"
+        ]
+      }
+    ],
+    "lengths": [
+      27,
+      101,
+      292
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Vayikra"
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Lev."
+      },
+      {
+        "lang": "en",
+        "text": "Kli Yakar on Lev"
+      },
+      {
+        "text": "כלי יקר על ויקרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kli Yakar on Leviticus",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kli Yakar on Leviticus"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.373Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kli%20Yakar%20on%20Leviticus"
+}

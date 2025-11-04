@@ -1,0 +1,170 @@
+{
+  "title": "Mishneh Torah, Oaths",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "oaths"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "oaths"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      205
+    ],
+    "titles": [
+      {
+        "text": "Rambam, Hilchot Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Oaths",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Oaths",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Oaths",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot Shvuot",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "הלכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "הילכות שבועות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Oaths",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Oaths"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.041Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Oaths"
+}

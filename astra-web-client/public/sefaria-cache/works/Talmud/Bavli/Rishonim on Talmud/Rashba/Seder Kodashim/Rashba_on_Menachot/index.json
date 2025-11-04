@@ -1,0 +1,51 @@
+{
+  "title": "Rashba on Menachot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rashba",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      219,
+      394
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "רשב״א על מנחות",
+        "lang": "he"
+      },
+      {
+        "text": "Rashba on Menachot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashba on Menachot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.922Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashba%20on%20Menachot"
+}

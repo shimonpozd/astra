@@ -1,0 +1,169 @@
+{
+  "title": "Rashi on II Samuel",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "ii-samuel"
+        ]
+      }
+    ],
+    "lengths": [
+      24,
+      315,
+      473
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on 2Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Second Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shmuel Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Shmuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Samuel II"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 2 Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Shmuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Sam"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 2Sam."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on 2 Samuel"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on II Shemuel"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ש״ב"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על ש\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמואל ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמואל ב'"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על שמ״ב"
+      },
+      {
+        "text": "רש״י על שמואל ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על ש״ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על ש”ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמואל ב׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל ב׳",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמואל ב'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמואל ב'",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על שמ״ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על שמ”ב",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על שמואל ב",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on II Samuel",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on II Samuel"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.113Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20II%20Samuel"
+}

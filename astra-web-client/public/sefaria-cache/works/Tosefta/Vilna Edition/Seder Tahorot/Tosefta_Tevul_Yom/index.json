@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Tevul Yom",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "tevul-yom"
+        ]
+      }
+    ],
+    "lengths": [
+      2,
+      12
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Tos. Tevul Yom"
+      },
+      {
+        "lang": "en",
+        "text": "T. Tevul Yom"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. T’bul Yom"
+      },
+      {
+        "text": "תוספתא טבול יום",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Tevul Yom",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Tevul Yom"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.877Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Tevul%20Yom"
+}

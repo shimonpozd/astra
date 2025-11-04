@@ -1,0 +1,59 @@
+{
+  "title": "Rashash on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Rashash",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashash",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      369
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "רש\"ש על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashash on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashash on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:12.610Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashash%20on%20Berakhot"
+}

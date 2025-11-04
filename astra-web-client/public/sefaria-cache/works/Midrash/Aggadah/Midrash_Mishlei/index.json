@@ -1,0 +1,62 @@
+{
+  "title": "Midrash Mishlei",
+  "categories": [
+    "Midrash",
+    "Aggadah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "midrash-mishlei"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      140
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Agadat Mishle"
+      },
+      {
+        "lang": "en",
+        "text": "Midr. Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Midrash Proverbs"
+      },
+      {
+        "text": "מדרש משלי",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Midrash Mishlei",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Midrash Mishlei"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.664Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Midrash%20Mishlei"
+}

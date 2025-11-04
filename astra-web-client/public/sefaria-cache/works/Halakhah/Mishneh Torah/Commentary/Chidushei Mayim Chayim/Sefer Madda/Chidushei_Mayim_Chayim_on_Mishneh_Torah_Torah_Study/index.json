@@ -1,0 +1,60 @@
+{
+  "title": "Chidushei Mayim Chayim on Mishneh Torah, Torah Study",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Chidushei Mayim Chayim",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chidushei-mayim-chayim",
+          "hilchot",
+          "torah-study"
+        ]
+      },
+      {
+        "term_slugs": [
+          "chidushei-mayim-chayim",
+          "torah-study"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      19,
+      25
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חידושי מים חיים על משנה תורה, הלכות תלמוד תורה",
+        "lang": "he"
+      },
+      {
+        "text": "Chidushei Mayim Chayim on Mishneh Torah, Torah Study",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chidushei Mayim Chayim on Mishneh Torah, Torah Study"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:19.607Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chidushei%20Mayim%20Chayim%20on%20Mishneh%20Torah%2C%20Torah%20Study"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Tevul Yom",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "tevul-yom"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      160,
+      160
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין טבול יום",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Tevul Yom",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Tevul Yom"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:26.310Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Tevul%20Yom"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Eliyahu Rabbah on Mishnah Oktzin",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Gra",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "eliyahu-rabbah",
+          "mishnah",
+          "oktzin"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      6,
+      8
+    ],
+    "titles": [
+      {
+        "text": "אליהו רבא על משנה עוקצים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "אליהו רבא על משנה עוקצין",
+        "lang": "he"
+      },
+      {
+        "text": "Eliyahu Rabbah on Mishnah Oktzin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Eliyahu Rabbah on Mishnah Oktzin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:30.981Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Eliyahu%20Rabbah%20on%20Mishnah%20Oktzin"
+}

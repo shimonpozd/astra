@@ -1,0 +1,157 @@
+{
+  "title": "Kitzur Ba'al HaTurim on Genesis",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Kitzur Ba'al HaTurim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "kitzur-baal-haturim",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      417,
+      625
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Kitzur Baal HaTurim on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal Haturim on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "Kitzur Baal HaTurim on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "קיצור בעל הטורים על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "קיצור בעל הטורים על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Kitzur Ba'al HaTurim on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Kitzur Ba'al HaTurim on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.157Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Kitzur%20Ba'al%20HaTurim%20on%20Genesis"
+}

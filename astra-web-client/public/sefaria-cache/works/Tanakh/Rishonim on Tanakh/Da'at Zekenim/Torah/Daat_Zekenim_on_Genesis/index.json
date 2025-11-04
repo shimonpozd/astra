@@ -1,0 +1,245 @@
+{
+  "title": "Da'at Zekenim on Genesis",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Da'at Zekenim",
+    "Torah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "daat-zkenim",
+          "genesis"
+        ]
+      }
+    ],
+    "lengths": [
+      50,
+      262,
+      323
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Minchat yehuda baaley hatosfot on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Minchat yehuda baaley hatosfot on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Daat zkenim al hatora on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Bereshit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Gen",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Gen.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Breishit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Ber",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Bereishit",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Ber.",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Beresheet",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Bereshith",
+        "lang": "en"
+      },
+      {
+        "text": "Daat Zkenim on Genesis",
+        "lang": "en"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים בעלי התוספות על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על בראשית",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על התורה על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על ברא'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על בר'",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על בר׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על ברא׳",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על בְּרֵאשִׁית",
+        "lang": "he"
+      },
+      {
+        "text": "דעת זקנים על בראשית",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Da'at Zekenim on Genesis",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Da'at Zekenim on Genesis"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:57.063Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Da'at%20Zekenim%20on%20Genesis"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "HaMaor HaKatan on Chagigah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Baal HaMaor"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Integer"
+    ],
+    "sectionNames": [
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hamaor",
+          "chagigah"
+        ]
+      }
+    ],
+    "lengths": [
+      53
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "המאור הקטן על חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "HaMaor HaKatan on Chagigah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "HaMaor HaKatan on Chagigah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:07.413Z",
+  "source": "http://localhost:8000/api/v2/raw/index/HaMaor%20HaKatan%20on%20Chagigah"
+}

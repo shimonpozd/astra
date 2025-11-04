@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Bava Kamma",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bava-kamma"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      79
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "M Bava Kamma"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah B. Kam."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Baba Ḳamma"
+      },
+      {
+        "text": "משנה בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.264Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Bava%20Kamma"
+}

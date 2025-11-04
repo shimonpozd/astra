@@ -1,0 +1,53 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      7,
+      4,
+      3,
+      2,
+      0,
+      7,
+      4
+    ],
+    [
+      4,
+      1,
+      5,
+      4,
+      4,
+      2,
+      4,
+      3,
+      2,
+      3
+    ],
+    [
+      2,
+      2,
+      3,
+      3,
+      4,
+      3,
+      3,
+      13,
+      3
+    ],
+    [
+      2,
+      4,
+      5,
+      4,
+      7,
+      9,
+      8,
+      12
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:44.920Z",
+  "source": "https://www.sefaria.org/api/shape/Melekhet%20Shelomoh%20on%20Mishnah%20Taanit"
+}

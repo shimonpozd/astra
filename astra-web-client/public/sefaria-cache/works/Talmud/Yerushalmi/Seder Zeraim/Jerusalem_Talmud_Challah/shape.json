@@ -1,0 +1,38 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      27,
+      3,
+      18,
+      9,
+      8,
+      4
+    ],
+    [
+      18,
+      4,
+      9
+    ],
+    [
+      9,
+      2,
+      3,
+      7,
+      13
+    ],
+    [
+      4,
+      9,
+      4,
+      20,
+      8
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.390Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Challah"
+}

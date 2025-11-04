@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Eruvin",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "eruvin1"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "eruvin1"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      20,
+      20
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "אור שמח על משנה תורה, הלכות עירובין",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.118Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Eruvin"
+}

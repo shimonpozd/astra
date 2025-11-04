@@ -1,0 +1,60 @@
+{
+  "title": "Ma'asai LaMelekh on Mishneh Torah, The Chosen Temple",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ma'asai LaMelekh",
+    "Sefer Avodah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "maasai-lamelekh",
+          "hilchot",
+          "the-chosen-temple"
+        ]
+      },
+      {
+        "term_slugs": [
+          "maasai-lamelekh",
+          "the-chosen-temple"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      124,
+      131
+    ],
+    "titles": [
+      {
+        "text": "מעשי למלך על משנה תורה, הלכות בית הבחירה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ma'asai LaMelekh on Mishneh Torah, The Chosen Temple",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ma'asai LaMelekh on Mishneh Torah, The Chosen Temple"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:24.097Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ma'asai%20LaMelekh%20on%20Mishneh%20Torah%2C%20The%20Chosen%20Temple"
+}

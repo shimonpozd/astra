@@ -1,0 +1,52 @@
+{
+  "title": "Sefer HaBahir",
+  "categories": [
+    "Kabbalah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 1,
+    "addressTypes": [
+      "Siman"
+    ],
+    "sectionNames": [
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sefer",
+          "habahir"
+        ]
+      },
+      {
+        "term_slugs": [
+          "habahir"
+        ]
+      }
+    ],
+    "lengths": [
+      200
+    ],
+    "titles": [
+      {
+        "text": "Bahir",
+        "lang": "en"
+      },
+      {
+        "text": "ספר הבהיר",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sefer HaBahir",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sefer HaBahir"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:34.347Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sefer%20HaBahir"
+}

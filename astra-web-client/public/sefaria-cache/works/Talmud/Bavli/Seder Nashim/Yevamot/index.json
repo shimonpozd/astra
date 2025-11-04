@@ -1,0 +1,897 @@
+{
+  "title": "Yevamot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "bavli",
+          "tractate",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "talmud",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "bavli",
+          "tractate",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "gemara",
+          "tractate",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "yevamot"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yevamot"
+        ]
+      }
+    ],
+    "lengths": [
+      244,
+      3869
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Talmud Yevamot",
+        "lang": "en"
+      },
+      {
+        "text": "Yevamoth",
+        "lang": "en"
+      },
+      {
+        "text": "Tractate Yevamot",
+        "lang": "en"
+      },
+      {
+        "text": "Masekhet Yevamot",
+        "lang": "en"
+      },
+      {
+        "text": "Yeb.",
+        "lang": "en"
+      },
+      {
+        "text": "Y’bamoth",
+        "lang": "en"
+      },
+      {
+        "text": "Yebamoth",
+        "lang": "en"
+      },
+      {
+        "text": "Yebamot",
+        "lang": "en"
+      },
+      {
+        "text": "BT Yevamot",
+        "lang": "en"
+      },
+      {
+        "text": "T.B. Jebamoth",
+        "lang": "en"
+      },
+      {
+        "text": "B. Yebamot",
+        "lang": "en"
+      },
+      {
+        "text": "T.B. Yebamoth",
+        "lang": "en"
+      },
+      {
+        "text": "T.B. Yebamot",
+        "lang": "en"
+      },
+      {
+        "text": "יבמות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Yevamot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yevamot",
+    "checkFirst": {
+      "he": "משנה יבמות",
+      "en": "Mishnah Yevamot"
+    }
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 2a:1-17a:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-143"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "first"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-143"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "first"
+              ]
+            }
+          ],
+          "numeric_equivalent": 1,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 1; Chamesh Esreh Nashim"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "חמש עשרה נשים"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 17a:11-26a:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-236"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "second"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-236"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "second"
+              ]
+            }
+          ],
+          "numeric_equivalent": 2,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 2; Keitzad Eshet Achiv"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "כיצד אשת אחיו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 26a:15-35a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-334"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "third"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-334"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "third"
+              ]
+            }
+          ],
+          "numeric_equivalent": 3,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 3; Arba'ah Achin"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "ארבעה אחין"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 35b:1-50a:5",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-430"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-430"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 4,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 4; HaCholetz"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "החולץ"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 50a:6-53b:7",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-526"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-526"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 5,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 5; Rabban Gamliel"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "רבן גמליאל"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 53b:8-66a:3",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-623"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-623"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 6,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 6; HaBa Al Yevimto"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הבא על יבמתו"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 66a:4-70a:11",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-721"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "seventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-721"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "seventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 7,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 7; Almanah LeKohen Gadol "
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "אלמנה לכהן גדול"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 70a:12-84a:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-819"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eighth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-819"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eighth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 8,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 8; HaArel"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "הערל"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 84a:5-87b:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-918"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "ninth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-918"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "ninth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 9,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 9; Yesh Muttarot"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "יש מותרות"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 87b:9-97a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1012"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "tenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1012"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "tenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 10,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 10; HaIshah Rabbah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האישה רבה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 97a:9-101a:8",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1114"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "eleventh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1114"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "eleventh"
+              ]
+            }
+          ],
+          "numeric_equivalent": 11,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 11; Nosin Al HaAnusah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "נושאין על האנוסה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 101a:9-106b:14",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1211"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "twelfth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1211"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "twelfth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 12,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 12; Mitzvat Chalitzah"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "מצות חליצה"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 107a:1-112b:4",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-1310"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "thirteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-1310"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "thirteenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 13,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 13; Beit Shammai"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "בית שמאי"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 112b:5-114b:10",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-144"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fourteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-144"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fourteenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 14,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 14; Cheresh SheNasa"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "חרש שנשא"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 114b:11-118b:19",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-152"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "fifteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-152"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "fifteenth"
+              ]
+            }
+          ],
+          "numeric_equivalent": 15,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 15; HaIshah Shalom"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האשה שלום"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Yevamot 119a:1-122b:12",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "perek",
+                "chapter-162"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "sixteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "chapter-162"
+              ],
+              "scope": "any"
+            },
+            {
+              "term_slugs": [
+                "sixteenth"
+              ]
+            },
+            {
+              "term_slugs": [
+                "perek",
+                "last"
+              ]
+            },
+            {
+              "term_slugs": [
+                "last"
+              ]
+            }
+          ],
+          "numeric_equivalent": 16,
+          "titles": [
+            {
+              "primary": true,
+              "lang": "en",
+              "text": "Chapter 16; HaIshah Batra"
+            },
+            {
+              "primary": true,
+              "lang": "he",
+              "text": "האשה בתרא"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:05.099Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yevamot"
+}

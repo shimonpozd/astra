@@ -1,0 +1,1385 @@
+{
+  "title": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Tosafot Rabbi Akiva Eiger",
+    "Seder Tahorot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-rabbi-akiva-eiger1",
+          "kelim"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tosafot-rabbi-akiva-eiger1",
+          "mishnah",
+          "kelim"
+        ]
+      }
+    ],
+    "lengths": [
+      30,
+      39,
+      55
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "תוספות רבי עקיבא איגר על משנה כלים",
+        "lang": "he"
+      },
+      {
+        "text": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Letter": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-2"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 2",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:2:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-3"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:2:3",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-1"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות א",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:2:4",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-4"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 4",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:3:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-5"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 5",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:3:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-6"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-7"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:4:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-8"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 8",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-9"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 9",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 1:7:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-10"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 10",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות י",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-11"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 11",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:1:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-12"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 12",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:1:3",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-13"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 13",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:3:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-14"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 14",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:3:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-15"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 15",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות טו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:3:3",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-16"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 16",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות טז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:5:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-17"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 17",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 2:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-18"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 18",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-19"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 19",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות יט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:1:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-20"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 20",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כ",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-21"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 21",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:2:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-22"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 22",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-23"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 23",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 3:8:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-24"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 24",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 5:3:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-25"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 25",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 5:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-26"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 26",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 5:6:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-27"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 27",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 8:5:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-28"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 28",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 8:11:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-29"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 29",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות כט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 9:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-30"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 30",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות ל",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 11:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-31"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 31",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 11:1:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-32"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 32",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 11:6:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-33"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 33",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 12:6:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-34"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 34",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 12:7:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-35"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 35",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 13:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-36"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 36",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 13:6:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-37"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 37",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 15:1:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-38"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 38",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 17:5:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-39"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 39",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות לט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 17:11:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-40"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 40",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מ",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 17:13:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-41"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 41",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 17:15:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-42"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 42",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 17:15:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-43"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 43",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 18:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-44"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 44",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 18:2:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-45"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 45",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 19:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-46"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 46",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 19:9:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-47"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 47",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 24:10:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-48"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 48",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 24:17:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-49"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 49",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות מט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 26:2:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-50"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 50",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נ",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 26:9:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-51"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 51",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 27:9:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-52"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 52",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 27:9:2",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-53"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 53",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 28:8:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-54"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 54",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Tosafot Rabbi Akiva Eiger on Mishnah Kelim 30:4:1",
+          "match_templates": [
+            {
+              "term_slugs": [
+                "letter-55"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Letter 55",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "אות נה",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:03.908Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Rabbi%20Akiva%20Eiger%20on%20Mishnah%20Kelim"
+}

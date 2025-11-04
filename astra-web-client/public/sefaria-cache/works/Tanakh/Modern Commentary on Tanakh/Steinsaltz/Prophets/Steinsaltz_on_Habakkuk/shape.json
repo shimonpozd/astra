@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    17,
+    20,
+    19
+  ],
+  "fetchedAt": "2025-10-30T14:21:05.614Z",
+  "source": "https://www.sefaria.org/api/shape/Steinsaltz%20on%20Habakkuk"
+}

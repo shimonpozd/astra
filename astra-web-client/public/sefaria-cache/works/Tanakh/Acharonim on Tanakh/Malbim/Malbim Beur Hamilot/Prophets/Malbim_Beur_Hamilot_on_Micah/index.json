@@ -1,0 +1,94 @@
+{
+  "title": "Malbim Beur Hamilot on Micah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Malbim Beur Hamilot",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim-beur-hamilot",
+          "micah"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      68,
+      116
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Mic."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Mic"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Mikha"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Michah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Lexical Commentary on Micah"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Mic."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Mic"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Mikha"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Beur Hamilot on Michah"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם באור המילות על מיכה",
+        "primary": true
+      },
+      {
+        "text": "Malbim Beur Hamilot on Micah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim Beur Hamilot on Micah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.784Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20Beur%20Hamilot%20on%20Micah"
+}

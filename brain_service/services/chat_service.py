@@ -8,6 +8,8 @@ from collections import defaultdict
 import redis.asyncio as redis
 from models.chat_models import Session
 from domain.chat.tools import ToolRegistry
+from brain_service.models.db import UserApiKey
+from brain_service.services.user_service import UserService, ApiKeyLimitExceeded
 from core.dependencies import get_memory_service
 from .block_stream_service import BlockStreamService
 from core.llm_config import get_llm_for_task, LLMConfigError, get_tooling_config
@@ -21,16 +23,37 @@ class ChatService:
     LLM streaming, and tool integration.
     """
     
-    def __init__(self, redis_client: redis.Redis, tool_registry: ToolRegistry, memory_service):
+    def __init__(
+        self,
+        redis_client: redis.Redis,
+        tool_registry: ToolRegistry,
+        memory_service,
+        user_service: UserService,
+    ):
         self.redis_client = redis_client
         self.tool_registry = tool_registry
         self.memory_service = memory_service
+        self.user_service = user_service
         self.block_stream_service = BlockStreamService()
+        self._session_ttl_seconds = 3600 * 24 * 7
+
+    @staticmethod
+    def _normalize_user_id(user_id: str) -> tuple[str, uuid.UUID]:
+        try:
+            user_uuid = uuid.UUID(str(user_id))
+        except ValueError as exc:
+            raise ValueError(f"Invalid user_id: {user_id}") from exc
+        return str(user_uuid), user_uuid
+
+    @staticmethod
+    def _session_key(user_id: str, session_id: str) -> str:
+        return f"session:{user_id}:{session_id}"
     
     async def get_session_from_redis(self, session_id: str, user_id: str, agent_id: str) -> Session:
         """Retrieve session from Redis or create new one."""
+        user_id_str, _ = self._normalize_user_id(user_id)
         if self.redis_client:
-            redis_key = f"session:{session_id}"
+            redis_key = self._session_key(user_id_str, session_id)
             session_data = await self.redis_client.get(redis_key)
             if session_data:
                 try:
@@ -40,20 +63,27 @@ class ChatService:
                     return session
                 except (json.JSONDecodeError, TypeError) as e:
                     logger.error(f"Failed to decode session {session_id}: {e}")
-        return Session(user_id=user_id, agent_id=agent_id, persistent_session_id=session_id)
+        return Session(user_id=user_id_str, agent_id=agent_id, persistent_session_id=session_id)
     
     async def save_session_to_redis(self, session: Session):
         """Save session to Redis."""
         if not self.redis_client:
             return
-        redis_key = f"session:{session.persistent_session_id}"
+        user_id_str, _ = self._normalize_user_id(session.user_id)
+        redis_key = self._session_key(user_id_str, session.persistent_session_id)
         session.last_modified = datetime.now().isoformat()
-        await self.redis_client.set(redis_key, json.dumps(session.to_dict()), ex=3600 * 24 * 7)
+        await self.redis_client.set(
+            redis_key,
+            json.dumps(session.to_dict()),
+            ex=self._session_ttl_seconds,
+        )
     
     async def get_llm_response_stream(
-        self, 
-        messages: List[Dict[str, Any]], 
-        session_id: str
+        self,
+        messages: List[Dict[str, Any]],
+        session_id: str,
+        *,
+        user_uuid: Optional[uuid.UUID] = None,
     ) -> AsyncGenerator[str, None]:
         """
         Generate LLM response stream with tool support and STM integration.
@@ -61,27 +91,33 @@ class ChatService:
         Args:
             messages: List of message dictionaries
             session_id: Session ID for STM integration
+            user_uuid: Optional user identifier for API key lookup
             
         Yields:
             JSON strings with streaming events
         """
+        key_record = None
+        stream_emitted = False
         try:
-            client, model, reasoning_params, caps = get_llm_for_task("CHAT")
+            client, model, reasoning_params, caps, key_record = await self._prepare_llm_client("CHAT", user_uuid)
+        except ApiKeyLimitExceeded:
+            yield json.dumps({"type": "error", "data": {"message": "Daily usage limit reached for your API key. Please contact an administrator."}}) + "\n"
+            return
         except LLMConfigError as e:
             yield json.dumps({"type": "error", "data": {"message": f"LLM not configured: {e}"}}) + '\n'
+            return
+        except Exception as exc:
+            logger.error("Failed to prepare LLM client", extra={"session_id": session_id, "error": str(exc)})
+            yield json.dumps({"type": "error", "data": {"message": "Unable to prepare language model client."}}) + '\n'
             return
 
         # Integrate STM if available
         if self.memory_service:
             stm_data = await self.memory_service.get_stm(session_id)
             if stm_data:
-                # Use the new format_stm_for_prompt method
                 stm_context = self.memory_service.format_stm_for_prompt(stm_data)
                 if stm_context:
-                    stm_message = {
-                        "role": "system", 
-                        "content": f"[STM Context]\n{stm_context}"
-                    }
+                    stm_message = {"role": "system", "content": f"[STM Context]\n{stm_context}"}
                     messages.insert(0, stm_message)
 
         tooling_cfg = get_tooling_config()
@@ -100,409 +136,168 @@ class ChatService:
             stripped = (text or "").strip()
             return stripped.startswith("[TOOL_CALLS") or stripped.startswith("[CALL_TOOL")
 
-        while iter_count < 5:  # Max tool-use iterations
-            iter_count += 1
-            
-            # Fix: Limit message history to prevent prompt bloat
-            if len(messages) > 20:  # Keep last 20 messages
-                # Keep system message and recent messages
-                system_msg = messages[0] if messages and messages[0].get("role") == "system" else None
-                recent_messages = messages[-19:]  # Last 19 messages
-                messages = ([system_msg] + recent_messages) if system_msg else recent_messages
-            
-            stream = await client.chat.completions.create(**api_params)
-            
-            tool_call_builders = defaultdict(lambda: {"id": "", "type": "function", "function": {"name": "", "arguments": ""}})
-            full_reply_content = ""
-            chunk_count = 0  # Fix: Initialize chunk counter
-            
-            async for chunk in stream:
-                delta = chunk.choices[0].delta
-                if delta and delta.content:
-                    chunk_count += 1  # Fix: Increment chunk counter
-                    if _is_tool_directive(delta.content):
-                        logger.debug(
-                            "Filtered tool directive chunk",
-                            extra={"session_id": session_id, "content": delta.content},
-                        )
-                        continue
-                    full_reply_content += delta.content
-                    yield json.dumps({"type": "llm_chunk", "data": delta.content}) + '\n'
-                if delta and delta.tool_calls:
-                    for tc in delta.tool_calls:
-                        builder = tool_call_builders[tc.index]
-                        builder["index"] = tc.index  # Fix: Store index for stable sorting
-                        if tc.id: 
-                            builder["id"] = tc.id
-                        if tc.function:
-                            if tc.function.name: 
-                                builder["function"]["name"] = tc.function.name
-                            if tc.function.arguments: 
-                                builder["function"]["arguments"] += tc.function.arguments
+        try:
+            while iter_count < 5:
+                iter_count += 1
 
-            if not tool_call_builders:
-                # If we already sent chunks, don't send doc_v1 - let the accumulated text be the final result
-                if chunk_count > 0:
-                    stripped_reply = full_reply_content.strip()
-                    if stripped_reply:
-                        # We already streamed the content as chunks, no need to send doc_v1
+                if len(messages) > 20:
+                    system_msg = messages[0] if messages and messages[0].get("role") == "system" else None
+                    recent_messages = messages[-19:]
+                    messages = ([system_msg] + recent_messages) if system_msg else recent_messages
+
+                stream = await client.chat.completions.create(**api_params)
+
+                tool_call_builders = defaultdict(lambda: {"id": "", "type": "function", "function": {"name": "", "arguments": ""}})
+                full_reply_content = ""
+                chunk_count = 0
+
+                async for chunk in stream:
+                    delta = chunk.choices[0].delta
+                    if delta and delta.content:
+                        chunk_count += 1
+                        stream_emitted = True
+                        if _is_tool_directive(delta.content):
+                            logger.debug("Filtered tool directive chunk", extra={"session_id": session_id, "content": delta.content})
+                            continue
+                        full_reply_content += delta.content
+                        yield json.dumps({"type": "llm_chunk", "data": delta.content}) + '\n'
+                    if delta and delta.tool_calls:
+                        for tc in delta.tool_calls:
+                            builder = tool_call_builders[tc.index]
+                            builder["index"] = tc.index
+                            if tc.id:
+                                builder["id"] = tc.id
+                            if tc.function:
+                                if tc.function.name:
+                                    builder["function"]["name"] = tc.function.name
+                                if tc.function.arguments:
+                                    builder["function"]["arguments"] += tc.function.arguments
+
+                if not tool_call_builders:
+                    if chunk_count > 0:
+                        stripped_reply = full_reply_content.strip()
+                        if stripped_reply:
+                            return
+                        if retry_on_empty_stream and not empty_reply_retry and iter_count < 5:
+                            empty_reply_retry = True
+                            logger.warning(
+                                "LLM returned only whitespace after tool use; retrying with explicit answer instruction.",
+                                extra={"session_id": session_id, "model": model},
+                            )
+                            messages.append({"role": "system", "content": "You must now answer the user's last question in natural language. Summarize the tool findings and provide a helpful chat response."})
+                            api_params.pop("tools", None)
+                            api_params["tool_choice"] = "none"
+                            api_params["parallel_tool_calls"] = False
+                            api_params["messages"] = messages
+                            continue
+                        fallback_message = ("I was unable to generate a helpful answer after consulting available tools. Please rephrase the question or try again.")
+                        stream_emitted = True
+                        yield json.dumps({"type": "llm_chunk", "data": fallback_message}) + '\n'
+                        yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
                         return
-                    if retry_on_empty_stream and not empty_reply_retry and iter_count < 5:
-                        empty_reply_retry = True
-                        logger.warning(
-                            "LLM returned only whitespace after tool use; retrying with explicit answer instruction.",
-                            extra={"session_id": session_id, "model": model},
-                        )
-                        messages.append(
-                            {
-                                "role": "system",
-                                "content": "You must now answer the user's last question in natural language. Summarize the tool findings and provide a helpful chat response.",
-                            }
-                        )
-                        api_params.pop("tools", None)
-                        api_params["tool_choice"] = "none"
-                        api_params["parallel_tool_calls"] = False
-                        api_params["messages"] = messages
-                        continue
-                    fallback_message = (
-                        "I was unable to generate a helpful answer after consulting available tools. "
-                        "Please rephrase the question or try again."
-                    )
-                    yield json.dumps({"type": "llm_chunk", "data": fallback_message}) + '\n'
-                    yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
-                    return
-                
-                # Check if the response is a JSON document (doc.v1 format)
-                try:
-                    # Fix: Use safe JSON prefix parsing
-                    parsed_content, _ = self._find_valid_json_prefix(full_reply_content)
-                    if parsed_content is None:
-                        # No valid JSON found, send as text
-                        logger.debug(f"No valid JSON found in response, sending as text. Length: {len(full_reply_content)}")
-                        yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                        return
-                    if isinstance(parsed_content, dict):
-                        # Check for direct doc.v1 format with blocks
-                        if ((parsed_content.get("type") == "doc.v1" and "blocks" in parsed_content) or
-                            ("blocks" in parsed_content and isinstance(parsed_content["blocks"], list))):
-                            yield json.dumps({"type": "doc_v1", "data": parsed_content}) + '\n'
-                        # Check for direct doc.v1 format with content (LLM streaming format)
-                        elif (parsed_content.get("version") == "doc.v1" and 
-                              "content" in parsed_content and isinstance(parsed_content["content"], list)):
-                            # Validate content structure
-                            try:
-                                # Convert content to blocks format
-                                doc_v1_data = {
-                                    "type": "doc.v1",
-                                    "blocks": parsed_content["content"]
-                                }
-                                # Validate the structure
+
+                    try:
+                        parsed_content, _ = self._find_valid_json_prefix(full_reply_content)
+                        if parsed_content is None:
+                            stream_emitted = True
+                            yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
+                            return
+                        if isinstance(parsed_content, dict):
+                            if ((parsed_content.get("type") == "doc.v1" and "blocks" in parsed_content) or
+                                ("blocks" in parsed_content and isinstance(parsed_content["blocks"], list))):
+                                stream_emitted = True
+                                yield json.dumps({"type": "doc_v1", "data": parsed_content}) + '\n'
+                                return
+                            elif (parsed_content.get("version") == "doc.v1" and
+                                  "content" in parsed_content and isinstance(parsed_content["content"], list)):
+                                try:
+                                    doc_v1_data = {"type": "doc.v1", "blocks": parsed_content["content"]}
+                                    if self._validate_doc_v1_structure(doc_v1_data):
+                                        stream_emitted = True
+                                        yield json.dumps({"type": "doc_v1", "data": doc_v1_data}) + '\n'
+                                    else:
+                                        stream_emitted = True
+                                        yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
+                                    return
+                                except Exception as e:
+                                    logger.error(f"Error processing doc.v1 content: {e}")
+                                    stream_emitted = True
+                                    yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
+                                    return
+                            elif ("doc" in parsed_content and isinstance(parsed_content["doc"], dict) and
+                                  "content" in parsed_content["doc"] and isinstance(parsed_content["doc"]["content"], list)):
+                                doc_data = parsed_content["doc"]
+                                doc_v1_data = {"type": "doc.v1", "blocks": doc_data.get("content", [])}
                                 if self._validate_doc_v1_structure(doc_v1_data):
+                                    stream_emitted = True
                                     yield json.dumps({"type": "doc_v1", "data": doc_v1_data}) + '\n'
                                 else:
-                                    logger.warning("Invalid doc.v1 structure, sending as text")
+                                    stream_emitted = True
                                     yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                            except Exception as e:
-                                logger.error(f"Error processing doc.v1 content: {e}")
+                                return
+                            else:
+                                stream_emitted = True
                                 yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                        # Check for wrapped doc format with content
-                        elif ("doc" in parsed_content and isinstance(parsed_content["doc"], dict) and
-                              "content" in parsed_content["doc"] and isinstance(parsed_content["doc"]["content"], list)):
-                            # Extract the doc content and convert to blocks format
-                            doc_data = parsed_content["doc"]
-                            doc_v1_data = {
-                                "type": "doc.v1",
-                                "blocks": doc_data["content"]
-                            }
-                            if "version" in doc_data:
-                                doc_v1_data["version"] = doc_data["version"]
-                            yield json.dumps({"type": "doc_v1", "data": doc_v1_data}) + '\n'
+                                return
                         else:
+                            stream_emitted = True
                             yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                    else:
+                            return
+                    except Exception as e:
+                        logger.error(f"Error parsing LLM response: {e}", exc_info=True)
+                        stream_emitted = True
                         yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                except (json.JSONDecodeError, TypeError):
-                    # Not JSON, send as regular text response
+                        return
+
+                tool_sorted = sorted(tool_call_builders.values(), key=lambda x: x.get("index", 0))
+                tool_events, tool_results = await self._handle_tool_calls(tool_sorted, messages, session_id)
+
+                if not tool_events:
+                    stream_emitted = True
                     yield json.dumps({"type": "full_response", "data": full_reply_content}) + '\n'
-                return
+                    return
 
-            full_tool_calls = sorted(tool_call_builders.values(), key=lambda x: x.get('index', 0))
-            messages.append({"role": "assistant", "tool_calls": full_tool_calls, "content": None})  # Fix: content should be None for tool calls
-            
-            for tool_call in full_tool_calls:
-                function_name = tool_call["function"]["name"]
-                try:
-                    function_args = json.loads(tool_call["function"].get("arguments") or "{}")
-                    result = await self.tool_registry.call(function_name, **function_args)
-                    # Fix: Safe serialization for tool_result
-                    safe_result = json.dumps(result, default=str)
-                    yield json.dumps({"type": "tool_result", "data": json.loads(safe_result)}) + '\n'
-                    messages.append({
-                        "tool_call_id": tool_call["id"], 
-                        "role": "tool", 
-                        "name": function_name, 
-                        "content": safe_result
-                    })
-                except Exception as e:
-                    error_message = f"Error calling tool {function_name}: {e}"
-                    logger.error(error_message, exc_info=True)
-                    yield json.dumps({"type": "error", "data": {"message": error_message}}) + '\n'
-                    messages.append({
-                        "tool_call_id": tool_call["id"], 
-                        "role": "tool", 
-                        "name": function_name, 
-                        "content": json.dumps({"error": error_message})
-                    })
-            
-            api_params["messages"] = messages
+                for event in tool_events:
+                    stream_emitted = True
+                    yield json.dumps(event) + '\n'
 
-    async def process_chat_stream(
-        self, 
-        text: str, 
-        user_id: str, 
-        session_id: Optional[str] = None, 
-        agent_id: Optional[str] = None
-    ) -> AsyncGenerator[str, None]:
-        """
-        Process a chat stream request.
-        
-        Args:
-            text: User's message text
-            user_id: User identifier
-            session_id: Optional session ID
-            agent_id: Optional agent ID
-            
-        Yields:
-            JSON strings with streaming events
-        """
-        logger.info(f"--- New General Chat Request ---")
-        
-        # Get or create session
-        session = await self.get_session_from_redis(
-            session_id or str(uuid.uuid4()), 
-            user_id, 
-            agent_id or "default"
-        )
-        
-        # Add user message to session
-        session.add_message(role="user", content=text)
+                messages.extend(tool_results)
+                api_params["messages"] = messages
 
-        # Get personality configuration
-        personality_config = personality_service.get_personality(session.agent_id) or {}
-        system_prompt = personality_config.get("system_prompt", "You are a helpful assistant.")
-        
-        # Build prompt messages
-        prompt_messages = [{"role": "system", "content": system_prompt}] + [m.model_dump() for m in session.short_term_memory]
-        
-        # Stream LLM response
-        full_response = ""
-        final_message = None  # Fix: Track what to save in history
-        
-        async for chunk in self.get_llm_response_stream(prompt_messages, session.persistent_session_id):
-            yield chunk
+            yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
+        except Exception as e:
+            logger.error("LLM streaming error", extra={"session_id": session_id, "error": str(e)})
+            yield json.dumps({"type": "error", "data": {"message": str(e)}}) + '\n'
+        finally:
+            if key_record and stream_emitted:
+                await self.user_service.increment_api_usage(key_record.id)
+
+    async def _prepare_llm_client(
+        self, task: str, user_uuid: Optional[uuid.UUID]
+    ):
+        api_key_override: Optional[str] = None
+        key_record: Optional[UserApiKey] = None
+        if user_uuid is not None:
             try:
-                event = json.loads(chunk)
-                if event.get("type") == "llm_chunk":
-                    full_response += event.get("data", "")
-                elif event.get("type") == "doc_v1":
-                    # Fix: Store doc.v1 for final message
-                    final_message = {
-                        "content": json.dumps(event.get("data", {})),
-                        "content_type": "doc.v1"
-                    }
-                elif event.get("type") == "full_response":
-                    # Fix: Store full response for final message
-                    final_message = {
-                        "content": event.get("data", ""),
-                        "content_type": "text.v1"
-                    }
-            except json.JSONDecodeError:
-                pass
-
-        # Add assistant response to session
-        if final_message:
-            # Fix: Use final_message instead of full_response
-            session.add_message(
-                role="assistant", 
-                content=final_message["content"],
-                content_type=final_message["content_type"]
-            )
-        elif full_response.strip():
-            # Fallback to text if no structured message
-            session.add_message(role="assistant", content=full_response.strip())
-
-        # Save session first
-        await self.save_session_to_redis(session)
-
-        # Update STM after stream completion (write-after-final)
-        if self.memory_service and full_response.strip():
-            # Prepare recent messages for STM update
-            recent_messages = [m.model_dump() for m in session.short_term_memory[-10:]]  # Last 10 messages
-            
-            # Use consider_update_stm which handles all the logic
-            updated = await self.memory_service.consider_update_stm(
-                session.persistent_session_id, recent_messages
-            )
-            
-            if updated:
-                logger.info("STM updated after chat stream completion", extra={
-                    "session_id": session.persistent_session_id,
-                    "message_count": len(recent_messages),
-                    "token_count": sum(len(str(msg.get("content", ""))) for msg in recent_messages) // 4
-                })
-
-        # End stream
-        yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
-
-    async def get_all_chats(self) -> List[Dict[str, Any]]:
-        """
-        Get all chat and study sessions.
-        
-        Returns:
-            List of session dictionaries
-        """
-        logger.info("Fetching all chats and study sessions...")
-        all_sessions = []
-        
-        if not self.redis_client:
-            logger.warning("Redis client is None, cannot fetch sessions")
-            return []
-        
-        try:
-            # Get chat sessions
-            async for key in self.redis_client.scan_iter("session:*"):
-                session_data = await self.redis_client.get(key)
-                if not session_data: 
-                    continue
-                try:
-                    session = json.loads(session_data)
-                    if isinstance(session, dict) and "persistent_session_id" in session:
-                        all_sessions.append({
-                            "session_id": session.get("persistent_session_id"),
-                            "name": session.get("name", "Chat"),
-                            "last_modified": session.get("last_modified"),
-                            "type": "chat"
-                        })
-                except json.JSONDecodeError:
-                    logger.warning(f"Failed to decode JSON for chat key {key}, skipping.")
-        except Exception as e:
-            logger.error(f"An error occurred while scanning for chat sessions: {e}", exc_info=True)
-
-        # Get study sessions
-        try:
-            logger.info("Starting to scan for study sessions...")
-            study_keys = [key async for key in self.redis_client.scan_iter("study:sess:*:top")]
-            logger.info(f"Found {len(study_keys)} study session keys")
-            for key in study_keys:
-                try:
-                    # Handle both bytes and string keys
-                    key_str = key.decode() if isinstance(key, bytes) else key
-                    session_id = key_str.split(':')[2]
-                    
-                    # Try to get snapshot data directly from Redis
-                    snapshot_data = await self.redis_client.get(f"study:sess:{session_id}:top")
-                    if snapshot_data:
-                        snapshot = json.loads(snapshot_data)
-                        ref = snapshot.get('ref', 'Study Session')
-                        ts = snapshot.get('ts', 0)
-                        all_sessions.append({
-                            "session_id": session_id,
-                            "name": ref,
-                            "last_modified": datetime.fromtimestamp(ts).isoformat(),
-                            "type": "study"
-                        })
-                except Exception as e:
-                    logger.warning(f"Failed to process study session key {key}: {e}")
-        except Exception as e:
-            logger.error(f"An error occurred while scanning for study sessions: {e}", exc_info=True)
-
-        # Sort by last modified
-        sorted_sessions = sorted(
-            [s for s in all_sessions if s.get("last_modified")], 
-            key=lambda x: x["last_modified"], 
-            reverse=True
+                result = await self.user_service.get_active_api_key(user_uuid, provider="openrouter")
+                if result:
+                    key_record, api_key_override = result
+            except ApiKeyLimitExceeded:
+                raise
+        provider_override = key_record.provider if key_record else None
+        client, model, reasoning_params, caps = get_llm_for_task(
+            task,
+            api_key_override=api_key_override,
+            provider_override=provider_override,
         )
-        return sorted_sessions
+        return client, model, reasoning_params, caps, key_record
 
-    async def delete_session(self, session_id: str, session_type: str) -> bool:
-        """
-        Delete a session by ID and type.
-        
-        Args:
-            session_id: Session identifier
-            session_type: Type of session ("chat" or "study")
-            
-        Returns:
-            True if session was deleted successfully
-        """
-        if session_type == "chat":
-            success = personality_service.delete_session(session_id)
-            if not success:
-                logger.warning(f"Chat session {session_id} not found for deletion")
-            return success
-        elif session_type == "study":
-            keys_to_delete = [
-                f"study:sess:{session_id}:history",       # legacy
-                f"study:sess:{session_id}:history_list",  # NEW format
-                f"study:sess:{session_id}:cursor", 
-                f"study:sess:{session_id}:top"
-            ]
-            deleted_count = await self.redis_client.delete(*keys_to_delete)
-            if deleted_count == 0:
-                logger.warning(f"No study session keys found for deletion with ID: {session_id}")
-            return deleted_count > 0
-        else:
-            logger.error(f"Unknown session type: {session_type}")
-            return False
-    
-    async def get_chat_history(self, session_id: str) -> List[Dict[str, Any]]:
-        """
-        Get chat history for a specific session.
-        
-        Args:
-            session_id: Session identifier
-            
-        Returns:
-            List of message dictionaries
-        """
-        if not self.redis_client:
-            logger.warning("Redis client is None, cannot fetch chat history")
-            return []
-        
-        try:
-            redis_key = f"session:{session_id}"
-            session_data = await self.redis_client.get(redis_key)
-            if not session_data:
-                logger.warning(f"Session {session_id} not found")
-                return []
-            
-            session = json.loads(session_data)
-            if not isinstance(session, dict) or "short_term_memory" not in session:
-                logger.warning(f"Invalid session data for {session_id}")
-                return []
-            
-            # Convert messages to frontend format
-            messages = []
-            for msg in session.get("short_term_memory", []):
-                if isinstance(msg, dict):
-                    messages.append({
-                        "role": msg.get("role"),
-                        "content": msg.get("content"),
-                        "content_type": msg.get("content_type", "text.v1"),
-                        "timestamp": msg.get("timestamp", msg.get("ts"))  # Try both timestamp and ts
-                    })
-            
-            logger.info(f"Retrieved {len(messages)} messages for session {session_id}")
-            return messages
-            
-        except Exception as e:
-            logger.error(f"Failed to get chat history for session {session_id}: {e}", exc_info=True)
-            return []
-    
     async def get_llm_response_stream_with_blocks(
-        self, 
-        messages: List[Dict[str, Any]], 
-        session_id: str
+        self,
+        messages: List[Dict[str, Any]],
+        session_id: str,
+        *,
+        user_uuid: Optional[uuid.UUID] = None,
     ) -> AsyncGenerator[str, None]:
         """
         Generate LLM response stream with block-by-block streaming.
@@ -510,27 +305,27 @@ class ChatService:
         Args:
             messages: List of message dictionaries
             session_id: Session ID for STM integration
+            user_uuid: Optional user identifier for API key lookup
             
         Yields:
             JSON strings with streaming events (including block events)
         """
+        key_record = None
         try:
-            client, model, reasoning_params, caps = get_llm_for_task("CHAT")
+            client, model, reasoning_params, caps, key_record = await self._prepare_llm_client("CHAT", user_uuid)
+        except ApiKeyLimitExceeded:
+            yield json.dumps({"type": "error", "data": {"message": "Daily usage limit reached for your API key. Please contact an administrator."}}) + "\n"
+            return
         except LLMConfigError as e:
             yield json.dumps({"type": "error", "data": {"message": f"LLM not configured: {e}"}}) + '\n'
             return
 
-        # Integrate STM if available
         if self.memory_service:
             stm_data = await self.memory_service.get_stm(session_id)
             if stm_data:
-                # Use the new format_stm_for_prompt method
                 stm_context = self.memory_service.format_stm_for_prompt(stm_data)
                 if stm_context:
-                    stm_message = {
-                        "role": "system", 
-                        "content": f"[STM Context]\n{stm_context}"
-                    }
+                    stm_message = {"role": "system", "content": f"[STM Context]\n{stm_context}"}
                     messages.insert(0, stm_message)
 
         tools = self.tool_registry.get_tool_schemas()
@@ -540,21 +335,23 @@ class ChatService:
 
         try:
             stream = await client.chat.completions.create(**api_params)
-            
-            # Create a text stream generator
+
             async def text_stream():
                 async for chunk in stream:
                     if chunk.choices and chunk.choices[0].delta.content:
                         yield chunk.choices[0].delta.content
-            
-            # Stream blocks as they become available
+
             async for block_event in self.block_stream_service.stream_blocks_from_text(text_stream(), session_id):
                 yield json.dumps(block_event) + '\n'
-                
+
+            yield json.dumps({"type": "end", "data": "Stream finished"}) + '\n'
         except Exception as e:
             logger.error(f"Error in LLM stream with blocks: {e}", exc_info=True)
             yield json.dumps({"type": "error", "data": {"message": str(e)}}) + '\n'
-    
+        finally:
+            if key_record:
+                await self.user_service.increment_api_usage(key_record.id)
+
     def _find_valid_json_prefix(self, buffer: str) -> tuple[Optional[Dict[str, Any]], int]:
         """
         Find the last valid JSON prefix in buffer.
@@ -671,11 +468,97 @@ class ChatService:
             logger.error(f"Error validating doc.v1 structure: {e}")
             return False
     
+    async def process_chat_stream(
+        self,
+        text: str,
+        user_id: str,
+        session_id: Optional[str] = None,
+        agent_id: Optional[str] = None
+    ) -> AsyncGenerator[str, None]:
+        """
+        Process a chat stream request.
+        
+        Args:
+            text: User's message text
+            user_id: User identifier
+            session_id: Optional session ID
+            agent_id: Optional agent ID
+            
+        Yields:
+            JSON strings with streaming events
+        """
+        logger.info("--- New General Chat Request ---")
+
+        user_id_str, user_uuid = self._normalize_user_id(user_id)
+        active_session_id = session_id or str(uuid.uuid4())
+        session = await self.get_session_from_redis(
+            active_session_id,
+            user_id_str,
+            agent_id or "default"
+        )
+
+        session.add_message(role="user", content=text)
+
+        personality_config = personality_service.get_personality(session.agent_id) or {}
+        system_prompt = personality_config.get("system_prompt", "You are a helpful assistant.")
+
+        prompt_messages = [{"role": "system", "content": system_prompt}] + [m.model_dump() for m in session.short_term_memory]
+
+        accumulated_chunks: List[str] = []
+        doc_response: Optional[Dict[str, Any]] = None
+        final_text: Optional[str] = None
+        error_message: Optional[str] = None
+
+        async for chunk in self.get_llm_response_stream(
+            prompt_messages, session.persistent_session_id, user_uuid=user_uuid
+        ):
+            yield chunk
+            try:
+                event = json.loads(chunk)
+                event_type = event.get("type")
+                if event_type == "llm_chunk":
+                    accumulated_chunks.append(event.get("data", ""))
+                elif event_type == "doc_v1":
+                    doc_response = event.get("data")
+                elif event_type == "full_response":
+                    final_text = event.get("data")
+                elif event_type == "error":
+                    error_message = event.get("data", {}).get("message")
+            except json.JSONDecodeError:
+                continue
+
+        if doc_response:
+            session.add_message(
+                role="assistant",
+                content=json.dumps(doc_response),
+                content_type="doc.v1",
+            )
+        else:
+            reply = final_text or "".join(accumulated_chunks).strip()
+            if reply:
+                session.add_message(role="assistant", content=reply, content_type="text.v1")
+            elif error_message:
+                session.add_message(role="assistant", content=error_message, content_type="text.v1")
+
+        await self.save_session_to_redis(session)
+
+        await self.user_service.upsert_thread(
+            session_id=session.persistent_session_id,
+            user_id=uuid.UUID(user_id_str),
+            title=session.name or "Chat",
+            last_modified=datetime.now(),
+            metadata={"agent_id": session.agent_id},
+        )
+
+        if self.memory_service and session.short_term_memory:
+            recent_messages = [m.model_dump() for m in session.short_term_memory[-10:]]
+            await self.memory_service.consider_update_stm(session.persistent_session_id, recent_messages)
+
     async def process_chat_stream_with_blocks(
-        self, 
-        text: str, 
-        user_id: str, 
-        session_id: Optional[str] = None, 
+        self,
+        text: str,
+        user_id: str,
+        session_id: Optional[str] = None,
         agent_id: Optional[str] = None
     ) -> AsyncGenerator[str, None]:
         """
@@ -693,9 +576,11 @@ class ChatService:
         logger.info(f"--- New Block Streaming Chat Request ---")
         
         # Get or create session
+        user_id_str, user_uuid = self._normalize_user_id(user_id)
+        active_session_id = session_id or str(uuid.uuid4())
         session = await self.get_session_from_redis(
-            session_id or str(uuid.uuid4()), 
-            user_id, 
+            active_session_id,
+            user_id_str,
             agent_id or "default"
         )
         
@@ -715,7 +600,9 @@ class ChatService:
         block_doc = {"version": "1.0", "blocks": []}  # Fix: Aggregate blocks into doc
         block_ids = {}  # Fix: Track block_ids for stable keys
         
-        async for chunk in self.get_llm_response_stream_with_blocks(prompt_messages, session.persistent_session_id):
+        async for chunk in self.get_llm_response_stream_with_blocks(
+            prompt_messages, session.persistent_session_id, user_uuid=user_uuid
+        ):
             yield chunk
             try:
                 event = json.loads(chunk)

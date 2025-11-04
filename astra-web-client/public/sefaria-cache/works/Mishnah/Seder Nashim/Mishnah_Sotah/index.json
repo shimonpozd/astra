@@ -1,0 +1,82 @@
+{
+  "title": "Mishnah Sotah",
+  "categories": [
+    "Mishnah",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "sotah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "sotah"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      67
+    ],
+    "titles": [
+      {
+        "text": "Mishna Sotah",
+        "lang": "en"
+      },
+      {
+        "text": "M. Sotah",
+        "lang": "en"
+      },
+      {
+        "text": "M Sotah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Sot.",
+        "lang": "en"
+      },
+      {
+        "text": "Mishnah Soṭah",
+        "lang": "en"
+      },
+      {
+        "text": "Mishna Soṭah",
+        "lang": "en"
+      },
+      {
+        "text": "משנה סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Sotah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Sotah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.232Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Sotah"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    4,
+    0,
+    3,
+    5,
+    8,
+    3,
+    4
+  ],
+  "fetchedAt": "2025-10-30T14:21:26.884Z",
+  "source": "https://www.sefaria.org/api/shape/Boaz%20on%20Mishnah%20Demai"
+}

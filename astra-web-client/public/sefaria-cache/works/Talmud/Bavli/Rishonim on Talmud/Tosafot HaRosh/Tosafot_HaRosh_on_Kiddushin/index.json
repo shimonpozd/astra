@@ -1,0 +1,49 @@
+{
+  "title": "Tosafot HaRosh on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot HaRosh"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosafot-harosh",
+          "kiddushin"
+        ]
+      }
+    ],
+    "lengths": [
+      164,
+      838
+    ],
+    "titles": [
+      {
+        "text": "תוספות הרא\"ש על קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosafot HaRosh on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot HaRosh on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:46.152Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Tosafot%20HaRosh%20on%20Kiddushin"
+}

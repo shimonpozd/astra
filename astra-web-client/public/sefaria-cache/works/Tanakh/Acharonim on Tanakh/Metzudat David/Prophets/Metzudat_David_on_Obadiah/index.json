@@ -1,0 +1,61 @@
+{
+  "title": "Metzudat David on Obadiah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "obadiah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      21,
+      57
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Ovadiah"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על עובדיה",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Obadiah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Obadiah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.040Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Obadiah"
+}

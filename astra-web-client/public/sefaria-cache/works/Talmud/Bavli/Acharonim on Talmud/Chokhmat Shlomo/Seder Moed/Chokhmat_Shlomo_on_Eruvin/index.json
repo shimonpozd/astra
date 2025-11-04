@@ -1,0 +1,67 @@
+{
+  "title": "Chokhmat Shlomo on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chokhmat Shlomo",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chokhmat-shlomo",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      800
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Maharshal on Eruvin",
+        "lang": "en"
+      },
+      {
+        "text": "מהרש\"ל עירובין",
+        "lang": "he"
+      },
+      {
+        "primary": true,
+        "text": "חכמת שלמה על עירובין",
+        "lang": "he"
+      },
+      {
+        "text": "Chokhmat Shlomo on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chokhmat Shlomo on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.215Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chokhmat%20Shlomo%20on%20Eruvin"
+}

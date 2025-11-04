@@ -1,0 +1,101 @@
+{
+  "title": "Metzudat Zion on II Kings",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat Zion",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-zion",
+          "ii-kings"
+        ]
+      }
+    ],
+    "lengths": [
+      25,
+      281,
+      442
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Melachim Bet"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Melachim II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Second Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on 2 Kings"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Melachim"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on Kings II"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat Zion on II Melakhim"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מלכים ב",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מ\"ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מ״ב"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מלכים ב׳"
+      },
+      {
+        "lang": "he",
+        "text": "מצודת ציון על מלכים ב'"
+      },
+      {
+        "text": "Metzudat Zion on II Kings",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat Zion on II Kings"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.275Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20Zion%20on%20II%20Kings"
+}

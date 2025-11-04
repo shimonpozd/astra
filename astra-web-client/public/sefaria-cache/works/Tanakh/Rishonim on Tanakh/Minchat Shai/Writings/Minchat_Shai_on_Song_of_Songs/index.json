@@ -1,0 +1,58 @@
+{
+  "title": "Minchat Shai on Song of Songs",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Minchat Shai",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "minchat-shai",
+          "song-of-songs"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      46,
+      54
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "מנחת שי על שיר השירים"
+      },
+      {
+        "text": "Minchat Shai on Song of Songs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Minchat Shai on Song of Songs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.021Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Minchat%20Shai%20on%20Song%20of%20Songs"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    14,
+    14,
+    19
+  ],
+  "fetchedAt": "2025-10-30T14:41:55.423Z",
+  "source": "http://localhost:8000/api/shape/Nahum"
+}

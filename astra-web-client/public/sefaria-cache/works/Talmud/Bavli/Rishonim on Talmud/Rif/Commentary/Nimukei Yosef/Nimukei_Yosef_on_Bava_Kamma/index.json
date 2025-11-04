@@ -1,0 +1,55 @@
+{
+  "title": "Nimukei Yosef on Bava Kamma",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Nimukei Yosef"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "nimukei-yosef",
+          "bava-kamma"
+        ]
+      }
+    ],
+    "lengths": [
+      91,
+      1589
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "נימוקי יוסף על בבא קמא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Nimukei Yosef on Bava Kamma",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Nimukei Yosef on Bava Kamma"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:30.829Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Nimukei%20Yosef%20on%20Bava%20Kamma"
+}

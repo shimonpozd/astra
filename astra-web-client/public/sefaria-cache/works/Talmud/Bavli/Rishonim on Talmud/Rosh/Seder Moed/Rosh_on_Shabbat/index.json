@@ -1,0 +1,63 @@
+{
+  "title": "Rosh on Shabbat",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rosh",
+    "Seder Moed"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Siman"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Siman"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rosh",
+          "shabbat"
+        ]
+      }
+    ],
+    "lengths": [
+      314,
+      270,
+      419
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "פסקי הרא\"ש על שבת",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rosh on Shabbat",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rosh on Shabbat"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.109Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rosh%20on%20Shabbat"
+}

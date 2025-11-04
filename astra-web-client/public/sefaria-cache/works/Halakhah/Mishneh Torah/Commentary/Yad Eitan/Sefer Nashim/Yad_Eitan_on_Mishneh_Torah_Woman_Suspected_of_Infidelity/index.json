@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Woman Suspected of Infidelity",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "woman-suspected-of-infidelity"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      2,
+      2
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Woman Suspected of Infidelity",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Woman Suspected of Infidelity"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.071Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Woman%20Suspected%20of%20Infidelity"
+}

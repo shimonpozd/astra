@@ -1,0 +1,54 @@
+{
+  "title": "Rabbeinu Yonah on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rabbeinu-yonah",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      89,
+      712
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "text": "רבינו יונה על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rabbeinu Yonah on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rabbeinu Yonah on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:31.408Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Rabbeinu%20Yonah%20on%20Berakhot"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Hasagot HaRa'avad on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Hasagot HaRa'avad",
+    "Sefer Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "hilchot",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hasagot-haraavad",
+          "first-fruits-and-other-gifts-to-priests-outside-the-sanctuary"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      25,
+      26
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "השגות הראב\"ד על משנה תורה, הלכות ביכורים ושאר מתנות כהונה שבגבולין",
+        "lang": "he"
+      },
+      {
+        "text": "Hasagot HaRa'avad on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Hasagot HaRa'avad on Mishneh Torah, First Fruits and other Gifts to Priests Outside the Sanctuary"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:21.260Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Hasagot%20HaRa'avad%20on%20Mishneh%20Torah%2C%20First%20Fruits%20and%20other%20Gifts%20to%20Priests%20Outside%20the%20Sanctuary"
+}

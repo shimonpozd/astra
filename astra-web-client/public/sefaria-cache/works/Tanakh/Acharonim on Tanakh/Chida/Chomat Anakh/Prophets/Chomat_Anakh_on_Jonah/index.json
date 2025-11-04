@@ -1,0 +1,59 @@
+{
+  "title": "Chomat Anakh on Jonah",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "jonah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      13,
+      14
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על יונה",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on Jonah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on Jonah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:58.911Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20Jonah"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Yitzchak Yeranen on Mishneh Torah, Fasts",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yitzchak Yeranen",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "hilchot",
+          "fasts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yitzchak-yeranen",
+          "fasts"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      5,
+      6
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "primary": true,
+        "text": "יצחק ירנן על משנה תורה, הלכות תעניות"
+      },
+      {
+        "text": "Yitzchak Yeranen on Mishneh Torah, Fasts",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yitzchak Yeranen on Mishneh Torah, Fasts"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.740Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yitzchak%20Yeranen%20on%20Mishneh%20Torah%2C%20Fasts"
+}

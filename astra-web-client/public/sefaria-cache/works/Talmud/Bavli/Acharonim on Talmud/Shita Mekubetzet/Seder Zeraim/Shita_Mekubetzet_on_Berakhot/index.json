@@ -1,0 +1,131 @@
+{
+  "title": "Shita Mekubetzet on Berakhot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Shita Mekubetzet",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Talmud",
+      "Integer",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Line",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shita-mekubetzet",
+          "berakhot"
+        ]
+      }
+    ],
+    "lengths": [
+      127,
+      692,
+      957
+    ],
+    "referenceableSections": [
+      true,
+      false,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "Shita Mekubetzes on Berachoth",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Berachot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Berakhoth",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Brachot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Tractate Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Berachos",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Masekhet Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Talmud Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzes on Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Berachoth",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Berachot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Berakhoth",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Brachot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Tractate Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Berachos",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Masekhet Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "Shita Mekubetzet on Talmud Berakhot",
+        "lang": "en"
+      },
+      {
+        "text": "שיטה מקובצת על ברכות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shita Mekubetzet on Berakhot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shita Mekubetzet on Berakhot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.082Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Shita%20Mekubetzet%20on%20Berakhot"
+}

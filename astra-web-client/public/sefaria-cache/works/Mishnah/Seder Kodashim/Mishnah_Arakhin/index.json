@@ -1,0 +1,74 @@
+{
+  "title": "Mishnah Arakhin",
+  "categories": [
+    "Mishnah",
+    "Seder Kodashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "arakhin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "arakhin"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "arakhin"
+        ]
+      }
+    ],
+    "lengths": [
+      9,
+      50
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishna Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "M Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "M. Arakhin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Arakh."
+      },
+      {
+        "text": "משנה ערכין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Arakhin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Arakhin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.371Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Arakhin"
+}

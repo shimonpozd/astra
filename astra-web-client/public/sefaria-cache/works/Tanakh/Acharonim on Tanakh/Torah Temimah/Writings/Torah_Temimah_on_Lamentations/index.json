@@ -1,0 +1,45 @@
+{
+  "title": "Torah Temimah on Lamentations",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Torah Temimah",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "lengths": [
+      5,
+      132,
+      373
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "titles": [
+      {
+        "lang": "he",
+        "text": "תורה תמימה על איכה",
+        "primary": true
+      },
+      {
+        "text": "Torah Temimah on Lamentations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Torah Temimah on Lamentations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.712Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Torah%20Temimah%20on%20Lamentations"
+}

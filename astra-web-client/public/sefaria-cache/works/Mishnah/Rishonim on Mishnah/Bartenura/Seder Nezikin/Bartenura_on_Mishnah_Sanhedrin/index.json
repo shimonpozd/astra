@@ -1,0 +1,125 @@
+{
+  "title": "Bartenura on Mishnah Sanhedrin",
+  "categories": [
+    "Mishnah",
+    "Rishonim on Mishnah",
+    "Bartenura",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Mishnah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "bartenura",
+          "mishnah",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      11,
+      71,
+      403
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishna Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on M Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Ovadia of Bartenura on Mishnah Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishna Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on M Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah of Bertinoro on Mishnah Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on Mishna Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Bartenura on M Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishna Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M. Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on M Sanhedrin"
+      },
+      {
+        "lang": "en",
+        "text": "Obadiah ben Abraham of Bertinoro on Mishnah Sanhedrin"
+      },
+      {
+        "lang": "he",
+        "text": "ברטנורא על משנה סנהדרין",
+        "primary": true
+      },
+      {
+        "lang": "he",
+        "text": "עובדיה מברטנורא על משנה סנהדרין"
+      },
+      {
+        "lang": "he",
+        "text": "ר' עובדיה מברטנורא על משנה סנהדרין"
+      },
+      {
+        "text": "Bartenura on Mishnah Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Bartenura on Mishnah Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:13.731Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Bartenura%20on%20Mishnah%20Sanhedrin"
+}

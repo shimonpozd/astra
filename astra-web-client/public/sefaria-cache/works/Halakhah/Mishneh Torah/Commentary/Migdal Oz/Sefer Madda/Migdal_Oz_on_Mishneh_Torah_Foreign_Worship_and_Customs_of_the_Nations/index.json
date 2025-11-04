@@ -1,0 +1,60 @@
+{
+  "title": "Migdal Oz on Mishneh Torah, Foreign Worship and Customs of the Nations",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Migdal Oz",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "hilchot",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      },
+      {
+        "term_slugs": [
+          "migdal-oz",
+          "foreign-worship-and-customs-of-the-nations"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      137,
+      452
+    ],
+    "titles": [
+      {
+        "text": "מגדל עוז על משנה תורה, הלכות עבודה זרה וחוקות הגויים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Migdal Oz on Mishneh Torah, Foreign Worship and Customs of the Nations",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Migdal Oz on Mishneh Torah, Foreign Worship and Customs of the Nations"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:26.581Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Migdal%20Oz%20on%20Mishneh%20Torah%2C%20Foreign%20Worship%20and%20Customs%20of%20the%20Nations"
+}

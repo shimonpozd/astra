@@ -1,0 +1,60 @@
+{
+  "title": "Mishneh LaMelech on Mishneh Torah, Murderer and the Preservation of Life",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Mishneh LaMelech",
+    "Sefer Nezikim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "hilchot",
+          "murderer-and-the-preservation-of-life"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-lamelech",
+          "murderer-and-the-preservation-of-life"
+        ]
+      }
+    ],
+    "lengths": [
+      13,
+      20,
+      20
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "משנה למלך על משנה תורה, הלכות רוצח ושמירת נפש",
+        "primary": true
+      },
+      {
+        "text": "Mishneh LaMelech on Mishneh Torah, Murderer and the Preservation of Life",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh LaMelech on Mishneh Torah, Murderer and the Preservation of Life"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:27.628Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20LaMelech%20on%20Mishneh%20Torah%2C%20Murderer%20and%20the%20Preservation%20of%20Life"
+}

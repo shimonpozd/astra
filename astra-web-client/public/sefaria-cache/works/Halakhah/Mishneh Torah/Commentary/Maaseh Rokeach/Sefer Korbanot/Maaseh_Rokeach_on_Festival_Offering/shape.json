@@ -1,0 +1,48 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      4,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      2,
+      2
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:24.823Z",
+  "source": "http://localhost:8000/api/shape/Maaseh%20Rokeach%20on%20Festival%20Offering"
+}

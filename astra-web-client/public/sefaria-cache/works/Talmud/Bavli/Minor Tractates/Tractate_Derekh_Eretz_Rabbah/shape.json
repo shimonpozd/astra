@@ -1,0 +1,22 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    13,
+    31,
+    5,
+    3,
+    3,
+    5,
+    7,
+    6,
+    4,
+    5,
+    17
+  ],
+  "fetchedAt": "2025-10-30T14:42:05.310Z",
+  "source": "http://localhost:8000/api/shape/Tractate%20Derekh%20Eretz%20Rabbah"
+}

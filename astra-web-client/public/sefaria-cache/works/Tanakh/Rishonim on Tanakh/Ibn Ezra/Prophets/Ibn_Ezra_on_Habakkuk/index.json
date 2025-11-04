@@ -1,0 +1,73 @@
+{
+  "title": "Ibn Ezra on Habakkuk",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Ibn Ezra",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ibn-ezra",
+          "habakkuk"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      1,
+      4
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Hab."
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Hab"
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Havakkuk"
+      },
+      {
+        "lang": "en",
+        "text": "Ibn Ezra on Habakuk"
+      },
+      {
+        "lang": "he",
+        "text": "אבן עזרא על חבקוק",
+        "primary": true
+      },
+      {
+        "text": "Ibn Ezra on Habakkuk",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ibn Ezra on Habakkuk"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.605Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ibn%20Ezra%20on%20Habakkuk"
+}

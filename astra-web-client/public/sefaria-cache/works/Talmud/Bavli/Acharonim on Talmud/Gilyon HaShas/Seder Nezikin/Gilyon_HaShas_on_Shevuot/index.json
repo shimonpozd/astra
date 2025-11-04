@@ -1,0 +1,59 @@
+{
+  "title": "Gilyon HaShas on Shevuot",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Gilyon HaShas",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "gilyon-hashas",
+          "shevuot"
+        ]
+      }
+    ],
+    "lengths": [
+      98,
+      64
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "גליון הש\"ס על שבועות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Gilyon HaShas on Shevuot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Gilyon HaShas on Shevuot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:11.564Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Gilyon%20HaShas%20on%20Shevuot"
+}

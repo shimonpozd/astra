@@ -1,0 +1,60 @@
+{
+  "title": "Yad Eitan on Mishneh Torah, Appraisals and Devoted Property",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Yad Eitan",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "hilchot",
+          "appraisals-and-devoted-property"
+        ]
+      },
+      {
+        "term_slugs": [
+          "yad-eitan",
+          "appraisals-and-devoted-property"
+        ]
+      }
+    ],
+    "lengths": [
+      8,
+      17,
+      17
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יד איתן על משנה תורה, הלכות ערכים וחרמין",
+        "lang": "he"
+      },
+      {
+        "text": "Yad Eitan on Mishneh Torah, Appraisals and Devoted Property",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yad Eitan on Mishneh Torah, Appraisals and Devoted Property"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:32.123Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Yad%20Eitan%20on%20Mishneh%20Torah%2C%20Appraisals%20and%20Devoted%20Property"
+}

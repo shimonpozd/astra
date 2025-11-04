@@ -1,0 +1,45 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      8,
+      4,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      3,
+      2,
+      2,
+      3,
+      3,
+      15,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      5
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.688Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Makkot"
+}

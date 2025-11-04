@@ -1,0 +1,30 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:32.553Z",
+  "source": "http://localhost:8000/api/shape/Yekhahen%20Pe'er%20on%20Mishneh%20Torah%2C%20Admission%20into%20the%20Sanctuary"
+}

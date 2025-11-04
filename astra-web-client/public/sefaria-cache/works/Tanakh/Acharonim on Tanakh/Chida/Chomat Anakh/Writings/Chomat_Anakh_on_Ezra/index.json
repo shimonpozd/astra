@@ -1,0 +1,59 @@
+{
+  "title": "Chomat Anakh on Ezra",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Chida",
+    "Chomat Anakh",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chomat-anakh",
+          "ezra"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      16,
+      20
+    ],
+    "toc_zoom": 2,
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "חומת אנך על עזרא",
+        "lang": "he"
+      },
+      {
+        "text": "Chomat Anakh on Ezra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chomat Anakh on Ezra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.053Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chomat%20Anakh%20on%20Ezra"
+}

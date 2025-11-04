@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Festival Offering",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Korbanot"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "festival-offering"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "festival-offering"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      32
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Festival Offering"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Festival Offering"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Festival Offering"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות חגיגה"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Chagigah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Chagigah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' חגיגה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' חגיגה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות חגיגה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' חגיגה"
+      },
+      {
+        "text": "רמב״ם, הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' חגיגה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות חגיגה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Festival Offering",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Festival Offering"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.215Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Festival%20Offering"
+}

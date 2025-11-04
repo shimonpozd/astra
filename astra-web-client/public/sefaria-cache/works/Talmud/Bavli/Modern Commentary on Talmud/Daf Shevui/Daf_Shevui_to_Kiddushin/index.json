@@ -1,0 +1,46 @@
+{
+  "title": "Daf Shevui to Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Modern Commentary on Talmud",
+    "Daf Shevui"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "lengths": [
+      164,
+      0
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "titles": [
+      {
+        "text": "דף שבועי על קידושין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Daf Shevui to Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Daf Shevui to Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:13.763Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Daf%20Shevui%20to%20Kiddushin"
+}

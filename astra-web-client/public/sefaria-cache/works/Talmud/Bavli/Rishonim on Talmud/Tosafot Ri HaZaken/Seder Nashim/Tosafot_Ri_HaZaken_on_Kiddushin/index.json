@@ -1,0 +1,51 @@
+{
+  "title": "Tosafot Ri HaZaken on Kiddushin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Tosafot Ri HaZaken",
+    "Seder Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "lengths": [
+      164,
+      924
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "lang": "he",
+        "text": "תוספות ר\"י הזקן על קידושין"
+      },
+      {
+        "text": "Tosafot Ri HaZaken on Kiddushin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosafot Ri HaZaken on Kiddushin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:09.544Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosafot%20Ri%20HaZaken%20on%20Kiddushin"
+}

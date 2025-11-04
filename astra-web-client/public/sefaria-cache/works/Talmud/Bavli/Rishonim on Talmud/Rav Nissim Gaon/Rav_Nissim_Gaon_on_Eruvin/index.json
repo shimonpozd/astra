@@ -1,0 +1,58 @@
+{
+  "title": "Rav Nissim Gaon on Eruvin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rav Nissim Gaon"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rav-nissim-gaon",
+          "eruvin"
+        ]
+      }
+    ],
+    "lengths": [
+      209,
+      112
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "he",
+        "text": "רב נסים גאון על מסכת עירובין",
+        "primary": true
+      },
+      {
+        "text": "Rav Nissim Gaon on Eruvin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rav Nissim Gaon on Eruvin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:08.962Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rav%20Nissim%20Gaon%20on%20Eruvin"
+}

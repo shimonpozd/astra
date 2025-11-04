@@ -1,0 +1,60 @@
+{
+  "title": "Ohr Sameach on Mishneh Torah, Nazariteship",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Commentary",
+    "Ohr Sameach",
+    "Sefer Haflaah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Integer",
+      "Halakhah",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "hilchot",
+          "nazariteship"
+        ]
+      },
+      {
+        "term_slugs": [
+          "ohr-sameach",
+          "nazariteship"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      30,
+      31
+    ],
+    "titles": [
+      {
+        "text": "אור שמח על משנה תורה, הלכות נזירות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Ohr Sameach on Mishneh Torah, Nazariteship",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Ohr Sameach on Mishneh Torah, Nazariteship"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:28.278Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Ohr%20Sameach%20on%20Mishneh%20Torah%2C%20Nazariteship"
+}

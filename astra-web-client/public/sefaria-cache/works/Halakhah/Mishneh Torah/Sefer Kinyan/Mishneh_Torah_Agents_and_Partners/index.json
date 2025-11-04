@@ -1,0 +1,218 @@
+{
+  "title": "Mishneh Torah, Agents and Partners",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "agents-and-partners"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "agents-and-partners"
+        ]
+      }
+    ],
+    "lengths": [
+      10,
+      79
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Sheluchin veShuttafin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Agents and Partners"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Sheluchin veShuttafin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Sheluchin veShuttafin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Agents and Partners"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Sheluchin veShuttafin"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Agents and Partners"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Sheluchin veShuttafin"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Sheluchin veShuttafin"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שלוחין ושותפין"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שלוחין ושותפין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שלוחין ושותפין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שלוחין ושותפין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שלוחין ושותפין"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות שלוחין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות שלוחין"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' שלוחין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' שלוחין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות שלוחין"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' שלוחין"
+      },
+      {
+        "text": "רמב״ם, הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שלוחין ושותפין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' שלוחין",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות שלוחין ושותפין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Agents and Partners",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Agents and Partners"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.435Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Agents%20and%20Partners"
+}

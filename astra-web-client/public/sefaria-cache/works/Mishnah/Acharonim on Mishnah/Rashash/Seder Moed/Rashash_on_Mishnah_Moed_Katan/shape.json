@@ -1,0 +1,28 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:50.498Z",
+  "source": "https://www.sefaria.org/api/shape/Rashash%20on%20Mishnah%20Moed%20Katan"
+}

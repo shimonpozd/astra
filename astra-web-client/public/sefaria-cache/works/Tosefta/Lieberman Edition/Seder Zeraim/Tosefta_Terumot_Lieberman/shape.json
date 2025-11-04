@@ -1,0 +1,21 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    15,
+    14,
+    19,
+    15,
+    15,
+    19,
+    20,
+    22,
+    15,
+    18
+  ],
+  "fetchedAt": "2025-10-30T14:42:35.659Z",
+  "source": "http://localhost:8000/api/shape/Tosefta%20Terumot%20(Lieberman)"
+}

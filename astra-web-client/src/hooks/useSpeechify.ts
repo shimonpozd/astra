@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { authorizedFetch } from '../lib/authorizedFetch';
 
 type SpeechifyParams = {
   hebrewText?: string;
@@ -14,7 +15,7 @@ export function useSpeechify() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/actions/speechify', {
+      const res = await authorizedFetch('/api/actions/speechify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -41,7 +42,6 @@ export function useSpeechify() {
 
   return { speechify, isLoading, error } as const;
 }
-
 
 
 

@@ -1,0 +1,57 @@
+{
+  "title": "Yachin on Mishnah Maasrot",
+  "categories": [
+    "Mishnah",
+    "Acharonim on Mishnah",
+    "Yachin",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Seif",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Seif",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "yachin",
+          "mishnah",
+          "maasrot"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      312,
+      312
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>"
+    ],
+    "titles": [
+      {
+        "primary": true,
+        "text": "יכין מעשרות",
+        "lang": "he"
+      },
+      {
+        "text": "Yachin on Mishnah Maasrot",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Yachin on Mishnah Maasrot"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:21:22.661Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Yachin%20on%20Mishnah%20Maasrot"
+}

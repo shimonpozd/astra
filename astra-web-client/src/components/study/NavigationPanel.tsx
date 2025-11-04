@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Home, MapPin, AlertCircle } from 'lucide-react';
+import { debugLog } from '../../utils/debugLogger';
 
 // Import static navigation data
 import { TALMUD_BAVLI_TRACTATES, TALMUD_ORDERS } from '../../data/talmud-bavli';
@@ -266,7 +267,7 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
       setSelectedSection(Object.keys(SHULCHAN_ARUKH_SECTIONS)[0]);
     }
     
-    console.log('🔄 NavigationPanel corpus selected:', corpus);
+    debugLog('🔄 NavigationPanel corpus selected:', corpus);
   };
 
   // Handle section change with auto-substitution
@@ -289,7 +290,7 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
       }
     }
     
-    console.log('🔄 NavigationPanel section selected:', section);
+    debugLog('🔄 NavigationPanel section selected:', section);
   };
 
   // Handle book change with auto-substitution
@@ -298,7 +299,7 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
     setSelectedPage('');
     setSelectedSegment('');
     
-    console.log('🔄 NavigationPanel book selected:', book);
+    debugLog('🔄 NavigationPanel book selected:', book);
   };
 
   // Автоподстановка страницы после обновления selectedBook
@@ -316,7 +317,7 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
     setSelectedPage(page);
     setSelectedSegment('');
     
-    console.log('🔄 NavigationPanel page selected:', page);
+    debugLog('🔄 NavigationPanel page selected:', page);
   };
 
   // Автоподстановка сегмента после обновления selectedPage
@@ -332,13 +333,13 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
   // Handle segment change (without automatic navigation)
   const handleSegmentChange = (segment: string) => {
     setSelectedSegment(segment);
-    console.log('🔄 NavigationPanel segment selected:', segment);
+    debugLog('🔄 NavigationPanel segment selected:', segment);
     // Не вызываем onNavigate автоматически - пользователь должен нажать "Перейти"
   };
 
   // Manual navigation function with unified ref format
   const handleNavigate = () => {
-    console.log('🔄 NavigationPanel handleNavigate called with:', { selectedBook, selectedPage, selectedSegment, selectedCorpus });
+    debugLog('🔄 NavigationPanel handleNavigate called with:', { selectedBook, selectedPage, selectedSegment, selectedCorpus });
     
     if (selectedBook && selectedPage) {
       const isTalmudCorpus =
@@ -350,8 +351,8 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
         ? `${selectedBook} ${selectedPage}${isTalmudCorpus ? '.' : ':'}${selectedSegment}`
         : `${selectedBook} ${selectedPage}`;
       const newRef = normalizeRefForAPI(raw);
-      console.log('🔄 NavigationPanel navigating to:', newRef);
-      console.log('🔄 NavigationPanel onNavigate function exists:', !!onNavigate);
+      debugLog('🔄 NavigationPanel navigating to:', newRef);
+      debugLog('🔄 NavigationPanel onNavigate function exists:', !!onNavigate);
       onNavigate(newRef);
       setIsNavigating(false); // Close navigation panel after successful navigation
     } else {
@@ -627,7 +628,7 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
             size="sm"
             variant="default"
             onClick={() => {
-              console.log('🔄 NavigationPanel: Перейти button clicked!');
+              debugLog('🔄 NavigationPanel: Перейти button clicked!');
               handleNavigate();
             }}
             className="h-6 px-3 text-xs bg-primary hover:bg-primary/90 transition-colors"
@@ -679,6 +680,5 @@ const NavigationPanel: React.FC<NavigationPanelProps> = ({
 };
 
 export default NavigationPanel;
-
 
 

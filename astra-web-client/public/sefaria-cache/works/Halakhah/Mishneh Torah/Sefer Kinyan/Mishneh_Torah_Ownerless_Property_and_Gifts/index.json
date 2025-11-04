@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Ownerless Property and Gifts",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Kinyan"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "ownerless-property-and-gifts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "ownerless-property-and-gifts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "ownerless-property-and-gifts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "ownerless-property-and-gifts"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "ownerless-property-and-gifts"
+        ]
+      }
+    ],
+    "lengths": [
+      12,
+      219
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Zechiyah uMattanah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Ownerless Property and Gifts"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Ownerless Property and Gifts"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Zechiyah uMattanah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Zechiyah uMattanah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Zechiyah uMattanah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Ownerless Property and Gifts"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות זכייה ומתנה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Zechiyah uMattanah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Zechiyah uMattanah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' זכייה ומתנה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' זכייה ומתנה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות זכייה ומתנה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' זכייה ומתנה"
+      },
+      {
+        "text": "רמב״ם, הלכות זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' זכייה ומתנה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות זכייה ומתנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Ownerless Property and Gifts",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Ownerless Property and Gifts"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.395Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Ownerless%20Property%20and%20Gifts"
+}

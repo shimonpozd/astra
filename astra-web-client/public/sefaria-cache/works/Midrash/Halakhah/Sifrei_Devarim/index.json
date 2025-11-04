@@ -1,0 +1,826 @@
+{
+  "title": "Sifrei Devarim",
+  "categories": [
+    "Midrash",
+    "Halakhah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Siman",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Paragraph",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "sifrei-devarim"
+        ]
+      }
+    ],
+    "lengths": [
+      357,
+      2391
+    ],
+    "referenceableSections": [
+      true,
+      false
+    ],
+    "titles": [
+      {
+        "text": "Sifré Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Sifrei Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Sifrei, Deuteronomy",
+        "lang": "en"
+      },
+      {
+        "text": "Siphrê, Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Sifri Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "Sifrei Deut.",
+        "lang": "en"
+      },
+      {
+        "text": "ספרי דברים",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Sifrei Devarim",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Sifrei Devarim"
+  },
+  "titles": [],
+  "alt_structs": {
+    "Chapters": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 1-25",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 1",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק א",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 26-30",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 3",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק ג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 31-36",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 6",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק ו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 37-37",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 7",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק ז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 38-58",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 11",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 59-81",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 12",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 82-96",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 13",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 97-110",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 14",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 111-126",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 15",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק טו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 127-146",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 16",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק טז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 147-162",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 17",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יז",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 163-178",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 18",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יח",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 179-189",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 19",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק יט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 190-204",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 20",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כ",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 205-221",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 21",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 222-245",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 22",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 246-267",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 23",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 268-285",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 24",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כד",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 286-296",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 25",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 297-303",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 26",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 304-305",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 29",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק כט",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 306-341",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 32",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק לב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 342-356",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 33",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק לג",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 357-357",
+          "includeSections": true,
+          "titles": [
+            {
+              "primary": true,
+              "text": "Chapter 34",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "פרק לד",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    },
+    "Parasha": {
+      "nodes": [
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 1-25",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "devarim"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "devarim"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Devarim",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "דברים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 26-36",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "vaetchanan"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "vaetchanan"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Vaetchanan",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ואתחנן",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 37-52",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "eikev"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "eikev"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Eikev",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "עקב",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 53-143",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "reeh"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "reeh"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Re'eh",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "ראה",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 144-210",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "shoftim"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "shoftim"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Shoftim",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "שפטים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 211-296",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "ki-teitzei"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "ki-teitzei"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Ki Teitzei",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כי תצא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 297-303",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "ki-tavo"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "ki-tavo"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Ki Tavo",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "כי תבוא",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 304-305",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "nitzavim"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "nitzavim"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Nitzavim",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "נצבים",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 306-341",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "haazinu"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "haazinu"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "Ha'Azinu",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "האזינו",
+              "lang": "he"
+            }
+          ]
+        },
+        {
+          "nodeType": "ArrayMapNode",
+          "depth": 0,
+          "wholeRef": "Sifrei Devarim, 342-357",
+          "includeSections": true,
+          "match_templates": [
+            {
+              "term_slugs": [
+                "vzot-haberachah"
+              ]
+            },
+            {
+              "term_slugs": [
+                "parasha",
+                "vzot-haberachah"
+              ]
+            }
+          ],
+          "titles": [
+            {
+              "primary": true,
+              "text": "V'Zot HaBerachah",
+              "lang": "en"
+            },
+            {
+              "primary": true,
+              "text": "וזאת הברכה",
+              "lang": "he"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fetchedAt": "2025-10-30T14:42:16.294Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Sifrei%20Devarim"
+}

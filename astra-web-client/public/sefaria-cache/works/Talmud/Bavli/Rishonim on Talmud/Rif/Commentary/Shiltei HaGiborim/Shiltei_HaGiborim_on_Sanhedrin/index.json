@@ -1,0 +1,51 @@
+{
+  "title": "Shiltei HaGiborim on Sanhedrin",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Rishonim on Talmud",
+    "Rif",
+    "Commentary",
+    "Shiltei HaGiborim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "shiltei-hagiborim",
+          "sanhedrin"
+        ]
+      }
+    ],
+    "lengths": [
+      39,
+      28
+    ],
+    "titles": [
+      {
+        "text": "שלטי הגיבורים על סנהדרין",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Shiltei HaGiborim on Sanhedrin",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Shiltei HaGiborim on Sanhedrin"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:32.367Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Shiltei%20HaGiborim%20on%20Sanhedrin"
+}

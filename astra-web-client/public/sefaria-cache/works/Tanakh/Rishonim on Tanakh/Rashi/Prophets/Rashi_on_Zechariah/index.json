@@ -1,0 +1,101 @@
+{
+  "title": "Rashi on Zechariah",
+  "categories": [
+    "Tanakh",
+    "Rishonim on Tanakh",
+    "Rashi",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "rashi",
+          "zechariah"
+        ]
+      }
+    ],
+    "lengths": [
+      14,
+      166,
+      366
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rashi on Zech."
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Zech"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Zachariah"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Zekharia"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Zekharya"
+      },
+      {
+        "lang": "en",
+        "text": "Rashi on Zecharia"
+      },
+      {
+        "lang": "he",
+        "text": "רש\"י על זכרי'"
+      },
+      {
+        "text": "רש״י על זכריה",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על זכריה",
+        "lang": "he"
+      },
+      {
+        "text": "רש״י על זכרי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש”י על זכרי'",
+        "lang": "he"
+      },
+      {
+        "text": "רש\"י על זכריה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Rashi on Zechariah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Rashi on Zechariah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:56.318Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Rashi%20on%20Zechariah"
+}

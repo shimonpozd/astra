@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Circumcision",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Ahavah"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "circumcision"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "circumcision"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      37
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Milah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Milah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Circumcision"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Circumcision"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Milah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Circumcision"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Milah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מילה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Milah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Milah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מילה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מילה"
+      },
+      {
+        "text": "רמב״ם, הלכות מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מילה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מילה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מילה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Circumcision",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Circumcision"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.894Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Circumcision"
+}

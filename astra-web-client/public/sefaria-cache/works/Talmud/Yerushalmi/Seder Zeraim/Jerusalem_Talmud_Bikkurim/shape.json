@@ -1,0 +1,38 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      7,
+      3,
+      7,
+      5,
+      8,
+      6,
+      5,
+      3,
+      3
+    ],
+    [
+      15,
+      11,
+      10,
+      5,
+      2,
+      9
+    ],
+    [
+      4,
+      4,
+      20,
+      10,
+      2,
+      4
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:42:14.394Z",
+  "source": "http://localhost:8000/api/shape/Jerusalem%20Talmud%20Bikkurim"
+}

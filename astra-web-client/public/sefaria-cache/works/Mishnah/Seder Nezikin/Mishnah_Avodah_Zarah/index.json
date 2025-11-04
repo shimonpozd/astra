@@ -1,0 +1,78 @@
+{
+  "title": "Mishnah Avodah Zarah",
+  "categories": [
+    "Mishnah",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Mishnah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Mishnah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishnah",
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "avodah-zarah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "tractate",
+          "avodah-zarah"
+        ]
+      }
+    ],
+    "lengths": [
+      5,
+      50
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "M. Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishna Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "M Avodah Zarah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Ab. Zar."
+      },
+      {
+        "lang": "en",
+        "text": "Mishnah Abodah Zarah"
+      },
+      {
+        "text": "משנה עבודה זרה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishnah Avodah Zarah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishnah Avodah Zarah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:01.313Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishnah%20Avodah%20Zarah"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Tosefta Orlah",
+  "categories": [
+    "Tosefta",
+    "Vilna Edition",
+    "Seder Zeraim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Tosefta"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "tosefta",
+          "orlah"
+        ]
+      }
+    ],
+    "lengths": [
+      1,
+      8
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "T. Orlah"
+      },
+      {
+        "lang": "en",
+        "text": "Tos. Orlah"
+      },
+      {
+        "lang": "en",
+        "text": "Tosef. Orl."
+      },
+      {
+        "text": "תוספתא ערלה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Tosefta Orlah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Tosefta Orlah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:36.472Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Tosefta%20Orlah"
+}

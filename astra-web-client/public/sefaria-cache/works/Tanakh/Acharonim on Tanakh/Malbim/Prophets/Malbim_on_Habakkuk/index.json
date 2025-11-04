@@ -1,0 +1,93 @@
+{
+  "title": "Malbim on Habakkuk",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Malbim",
+    "Prophets"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "malbim",
+          "habakkuk"
+        ]
+      }
+    ],
+    "lengths": [
+      3,
+      54,
+      56
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Malbim on Hab."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Hab"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Havakkuk"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim on Habakuk"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Hab."
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Hab"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Havakkuk"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Habakuk"
+      },
+      {
+        "lang": "en",
+        "text": "Malbim Literary Commantary on Habakkuk"
+      },
+      {
+        "lang": "he",
+        "text": "מלבי\"ם על חבקוק",
+        "primary": true
+      },
+      {
+        "text": "Malbim on Habakkuk",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Malbim on Habakkuk"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:41:59.584Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Malbim%20on%20Habakkuk"
+}

@@ -1,0 +1,166 @@
+{
+  "title": "Mishneh Torah, Human Dispositions",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Madda"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "human-dispositions"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "human-dispositions"
+        ]
+      }
+    ],
+    "lengths": [
+      7,
+      71
+    ],
+    "titles": [
+      {
+        "text": "Rambam, De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Laws of Human Dispositions",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilchot De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Laws of Human Dispositions",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilchot De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Human Dispositions",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam, Hilkhot De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Mishneh Torah, Hilkhot De'ot",
+        "lang": "en"
+      },
+      {
+        "text": "Rambam Hilchot Deot",
+        "lang": "en"
+      },
+      {
+        "text": "רמב\"ם, הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם, הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב\"ם הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' דעות",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות דעות",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Human Dispositions",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Human Dispositions"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.818Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Human%20Dispositions"
+}

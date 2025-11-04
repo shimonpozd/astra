@@ -1,0 +1,48 @@
+{
+  "title": "Arukh LaNer on Rosh Hashanah",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Paragraph"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "arukh-laner",
+          "rosh-hashanah"
+        ]
+      }
+    ],
+    "lengths": [
+      69,
+      549
+    ],
+    "titles": [
+      {
+        "text": "ערוך לנר על ראש השנה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Arukh LaNer on Rosh Hashanah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Arukh LaNer on Rosh Hashanah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:22:48.102Z",
+  "source": "https://www.sefaria.org/api/v2/raw/index/Arukh%20LaNer%20on%20Rosh%20Hashanah"
+}

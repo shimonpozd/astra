@@ -1,0 +1,59 @@
+{
+  "title": "Chiddushei Rabbi Akiva Eiger on Bava Batra",
+  "categories": [
+    "Talmud",
+    "Bavli",
+    "Acharonim on Talmud",
+    "Chiddushei Rabbi Akiva Eiger",
+    "Seder Nezikin"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Talmud",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Daf",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "chiddushei-rabbi-akiva-eiger",
+          "bava-batra"
+        ]
+      }
+    ],
+    "lengths": [
+      352,
+      7
+    ],
+    "referenceableSections": [
+      true,
+      true
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "text": "חידושי רבי עקיבא איגר על מסכת בבא בתרא",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Chiddushei Rabbi Akiva Eiger on Bava Batra",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Chiddushei Rabbi Akiva Eiger on Bava Batra"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:10.327Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Chiddushei%20Rabbi%20Akiva%20Eiger%20on%20Bava%20Batra"
+}

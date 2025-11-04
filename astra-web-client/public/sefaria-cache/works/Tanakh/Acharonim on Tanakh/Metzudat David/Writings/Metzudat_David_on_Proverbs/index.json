@@ -1,0 +1,77 @@
+{
+  "title": "Metzudat David on Proverbs",
+  "categories": [
+    "Tanakh",
+    "Acharonim on Tanakh",
+    "Metzudat David",
+    "Writings"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 3,
+    "addressTypes": [
+      "Perek",
+      "Pasuk",
+      "Integer"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Verse",
+      "Comment"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "metzudat-david",
+          "proverbs"
+        ]
+      }
+    ],
+    "lengths": [
+      31,
+      905,
+      1317
+    ],
+    "isSegmentLevelDiburHamatchil": true,
+    "diburHamatchilRegexes": [
+      "^<b>(.+?)</b>",
+      "^(.+?)[\\-–]"
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Metzudat David on Prov"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Pro"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Prov."
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Mishlei"
+      },
+      {
+        "lang": "en",
+        "text": "Metzudat David on Pro."
+      },
+      {
+        "lang": "he",
+        "text": "מצודת דוד על משלי",
+        "primary": true
+      },
+      {
+        "text": "Metzudat David on Proverbs",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Metzudat David on Proverbs"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:00.098Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Metzudat%20David%20on%20Proverbs"
+}

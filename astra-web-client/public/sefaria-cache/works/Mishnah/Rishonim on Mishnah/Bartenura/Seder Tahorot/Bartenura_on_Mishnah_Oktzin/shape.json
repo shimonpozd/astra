@@ -1,0 +1,45 @@
+{
+  "type": "shape",
+  "levels": [
+    "Chapter",
+    "Verse"
+  ],
+  "chapters": [
+    [
+      9,
+      12,
+      9,
+      5,
+      8,
+      10
+    ],
+    [
+      9,
+      10,
+      3,
+      3,
+      11,
+      8,
+      3,
+      7,
+      4,
+      7
+    ],
+    [
+      2,
+      10,
+      7,
+      8,
+      7,
+      8,
+      5,
+      6,
+      6,
+      5,
+      3,
+      2
+    ]
+  ],
+  "fetchedAt": "2025-10-30T14:21:16.485Z",
+  "source": "https://www.sefaria.org/api/shape/Bartenura%20on%20Mishnah%20Oktzin"
+}

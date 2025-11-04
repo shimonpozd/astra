@@ -1,0 +1,174 @@
+{
+  "title": "Mishneh Torah, Scroll of Esther and Hanukkah",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Zemanim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "scroll-of-esther-and-hanukkah"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      60
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Scroll of Esther and Hanukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Scroll of Esther and Hanukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Megillah vChanukah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Scroll of Esther and Hanukkah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Megillah vChanukah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Megillah vChanukah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Megillah vChanukah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Megillah vChanukah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Megillah vChanukah"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות מגילה וחנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' מגילה וחנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' מגילה וחנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות מגילה וחנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' מגילה וחנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות חנוכה ומגילה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות חנוכה"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הלכות מגילה"
+      },
+      {
+        "text": "רמב״ם, הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' מגילה וחנוכה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות מגילה וחנוכה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Scroll of Esther and Hanukkah",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Scroll of Esther and Hanukkah"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:16.971Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Scroll%20of%20Esther%20and%20Hanukkah"
+}

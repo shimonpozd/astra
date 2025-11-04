@@ -1,9 +1,12 @@
 import json
 import logging
-from typing import Dict, Any, List, Optional
+import uuid
 from datetime import datetime
+from typing import Any, Dict, List, Optional
 
 import redis.asyncio as redis
+
+from brain_service.services.user_service import UserService
 
 logger = logging.getLogger(__name__)
 
@@ -15,193 +18,284 @@ class SessionService:
     for both chat sessions and study sessions.
     """
     
-    def __init__(self, redis_client: redis.Redis):
+    def __init__(self, redis_client: redis.Redis, user_service: UserService):
         self.redis_client = redis_client
+        self.user_service = user_service
+
+    @staticmethod
+    def _normalize_user_id(user_id: str) -> tuple[str, uuid.UUID]:
+        try:
+            user_uuid = uuid.UUID(str(user_id))
+        except ValueError as exc:
+            raise ValueError(f"Invalid user_id: {user_id}") from exc
+        return str(user_uuid), user_uuid
+
+    @staticmethod
+    def _chat_key(user_id: str, session_id: str) -> str:
+        return f"session:{user_id}:{session_id}"
     
-    async def get_all_sessions(self) -> List[Dict[str, Any]]:
+    async def get_all_sessions(self, user_id: str) -> List[Dict[str, Any]]:
         """
-        Get all chat and study sessions.
-        
-        Returns:
-            List of session dictionaries with metadata
+        Get chat/study/daily sessions visible to a user.
         """
         if not self.redis_client:
             logger.warning("Redis client not available")
             return []
-        
-        logger.info("Fetching all chats and study sessions...")
-        all_sessions = []
-        
-        # Get chat sessions
+
+        user_id_str, user_uuid = self._normalize_user_id(user_id)
+        sessions: List[Dict[str, Any]] = []
+        seen: set[str] = set()
+
+        # Chat sessions from relational metadata
+        threads = await self.user_service.list_threads_for_user(user_uuid)
+        for thread in threads:
+            entry = {
+                "session_id": thread.session_id,
+                "name": thread.title or "Chat",
+                "last_modified": thread.last_modified.isoformat() if thread.last_modified else None,
+                "type": "chat",
+            }
+            redis_key = self._chat_key(user_id_str, thread.session_id)
+            try:
+                session_blob = await self.redis_client.get(redis_key)
+                if not session_blob:
+                    # Fallback: previous format without user prefix.
+                    session_blob = await self.redis_client.get(f"session:{thread.session_id}")
+                if session_blob:
+                    session = json.loads(session_blob)
+                    entry["name"] = session.get("name") or entry["name"]
+                    entry["last_modified"] = session.get("last_modified", entry["last_modified"])
+            except json.JSONDecodeError:
+                logger.warning("Failed to decode chat session JSON", extra={"session_id": thread.session_id})
+
+            sessions.append(entry)
+            seen.add(thread.session_id)
+
+        # Include any Redis chat sessions that might exist without DB metadata
         try:
-            async for key in self.redis_client.scan_iter("session:*"):
-                session_data = await self.redis_client.get(key)
-                if not session_data:
+            async for key in self.redis_client.scan_iter(f"session:{user_id_str}:*"):
+                session_blob = await self.redis_client.get(key)
+                if not session_blob:
                     continue
-                    
                 try:
-                    session = json.loads(session_data)
-                    if isinstance(session, dict) and "persistent_session_id" in session:
-                        all_sessions.append({
-                            "session_id": session.get("persistent_session_id"),
-                            "name": session.get("name", "Chat"),
-                            "last_modified": session.get("last_modified"),
-                            "type": "chat"
-                        })
+                    session = json.loads(session_blob)
                 except json.JSONDecodeError:
-                    logger.warning(f"Failed to decode JSON for chat key {key}, skipping.")
-                    
-        except Exception as e:
-            logger.error("Error occurred while scanning for chat sessions", extra={
-                "error": str(e)
-            })
-        
-        # Get study sessions
+                    logger.warning("Failed to decode session JSON", extra={"key": key})
+                    continue
+                session_id = session.get("persistent_session_id")
+                if not session_id or session_id in seen:
+                    continue
+                sessions.append({
+                    "session_id": session_id,
+                    "name": session.get("name", "Chat"),
+                    "last_modified": session.get("last_modified"),
+                    "type": "chat",
+                })
+                seen.add(session_id)
+        except Exception as exc:
+            logger.error("Error occurred while scanning chat sessions for user", extra={"error": str(exc)})
+
+        # Legacy fallback: grab old-format chat sessions if user has no metadata
+        if not sessions:
+            try:
+                async for key in self.redis_client.scan_iter("session:*"):
+                    if key.startswith(f"session:{user_id_str}:"):
+                        continue
+                    session_blob = await self.redis_client.get(key)
+                    if not session_blob:
+                        continue
+                    try:
+                        session = json.loads(session_blob)
+                    except json.JSONDecodeError:
+                        continue
+                    stored_user = session.get("user_id")
+                    if stored_user != user_id_str:
+                        continue
+                    session_id = session.get("persistent_session_id")
+                    if not session_id or session_id in seen:
+                        continue
+                    sessions.append({
+                        "session_id": session_id,
+                        "name": session.get("name", "Chat"),
+                        "last_modified": session.get("last_modified"),
+                        "type": "chat",
+                    })
+                    seen.add(session_id)
+            except Exception as exc:
+                logger.error("Legacy chat scan failed", extra={"error": str(exc)})
+
+        # Study sessions (global)
         try:
-            study_keys = [key async for key in self.redis_client.scan_iter("study:sess:*:top")]
-            for key in study_keys:
+            async for key in self.redis_client.scan_iter("study:sess:*:top"):
                 try:
                     session_id = key.split(':')[2]
-                    # Note: This would need to integrate with StudyService to get snapshot
-                    # For now, we'll create a basic entry
-                    all_sessions.append({
+                except (IndexError, AttributeError) as exc:
+                    logger.warning(
+                        "Failed to process study session key",
+                        extra={"key": key, "error": str(exc)},
+                    )
+                    continue
+
+                name = "Study Session"
+                last_modified_iso: Optional[str] = None
+
+                try:
+                    session_blob = await self.redis_client.get(key)
+                    if session_blob:
+                        data = json.loads(session_blob)
+                        if isinstance(data, dict):
+                            ref = data.get("he_ref") or data.get("ref")
+                            if isinstance(ref, str) and ref.strip():
+                                name = ref.strip()
+
+                            raw_last_modified = data.get("last_modified") or data.get("ts")
+                            if isinstance(raw_last_modified, (int, float)):
+                                last_modified_iso = datetime.fromtimestamp(raw_last_modified).isoformat()
+                            elif isinstance(raw_last_modified, str) and raw_last_modified.strip():
+                                last_modified_iso = raw_last_modified.strip()
+                except json.JSONDecodeError:
+                    logger.warning(
+                        "Failed to decode study session snapshot",
+                        extra={"key": key},
+                    )
+                except Exception as exc:
+                    logger.warning(
+                        "Unexpected error while loading study snapshot",
+                        extra={"key": key, "error": str(exc)},
+                    )
+
+                sessions.append(
+                    {
                         "session_id": session_id,
-                        "name": "Study Session",
-                        "last_modified": datetime.now().isoformat(),
-                        "type": "study"
-                    })
-                except (IndexError, AttributeError) as e:
-                    logger.warning(f"Failed to process study session key {key}: {e}")
-                    
-        except Exception as e:
-            logger.error("Error occurred while scanning for study sessions", extra={
-                "error": str(e)
-            })
-        
-        # Get daily sessions
+                        "name": name,
+                        "ref": name if name != "Study Session" else None,
+                        "last_modified": last_modified_iso or datetime.now().isoformat(),
+                        "type": "study",
+                    }
+                )
+        except Exception as exc:
+            logger.error("Error occurred while scanning for study sessions", extra={"error": str(exc)})
+
+        # Daily sessions (global for now)
         try:
             daily_keys = [key async for key in self.redis_client.scan_iter("daily:sess:*:top")]
             for key in daily_keys:
                 try:
                     session_id = key.split(':')[2]
-                    session_data = await self.redis_client.get(key)
-                    if session_data:
+                    session_blob = await self.redis_client.get(key)
+                    if session_blob:
                         try:
-                            session = json.loads(session_data)
-                            # Format daily session name (just title)
-                            session_name = session.get('title', 'Daily Study')
-                            
-                            all_sessions.append({
-                                "session_id": session_id,
-                                "name": session_name,
-                                "last_modified": session.get("last_modified", datetime.now().isoformat()),
-                                "type": "daily",
-                                "completed": session.get("completed", False)
-                            })
+                            session = json.loads(session_blob)
                         except json.JSONDecodeError:
-                            logger.warning(f"Failed to decode JSON for daily key {key}, skipping.")
+                            logger.warning("Failed to decode daily session JSON", extra={"key": key})
+                            continue
+                        sessions.append({
+                            "session_id": session_id,
+                            "name": session.get("title", "Daily Study"),
+                            "last_modified": session.get("last_modified", datetime.now().isoformat()),
+                            "type": "daily",
+                            "completed": session.get("completed", False),
+                        })
                     else:
-                        # Create basic entry for daily session without data
-                        all_sessions.append({
+                        sessions.append({
                             "session_id": session_id,
                             "name": "Daily Study",
                             "last_modified": datetime.now().isoformat(),
                             "type": "daily",
-                            "completed": False
+                            "completed": False,
                         })
-                except (IndexError, AttributeError) as e:
-                    logger.warning(f"Failed to process daily session key {key}: {e}")
-                    
-        except Exception as e:
-            logger.error("Error occurred while scanning for daily sessions", extra={
-                "error": str(e)
-            })
-        
-        # Sort by last_modified, most recent first
-        sorted_sessions = sorted(
-            [s for s in all_sessions if s.get("last_modified")], 
-            key=lambda x: x["last_modified"], 
-            reverse=True
-        )
-        
-        logger.info("Retrieved sessions", extra={
-            "total_sessions": len(sorted_sessions),
-            "chat_sessions": len([s for s in sorted_sessions if s["type"] == "chat"]),
-            "study_sessions": len([s for s in sorted_sessions if s["type"] == "study"]),
-            "daily_sessions": len([s for s in sorted_sessions if s["type"] == "daily"])
-        })
-        
-        return sorted_sessions
+                except (IndexError, AttributeError) as exc:
+                    logger.warning("Failed to process daily session key", extra={"key": key, "error": str(exc)})
+        except Exception as exc:
+            logger.error("Error occurred while scanning for daily sessions", extra={"error": str(exc)})
+
+        # Sort by last_modified where available
+        sessions_with_dates = [s for s in sessions if s.get("last_modified")]
+        sessions_without_dates = [s for s in sessions if not s.get("last_modified")]
+        sessions_with_dates.sort(key=lambda item: item["last_modified"], reverse=True)
+
+        return sessions_with_dates + sessions_without_dates
     
-    async def get_session(self, session_id: str) -> Optional[Dict[str, Any]]:
+    async def get_session(
+        self,
+        user_id: str,
+        session_id: str,
+    ) -> Optional[Dict[str, Any]]:
         """
-        Get a specific session by ID.
-        
-        Args:
-            session_id: Session identifier
-            
-        Returns:
-            Session data or None if not found
+        Get session data for a user. Falls back to legacy study/daily sessions.
         """
         if not self.redis_client:
             return None
-        
+
+        user_id_str, _ = self._normalize_user_id(user_id)
+
         try:
-            # Try chat session first
-            session_data = await self.redis_client.get(f"session:{session_id}")
+            # Chat session (new key)
+            session_data = await self.redis_client.get(self._chat_key(user_id_str, session_id))
+            if not session_data:
+                # Legacy key without user component
+                session_data = await self.redis_client.get(f"session:{session_id}")
+
             if session_data:
                 session = json.loads(session_data)
-                logger.info("Retrieved chat session", extra={"session_id": session_id})
-                return session
-            
-            # Try study session
+                stored_user = session.get("user_id")
+                if stored_user in (None, user_id_str):
+                    logger.info("Retrieved chat session", extra={"session_id": session_id})
+                    return session
+
+            # Study session (global)
             study_data = await self.redis_client.get(f"study:sess:{session_id}:top")
             if study_data:
-                study_session = json.loads(study_data)
                 logger.info("Retrieved study session", extra={"session_id": session_id})
-                return study_session
-            
-            # Try daily session
+                return json.loads(study_data)
+
+            # Daily session (global)
             daily_data = await self.redis_client.get(f"daily:sess:{session_id}:top")
             if daily_data:
-                daily_session = json.loads(daily_data)
                 logger.info("Retrieved daily session", extra={"session_id": session_id})
-                return daily_session
-            
+                return json.loads(daily_data)
+
             logger.info("Session not found", extra={"session_id": session_id})
             return None
-            
+
         except json.JSONDecodeError:
             logger.error("Failed to decode session JSON", extra={"session_id": session_id})
             return None
-        except Exception as e:
-            logger.error("Error retrieving session", extra={
-                "session_id": session_id,
-                "error": str(e)
-            })
+        except Exception as exc:
+            logger.error(
+                "Error retrieving session",
+                extra={"session_id": session_id, "error": str(exc)},
+            )
             return None
     
-    async def save_session(self, session_id: str, session_data: Dict[str, Any], session_type: str = "chat") -> bool:
+    async def save_session(
+        self,
+        user_id: Optional[str],
+        session_id: str,
+        session_data: Dict[str, Any],
+        session_type: str = "chat",
+    ) -> bool:
         """
         Save session data to Redis.
-        
+
         Args:
-            session_id: Session identifier
-            session_data: Session data to save
-            session_type: Type of session ("chat" or "study")
-            
-        Returns:
-            True if saved successfully
+            user_id: Owning user (required for chat sessions).
+            session_id: Session identifier.
+            session_data: Payload to persist.
+            session_type: "chat", "study", or "daily".
         """
         if not self.redis_client:
             return False
-        
+
         try:
-            # Add timestamp
             session_data["last_modified"] = datetime.now().isoformat()
-            
+
             if session_type == "chat":
-                key = f"session:{session_id}"
+                if not user_id:
+                    raise ValueError("user_id is required for chat sessions")
+                user_id_str, _ = self._normalize_user_id(user_id)
+                key = self._chat_key(user_id_str, session_id)
+                session_data.setdefault("user_id", user_id_str)
             elif session_type == "study":
                 key = f"study:sess:{session_id}:top"
             elif session_type == "daily":
@@ -209,28 +303,27 @@ class SessionService:
             else:
                 logger.error("Invalid session type", extra={"session_type": session_type})
                 return False
-            
-            await self.redis_client.set(
-                key, 
-                json.dumps(session_data, ensure_ascii=False)
+
+            await self.redis_client.set(key, json.dumps(session_data, ensure_ascii=False))
+
+            logger.info(
+                "Session saved",
+                extra={"session_id": session_id, "session_type": session_type},
             )
-            
-            logger.info("Session saved", extra={
-                "session_id": session_id,
-                "session_type": session_type
-            })
-            
             return True
-            
-        except Exception as e:
-            logger.error("Failed to save session", extra={
-                "session_id": session_id,
-                "session_type": session_type,
-                "error": str(e)
-            })
+
+        except Exception as exc:
+            logger.error(
+                "Failed to save session",
+                extra={
+                    "session_id": session_id,
+                    "session_type": session_type,
+                    "error": str(exc),
+                },
+            )
             return False
     
-    async def delete_session(self, session_id: str) -> bool:
+    async def delete_session(self, session_id: str, user_id: Optional[str] = None) -> bool:
         """
         Delete a session from Redis.
         
@@ -245,7 +338,11 @@ class SessionService:
         
         try:
             # Try to delete both chat and study session keys
-            chat_key = f"session:{session_id}"
+            if user_id:
+                user_id_str, _ = self._normalize_user_id(user_id)
+                chat_key = self._chat_key(user_id_str, session_id)
+            else:
+                chat_key = f"session:{session_id}"
             study_key = f"study:sess:{session_id}:top"
             
             deleted_count = 0
@@ -358,4 +455,3 @@ class SessionService:
                 "max_age_days": max_age_days
             })
             return 0
-

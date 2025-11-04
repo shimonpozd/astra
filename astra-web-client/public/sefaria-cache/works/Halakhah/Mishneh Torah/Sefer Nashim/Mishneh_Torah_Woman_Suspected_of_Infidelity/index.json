@@ -1,0 +1,162 @@
+{
+  "title": "Mishneh Torah, Woman Suspected of Infidelity",
+  "categories": [
+    "Halakhah",
+    "Mishneh Torah",
+    "Sefer Nashim"
+  ],
+  "schema": {
+    "nodeType": "JaggedArrayNode",
+    "depth": 2,
+    "addressTypes": [
+      "Perek",
+      "Halakhah"
+    ],
+    "sectionNames": [
+      "Chapter",
+      "Halakhah"
+    ],
+    "match_templates": [
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "mishneh-torah",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "rambam",
+          "woman-suspected-of-infidelity"
+        ]
+      },
+      {
+        "term_slugs": [
+          "hilchot",
+          "woman-suspected-of-infidelity"
+        ]
+      }
+    ],
+    "lengths": [
+      4,
+      79
+    ],
+    "titles": [
+      {
+        "lang": "en",
+        "text": "Rambam, Laws of Woman Suspected of Infidelity"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilchot Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Woman Suspected of Infidelity"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilchot Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Laws of Woman Suspected of Infidelity"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הלכות סוטה"
+      },
+      {
+        "lang": "en",
+        "text": "Mishneh Torah, Hilkhot Sotah"
+      },
+      {
+        "lang": "en",
+        "text": "Rambam, Hilkhot Sotah"
+      },
+      {
+        "lang": "he",
+        "text": "משנה תורה, הל' סוטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם, הל' סוטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הלכות סוטה"
+      },
+      {
+        "lang": "he",
+        "text": "רמב\"ם הל' סוטה"
+      },
+      {
+        "text": "רמב״ם, הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם, הל' סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם, הל' סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הלכות סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב״ם הל' סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "רמב”ם הל' סוטה",
+        "lang": "he"
+      },
+      {
+        "text": "משנה תורה, הלכות סוטה",
+        "lang": "he",
+        "primary": true
+      },
+      {
+        "text": "Mishneh Torah, Woman Suspected of Infidelity",
+        "lang": "en",
+        "primary": true
+      }
+    ],
+    "key": "Mishneh Torah, Woman Suspected of Infidelity"
+  },
+  "titles": [],
+  "fetchedAt": "2025-10-30T14:42:17.008Z",
+  "source": "http://localhost:8000/api/v2/raw/index/Mishneh%20Torah%2C%20Woman%20Suspected%20of%20Infidelity"
+}
